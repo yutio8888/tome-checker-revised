@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-r-5",
+  "assets": [
+    {
+      "asset_id": "warmaster-gnarg",
+      "native_name": "Warmaster Gnarg",
+      "scope": "vor-armoury (zones/vor-armoury/npcs.lua:29, unique, define_as GNARG, humanoid/orc, rank 4, base BASE_NPC_ORC_GRUSHNAK, last-level static map guardian, default-name image, no nice_tile); single definition; auto_classes Berserker from level 35",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/vor-armoury/npcs.lua",
+          "sha256": "5cd0f152fbbd9e9371484fc82be20d10d153da27d91c81541efb4627b0c1e35d",
+          "line": 29,
+          "anchor": "define_as = \"GNARG\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/vor-armoury/npcs.lua",
+          "sha256": "5cd0f152fbbd9e9371484fc82be20d10d153da27d91c81541efb4627b0c1e35d",
+          "line": 31,
+          "anchor": "name = \"Warmaster Gnarg\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/vor-armoury/npcs.lua",
+          "sha256": "5cd0f152fbbd9e9371484fc82be20d10d153da27d91c81541efb4627b0c1e35d",
+          "line": 80,
+          "anchor": "auto_classes={{class=\"Berserker\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/vor-armoury/npcs.lua",
+          "sha256": "5cd0f152fbbd9e9371484fc82be20d10d153da27d91c81541efb4627b0c1e35d",
+          "line": 82,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_warmaster_gnarg.png",
+          "sha256": "7a164572f859bcae6c7014c862a4d553b2d70129686dda821bef97e36ee9a0bc",
+          "role": "identity",
+          "note": "Native shape (64x64): a huge green orc in dark spiked armour hefting a giant greatsword across his body."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/massok.png",
+          "sha256": "a31830ddd0b689bb434e02dc9a87859af29eb0bc46feff8a1a40ecc36da6aebc",
+          "role": "family",
+          "note": "Shipped Massok the Dragonslayer (black plate orc with horned helm, upright, axe): Warmaster Gnarg must not be an upright black-plate horned orc with an axe."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Warmaster Gnarg seen from a steep overhead three-quarter angle: a hulking green-skinned orc warlord in massive dark violet-steel plate armour with tall curved spiked shoulder pauldrons, a heavy tusked scowling face with a crested iron helm, a short tattered crimson cloak, both hands gripping a HUGE WIDE-BLADED SERRATED GREATSWORD held HORIZONTALLY across the front of his body at chest height (the blade a broad pale steel bar with a notched edge, the whole sword no longer than the width of his shoulders and kept inside the disc), legs planted wide in a braced stance. Brutal, massive, armoured and complete.",
+        "contrast": "Orc family: GNARG is a WIDE BRACED BRUTE with a HORIZONTAL greatsword bar across his chest and spiked pauldrons in violet-steel with a crimson cloak (silhouette: broad horizontal bar over a wide shouldered mass; hue: violet-steel plate with crimson and pale steel blade; value: mid with a bright blade). The shipped Massok is an UPRIGHT black-plate horned orc with an axe; the orc soldier is grey plate with a shield; the orc necromancer and Rak'shor are robed casters; the orc assassin is a low crouch.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, tails, weapons, staffs and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, leg or drip reaches the outer sixth ring band or crosses the disc rim. Calibration from the previous generation of this exact token: the design was right, but the base disc came out clearly DARKER than the style reference, especially along the left and lower left rim and under the sword and legs. This time keep the same braced horizontal-greatsword orc warlord in violet-steel plate, spiked pauldrons and crimson cloak, but render the WHOLE disc, its outer ring band and the plate under the figure, at the style reference's own lightness or a hair lighter, evenly all round, with NO cast shadow, dark contact shadow or ambient darkening of the disc from the armour, the sword or the legs. Make the plate armour a lighter mid-value violet-steel with broad pale lavender-grey highlight planes so the figure does not read as a dark mass on the disc.",
+        "palette": "Violet-tinted steel plate with lighter lavender-grey highlight planes and dark violet recesses, pale steel sword blade, crimson cloak, olive-green skin, gold-brown eyes; nothing darker than dark violet-grey except the eye slits; keep the armour mid-value rather than black; the disc stays neutral charcoal with no violet cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Warmaster Gnarg, define_as=GNARG, type=humanoid/subtype=orc, unique=True); details and hashes in evidence/monster-batch-r-20260929/source-contracts.json. base BASE_NPC_ORC_GRUSHNAK (humanoid/orc, no image=); unique with define_as GNARG; NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip MURDERBLADE greatsword and massive armour (equipment only, no moddable_tile); talents Giant Leap, Windblade, Rush, Warshout, Stunning Blow, Sunder Armour, Slow Motion, Shattering Shout, Second Wind; resolvers.sustains_at_birth() (leaf and base) starts Slow Motion only (temporary speed values) plus auto_classes Berserker (see runtime_mutation_scan). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-r-20260929/source-contracts.json",
+          "sha256": "588ddd99e3d398bf93163ca804f053510ce1388654ff89c900e866205ae58c92"
+        }
+      ]
+    }
+  ]
+}

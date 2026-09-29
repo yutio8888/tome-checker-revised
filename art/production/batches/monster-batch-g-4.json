@@ -1,0 +1,147 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-g-4",
+  "assets": [
+    {
+      "asset_id": "spellblaze-crystal",
+      "native_name": "Spellblaze Crystal",
+      "scope": "scintillating-caves guardian boss (no rarity field, scripted placement)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/scintillating-caves/npcs.lua",
+          "sha256": "ca974c3c694abd74225a9bf0434a1f8d89892b7a2558bdada32dbefdb000b873",
+          "line": 33,
+          "anchor": "name = \"Spellblaze Crystal\", tint=colors.PURPLE, image = \"npc/spellblaze_crystal.png\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spellblaze_crystal.png",
+          "sha256": "af53c90c3f0ec3bd954f879c017452205e93c7d71040439fc9162189cf9907e5",
+          "role": "identity",
+          "note": "Native species shape: jagged radiating violet-purple crystal cluster, sea-urchin silhouette, inner glow."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A jagged cluster of translucent violet-purple crystal shards radiating outward from a dense central core, like a spiky sea-urchin formed of glass, with an inner glow of magical light pulsing through the largest shards.",
+        "contrast": "First immovable/crystal catalog identity, no family collision. Reads immediately as an inorganic radiating crystal cluster rather than any humanoid or animal silhouette already in the catalog -- silhouette (radiating spiky cluster, no limbs, no base body) and hue (saturated violet-purple with an inner magical glow, distinct from any other catalog entry's palette) are the anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Translucent violet-to-deep-purple crystal shards with a pale lavender-white inner glow radiating from the densest core shards, subtle magenta highlight along the sharpest edges; dry neutral charcoal disc with restrained copper-grey bevel, no glow or light spill allowed onto the disc itself -- the magical light stays contained inside the crystal shards."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name=Spellblaze Crystal/type=immovable inherited from BASE_NPC_CRYSTAL/subtype=crystal/define_as=SPELLBLAZE_CRYSTAL/unique=true) and explicit single image=\"npc/spellblaze_crystal.png\" (no nice_tile/add_mos on this entity) re-verified directly against game/modules/tome source (CONTRACTS-B5-B7-20260929.md 3, READY -- single, most convenient). Resolves via the generic actor.image==entry.image \"single\" appearance path.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        }
+      ]
+    },
+    {
+      "asset_id": "the-master",
+      "native_name": "The Master",
+      "scope": "dreadfell main-line boss (no rarity field, scripted placement)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 37,
+          "anchor": "type = \"undead\", subtype = \"vampire\", unique = true, image = \"npc/the_master.png\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/the_master.png",
+          "sha256": "cada39649bc0a1928463d173a97e216166d48ff22b8b1532b1ad0f509b81ac32",
+          "role": "identity",
+          "note": "Native species shape: tall vampire lord, dark crimson-and-black robe, high stiff collar, staff."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A tall vampiric lord in flowing dark crimson-and-black robes with a high stiff collar framing a pale gaunt face, standing upright and imperious, gripping a long dark ornate staff planted at his side.",
+        "contrast": "First undead/vampire catalog identity, no family collision. Distinct from the catalog's other robed humanoid casters (Fillarel's pale cream robe and Pale Drake's violet-black robe, both shipping in the same batch) by its deep crimson-and-black palette and stiff high-collared silhouette -- a commanding vampire-lord read, not a benign caster or a gaunt bone archmage. Silhouette (stiff high collar, imperious upright stance) and hue (deep crimson-black, the only red-black robed figure in the catalog) are the anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Deep black robe with rich blood-crimson panels and a stiff high collar, pale gaunt vampiric skin at the face and hands, a dark iron-black ornate staff with a small dull red gem finial; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's robe so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name=The Master/type=undead/subtype=vampire/define_as=THE_MASTER/unique=true) and explicit single image=\"npc/the_master.png\" (no nice_tile/add_mos on this entity) re-verified directly against game/modules/tome source (CONTRACTS-B5-B7-20260929.md 3, READY -- single). Resolves via the generic actor.image==entry.image \"single\" appearance path.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        }
+      ]
+    },
+    {
+      "asset_id": "rhaloren-inquisitor",
+      "native_name": "Rhaloren Inquisitor",
+      "scope": "rhaloren-camp guardian boss (no rarity field, scripted placement)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/rhaloren-camp/npcs.lua",
+          "sha256": "992fd18d8e3476a19aa35725e4e1d8b297de4b1d5cab7670d1ef68dfd76399c4",
+          "line": 32,
+          "anchor": "type = \"humanoid\", subtype = \"shalore\", unique = true,"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_shalore_rhaloren_inquisitor.png",
+          "sha256": "8208c9adfd671c3c07edbc04e0244f0408fdae72ac1ad3da611f4831b608c1c5",
+          "role": "identity",
+          "note": "Native species shape: armoured elven woman in blue-steel plate, greatsword and shield."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A tall armoured elven woman in gleaming blue-steel plate armour, gripping a large two-handed greatsword raised and ready, a small round shield strapped to her back.",
+        "contrast": "First humanoid/shalore catalog identity, no family collision. Distinct from every other catalog humanoid by its cool blue-steel plate armour and greatsword-plus-shield loadout -- no other shipped humanoid entry combines a two-handed sword with a shield. Silhouette (armoured knight stance, greatsword + shield) and hue (cool blue-steel, distinct from the warm-toned orc/human entries in the catalog) are the anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Polished blue-steel plate armour with silver trim and rivets, a plain steel greatsword blade, pale elven skin visible at the face beneath an open-faced helm; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's dark blue armour panels so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name=Rhaloren Inquisitor/type=humanoid/subtype=shalore/define_as=INQUISITOR/unique=true) re-verified directly against game/modules/tome source: no image=/nice_tile anywhere in the block, so mod/class/NPC.lua:33's default-name formula applies (npc/humanoid_shalore_rhaloren_inquisitor.png), confirmed present on disk and visually inspected (CONTRACTS-B5-B7-20260929.md 3, READY --订正 from 'needs fixture' to formula-verified). Resolves via the generic actor.image==entry.image \"single\" appearance path once NPC.lua's default backfill runs (same formula already relied on for the 9 READY single-image identities in CONTRACTS §0).",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1358 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "shardskin",
+      "master": "masters/shardskin-v1.png",
+      "sha256": "83529c0b0a4b96f03e7cd5e79390475e0d68fcbef07b09a7bd7504eae96d090c",
+      "exports": [
+        {
+          "path": "sprites/48/shardskin.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            73,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -12.534884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "044c68f5f5f630028ae1b1619150f879e77fe05099ada4d75ae5584b6873bb71"
+        },
+        {
+          "path": "sprites/64/shardskin.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            73,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -12.534884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bb4b36d9f1d7b5732d5d576afb7703545435da93ed5e2f6bc5a7ffb2074bf87f"
+        },
+        {
+          "path": "sprites/96/shardskin.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            73,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -12.534884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "04bc1455664281bbec5e66243daa72d6f8dec0ffb954a94a19aeb21fe2303e65"
+        },
+        {
+          "path": "sprites/128/shardskin.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            73,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -12.534884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "244536fe3bbd2d97720a467ee0d4a061b803bfd446babfe56a9df84e37dd9515"
+        },
+        {
+          "path": "sprites/256/shardskin.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            73,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -12.534884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "69718d585f5e1f93000cab4df045552174315281b607a3bccb721ad69a604b9f"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -4.7,
+        "max_sector_intrusion": 2.78,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "the-withering-thing",
+      "master": "masters/the-withering-thing-v1.png",
+      "sha256": "02a653e9e80ec7af58d631942b3073c8380538cd43bee48857d5d9f05f3a0b60",
+      "exports": [
+        {
+          "path": "sprites/48/the-withering-thing.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -11.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "be951cfa99bd620e8f76142a4d99b02ee6019370567df2b2f738aebec39c61d6"
+        },
+        {
+          "path": "sprites/64/the-withering-thing.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -11.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d6df982a076131e2008be46a790280ff43431f33f6da9b4f1f5f8a87d2c5e90a"
+        },
+        {
+          "path": "sprites/96/the-withering-thing.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -11.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c5a09898fc72b91e3405f81eff32b15a91f2a2d58fc44f76e7f1de06cca841c1"
+        },
+        {
+          "path": "sprites/128/the-withering-thing.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -11.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6e4e3b734e2405f2c49d31974bc1015a6a38b3d89a07be905e3d6e7766ee89c0"
+        },
+        {
+          "path": "sprites/256/the-withering-thing.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -11.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3b93a84ae81bc0488b379a81e28e75c5c2f3bd63719664bc2c0d13fffcfd6ff6"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.91,
+        "max_sector_intrusion": 5.28,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "the-dreaming-one",
+      "master": "masters/the-dreaming-one-v1.png",
+      "sha256": "f88c1a512a5a552ee6c50c897033cead2bcd1197d5363c3f47e186f2a3b0f319",
+      "exports": [
+        {
+          "path": "sprites/48/the-dreaming-one.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -13.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c5305372f4f142ce674528ab16e55f18165fb403ac00dc9021ff658c65980dc7"
+        },
+        {
+          "path": "sprites/64/the-dreaming-one.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -13.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "60eab34b013638b5e7d97a4368e48424b2671e8cdea5178679edaa5c2305c4a5"
+        },
+        {
+          "path": "sprites/96/the-dreaming-one.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -13.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b8f6dd7491eadcaf1f6e3c544a48c9de9792630653416f8930ce7ad38a4098f7"
+        },
+        {
+          "path": "sprites/128/the-dreaming-one.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -13.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a01d0f81ce9f5f8856fc4daa04e6733d9628955a0727ba60b1566a2aac077b1d"
+        },
+        {
+          "path": "sprites/256/the-dreaming-one.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -13.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "55384c784f65ccee451a0dca21f3d86c787c54751037445d33f48098ba3aa19d"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.79,
+        "max_sector_intrusion": 2.73,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "weaver-queen",
+      "master": "masters/weaver-queen-v1.png",
+      "sha256": "84914971eb24ddaa6689af85f14b6ca577b42d7d3ec73d23429585239b901ab9",
+      "exports": [
+        {
+          "path": "sprites/48/weaver-queen.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a68608670dce5d122edb80e6693722fa554fe7c98d2b29f0352f8f76ed37e466"
+        },
+        {
+          "path": "sprites/64/weaver-queen.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f1d91f3da15dfee9f699fd1c303df249c424b75381d35a098cf3671d00de84dc"
+        },
+        {
+          "path": "sprites/96/weaver-queen.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6565a78fdef85649beed28b6a95a32f9813c6e43494a3bc28b21c9c4538f28aa"
+        },
+        {
+          "path": "sprites/128/weaver-queen.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "39f935a31e7e84f9068461d0288b87c7cbc184483d81dd9b22eae6c678a8ea86"
+        },
+        {
+          "path": "sprites/256/weaver-queen.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e2e3a5e7cba17bf01cdf36fc74127d2e8ea65634a4eed3e0bf33ce13aa8cc07c"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -6.96,
+        "max_sector_intrusion": 2.85,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "murgol",
+      "master": "masters/murgol-v2.png",
+      "sha256": "4ef6b2e31f7d46404843c3c6262454f9946994364ce6ea7e0073cd399daac638",
+      "exports": [
+        {
+          "path": "sprites/48/murgol.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b99a500aecf7372f77c9d36f007f2fecd8a60928e62c2d94100142bfe937fca0"
+        },
+        {
+          "path": "sprites/64/murgol.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f47b9aca1b3f048891eb0589c490b01c2938433d7a96a0bba4dee92d5d5e1847"
+        },
+        {
+          "path": "sprites/96/murgol.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a9bc946ed30b6879828ed9feb019616de34431b3c0b07f3be428a2f9d547889d"
+        },
+        {
+          "path": "sprites/128/murgol.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fc6c9915629228f172ca5745dd4601534b6cdeb795e17c747831e7d5d76cf699"
+        },
+        {
+          "path": "sprites/256/murgol.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e88366579e81db734517466bb256127511a4d96a1f6622252651b279012ac5a9"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.54,
+        "max_sector_intrusion": 3.99,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "lady-nashva",
+      "master": "masters/lady-nashva-v2.png",
+      "sha256": "732cf0d4f30e4d94387090826435e76107da0b35fccab7ef8fa381a4c0521287",
+      "exports": [
+        {
+          "path": "sprites/48/lady-nashva.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -11.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bb54f518de430c26e05a1ddbf2f5fc254d76a56142115c320cd2e697022f1348"
+        },
+        {
+          "path": "sprites/64/lady-nashva.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -11.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9d530dd76246e4aca5effe6da41d28df255f0f05b90d34a67b06c1f9b96b797a"
+        },
+        {
+          "path": "sprites/96/lady-nashva.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -11.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0e13ebfcfc98be3e3787691630a4d6bd001d9f58b0d8e435ad3bf1da078b742d"
+        },
+        {
+          "path": "sprites/128/lady-nashva.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -11.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d64158ffd4cd1c4a0904ac508481eb6448b1abf17bf2706dfc99256376a967b1"
+        },
+        {
+          "path": "sprites/256/lady-nashva.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -11.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "397e8db4a60612dae586975a1a6f1aa4caf4fcd8ae760b841af586d4bedd0434"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.0,
+        "max_sector_intrusion": 1.32,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "the-possessed",
+      "master": "masters/the-possessed-v2.png",
+      "sha256": "639fa28f5092926de09fc1f0eb7e20ec7a73df5c0c6f23b65e27c3b2033660df",
+      "exports": [
+        {
+          "path": "sprites/48/the-possessed.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1168,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7b2b60c605ba4013b2f3032b896bb556d1e544dc30871cc32ee2642c4368fecf"
+        },
+        {
+          "path": "sprites/64/the-possessed.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1168,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5450f391acfb77c37cd8be838ceee10429aab35f0f1237335daab3a823d6e204"
+        },
+        {
+          "path": "sprites/96/the-possessed.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1168,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6b770a9a10629aa1d85bb623cb6bc2245e32d24768c8ab4982a39a5258fded88"
+        },
+        {
+          "path": "sprites/128/the-possessed.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1168,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e31e76dc8b1b0307ad67c7162f75a310483e4c0596bcb2e8edc699baa61e35b8"
+        },
+        {
+          "path": "sprites/256/the-possessed.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1168,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4f8e3055899b0eca9695e3065bc7782266a49726de9295b2fe5da01da99b390d"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.64,
+        "max_sector_intrusion": 2.73,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "subject-z",
+      "master": "masters/subject-z-v3.png",
+      "sha256": "794ac5d67375403ee23b3fcdc6cb8c1907f0bd60a56bed9de2d1cf6590aaab3f",
+      "exports": [
+        {
+          "path": "sprites/48/subject-z.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -12.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9277b7f6955898e44cd175ac2da597a6d725c2fa74183a3794b07c9e005571de"
+        },
+        {
+          "path": "sprites/64/subject-z.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -12.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c1fa68c10c45d3565e6320a4740648b99c39fc56ba1caae5093d2b63d617a7c5"
+        },
+        {
+          "path": "sprites/96/subject-z.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -12.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d8fa2e02fb523796d68ea7278cede05227dd2eaae9abfb80a6a96abd71d9e298"
+        },
+        {
+          "path": "sprites/128/subject-z.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -12.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ac773ced7b2d0b6a0933725c15dca491db1d7eae1b65e661e986ea759f07fb85"
+        },
+        {
+          "path": "sprites/256/subject-z.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -12.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e00dfd7a49c973ada5f356d59c83cbe2b35219517eda14bef8deda2d21d6791f"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.7,
+        "max_sector_intrusion": 3.14,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "grand-corruptor",
+      "master": "masters/grand-corruptor-v2.png",
+      "sha256": "b7096cacfcf81ed2c0aee96b94f979d9d9896ce0cc41df1829206264181461ea",
+      "exports": [
+        {
+          "path": "sprites/48/grand-corruptor.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "20e2651deca4b3f4f3cc9ced0aeeaf3e0c10c69b5a90b74137a489761112962f"
+        },
+        {
+          "path": "sprites/64/grand-corruptor.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8a10369f233b363de8cf7125e2c97814c89f45ca0a6cf543904d4828fb3b6f47"
+        },
+        {
+          "path": "sprites/96/grand-corruptor.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b09b468f7583761cf2b3dfad4a71aefe0bbb2558b3b343f5eae68a85cbc714de"
+        },
+        {
+          "path": "sprites/128/grand-corruptor.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a79c22e8ca484008c2ed8ed6c3afc2b7bb4eee870bcdd0a1308e577b1eebdb84"
+        },
+        {
+          "path": "sprites/256/grand-corruptor.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "724b4a36d5a902c575a6c81fe5636b642b11925bdafa950d3abf8bc50caa0254"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -4.06,
+        "max_sector_intrusion": 4.08,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "assassin-lord",
+      "master": "masters/assassin-lord-v1.png",
+      "sha256": "8b8cc8ef87cd20cf84bc4d4243a3d20c5fca8b03760d86d0b88f00af5138fece",
+      "exports": [
+        {
+          "path": "sprites/48/assassin-lord.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1161,
+            1171
+          ],
+          "export_window": [
+            -10.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "80b08eebf30130e440f36e1072c33507f8b7276ad78ab5c546989e040da885e4"
+        },
+        {
+          "path": "sprites/64/assassin-lord.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1161,
+            1171
+          ],
+          "export_window": [
+            -10.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "beae636d279c9a896ce4cc39f2278e99d231c03a9f05eedce1e8f80f2af940cc"
+        },
+        {
+          "path": "sprites/96/assassin-lord.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1161,
+            1171
+          ],
+          "export_window": [
+            -10.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c121aee94f24254965e45e1d84ddbbc0bb401b2d498d2e2178dbcb3f2d72613c"
+        },
+        {
+          "path": "sprites/128/assassin-lord.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1161,
+            1171
+          ],
+          "export_window": [
+            -10.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2f9cafa82a8725784c2dc2040273f4a1dc58606aa574110316e3bd7dfc7abbab"
+        },
+        {
+          "path": "sprites/256/assassin-lord.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1161,
+            1171
+          ],
+          "export_window": [
+            -10.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b54353447708a23d27f1fe2155aa2193d6cc95fd7c1296b398ec83818103b28e"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.72,
+        "max_sector_intrusion": 3.9,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ben-cruthdar-abomination",
+      "master": "masters/ben-cruthdar-abomination-v1.png",
+      "sha256": "9c386abff7fe42b46925a31c62cf8022a8f9e500600c39ffa7d8edddb5a30665",
+      "exports": [
+        {
+          "path": "sprites/48/ben-cruthdar-abomination.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6153223d1834a68ae96ded9713cebefc9824d5788922716e537bdaf22d067fc5"
+        },
+        {
+          "path": "sprites/64/ben-cruthdar-abomination.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d9893d45124e7b8198627e2b4d1b7911911a011d53245422dbe48424ed41043e"
+        },
+        {
+          "path": "sprites/96/ben-cruthdar-abomination.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1bbc11dd1c679d99fc00aab44fb28390d9c9c6228b405ce772b4e8872868bf9f"
+        },
+        {
+          "path": "sprites/128/ben-cruthdar-abomination.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7a347b1cecbb613f4b3cdda4a6b4c6882caf8212f7862ff7b04bb4fdf07860f9"
+        },
+        {
+          "path": "sprites/256/ben-cruthdar-abomination.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "660c9252425fc504f32a6b897066fedf60d3435a812e21f7fc5d09ec324216ba"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 2.11,
+        "max_sector_intrusion": 12.97,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

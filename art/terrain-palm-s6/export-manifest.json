@@ -1,0 +1,65 @@
+{
+ "master": {
+  "path": "art/terrain-palm-s6/masters/palm-tree-v1.png",
+  "sha256": "371f61e1cc05e9a910e8951144382bf2c6a57e87ddd58e813cd957dbfbe9337f"
+ },
+ "sources": {
+  "data/gfx/refined/beach/sand0.png": "62c0052596a1f8cedb27eaa77b86c8c5d2db28a9dad98677a216827bed11e1a6",
+  "art/terrain-palm-s6/masters/palm-tree-v1.png": "371f61e1cc05e9a910e8951144382bf2c6a57e87ddd58e813cd957dbfbe9337f",
+  "data/gfx/refined/exit0.png": "815d5d0864eccebf6cc874464b3e4d1130dc152ff6373fd36a263c2353eda6dd"
+ },
+ "constants": {
+  "S": 128,
+  "PARITY": 0.86,
+  "palm_width": 136
+ },
+ "files": {
+  "eruan/palm-a0.png": "91ea2a2c07dc795346e809de00c9d457aef6a774a6c299c6df3b14b0f6f171b4",
+  "eruan/palm-b0.png": "0395110b349cbfeb04846132589667a5453d8b5c096ddddb7402e0cea892b02b",
+  "eruan/exit-up0.png": "da0cbf47aefe2773fbccd7a8ef3974caf388c2db35d3c486aa12fb046cd6b82f",
+  "eruan/exit-down0.png": "caa8386c43c67ba176ad7c0fbfb88becd29308a56c0ebb8ed1ff2c007f8479d6",
+  "eruan/exit-world0.png": "21720163fa44a7267c0f14ce381d827d3f3899e819c902e97a3f4f61d040c5d7",
+  "eruan/palm-a1.png": "fd1b252e7f877fc2d162680bde940290d7aca36df896476c678d38127236b7f8",
+  "eruan/palm-b1.png": "0358184d2b57175733744b41dbb70bba34d9c07db044793fa81eb639b18c767a",
+  "eruan/exit-up1.png": "ff0ca1a2fce1b28f13d37e05eb5ac3035af07023027304c3664dd6314537f112",
+  "eruan/exit-down1.png": "86a51021616cafd2f2dc8073d1af44fe684e564806d94372fab8be6ff606850f",
+  "eruan/exit-world1.png": "e82612be826962a87fa40e3bc59ef523aace8f2c172f9c5b7f3782d27ed1c646"
+ },
+ "metrics": {
+  "beach_sand": {
+   "0": 109.2,
+   "1": 93.4
+  },
+  "palm_whole": {
+   "palm-a0": 72.3,
+   "palm-b0": 72.2,
+   "palm-a1": 61.7,
+   "palm-b1": 61.6
+  },
+  "palm_centre40": {
+   "palm-a0": 70.3,
+   "palm-b0": 70.2,
+   "palm-a1": 60.0,
+   "palm-b1": 60.0
+  },
+  "exits": {
+   "exit-up0": 108.7,
+   "exit-down0": 108.8,
+   "exit-world0": 109.7,
+   "exit-up1": 93.0,
+   "exit-down1": 93.1,
+   "exit-world1": 93.8
+  },
+  "parity_gap": {
+   "palm-a": 0.1466,
+   "palm-b": 0.1468,
+   "exit-up": 0.1444,
+   "exit-down": 0.1443,
+   "exit-world": 0.1449
+  },
+  "palm_vs_sand_gap": {
+   "0": 0.3379,
+   "1": 0.3394
+  }
+ }
+}

@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-r-8",
+  "assets": [
+    {
+      "asset_id": "orc-assassin",
+      "native_name": "orc assassin",
+      "scope": "orc.lua (humanoid/orc, non-unique, no define_as, rarity 3, rank 2, base BASE_NPC_ORC, autolevel rogue, color_b randomised 175-195); reknor (pool, E9.2), rak-shor-pride, vor-armoury",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 175,
+          "anchor": "name = \"orc assassin\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 199,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_assassin.png",
+          "sha256": "b4056cf814d2435b2f32f254e02b3507ed3258d110c8d2b8dab832fbd0d2dfa2",
+          "role": "identity",
+          "note": "Native shape (64x64): a lean olive-green orc in a loincloth mid-stride with a blade raised."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/orc-warrior.png",
+          "sha256": "b6938966c1ee9e7847b2d2c6907119acea1a97b1fc42eee5e3c82ba9d0675874",
+          "role": "family",
+          "note": "Shipped orc warrior (leather-clad green orc with a curved blade): the orc assassin must not be a bare-armed green orc with a curved sword."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orc assassin seen from a steep overhead three-quarter angle: a lean sinewy olive-green orc CROUCHED VERY LOW in a stalking crouch, knees deeply bent and one hand almost touching the ground, a dark navy-blue leather hood pulled over the head with a cloth mask across the lower face leaving only narrow glowing yellow eyes and one tusk tip, dark navy leather jerkin with a bandolier of small vials, a short dagger held in each hand in reverse grip pointing back along the forearms, a small green-glinting poison drip on one blade. Stealthy, coiled, blue-black and complete.",
+        "contrast": "Orc family: the orc ASSASSIN is a LOW COILED CROUCH in DARK NAVY hooded leather with two reverse-grip daggers (silhouette: low wide crouch with two short blades pointing back; hue: navy blue-black leather with olive skin and steel; value: mid-dark with pale blade and eye accents). The orc warrior is an upright leather orc with a curved blade; Gnarg is a huge horizontal-sword brute; the necromancer and Rak'shor are robed casters.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, tails, weapons, staffs and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, leg or drip reaches the outer sixth ring band or crosses the disc rim. Calibration from the previous generations of this exact token: they passed the gate, but at 48px the dark leather still merged with the charcoal disc. This time keep the low stalking crouch with a hooded, masked head, but the leather must be a MID slate-TEAL (a light teal-grey on the lit upper-left planes with broad pale highlight planes on the hood, shoulders, forearms and knees), clearly LIGHTER than the disc; the green orc skin clearly visible and bright on the face above the mask and on both bare forearms and hands; TWIN PALE STEEL DAGGERS held OUT AWAY FROM THE BODY, one out to each side at arm's length with the blades bright and clear against the disc, all still inside the inner three quarters of the disc; pale cream belts and stitching, bright yellow eyes. Never near-black anywhere except the eye slits.",
+        "palette": "Dark navy-blue leather with lighter slate-blue highlight planes, olive-green skin with lighter olive highlights, pale steel daggers, small green poison drip, glowing yellow eyes; nothing darker than dark navy except the eye slits; keep the leather mid-dark rather than black; the disc stays neutral charcoal with no blue cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc assassin, define_as=None, type=humanoid/subtype=orc, unique=False); details and hashes in evidence/monster-batch-r-20260929/source-contracts.json. base BASE_NPC_ORC (humanoid/orc, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip two daggers and light armour (equipment only); talents Knife Mastery, Stealth, Lethality, Apply Poison, Venomous Strike; resolvers.sustains_at_birth() starts Stealth and Apply Poison: Stealth changes visibility, not display (an actor-visibility matter the overlay already respects, as for the batch J Assassin Lord), no type/subtype/image/add_mos write; color_b is a colour modulation of the same image. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-r-20260929/source-contracts.json",
+          "sha256": "588ddd99e3d398bf93163ca804f053510ce1388654ff89c900e866205ae58c92"
+        }
+      ]
+    }
+  ]
+}

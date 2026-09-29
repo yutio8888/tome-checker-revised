@@ -1,0 +1,70 @@
+{
+  "asset_id": "door-open-vertical-v2",
+  "material": "door-open-vertical",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "intent": "reference-guided generation/edit",
+  "prompt": "Use case: precise-object-edit. Correct the door leaf in this vertical open doorway. The current leaf is WRONG: it still extends downward between north and south jambs, blocking east-west passage. Move the wooden leaf to a HORIZONTAL screen-space orientation, extending LEFT from the NORTH jamb only. Its long top edge must run from approximately x15%,y28% to x44%,y28%, and its short visible front face must stay above y40%. The leaf must NOT extend downward toward the south jamb. Remove ALL wood below y42%. Keep north and south stone blocks unchanged at x50%,y20% and x50%,y80%. The whole central horizontal band from y45% to y65% must be completely transparent alpha from left edge to right edge, providing unmistakable east-west walking passage. Leaf physically hinged to left inner corner of north block, 90 degree swing; no duplicate door. Same matte wood, iron straps, stone, soft upper-left lighting, square canvas, no floor or icons. Native alpha outside geometry, no black fill. This is a geometry correction only: horizontal left-pointing open leaf near upper jamb, absolutely no vertical leaf in center.",
+  "references": [
+    "door-open-vertical-v1"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-6d649091-66c4-4757-95f3-db03dba4568a.png",
+  "saved_output_path": "art/terrain-korpul-v1/masters/door-open-vertical-v2.png",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "native_alpha_required": true,
+  "selection": "design-candidate-not-runtime-ready",
+  "rejection_reason": null,
+  "processing": "Copy original unchanged; small-size whole-canvas resampling only. No alpha extraction, relighting, recolouring, rotation, or painted geometry.",
+  "sha256": "eb0c9359cfd95328974bff90b309f24cc250f7fe7e8d051891f4a403fe3f0c0a",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      57,
+      21,
+      1192,
+      1182
+    ],
+    "transparent_pixels": 1349297,
+    "partial_alpha_pixels": 222838,
+    "opaque_pixels": 381,
+    "visible_alpha_bbox_gt8": [
+      181,
+      98,
+      781,
+      1162
+    ],
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "references_resolved": [
+    "masters/door-open-vertical-v1.png"
+  ],
+  "static_review": {
+    "sheet": "review/design-sheet.png",
+    "actual_sizes": [
+      48,
+      64,
+      96
+    ],
+    "floor_repeat_size": 128,
+    "grayscale": "CSS display only",
+    "runtime_verified": false,
+    "connected_masks_verified": false
+  }
+}

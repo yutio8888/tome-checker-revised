@@ -1,0 +1,81 @@
+{
+ "schema": 1,
+ "batch_id": "palm-s6-v1",
+ "assets": [
+  {
+   "gate": "ready",
+   "gate_reason": "S6 Eruan palm: one native-alpha palm-tree board prop in the style of the accepted board trees. The exporter composites it over the existing beach sand for every PALMTREE1-20 cell. Identity and rule contract recorded before generation (render_evidence). No waiver.",
+   "max_attempts": 2,
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/terrain-s6-20260929/identity-palm.md",
+     "sha256": "aa9a6c26bb3ece278357d0dcacd399010bd40b99ae0941f5b51a2b13c61d4ca9"
+    }
+   ],
+   "asset_id": "palm-tree",
+   "native_name": "PALMTREE Eruan desert palm tree",
+   "kind": "terrain-prop",
+   "scope": "Eruan (eruan) L1-3 only: sand.lua PALMTREE and its nice_tiler variants PALMTREE1-20, the blocking palms of the desert forest generator and the L3 static map.",
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/grids/sand.lua",
+     "sha256": "d951bdb32b4280058b9db8ce5c37a15b08837aaf216899a580dc3ecff5de3c8e",
+     "line": 116,
+     "anchor": "define_as = \"PALMTREE\""
+    },
+    {
+     "path": "game/modules/tome/data/general/grids/sand.lua",
+     "sha256": "d951bdb32b4280058b9db8ce5c37a15b08837aaf216899a580dc3ecff5de3c8e",
+     "line": 122,
+     "anchor": "does_block_move = true"
+    },
+    {
+     "path": "game/modules/tome/data/general/grids/sand.lua",
+     "sha256": "d951bdb32b4280058b9db8ce5c37a15b08837aaf216899a580dc3ecff5de3c8e",
+     "line": 128,
+     "anchor": "palmtree_alpha"
+    },
+    {
+     "path": "game/modules/tome/data/zones/eruan/zone.lua",
+     "sha256": "a36b3a253fcaa169803f67b4402b2c8a32260a3f0d432c9b3d6ec99c8a37ee49",
+     "line": 43,
+     "anchor": "wall = \"PALMTREE\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/terrain/palmtree_alpha5.png",
+     "sha256": "9b89274b02b1ef7c358b3dc69b3aa4cdaddd4def6df8217569a6337412833de6",
+     "role": "identity",
+     "note": "Native desert palm: a slim curved ringed trunk with a crown of long arching green fronds. Keep this palm identity; make it a sturdier, fuller board piece."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-f1-flooded/masters/hardtree-v1.png",
+     "sha256": "442c8415c7ed6cbaaeaf6a5d70d6af82f5b19daedc35b9d952c7637df6d4cd27",
+     "role": "style",
+     "note": "Accepted board tree master (its recoloured crops are the South Beach and Caldera board trees): painted tabletop finish, soft upper-left light, readable dark canopy mass, trunk and roots on a small patch of ground. Use only its finish and lighting; the palm has a completely different shape."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-norgos-snow-v1/selected/prop-snow-tree-pine.png",
+     "sha256": "14026cb5553de216033fe3d50d62b589fe0c22b0fbd14c8d59c60c97a7d72c08",
+     "role": "family",
+     "note": "Accepted board tree prop with generous transparent margins round a centred tree; match these margins, not its shape or palette."
+    }
+   ],
+   "grid_contract": {
+    "movement": "Blocks movement (native pass_tree exception unchanged).",
+    "sight": "Blocks line of sight; does not block sense or ESP.",
+    "danger": "None.",
+    "interaction": "Diggable into sand by the native dig rule; no door, no transition.",
+    "export": "Deterministic exporter composites the prop, cell-filling, over the existing board beach sand with the ground outside the crown shaded; plain and mirrored variants x 2 parities of 128px tiles."
+   },
+   "prompt_fields": {
+    "subject": "A SINGLE desert date palm tree: a sturdy, slightly leaning ringed trunk with a rough diamond bark pattern, topped by a full, dense crown of long arching feathered green fronds spreading out in every direction, a few hanging dry brown fronds and a small cluster of dates under the crown, the trunk rising from a low mound of pale sand with a few roots.",
+    "palette": "Deep saturated palm green fronds with darker olive-green shadows and a few dry tan-brown fronds; warm grey-brown trunk; pale sand mound at the base. The crown is the darkest, largest mass; nothing bright neon green or yellow.",
+    "contrast": "At 48 pixels it must read as a palm tree (radiating fronds, bare trunk) that blocks the cell: a dark green crown clearly darker than the pale tan beach sand around it, and clearly different from a broad-leaved oak, a pine or a bush.",
+    "composition": "One whole palm tree in overhead three-quarter tabletop view, placed in the exact CENTRE of a mostly empty transparent canvas. The tree occupies ONLY the middle 76% of the canvas width: the crown's leftmost frond tip about 12% from the left edge and its rightmost tip about 12% from the right edge, with fully transparent empty space on both sides. Crown top about 12% from the top edge, sand mound resting at about 88% of the image height. Nothing, not a frond tip, root or shadow, extends into the outer 10% band on any side. Transparent corners. No cut-off fronds.",
+    "mechanics": "Eruan palm tree: blocks movement and sight. No fruit pickup, water, hazard, character, sign or other decoration."
+   }
+  }
+ ]
+}

@@ -1,0 +1,413 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "cave-troll",
+      "master": "masters/cave-troll-v3.png",
+      "sha256": "6557e46aabba46f4b5f5841497a95158cb8454e4475b33a8a491f1852542584d",
+      "exports": [
+        {
+          "path": "sprites/48/cave-troll.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            158,
+            157,
+            1096,
+            1100
+          ],
+          "export_window": [
+            78.744186,
+            80.244186,
+            1096.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "32066aa8adc496c155f14d9d1e413b6475ba8e558f144bf400763c4e3d8721a4"
+        },
+        {
+          "path": "sprites/64/cave-troll.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            158,
+            157,
+            1096,
+            1100
+          ],
+          "export_window": [
+            78.744186,
+            80.244186,
+            1096.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fbaf19e93f9dd2f3115ae31e41cd516f766508b9aaf61f713ad41dd8b9188f7c"
+        },
+        {
+          "path": "sprites/96/cave-troll.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            158,
+            157,
+            1096,
+            1100
+          ],
+          "export_window": [
+            78.744186,
+            80.244186,
+            1096.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ac63cc1bf96b9fe056b687e1c21a83ad62fcad7d0d95d58ee17da508323ddd61"
+        },
+        {
+          "path": "sprites/128/cave-troll.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            158,
+            157,
+            1096,
+            1100
+          ],
+          "export_window": [
+            78.744186,
+            80.244186,
+            1096.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "77d9b1435e549729989353fd90e2a8fa3ed56fd2a48822299363ab229408bfe5"
+        },
+        {
+          "path": "sprites/256/cave-troll.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            158,
+            157,
+            1096,
+            1100
+          ],
+          "export_window": [
+            78.744186,
+            80.244186,
+            1096.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bcde69d3a81111839ce824752d9f7fcd17eb7ac859fb547e0ee0a33a5bef0ad6"
+        }
+      ]
+    },
+    {
+      "id": "bill",
+      "master": "masters/bill-v3.png",
+      "sha256": "aa2fb3be36bd168f536c36b69fcfa30cc48c8c1d3b034c663f96e8f6fd29c77d",
+      "exports": [
+        {
+          "path": "sprites/48/bill.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            112,
+            103,
+            1142,
+            1152
+          ],
+          "export_window": [
+            17.116279,
+            17.616279,
+            1219.767442
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4dd772f8b3182b9a92b863d5b44fd269f9e0ecfba3d429c285438603e69f7586"
+        },
+        {
+          "path": "sprites/64/bill.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            112,
+            103,
+            1142,
+            1152
+          ],
+          "export_window": [
+            17.116279,
+            17.616279,
+            1219.767442
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ca2fa7b2f3919d04d97206f927cd065e81ddcb66ac76f950b9a88cabecc2c1db"
+        },
+        {
+          "path": "sprites/96/bill.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            112,
+            103,
+            1142,
+            1152
+          ],
+          "export_window": [
+            17.116279,
+            17.616279,
+            1219.767442
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e1c830961c414ccb4772a183ceb1ee5f6c2bfbb166f16967c80e7e4dfff66507"
+        },
+        {
+          "path": "sprites/128/bill.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            112,
+            103,
+            1142,
+            1152
+          ],
+          "export_window": [
+            17.116279,
+            17.616279,
+            1219.767442
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "41543243196311517082c546e74b5502b8edbd8a7aab9646547ff3aa19cf91da"
+        },
+        {
+          "path": "sprites/256/bill.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            112,
+            103,
+            1142,
+            1152
+          ],
+          "export_window": [
+            17.116279,
+            17.616279,
+            1219.767442
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "26904c73d72158a11767d8acd6fa94dc97110ea56c2b5513177c341b4a3d3868"
+        }
+      ]
+    },
+    {
+      "id": "great-wolf",
+      "master": "masters/great-wolf-v3.png",
+      "sha256": "056af1ffe8c4769ff974886175078cbd58fff2baa879e2834f1ec9b90310d9de",
+      "exports": [
+        {
+          "path": "sprites/48/great-wolf.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            147,
+            149,
+            1108,
+            1122
+          ],
+          "export_window": [
+            61.802326,
+            69.802326,
+            1131.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "69aa0226780e30825a6b45d4b2e8248419ef8aa6afbb870e2fee6fd65ba97335"
+        },
+        {
+          "path": "sprites/64/great-wolf.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            147,
+            149,
+            1108,
+            1122
+          ],
+          "export_window": [
+            61.802326,
+            69.802326,
+            1131.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0dbc6b054c74bd53230a174dbc016adda23d0cdb46e7794d171be6256c1b1dd1"
+        },
+        {
+          "path": "sprites/96/great-wolf.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            147,
+            149,
+            1108,
+            1122
+          ],
+          "export_window": [
+            61.802326,
+            69.802326,
+            1131.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f87ad3ffc8803e1c5486e32dfc51cdbb16aa7acd03f247ea344206a074288135"
+        },
+        {
+          "path": "sprites/128/great-wolf.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            147,
+            149,
+            1108,
+            1122
+          ],
+          "export_window": [
+            61.802326,
+            69.802326,
+            1131.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3c00d849c122fa611abb248336766611b9b35976c153813571160dc402174741"
+        },
+        {
+          "path": "sprites/256/great-wolf.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            147,
+            149,
+            1108,
+            1122
+          ],
+          "export_window": [
+            61.802326,
+            69.802326,
+            1131.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ab337ea1efa1aa42bd4dea686d54ee36ae51faaa2959d492e3bc0d829a4bd681"
+        }
+      ]
+    },
+    {
+      "id": "black-bear",
+      "master": "masters/black-bear-v2.png",
+      "sha256": "a7bed49555f2252e441f7fbb61600a26dbdd2d402ef270b3f110b492332be582",
+      "exports": [
+        {
+          "path": "sprites/48/black-bear.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            158,
+            167,
+            1094,
+            1105
+          ],
+          "export_window": [
+            80.651163,
+            90.651163,
+            1090.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4a21508b1526c02df49cfe3e4b3ec68200d54b214dae8d46e14f93ca81848840"
+        },
+        {
+          "path": "sprites/64/black-bear.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            158,
+            167,
+            1094,
+            1105
+          ],
+          "export_window": [
+            80.651163,
+            90.651163,
+            1090.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9481687afb6dba7c1d3eca8f3a00417577773bd6df14e7eae012141c2fc460ec"
+        },
+        {
+          "path": "sprites/96/black-bear.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            158,
+            167,
+            1094,
+            1105
+          ],
+          "export_window": [
+            80.651163,
+            90.651163,
+            1090.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4338ec55293b02d362da39cc67b3486ad41ae35004426ee8f5d205cddb2765be"
+        },
+        {
+          "path": "sprites/128/black-bear.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            158,
+            167,
+            1094,
+            1105
+          ],
+          "export_window": [
+            80.651163,
+            90.651163,
+            1090.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6c91bbefa57970e8bdca63df08c68d0ef6f98de13a5b1e1bdfa39d1e4f8a915a"
+        },
+        {
+          "path": "sprites/256/black-bear.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            158,
+            167,
+            1094,
+            1105
+          ],
+          "export_window": [
+            80.651163,
+            90.651163,
+            1090.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "298a1399ef05977c736acacdd8cc3c1c8ddebf290367647768c46796c12dbf29"
+        }
+      ]
+    }
+  ]
+}

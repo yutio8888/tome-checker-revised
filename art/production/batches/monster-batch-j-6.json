@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-j-6",
+  "assets": [
+    {
+      "asset_id": "subject-z",
+      "native_name": "Subject Z",
+      "scope": "halfling-ruins guaranteed guardian on the last-level static map (humanoid/human unique, default-name image, never_act until seen)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/halfling-ruins/npcs.lua",
+          "sha256": "a4e8724a977e6421c5860514589265d9cdca949565429524bea42c400294d0c3",
+          "line": 26,
+          "anchor": "define_as=\"SUBJECT_Z\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/halfling-ruins/npcs.lua",
+          "sha256": "a4e8724a977e6421c5860514589265d9cdca949565429524bea42c400294d0c3",
+          "line": 27,
+          "anchor": "name = \"Subject Z\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_subject_z.png",
+          "sha256": "49c23bee091ddfa07dc9430758ef413d50d764c16405362cdb57477324a6bd86",
+          "role": "identity",
+          "note": "Native shape: an ordinary-looking young man with shoulder-length dark hair in a plain white tunic and green trousers, standing upright with both arms flared wide, a long dagger in each hand."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/cutpurse.png",
+          "sha256": "bea7aa68b0e74e2a852344666fdabbbb3b73860ffb1fe309412ecf7ec71a0793",
+          "role": "family",
+          "note": "Shipped cutpurse (white vest, brown trousers, crouched with daggers low): Subject Z stands stiffly upright with arms spread wide and has green trousers and long dark hair."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A gaunt pale human man standing rigidly upright and facing the viewer, drawn large: shoulder-length straight dark hair, a blank calm face, a broad-sleeved cream-white linen tunic with a rope belt, moss-green trousers and worn brown boots, both elbows bent outward and both hands raised at shoulder height each holding a short dagger point-up. Symmetrical, stiff, uncanny and still.",
+        "contrast": "Human dagger fighters: cutpurse (crouched, brown trousers), rogue (blue hooded), thief (brown cloak), bandit (bare-chested), Harno, and the Assassin Lord (bulky mantle, crouched lunge). Subject Z is the only stiff symmetrical upright figure with arms flared wide, cream tunic and moss-green trousers (silhouette: T-shaped standing figure with two raised daggers; hue: cream plus green).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. Calibration from two previous generations of this exact token: the first drew the daggers and outstretched arms past the disc edge; the second kept everything inside but drew the whole figure too small, only about a third of the disc wide. This time make the figure large: standing figure about as tall as three quarters of the disc diameter, arms bent so the hands stay close to the shoulders, daggers held upright above the hands and shorter than the head, all clearly inside the inner four-fifths of the disc radius with a bare ring of base plate on every side.",
+        "palette": "Cream-white tunic as the brightest plane, moss-green trousers, brown boots and belt, dark hair, pale skin, steel daggers; nothing darker than mid tone except the hair. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Subject Z, define_as=SUBJECT_Z, type=humanoid/subtype=human, unique=True); details and hashes in evidence/monster-batch-j-20260929/source-contracts.json. standalone entity (no base), no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint; NPC.lua:33 gives humanoid_human_subject_z.png; Actor tint (native colour modulation) does not change identity or display structure. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-j-20260929/source-contracts.json",
+          "sha256": "f3b0d7b9e65b2c18c6416b37aae96e1dee28c95e6f4f57ed619039699ef6e83b"
+        }
+      ]
+    }
+  ]
+}

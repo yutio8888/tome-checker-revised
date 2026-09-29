@@ -1,0 +1,298 @@
+{
+  "schema": 1,
+  "batch_id": "e1-gel-jellies-v1",
+  "assets": [
+    {
+      "asset_id": "green-jelly",
+      "native_name": "green jelly",
+      "scope": "Immovable jelly family (jelly.lua); native occurrence spans Maze, Norgos, Sandworm Lair and flooded Trollmire among 7 areas per docs/expansion-plan-20260928/PLAN.md; exact identity only, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 27,
+          "anchor": "define_as = \"BASE_NPC_JELLY\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 40,
+          "anchor": "never_move = 1,"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 57,
+          "anchor": "name = \"green jelly\", color=colors.GREEN, image=\"npc/jelly-green.png\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v8-c0b/masters/green-mold-v1.png",
+          "sha256": "0cfc1c0700797d2d44fc8926b74dd6fd403516f1d127fee2b04f8ffc31c424bc",
+          "role": "style",
+          "note": "Approved amorphous-subject style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel, and how a rounded immovable ground body fills the disc without legs or a facing direction. Do not copy its species, colour or lobed rosette shape."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/jelly-green.png",
+          "sha256": "0e6f02993bdc5fa9765939ad278fd6f02eac6074125ff44db1a99368d96ab1a5",
+          "role": "identity",
+          "note": "Native green jelly colour only. Ignore the native flat blob rendering and its camera; our version is a sculpted three-dimensional mound."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v8-c0b/masters/brown-mold-v1.png",
+          "sha256": "f79f23942556f364827f7533ee0c7bf0b5abaa380dcba5981960365e32f0b284",
+          "role": "family",
+          "note": "Existing mapped brown mold: its concentric hard-shell growth rings are already taken. Green jelly must read as a soft translucent dome with suspended debris, not a hard ringed shell."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One green jelly: a smooth, semi-translucent rounded dome sitting low and wide, its base spreading into an uneven ring where it meets the disc. A scatter of small dark debris chunks and a few round bubbles are visible suspended just under the glassy surface, denser near the centre. The surface has one broad soft highlight across the upper-left dome consistent with the lighting, and gentle rounded ripples break the otherwise smooth profile.",
+        "contrast": "The other three jellies in this set are the same stationary mound body plan and must not be told apart by hue alone. Give green jelly the most translucent, glassy surface of the four, with visible suspended debris reading as small darker specks breaking up an otherwise smooth mid-green dome (silhouette: gently rippled dome edge with debris-caused micro-bumps; value: mid-value body with scattered small dark inclusions, unlike the glossy tar sheen of black jelly, the faceted frosted look of white jelly or the blistered surface of yellow jelly).",
+        "composition": "One entire stationary mound on one disc, steep overhead three-quarter view, centred with no facing direction (this creature never moves). The body sits low and wide, its base spreading unevenly where it meets the disc; every bump, facet or inclusion stays inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the tallest point of the mound out of the upper-right rank corner and the upper-left interaction corner. No second creature, no puddle trail, no scenery.",
+        "palette": "Translucent moss and bottle green with a paler yellow-green lit crown, small charcoal-brown debris specks and pale bubble highlights suspended under the surface, deep olive base shadow. No glow, no poison cloud, no effect, no ground stain."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Sub-agent verified in evidence/e1-art-gate the detached native actor for this identity: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending; main agent must review prompts before any --execute call.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/README.md",
+          "sha256": "0eeb60774d75291b9717b8cf344931e0e8dc55660e6d579ca0a368a0574168bb"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/native-actors.tsv",
+          "sha256": "92f8b81c7e7b8206d81ed6bf256db2fa136011bb9812828806ad0f8854b14fb2"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/sources.json",
+          "sha256": "ac83aa30b5df46143ca738149536bab091b578b3fdcf1a79d26624d8b1bfb33f"
+        }
+      ]
+    },
+    {
+      "asset_id": "black-jelly",
+      "native_name": "black jelly",
+      "scope": "Immovable jelly family (jelly.lua); native occurrence spans Maze, Norgos, Sandworm Lair and flooded Trollmire among 7 areas per docs/expansion-plan-20260928/PLAN.md; exact identity only, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 27,
+          "anchor": "define_as = \"BASE_NPC_JELLY\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 40,
+          "anchor": "never_move = 1,"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 135,
+          "anchor": "name = \"black jelly\", color=colors.DARK_GREY, image=\"npc/jelly-darkgrey.png\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v8-c0b/masters/green-mold-v1.png",
+          "sha256": "0cfc1c0700797d2d44fc8926b74dd6fd403516f1d127fee2b04f8ffc31c424bc",
+          "role": "style",
+          "note": "Approved amorphous-subject style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel, and how a rounded immovable ground body fills the disc without legs or a facing direction. Do not copy its species, colour or lobed rosette shape."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/jelly-darkgrey.png",
+          "sha256": "3068dd03b5ff202249a0d511a17f609ef22344720288d3c5ec847ddb47fb278b",
+          "role": "identity",
+          "note": "Native black/dark-grey jelly colour only. Ignore the native flat blob rendering and its camera; our version is a sculpted three-dimensional mound."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v8-c0b/masters/shining-mold-v1.png",
+          "sha256": "229487018dc4aa29ab5986c0f2c786048036f4787d3d94e99e1bad557a70023e",
+          "role": "family",
+          "note": "Existing mapped shining mold: its open radial cluster of separate slender stalks is already taken. Black jelly must read as one continuous low glossy mound, not a radiating cluster."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One black jelly: a low, flattened, tar-like mound that sags outward at its base into an irregular puddled edge, lower and flatter than the other three jellies. The surface is highly glossy with one broad pale rim-light highlight tracing the upper-left edge of the silhouette and a smaller secondary highlight on the crown, so the outline stays readable against a dark disc even though the body itself is near-black.",
+        "contrast": "The other three jellies in this set are the same stationary mound body plan and must not be told apart by hue alone. Give black jelly the lowest, most sagging silhouette of the four with an irregular tar-drip base edge (silhouette: squat and asymmetric rather than a round dome), and the darkest overall value of the set, held readable only by a broad pale rim-light and a glossy specular sheen (value: near-black body with a bright rim, unlike the mid-value translucency of green jelly, the pale frosted white jelly or the bright amber-yellow jelly). Do not rely on a brighter faction ring to carry the silhouette; the rim-light must be baked into the creature art itself.",
+        "composition": "One entire stationary mound on one disc, steep overhead three-quarter view, centred with no facing direction (this creature never moves). The body sits low and wide, its base spreading unevenly where it meets the disc; every bump, facet or inclusion stays inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the tallest point of the mound out of the upper-right rank corner and the upper-left interaction corner. No second creature, no puddle trail, no scenery.",
+        "palette": "Near-black tar with a cool dark-grey undertone, one broad pale silver-grey rim-light along the upper-left edge, a smaller glossy specular highlight on the crown, deep black core shadow. No glow, no acid pool, no effect, no ground stain."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Sub-agent verified in evidence/e1-art-gate the detached native actor for this identity: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending; main agent must review prompts before any --execute call.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/README.md",
+          "sha256": "0eeb60774d75291b9717b8cf344931e0e8dc55660e6d579ca0a368a0574168bb"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/native-actors.tsv",
+          "sha256": "92f8b81c7e7b8206d81ed6bf256db2fa136011bb9812828806ad0f8854b14fb2"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/sources.json",
+          "sha256": "ac83aa30b5df46143ca738149536bab091b578b3fdcf1a79d26624d8b1bfb33f"
+        }
+      ]
+    },
+    {
+      "asset_id": "white-jelly",
+      "native_name": "white jelly",
+      "scope": "Immovable jelly family (jelly.lua); native occurrence spans Maze, Norgos, Sandworm Lair and flooded Trollmire among 7 areas per docs/expansion-plan-20260928/PLAN.md; exact identity only, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 27,
+          "anchor": "define_as = \"BASE_NPC_JELLY\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 40,
+          "anchor": "never_move = 1,"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 105,
+          "anchor": "name = \"white jelly\", color=colors.WHITE, image=\"npc/jelly-white.png\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v8-c0b/masters/green-mold-v1.png",
+          "sha256": "0cfc1c0700797d2d44fc8926b74dd6fd403516f1d127fee2b04f8ffc31c424bc",
+          "role": "style",
+          "note": "Approved amorphous-subject style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel, and how a rounded immovable ground body fills the disc without legs or a facing direction. Do not copy its species, colour or lobed rosette shape."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/jelly-white.png",
+          "sha256": "7de8a14c6f28b3eef039e5702051ed724a1411c5a02ae95f8f312f9a38278c7e",
+          "role": "identity",
+          "note": "Native white jelly colour only. Ignore the native flat blob rendering and its camera; our version is a sculpted three-dimensional mound."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v5/masters/grey-mold-v1.png",
+          "sha256": "33ec16b7f1cf6425c03b096262874171746eab885f4847991940756955cb48cd",
+          "role": "family",
+          "note": "Existing mapped grey mold: its ruffled lobed rosette shape is already taken and sits closest in value to white jelly. White jelly must read as a smooth frosted dome with faceted planes, not a ruffled rosette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One white jelly: a slightly taller frosted, pearlescent dome than the other three jellies, its upper surface broken into a few broad flat facet planes rather than one smooth curve, giving it a faintly crystalline profile. A soft inner milky cloud swirl is visible just under the surface near the crown. Shadow planes are a cool pale grey, never pure flat white, so surface structure stays readable.",
+        "contrast": "The other three jellies in this set are the same stationary mound body plan and must not be told apart by hue alone. Give white jelly the tallest, most faceted silhouette of the four (silhouette: a few flat angular planes breaking the dome curve, taller and more crystalline than the round green jelly, the sagging black jelly or the blistered yellow jelly), and the lightest overall value, kept readable with cool pale-grey shadow planes and a faint inner cloud swirl instead of flat, featureless white (value: bright body with clearly visible cool-grey facet shadows).",
+        "composition": "One entire stationary mound on one disc, steep overhead three-quarter view, centred with no facing direction (this creature never moves). The body sits low and wide, its base spreading unevenly where it meets the disc; every bump, facet or inclusion stays inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the tallest point of the mound out of the upper-right rank corner and the upper-left interaction corner. No second creature, no puddle trail, no scenery.",
+        "palette": "Pearlescent bone-white with cool pale-grey facet shadows, a faint milky-blue inner cloud swirl near the crown, soft warm-white highlight on the tallest facet. No glow, no effect, no ground stain."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Sub-agent verified in evidence/e1-art-gate the detached native actor for this identity: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending; main agent must review prompts before any --execute call.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/README.md",
+          "sha256": "0eeb60774d75291b9717b8cf344931e0e8dc55660e6d579ca0a368a0574168bb"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/native-actors.tsv",
+          "sha256": "92f8b81c7e7b8206d81ed6bf256db2fa136011bb9812828806ad0f8854b14fb2"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/sources.json",
+          "sha256": "ac83aa30b5df46143ca738149536bab091b578b3fdcf1a79d26624d8b1bfb33f"
+        }
+      ]
+    },
+    {
+      "asset_id": "yellow-jelly",
+      "native_name": "yellow jelly",
+      "scope": "Immovable jelly family (jelly.lua); native occurrence spans Maze, Norgos, Sandworm Lair and flooded Trollmire among 7 areas per docs/expansion-plan-20260928/PLAN.md; exact identity only, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 27,
+          "anchor": "define_as = \"BASE_NPC_JELLY\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 40,
+          "anchor": "never_move = 1,"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 119,
+          "anchor": "name = \"yellow jelly\", color=colors.YELLOW, image=\"npc/jelly-yellow.png\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v8-c0b/masters/green-mold-v1.png",
+          "sha256": "0cfc1c0700797d2d44fc8926b74dd6fd403516f1d127fee2b04f8ffc31c424bc",
+          "role": "style",
+          "note": "Approved amorphous-subject style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel, and how a rounded immovable ground body fills the disc without legs or a facing direction. Do not copy its species, colour or lobed rosette shape."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/jelly-yellow.png",
+          "sha256": "4303883dce23363ace1aa8746967a756ea940128791736b885fde9097f9d6fbd",
+          "role": "identity",
+          "note": "Native yellow jelly colour only. Ignore the native flat blob rendering and its camera; our version is a sculpted three-dimensional mound."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v8-c0b/masters/brown-mold-v1.png",
+          "sha256": "f79f23942556f364827f7533ee0c7bf0b5abaa380dcba5981960365e32f0b284",
+          "role": "family",
+          "note": "Existing mapped brown mold: its concentric hard-shell growth rings are already taken. Yellow jelly must read as a taut blistered dome under internal pressure, not a hard ringed shell."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One yellow jelly: a full, taut amber-yellow dome with several small irregular blister-like bumps pushing out through the silhouette, especially near the crown, as if under internal pressure. Faint fine internal streak-lines radiate outward under the surface from a slightly brighter core, without any glow or sparks. The base spreads into a rounder, less ragged edge than black jelly's tar-drip base.",
+        "contrast": "The other three jellies in this set are the same stationary mound body plan and must not be told apart by hue alone. Give yellow jelly a silhouette broken by several small blister bumps rather than a smooth dome (silhouette: irregular bumpy crown, distinct from green jelly's smooth ripples, black jelly's sagging flat mound and white jelly's flat facet planes), and a bright, high-value amber body with fine internal streak-line texture instead of a uniform flat colour field (value: brightest warm hue of the set, with visible internal linework, not a glow effect).",
+        "composition": "One entire stationary mound on one disc, steep overhead three-quarter view, centred with no facing direction (this creature never moves). The body sits low and wide, its base spreading unevenly where it meets the disc; every bump, facet or inclusion stays inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the tallest point of the mound out of the upper-right rank corner and the upper-left interaction corner. No second creature, no puddle trail, no scenery.",
+        "palette": "Saturated amber-yellow with a paler lemon-yellow lit crown, faint warm-brown internal streak-lines, deep amber-brown base shadow. Electric identity is suggested only by natural colour and internal texture: no sparks, no glow, no effect, no ground stain."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Sub-agent verified in evidence/e1-art-gate the detached native actor for this identity: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending; main agent must review prompts before any --execute call.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/README.md",
+          "sha256": "0eeb60774d75291b9717b8cf344931e0e8dc55660e6d579ca0a368a0574168bb"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/native-actors.tsv",
+          "sha256": "92f8b81c7e7b8206d81ed6bf256db2fa136011bb9812828806ad0f8854b14fb2"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/sources.json",
+          "sha256": "ac83aa30b5df46143ca738149536bab091b578b3fdcf1a79d26624d8b1bfb33f"
+        }
+      ]
+    }
+  ]
+}

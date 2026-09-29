@@ -1,0 +1,87 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "orc-warrior": 65.97,
+    "orc-soldier": 64.71,
+    "orc-archer": 63.61,
+    "naga-myrmidon": 72.78,
+    "elven-guard": 61.44,
+    "mean-looking-elven-guard": 59.58,
+    "naga-nereid": 110.83,
+    "kyless": 62.12,
+    "elven-mage": 57.09,
+    "elven-tempest": 108.48,
+    "elven-blood-mage": 61.89,
+    "yaech-diver": 108.58,
+    "kyless OLD v1 (superseded: dark, lum 48.1)": 48.11,
+    "elven-blood-mage OLD v1 (superseded: dark, lum 51.9)": 51.88,
+    "naga-myrmidon OLD v1 (rejected at gate: radius 1.161)": 80.82
+  },
+  "floors": {
+    "korpul stone A (reknor/kryl-feijan/rhaloren)": 131.79,
+    "korpul stone B (reknor/kryl-feijan/rhaloren)": 134.11,
+    "grass (rhaloren-camp, keepsake-meadow)": 108.97,
+    "flower meadow (keepsake-meadow)": 107.27,
+    "bog (slazish-fen)": 107.35,
+    "underwater (murgol/temple-of-creation)": 129.4,
+    "cave rock (ardhungol)": 130.64,
+    "cave mushroom (ardhungol)": 134.28,
+    "burnt (mark-spellblaze)": 72.7
+  },
+  "zone_floors": {
+    "orc-warrior": {
+      "korpul stone A (reknor/kryl-feijan/rhaloren)": 131.79,
+      "korpul stone B (reknor/kryl-feijan/rhaloren)": 134.11
+    },
+    "orc-soldier": {
+      "korpul stone A (reknor/kryl-feijan/rhaloren)": 131.79,
+      "korpul stone B (reknor/kryl-feijan/rhaloren)": 134.11
+    },
+    "orc-archer": {
+      "korpul stone A (reknor/kryl-feijan/rhaloren)": 131.79,
+      "korpul stone B (reknor/kryl-feijan/rhaloren)": 134.11
+    },
+    "naga-myrmidon": {
+      "underwater (murgol/temple-of-creation)": 129.4,
+      "cave rock (ardhungol)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "naga-nereid": {
+      "bog (slazish-fen)": 107.35,
+      "underwater (murgol/temple-of-creation)": 129.4
+    },
+    "elven-guard": {
+      "korpul stone A (reknor/kryl-feijan/rhaloren)": 131.79,
+      "korpul stone B (reknor/kryl-feijan/rhaloren)": 134.11,
+      "grass (rhaloren-camp, keepsake-meadow)": 108.97
+    },
+    "mean-looking-elven-guard": {
+      "korpul stone A (reknor/kryl-feijan/rhaloren)": 131.79,
+      "korpul stone B (reknor/kryl-feijan/rhaloren)": 134.11,
+      "grass (rhaloren-camp, keepsake-meadow)": 108.97
+    },
+    "elven-mage": {
+      "korpul stone A (reknor/kryl-feijan/rhaloren)": 131.79,
+      "grass (rhaloren-camp, keepsake-meadow)": 108.97,
+      "burnt (mark-spellblaze)": 72.7
+    },
+    "elven-tempest": {
+      "grass (rhaloren-camp, keepsake-meadow)": 108.97,
+      "burnt (mark-spellblaze)": 72.7
+    },
+    "elven-blood-mage": {
+      "korpul stone A (reknor/kryl-feijan/rhaloren)": 131.79,
+      "korpul stone B (reknor/kryl-feijan/rhaloren)": 134.11,
+      "burnt (mark-spellblaze)": 72.7
+    },
+    "yaech-diver": {
+      "underwater (murgol/temple-of-creation)": 129.4
+    },
+    "kyless": {
+      "grass (rhaloren-camp, keepsake-meadow)": 108.97,
+      "flower meadow (keepsake-meadow)": 107.27
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

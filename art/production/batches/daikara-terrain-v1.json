@@ -1,0 +1,177 @@
+{
+  "schema": 1,
+  "batch_id": "daikara-terrain-v1",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Native Daikara source, appearance, and rules reviewed in pinned identity evidence.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/daikara-20260928/identity.md",
+          "sha256": "66779ee7e3b9c9e40d1150900b193b43858cfebe7d0b24b302377ede54370610"
+        }
+      ],
+      "asset_id": "bare-rock-ground",
+      "native_name": "ROCKY_GROUND bare Daikara floor",
+      "kind": "terrain-floor",
+      "scope": "Daikara DEFAULT and VOLCANO levels 1\u20134, including VOLCANO L4 Caldera.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/mountain.lua",
+          "sha256": "f29f818ca31d2c360a9d9e53cc12026feed0c2f53bbf6dfe12b81ab03ccd1d6f",
+          "line": 23,
+          "anchor": "define_as = \"ROCKY_GROUND\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/daikara/grids.lua",
+          "sha256": "da18012ce55e60ae3c7b1249e8f69b84746a0fb086ae19bc9dd548f16778c248",
+          "line": 21,
+          "anchor": "mountain.lua"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-norgos-snow-v1/selected/floor-snow-ground.png",
+          "sha256": "8f18f04209ea16d0ab4d2c03b73ef338f80c6f6c3f46efdae96cb741344fbc17",
+          "role": "style",
+          "note": "Accepted matte board floor scale; do not carry its snow into this output."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/rocky_ground.png",
+          "sha256": "dbd9fc764f70705ea82e76d95fd2d30232e11a11a1f8498b9d704eb3522b99c0",
+          "role": "identity",
+          "note": "Native granular gray bare-rock floor."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Passable.",
+        "sight": "Open.",
+        "danger": "None.",
+        "interaction": "Dig result of mountain walls and snowy trees.",
+        "export": "Opaque bare-rock floor with parity and seams added by exporter."
+      },
+      "prompt_fields": {
+        "subject": "Flat fine-grained weathered bare gray mountain stone and rock dust; slight warm slate inclusions, no snow.",
+        "palette": "Muted slate gray and umber, broad soft upper-left lighting.",
+        "contrast": "Clearly bare rock, unlike the pale snowy Norgos floor; no bumps reading as obstacles.",
+        "composition": "Overhead edge-to-edge matte floor texture without seams or symbols.",
+        "mechanics": "Harmless, unobstructed floor."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native Daikara source, appearance, and rules reviewed in pinned identity evidence.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/daikara-20260928/identity.md",
+          "sha256": "66779ee7e3b9c9e40d1150900b193b43858cfebe7d0b24b302377ede54370610"
+        }
+      ],
+      "asset_id": "mountain-wall",
+      "native_name": "MOUNTAIN_WALL Daikara diggable mountain",
+      "kind": "terrain-prop",
+      "scope": "Daikara DEFAULT and VOLCANO levels 1\u20134, including VOLCANO L4 Caldera.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/mountain.lua",
+          "sha256": "f29f818ca31d2c360a9d9e53cc12026feed0c2f53bbf6dfe12b81ab03ccd1d6f",
+          "line": 31,
+          "anchor": "define_as = \"MOUNTAIN_WALL\""
+        },
+        {
+          "path": "game/modules/tome/data/general/grids/mountain.lua",
+          "sha256": "f29f818ca31d2c360a9d9e53cc12026feed0c2f53bbf6dfe12b81ab03ccd1d6f",
+          "line": 40,
+          "anchor": "dig = \"ROCKY_GROUND\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/mountain5_1.png",
+          "sha256": "7ca843a2cd118c7e34a2320d7689f2cff0a12c681ade86069272b6eadff76398",
+          "role": "identity",
+          "note": "Native dark rocky mountain wall."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-norgos-snow-v1/selected/prop-snow-tree-pine.png",
+          "sha256": "14026cb5553de216033fe3d50d62b589fe0c22b0fbd14c8d59c60c97a7d72c08",
+          "role": "style",
+          "note": "Accepted tabletop scale and upper-left light; wall must have different silhouette."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Blocks except pass_wall actors.",
+        "sight": "Blocks.",
+        "danger": "None.",
+        "interaction": "Dig changes to ROCKY_GROUND.",
+        "export": "Transparent centered rock barrier, exporter assembles adjacency masks."
+      },
+      "prompt_fields": {
+        "subject": "Compact solid craggy dark slate mountain wall outcrop, fractured stone slabs rising as a definite barrier.",
+        "palette": "Charcoal slate and gray-brown rock with restrained pale edge highlights.",
+        "contrast": "Distinct from flat bare rock and narrow snowy trees; unmistakable solid movement and sight barrier.",
+        "composition": "Single complete centered rock outcrop with native transparent margins, broad grounded base, no cut-off edges.",
+        "mechanics": "Diggable obstacle, blocks movement and sight; no lava, warning marks, door, or hazard."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native Daikara source, appearance, and rules reviewed in pinned identity evidence.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/daikara-20260928/identity.md",
+          "sha256": "66779ee7e3b9c9e40d1150900b193b43858cfebe7d0b24b302377ede54370610"
+        }
+      ],
+      "asset_id": "harmless-lava-floor",
+      "native_name": "LAVA_FLOOR Daikara harmless lava floor",
+      "kind": "terrain-floor",
+      "scope": "Daikara DEFAULT and VOLCANO levels 1\u20134, including VOLCANO L4 Caldera.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/lava.lua",
+          "sha256": "9b844dc3bc7fe9247bee7e2529119714124505227088fac73788e5b75352e0d0",
+          "line": 25,
+          "anchor": "define_as = \"LAVA_FLOOR\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/daikara/grids.lua",
+          "sha256": "da18012ce55e60ae3c7b1249e8f69b84746a0fb086ae19bc9dd548f16778c248",
+          "line": 22,
+          "anchor": "e.on_stand = nil"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/lava/lava_floor1.png",
+          "sha256": "a00ba471217c344b666ef141b617495177eb99f035d7df06d7d63aa4cb522a9e",
+          "role": "identity",
+          "note": "Native Daikara lava is dark mottled, passable and harmless after zone callback."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-norgos-snow-v1/selected/floor-snow-ground.png",
+          "sha256": "8f18f04209ea16d0ab4d2c03b73ef338f80c6f6c3f46efdae96cb741344fbc17",
+          "role": "style",
+          "note": "Accepted flat board material scale and upper-left lighting, not its snowy palette."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Passable.",
+        "sight": "Open.",
+        "danger": "No on_stand callback in Daikara; harmless.",
+        "interaction": "Caldera down exit may be assigned onto this floor.",
+        "export": "Opaque lava surface with parity and seams added by exporter."
+      },
+      "prompt_fields": {
+        "subject": "Flat overhead dark cooled lava-stone flow with subtle muted ember-like marbling at the surface, low contrast.",
+        "palette": "Deep brown charcoal, dusty rust, restrained muted orange flecks.",
+        "contrast": "Distinct from bare gray rock, but calm and traversable; no injury or danger implication.",
+        "composition": "Edge-to-edge matte ground material, no elevation, flame, glowing cracks, warning stripes, or symbols.",
+        "mechanics": "Daikara lava floor is passable and harmless because its on_stand is nil; do not suggest a hazard."
+      }
+    }
+  ]
+}

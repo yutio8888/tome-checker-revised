@@ -1,0 +1,52 @@
+{
+  "asset_id": "brown-bear-v2",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "use_case": "precise-object-edit",
+  "status": "generated-reviewed-candidate",
+  "prompt": "Use case: precise-object-edit. Make ONE minor targeted correction to this exact brown bear tabletop miniature: the highest part of its back currently crosses the circular base's upper rim. Reduce the BEAR only very slightly (about 6–8%) and shift it a little toward the center, so a narrow continuous strip of the existing base is visible around the entire body, including above its back. Keep the bear large and prominent; do not make it small on the base. Keep the base size, shape, color, thin rim and position unchanged. Preserve the exact four-legged bear identity, broad body, round ears, tan short muzzle, pose, fur colors, hand-painted carved material, steep overhead angle and upper-left lighting. Preserve genuine transparent alpha outside the circular base; no external shadow. Do not add colored rings, decorations, scenery, text, extra limbs or accessories. Only fix complete silhouette containment inside the base.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/brown-bear-v1.png"
+  ],
+  "reference_roles": [
+    "edit target; keep style and base, slightly reduce subject to remain inside base"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0dd21-b1f1-7472-b28c-5b68d8636421/exec-cda388b4-7996-46af-9f56-db1e875df1cd.png",
+  "saved_output_path": "game/addons/tome-checker-revised/art/monsters-v1/masters/brown-bear-v2.png",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      39,
+      0,
+      1224,
+      1254
+    ],
+    "visible_alpha_bbox": [
+      160,
+      171,
+      1089,
+      1103
+    ],
+    "transparent_pixels": 885619,
+    "partial_alpha_pixels": 686858
+  },
+  "review": "Containment correction successful: upper back and every visible paw now stay inside the round base with a thin continuous rim. Broad body and rounded ears clearly separate from wolf. Near hind paw visible; far hind paw naturally occluded. Genuine transparent alpha, slight low-alpha edge noise preserved unchanged.",
+  "sha256": "63a68f9102fd938818288f4989ff09755e73f9dc88e045bb53e82e6012a51c10",
+  "tool": "image_gen.imagegen",
+  "tool_result_keys": [
+    "image_url",
+    "output_hint"
+  ],
+  "preserved_native_alpha": true,
+  "image_processing": "Copied original generated PNG without pixel edits, resizing, background extraction or alpha modification.",
+  "reviewed_at_utc": "2026-09-26T10:02:59.317920+00:00",
+  "selection": "candidate"
+}

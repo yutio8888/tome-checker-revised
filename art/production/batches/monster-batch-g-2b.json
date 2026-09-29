@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-g-2b",
+  "assets": [
+    {
+      "asset_id": "dremling",
+      "native_name": "dremling",
+      "scope": "maze/deep-bellow etc. random pool (rarity=1, level_range {3,nil}); non-unique native-tall body; SECOND redraw attempt (fresh generation, not an edit) after monster-batch-g-2 attempt 1 failed the style gate on base_drift alone (-11.04, tolerance +-8) -- every other check (alpha, disc_overflow 0.8596, corner_alpha, export_occupancy) passed cleanly, and the creature body itself was excellent (clearly pale weathered stone-grey, exactly the intended redraw direction, confirmed by direct visual inspection of the rejected master). The failure was the disc plate rendering too dark across all 8 sectors (-6 to -20), not localised to one area -- read as the model over-applying the explicit 'disc must read distinctly darker than the pale body, a reversal from the previous attempt' instruction on top of the composition block's own already-calibrated 4-unit-darker baseline, compounding into a much larger darkening than intended (the same kind of instruction-following overshoot documented for 8-unit-darker disc instructions in art/production/README.md and for brighten-repair edits in art/monster-batch-e/REVIEW.md and art/monster-batch-f/REVIEW.md).",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 82,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/horror_corrupted_drem.png\", display_h=2, display_y=-1}}},"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature. Match this disc's own lightness EXACTLY -- do not darken it further."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_drem.png",
+          "sha256": "0b8983be6f0109320997a3d639c24b64ad71648e1da30399a02db3858405a3a0",
+          "role": "identity",
+          "note": "IMPORTANT: this is dremling's actual art file despite the swapped-looking filenames in this family (drem's own file is npc/horror_corrupted_dremling.png). Large hulking near-black humanoid, spiky scabrous ridges, featureless hollow eye sockets, waraxe. REDRAW TARGET: keep this silhouette but move the body far lighter (see contrast field); do not copy this reference's near-black value."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "value"],
+      "prompt_fields": {
+        "subject": "A hulking, broad-shouldered humanoid warrior covered in jagged spiky scabrous ridges along its back, shoulders and forearms, gripping a battered stone waraxe low and ready. Its face is entirely featureless -- no eyes, nose or mouth, just smooth pale-grey stone-like skin with hollow darker-grey eye sockets where a face would be.",
+        "contrast": "SECOND redraw attempt (fresh generation): the first redraw (monster-batch-g-2 attempt 1) got the creature body exactly right -- clearly pale weathered stone-grey, a decisive fix of the original dark-on-dark obsidian problem -- but the disc plate came out far too dark (base_drift -11.04) because that attempt's instructions asked for the disc to read 'distinctly darker than the pale body, a reversal from the previous attempt', and that framing over-amplified the disc darkening on top of the composition block's own calibration. This attempt keeps the exact same pale-stone body direction but drops that extra reversal framing entirely: the disc must simply match the style reference's own lightness, unmodified, full stop -- the body's paleness alone provides all the needed contrast against the disc, no additional disc darkening is required or wanted. Fourth horror/corrupted silhouette in the catalog alongside Horned Horror (horned minotaur), The Mouth (wide red toothed mass) and The Abomination (tall pale spire): dremling keeps its established hulking-humanoid-with-spiky-ridge-crest-and-blank-face silhouette, distinguished from the other three by its pale weathered-stone value and ridge crest.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Render the neutral disc -- including the whole outer-sixth ring band -- at EXACTLY the style reference's own brightness and colour. Do NOT apply any additional darkening bias, gradient, vignette or bounce-light to the disc anywhere, including directly under or behind the pale creature. This is a deliberate correction: a prior attempt at this same identity asked for extra disc darkening to contrast against the pale body and overshot to base_drift -11 (tolerance +-8); the correct approach, confirmed working on other identities in this same style reference (e.g. the kryl-feijan redraw), is to leave the disc untouched at reference lightness and let the creature's own pale value carry all the contrast.",
+        "palette": "Pale weathered ash-grey to light stone-grey skin (clearly lighter than granite, NOT charcoal, NOT obsidian, NOT near-black) with a faint cool blue undertone on the spiky ridges so the silhouette edge stays legible, small dull grey stone waraxe head, no bright accents anywhere on the body (the hollow eye sockets read as a darker grey void within the pale face, not a glowing highlight); dry neutral charcoal disc with restrained copper-grey bevel at exactly the style reference's own lightness -- unmodified, no extra darkening bias applied for contrast."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name/type/subtype/no define_as/no unique) and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source, including the drem/dremling swapped-filename trap. Not currently mapped, so no refinement block is required. Second of up to 3 allowed calls for this asset (monster-batch-g-2 attempt 1 was call 1, style-gate-rejected on base_drift alone before it could be recorded/receipted, so no repair chain exists to continue -- this is a fresh standalone attempt-1 handoff per this task's 'prefer fresh regeneration over brighten/darken-repair overshoot' instruction, correcting only the disc-darkening instruction that caused the previous overshoot while keeping the successful pale-body direction unchanged.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-g-2/dremling/imagegen-calls/call-1/call.json",
+          "sha256": "d60e334468a30886da51c5624609897cc246ec9e896543ebcade58e1c9898afc"
+        }
+      ]
+    }
+  ]
+}

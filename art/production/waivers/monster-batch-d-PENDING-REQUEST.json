@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "status": "CLOSED 2026-09-29 — all four candidates below are resolved and this file no longer has any active pending request. giant-brown-ant and giant-blue-ant were approved in principle and integrated under the reviewer-approved exact-byte waiver art/production/waivers/monster-batch-d.json (still active; unrelated to the entries below). giant-carpenter-ant and giant-black-ant (the two rejected drafts recorded below, from monster-batch-d-2, base_drift +10.49/+8.97) were superseded by a calibrated redraw (monster-batch-d-3 then monster-batch-d-4) that gave carpenter huge pale ivory-grey mandibles as a value cue plus a raised stance, and gave black a hunched posture with mandibles the same dark tone as its head; the final masters (giant-carpenter-ant-redraw2-v1.png, giant-black-ant-redraw2-v1.png) cleared the style gate cleanly (base_drift -7.27/-5.43, tolerance +-8) with NO waiver needed at all, and are now shipped in overload/mod/class/CheckerTokens.lua and data/token-manifest.json. See art/monster-batch-d/REVIEW.md for the full redraw record and art/monster-batch-d/review/ants-carpenter-black-redraw-{color,grayscale}-48-64-96.png for the before/after comparison sheet.",
+  "scope": "Historical record only. The two entries below are the REJECTED monster-batch-d-2 drafts that prompted the redraw; they were never approved and are kept here for provenance, not as an active waiver request. tools/check_token_style.py does not need to consult this file for giant-carpenter-ant or giant-black-ant: their shipped masters pass the gate outright.",
+  "assets": [
+    {
+      "id": "giant-carpenter-ant",
+      "status": "REJECTED 2026-09-29, superseded by monster-batch-d-4 redraw (shipped, no waiver needed)",
+      "call": "art/production/handoffs/monster-batch-d-2/giant-carpenter-ant/imagegen-calls/call-1/call.json",
+      "receipt": "art/production/handoffs/monster-batch-d-2/giant-carpenter-ant/receipts/attempt-1.json",
+      "master_path": "art/monster-batch-d/masters/giant-carpenter-ant-v1.png",
+      "master_sha256": "7487d2cfedde3dc80fb8bfe028200f89cc41ed2da254b88d7a14d8213eeef760",
+      "runtime_128_export_sha256": "442764ee3c4793f0598ffa184dd50b487cddc38dd37cb64ac3375dbdf6702fa1",
+      "base_drift": 10.49,
+      "disc_overflow_max_opaque_radius": 0.8599,
+      "corner_alpha": [0, 0, 0, 0],
+      "export_occupancy": 0.8594,
+      "reason": "Rejected 2026-09-29: at 48px this draft was nearly indistinguishable from the giant-black-ant draft below (both black, pincers too small to read). Not integrated. See art/monster-batch-d/REVIEW.md 'Reviewer decision' for the original rejection and the redraw section for the replacement that shipped instead."
+    },
+    {
+      "id": "giant-black-ant",
+      "status": "REJECTED 2026-09-29, superseded by monster-batch-d-4 redraw (shipped, no waiver needed)",
+      "call": "art/production/handoffs/monster-batch-d-2/giant-black-ant/imagegen-calls/call-1/call.json",
+      "receipt": "art/production/handoffs/monster-batch-d-2/giant-black-ant/receipts/attempt-1.json",
+      "master_path": "art/monster-batch-d/masters/giant-black-ant-v1.png",
+      "master_sha256": "a32c7b9219120759194acae8e5ab107f5441e25c8828803233c894ddac1301d2",
+      "runtime_128_export_sha256": "f301e801b7db566351c9e97629d76c025d9fbf129b7b3ccd362ad1130b5b396f",
+      "base_drift": 8.97,
+      "disc_overflow_max_opaque_radius": 0.8585,
+      "corner_alpha": [0, 0, 0, 0],
+      "export_occupancy": 0.8594,
+      "reason": "Rejected 2026-09-29: at 48px this draft was nearly indistinguishable from the giant-carpenter-ant draft above (both black, pincers too small to read). Not integrated. See art/monster-batch-d/REVIEW.md 'Reviewer decision' for the original rejection and the redraw section for the replacement that shipped instead."
+    }
+  ]
+}

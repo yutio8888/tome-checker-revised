@@ -1,0 +1,147 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-b-2",
+  "assets": [
+    {
+      "asset_id": "skeleton-archer",
+      "native_name": "skeleton archer",
+      "scope": "general skeleton pool; exact identity only; live check pending",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 115,
+          "anchor": "skeleton archer"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v5/masters/degenerated-skeleton-archer-v1.png",
+          "sha256": "d57d95026c84b83eed782c0d82850927d6b2d2eee53bec69b19aab87c189685c",
+          "role": "style",
+          "note": "Approved skeleton-family tabletop disc and camera; identity differs by weapon and armour."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/skeleton_archer.png",
+          "sha256": "0f097b6d1ef0b167bb13c9137efe158ed7462c7db1bb435d34a7c846043c0080",
+          "role": "identity",
+          "note": "Native skeleton anatomy and weapon silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A complete two-handed longbow drawn across the chest; intact bones, hoodless skull, thin leather quiver at back.",
+        "contrast": "Straight braced bow and symmetrical intact arms versus degenerated archer broken wrist; light ivory skull and bow curve.",
+        "composition": "One complete skeleton centered on one circular disc, steep overhead three-quarter view; all bow, sword, shield and limbs inside inner four-fifths radius; clear outer band. No rank marks.",
+        "palette": "Ivory bones, worn iron or leather gear, restrained copper-grey neutral bevel and charcoal disc; no colored faction aura."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Explicit native image and base type/subtype verified in source; no live fixture in this task.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-b-20260929/source-contracts.json",
+          "sha256": "681892cf2e75c3370200bb66b5af1a2c49aee684d9a855ecfc2c68f2a98af5e9"
+        }
+      ]
+    },
+    {
+      "asset_id": "armoured-skeleton-warrior",
+      "native_name": "armoured skeleton warrior",
+      "scope": "general skeleton pool; exact identity only; live check pending",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 150,
+          "anchor": "armoured skeleton warrior"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v9-refine/masters/skeleton-warrior-v1.png",
+          "sha256": "5988a666bfb4d820807725fa62d120108e287c4ea2f48f68a1191236655a586f",
+          "role": "style",
+          "note": "Approved skeleton-family tabletop disc and camera; identity differs by weapon and armour."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/armored_skeleton_warrior.png",
+          "sha256": "120400dcbcec275579e8e39d68e3a6b89859a9b9f2fc1b3fd5cdf50a881236b2",
+          "role": "identity",
+          "note": "Native skeleton anatomy and weapon silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "Skeleton fighter with a distinct broad shield on the left arm and one-handed longsword held low on right, full heavy steel cuirass and broad helmet.",
+        "contrast": "Wide shield-and-sword silhouette versus skeleton warrior centered two-handed greatsword; broad pale shield boss and bright bone face.",
+        "composition": "One complete skeleton centered on one circular disc, steep overhead three-quarter view; all bow, sword, shield and limbs inside inner four-fifths radius; clear outer band. No rank marks.",
+        "palette": "Ivory bones, worn iron or leather gear, restrained copper-grey neutral bevel and charcoal disc; no colored faction aura."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Explicit native image and base type/subtype verified in source; no live fixture in this task.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-b-20260929/source-contracts.json",
+          "sha256": "681892cf2e75c3370200bb66b5af1a2c49aee684d9a855ecfc2c68f2a98af5e9"
+        }
+      ]
+    },
+    {
+      "asset_id": "skeleton-master-archer",
+      "native_name": "skeleton master archer",
+      "scope": "general skeleton pool; exact identity only; live check pending",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 176,
+          "anchor": "skeleton master archer"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v5/masters/degenerated-skeleton-archer-v1.png",
+          "sha256": "d57d95026c84b83eed782c0d82850927d6b2d2eee53bec69b19aab87c189685c",
+          "role": "style",
+          "note": "Approved skeleton-family tabletop disc and camera; identity differs by weapon and armour."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/master_skeleton_archer.png",
+          "sha256": "5e824e9b0019c2f28eda1b49b6d7597ce18ba16e64b4450bfae26fcbbef89077",
+          "role": "identity",
+          "note": "Native skeleton anatomy and weapon silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "Veteran skeleton archer with a large recurved longbow held diagonally, one arrow nocked, heavy leather shoulders and a very visible quiver.",
+        "contrast": "Broad recurved bow, armored shoulders and diagonal firing pose versus simpler straight-bow archer; pale skull and bow limbs.",
+        "composition": "One complete skeleton centered on one circular disc, steep overhead three-quarter view; all bow, sword, shield and limbs inside inner four-fifths radius; clear outer band. No rank marks.",
+        "palette": "Ivory bones, worn iron or leather gear, restrained copper-grey neutral bevel and charcoal disc; no colored faction aura."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Explicit native image and base type/subtype verified in source; no live fixture in this task.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-b-20260929/source-contracts.json",
+          "sha256": "681892cf2e75c3370200bb66b5af1a2c49aee684d9a855ecfc2c68f2a98af5e9"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "asset_id": "warg-v1",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "status": "generated-static-reviewed-runtime-pending",
+  "prompt": "Use case: precise-object-edit\nAsset type: a single transparent PNG full creature miniature for a square-grid tabletop RPG, readable at 48/64/96px.\nPrimary request: replace the wolf in Image 1 with the WARG in Image 2. Image 1 is the edit target for the neutral round base, soft upper-left light, high downward camera and hand-painted sculpted miniature finish. DO NOT copy its frontal symmetrical stance or wide silver neck wreath. Image 2 is the native black warg identity reference, not a style reference.\nSubject: one complete cunning black WARG, anatomically a large lean wolf with long angular face, pointed ears, narrow warm bone-coloured muzzle, black nose and small alert natural eyes. Its shoulders rise into a distinct coarse dark mane-ridge. This is an intelligent-looking animal, not a demon, hyena, bear, lion or humanoid.\nPose and silhouette: a tall-legged wary TWISTING STALK with the body curved into an open hooked shape, distinctly different from a low long horizontal dire wolf or a rightward bounding white wolf. The rump is toward the upper-left of the disc and the torso curves down the right half. The elevated narrow head turns sharply back toward the left, near the central/lower-left area, showing a long side-facing muzzle and alert ears. The high shoulder ridge is visible behind the turned head. One foreleg steps diagonally inward toward bottom centre while the other is planted farther right; rear legs are visibly staggered behind the torso. Leave clear disc gaps between the legs and under the turning neck. One slim bushy tail curves inward near the upper-left rump. Show one coherent complete quadruped; do not let a giant head, mane or curled tail hide the whole body.\nColour and values: keep the coat charcoal-black. Use broad muted cool slate highlight planes across the raised shoulder ridge, upper back and outer forelegs so the dark body separates from the neutral disc EVEN IN GRAYSCALE. The bony warm ivory/taupe muzzle is the light identity accent; a small warm cheek plane is allowed. No pale silver collar/wreath around the head and no full-body grey wash. Distinction is the hooked, tall and twisted posture plus dark body/light narrow face; do not rely on eye colour or hair strands.\nShared framing: square 1024x1024; centred almost-circular thin dark grey-brown disc roughly 86% of canvas width with a thin subdued bronze-grey bevel. Creature spans about 80–86% of disc diameter. Every ear, paw, mane point and tail stays inside the disc with an exposed perimeter strip. Keep the top-right 23% by 18% of canvas free from face or critical features, with no visible reservation mark.\nMatte painted resin or carved miniature, sculpted broad fur planes, soft upper-left illumination and only contact shadow inside the disc. No uniform bright outline, glow or theatrical rim lighting.\nBackground: real native transparent alpha outside the disc, clean antialiased edge; no scene or outside cast shadow.\nAvoid: faction rings, saturated coloured rim, crowns, rank, HP, shields, selection, text, icons, numbers, watermark, armour, collar, weapons, grass, rocks, fog, black/white background, painted transparency checkerboard, extra animals. Exactly one black warg and one neutral base.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v3/masters/great-wolf-v3.png",
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/canine_warg.png"
+  ],
+  "reference_roles": [
+    "Style/base edit target; preserve material, high camera, light and neutral disc; avoid its frontal stance and broad silver ruff.",
+    "Native warg identity reference; cunning black canine with angular narrow face and mane ridge."
+  ],
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "saved_output_path": "art/monsters-v4/masters/warg-v1.png",
+  "generated_at_utc": "2026-09-27T00:32:45.621940+00:00",
+  "original_output_path": "~/.codex/generated_images/01a0e03a-d37e-7f70-a65b-cc566c7bb09b/exec-e51c299d-4c05-4d2f-b308-60c9fb0ee973.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Original built-in image_gen output copied byte-for-byte. No image pixel edit, recolouring, matte, or alpha replacement.",
+  "sha256": "12aed885f47dc2757f22dcca27b294580dfcf31154c4cd92f9db504b45b218a6",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      51,
+      1227,
+      1254
+    ],
+    "visible_alpha_bbox": [
+      96,
+      88,
+      1158,
+      1157
+    ],
+    "transparent_pixels": 673131,
+    "partial_alpha_pixels": 898633,
+    "opaque_pixels": 752,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "selection": "candidate-priority-runtime-check",
+  "reference_sha256": {
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v3/masters/great-wolf-v3.png": "056af1ffe8c4769ff974886175078cbd58fff2baa879e2834f1ec9b90310d9de",
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/canine_warg.png": "278e51b7865fd03c641bd642a223ee3ad7c0da9938b0d009cde35dc9a7334de5"
+  },
+  "review": {
+    "observations": [
+      "Black-charcoal canine with narrow warm muzzle, pronounced raised mane ridge and hooked asymmetric torso.",
+      "Long separated front legs, turned left-facing muzzle and curved body differ from great-wolf frontal symmetry and dire-wolf low lateral mass.",
+      "Broad cool highlights on back, mane and forelegs provide value separation without an added uniform outline.",
+      "Dark lower flank is the least-separated region; needs grayscale small-size review. All visible extremities remain inside the disc."
+    ],
+    "remaining_limits": [
+      "Default shader, dense same-family comparison, relation/HP/rank overlays and motion still require parent runtime validation.",
+      "Original output is native 1254 square despite the requested 1024; original master remains unchanged.",
+      "48px grayscale muzzle/chest and lower flank have the least separation margin; prioritize runtime checks before accepting group B."
+    ]
+  },
+  "static_review": {
+    "reviewed_at_utc": "2026-09-27T00:41:53.914301+00:00",
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "backgrounds": [
+      "flat muted grass green",
+      "flat dark water blue",
+      "neutral CSS grayscale display"
+    ],
+    "method": "Parent mechanically exported original masters with the existing C tool. Existing CJS Chromium capture displayed each sprite at its actual native pixel dimensions, device scale 1. Both screenshots inspected with view_image at original resolution. No creature pixels changed.",
+    "preview_paths": [
+      "art/monsters-v4/review/first-four-grass.png",
+      "art/monsters-v4/review/first-four-water.png"
+    ],
+    "preview_sha256": {
+      "first-four-grass.png": "18a0d5edf4e34fe95328807dac83dff0d83af0fe2d4352b1184442c5fb26e814",
+      "first-four-water.png": "d22f96911b3e7bf39c1daf75b3ba3b831016b34eb93d39577380bb13cc1d15f3"
+    },
+    "observation": "64px hooked torso, narrow turned muzzle and staggered long forelegs distinguish the wolves; 48px grayscale face/chest/dark belly merge most readily and require priority runtime review.",
+    "runtime_screenshot": false
+  }
+}

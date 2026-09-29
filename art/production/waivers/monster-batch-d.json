@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "scope": "monster batch D exact-byte base_drift only; approved by reviewer 2026-09-29 (giant brown ant and giant blue ant only -- see art/monster-batch-d/REVIEW.md 'Reviewer decision'; giant carpenter ant and giant black ant were rejected in the same decision and are not in this file); no alpha, geometry or occupancy waiver",
+  "assets": [
+    {
+      "id": "giant-brown-ant",
+      "call": "art/production/handoffs/monster-batch-d-1/giant-brown-ant/imagegen-calls/call-2/call.json",
+      "master_sha256": "97d9bc8c674852bcfbf690906479cace7fc6d8a5e98a7d42637a1bb3a0988e8a",
+      "runtime_sha256": "1c9632f55a943ec092ccd4db4a6bdd7c26b0b775a501fc7787b387dab7392ae3",
+      "base_drift": 8.39,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "48/64/96px color and grayscale reviewed (art/monster-batch-d/review/ants-color-48-64-96.png, ants-grayscale-48-64-96.png); approved by reviewer 2026-09-29 after both allotted ImageGen attempts (call-1 +11.69, call-2 +8.39; tolerance +-8) passed alpha, disc_overflow, corner_alpha and export_occupancy and failed only base_drift, with a bristly matte reddish-umber silhouette that separates cleanly from the other five ants. No geometry or alpha exception."
+    },
+    {
+      "id": "giant-blue-ant",
+      "call": "art/production/handoffs/monster-batch-d-2/giant-blue-ant/imagegen-calls/call-2/call.json",
+      "master_sha256": "3e74582a30563aefe230d1a6962cc29d369a5426af8ab22b00e141bbe4d8bc7f",
+      "runtime_sha256": "82dde6f30b8155f4366afbe6626a4a51950fc4980632d692555794920494e351",
+      "base_drift": 8.45,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "48/64/96px color and grayscale reviewed (art/monster-batch-d/review/ants-color-48-64-96.png, ants-grayscale-48-64-96.png); approved by reviewer 2026-09-29 after both allotted ImageGen attempts (call-1 +8.62, call-2 +8.45; tolerance +-8) passed alpha, disc_overflow, corner_alpha and export_occupancy and failed only base_drift, with a clean glossy sapphire-blue standard-build silhouette distinct from every sibling by hue. No geometry or alpha exception."
+    }
+  ]
+}

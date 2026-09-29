@@ -1,0 +1,180 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-k-4",
+  "assets": [
+    {
+      "asset_id": "gigantic-sandworm-tunneler",
+      "native_name": "gigantic sandworm tunneler",
+      "scope": "briagh-lair, sandworm-lair, eruan (vermin/sandworm, non-unique, explicit nice_tile tall body); the scripted sandworm burrower/huge burrower and the gigantic corrosive tunneler / gravity worm are other names and stay native or already-mapped as before",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/sandworm.lua",
+          "sha256": "d3b650d818aa36a5560a366bb100fc2c4a1895b0d64e39930571b7af78d612d2",
+          "line": 88,
+          "anchor": "name = \"gigantic sandworm tunneler\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/sandworm.lua",
+          "sha256": "d3b650d818aa36a5560a366bb100fc2c4a1895b0d64e39930571b7af78d612d2",
+          "line": 89,
+          "anchor": "image=\"npc/vermin_sandworm_gigantic_sandworm_tunneler.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_sandworm_gigantic_sandworm_tunneler.png",
+          "sha256": "6d4522eaebf54625b239bd70061ff4ffd833ea822d0d73221efebf396b37ea11",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a thick tan-brown segmented worm rearing straight up from a crater of earth, its top split open into a four-petal flower-like maw lined in red-brown flesh, with crackling blue lightning arcing around it."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/sandworm-destroyer.png",
+          "sha256": "4210dcd572f66f7bbf1eb9e351970ff2f54f1bf27c2c312acc17760808a835ae",
+          "role": "family",
+          "note": "Shipped sandworm destroyer (closed rust-orange ring with a toothy round mouth): the tunneler is a thicker earth-brown worm reared up with a four-petal split maw, not a coiled ring."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A gigantic thick tunneling sandworm rearing up from the middle of the disc, drawn compact and smaller: a very thick segmented earth-brown and dusty umber body with fine ring ridges and paler tan underbelly bands coiling once around its own base in a low small heap of broken stone chunks kept close against the body, the front third reared up toward the viewer with its head split open into a wide four-petalled flower-like maw, each petal short and lined inside with glossy red-brown flesh and a few blunt pale teeth, a dark throat at the centre. Everything stays tightly clustered in the middle of the disc. No lightning, no glow.",
+        "contrast": "Sandworm tokens: sandworm (slim orange S-curve), sandworm destroyer (closed rust-orange ring with a round toothy mouth), sandworm burrower (green arches on a sand heap), sandworm queen. The tunneler is the only thick earth-brown worm reared up with a four-petal split maw over a rubble heap (silhouette: thick coil plus reared petal head; hue: umber earth brown, not orange, not green; value: mid).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. Calibration from the previous generation of this exact token: it drew parts of the creature (the four petals and the rubble heap) past the edge of the disc, so the token could not be exported. This time draw the creature markedly smaller and tighter: the ENTIRE figure, including every petal, horn, droplet, spray and rubble chunk, fits inside a circle of about two thirds of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side.",
+        "palette": "Mid earth-brown and dusty umber body lifted with paler tan segment bands and lighter ridge highlights, glossy red-brown maw interior, pale blunt teeth, light grey-tan stone chunks; nothing darker than mid tone except the throat. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=gigantic sandworm tunneler, define_as=None, type=vermin/subtype=sandworm, unique=False); details and hashes in evidence/monster-batch-k-20260929/source-contracts.json. resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/vermin_sandworm_gigantic_sandworm_tunneler.png\", display_h=2, display_y=-1}}} names the PNG explicitly (no =BASE=TILE= indirection and no {tall=1} shorthand), so the resolved tall body is statically pinnable (the batch F xhaiak/shiaak/Kyless obstacle does not apply); native sprite is 64x128; catalog nativeTallImage matches the one-body add_mos; non-unique, so the catalog entry must carry native_tall=true; base BASE_NPC_SANDWORM has no image=/shader; single-cell art path also accepted (nicer tiles off). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-k-20260929/source-contracts.json",
+          "sha256": "28f50e7a65078712b05e51600724121549410c937ea2a8f0d9084b8158382041"
+        }
+      ]
+    },
+    {
+      "asset_id": "walrog",
+      "native_name": "Walrog",
+      "scope": "temple-of-creation, flooded-cave (aquatic/demon unique lord of water, no define_as, explicit nice_tile tall body)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/aquatic_demon.lua",
+          "sha256": "2b7754a1711fe04773986f591a740d3a78a99dc2937675849c5ae5a7484bd750",
+          "line": 62,
+          "anchor": "name = \"Walrog\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/aquatic_demon.lua",
+          "sha256": "2b7754a1711fe04773986f591a740d3a78a99dc2937675849c5ae5a7484bd750",
+          "line": 64,
+          "anchor": "image=\"npc/aquatic_demon_walrog.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/aquatic_demon_walrog.png",
+          "sha256": "d9bdec2eab3e4d5569c23599843e6b92cdf51b5869714515dd59c1ee4ee4173b",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a translucent bright-blue humanoid made of churning water with two long curling horns, hanging arms, no legs, water spray falling off his edges."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/shivgoroth.png",
+          "sha256": "256b49c0369897fb68cbe9f171a5fc2c25d673f9d1b6a81c3509f027bf49d1ec",
+          "role": "family",
+          "note": "Shipped shivgoroth (lean pale-blue ice elemental): Walrog is a broad horned water-lord made of curling water, not ice shards."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A towering horned water demon rising from the middle of the disc, drawn upright, narrow, compact and smaller: a humanoid torso and arms hanging close at his sides sculpted entirely from churning translucent bright-cerulean water with white foam crests and swirling current lines, a hooded featureless head with two swept-back curling horns of clear aqua water that stay close to the head, two pale glowing eyes, the lower body dissolving into a tight spiralling whirlpool tail coiling in the middle of the disc, only a few droplets nearby. Glassy, watery and imposing, small on the disc, with plenty of bare disc around it.",
+        "contrast": "Elemental or watery tokens: shivgoroth and greater shivgoroth (pale ice elementals), Murgol and the nagas (scaled), the water imp (small teal imp). Walrog is the only large horned figure made of flowing water with a whirlpool tail (silhouette: broad torso, two swept horns, spiral lower body; hue: saturated cerulean with white foam; value: mid-light with white crests and deeper blue core lines so its edge stays readable).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. Calibration from the previous generation of this exact token: it drew parts of the creature its shoulders, arms, horns, whirlpool and water spray filling the whole disc and covering the base ring. This time draw the creature markedly smaller and tighter: the ENTIRE figure, including every petal, horn, droplet, spray and rubble chunk, fits inside a circle of about two thirds of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side.",
+        "palette": "Saturated mid cerulean and azure water with pale aqua highlight bands, bright white foam crests, deeper blue swirl lines, pale glowing eyes; nothing darker than mid tone. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Walrog, define_as=None, type=aquatic/subtype=demon, unique=True); details and hashes in evidence/monster-batch-k-20260929/source-contracts.json. resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/aquatic_demon_walrog.png\", display_h=2, display_y=-1}}} names the PNG explicitly (no =BASE=TILE= indirection and no {tall=1} shorthand), so the resolved tall body is statically pinnable (the batch F xhaiak/shiaak/Kyless obstacle does not apply); native sprite is 64x128; catalog nativeTallImage matches the one-body add_mos; unique=true with no define_as (name+type+subtype+image bind it; the catalog accepts the native-tall body of any unique entry); single-cell art path also accepted (nicer tiles off). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-k-20260929/source-contracts.json",
+          "sha256": "28f50e7a65078712b05e51600724121549410c937ea2a8f0d9084b8158382041"
+        }
+      ]
+    },
+    {
+      "asset_id": "ink-squid",
+      "native_name": "ink squid",
+      "scope": "flooded-cave, temple-of-creation, murgol-lair, lake-nur, tannen-tower (aquatic/critter, default-name image, non-unique)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/aquatic_critter.lua",
+          "sha256": "3df4ea93796566f6da4347a22cd2d2eb3bedc394ca8206289d91a2440a30d354",
+          "line": 100,
+          "anchor": "name = \"ink squid\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/aquatic_critter_ink_squid.png",
+          "sha256": "794468b203d86a18246db4559e45c47a82558913223fafa2e53a624d08b7187a",
+          "role": "identity",
+          "note": "Native shape: a slim lavender-grey squid with a pointed mantle and fins, a golden eye and long trailing tentacles."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/giant-eel.png",
+          "sha256": "3d7161da0e9308a93202d3bb803a41c7020cac20eb492a2fccea1886cad9d903",
+          "role": "family",
+          "note": "Shipped giant eel (slate-blue S-curve): show the aquatic finish only; the ink squid is a slim pointed cephalopod, not an eel."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A bold ink squid seen from a steep overhead three-quarter angle, drawn large: a thick pointed torpedo-shaped lavender-grey mantle with a pair of broad triangular pale fins at its tip and darker violet speckles along the back, a large golden eye, and eight tapering arms, fuller and shorter than before, fanning out and back in a streamlined spread, two of them longer feeding tentacles with paddle tips, dark violet ink-stained ends. Streamlined, chunky enough to read at small size, complete.",
+        "contrast": "Aquatic critters: giant eel (slate-blue S-curve), dragon turtle, and the common squid (fat rounded taupe-brown mantle with short curled arms). The ink squid is the slim one: pointed torpedo mantle with fins and long trailing tentacles (silhouette: pointed teardrop with a long streamlined fan of arms), cool lavender-grey with violet speckles (hue), lighter than the squid (value). It must never look like the fat taupe squid.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. Calibration from the previous generation of this exact token: it was drawn too small and thin, filling only about half of the disc width. This time draw the squid larger and bolder: the whole animal, mantle tip to arm tips, spans about three quarters of the disc diameter along its long diagonal, with a thicker, fuller mantle and fuller arms, still entirely inside the inner four-fifths of the disc radius.",
+        "palette": "Cool mid-light lavender-grey mantle with pale silver-lilac fins, violet speckles and violet-stained tentacle ends, bright golden eye; nothing darker than mid tone. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ink squid, define_as=None, type=aquatic/subtype=critter, unique=False); details and hashes in evidence/monster-batch-k-20260929/source-contracts.json. base BASE_NPC_AQUATIC_CRITTER (aquatic/critter, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile on the leaf or its base; no tint; generic actor.image==entry.image single path; NPC.lua:33 gives aquatic_critter_ink_squid.png; name also matches trollmire's e.name:find(\"squid\") rarity filter, which changes rarity only. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-k-20260929/source-contracts.json",
+          "sha256": "28f50e7a65078712b05e51600724121549410c937ea2a8f0d9084b8158382041"
+        }
+      ]
+    }
+  ]
+}

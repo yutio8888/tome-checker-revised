@@ -1,0 +1,177 @@
+{
+  "schema": 1,
+  "batch_id": "norgos-snow-exits-v1",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Native mountain.lua and Norgos load callback and zone generator reviewed; see pinned identity evidence.",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/norgos-20260928/identity.md",
+          "sha256": "61ad011547bfc395fd92057984bb814b22bb48dbfb32cc7479085c97e7d8b302"
+        }
+      ],
+      "asset_id": "snow-exit-up",
+      "native_name": "ROCKY up exit",
+      "kind": "terrain-prop",
+      "scope": "Norgos Lair DEFAULT and INVADED, all three levels; Daikara reuse candidate only, not enabled.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/mountain.lua",
+          "sha256": "f29f818ca31d2c360a9d9e53cc12026feed0c2f53bbf6dfe12b81ab03ccd1d6f",
+          "line": 146,
+          "anchor": "define_as = \"ROCKY_UP6\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/norgos-lair/grids.lua",
+          "sha256": "797063aeae1fc7142c08a4ac3d903ab9492b28f437597752d742161375a45a40",
+          "line": 21,
+          "anchor": "snowy_grass.png"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-forest-v1/masters-derived/prop-exit.png",
+          "sha256": "44842679fa14ba254912fc96bf06bf2adeef0c90c1443d5a9c2bcdd1274a462a",
+          "role": "style",
+          "note": "Accepted low profile tabletop exit construction and muted metal/stone palette; output must be transparent."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/way_next_6.png",
+          "sha256": "b156579b5f32f26c77935cdfba8fab3a3c40ccfdb16189127f27fb0314e362d5",
+          "role": "identity",
+          "note": "Native up transition display reference."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Passable.",
+        "sight": "No sight block.",
+        "danger": "No hazard.",
+        "interaction": "Native level/zone transition, preserve direction.",
+        "export": "Transparent marker over snow-rock floor; exporter adds parity."
+      },
+      "prompt_fields": {
+        "subject": "Low stone stair or ascent markers rising toward the top edge.",
+        "palette": "Weathered gray stone, snow dusting, restrained copper/umber accents.",
+        "contrast": "Up, down, and wilderness must differ by structure and direction, recognizable without color.",
+        "composition": "Low centered footprint with transparent margin; no tall barrier; no text, arrow glyph or icon label.",
+        "mechanics": "Walkable exit; up transition only; no door or danger."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native mountain.lua and Norgos load callback and zone generator reviewed; see pinned identity evidence.",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/norgos-20260928/identity.md",
+          "sha256": "61ad011547bfc395fd92057984bb814b22bb48dbfb32cc7479085c97e7d8b302"
+        }
+      ],
+      "asset_id": "snow-exit-down",
+      "native_name": "ROCKY down exit",
+      "kind": "terrain-prop",
+      "scope": "Norgos Lair DEFAULT and INVADED, all three levels; Daikara reuse candidate only, not enabled.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/mountain.lua",
+          "sha256": "f29f818ca31d2c360a9d9e53cc12026feed0c2f53bbf6dfe12b81ab03ccd1d6f",
+          "line": 174,
+          "anchor": "define_as = \"ROCKY_DOWN4\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/norgos-lair/grids.lua",
+          "sha256": "797063aeae1fc7142c08a4ac3d903ab9492b28f437597752d742161375a45a40",
+          "line": 21,
+          "anchor": "snowy_grass.png"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-forest-v1/masters-derived/prop-exit.png",
+          "sha256": "44842679fa14ba254912fc96bf06bf2adeef0c90c1443d5a9c2bcdd1274a462a",
+          "role": "style",
+          "note": "Accepted low profile tabletop exit construction and muted metal/stone palette; output must be transparent."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/way_next_4.png",
+          "sha256": "a0ddc7f36525351d16d4639b0a9942ea8c9ffc2cd0196da821366a216d155372",
+          "role": "identity",
+          "note": "Native down transition display reference."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Passable.",
+        "sight": "No sight block.",
+        "danger": "No hazard.",
+        "interaction": "Native level/zone transition, preserve direction.",
+        "export": "Transparent marker over snow-rock floor; exporter adds parity."
+      },
+      "prompt_fields": {
+        "subject": "Low stone stair or descent markers descending toward the lower edge.",
+        "palette": "Weathered gray stone, snow dusting, restrained copper/umber accents.",
+        "contrast": "Up, down, and wilderness must differ by structure and direction, recognizable without color.",
+        "composition": "Low centered footprint with transparent margin; no tall barrier; no text, arrow glyph or icon label.",
+        "mechanics": "Walkable exit; down transition only; no door or danger."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native mountain.lua and Norgos load callback and zone generator reviewed; see pinned identity evidence.",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/norgos-20260928/identity.md",
+          "sha256": "61ad011547bfc395fd92057984bb814b22bb48dbfb32cc7479085c97e7d8b302"
+        }
+      ],
+      "asset_id": "snow-exit-world",
+      "native_name": "ROCKY world exit",
+      "kind": "terrain-prop",
+      "scope": "Norgos Lair DEFAULT and INVADED, all three levels; Daikara reuse candidate only, not enabled.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/mountain.lua",
+          "sha256": "f29f818ca31d2c360a9d9e53cc12026feed0c2f53bbf6dfe12b81ab03ccd1d6f",
+          "line": 108,
+          "anchor": "define_as = \"ROCKY_UP_WILDERNESS\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/norgos-lair/grids.lua",
+          "sha256": "797063aeae1fc7142c08a4ac3d903ab9492b28f437597752d742161375a45a40",
+          "line": 21,
+          "anchor": "snowy_grass.png"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-forest-v1/masters-derived/prop-exit.png",
+          "sha256": "44842679fa14ba254912fc96bf06bf2adeef0c90c1443d5a9c2bcdd1274a462a",
+          "role": "style",
+          "note": "Accepted low profile tabletop exit construction and muted metal/stone palette; output must be transparent."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/worldmap.png",
+          "sha256": "09456da420b1445b950603e5990aa4c31d04fc502386e4b1d1e2532c16220183",
+          "role": "identity",
+          "note": "Native world transition display reference."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Passable.",
+        "sight": "No sight block.",
+        "danger": "No hazard.",
+        "interaction": "Native level/zone transition, preserve direction.",
+        "export": "Transparent marker over snow-rock floor; exporter adds parity."
+      },
+      "prompt_fields": {
+        "subject": "Low open trail marker to the wilderness, distinct from interior stairs.",
+        "palette": "Weathered gray stone, snow dusting, restrained copper/umber accents.",
+        "contrast": "Up, down, and wilderness must differ by structure and direction, recognizable without color.",
+        "composition": "Low centered footprint with transparent margin; no tall barrier; no text, arrow glyph or icon label.",
+        "mechanics": "Walkable exit; world transition only; no door or danger."
+      }
+    }
+  ]
+}

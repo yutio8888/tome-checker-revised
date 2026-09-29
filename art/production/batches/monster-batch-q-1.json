@@ -1,0 +1,234 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-q-1",
+  "assets": [
+    {
+      "asset_id": "fire-drake-hatchling",
+      "native_name": "fire drake hatchling",
+      "scope": "fire-drake.lua (dragon/fire, non-unique, define_as FIRE_DRAKE_HATCHLING, rarity 1, rank 1, make_escort of three hatchlings); daikara, charred-scar, vault renegade-wyrmics via the adult escort; the Wyrmic Grand Arrival wild gift (talents/gifts/summon-distance.lua:786) builds an NPC of the same name/type/subtype and explicit PNG WITHOUT define_as: with the define_as bound below it stays native (open decision, reported)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/fire-drake.lua",
+          "sha256": "a19506d0583df6a00a07bb79a78a49eb3e0776b463a53ea9c5c17fdc4c70e203",
+          "line": 47,
+          "anchor": "name = \"fire drake hatchling\", color=colors.RED"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/fire-drake.lua",
+          "sha256": "a19506d0583df6a00a07bb79a78a49eb3e0776b463a53ea9c5c17fdc4c70e203",
+          "line": 46,
+          "anchor": "define_as = \"FIRE_DRAKE_HATCHLING\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/gifts/summon-distance.lua",
+          "sha256": "647fa41f0891735435261fb1b75a9f3ab2e9be16288e14ed3ed5c5562eec59f0",
+          "line": 786,
+          "anchor": "name = \"fire drake hatchling\", faction = self.faction"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_fire_fire_drake_hatchling.png",
+          "sha256": "01918cd8df620dbddbe3c6666d512bf7824b082bc68cec70a5cf949ba2647aae",
+          "role": "identity",
+          "note": "Native shape (64x64): a small red hatchling with a big head, wings folded up behind, sitting upright."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/varsha.png",
+          "sha256": "3592b2a7bbab3e4e4ecaa1dcebe7103e18abc91ece8440314f3f124b2d515f77",
+          "role": "family",
+          "note": "Shipped Varsha the Writhing (deep crimson winged dragon, wings folded, coiled): no fire drake may be a deep crimson coiled dragon."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A fire drake hatchling seen from a steep overhead three-quarter angle: a small chubby baby drake SITTING UPRIGHT on its haunches and facing the camera, a big rounded head with two short stubby horns and large bright amber eyes, a short snout with a wisp of smoke from one nostril, tiny stubby wings folded flat against its back like a short cape, a short thick tail curled around its front feet, bright orange scales with a cream-yellow belly and glowing ember-orange cheeks, dark red horn tips and claws. Small, round, cute-but-dangerous and complete.",
+        "contrast": "Fire family: the fire hatchling is a SITTING UPRIGHT round baby with a big head and folded stub wings (silhouette: compact round upright blob, big head on top; hue: bright orange with cream belly; value: mid-light). The adult fire drake is a long low stalking body with big spread swept-back wings and open flame-breathing jaws in vermilion with black membranes; the shipped Varsha the Writhing is a deep crimson coiled adult with folded wings.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. This is a dragon on a small tabletop disc, drawn COMPACT and chunky: wings, tail, neck and head are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no wing tip, tail tip, claw, horn, drip or flame reaches the outer sixth ring band or crosses the disc rim. Do not spread the wings wider than about two thirds of the disc diameter.",
+        "palette": "Bright orange scales with lighter yellow-orange highlight planes, cream-yellow belly plates, amber eyes, dark red horn tips and claws; nothing darker than dark red-brown except the pupils; the smoke and ember cheeks must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=fire drake hatchling, define_as=FIRE_DRAKE_HATCHLING, type=dragon/subtype=fire, unique=False); details and hashes in evidence/monster-batch-q-20260929/source-contracts.json. base BASE_NPC_FIRE_DRAKE (dragon/fire, no image=); leaf carries define_as FIRE_DRAKE_HATCHLING, so the entry binds it exactly; NPC.lua:33 default-name image (npc/dragon_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; no resolvers.talents on the leaf (base has none); on_melee_hit fire only; no sustains_at_birth. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-q-20260929/source-contracts.json",
+          "sha256": "9e799436c4f23cd9cbf44235e34ab8068160b55d34bcc8f2127a33aebde15dfa"
+        }
+      ]
+    },
+    {
+      "asset_id": "cold-drake-hatchling",
+      "native_name": "cold drake hatchling",
+      "scope": "cold-drake.lua (dragon/cold, non-unique, no define_as, rarity 1, rank 1, make_escort of three hatchlings); daikara, ardhungol, frost-dragon-lair vault (entity filter by name)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/cold-drake.lua",
+          "sha256": "60153bdad6955f2773d8db30457e717c480cf794e7d0793ff027a994dcb0bff4",
+          "line": 47,
+          "anchor": "name = \"cold drake hatchling\", color=colors.WHITE"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_cold_cold_drake_hatchling.png",
+          "sha256": "8a780a411e1336734bf1be07507f1361820763d6b82c84f557aa6943895b3abd",
+          "role": "identity",
+          "note": "Native shape (64x64): a small dark-blue hatchling with a big head and wings folded up, sitting."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/rantha.png",
+          "sha256": "fbe545dd28909b1fbcfa98e80728e26c8c17ab57656d1e342e2443259244ba44",
+          "role": "family",
+          "note": "Shipped Rantha the Worm (pale silver-blue winged dragon coiled round): the ice element and every cold drake must not read as this pale coiled winged dragon."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A cold drake hatchling seen from a steep overhead three-quarter angle: a small baby drake CROUCHED LOW ON ALL FOURS in a wary pouncing stance with its chest down and rump slightly raised, head lowered and turned toward the viewer with wide pale eyes and a small open mouth showing tiny fangs, two tiny half-lifted translucent frosted wings held out a little from its back, a row of small pointed icicle spikes along the spine and a short tail with an ice tip, glacier cyan-blue scales with a white frosted belly and pale ice-blue claws. Small, chilly, springy and complete.",
+        "contrast": "Cold family: the cold hatchling is a LOW POUNCING crouch on all fours with tiny half-lifted frosted wings and an icicle spine (silhouette: low wide flat body with head down; hue: saturated glacier cyan with white frost; value: mid-light). The adult cold drake is a heavy hunched mass with high folded wings like a cloak. The hatchlings of the other elements are: fire sitting upright orange, storm rearing violet, venom S-coiled green. The shipped Rantha the Worm is a big pale silver-blue coiled winged dragon.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. This is a dragon on a small tabletop disc, drawn COMPACT and chunky: wings, tail, neck and head are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no wing tip, tail tip, claw, horn, drip or flame reaches the outer sixth ring band or crosses the disc rim. Do not spread the wings wider than about two thirds of the disc diameter.",
+        "palette": "Saturated glacier cyan-blue scales with lighter white-cyan highlight planes, white frosted belly, pale ice-blue claws and icicle spikes, pale eyes; nothing darker than dark teal blue except the mouth; the frost must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=cold drake hatchling, define_as=None, type=dragon/subtype=cold, unique=False); details and hashes in evidence/monster-batch-q-20260929/source-contracts.json. base BASE_NPC_COLD_DRAKE (dragon/cold, no image=); NPC.lua:33 default-name image (npc/dragon_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; no resolvers.talents on the leaf; on_melee_hit cold only; sound tables only; no sustains_at_birth. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-q-20260929/source-contracts.json",
+          "sha256": "9e799436c4f23cd9cbf44235e34ab8068160b55d34bcc8f2127a33aebde15dfa"
+        }
+      ]
+    },
+    {
+      "asset_id": "storm-drake-hatchling",
+      "native_name": "storm drake hatchling",
+      "scope": "storm-drake.lua (dragon/storm, non-unique, no define_as, rarity 1, rank 1, make_escort of three hatchlings); tempest-peak, ardhungol",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/storm-drake.lua",
+          "sha256": "3b5bb1be5fac8999d6635da9575de8b78e684e439f7b93e7cb95fc051df333db",
+          "line": 47,
+          "anchor": "name = \"storm drake hatchling\", color=colors.BLUE"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_storm_storm_drake_hatchling.png",
+          "sha256": "70d49cbdf5abc592d1f9aff7cd02755deb36398f18bb74c0da4feeb9297f8c73",
+          "role": "identity",
+          "note": "Native shape (64x64): a small pale blue-white hatchling with folded wings, sitting."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/rantha.png",
+          "sha256": "fbe545dd28909b1fbcfa98e80728e26c8c17ab57656d1e342e2443259244ba44",
+          "role": "family",
+          "note": "Shipped Rantha the Worm (pale silver-blue winged dragon coiled round): the ice element and every cold drake must not read as this pale coiled winged dragon."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A storm drake hatchling seen from a steep overhead three-quarter angle: a small baby drake REARING UP on its hind legs with both forepaws raised and both small wings flared open to the sides (each wing about as long as its body), head tilted up with a wide open squeaking mouth and bright yellow eyes, deep indigo-violet scales with a jagged bright yellow lightning-bolt stripe down the chest and belly and yellow tips on the wing fingers, a short tail with a forked yellow tip, two or three tiny yellow sparks close to the body. Small, jittery, electric and complete.",
+        "contrast": "Storm family: the storm hatchling is REARED UP with small flared wings, indigo-violet with a yellow lightning stripe (silhouette: upright body with two flared side wings, a T shape; hue: deep indigo-violet with yellow; value: mid with bright yellow accents). The adult storm drake is a lean diagonal streak with long narrow swept wings. Fire hatchling is orange sitting, cold hatchling is cyan crouched low, venom hatchling is green S-coiled.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. This is a dragon on a small tabletop disc, drawn COMPACT and chunky: wings, tail, neck and head are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no wing tip, tail tip, claw, horn, drip or flame reaches the outer sixth ring band or crosses the disc rim. Do not spread the wings wider than about two thirds of the disc diameter.",
+        "palette": "Deep indigo-violet scales with lighter periwinkle highlight planes, bright yellow lightning stripe and wing tips, yellow eyes; nothing darker than dark indigo except the mouth; the sparks must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=storm drake hatchling, define_as=None, type=dragon/subtype=storm, unique=False); details and hashes in evidence/monster-batch-q-20260929/source-contracts.json. base BASE_NPC_STORM_DRAKE (dragon/storm, no image=); NPC.lua:33 default-name image (npc/dragon_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; no resolvers.talents on the leaf; on_melee_hit lightning only; no sustains_at_birth. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-q-20260929/source-contracts.json",
+          "sha256": "9e799436c4f23cd9cbf44235e34ab8068160b55d34bcc8f2127a33aebde15dfa"
+        }
+      ]
+    },
+    {
+      "asset_id": "venom-drake-hatchling",
+      "native_name": "venom drake hatchling",
+      "scope": "venom-drake.lua (dragon/venom, non-unique, no define_as, rarity 1, rank 1, make_escort of three hatchlings); noxious-caldera, ardhungol",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/venom-drake.lua",
+          "sha256": "7a42f9049d69eed172d9b20e48eaf6beea98a59b341e28ac76f19db07e3c3bbb",
+          "line": 47,
+          "anchor": "name = \"venom drake hatchling\", color=colors.GREEN"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_venom_venom_drake_hatchling.png",
+          "sha256": "e6dd95f47a3df2f9930d6a6cf2143fbf5f83571f67fbeda1363b37e21fbff024",
+          "role": "identity",
+          "note": "Native shape (64x64): a slim green wingless serpent-like hatchling with a raised head and dripping mouth."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/corrupted-sand-wyrm.png",
+          "sha256": "c50ec7b10618784bcba701ec371817bb983131a344876b93129c4b64bdc734c9",
+          "role": "family",
+          "note": "Shipped Corrupted Sand Wyrm (brown horned serpentine dragon in an S coil): the sand-drake and Briagh must not be a brown S-coiled horned serpent."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A venom drake hatchling seen from a steep overhead three-quarter angle: a small slim baby drake coiled in a tight S-CURVE like a serpent, the head raised on a curved neck at the top with a wide open mouth dripping bright green acid, two small wing buds folded flat on its back, poison-green scales with a yellow-orange belly and a row of little dark green spines, glowing yellow eyes, a thin tail curling round to the front. Slender, sinuous, corrosive and complete.",
+        "contrast": "Venom family: the venom hatchling is a SLIM S-COILED serpent-like baby with a raised dripping head (silhouette: S curve with head up; hue: poison green with yellow-orange belly; value: mid). The adult venom drake is a broad hunched four-legged body with folded wings and a low spitting head. The sand-drake is a pale tan flat crawler, not green.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. This is a dragon on a small tabletop disc, drawn COMPACT and chunky: wings, tail, neck and head are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no wing tip, tail tip, claw, horn, drip or flame reaches the outer sixth ring band or crosses the disc rim. Do not spread the wings wider than about two thirds of the disc diameter.",
+        "palette": "Poison green scales with lighter lime highlight planes, yellow-orange belly, yellow eyes, bright green acid drips inside the disc; nothing darker than dark green except the mouth; the acid must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=venom drake hatchling, define_as=None, type=dragon/subtype=venom, unique=False); details and hashes in evidence/monster-batch-q-20260929/source-contracts.json. base BASE_NPC_VENOM_DRAKE (dragon/venom, no image=); NPC.lua:33 default-name image (npc/dragon_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; no resolvers.talents on the leaf; on_melee_hit acid only; no sustains_at_birth. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-q-20260929/source-contracts.json",
+          "sha256": "9e799436c4f23cd9cbf44235e34ab8068160b55d34bcc8f2127a33aebde15dfa"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "asset_id": "skeleton-mage-v2",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: precise-object-edit. Edit this skeleton mage miniature. Change ONLY staff placement/length to solve the staff head protruding past the circular base. Preserve all other subject details, palette, face, casting hand, cloth, legs, camera, soft upper-left light and base. Shorten and move staff inward toward center so its crooked carved top is centered around image x70%, y33%, with a generous dark base margin of at least 8% of disc diameter between staff top and upper-right rim. Shift holding hand a little inward if necessary for coherent grip. Staff remains clear upright caster staff running from lower-right foot toward upper-center-right, no magic effects. Entire staff, hand and all figure parts MUST lie strictly inside the projected disc boundary. Do not add limb, change casting gesture or cover ribs. Thin dark neutral base and subtle bronze-grey rim unchanged. Genuine native alpha outside base; no text, state ring, numbers, shadow outside or scenery. One square transparent PNG. Required targeted repair: short inward staff with its carved top fully inside base.",
+  "references": [
+    "art/monsters-v5/masters/skeleton-mage-v1.png"
+  ],
+  "reference_roles": [
+    "edit target"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-8f526015-b45a-488c-998a-edec96dfcad0.png",
+  "saved_output_path": "art/monsters-v5/masters/skeleton-mage-v2.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Byte-for-byte original copy; mechanical C downsampling only in sprites, no artwork editing.",
+  "selection": "static-reviewed-integration-candidate",
+  "review": "Staff head moved inside rim with margin; casting hand and cloak retained. No baked spell effects.",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "generated_at_utc": "2026-09-27",
+  "sha256": "5e97f1cb5e85815daef163c98fb19fee39d76cc982cd585e3c3fd6cf55815ca9",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      0,
+      1222,
+      1228
+    ],
+    "visible_alpha_bbox": [
+      159,
+      164,
+      1092,
+      1107
+    ],
+    "transparent_pixels": 881471,
+    "partial_alpha_pixels": 690762,
+    "opaque_pixels": 283,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "small_size_review": {
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "method": "Existing C exporter, each output actually opened using view_image original",
+    "runtime_verified": false
+  }
+}

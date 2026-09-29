@@ -1,0 +1,997 @@
+{
+  "method": "existing C export_token.c; native alpha; bbox placement; premultiplied-alpha area downsampling; 128px style gate with allow_grandfather=False",
+  "assets": [
+    {
+      "id": "giant-white-mouse",
+      "master": "masters/giant-white-mouse-v1.png",
+      "sha256": "deffd8697c68c704366aa06b89d590cbb055d4b0abfce6e444d317b8657aa515",
+      "exports": [
+        {
+          "path": "exports/48/giant-white-mouse.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            72,
+            76,
+            1184,
+            1177
+          ],
+          "export_window": [
+            -18.511628,
+            -20.011628,
+            1293.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cc6ca49500fa0614786a473e8c330097236ba8cd2b018e7ac161c0de2bd2aa1f"
+        },
+        {
+          "path": "exports/64/giant-white-mouse.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            72,
+            76,
+            1184,
+            1177
+          ],
+          "export_window": [
+            -18.511628,
+            -20.011628,
+            1293.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1e1ef304bbaf64b3fcfa69e7b5c7fb0827451c38abc4f1fddca3d573f201c7b4"
+        },
+        {
+          "path": "exports/96/giant-white-mouse.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            72,
+            76,
+            1184,
+            1177
+          ],
+          "export_window": [
+            -18.511628,
+            -20.011628,
+            1293.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4bfc46fe2a86d4bf6111c9bc1dd1e1160653cce7468a4d986d0b9d4062f5f265"
+        },
+        {
+          "path": "exports/128/giant-white-mouse.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            72,
+            76,
+            1184,
+            1177
+          ],
+          "export_window": [
+            -18.511628,
+            -20.011628,
+            1293.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "64af1f7a2e0357259d7b98a188a634b449eec8218af1c9a997ca09c218a5b02f"
+        },
+        {
+          "path": "exports/256/giant-white-mouse.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            72,
+            76,
+            1184,
+            1177
+          ],
+          "export_window": [
+            -18.511628,
+            -20.011628,
+            1293.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "20158044d7828e67b6e24893859fd0fcc15512a45ba30b877f334b68d80018f9"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "allow_grandfather": false,
+        "base_drift": 7.58,
+        "max_sector_intrusion": 9.49,
+        "max_opaque_radius": 0.8585,
+        "export_occupancy": 0.859375,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true
+      }
+    },
+    {
+      "id": "giant-brown-mouse",
+      "master": "masters/giant-brown-mouse-v1.png",
+      "sha256": "64afceffc5fdd9f3feb89784fbd77194b1c5c826d1daf407ee4c2839d5aaab73",
+      "exports": [
+        {
+          "path": "exports/48/giant-brown-mouse.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            97,
+            96,
+            1156,
+            1156
+          ],
+          "export_window": [
+            10.22093,
+            9.72093,
+            1232.55814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a25e397610254847ef9db4fafd41d0cbc6c8ac78e70c237fab9572c10426c6c1"
+        },
+        {
+          "path": "exports/64/giant-brown-mouse.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            97,
+            96,
+            1156,
+            1156
+          ],
+          "export_window": [
+            10.22093,
+            9.72093,
+            1232.55814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e639368616945ebfc088e798d91efd8d9edf3f029c15bc1942f616a5d5782357"
+        },
+        {
+          "path": "exports/96/giant-brown-mouse.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            97,
+            96,
+            1156,
+            1156
+          ],
+          "export_window": [
+            10.22093,
+            9.72093,
+            1232.55814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "153cba16b6af227f7a22b555633d63a706dba88ca140bdfd7e837afd2b70e726"
+        },
+        {
+          "path": "exports/128/giant-brown-mouse.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            97,
+            96,
+            1156,
+            1156
+          ],
+          "export_window": [
+            10.22093,
+            9.72093,
+            1232.55814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e1bc9b31108e7c2a3185e949f7f5094b2915ecb690e8e5496e0e7f4a5e254f27"
+        },
+        {
+          "path": "exports/256/giant-brown-mouse.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            97,
+            96,
+            1156,
+            1156
+          ],
+          "export_window": [
+            10.22093,
+            9.72093,
+            1232.55814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1bdf33946a4034ecd5c296a03782528228f1e17eb1c0279c485432a143ee208a"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "allow_grandfather": false,
+        "base_drift": 1.76,
+        "max_sector_intrusion": 6.92,
+        "max_opaque_radius": 0.8585,
+        "export_occupancy": 0.859375,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true
+      }
+    },
+    {
+      "id": "giant-grey-mouse",
+      "master": "masters/giant-grey-mouse-v1.png",
+      "sha256": "bf261d33a8504040bea7c5091ac483ed58e50e946232e884b5e899a57b271ab0",
+      "exports": [
+        {
+          "path": "exports/48/giant-grey-mouse.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            111,
+            110,
+            1144,
+            1144
+          ],
+          "export_window": [
+            26.337209,
+            25.837209,
+            1202.325581
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3542399ce9e43f98ef162b1d4c27d5d1aee893a81eb5b62f96f5f6c9d152f54a"
+        },
+        {
+          "path": "exports/64/giant-grey-mouse.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            111,
+            110,
+            1144,
+            1144
+          ],
+          "export_window": [
+            26.337209,
+            25.837209,
+            1202.325581
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3274b94da44c7ae064dab2280557f9ea3b5830710aa0f7f9f38243661be9b404"
+        },
+        {
+          "path": "exports/96/giant-grey-mouse.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            111,
+            110,
+            1144,
+            1144
+          ],
+          "export_window": [
+            26.337209,
+            25.837209,
+            1202.325581
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "95b54c9764357f7097d5187dcf9b22d1e09bccab55401d0d875ad697e06346bf"
+        },
+        {
+          "path": "exports/128/giant-grey-mouse.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            111,
+            110,
+            1144,
+            1144
+          ],
+          "export_window": [
+            26.337209,
+            25.837209,
+            1202.325581
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6567bc83ed1880f5549b4f088deee38b187b9b1283d16b1765ec377fc1238a59"
+        },
+        {
+          "path": "exports/256/giant-grey-mouse.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            111,
+            110,
+            1144,
+            1144
+          ],
+          "export_window": [
+            26.337209,
+            25.837209,
+            1202.325581
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b40dcfb1cca932e5abc8f60a0b0b8af01d4c48dfff139d235bad7d08e2664c39"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "allow_grandfather": false,
+        "base_drift": 6.54,
+        "max_sector_intrusion": 6.83,
+        "max_opaque_radius": 0.8576,
+        "export_occupancy": 0.859375,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true
+      }
+    },
+    {
+      "id": "giant-rabbit",
+      "master": "masters/giant-rabbit-v1.png",
+      "sha256": "88a164c8aa985a7accb29e8bb677298edc91b4baca801d3119cfa08112232ed3",
+      "exports": [
+        {
+          "path": "exports/48/giant-rabbit.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            73,
+            68,
+            1180,
+            1175
+          ],
+          "export_window": [
+            -17.104651,
+            -22.104651,
+            1287.209302
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0460b2143dcc09aa4e9d6b6245731bf79786814e16fa44a6d5cfe76fded8f1d3"
+        },
+        {
+          "path": "exports/64/giant-rabbit.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            73,
+            68,
+            1180,
+            1175
+          ],
+          "export_window": [
+            -17.104651,
+            -22.104651,
+            1287.209302
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6c8144216e13473d46c13b065a392859a51f6da093463d175d51ef3569890122"
+        },
+        {
+          "path": "exports/96/giant-rabbit.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            73,
+            68,
+            1180,
+            1175
+          ],
+          "export_window": [
+            -17.104651,
+            -22.104651,
+            1287.209302
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "88d795fe63f8820c4bc4cf6877b6848c7305ee34db1b45a134686720b7057ed7"
+        },
+        {
+          "path": "exports/128/giant-rabbit.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            73,
+            68,
+            1180,
+            1175
+          ],
+          "export_window": [
+            -17.104651,
+            -22.104651,
+            1287.209302
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "dc97b444e851487d7e5a89b137c7d1e694677d40416cec4f36eb555400065473"
+        },
+        {
+          "path": "exports/256/giant-rabbit.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            73,
+            68,
+            1180,
+            1175
+          ],
+          "export_window": [
+            -17.104651,
+            -22.104651,
+            1287.209302
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "88435d359d2f47580c56b18c041f0c061e84c861a2085b726e27db5fd55c8bc1"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "allow_grandfather": false,
+        "base_drift": 3.98,
+        "max_sector_intrusion": 7.88,
+        "max_opaque_radius": 0.8596,
+        "export_occupancy": 0.859375,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true
+      }
+    },
+    {
+      "id": "giant-crystal-rat",
+      "master": "masters/giant-crystal-rat-v1.png",
+      "sha256": "5a4b7d319e6a2491ecba5f5e14a5f867af274b6fd1d7b6f89eb145c6f800e7a0",
+      "exports": [
+        {
+          "path": "exports/48/giant-crystal-rat.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            66,
+            64,
+            1188,
+            1176
+          ],
+          "export_window": [
+            -25.325581,
+            -32.325581,
+            1304.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f161eea4684c54aee48b502ce2287cc302b9e74b066f0cd3301da56587042a25"
+        },
+        {
+          "path": "exports/64/giant-crystal-rat.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            66,
+            64,
+            1188,
+            1176
+          ],
+          "export_window": [
+            -25.325581,
+            -32.325581,
+            1304.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "26e792bac93d604424984aeaad4680a771beea546bd1c60acc3cd69697febd7b"
+        },
+        {
+          "path": "exports/96/giant-crystal-rat.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            66,
+            64,
+            1188,
+            1176
+          ],
+          "export_window": [
+            -25.325581,
+            -32.325581,
+            1304.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e2cfe6552e31531c1976b2df09dd608da5dfdd020696fc88066559d58223f576"
+        },
+        {
+          "path": "exports/128/giant-crystal-rat.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            66,
+            64,
+            1188,
+            1176
+          ],
+          "export_window": [
+            -25.325581,
+            -32.325581,
+            1304.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ac5e946d85226c025efeb904cfa1dafb2beeb5360a22170f3c0286cf768f8937"
+        },
+        {
+          "path": "exports/256/giant-crystal-rat.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            66,
+            64,
+            1188,
+            1176
+          ],
+          "export_window": [
+            -25.325581,
+            -32.325581,
+            1304.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0b82e61f3c9a5869b7d99c926256aecb9282703cfb12aa3046c231449542c4b7"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "allow_grandfather": false,
+        "base_drift": 5.53,
+        "max_sector_intrusion": 6.47,
+        "max_opaque_radius": 0.8559,
+        "export_occupancy": 0.859375,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true
+      }
+    },
+    {
+      "id": "brown-mold",
+      "master": "masters/brown-mold-v1.png",
+      "sha256": "f79f23942556f364827f7533ee0c7bf0b5abaa380dcba5981960365e32f0b284",
+      "exports": [
+        {
+          "path": "exports/48/brown-mold.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            100,
+            94,
+            1155,
+            1155
+          ],
+          "export_window": [
+            10.639535,
+            7.639535,
+            1233.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e77e14ec40c104e39152d38ef29963d4e90a7c525de0f73983bf60a16255c7c7"
+        },
+        {
+          "path": "exports/64/brown-mold.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            100,
+            94,
+            1155,
+            1155
+          ],
+          "export_window": [
+            10.639535,
+            7.639535,
+            1233.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fb57f54c58f256a882fbb3fc4c345d9f011e107e77549700724ade025e31fac1"
+        },
+        {
+          "path": "exports/96/brown-mold.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            100,
+            94,
+            1155,
+            1155
+          ],
+          "export_window": [
+            10.639535,
+            7.639535,
+            1233.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f77d603de0ff2dfeb418de339dce5a2d8ccb7cd0739b704fe14a26a67ea6075c"
+        },
+        {
+          "path": "exports/128/brown-mold.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            100,
+            94,
+            1155,
+            1155
+          ],
+          "export_window": [
+            10.639535,
+            7.639535,
+            1233.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c3ce57005ebe28e148fce938f2bccf09b46f68c9e41e31af8c8eebc7b1282ae3"
+        },
+        {
+          "path": "exports/256/brown-mold.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            100,
+            94,
+            1155,
+            1155
+          ],
+          "export_window": [
+            10.639535,
+            7.639535,
+            1233.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "28b1050c9f1ec10db8227d4e04020868119f4056b367e040a6a68192f62e8735"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "allow_grandfather": false,
+        "base_drift": 5.65,
+        "max_sector_intrusion": 3.53,
+        "max_opaque_radius": 0.8559,
+        "export_occupancy": 0.859375,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true
+      }
+    },
+    {
+      "id": "green-mold",
+      "master": "masters/green-mold-v1.png",
+      "sha256": "0cfc1c0700797d2d44fc8926b74dd6fd403516f1d127fee2b04f8ffc31c424bc",
+      "exports": [
+        {
+          "path": "exports/48/green-mold.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            96,
+            89,
+            1156,
+            1158
+          ],
+          "export_window": [
+            4.488372,
+            1.988372,
+            1243.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7f12afb86bf5bc6fab62e2323b729d87b78fce81b62d3f2eb1b45eeceb3e47f4"
+        },
+        {
+          "path": "exports/64/green-mold.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            96,
+            89,
+            1156,
+            1158
+          ],
+          "export_window": [
+            4.488372,
+            1.988372,
+            1243.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9c7f490b66fe4c27ab19bcee89a64fe155ee14cb973767898a4ebe3fd36df316"
+        },
+        {
+          "path": "exports/96/green-mold.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            96,
+            89,
+            1156,
+            1158
+          ],
+          "export_window": [
+            4.488372,
+            1.988372,
+            1243.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a68f9c14a2b71e95ef5fdf46056469052ef1ad4851e88447e521c2050069766a"
+        },
+        {
+          "path": "exports/128/green-mold.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            96,
+            89,
+            1156,
+            1158
+          ],
+          "export_window": [
+            4.488372,
+            1.988372,
+            1243.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "07dacc2dc5f1ed72cfa68eb125546cd12174386e8845dde3e56b420a21759ad8"
+        },
+        {
+          "path": "exports/256/green-mold.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            96,
+            89,
+            1156,
+            1158
+          ],
+          "export_window": [
+            4.488372,
+            1.988372,
+            1243.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "56da0f6d7a76271c21d0c56d96b7a3a570c85586cf49655d688dad6a2298d356"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "allow_grandfather": false,
+        "base_drift": 0.65,
+        "max_sector_intrusion": 2.05,
+        "max_opaque_radius": 0.8576,
+        "export_occupancy": 0.859375,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true
+      }
+    },
+    {
+      "id": "shining-mold",
+      "master": "masters/shining-mold-v1.png",
+      "sha256": "229487018dc4aa29ab5986c0f2c786048036f4787d3d94e99e1bad557a70023e",
+      "exports": [
+        {
+          "path": "exports/48/shining-mold.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            111,
+            112,
+            1143,
+            1143
+          ],
+          "export_window": [
+            27.0,
+            27.5,
+            1200.0
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3c0aa97ee02698064bf3862234a095b5c40bf3a1fd4e1c702ce0f939088523d9"
+        },
+        {
+          "path": "exports/64/shining-mold.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            111,
+            112,
+            1143,
+            1143
+          ],
+          "export_window": [
+            27.0,
+            27.5,
+            1200.0
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d77d6f20c4a7e02fd5da407c611a81deef883bfb863bbd11fbba978e91e5e5db"
+        },
+        {
+          "path": "exports/96/shining-mold.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            111,
+            112,
+            1143,
+            1143
+          ],
+          "export_window": [
+            27.0,
+            27.5,
+            1200.0
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c4cb6805b99aea37b8dfed7ca259a1e9e19826e18cf74e232a486cd96f072a23"
+        },
+        {
+          "path": "exports/128/shining-mold.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            111,
+            112,
+            1143,
+            1143
+          ],
+          "export_window": [
+            27.0,
+            27.5,
+            1200.0
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3e5c809e1f7d4a18271cddbb7a102d5cd2129d5f2e001389a2730b725aeb0f57"
+        },
+        {
+          "path": "exports/256/shining-mold.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            111,
+            112,
+            1143,
+            1143
+          ],
+          "export_window": [
+            27.0,
+            27.5,
+            1200.0
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3ed292560af73effcc9fe6bc68230aac4f94a9eb218de44ec176a417d9ec88f8"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "allow_grandfather": false,
+        "base_drift": 7.87,
+        "max_sector_intrusion": 5.17,
+        "max_opaque_radius": 0.8596,
+        "export_occupancy": 0.859375,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true
+      }
+    }
+  ]
+}

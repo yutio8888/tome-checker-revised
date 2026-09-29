@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-g-5",
+  "assets": [
+    {
+      "asset_id": "harno",
+      "native_name": "Harno, Herald of Last Hope",
+      "scope": "reknor scripted messenger boss (no rarity field, spawned after Golbug's death)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/reknor/npcs.lua",
+          "sha256": "7365934ded58f783908434d3f7f13fc8d370584b66261ca9f7b2d1bb53ae5e50",
+          "line": 120,
+          "anchor": "type = \"humanoid\", subtype = \"human\", unique = true,"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_harno__herald_of_last_hope.png",
+          "sha256": "743d19787c36d7b8f07f178fb3b3c6d0c8444136e3463c04c45125d80290dcb3",
+          "role": "identity",
+          "note": "Native species shape: hooded cloaked human figure with two knives."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/urkis.png",
+          "sha256": "644bdf7182e5ffe84f73a68f279f5071ba3fd535d295759acb28a8fc5f3d6c3a",
+          "role": "family",
+          "note": "Shipped catalog humanoid/human: lightning-themed robed caster. Harno must stay a hooded dual-knife figure, not another robed caster."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A hooded human figure wrapped in a heavy travel-worn blue-grey cloak over dark leather, face mostly hidden in shadow beneath the hood, gripping two matching curved knives held low and ready.",
+        "contrast": "Third humanoid/human catalog identity alongside urkis (lightning-themed robed caster) and celia (dark undead-aligned robed figure) -- both existing entries are robed spellcasters. Harno is a hooded cloaked ranger/messenger with two knives and no robe or staff, an unmistakably different silhouette (hooded travel cloak, dual daggers, no visible magical implement) and value (muted blue-grey travel cloak, cooler and plainer than either caster's palette).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Weathered blue-grey travel cloak over dark brown leather, deep shadow beneath the hood concealing most of the face, dull steel twin curved knife blades; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's cloak so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name=Harno, Herald of Last Hope/type=humanoid/subtype=human/define_as=HARNO/unique=true) re-verified directly against game/modules/tome source: no image=/nice_tile anywhere in the block, NPC.lua:33 default-name formula (npc/humanoid_human_harno__herald_of_last_hope.png, double underscore from the comma) confirmed present on disk and visually inspected (CONTRACTS-B5-B7-20260929.md 0, READY --订正 from 'keep native' to formula-verified). Resolves via the generic actor.image==entry.image \"single\" appearance path. Bonus asset, generated only if budget remains after the 10 required assets.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        }
+      ]
+    },
+    {
+      "asset_id": "lithfengel",
+      "native_name": "Lithfengel",
+      "scope": "reknor backup guardian boss (no rarity field, activated as a backup)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/reknor/npcs.lua",
+          "sha256": "7365934ded58f783908434d3f7f13fc8d370584b66261ca9f7b2d1bb53ae5e50",
+          "line": 158,
+          "anchor": "type = \"demon\", subtype = \"major\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_lithfengel.png",
+          "sha256": "ad756103924591db770e7646846dd3a1633eb98a5ebc268c1ab0963c4835b780",
+          "role": "identity",
+          "note": "Native species shape: hulking clawed quadrupedal demon beast, mottled rust-brown hide."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/kryl-feijan.png",
+          "sha256": "7a11c6ef821dd6c056b9bc4ada2d8662f32a6e9ed88bbd88c95c8008a959be2d",
+          "role": "family",
+          "note": "Shipped catalog demon/major: roiling pale-grey smoke mass with clawed reaching arms, no solid body. Lithfengel must stay a solid quadrupedal beast, not smoke."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A hulking demon standing on four thick clawed limbs, its hide a mottled dark rust-brown with patches of ashen grey decay, a ridge of short curved horns along its skull and clusters of small secondary eyes glowing dull red along its flanks.",
+        "contrast": "Second demon/major catalog identity alongside kryl-feijan (a roiling pale-grey smoke mass with clawed reaching arms and no solid quadrupedal body). Lithfengel is a solid-bodied clawed quadrupedal beast, not smoke -- silhouette (four-legged hulking beast vs. an upright teardrop of smoke) and value/hue (mottled rust-brown-and-ash decay vs. kryl-feijan's pale storm-grey) keep the two demon/major entries unmistakably apart.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mottled dark rust-brown hide with patches of ashen grey decay and cracked texture, short dull curved horns, small dull-red glowing secondary eyes along the flanks as the only warm accent; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's hide so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name=Lithfengel/type=demon/subtype=major/define_as=LITHFENGEL/unique=true) re-verified directly against game/modules/tome source: no image=/nice_tile anywhere in the block, NPC.lua:33 default-name formula (npc/demon_major_lithfengel.png) confirmed present on disk and visually inspected (CONTRACTS-B5-B7-20260929.md 0, READY --订正 from 'keep native' to formula-verified). Resolves via the generic actor.image==entry.image \"single\" appearance path. Bonus asset, generated only if budget remains after the 10 required assets.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        }
+      ]
+    }
+  ]
+}

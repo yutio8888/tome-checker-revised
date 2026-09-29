@@ -1,0 +1,114 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-l-5",
+  "assets": [
+    {
+      "asset_id": "kyless",
+      "native_name": "Kyless",
+      "scope": "keepsake-meadow (humanoid/human, define_as KYLESS, unique, nice_tile{tall=1} shorthand with no image= anywhere; live-confirmed in the batch J census to be image=invis.png with a single add_mos {image=npc/humanoid_human_kyless.png, display_h=2, display_y=-1}; native sprite 64x128)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 320,
+          "anchor": "define_as=\"KYLESS\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_kyless.png",
+          "sha256": "2bf327241f38f17dce9c484ec03a94e3f635cae2722465c4a4e3dfd704e24683",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a dark-haired man in an olive-green tunic and brown boots and leather wrist-wraps, holding a curled spiral object at his belly, wreathed in curling black smoke tendrils."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/the-possessed.png",
+          "sha256": "e31e76dc8b1b0307ad67c7162f75a310483e4c0596bcb2e8edc699baa61e35b8",
+          "role": "family",
+          "note": "Shipped The Possessed (human unique, tall): Kyless is an ordinary olive-tunic man wreathed in smoky violet-grey tendrils, not a possessed robed figure."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A haunted human man seen from a steep overhead three-quarter angle, drawn compact: a lean man with warm tan skin and shoulder-length mid-brown hair, a weary corrupted face with glinting pale eyes, in a bright moss-olive tunic with lighter yellow-green highlights and a tan leather belt and mid-brown boots and wrist-wraps, holding a curled cream-coloured spiral horn against his belly with both hands, wreathed by several thick curling tendrils of translucent pale violet-grey smoke with lighter lilac edges that coil up around his shoulders and arms and stay close to his body. Uneasy, sinister and complete, but clearly lit.",
+        "contrast": "Human unique tokens: Subject Z, The Possessed, Harno, Assassin Lord, Ben Cruthdar. Kyless is the olive-tunic man with a spiral horn in a corona of smoky violet-grey tendrils (silhouette: narrow figure with curling tendrils around shoulders; hue: olive green with violet-grey smoke; value: mid, the smoke lighter than charcoal).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. Calibration from the previous generation of this exact token: it passed the disc checks but the figure read as a dark smudge at 48px. This time keep the identity and pose but lift the whole figure by a clear step: broad lit surfaces in the mid-light range, pale rim light and lighter facing planes on the upper-left, nothing near black inside the figure.",
+        "palette": "Mid olive-green tunic lifted with lighter moss planes, tan leather, brown boots, warm skin, smoky mid violet-grey tendrils with lighter edges that stay clearly lighter than the disc; nothing darker than mid tone except the hair and seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Kyless, define_as=KYLESS, type=humanoid/subtype=human, unique=True); details and hashes in evidence/monster-batch-l-20260929/source-contracts.json. no base; unique with define_as KYLESS, type humanoid/subtype human, no image=; resolvers.nice_tile{tall=1} (resolvers.lua:1375-1385) expands with nicer tiles to invis.png + add_mos {image=<default-name PNG>, display_h=2, display_y=-1}. The earlier static doubt (image nil at resolve time) was disproved by the batch J live census (evidence/monster-batch-j-live-20260929/census.json, keepsake-meadow-L6: image invis.png, add_mos[1].image npc/humanoid_human_kyless.png, display_h 2, display_y -1, no aura entry, moddable_tile false), the same shorthand that batches F/G confirmed for xhaiak/shiaak. Talents (Willful Strike, Deflection, Blast, Unseen Force, Feed, Devour Life, Feed Power, Feed Strengths, Creeping Darkness, Dark Vision, Dark Tendrils) and sustains_at_birth never write type/subtype/image; never_act and seen_by do not touch display. Unique catalog entries accept the tall path and the single-cell path. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-l-20260929/source-contracts.json",
+          "sha256": "cf262c882fc0c76bb40508664d56eacf4edc8c285da13c44b0017769c1f93cd3"
+        }
+      ]
+    },
+    {
+      "asset_id": "elven-blood-mage",
+      "native_name": "elven blood mage",
+      "scope": "crypt-kryl-feijan, mark-spellblaze and other shalore spawns (humanoid/shalore, default-name image, non-unique; sustains_at_birth activates Blood Fury only, which changes no body field)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/elven-caster.lua",
+          "sha256": "a68bfbfbbe74a47b0c2a95f683439c41035ecf952d53cabb4c7636ee011fd515",
+          "line": 119,
+          "anchor": "name = \"elven blood mage\", color=colors.ORCHID"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_shalore_elven_blood_mage.png",
+          "sha256": "1688fe6ae4d295bccd692118226876cf83f193110a9ef85c052459c35f71ecb8",
+          "role": "identity",
+          "note": "Native shape: a pale elf in a dark navy-blue hooded robe splattered with red blood stains, arms hanging at the sides, blond hair."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/kryl-feijan-acolyte.png",
+          "sha256": "dbf6da4561297ae6851bfe9de268227d2b09ab632d69ea53be7e2f2c040a1989",
+          "role": "family",
+          "note": "Shipped Kryl-Feijan acolyte (crimson robes, red orb held up): the blood mage is a slate-blue-grey robe with red stains and open dripping hands, no red robe and no orb."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A grim elven blood mage seen from a steep overhead three-quarter angle: a pale elf with blond hair under a pale steel blue-grey hood with a lighter lining, a long robe in mid-light steel blue-grey with pale silvery-blue highlights on the folds and bold bright crimson blood splatters and a wet bright crimson hem, both hands held open in front at hip height dripping bright red blood in a few droplets that stay near the hands, a hunched menacing lean forward. Sinister, clearly lit and complete.",
+        "contrast": "Shalore tokens: Kryl-Feijan acolyte (crimson robe, red orb held up), Grand Corruptor (blue with red, horned), Rhaloren Inquisitor plus the elven mage (indigo, staff) and tempest (sky-blue, lightning) built beside it. The blood mage is the slate blue-grey robe with bright red splatters, hunched forward with open dripping hands (silhouette: hunched with two low forward hands; hue: slate steel-blue with crimson accents; value: mid). Never a red robe, never a raised orb.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. Calibration from the previous generation of this exact token: it passed the disc checks but the figure read as a dark smudge at 48px. This time keep the identity and pose but lift the whole figure by a clear step: broad lit surfaces in the mid-light range, pale rim light and lighter facing planes on the upper-left, nothing near black inside the figure.",
+        "palette": "Mid slate blue-grey robe lifted with lighter steel-blue folds, bright crimson blood accents, pale skin, blond hair; nothing darker than mid tone except robe seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=elven blood mage, define_as=None, type=humanoid/subtype=shalore, unique=False); details and hashes in evidence/monster-batch-l-20260929/source-contracts.json. base BASE_NPC_ELVEN_CASTER (humanoid/shalore, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives humanoid_shalore_elven_blood_mage.png; talents Drain/Blood Spray/Blood Grasp/Blood Boil/Blood Fury: none writes type/subtype/image (only Flame of Urh'Rok does, and the blood mage does not know it). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-l-20260929/source-contracts.json",
+          "sha256": "cf262c882fc0c76bb40508664d56eacf4edc8c285da13c44b0017769c1f93cd3"
+        }
+      ]
+    }
+  ]
+}

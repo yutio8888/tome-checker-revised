@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "scope": "monster batch B exact-byte base drift only; approved by reviewer 2026-09-29; no alpha, geometry or occupancy waiver",
+  "assets": [
+    {
+      "id": "shax",
+      "call": "art/production/handoffs/monster-batch-b-1/shax/imagegen-calls/call-1/call.json",
+      "master_sha256": "bb33c4615a77c3ee130e2922fdd6b66370e80c291e2d4d6def9a6ea621b1f098",
+      "runtime_sha256": "e7eea887ab9eabe238c11bb2e593bd734b13ebcb8ecaeb5da16c1fedbc122f2f",
+      "base_drift": -9.99,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "48/64/96px color and grayscale reviewed; approved by reviewer 2026-09-29 after 48/64/96px sheet review. No geometry or alpha exception."
+    },
+    {
+      "id": "horned-horror",
+      "call": "art/production/handoffs/monster-batch-b-1/horned-horror/imagegen-calls/call-1/call.json",
+      "master_sha256": "fe50ca67244e207bfbb1e64daea4ffd6122b12c464aade439651dcb01f9e2516",
+      "runtime_sha256": "c9bb09b63789d44ebb7b23ddec02eb940c6047e15b8da7f6e0187265acfa5af0",
+      "base_drift": -10.01,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "48/64/96px color and grayscale reviewed; approved by reviewer 2026-09-29 after 48/64/96px sheet review. No geometry or alpha exception."
+    },
+    {
+      "id": "norgos-guardian",
+      "call": "art/production/handoffs/monster-batch-b-1/norgos-guardian/imagegen-calls/call-2/call.json",
+      "master_sha256": "b9bf1dcc5e60cfe076ac294ebf81997362b0f58c00e171fc42855cf100b7151c",
+      "runtime_sha256": "dc260cae3635bbecb483a480dafd1aa9254539938f5188eb0553c90b16bdc5f8",
+      "base_drift": -12.09,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "48/64/96px color and grayscale reviewed; approved by reviewer 2026-09-29 after 48/64/96px sheet review. No geometry or alpha exception."
+    }
+  ]
+}

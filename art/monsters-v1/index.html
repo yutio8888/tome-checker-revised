@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>巨魔沼泽 · 怪物棋子首批样板</title>
+<style>
+@font-face { font-family:BoardChinese; src:url('../../../../engines/default/data/font/zh_hans/WenQuanYiMicroHei.ttf'); font-display:swap; }
+:root { color-scheme:dark; --paper:#eee6cc; --muted:#b6b39c; --line:#787256; --faction:transparent; }
+* { box-sizing:border-box; }
+body { margin:0; background:#191f1c; color:var(--paper); font:16px/1.55 BoardChinese,system-ui,sans-serif; }
+main { max-width:1440px; margin:auto; padding:30px; }
+header { border-top:3px solid #a89362; padding:18px 0; }
+h1 { margin:0 0 6px; font-size:30px; font-weight:600; letter-spacing:.03em; }
+h2 { font-size:19px; font-weight:550; margin:0; }
+p { margin:5px 0 15px; color:var(--muted); }
+.eyebrow { color:#cbb57f; font-size:13px; letter-spacing:.15em; }
+.toolbar { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:8px 0 20px; }
+button,select { background:#303a30; border:1px solid var(--line); color:var(--paper); font:inherit; padding:6px 12px; cursor:pointer; }
+button[aria-pressed=true] { border-color:#dec695; background:#4e5140; }
+button:focus-visible,select:focus-visible,a:focus-visible { outline:2px solid #a9ced6; outline-offset:3px; }
+.small { font-size:13px; color:var(--muted); }
+.cards { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:14px; }
+article { background:#262e26; border:1px solid #535947; padding:13px; min-width:0; }
+.id { font-size:11px; color:#a6ad9c; letter-spacing:.03em; }
+.hero { display:flex; justify-content:center; align-items:center; margin:14px 0; height:212px; background-color:#45513d; background-image:url('../../data/gfx/refined/grass0.png'); background-size:106px; }
+.token { position:relative; display:inline-block; flex-shrink:0; vertical-align:middle; width:var(--size); height:var(--size); }
+.token img { width:100%; height:100%; object-fit:contain; display:block; }
+.token::after { content:''; position:absolute; inset:6%; border: max(1px,calc(var(--size) * .018)) solid var(--faction); border-radius:50%; pointer-events:none; }
+.hero .token { --size:204px; }
+.samples { display:flex; align-items:flex-end; justify-content:space-around; gap:2px; padding:8px 0 13px; border-top:1px solid #46503e; }
+figure { margin:0; text-align:center; }
+figcaption { color:var(--muted); font-size:12px; margin-top:4px; }
+.trait { min-height:53px; margin:7px 0; font-size:13px; }
+.comparison { display:flex; justify-content:space-evenly; align-items:end; border-top:1px solid #46503e; padding:12px 0 4px; }
+.comparison img { width:64px; height:64px; object-fit:contain; }
+.comparison .old { background:#4b563d; }
+.note { margin-top:20px; border:1px solid #65684d; padding:15px 18px; background:#242b25; }
+.note p { margin:0; }
+footer { margin-top:18px; color:var(--muted); font-size:13px; }
+a { color:#d6be87; }
+.grey .token img { filter:grayscale(1); }
+.grey .token::after { filter:grayscale(1); }
+.fog .hero { filter:brightness(.48); }
+.light .hero { background:#c3b78d; }
+.water .hero { background-image:url('../../data/gfx/refined/water0.png'); }
+@media(max-width:1000px) { .cards {grid-template-columns:repeat(3,minmax(0,1fr));} }
+@media(max-width:660px) { main {padding:16px;} .cards {grid-template-columns:1fr;} .hero {height:240px;} }
+</style>
+<main>
+  <header>
+    <div class="eyebrow">TROLLMIRE · CREATURE STUDY 01</div>
+    <h1>巨魔沼泽 · 怪物棋子</h1>
+    <p>五种形体，共用中性底盘。先读轮廓，再读细节；阵营状态独立表达。</p>
+  </header>
+  <div class="toolbar" aria-label="素材审阅选项">
+    <label>标记预览 <select id="faction"><option value="transparent">中性母版 · 无圈</option><option value="#cf6356">敌对 · 红</option><option value="#78bda0">友好 · 绿</option><option value="#ccba84">中立 · 米金</option><option value="#6cbcd2">控制单位 · 蓝</option></select></label>
+    <label>背景 <select id="ground"><option value="grass">草地</option><option value="water">水面</option><option value="light">浅色底</option><option value="fog">草地压暗示意</option></select></label>
+    <button id="grey" aria-pressed="false">灰度检查</button>
+    <span class="small">小图按 48 / 64 / 96 CSS 像素显示 · 浏览器缩放 100%</span>
+  </div>
+  <div class="cards" id="cards"></div>
+  <div class="note"><p>这是生成素材与独立标记的审阅页，<strong>不是实机截图</strong>。彩色圈由页面绘制，PNG 内没有阵营信息；压暗示意也不代表游戏迷雾算法。下排保留原生图与上一轮棋子供身份、比例比较。</p></div>
+  <footer><a href="BRIEF.md">制作规范</a> · <a href="inventory/inventory.md">源素材与覆盖计划</a> · <a href="REVIEW.md">本轮检查结果</a> · 每个物种的完整提示词与参考路径位于 prompts/。</footer>
+</main>
+<script src="selection.js"></script>
+<script>
+const defaults = [
+ {id:'forest-troll',name:'森林巨魔',old:'troll',original:'troll_f',trait:'宽肩、长臂、尖耳和下颌獠牙；空手二足轮廓。'},
+ {id:'wolf',name:'狼',old:'wolf',original:'canine_w',trait:'尖耳、长口鼻、细长身形与弯尾；区别于熊的圆厚轮廓。'},
+ {id:'brown-bear',name:'棕熊',old:'bear',original:'brown_bear',trait:'宽背、圆耳、短口鼻和粗掌；暖棕色的大块体积。'},
+ {id:'brown-snake',name:'棕蛇',old:'snake',original:'umber-snake',trait:'土褐色盘曲、单个抬起的头；沿用原实体的棕色身份。'},
+ {id:'venus-flytrap',name:'巨型捕蝇草',old:'plant',original:'immovable_plants_giant_venus_flytrap',trait:'双瓣捕虫夹与放射叶；区别于地面花丛和树木构件。'}
+];
+const choice = window.monsterSelection || {};
+function token(path,size) { const box=document.createElement('span');box.className='token';box.style.setProperty('--size',size+'px');const im=new Image();im.src=path;im.alt='';box.append(im);return box; }
+for (const a of defaults) {
+ const path=choice[a.id] || ('masters/'+a.id+'-v1.png');
+ const c=document.createElement('article');
+ const h=document.createElement('h2');h.textContent=a.name;c.append(h);
+ const id=document.createElement('div');id.className='id';id.textContent=a.id;c.append(id);
+ const hero=document.createElement('div');hero.className='hero';hero.append(token(path,204));c.append(hero);
+ const row=document.createElement('div');row.className='samples';
+ for (const size of [48,64,96]) {const f=document.createElement('figure');f.append(token('sprites/'+size+'/'+a.id+'.png',size));const cap=document.createElement('figcaption');cap.textContent=size+' px';f.append(cap);row.append(f);}
+ c.append(row);
+ const trait=document.createElement('p');trait.className='trait';trait.textContent=a.trait;c.append(trait);
+ const comp=document.createElement('div');comp.className='comparison';
+ for (const [src,label,cls] of [
+ ['../../../../modules/tome/data/gfx/shockbolt/npc/'+a.original+'.png','原生 64px',''],
+ ['../../data/gfx/'+a.old+'.png','上一轮 64px','old']]) {
+  const f=document.createElement('figure');const im=new Image();im.src=src;im.alt=label;im.className=cls;f.append(im);const cap=document.createElement('figcaption');cap.textContent=label;f.append(cap);comp.append(f);
+ }
+ c.append(comp);document.getElementById('cards').append(c);
+}
+document.getElementById('faction').addEventListener('change',e=>document.documentElement.style.setProperty('--faction',e.target.value));
+document.getElementById('ground').addEventListener('change',e=>{document.body.classList.remove('water','light','fog');if(e.target.value!=='grass')document.body.classList.add(e.target.value);});
+document.getElementById('grey').addEventListener('click',e=>{const pressed=document.body.classList.toggle('grey');e.currentTarget.setAttribute('aria-pressed',pressed);});
+const args=new URLSearchParams(location.search);
+if(args.get('faction')) {const s=document.getElementById('faction');s.selectedIndex=Math.max(0,['none','enemy','friend','neutral','self'].indexOf(args.get('faction')));s.dispatchEvent(new Event('change'));}
+if(args.get('grey')==='1')document.getElementById('grey').click();
+</script>
+</html>

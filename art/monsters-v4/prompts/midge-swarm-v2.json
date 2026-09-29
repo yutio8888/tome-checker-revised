@@ -1,0 +1,75 @@
+{
+  "asset_id": "midge-swarm-v2",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "status": "rejected-extra-wing-on-one-midge",
+  "prompt": "Use case: precise-object-edit\nAsset type: corrected transparent PNG midge-swarm tabletop miniature.\nPrimary request: make one targeted anatomy correction to Image 1, preserving the seven insects, their slender bodies, their positions, the loose open-centre swarm arrangement, neutral disc, materials, camera, colours and lighting.\nCorrection: EACH of the SEVEN midges must visibly have ONE COMPLETE PAIR OF WINGS attached to its thorax: one narrow wing on the left and one narrow wing on the right. Fourteen wings total. Currently most insects show only a single obvious wing; add or reveal the missing partner. Adjust wing angles slightly only where necessary so both wings can be seen from this high downward camera. Two translucent smoky-silver veined wing planes per insect must be connected to the same thorax, and separated enough to read as a paired insect silhouette, not a single leaf. Preserve the upper-left insect's already-visible wing pair as a useful example of paired attachment. Keep wings proportionate to the slender body; do not create butterfly wings.\nInvariants: exactly seven midges with complete narrow grey-brown abdomens, small insect heads, antennae and six coherent legs; no extra insect, bee, wasp, fluffy yellow body or stripe. Keep the same overall open-centre layout, disc diameter, thin dark grey-brown disc, subdued bronze-grey bevel, hand-painted sculpted miniature finish, upper-left soft lighting, small internal shadows and view angle. Do not move an insect outside the disc or crop any wing, leg or antenna.\nPreserve genuine native alpha outside the disc. Square image, target 1024x1024 if supported, clean antialiased edge. No background, scene, extra shadows, text, icons, faction rings, coloured rims, rank, HP, glow, guides or watermark.\nOnly correct missing or hidden wing partners; do not redesign the other artwork.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v1.png"
+  ],
+  "reference_roles": [
+    "Rejected v1 edit target; add/reveal each missing wing partner while preserving seven bodies, open grouping, base, light and material."
+  ],
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "saved_output_path": "art/monsters-v4/masters/midge-swarm-v2.png",
+  "generated_at_utc": "2026-09-27T00:56:48.342008+00:00",
+  "batch_group": "B",
+  "supersedes": "midge-swarm-v1",
+  "repair_reason": "Most midges show only one obvious wing; require a visibly attached pair per insect.",
+  "parent_authorization": "Parent explicitly approved one targeted wing-pair correction and authorized routine in-identity anatomy/alpha fixes.",
+  "original_output_path": "~/.codex/generated_images/01a0e03a-d37e-7f70-a65b-cc566c7bb09b/exec-20e0a374-450f-42ad-bf1a-4c610e2c1e80.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Original built-in image_gen output copied byte-for-byte. No creature pixel editing, recolouring, matting, alpha replacement or re-encoding.",
+  "sha256": "cee466d4078cba56ae6f9802024ff92a8c5123e542ee8927e62e1866e7db30e8",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      143,
+      141,
+      1111,
+      1254
+    ],
+    "visible_alpha_bbox": [
+      148,
+      144,
+      1107,
+      1111
+    ],
+    "transparent_pixels": 837663,
+    "partial_alpha_pixels": 734411,
+    "opaque_pixels": 442,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "selection": "rejected-keep-for-provenance",
+  "reference_sha256": {
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v1.png": "f9be4138ccf7cc2553ff571fbf05c3cf38730830d60eb06a414bb0333831e1ed"
+  },
+  "review": {
+    "observations": [
+      "Paired wings now appear on six insects without changing the group count or layout.",
+      "The right-middle insect now has three visible leaf-like wing planes; its lower-right abdomen is obscured or replaced by the third wing."
+    ],
+    "selection_reason": "Second targeted in-identity correction will repair only the right-middle insect by deleting the lower-right extra wing and restoring its narrow segmented abdomen. Parent authorized routine anatomy fixes up to two repair rounds.",
+    "remaining_limits": [
+      "Not selected: one insect anatomy remains visibly inconsistent."
+    ]
+  }
+}

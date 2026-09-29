@@ -1,0 +1,7 @@
+# Last Hope Graveyard board props
+
+Exporter-only iteration, with zero ImageGen calls. `export.py` uses the established board grass, Kor'Pul stone wall and floor materials. It builds four opaque 128px cells: an upright grave marker on muted board grass, a closed coffin, an open coffin, and a passable mausoleum arch on stone. There is no bright native grass patch beneath a marker. Source and selected export SHA256 values are pinned in `export-manifest.json`.
+
+The [48px](review/contact-48.png), [64px](review/contact-64.png), and [96px](review/contact-96.png) contacts were checked. The minimum parity difference across the four pairs is 14.40%, above the unchanged 10% gate. The grave marker reads as a small obstacle; the dark open arch reads as an entrance. The new drawings contain no game state or lore text.
+
+Runtime gates require the graveyard grid source, exact IDs, native images and displays, and unchanged callback pointers. All 44 generated GRAVE markers and one mausoleum entrance in L1 were owned; twelve closed coffins in L2 were owned. Fixture snapshots confirm callback and rule fields survived Vanilla→Refined display switching; one open coffin generated through the native zone entity path received the open board cell. The [L1](../../evidence/graveyard-props-20260929/screenshots/graveyard-L1-props-64.png) and [L2](../../evidence/graveyard-props-20260929/screenshots/graveyard-L2-coffins-64.png) shader-on frames show the result. The L2 open coffin was staged for inspection, not opened through the full confirmation dialog.

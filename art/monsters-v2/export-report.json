@@ -1,0 +1,1229 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "stone-troll",
+      "master": "masters/stone-troll-v1.png",
+      "sha256": "81691b478956dd5bc8d9dc028e7af0401a4b994a1410bc79f9a56b3d3db3923e",
+      "exports": [
+        {
+          "path": "sprites/48/stone-troll.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            106,
+            98,
+            1149,
+            1157
+          ],
+          "export_window": [
+            11.802326,
+            11.802326,
+            1231.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c5d5fd0f2ee1c99bfc1cecf3ebc39b505c648f54b466ce332dc2ad9ed8912f6e"
+        },
+        {
+          "path": "sprites/64/stone-troll.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            106,
+            98,
+            1149,
+            1157
+          ],
+          "export_window": [
+            11.802326,
+            11.802326,
+            1231.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bb8088737930ea35ca299eaebce74711f8afb347e7e26c9c6020c52da135c515"
+        },
+        {
+          "path": "sprites/96/stone-troll.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            106,
+            98,
+            1149,
+            1157
+          ],
+          "export_window": [
+            11.802326,
+            11.802326,
+            1231.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1d8b7c11e2381fab40ab3ef18a62965ed26a37ff4c7be4447a8cff91c7918b49"
+        },
+        {
+          "path": "sprites/128/stone-troll.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            106,
+            98,
+            1149,
+            1157
+          ],
+          "export_window": [
+            11.802326,
+            11.802326,
+            1231.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "06d2c60ee3cc58657cacd30e092351faea6b821ab17c2b2a0d0a42d448ac5e03"
+        },
+        {
+          "path": "sprites/256/stone-troll.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            106,
+            98,
+            1149,
+            1157
+          ],
+          "export_window": [
+            11.802326,
+            11.802326,
+            1231.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a0963ea968a69d2a5554a9f4ecb8a841c2c74192b5e7dcef1a968f6ec89ed93d"
+        }
+      ]
+    },
+    {
+      "id": "cave-troll",
+      "master": "masters/cave-troll-v2.png",
+      "sha256": "680ab5bcdfb51f4b3f43e6f296c1bb796f95786521a75dad7d2ec697defb94e3",
+      "exports": [
+        {
+          "path": "sprites/48/cave-troll.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            155,
+            148,
+            1099,
+            1107
+          ],
+          "export_window": [
+            69.44186,
+            69.94186,
+            1115.116279
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "290e9539c25bc25f5a31446fbd5024d1663ec5dfa6d5a5bac51db3b10854e5df"
+        },
+        {
+          "path": "sprites/64/cave-troll.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            155,
+            148,
+            1099,
+            1107
+          ],
+          "export_window": [
+            69.44186,
+            69.94186,
+            1115.116279
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4ea702388338ae6ac1716a77670731c372d7f80079e4096a2ed2b2556f48b9aa"
+        },
+        {
+          "path": "sprites/96/cave-troll.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            155,
+            148,
+            1099,
+            1107
+          ],
+          "export_window": [
+            69.44186,
+            69.94186,
+            1115.116279
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0c30707992fe89d332966642e87f1d036d2299b061ea771d78e1b49c27a6c948"
+        },
+        {
+          "path": "sprites/128/cave-troll.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            155,
+            148,
+            1099,
+            1107
+          ],
+          "export_window": [
+            69.44186,
+            69.94186,
+            1115.116279
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e37e89b32e79a6f8025b5367ee5d995e1200891acf8979385a0f0af3287db6e1"
+        },
+        {
+          "path": "sprites/256/cave-troll.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            155,
+            148,
+            1099,
+            1107
+          ],
+          "export_window": [
+            69.44186,
+            69.94186,
+            1115.116279
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d3a3944c210c65733da93622899f9344e1b9692fcc10b1c9264bdc1efdb69584"
+        }
+      ]
+    },
+    {
+      "id": "prox",
+      "master": "masters/prox-v2.png",
+      "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+      "exports": [
+        {
+          "path": "sprites/48/prox.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1162,
+            1170
+          ],
+          "export_window": [
+            -9.465116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "aae4a9d79b11ccefa70faa406489d12de7a5e7b18e04f35e1a3a33eed6c4fb9c"
+        },
+        {
+          "path": "sprites/64/prox.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1162,
+            1170
+          ],
+          "export_window": [
+            -9.465116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6fc27e67e07d3fa09a836161d3e7b87e6b0505e880aed72d59ce3b72f8019b53"
+        },
+        {
+          "path": "sprites/96/prox.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1162,
+            1170
+          ],
+          "export_window": [
+            -9.465116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2731f7d89fc02d5889ec96c23eab2918fda445cf1766a42c5622536ca9c5e7ba"
+        },
+        {
+          "path": "sprites/128/prox.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1162,
+            1170
+          ],
+          "export_window": [
+            -9.465116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1efb487e858d0f7f585eea20388e84c05ba854576941e84bcd424e69b6af118d"
+        },
+        {
+          "path": "sprites/256/prox.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1162,
+            1170
+          ],
+          "export_window": [
+            -9.465116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2d68cdf9582c847f7f38694cdc913386c0fcdcc0799189c321d098b5c969e407"
+        }
+      ]
+    },
+    {
+      "id": "bill",
+      "master": "masters/bill-v2.png",
+      "sha256": "39fbf5f664000a42cf675239d1c2c0f7123675ffa056aa37776508b586ec2af5",
+      "exports": [
+        {
+          "path": "sprites/48/bill.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            143,
+            137,
+            1109,
+            1134
+          ],
+          "export_window": [
+            46.348837,
+            55.848837,
+            1159.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7fa49c873a2f8f8d1a2d4c5fcde39685bd34cc47acf33bd94f08d0a30357a6b7"
+        },
+        {
+          "path": "sprites/64/bill.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            143,
+            137,
+            1109,
+            1134
+          ],
+          "export_window": [
+            46.348837,
+            55.848837,
+            1159.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "da6be374f6de970ffce86126f17a31f2da90922663597de1bc7cfe1d093c3a34"
+        },
+        {
+          "path": "sprites/96/bill.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            143,
+            137,
+            1109,
+            1134
+          ],
+          "export_window": [
+            46.348837,
+            55.848837,
+            1159.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "adec5547e848733a44d65010cfd8b5d1db811c6c24f061f25210494ae4b893a4"
+        },
+        {
+          "path": "sprites/128/bill.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            143,
+            137,
+            1109,
+            1134
+          ],
+          "export_window": [
+            46.348837,
+            55.848837,
+            1159.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "47301a1ae8f18d1e4d974a407a2dec6dda1eee428e2060da7df9a28de1e56ee8"
+        },
+        {
+          "path": "sprites/256/bill.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            143,
+            137,
+            1109,
+            1134
+          ],
+          "export_window": [
+            46.348837,
+            55.848837,
+            1159.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cca4aa9f9a867a9103305fab2bdec735732d6ff686ab310cb6d434d4249d3181"
+        }
+      ]
+    },
+    {
+      "id": "great-wolf",
+      "master": "masters/great-wolf-v1.png",
+      "sha256": "7eed917a14352203f5078ba17337ff1ceeb0c132a9a865ab452e0cb074fdca61",
+      "exports": [
+        {
+          "path": "sprites/48/great-wolf.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            147,
+            152,
+            1108,
+            1120
+          ],
+          "export_window": [
+            64.709302,
+            73.209302,
+            1125.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9d75ac997964d4584b001d82bd282e0b14134169761320c197887bceaa10f63f"
+        },
+        {
+          "path": "sprites/64/great-wolf.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            147,
+            152,
+            1108,
+            1120
+          ],
+          "export_window": [
+            64.709302,
+            73.209302,
+            1125.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c62b13890e7be956570f7f591f901ae7eb178a0ce2270297fbf0d95efa566ec8"
+        },
+        {
+          "path": "sprites/96/great-wolf.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            147,
+            152,
+            1108,
+            1120
+          ],
+          "export_window": [
+            64.709302,
+            73.209302,
+            1125.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2937685daad2c44aa3d422bb7a332a74b317b29a4658c089e615d54e4ad19f0c"
+        },
+        {
+          "path": "sprites/128/great-wolf.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            147,
+            152,
+            1108,
+            1120
+          ],
+          "export_window": [
+            64.709302,
+            73.209302,
+            1125.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a73427a5426d72cddbc57d15f13d58bc1f6cae2b2d2c5cfc3867b02644e4c2b7"
+        },
+        {
+          "path": "sprites/256/great-wolf.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            147,
+            152,
+            1108,
+            1120
+          ],
+          "export_window": [
+            64.709302,
+            73.209302,
+            1125.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fddf7bda18d21bab2efaa7a4b212f693e7d797b0e07ec53f173b6e93a4429ec2"
+        }
+      ]
+    },
+    {
+      "id": "fox",
+      "master": "masters/fox-v1.png",
+      "sha256": "dbfb0312607c9860ed95bf71357b2908b708d302de7ca6c4d79dd1a0b6d9d558",
+      "exports": [
+        {
+          "path": "sprites/48/fox.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            131,
+            134,
+            1123,
+            1131
+          ],
+          "export_window": [
+            47.348837,
+            52.848837,
+            1159.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e020cf0f65023c90aef1f2a54691e53d32f6c0371d04ffbf32c04999756f61f4"
+        },
+        {
+          "path": "sprites/64/fox.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            131,
+            134,
+            1123,
+            1131
+          ],
+          "export_window": [
+            47.348837,
+            52.848837,
+            1159.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1e6a9c56a6cda8f4d23709df439aa248b395b28dbe6c418af2205884d43a1d67"
+        },
+        {
+          "path": "sprites/96/fox.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            131,
+            134,
+            1123,
+            1131
+          ],
+          "export_window": [
+            47.348837,
+            52.848837,
+            1159.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "78b75a75619079d7d6ef266669850bb2b2ed8518cbc8bb7555b6222c4c9bf64c"
+        },
+        {
+          "path": "sprites/128/fox.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            131,
+            134,
+            1123,
+            1131
+          ],
+          "export_window": [
+            47.348837,
+            52.848837,
+            1159.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bb1b2c92d3d75edaa3bd89e497f2f2020bdf9a1388700c40ff61df242327ec1d"
+        },
+        {
+          "path": "sprites/256/fox.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            131,
+            134,
+            1123,
+            1131
+          ],
+          "export_window": [
+            47.348837,
+            52.848837,
+            1159.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f211cdfa0eda816c27420cd439e0a5457aafbbe37afb204a0592a9b133ff514f"
+        }
+      ]
+    },
+    {
+      "id": "black-bear",
+      "master": "masters/black-bear-v1.png",
+      "sha256": "e2a9860653191e0f36f9e8b3deeaf08094776cfc14fcad9129985bbf725a5243",
+      "exports": [
+        {
+          "path": "sprites/48/black-bear.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            158,
+            167,
+            1092,
+            1104
+          ],
+          "export_window": [
+            80.232558,
+            90.732558,
+            1089.534884
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bcb6f97f67bd09eba44ce6a884b0a90f70bad9ef4cf4c19f214fc3b0bab23cc8"
+        },
+        {
+          "path": "sprites/64/black-bear.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            158,
+            167,
+            1092,
+            1104
+          ],
+          "export_window": [
+            80.232558,
+            90.732558,
+            1089.534884
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9fb9ddfa118258c843c2ae68a6e637f28e94ee032be3410f8fcfa876a245d480"
+        },
+        {
+          "path": "sprites/96/black-bear.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            158,
+            167,
+            1092,
+            1104
+          ],
+          "export_window": [
+            80.232558,
+            90.732558,
+            1089.534884
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e48ddff69518e01c6bf12acf280705d2c2aecb0b1435b2b4b13e35977c3e7d5b"
+        },
+        {
+          "path": "sprites/128/black-bear.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            158,
+            167,
+            1092,
+            1104
+          ],
+          "export_window": [
+            80.232558,
+            90.732558,
+            1089.534884
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7ffee5779cd3582d8cf30ef05bb9c98d024afc86d5869095491d37e0d4bfd2cf"
+        },
+        {
+          "path": "sprites/256/black-bear.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            158,
+            167,
+            1092,
+            1104
+          ],
+          "export_window": [
+            80.232558,
+            90.732558,
+            1089.534884
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6bba8123b9411f95e35e05d6ddad25b2e2d09a11d00bc7a8b05c50437256b42e"
+        }
+      ]
+    },
+    {
+      "id": "brown-rat",
+      "master": "masters/brown-rat-v2.png",
+      "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+      "exports": [
+        {
+          "path": "sprites/48/brown-rat.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            113,
+            114,
+            1141,
+            1140
+          ],
+          "export_window": [
+            29.325581,
+            29.325581,
+            1195.348837
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c23a5cc241ccbbb8adac6801b4eab70aef1b2c9f925a059e4d40e2a68832df47"
+        },
+        {
+          "path": "sprites/64/brown-rat.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            113,
+            114,
+            1141,
+            1140
+          ],
+          "export_window": [
+            29.325581,
+            29.325581,
+            1195.348837
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9addc68c283711d3664c67bcc580629d88be6181cb9f51e53cc42708682dd3b7"
+        },
+        {
+          "path": "sprites/96/brown-rat.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            113,
+            114,
+            1141,
+            1140
+          ],
+          "export_window": [
+            29.325581,
+            29.325581,
+            1195.348837
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e2a711d82bac46e975cfe9910ac1a3031cc59b453b66deed94e3ba84b963d188"
+        },
+        {
+          "path": "sprites/128/brown-rat.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            113,
+            114,
+            1141,
+            1140
+          ],
+          "export_window": [
+            29.325581,
+            29.325581,
+            1195.348837
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3be5bbbfeeb11466d57d3d8571b9815c3cab6d6a63db1c57051e54277b6e4c33"
+        },
+        {
+          "path": "sprites/256/brown-rat.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            113,
+            114,
+            1141,
+            1140
+          ],
+          "export_window": [
+            29.325581,
+            29.325581,
+            1195.348837
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cf34ef1a2b501378f83bbebb3f7cf96da06cf7d878ab74c9a5f2352088619996"
+        }
+      ]
+    },
+    {
+      "id": "king-cobra",
+      "master": "masters/king-cobra-v1.png",
+      "sha256": "4dd71aad3620701141420b6f3c357c5c782e9f73f66dffd85ef9ac501edec2fd",
+      "exports": [
+        {
+          "path": "sprites/48/king-cobra.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            140,
+            144,
+            1114,
+            1127
+          ],
+          "export_window": [
+            55.488372,
+            63.988372,
+            1143.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2a529dd21328155197918eb7d2403601dbb29df337d2cde47395ea4f7792db93"
+        },
+        {
+          "path": "sprites/64/king-cobra.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            140,
+            144,
+            1114,
+            1127
+          ],
+          "export_window": [
+            55.488372,
+            63.988372,
+            1143.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5d58c0e50c1924195bb6dd2236abbe72473b897069ca74cdbaf906e7a1bae941"
+        },
+        {
+          "path": "sprites/96/king-cobra.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            140,
+            144,
+            1114,
+            1127
+          ],
+          "export_window": [
+            55.488372,
+            63.988372,
+            1143.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ae9fb925f24b62404b4660b20829915f4fff85b858cf508e6ff75fb684e86784"
+        },
+        {
+          "path": "sprites/128/king-cobra.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            140,
+            144,
+            1114,
+            1127
+          ],
+          "export_window": [
+            55.488372,
+            63.988372,
+            1143.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "278f4f1ff76afc2ffd51ca0882e1159adc1a2497e54f2bbfdcbffe3325454609"
+        },
+        {
+          "path": "sprites/256/king-cobra.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            140,
+            144,
+            1114,
+            1127
+          ],
+          "export_window": [
+            55.488372,
+            63.988372,
+            1143.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7476a168e4f09983dc14bd53198a22d73d9fec51f4b4c71612e81f62131b2385"
+        }
+      ]
+    },
+    {
+      "id": "bee-swarm",
+      "master": "masters/bee-swarm-v1.png",
+      "sha256": "d1d42774e1ccb58749594e05c4cc829b99f17a4fcae112ecd2e376e6f28352c3",
+      "exports": [
+        {
+          "path": "sprites/48/bee-swarm.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            165,
+            171,
+            1090,
+            1092
+          ],
+          "export_window": [
+            89.709302,
+            93.709302,
+            1075.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f8f1e2b198cf3c105156f17f5f71f5bd4e17c50cc4dd73dc69b732a0cbcdf9b5"
+        },
+        {
+          "path": "sprites/64/bee-swarm.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            165,
+            171,
+            1090,
+            1092
+          ],
+          "export_window": [
+            89.709302,
+            93.709302,
+            1075.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7727480662c3e27aafcc0a1c506f4e3b1c774fff093d7bde1c4710ba6eb12fa7"
+        },
+        {
+          "path": "sprites/96/bee-swarm.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            165,
+            171,
+            1090,
+            1092
+          ],
+          "export_window": [
+            89.709302,
+            93.709302,
+            1075.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3a0d1d1614601b0174b625c8dc3c829ba2976de28874b10f132b9f94ab95227c"
+        },
+        {
+          "path": "sprites/128/bee-swarm.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            165,
+            171,
+            1090,
+            1092
+          ],
+          "export_window": [
+            89.709302,
+            93.709302,
+            1075.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "617bf68d9d71189ecc7cbc8256dcb890109d8edae6594ed2d5dccec5454bf7fc"
+        },
+        {
+          "path": "sprites/256/bee-swarm.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            165,
+            171,
+            1090,
+            1092
+          ],
+          "export_window": [
+            89.709302,
+            93.709302,
+            1075.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bbc887c8d48a6910abd51cc67a132c6577926ce20ea9457bde9d8179a84b78a1"
+        }
+      ]
+    },
+    {
+      "id": "giant-eel",
+      "master": "masters/giant-eel-v1.png",
+      "sha256": "ecfab7987b5258ace6a0bec304a9bc336dfbddde1cdf3a90ca438de23fdbd352",
+      "exports": [
+        {
+          "path": "sprites/48/giant-eel.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            122,
+            130,
+            1133,
+            1131
+          ],
+          "export_window": [
+            39.709302,
+            42.709302,
+            1175.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "566a938d76753d2de507e951fe9c4e460ad058b6362e14ee6e23743a26ad471c"
+        },
+        {
+          "path": "sprites/64/giant-eel.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            122,
+            130,
+            1133,
+            1131
+          ],
+          "export_window": [
+            39.709302,
+            42.709302,
+            1175.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "89cee9a42ec5666b75f094b3cf9930f7bdba250fd8c9318c793451eaf153870f"
+        },
+        {
+          "path": "sprites/96/giant-eel.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            122,
+            130,
+            1133,
+            1131
+          ],
+          "export_window": [
+            39.709302,
+            42.709302,
+            1175.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "449026a7e4e4c583dc877ac2ef54aebaf5129b5474d3ea31c753a1281790d261"
+        },
+        {
+          "path": "sprites/128/giant-eel.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            122,
+            130,
+            1133,
+            1131
+          ],
+          "export_window": [
+            39.709302,
+            42.709302,
+            1175.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3d7161da0e9308a93202d3bb803a41c7020cac20eb492a2fccea1886cad9d903"
+        },
+        {
+          "path": "sprites/256/giant-eel.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            122,
+            130,
+            1133,
+            1131
+          ],
+          "export_window": [
+            39.709302,
+            42.709302,
+            1175.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ff89fdef65f408817a029690d320679b738a47567086df718f05fca941ce3faa"
+        }
+      ]
+    },
+    {
+      "id": "dragon-turtle",
+      "master": "masters/dragon-turtle-v1.png",
+      "sha256": "e6e0b9ac315b84bde6b6dfbf342b9aebb5c4d970e54102dcbd301ca67e6d29be",
+      "exports": [
+        {
+          "path": "sprites/48/dragon-turtle.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            82,
+            74,
+            1172,
+            1175
+          ],
+          "export_window": [
+            -13.116279,
+            -15.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "af50856599b8ffd781787c8418e155e63d744d73dd4ba16ffe6ac6bdf9e2833a"
+        },
+        {
+          "path": "sprites/64/dragon-turtle.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            82,
+            74,
+            1172,
+            1175
+          ],
+          "export_window": [
+            -13.116279,
+            -15.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0d4bbaa59e83160cd790914c4e53c120bdd404b2a18e62d1fcfe9827912521c2"
+        },
+        {
+          "path": "sprites/96/dragon-turtle.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            82,
+            74,
+            1172,
+            1175
+          ],
+          "export_window": [
+            -13.116279,
+            -15.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8254ffa33a39c991d18efad809addab2a92254b61f7ea4ffad0fff89f489f112"
+        },
+        {
+          "path": "sprites/128/dragon-turtle.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            82,
+            74,
+            1172,
+            1175
+          ],
+          "export_window": [
+            -13.116279,
+            -15.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6215d177556f6aef9aca99ea2d8a591be5194e35d211a6ed2a02f0d98757b9c2"
+        },
+        {
+          "path": "sprites/256/dragon-turtle.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            82,
+            74,
+            1172,
+            1175
+          ],
+          "export_window": [
+            -13.116279,
+            -15.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f0d5e773755b710bb767c7609122a0765024265c476caba0e0d45fdd1047b182"
+        }
+      ]
+    }
+  ]
+}

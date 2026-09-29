@@ -1,0 +1,150 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-b-1",
+  "assets": [
+    {
+      "asset_id": "shax",
+      "native_name": "Shax the Slimy",
+      "scope": "trollmire; exact identity only; live check pending",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "sha256": "c8ec847929ebae259c9b3524121f71008ae553f1b6ec2043b2a169c6303ebe44",
+          "line": 115,
+          "anchor": "Shax the Slimy"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_troll_shax_the_slimy.png",
+          "sha256": "5432a74b23f3a41e6e62868fd519190c890e7db9d3462fcd360cd5a200b532c6",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "An aquatic troll with a long narrow torso, gill folds and webbed hands; one shoulder high, the other dropped, a short driftwood club tucked against the body. No radiating slime streaks on the base.",
+        "contrast": "Long off-axis wet head and webbed forearms distinguish Shax from square upright Prox. Broad pale grey-green belly and cheek masses separate from the dark physical disc.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects.",
+        "palette": "Muted olive-grey body, pale silt belly, dark blue-green kelp hair; dry neutral charcoal disc with restrained copper-grey bevel."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity and native display contract inspected. No live fixture in this assigned task; live validation remains pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-b-20260929/source-contracts.json",
+          "sha256": "681892cf2e75c3370200bb66b5af1a2c49aee684d9a855ecfc2c68f2a98af5e9"
+        }
+      ],
+      "batch_id": "monster-batch-b-1"
+    },
+    {
+      "asset_id": "horned-horror",
+      "native_name": "Horned Horror",
+      "scope": "maze; exact identity only; live check pending",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/maze/npcs.lua",
+          "sha256": "f07231a5244764f2896978554836c032d56a19d06a56dc7c8528181e5a813c71",
+          "line": 50,
+          "anchor": "Horned Horror"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_horner_horror.png",
+          "sha256": "86e53e1cf65fe20d2108ee0b89c304a90a0a11b7cc35b3970ca1f4092c8de923",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A corrupted minotaur horror: massive forward-thrust two-horned head, thick fists and exactly two short tentacles coiled close over its shoulders; no tentacle tips outside the body footprint.",
+        "contrast": "Two hooked horns and two thick back tentacles form a compact triangular silhouette, unlike ordinary minotaur. Pale bone horns and light chest against dark torso.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects.",
+        "palette": "Dark wine-brown hide, ivory horns, muted ash-pink tentacle underside; dry neutral charcoal disc with restrained copper-grey bevel."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity and native display contract inspected. No live fixture in this assigned task; live validation remains pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-b-20260929/source-contracts.json",
+          "sha256": "681892cf2e75c3370200bb66b5af1a2c49aee684d9a855ecfc2c68f2a98af5e9"
+        }
+      ],
+      "batch_id": "monster-batch-b-1"
+    },
+    {
+      "asset_id": "norgos-guardian",
+      "native_name": "Norgos, the Guardian",
+      "scope": "norgos-lair; exact identity only; live check pending",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/norgos-lair/npcs.lua",
+          "sha256": "a6805cbc98001cf0765498d2f8c39f40bb51390e7e2def5a5f25e3da33d51a73",
+          "line": 96,
+          "anchor": "Norgos, the Guardian"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v3/masters/black-bear-v2.png",
+          "sha256": "a7bed49555f2252e441f7fbb61600a26dbdd2d402ef270b3f110b492332be582",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/animal_bear_norgos_the_guardian.png",
+          "sha256": "27b354c194cd37e89b2f5f6f5f3096c5cf12ea83576eea03e2afc9e90b25b892",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "Ancient living forest bear, low quadrupedal diagonal stride, long tawny fur ruff cascading on shoulders, one large forepaw raised, broad rounded back and blunt muzzle. No ice or stone.",
+        "contrast": "Low rounded prowling form and loose flowing fur distinguish it from the upright angular frozen statue. Pale ruff and muzzle remain legible in grayscale.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects.",
+        "palette": "Warm brown fur and light ochre ruff; dry neutral charcoal disc with restrained copper-grey bevel."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity and native display contract inspected. No live fixture in this assigned task; live validation remains pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-b-20260929/source-contracts.json",
+          "sha256": "681892cf2e75c3370200bb66b5af1a2c49aee684d9a855ecfc2c68f2a98af5e9"
+        }
+      ],
+      "batch_id": "monster-batch-b-1"
+    }
+  ]
+}

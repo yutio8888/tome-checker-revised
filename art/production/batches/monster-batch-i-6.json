@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-i-6",
+  "assets": [
+    {
+      "asset_id": "zquikzshl",
+      "native_name": "Z'quikzshl the skeletal mold",
+      "scope": "general unique undead/molds (molds.lua; rarity 50; type overridden from immovable; explicit image=)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/molds.lua",
+          "sha256": "0b40d03a904bb0f4a569904a2207a53eb7a40c09b4bd1f410b0d90c2327595ef",
+          "line": 104,
+          "anchor": "name = \"Z'quikzshl the skeletal mold\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/molds.lua",
+          "sha256": "0b40d03a904bb0f4a569904a2207a53eb7a40c09b4bd1f410b0d90c2327595ef",
+          "line": 103,
+          "anchor": "type = \"undead\", subtype = \"molds\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/immovable_molds_skeletal_mold.png",
+          "sha256": "e36b47b98b626ea65f67b6bb20522c72e31b5c408bfc54172ace50140c96632f",
+          "role": "identity",
+          "note": "Native shape: a low pile of pale bones lying on a dark green mould mat."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/boney-experiment.png",
+          "sha256": "664939a15fc7eafcc3fb895a682b5552eda22098d43f9578f005cb3f4191c15b",
+          "role": "family",
+          "note": "Shipped boney experiment (bare ivory spiky bone pile): the mould must read as a green-violet mat over the bones, not a bare bone heap."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A large curved ivory rib cage arching up like an open dome cage from a low flat pad of bright moss-green and violet mould: a big ivory skull sits at the front of the cage with dark eye sockets, two thigh bones lie crossed beside it, and clumps of pale-green fuzzy mould plus a few violet spore caps cling to the rib tips and the pad. The bones stay clearly visible and large (light ivory against the green pad); the pad is a flat mat around the bones rather than a dome covering them.",
+        "contrast": "Molds: green mold (cluster of round olive bulbs), brown mold (round frilled disc), shining mold (tan coral stalks), grey mold (grey frilled fan); boney experiment (flat tan bare bone pile of thin spikes). Two earlier drafts failed: a grey-green low-contrast bone heap and a bright green dome that read as another green mold. This redraw makes the arched ivory rib cage with a big skull the silhouette (unlike any blob-shaped mold) standing on a visible green-violet mould pad (unlike the bare tan spiky bone pile).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Light ivory-cream bones as the dominant value plane, bright moss-green and lilac-violet mould pad around and under them, violet spore caps and pale sage fuzz; nothing darker than mid tone. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Z'quikzshl the skeletal mold, define_as=None, type=undead/subtype=molds, unique=True); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. explicit image= npc/immovable_molds_skeletal_mold.png on the leaf; no nice_tile/add_mos/shader/anim/moddable_tile; type overridden to undead so the four immovable/molds tokens can never match it. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    }
+  ]
+}

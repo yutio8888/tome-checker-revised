@@ -1,0 +1,228 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-n-2",
+  "assets": [
+    {
+      "asset_id": "lesser-vampire",
+      "native_name": "lesser vampire",
+      "scope": "dreadfell, ardhungol, greater-crypt / paladin-vs-vampire vaults (undead/vampire, explicit image=npc/lesser_vampire.png, non-unique, no define_as, no nice_tile). Sustains: sustains_at_birth activates Eternal Night only (see scan)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/vampire.lua",
+          "sha256": "a797781c111911f9d7294c763701ce0b000280c7a4ba0b17b18a634816ad769c",
+          "line": 65,
+          "anchor": "name = \"lesser vampire\", color=colors.SLATE, image = \"npc/lesser_vampire.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/lesser_vampire.png",
+          "sha256": "9e2746239c9e09624e83ad30739941aa16821bc115fd2b3b2b77aac096f1abb8",
+          "role": "identity",
+          "note": "Native shape: a young slim man with pale blue-grey skin and dark hair, in an ochre-orange tunic, olive green trousers and brown boots, hands open at his sides."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/the-master.png",
+          "sha256": "5aa75458ec8b3174c34852e212555d71d8ae0090a0077717530aca4e71576834",
+          "role": "family",
+          "note": "Shipped The Master (tall upright crimson-robed vampire with a staff): the lesser vampire is a plain young man in an orange tunic with no cape, no robe and no staff."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A lesser vampire seen from a steep overhead three-quarter angle: a young slim man with pale blue-grey skin and untidy dark hair, a hungry expression with small white fangs showing, dressed in a plain mid-light ochre-orange tunic with a leather belt, olive-green trousers and brown boots, both hands open and clawed slightly at his sides, standing in a slightly forward-leaning stance. No cape, no robe, no weapon. Fresh, hungry and complete.",
+        "contrast": "Vampire family, four grades: the lesser vampire is the plain young man in an ORANGE tunic and green trousers with no cape (silhouette: slim bare figure, open hands, no cloak; hue: ochre-orange with olive green; value: mid-light). The vampire has a flared scarlet cape and crouches, the master vampire is a tall indigo-cloaked figure, the elder vampire is a hooded burgundy robe with violet magic, and the shipped The Master is a crimson-robed figure with a staff.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid-light ochre-orange tunic, olive-green trousers, brown boots, pale blue-grey skin, dark hair; nothing darker than mid tone except the hair and boot soles. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=lesser vampire, define_as=None, type=undead/subtype=vampire, unique=False); details and hashes in evidence/monster-batch-n-20260929/source-contracts.json. base BASE_NPC_VAMPIRE (undead/vampire, no image=); leaf explicit leaf image= (no nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base BASE); generic actor.image==entry.image single path; sustains_at_birth starts Eternal Night (eradication.lua:179: damage/resist-pen temporary values plus shader_ring_rotating particles chosen with core.shader.active, never self.shader) - Blurred Mortality and Soul Leech are passive, Stun/Invoke Darkness activated; resolvers.inscriptions(1,\"rune\") may give a random rune whose use is a timed effect (Invisibility/Ethereal set self.shader for a while: the matcher falls back to native art while a shader is set, not a birth write). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-n-20260929/source-contracts.json",
+          "sha256": "dad625ba87d3d81ab2a542faf25e2a55fafb5093319a6d1269d4019f0cde564b"
+        }
+      ]
+    },
+    {
+      "asset_id": "vampire",
+      "native_name": "vampire",
+      "scope": "dreadfell, ardhungol, greater-crypt / paladin-vs-vampire vaults, antimagic quest (undead/vampire, explicit image=npc/vampire.png, non-unique, no define_as, no nice_tile). Sustains: sustains_at_birth activates Eternal Night and Blur Sight",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/vampire.lua",
+          "sha256": "a797781c111911f9d7294c763701ce0b000280c7a4ba0b17b18a634816ad769c",
+          "line": 79,
+          "anchor": "name = \"vampire\", color=colors.SLATE, image = \"npc/vampire.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vampire.png",
+          "sha256": "8ba4c880d767b84a332fd26272a7b6eb332799ab293f787a371ee6c87725ded7",
+          "role": "identity",
+          "note": "Native shape: a crouching man in a red jacket and a big flared red cape with a high collar, pale face, one hand raised clawing, brown boots."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/the-master.png",
+          "sha256": "5aa75458ec8b3174c34852e212555d71d8ae0090a0077717530aca4e71576834",
+          "role": "family",
+          "note": "Shipped The Master (upright robed vampire with a red-gem staff): the vampire crouches in a wide flared scarlet cape with a black lining, no staff, no long robe."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A vampire seen from a steep overhead three-quarter angle: a pale-faced dark-haired man with visible fangs crouching in a predatory lunge, wrapped in a wide flared scarlet cape with a high collar and a black lining that sweeps out behind and to one side, a mid-light red jacket underneath, one hand raised with curled claws, the other low, dark trousers and brown boots. No staff, no hood. Menacing, predatory and complete.",
+        "contrast": "Vampire family, four grades: the vampire is the CROUCHING one in a wide flared scarlet cape with black lining (silhouette: low diagonal lunge, big cape fan, raised claw; hue: scarlet red with black; value: mid-light). The lesser vampire is a plain orange-tunic young man without a cape, the master vampire a tall indigo-cloaked figure, the elder vampire a hooded burgundy robe with violet magic, and the shipped The Master an upright crimson robe with a staff.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid-light scarlet cape and jacket with a black-brown lining used only in the folds, pale skin, dark hair, brown boots; nothing darker than mid tone except the cape lining seams and hair. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=vampire, define_as=None, type=undead/subtype=vampire, unique=False); details and hashes in evidence/monster-batch-n-20260929/source-contracts.json. base BASE_NPC_VAMPIRE (undead/vampire, no image=); leaf explicit leaf image= (no nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base BASE); generic actor.image==entry.image single path; sustains_at_birth starts Eternal Night and Blur Sight (npcs.lua:3753: combat_def temporary value plus a phantasm_shield particle) - particles/temporary values only, no type/subtype/image/add_mos/shader write; Circle of Death, Stun, Rotting Disease are activated; runes as for the lesser vampire (timed shader, matcher fallback). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-n-20260929/source-contracts.json",
+          "sha256": "dad625ba87d3d81ab2a542faf25e2a55fafb5093319a6d1269d4019f0cde564b"
+        }
+      ]
+    },
+    {
+      "asset_id": "master-vampire",
+      "native_name": "master vampire",
+      "scope": "dreadfell, ardhungol, greater-crypt / paladin-vs-vampire vaults (undead/vampire, explicit leaf image=npc/master_vampire.png plus nice_tile naming the same PNG, non-unique, no define_as). Sustains: Eternal Night, Blur Sight, Phantasmal Shield",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/vampire.lua",
+          "sha256": "a797781c111911f9d7294c763701ce0b000280c7a4ba0b17b18a634816ad769c",
+          "line": 95,
+          "anchor": "name = \"master vampire\", color=colors.GREEN, image = \"npc/master_vampire.png\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/vampire.lua",
+          "sha256": "a797781c111911f9d7294c763701ce0b000280c7a4ba0b17b18a634816ad769c",
+          "line": 96,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/master_vampire.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/master_vampire.png",
+          "sha256": "cd8a5ccc46477e24a9f96168d8487d7453862f798f51baad74e1c1fe6980cae3",
+          "role": "identity",
+          "note": "Native shape: a tall thin man in a long dark blue cloak with a high collar, a tan waistcoat, dark trousers, pale face, dark hair, hands hanging."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/the-master.png",
+          "sha256": "5aa75458ec8b3174c34852e212555d71d8ae0090a0077717530aca4e71576834",
+          "role": "family",
+          "note": "Shipped The Master (crimson robe, staff): the master vampire wears a long INDIGO-BLUE cloak with a cream waistcoat, no staff, arms hanging."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A master vampire seen from a steep overhead three-quarter angle: a tall gaunt pale-faced man with slicked dark hair and cold bright eyes, standing perfectly upright and calm in a long full-length mid-tone indigo-blue cloak with a high stiff collar lined pale periwinkle, a cream-tan waistcoat and cravat showing at the chest, dark trousers, both arms hanging with long pale fingers. No staff, no fangs bared. Cold, aristocratic and complete, clearly lit.",
+        "contrast": "Vampire family, four grades: the master vampire is the tall calm INDIGO-BLUE cloaked figure with a cream waistcoat (silhouette: tall narrow upright column, straight cloak, arms hanging; hue: indigo blue with cream; value: mid). The lesser vampire is an orange-tunic young man, the vampire a crouching scarlet-caped figure, the elder vampire a hooded burgundy robe, and the shipped The Master a crimson robe with a staff.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid-tone indigo-blue cloak lifted with lighter periwinkle folds and lining, cream-tan waistcoat, pale skin, dark hair; nothing darker than mid-dark except the hair and trouser seams; the cloak must stay clearly lighter than the disc's darkest ring. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=master vampire, define_as=None, type=undead/subtype=vampire, unique=False); details and hashes in evidence/monster-batch-n-20260929/source-contracts.json. base BASE_NPC_VAMPIRE (undead/vampire, no image=); leaf image=npc/master_vampire.png then resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/master_vampire.png\", display_h=2, display_y=-1}}} names the PNG explicitly (no {tall=1} shorthand and no =BASE=TILE= indirection), so the resolved tall body is statically pinnable (same form as the batch F shivgoroth/greater shivgoroth, batch K Walrog/tunneler and batch J Weaver Queen entries); native sprite 64x128; sustains_at_birth starts Eternal Night, Blur Sight and Phantasmal Shield (phantasm.lua:67: evade callback and a phantasm_shield particle) - particles/temporary values only, no type/subtype/image/add_mos/shader write; runes as for the lesser vampire (timed shader, matcher fallback). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-n-20260929/source-contracts.json",
+          "sha256": "dad625ba87d3d81ab2a542faf25e2a55fafb5093319a6d1269d4019f0cde564b"
+        }
+      ]
+    },
+    {
+      "asset_id": "elder-vampire",
+      "native_name": "elder vampire",
+      "scope": "dreadfell, ardhungol, greater-crypt / paladin-vs-vampire vaults (undead/vampire, explicit image=npc/elder_vampire.png (64x64, not tall), rank 3, non-unique, no define_as, no nice_tile). Sustains: Eternal Night, Blur Sight, Phantasmal Shield",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/vampire.lua",
+          "sha256": "a797781c111911f9d7294c763701ce0b000280c7a4ba0b17b18a634816ad769c",
+          "line": 113,
+          "anchor": "name = \"elder vampire\", color=colors.RED, image = \"npc/elder_vampire.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elder_vampire.png",
+          "sha256": "af97310e6b36b96b7fb4be15b76be3437ef9536c8d68c37d6a1385c983322da2",
+          "role": "identity",
+          "note": "Native shape: a hooded figure in a deep red robe with a rope belt and long sleeves, pale narrow face under the cowl, one hand raised holding a swirl of violet magic."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/the-master.png",
+          "sha256": "5aa75458ec8b3174c34852e212555d71d8ae0090a0077717530aca4e71576834",
+          "role": "family",
+          "note": "Shipped The Master (upright crimson robe with a staff and no hood): the elder vampire is HOODED, in a burgundy robe with a rope belt and a swirl of violet magic in one raised hand, no staff."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An elder vampire seen from a steep overhead three-quarter angle: a hooded figure in a long mid-tone burgundy-red robe with wide sleeves and a rope belt, the cowl pulled up over a pale narrow face with pale glowing eyes and long thin fangs, one hand raised holding a bright swirling wisp of violet magic, the other hand hidden in a sleeve, the hem of the robe brushing the base. No staff, no cape. Ancient, sinister and complete, clearly lit.",
+        "contrast": "Vampire family, four grades: the elder vampire is the HOODED burgundy-robed figure with violet magic in one hand (silhouette: pointed hood over a long conical robe, one raised hand with a violet wisp; hue: burgundy with violet; value: mid). The lesser vampire is an orange-tunic young man, the vampire a crouching scarlet-caped figure, the master vampire a tall indigo cloak, and the shipped The Master a bright crimson robe with a staff and no hood.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid-tone burgundy-red robe lifted with lighter rose folds, violet magic wisp with a pale lilac core, pale skin and eyes; nothing darker than mid-dark except the cowl interior and hem seams; the magic must not cast violet light, glow or a cast onto the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=elder vampire, define_as=None, type=undead/subtype=vampire, unique=False); details and hashes in evidence/monster-batch-n-20260929/source-contracts.json. base BASE_NPC_VAMPIRE (undead/vampire, no image=); leaf explicit leaf image= (no nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base BASE); generic actor.image==entry.image single path; sustains_at_birth starts Eternal Night, Blur Sight and Phantasmal Shield (particles/temporary values only); Summon summons random undead (not this name); runes as for the lesser vampire (timed shader, matcher fallback). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-n-20260929/source-contracts.json",
+          "sha256": "dad625ba87d3d81ab2a542faf25e2a55fafb5093319a6d1269d4019f0cde564b"
+        }
+      ]
+    }
+  ]
+}

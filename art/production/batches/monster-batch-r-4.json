@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-r-4",
+  "assets": [
+    {
+      "asset_id": "rak-shor",
+      "native_name": "Rak'shor, Grand Necromancer of the Pride",
+      "scope": "rak-shor-pride (zones/rak-shor-pride/npcs.lua:32, unique, define_as RAK_SHOR, humanoid/orc, rank 5, guardian of zone.lua:60, default-name image, no nice_tile); single definition (the shadow-crypt CULTIST_RAK_SHOR is another name); auto_classes Necromancer and Corruptor from level 35",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 32,
+          "anchor": "define_as = \"RAK_SHOR\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 34,
+          "anchor": "name = \"Rak'shor, Grand Necromancer of the Pride\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 101,
+          "anchor": "auto_classes={"
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 105,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_rak_shor__grand_necromancer_of_the_pride.png",
+          "sha256": "0c7eff0d61019e3ade83aea3323306d7105ea7b5d9c2787a1398655c4536b5b1",
+          "role": "identity",
+          "note": "Native shape (64x64): an old green orc in purple-blue robes standing upright with a tall bone-crook staff."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/krogar.png",
+          "sha256": "efa3e73b8f761fa8e7b80bf45290ed1d35f7f71747d576a66614abe0a3a44d92",
+          "role": "family",
+          "note": "Shipped Krogar (brown-armoured orc corruptor standing upright with a staff): the orc necromancer and Rak'shor must not be a brown armoured staff orc."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Rak'shor, Grand Necromancer of the Pride seen from a steep overhead three-quarter angle: an old towering green-skinned orc standing UPRIGHT and imperious in a heavy black-and-deep-violet robe with a tall stiff spiked collar and bone-white spiked shoulder pauldrons, a bald scarred head with a white braided beard and glowing violet eyes, one hand gripping a TALL BONE STAFF planted upright at his side topped by a curled skull-and-crescent crook, the other hand raised with clawed fingers spread, a chain of small skulls across the chest, the robe falling to the ground in heavy folds. Ancient, commanding, ornate and complete.",
+        "contrast": "Orc family: RAK'SHOR is the UPRIGHT TALL FIGURE with a vertical bone-crook staff, spiked collar and shoulder pauldrons in black and violet (silhouette: vertical staff line beside a wide spiked shoulder mass; hue: black-violet with bone white; value: mid-dark with bright bone accents). The orc necromancer is a hunched staffless caster in indigo with a green flame; the orc assassin is a low crouch; Gnarg is a huge horizontal-sword brute. The shipped Krogar is a brown-armoured orc with a staff.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, tails, weapons, staffs and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, leg or drip reaches the outer sixth ring band or crosses the disc rim. Calibration from the previous generation of this exact token: the design was right, but the tall bone-crook staff with its skull-and-crescent head towered far above the figure and crossed the outer rim of the disc. This time keep the same upright old green orc in black-and-violet robes with the spiked collar and bone shoulder pauldrons, but draw the WHOLE figure clearly smaller and the staff SHORT: the bone staff is gripped near its middle at his side and its crook head ends no higher than his own head, well inside the disc, at least a sixth of the disc radius away from the disc edge and never in the upper-right or upper-left corners. Every part of him, the staff head included, sits inside a circle of about two thirds of the disc radius.",
+        "palette": "Deep violet and blue-black robes with lighter violet-grey highlight planes, bone-white spikes, staff and skulls, olive-green skin with lighter olive highlights, glowing violet eyes; nothing darker than dark violet-black except the eye sockets; keep the robe mid-dark rather than black; the disc stays neutral charcoal with no violet cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Rak'shor, Grand Necromancer of the Pride, define_as=RAK_SHOR, type=humanoid/subtype=orc, unique=True); details and hashes in evidence/monster-batch-r-20260929/source-contracts.json. base BASE_NPC_ORC_RAK_SHOR (humanoid/orc, no image=); unique with define_as RAK_SHOR; NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip staff, BLACK_ROBE and charm (equipment only, no moddable_tile); talents Summon, Necrotic Aura, Call of the Crypt, Call of the Mausoleum, Lord of Skulls, Discarded Refuse, Corpse Explosion, Assemble, Putrescent Liquefaction, Soul Rot, Blood Grasp, Curse of Vulnerability, Bone Shield, Blood Spray, Staff Mastery, Blighted Summoning, Endless Woes; resolvers.sustains_at_birth() starts Necrotic Aura, Discarded Refuse, Putrescent Liquefaction and Bone Shield (temporary values and particles) plus auto_classes Necromancer/Corruptor (see runtime_mutation_scan). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-r-20260929/source-contracts.json",
+          "sha256": "588ddd99e3d398bf93163ca804f053510ce1388654ff89c900e866205ae58c92"
+        }
+      ]
+    }
+  ]
+}

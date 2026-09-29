@@ -1,0 +1,55 @@
+{
+  "asset_id": "black-bear-v1",
+  "intent": "generate",
+  "mode": "built-in image_gen",
+  "use_case": "stylized-concept",
+  "status": "generated-reviewed-candidate",
+  "prompt": "Use case: stylized-concept\nAsset type: one transparent PNG black bear miniature token for a square-grid tabletop RPG, readable at 64px and tested at 48px.\nPrimary request: create a NEW black bear miniature with recognizably black fur and sufficient painted highlights to separate it from its base.\nInput images: Image 1 is the original ToME black bear sprite and defines the species: a heavy quadrupedal dark bear with round ears, a pronounced snout and powerful short legs. Image 2 is the accepted brown bear miniature and supplies only the high-angle camera, broad hand-painted sculpted texture, matte finish, neutral dark grey-brown thin circular base, upper-left light, and framing. Do not simply recolor Image 2.\nSubject: one stocky black bear standing on four strong paws in a compact three-quarter stance, broad back, small round ears, a slightly longer and narrower muzzle than the brown bear reference, a small tail, and a clear shoulder mass. Face it somewhat toward the lower right, with an offset forepaw and the torso curving gently toward the upper left, to give it its own pose. Coat is deep charcoal-black, with broad cool slate-grey dry-brushed planes across the brow, shoulders and back, and muted grey-tan on the muzzle. Use cream claws sparingly. Keep dark fur visibly separate from the warmer neutral disc through broad highlight planes and crisp silhouette; do not turn the entire bear grey or brown. The expression is alert and animal-like, not cute or human.\nStyle/medium: hand-painted carved tabletop game miniature; large sculpted fur facets and readable volumes, restrained texture. No photoreal fur strands, no plastic shine.\nComposition: square image. Match the reference disc's size, thin rim, centered framing and steep downward camera. The entire creature and entire base must be visible. Let the bear fill most of the inner disc with a narrow visible rim around it. Keep every ear, paw, claw and back edge within the outer circular base boundary. No oversized empty platter.\nLighting: soft upper-left light and small contact shadow contained on the base only.\nBackdrop: true transparent alpha everywhere beyond the circular base; no painted checkerboard, no solid backdrop, no external shadow.\nConstraints: exactly one bear and one neutral base; no coloured faction circle, no halo, no rank markers, no symbols, no text or watermark, no collar, no armour, no scenery, no grass, no rocks.",
+  "references": [
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/black_bear.png",
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/brown-bear-v2.png"
+  ],
+  "reference_roles": [
+    "original ToME black bear sprite; species identity only",
+    "accepted brown bear miniature; high-angle camera, hand-painted material, light and neutral disc only"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0dd1f-f08f-7b92-8e97-46f0099eb1de/exec-a34ff93d-7f55-4226-8c20-cc8d28451565.png",
+  "saved_output_path": "game/addons/tome-checker-revised/art/monsters-v2/masters/black-bear-v1.png",
+  "review": "New lower-right-facing pose separates the candidate from the brown bear master. Dark charcoal fur remains legible through slate highlights, pale muzzle and restrained claws. The whole figure stays within the base outer boundary; the near foreclaw approaches the inner bevel, so containment should be retained during export. Full miniature reviewed; reduced-size contrast remains for parent integration.",
+  "tool": "image_gen.imagegen",
+  "tool_result_keys": [
+    "image_url",
+    "output_hint"
+  ],
+  "preserved_native_alpha": true,
+  "image_processing": "Copied original generated PNG without pixel edits, resizing, background extraction or alpha modification.",
+  "reviewed_at_utc": "2026-09-26T10:13:42.514Z",
+  "selection": "candidate",
+  "sha256": "e2a9860653191e0f36f9e8b3deeaf08094776cfc14fcad9129985bbf725a5243",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      29,
+      1236,
+      1254
+    ],
+    "visible_alpha_bbox": [
+      159,
+      168,
+      1091,
+      1103
+    ],
+    "transparent_pixels": 878763,
+    "partial_alpha_pixels": 693551,
+    "opaque_pixels": 202
+  }
+}

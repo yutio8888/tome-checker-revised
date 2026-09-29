@@ -1,0 +1,27 @@
+{
+  "asset_id": "door-leaf-vertical-v1",
+  "mode": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Create ONE isolated VERTICAL screen-axis oak DOOR LEAF component. Reference is horizontal leaf only for material/construction. Rebuild its orientation, DO NOT rotate baked light: fixed soft illumination from WORLD UPPER LEFT. Very steep overhead orthographic camera, long screen-space axis exactly NORTH-SOUTH, length 80% canvas, apparent width 15% canvas. A thick upright door seen as long narrow warm brown wooden top plane and modest darker EAST-facing face; coherent iron hinges near NORTH end and plain small ring near SOUTH end. Same oak planks, dull iron, matte painted miniature style as reference, broad readable planes. Rectangular compact silhouette, entire component centered and fully inside canvas, squared ends, no diagonal tilt. True transparent alpha everywhere outside single leaf, no cast shadow outside. No stone jamb, floor, frame, duplicate leaf, labels, icons, symbols or watermark. Square PNG. This long-axis orientation is generated anew so highlight stays upper-left and east face remains shaded. Single leaf only.",
+  "references": [
+    "masters/door-leaf-horizontal-v1.png"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-d26b3905-4241-44f5-bdff-eee2605a990b.png",
+  "selection": "rejected-hinge-end",
+  "processing": "Original preserved byte-for-byte; deterministic terrain compositing may crop/sample painted components without rotation.",
+  "rejection_reason": "Hinges at north end incompatible with fixed south pivot; v2 changes hardware only under same lighting.",
+  "sha256": "475947e34ad0ae8230d9f2c08614166802693179ee9f0d3264e03b13cdcbd94b",
+  "byte_identical": true,
+  "metrics": {
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "visible_alpha_bbox_gt8": [
+      520,
+      79,
+      739,
+      1175
+    ]
+  }
+}

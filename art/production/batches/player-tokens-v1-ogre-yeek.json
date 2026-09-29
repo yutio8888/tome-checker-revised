@@ -1,0 +1,172 @@
+{
+  "schema": 1,
+  "batch_id": "player-tokens-v1-ogre-yeek",
+  "assets": [
+    {
+      "asset_id": "player-ogre-male",
+      "native_name": "ogre_male",
+      "scope": "Native player body family (paper-doll), not a class or NPC; identity key descriptor.subrace x descriptor.sex -> moddable_tile per overload/mod/class/CheckerPlayerTokens.lua. Covers birth subrace Ogre at sex=Male (moddable_tile \"ogre_#sex#\"; native paper-doll art for this family is a taller 128x256 sheet, unlike every other family's 128x128). Runtime id player-ogre-male, exported to data/gfx/tokens/player-ogre-male.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/birth/races/giant.lua",
+          "sha256": "4db1557cab347dcb4e9017ac67b0ca047f9ca8c4a87587ebd4fed7a77442987c",
+          "line": 76,
+          "anchor": "moddable_tile = \"ogre_#sex#\""
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/ogre_male/base_01.png",
+          "sha256": "ec76b88528ea4619e873538c3dc0a96f0928e9d69d4bc86a6ca38e783e2fe45c"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte painted miniature finish, thin charcoal-brown disc and bronze-grey bevel at exactly that lightness. Do not copy its crouching combat pose, bald head, daggers, leather vest or sash; this token is a calm standing figure in plain traveller's clothes with no weapon.",
+          "sha256": "a571c4618354fd68d89eebf282ac5c8940ad00157fc5a4e330731914dd56d199"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/ogre_male/base_01.png",
+          "sha256": "ec76b88528ea4619e873538c3dc0a96f0928e9d69d4bc86a6ca38e783e2fe45c",
+          "role": "identity",
+          "note": "Native unequipped paper-doll base body (skin-tone option 1 of several cosmetic choices; any option is equally native). Establishes body proportions and base skin/fur/bone value only: a towering, heavily muscled man, taller and far more massive than every other family in this set. Ignore its flat front-facing T-pose, flat top light and total nudity; the token uses the style reference's camera, disc and pose instead, and the figure must be dressed per the brief."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One towering, heavily muscled ogre man, standing in a calm neutral pose, weight even on both feet, arms relaxed at his sides with open hands, filling noticeably more of the disc's height than the other families' figures. Bald or close-cropped hair, a heavy jaw. Wears a simple large tunic or wrap belted at the waist over plain trousers, with bare feet or simple sandals.",
+        "contrast": "Must read apart from every other family at any size: (1) silhouette — the largest, most heavily built figure in the set, occupying visibly more of the disc height with thick limbs and a heavy torso, unmistakable even in outline alone; (2) value — a broad, simple value plane across the torso (large forms read as fewer, bigger shapes, not fine detail). Never shrink the figure to fit a normal human-sized silhouette; the scale difference is the primary identity cue for this family.",
+        "composition": "One entire figure on one disc, steep overhead three-quarter view, facing down-left or down-right. Head, hands and feet stay well inside the disc with a clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. No second figure, no mount, no companion, no ground clutter.",
+        "palette": "Deep tan to russet-brown weathered skin, dark hair or bald, a plain, heavy undyed or earth-toned wrap/tunic (oatmeal, hide-brown), plain trousers. No bright saturated dye, no metallic sheen, no jewellery."
+      },
+      "kind": "player",
+      "gate": "ready",
+      "gate_reason": "Main agent reviewed the native contract for this body family: overload/mod/class/CheckerPlayerTokens.lua's M.families/M.moddable/M.keys table (independent of the monster catalog, paper-doll aware) names this exact family and the birth subrace(s) that expand to it, and docs/player-token-plan-20260928/PLAN.md records the resolved identity-key, granularity and neutral-appearance decisions this batch follows. Art generation only; the runtime switch, manifest wiring and in-game validation in PLAN.md sections 2-4 are separate, unstarted work.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/overload/mod/class/CheckerPlayerTokens.lua",
+          "sha256": "4a41f96a7cb958c85ca1df15df8444cb4917bf20de4da15d6016bfe713d0a4b9"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/player-token-plan-20260928/PLAN.md",
+          "sha256": "570c36028f835c3152dd4762ba907885dc16ad0e126be333db153561d311195c"
+        }
+      ]
+    },
+    {
+      "asset_id": "player-ogre-female",
+      "native_name": "ogre_female",
+      "scope": "Native player body family (paper-doll), not a class or NPC; identity key descriptor.subrace x descriptor.sex -> moddable_tile per overload/mod/class/CheckerPlayerTokens.lua. Covers birth subrace Ogre at sex=Female (moddable_tile \"ogre_#sex#\"; native paper-doll art for this family is a taller 128x256 sheet, unlike every other family's 128x128). Runtime id player-ogre-female, exported to data/gfx/tokens/player-ogre-female.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/birth/races/giant.lua",
+          "sha256": "4db1557cab347dcb4e9017ac67b0ca047f9ca8c4a87587ebd4fed7a77442987c",
+          "line": 76,
+          "anchor": "moddable_tile = \"ogre_#sex#\""
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/ogre_female/base_01.png",
+          "sha256": "6b2df71180258170b4ef88713917ef2ea1f329553862698c8c946aad090f08a8"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte painted miniature finish, thin charcoal-brown disc and bronze-grey bevel at exactly that lightness. Do not copy its crouching combat pose, bald head, daggers, leather vest or sash; this token is a calm standing figure in plain traveller's clothes with no weapon.",
+          "sha256": "a571c4618354fd68d89eebf282ac5c8940ad00157fc5a4e330731914dd56d199"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/ogre_female/base_01.png",
+          "sha256": "6b2df71180258170b4ef88713917ef2ea1f329553862698c8c946aad090f08a8",
+          "role": "identity",
+          "note": "Native unequipped paper-doll base body (skin-tone option 1 of several cosmetic choices; any option is equally native). Establishes body proportions and base skin/fur/bone value only: a towering, powerfully built woman, taller and far more massive than every other family in this set. Ignore its flat front-facing T-pose, flat top light and total nudity; the token uses the style reference's camera, disc and pose instead, and the figure must be dressed per the brief."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One towering, powerfully built ogre woman, standing in a calm neutral pose, weight even on both feet, arms relaxed at her sides with open hands, filling noticeably more of the disc's height than the other families' figures. Hair pulled back, a strong jaw. Wears a simple large tunic, wrap or belted dress over plain trousers or a plain skirt, with bare feet or simple sandals.",
+        "contrast": "Must read apart from every other family at any size: (1) silhouette — the largest, most powerfully built figure in the set, occupying visibly more of the disc height, unmistakable even in outline alone; (2) value — a broad, simple value plane across the torso rather than fine detail. Never shrink the figure to fit a normal human-sized silhouette. Differs from ogre_male by a narrower waist-to-hip taper and pulled-back hair, not only by a dress.",
+        "composition": "One entire figure on one disc, steep overhead three-quarter view, facing down-left or down-right. Head, hands and feet stay well inside the disc with a clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. No second figure, no mount, no companion, no ground clutter.",
+        "palette": "Deep tan to russet-brown weathered skin, dark hair pulled back, a plain, heavy undyed or earth-toned wrap/dress (oatmeal, hide-brown, moss). No bright saturated dye, no metallic sheen, no jewellery."
+      },
+      "kind": "player",
+      "gate": "ready",
+      "gate_reason": "Main agent reviewed the native contract for this body family: overload/mod/class/CheckerPlayerTokens.lua's M.families/M.moddable/M.keys table (independent of the monster catalog, paper-doll aware) names this exact family and the birth subrace(s) that expand to it, and docs/player-token-plan-20260928/PLAN.md records the resolved identity-key, granularity and neutral-appearance decisions this batch follows. Art generation only; the runtime switch, manifest wiring and in-game validation in PLAN.md sections 2-4 are separate, unstarted work.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/overload/mod/class/CheckerPlayerTokens.lua",
+          "sha256": "4a41f96a7cb958c85ca1df15df8444cb4917bf20de4da15d6016bfe713d0a4b9"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/player-token-plan-20260928/PLAN.md",
+          "sha256": "570c36028f835c3152dd4762ba907885dc16ad0e126be333db153561d311195c"
+        }
+      ]
+    },
+    {
+      "asset_id": "player-yeek",
+      "native_name": "yeek",
+      "scope": "Native player body family (paper-doll), not a class or NPC; identity key descriptor.subrace x descriptor.sex -> moddable_tile per overload/mod/class/CheckerPlayerTokens.lua. Covers birth subrace Yeek at both sexes (single unisex family, moddable_tile \"yeek\"; native doll already shows white fur/goggle-eyes rather than bare skin, so no separate male/female token is produced). Runtime id player-yeek, exported to data/gfx/tokens/player-yeek.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/birth/races/yeek.lua",
+          "sha256": "9cbd3f0d75a8b20c8357087396267d53a008e01092da6ece9cc27ee407b031a0",
+          "line": 163,
+          "anchor": "moddable_tile = \"yeek\""
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/yeek/base_01.png",
+          "sha256": "8585dfafe06fa75bf87beb32ee0d92f3ace77ad1a31d270c6b71d1e9fc11e0f2"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte painted miniature finish, thin charcoal-brown disc and bronze-grey bevel at exactly that lightness. Do not copy its crouching combat pose, bald head, daggers, leather vest or sash; this token is a calm standing figure in plain traveller's clothes with no weapon.",
+          "sha256": "a571c4618354fd68d89eebf282ac5c8940ad00157fc5a4e330731914dd56d199"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/yeek/base_01.png",
+          "sha256": "8585dfafe06fa75bf87beb32ee0d92f3ace77ad1a31d270c6b71d1e9fc11e0f2",
+          "role": "identity",
+          "note": "Native unequipped paper-doll base body (skin-tone option 1 of several cosmetic choices; any option is equally native). Establishes body proportions and base skin/fur/bone value only: a small, stocky, white-furred humanoid with large round dark eyes; this fur/eye pattern is its native identity, not a costume. Ignore its flat front-facing T-pose, flat top light and total nudity; the token uses the style reference's camera, disc and pose instead, and the figure must be dressed per the brief."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "One small, stocky yeek, covered in short white or pale cream fur over its whole body, with large round dark eyes and short rounded ears, standing in a calm neutral pose, weight even on both feet, arms relaxed at its sides with open paw-like hands. Wears only a plain simple belt or thin sash; the fur itself is the covering, so no separate tunic is needed unless it reads as bare skin without one, in which case add a minimal plain wrap.",
+        "contrast": "Must read apart from every other family in this roster: (1) silhouette — notably smaller and stockier than the halfling, with a rounder head and short rounded ears rather than a bare humanoid head shape; (2) value and hue — an overall pale, near-white/cream fur value and cool-neutral hue unlike any bare-skin family, broken only by dark round eyes as the sole strong dark accent. Do not paint bare skin instead of fur, and do not add class equipment, goggles-as-accessory framing, or a snow/ice effect.",
+        "composition": "One entire figure on one disc, steep overhead three-quarter view, facing down-left or down-right. Head, hands and feet stay well inside the disc with a clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. No second figure, no mount, no companion, no ground clutter.",
+        "palette": "Pale cream to off-white short fur, dark brown or black eyes, a plain undyed thin belt or sash if any covering is used at all. No bright saturated dye, no metallic sheen, no jewellery, no glow."
+      },
+      "kind": "player",
+      "gate": "ready",
+      "gate_reason": "Main agent reviewed the native contract for this body family: overload/mod/class/CheckerPlayerTokens.lua's M.families/M.moddable/M.keys table (independent of the monster catalog, paper-doll aware) names this exact family and the birth subrace(s) that expand to it, and docs/player-token-plan-20260928/PLAN.md records the resolved identity-key, granularity and neutral-appearance decisions this batch follows. Art generation only; the runtime switch, manifest wiring and in-game validation in PLAN.md sections 2-4 are separate, unstarted work.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/overload/mod/class/CheckerPlayerTokens.lua",
+          "sha256": "4a41f96a7cb958c85ca1df15df8444cb4917bf20de4da15d6016bfe713d0a4b9"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/player-token-plan-20260928/PLAN.md",
+          "sha256": "570c36028f835c3152dd4762ba907885dc16ad0e126be333db153561d311195c"
+        }
+      ]
+    }
+  ]
+}

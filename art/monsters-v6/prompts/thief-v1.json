@@ -1,0 +1,70 @@
+{
+  "asset_id": "thief-v1",
+  "intent": "generate",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: stylized-concept.\nAsset type: single transparent PNG game creature token, square 1024x1024, painted tabletop miniature readable at 48/64/96 pixels.\nPrimary request: Create THIEF, an experienced stealthy human pickpocket who uses dual daggers, disarming and poisons. Image 1 is the painted skeleton token for overhead camera, matte finish and dark copper-grey disc ONLY; draw a living human instead. Image 2 is native thief for lean crouching cloak identity. Do not copy its blue colors exactly, use the smoke umber palette below.\nSubject: one lean adult human in a tight smoke-brown hood and a long asymmetrical weathered smoke-umber cloak. The main shape is a LOW SIDEWAYS CROUCH FACING IMAGE-LEFT, not a frontal standing character: sloping back and cloak form one flowing curved triangular mass sweeping down to lower-right INSIDE disc. Small hood at upper-left of figure, visible narrow face looking left; face medium light tan. Long cloak exposes one slim forearm, a dark fitted leather torso and two folded knees, with separated narrow boot tips. Pale dusty taupe highlights across the long cloak's curved folds distinguish it from black. TWO small steel daggers held in TWO hands low ahead of the body at image-left/lower-left, one blade horizontally forward and second reversed along forearm but clearly visible. Keep blades separated, do not cross. Small belt purse and tiny dull glass poison vial on hip only if readable; no liquid, no poison glow, no smoke.\nComposition: same STEEP overhead three-quarter as image 1, crown and bent back visible from above. Match centered almost circular thin neutral charcoal-brown disc with understated bronze-grey rim, diameter 82 percent canvas. Entire person, long cloak and BOTH short daggers within disc, with dark top and upper-right margin clean for external UI. Broad unobstructed upper-right disc area, no protruding props. Human is darker and more compact than a pale novice thief, unmistakable low comma-shaped silhouette. Full body.\nStyle/light: matte painted sculpted miniature, crisp silhouette and broad simple volumes, restrained surface texture, upper-left soft light, grounded only to its own disc. No long hair, no plate armor.\nBackdrop: genuinely transparent alpha outside disc, transparent corners, preserve native generated alpha.\nAvoid: frontal hero stance, green clothing, bright red, pitch-black assassin blob, upright wide shoulder cape, sword, axe, shield, supernatural vanishing effects, body transparency, scenery, grass, rock, pedestal, faction markings or rings, health bars, rank, rarity, level, letters, symbols, watermark. One finished token.",
+  "references": [
+    "art/monsters-v5/masters/degenerated-skeleton-warrior-v2.png",
+    "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_thief.png"
+  ],
+  "reference_roles": [
+    "style/camera/disc/light reference",
+    "native identity reference"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e1a4-c0f8-7dd3-a4a3-0986fee6a52e/exec-799d0d4e-9d76-4fa6-9de6-8b1387631c7b.png",
+  "saved_output_path": "art/monsters-v6/masters/thief-v1.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Byte-for-byte original copy; mechanical C downsampling only for review, no artwork editing.",
+  "selection": "static-reviewed-integration-candidate",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "generated_at_utc": "2026-09-27",
+  "sha256": "38c77f6ad12c2886f8dbfaa6d02ec1e049b906872d872b6af45aefd29eaf3968",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      97,
+      57,
+      1227,
+      1226
+    ],
+    "visible_alpha_bbox": [
+      115,
+      112,
+      1138,
+      1154
+    ],
+    "transparent_pixels": 735129,
+    "partial_alpha_pixels": 836920,
+    "opaque_pixels": 467,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "review": "向左低蹲、烟褐长斗篷弯曲轮廓、前伸双匕首，净区通过。",
+  "small_size_review": {
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "method": "Existing C exporter via build_monster_art.py; all 12 PNGs actually opened using view_image detail=original",
+    "review_result": "pass; see REVIEW.md",
+    "runtime_verified": false
+  }
+}

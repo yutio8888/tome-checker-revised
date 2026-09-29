@@ -1,0 +1,78 @@
+{
+  "asset_id": "cave-troll-v2",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "status": "generated-reviewed-candidate",
+  "prompt": "Use case: precise-object-edit. Edit only the SPEAR in this exact cave troll tabletop token. Its point currently projects well beyond the upper-right edge of the circular base. Shorten and slightly re-angle the spear so its metal tip lies completely over the empty base space immediately above the troll's right hand, INSIDE the circle with a visible margin. Shorten the upper shaft rather than reducing the troll. Keep a clear long diagonal wooden shaft with one pointed iron spearhead, gripped by the same two hands. The tip must end near the inner right shoulder, never outside the base. Preserve the troll's current body size, face, pose, color, two feet, and all other details; do not shrink the whole miniature. Keep the base size, shape, position and neutral thin rim unchanged. Preserve hand-painted material, steep overhead angle, upper-left light and genuine transparent alpha background. No new objects, colored rings, text, markings or external shadows. The single targeted change is complete weapon containment inside the existing circle.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v2/masters/cave-troll-v1.png"
+  ],
+  "reference_roles": [
+    "edit target; adjust weapon and necessary hand pose only, preserve full figure scale and base"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0dd21-b1f1-7472-b28c-5b68d8636421/exec-a8d1b07b-a972-4c76-bfa8-d957989a7bf4.png",
+  "saved_output_path": "game/addons/tome-checker-revised/art/monsters-v2/masters/cave-troll-v2.png",
+  "sha256": "680ab5bcdfb51f4b3f43e6f296c1bb796f95786521a75dad7d2ec697defb94e3",
+  "preserved_native_alpha": true,
+  "image_processing": "Copied generated PNG without pixel edits or alpha changes.",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_alpha_bbox": [
+      155,
+      148,
+      1099,
+      1107
+    ],
+    "transparent_pixels": 856496,
+    "partial_alpha_pixels": 715727,
+    "alpha_bbox": [
+      150,
+      145,
+      1107,
+      1199
+    ],
+    "dominant_alpha_values": [
+      [
+        0,
+        856496
+      ],
+      [
+        253,
+        671432
+      ],
+      [
+        252,
+        16886
+      ],
+      [
+        254,
+        9134
+      ],
+      [
+        251,
+        3001
+      ]
+    ]
+  },
+  "review": "Weapon-only correction succeeded: spearhead and shaft now fully inside the disc with visible margin, full troll body scale preserved. Diagonal shaft remains identifiable; neutral base and shared material unchanged. Recommend v2 for small-scale audit.",
+  "reviewed_at_utc": "2026-09-26T10:17:13.379647+00:00",
+  "tool_result_keys": [
+    "image_url",
+    "output_hint"
+  ],
+  "selection": "recommended for parent small-scale audit",
+  "parent_asset_id": "cave-troll-v1",
+  "identity_sources": [
+    "game/modules/tome/data/general/npcs/troll.lua:75-80"
+  ]
+}

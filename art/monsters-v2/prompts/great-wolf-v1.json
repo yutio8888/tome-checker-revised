@@ -1,0 +1,55 @@
+{
+  "asset_id": "great-wolf-v1",
+  "intent": "generate",
+  "mode": "built-in image_gen",
+  "use_case": "stylized-concept",
+  "status": "generated-reviewed-candidate",
+  "prompt": "Use case: stylized-concept\nAsset type: a single transparent PNG creature miniature for a 64px square-grid tabletop RPG, intended to remain recognizable at 48px.\nPrimary request: create a NEW great wolf token, not a recolor of the ordinary wolf.\nInput images: Image 1 is ToME's original great wolf sprite, used only for species identity: a dark large wolf with pointed ears, long muzzle, and a heavy neck. Image 2 is the already accepted ordinary wolf token, used only for the high-angle camera, hand-painted miniature material, lighting, neutral dark grey-brown thin circular base, and overall framing. Do not copy its crouching pose.\nSubject: one strong, charcoal-grey great wolf with a notably thick shoulder ridge and raised coarse neck ruff, large upright pointed ears, a long broad muzzle, four anatomically coherent legs, and one bushy tail. Use a tense standing or braced stance with the forelegs more upright than the reference; the body turns in a gentle arc across the disc and the head looks toward the lower left. The great wolf must look heavier and higher at the shoulders than the reference ordinary wolf, without becoming a bear or a lion. The tail curls along the inside back edge of the disc. Light grey-brown dry-brushed planes on the brow, ruff, shoulders and paws separate the dark body from the base.\nStyle/medium: painted carved tabletop miniature, large readable sculpted fur planes, restrained hand-painted texture, matte surfaces. Same stylization as Image 2. No photoreal hair strands.\nComposition/framing: square image. Match the disc size, thin rim, high-angle view and centered framing of Image 2. Full single creature and full base entirely visible. The creature should use most of the base, with a clearly legible silhouette, and every ear, paw and tail tip must remain inside the outer base rim. Do not make a small figurine surrounded by a large empty disc.\nLighting: soft upper-left light, short rightward contact shading contained on the disc; no cast shadow outside the disc.\nBackdrop: actual fully transparent alpha outside the circular base. Preserve real transparent pixels; no painted checkerboard or solid background.\nConstraints: exactly one creature; no terrain, no grass, no rocks, no colored faction rim, no red ring, no glow, no equipment, no text, no symbols, no rank markers, no watermark.",
+  "references": [
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/canine_gw.png",
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/wolf-v2.png"
+  ],
+  "reference_roles": [
+    "original ToME great wolf sprite; species identity only",
+    "accepted ordinary wolf miniature; high-angle camera, hand-painted material, light and neutral base only"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0dd1f-f08f-7b92-8e97-46f0099eb1de/exec-211db09a-ac19-48e8-a00a-0c1da09c79b2.png",
+  "saved_output_path": "game/addons/tome-checker-revised/art/monsters-v2/masters/great-wolf-v1.png",
+  "review": "A heavier charcoal wolf with a broad raised neck ruff and more upright parallel forelegs. Species, lighting and contained neutral disc are coherent. Pose still shares the accepted pack's lower-left orientation; heavier shoulder silhouette is the intended distinguishing cue. Full miniature visually reviewed; reduced-size side-by-side check remains for parent integration.",
+  "tool": "image_gen.imagegen",
+  "tool_result_keys": [
+    "image_url",
+    "output_hint"
+  ],
+  "preserved_native_alpha": true,
+  "image_processing": "Copied original generated PNG without pixel edits, resizing, background extraction or alpha modification.",
+  "reviewed_at_utc": "2026-09-26T10:09:43.849Z",
+  "selection": "candidate",
+  "sha256": "7eed917a14352203f5078ba17337ff1ceeb0c132a9a865ab452e0cb074fdca61",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      21,
+      1232,
+      1254
+    ],
+    "visible_alpha_bbox": [
+      148,
+      153,
+      1106,
+      1119
+    ],
+    "transparent_pixels": 839049,
+    "partial_alpha_pixels": 733230,
+    "opaque_pixels": 237
+  }
+}

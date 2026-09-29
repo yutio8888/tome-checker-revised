@@ -1,0 +1,265 @@
+{
+  "schema": 1,
+  "batch_id": "c0-shared-monsters-sol-v1",
+  "assets": [
+    {
+      "asset_id": "giant-white-rat",
+      "native_name": "giant white rat",
+      "scope": "Shared rodent pool; KorPul DEFAULT/HIDEOUT and rat-nest first; no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_RODENT\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 70,
+          "anchor": "name = \"giant white rat\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Use the approved high three-quarter overhead camera, matte sculpted fur, dark physical disc and muted copper-grey rim; do not copy its body or tail pose."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_rodent_giant_white_rat.png",
+          "sha256": "250b99cf4660c731aaaa3cf978df751978a65e2c084534152563c9c02199ef1a",
+          "role": "identity",
+          "note": "Native species and light coat only; ignore native camera and blue effects."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One large adult ivory rat, unmistakably a rat rather than a small mouse: long pointed muzzle, rounded ears, four visible clawed feet, long naked tail. Alert forebody held visibly higher than its haunches, head angled down-left and separated front paws. Its upper torso forms a tall broad triangle.",
+        "contrast": "Compared with the compact warm-brown low crouch of the existing brown rat, this white rat has a taller raised front silhouette and one broad light-value ivory back. Compared with the planned grey rat, keep this one more upright, lighter, and shorter in horizontal reach.",
+        "composition": "One entire animal on one disc. Curl the long tail loosely around the left/back inside the rim, clearly detached from the torso; do not put the face in the upper-right UI margin. Keep nose, paws, ears and tail entirely within the disc and readable at 48px.",
+        "palette": "Warm ivory and bone-white fur in broad areas, soft pink-grey ears and bare tail, dark eyes and nose, gentle warm-grey contact shadow. No glow or effect."
+      },
+      "kind": "creature",
+      "gate": "ready",
+      "gate_reason": "Main agent approved current 0.6.2 detached native actor evidence: exact single-image identity, empty display modifiers, existing mapping reason no-art. Art generation only; runtime integration still pending.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0-art-gate/README.md",
+          "sha256": "78d235eb744c55c52dafcf2b77b68f63c87a6cb856ac14b49c818bc82f471608"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0-art-gate/native-actors.tsv",
+          "sha256": "7cb6e0db32fc5608ee9e6d0de81aa5dfbe8ab4303b06a5ca21b31f87d27b12b1"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0-art-gate/sources.json",
+          "sha256": "aeb37e428f377e14bc6c64325caba3c7d452e43a2f16f062ab494fa7a9d25790"
+        }
+      ]
+    },
+    {
+      "asset_id": "giant-grey-rat",
+      "native_name": "giant grey rat",
+      "scope": "Shared rodent pool; KorPul DEFAULT/HIDEOUT and rat-nest first; no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_RODENT\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 132,
+          "anchor": "name = \"giant grey rat\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Use the approved high three-quarter overhead camera, matte sculpted fur, dark physical disc and muted copper-grey rim; do not copy its body or tail pose."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_rodent_giant_grey_rat.png",
+          "sha256": "60fde8efbd35224502f5168b3c641c0b0461f17131745eb736f3c99dd4bb0fe6",
+          "role": "identity",
+          "note": "Native species and slate-grey coat only; ignore blue effects."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "One large adult slate-grey rat with long pointed muzzle, rounded ears, four feet and one long bare tail. It runs in a very low, broad, elongated sideward crouch facing right; back and rump are one long horizontal mass, front feet visibly apart. Its open S-shaped tail separates from its body and curves into free dark disc space.",
+        "contrast": "Existing brown rat is compact warm-brown crouch with a tail arcing close around its back. White rat is tall raised ivory forebody. Grey rat must instead read as a medium-value cool-slate long horizontal profile with an open S tail, differing in silhouette and value from both. No coat-color-only distinction.",
+        "composition": "One complete rat on one disc with all paws, ears and entire tail inside the rim. Head lies away from upper-right UI margin. Leave a visible wedge of disc between tail and torso. Broad pale-facing planes on back and muzzle survive 48px reduction.",
+        "palette": "Medium cool slate-grey fur, pale bone-grey broad plane highlights and warm taupe underside, pink-grey bare tail and feet. Dark eyes readable. No green poison cloud, blue ring, particle effect or text."
+      },
+      "kind": "creature",
+      "gate": "ready",
+      "gate_reason": "Main agent approved current 0.6.2 detached native actor evidence: exact single-image identity, empty display modifiers, existing mapping reason no-art. Art generation only; runtime integration still pending.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0-art-gate/README.md",
+          "sha256": "78d235eb744c55c52dafcf2b77b68f63c87a6cb856ac14b49c818bc82f471608"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0-art-gate/native-actors.tsv",
+          "sha256": "7cb6e0db32fc5608ee9e6d0de81aa5dfbe8ab4303b06a5ca21b31f87d27b12b1"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0-art-gate/sources.json",
+          "sha256": "aeb37e428f377e14bc6c64325caba3c7d452e43a2f16f062ab494fa7a9d25790"
+        }
+      ]
+    },
+    {
+      "asset_id": "green-worm-mass",
+      "native_name": "green worm mass",
+      "scope": "Shared vermin pool; KorPul first; multiplying acid worm identity, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/vermin.lua",
+          "sha256": "00356bcc7f67dd0171daaad2d5f394550aeb64e2d02099127e93709ff74c3c8e",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_WORM\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/vermin.lua",
+          "sha256": "00356bcc7f67dd0171daaad2d5f394550aeb64e2d02099127e93709ff74c3c8e",
+          "line": 57,
+          "anchor": "name = \"green worm mass\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Use the approved high three-quarter overhead camera, matte sculpted fur, dark physical disc and muted copper-grey rim; do not copy its body or tail pose."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_worms_green_worm_mass.png",
+          "sha256": "193afd6822505257661eda5ce6c4a0ab97d61498c725a8e19999025c99db1214",
+          "role": "identity",
+          "note": "Native multiple green worms and acid identity; ignore original black background/camera."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v4/masters/white-worm-mass-v1.png",
+          "sha256": "ce957c3fa428731ff049cd16879e5fbc9fd75c723e080abc54fb09ebce88fcca",
+          "role": "family",
+          "note": "Existing white worm mass: distinguish by radial longer silhouette and darker value, not hue alone."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A group of several individually visible small segmented green worms, not one snake or one blob. Six to nine somewhat slender worm bodies radiate outward from a loose central tangle; distinct rounded heads and dark gaps show where bodies separate. A few outer bodies bend into short hooks.",
+        "contrast": "Existing white worm mass is a compact bright mound of short thick creamy grubs. This green worm mass has an open radial starburst silhouette, longer thinner outer bodies, large dark gaps and darker olive-green overall value. Distinction must survive grayscale and 48px.",
+        "composition": "One low physical group on one disc, viewed from high three-quarter overhead. Every worm fully inside rim, no cut ends at boundary. No worm head in upper-right UI margin. Central bodies retain readable broad segments after reduction; avoid fine noisy hairlike strands.",
+        "palette": "Muted moss and olive greens, yellow-green broad lit upper planes, deep olive segment undersides. Acid is suggested by natural green coloration only: no pools, droplets, poison fog, glow or tactical effect."
+      },
+      "kind": "creature",
+      "gate": "ready",
+      "gate_reason": "Main agent approved current 0.6.2 detached native actor evidence: exact single-image identity, empty display modifiers, existing mapping reason no-art. Art generation only; runtime integration still pending.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0-art-gate/README.md",
+          "sha256": "78d235eb744c55c52dafcf2b77b68f63c87a6cb856ac14b49c818bc82f471608"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0-art-gate/native-actors.tsv",
+          "sha256": "7cb6e0db32fc5608ee9e6d0de81aa5dfbe8ab4303b06a5ca21b31f87d27b12b1"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0-art-gate/sources.json",
+          "sha256": "aeb37e428f377e14bc6c64325caba3c7d452e43a2f16f062ab494fa7a9d25790"
+        }
+      ]
+    },
+    {
+      "asset_id": "copperhead-snake",
+      "native_name": "copperhead snake",
+      "scope": "Shared snake pool; KorPul and Trollmire first; exact salmon-snake display only",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/snake.lua",
+          "sha256": "2e7035bbff94a277cabc07e7ed59398563123db90c5e029ec284e55f7090a1b1",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_SNAKE\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/snake.lua",
+          "sha256": "2e7035bbff94a277cabc07e7ed59398563123db90c5e029ec284e55f7090a1b1",
+          "line": 67,
+          "anchor": "name = \"copperhead snake\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Use the approved high three-quarter overhead camera, matte sculpted fur, dark physical disc and muted copper-grey rim; do not copy its body or tail pose."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/salmon-snake.png",
+          "sha256": "ca0ad07b3875339609a877c5fa1a94134ae8b175908d23c9d778008d02f3b68d",
+          "role": "identity",
+          "note": "Native copper head and reddish brown serpent, not body pose or effects."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v1/masters/brown-snake-v1.png",
+          "sha256": "54dd572dbe3114d155664345e9b9e3a6c16fdc6d8fff7487810808e58a06bec6",
+          "role": "family",
+          "note": "Existing brown snake: avoid its thick closed circular coil and similar overall warm-brown value."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "One complete copperhead viper with a distinctly broad copper-colored triangular head, narrow neck and tapering tail. Its body makes a loose open double bend like an offset S, rather than closing into a circle; head low and forward at lower left, tail curving toward upper left.",
+        "contrast": "Existing brown snake is a thick round closed coil with central dark hole and near-uniform warm brown body. Copperhead must read as a longer, more open serpentine diagonal with separated head and tail; broad bright copper head and darker deep-russet body create a different large-value pattern. Avoid a rattlesnake rattle or cobra hood.",
+        "composition": "One entire animal on one thin disc. Keep head, tail and every bend inside rim; open disc gap between separated body turns. Leave upper-right UI margin free of head. Scale the wedge head large enough to remain apparent at 48px, without exaggerating into a dragon head.",
+        "palette": "Copper-orange head, deep reddish-brown body, muted pale tan broad hourglass saddles and underbelly. Matte natural scales with restrained highlights. No fangs as a separate status symbol, poison cloud, liquid or green glow."
+      },
+      "kind": "creature",
+      "gate": "ready",
+      "gate_reason": "Main agent approved current 0.6.2 detached native actor evidence: exact single-image identity, empty display modifiers, existing mapping reason no-art. Art generation only; runtime integration still pending.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0-art-gate/README.md",
+          "sha256": "78d235eb744c55c52dafcf2b77b68f63c87a6cb856ac14b49c818bc82f471608"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0-art-gate/native-actors.tsv",
+          "sha256": "7cb6e0db32fc5608ee9e6d0de81aa5dfbe8ab4303b06a5ca21b31f87d27b12b1"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0-art-gate/sources.json",
+          "sha256": "aeb37e428f377e14bc6c64325caba3c7d452e43a2f16f062ab494fa7a9d25790"
+        }
+      ]
+    }
+  ]
+}

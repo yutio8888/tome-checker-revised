@@ -1,0 +1,200 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-e-3",
+  "assets": [
+    {
+      "asset_id": "ritch-hive-mother",
+      "native_name": "Ritch Great Hive Mother",
+      "scope": "ritch-tunnels zone-finale boss; exact identity only, no rarity field, no live fixture. Native display is a single top-level image= with no resolvers.nice_tile add_mos anywhere on the leaf -- a plain single-image contract, not a tall composite.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/ritch-tunnels/npcs.lua",
+          "sha256": "52f4539d11c611f1e2a1cff6f8bfb0c16ac77056e71c9bff3556000efd6e7354",
+          "line": 100,
+          "anchor": "name = \"Ritch Great Hive Mother\", image = \"npc/insect_ritch_ritch_hive_mother.png\","
+        },
+        {
+          "path": "game/modules/tome/data/zones/ritch-tunnels/npcs.lua",
+          "sha256": "52f4539d11c611f1e2a1cff6f8bfb0c16ac77056e71c9bff3556000efd6e7354",
+          "line": 29,
+          "anchor": "type = \"insect\", subtype = \"ritch\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/insect_ritch_ritch_hive_mother.png",
+          "sha256": "12b2eedb39728b7afc6cf97cf8ff2cd7392a4415d3df7b8751b100d147306826",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A hulking, hunched ritch matriarch seen from a steep overhead three-quarter angle: a chitinous, crab-like segmented body low and wide on many short legs, one pair of oversized front claws raised, a rounded carapace-covered head with small compound eyes.",
+        "contrast": "First insect/ritch identity in the catalog (distinct from the existing insect/ant and insect/swarms families -- ant bodies are slim six-legged insects, swarms are diffuse clouds; the hive mother is a single hunched crab-like bulk with oversized front claws, which no ant or swarm token resembles), so no in-family collision; rust-orange chitin with cool blue trim accents is the identity's own colour signature.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated: this batch (monster-boss-e, same style reference) has now been measured on three fresh (non-edit) generations -- an initial \"8 units darker\" instruction produced base_drift -9.23, -12.21 and -15.18 (all overshooting the +-8 tolerance on the dark side), while a follow-up \"4 units darker\" instruction on the same identity landed at -5.11, cleanly inside tolerance. Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Rust-orange to burnt-sienna chitin plating, cool electric-blue glowing joint/rim accents, dark amber claw tips; dry neutral charcoal disc with restrained copper-grey bevel."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity, type/subtype, define_as, unique flag and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (matches CONTRACTS-B5-B7-20260929.md §2). No live fixture in this assigned task; no discrepancy found so none is required.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-e-20260929/source-contracts.json",
+          "sha256": "92455671765a820311ccffdac736c667beaae5b4bb497924bd674f8ca0cb7fdf"
+        }
+      ]
+    },
+    {
+      "asset_id": "the-mouth",
+      "native_name": "The Mouth",
+      "scope": "deep-bellow boss (initial); exact identity only, no rarity field, no live fixture",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/deep-bellow/npcs.lua",
+          "sha256": "d85b1f727ac0687aac2381598602a8d8241c133dba1787bf659fe800972e2146",
+          "line": 29,
+          "anchor": "name = \"The Mouth\", tint=colors.PURPLE,"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_the_mouth.png",
+          "sha256": "bffd88e93164f66958c37cc2c0b75d7d6525f9c7b1e0acd0feeec4d37bbcb0a0",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A low, wide mass of curling dark-red tendrils and pale spiked teeth ringing a glowing ember-red maw sunk into the ground, no limbs or head -- a sessile, squat, radially symmetric horror rather than an upright creature.",
+        "contrast": "Shares horror/corrupted with the already-shipped Horned Horror (an upright horned minotaur-shaped humanoid) and with this batch's own The Abomination (a tall pale two-headed fleshy mass); The Mouth must read as the low, wide, glowing-red toothed one of the three -- squat radial silhouette, no limbs, warm dark-red/ember palette -- unlike Horned Horror's tall bipedal shape and unlike Abomination's tall pale spire shape.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated: this batch (monster-boss-e, same style reference) has now been measured on three fresh (non-edit) generations -- an initial \"8 units darker\" instruction produced base_drift -9.23, -12.21 and -15.18 (all overshooting the +-8 tolerance on the dark side), while a follow-up \"4 units darker\" instruction on the same identity landed at -5.11, cleanly inside tolerance. Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Deep blood-red to near-black curling tendril mass, pale bone-white spiked teeth ringing the rim, glowing ember-orange maw interior; dry neutral charcoal disc with restrained copper-grey bevel, the glow must stay confined to the maw interior and not cast light onto the disc."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity, type/subtype, define_as, unique flag and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (matches CONTRACTS-B5-B7-20260929.md §2). No live fixture in this assigned task; no discrepancy found so none is required.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-e-20260929/source-contracts.json",
+          "sha256": "92455671765a820311ccffdac736c667beaae5b4bb497924bd674f8ca0cb7fdf"
+        }
+      ]
+    },
+    {
+      "asset_id": "the-abomination",
+      "native_name": "The Abomination",
+      "scope": "deep-bellow boss (secondary, guards the vault after The Mouth); exact identity only, no rarity field, no live fixture",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/deep-bellow/npcs.lua",
+          "sha256": "d85b1f727ac0687aac2381598602a8d8241c133dba1787bf659fe800972e2146",
+          "line": 136,
+          "anchor": "name = \"The Abomination\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_the_abomination.png",
+          "sha256": "5b8c4d594311b5db4c168df2f6f59bdf40420340f67fe9ecf76f4a1c5784f4b6",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A tall, pale fleshy mass tapering upward from a wide base to two small malformed heads at the top, one tilted back, thin boneless pseudopod arms trailing at the sides -- an upright, spire-like silhouette built from sagging pale flesh rather than a compact blob.",
+        "contrast": "Shares horror/corrupted with Horned Horror and this batch's own The Mouth; The Abomination must read as the tall, pale, two-headed spire of the three -- unlike Horned Horror's dark wine-brown bipedal horned shape and unlike The Mouth's low wide red toothed mass, Abomination is pale mauve-pink flesh tapering to a narrow twin-headed top, the only member of the trio that is both tall and pale.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated: this batch (monster-boss-e, same style reference) has now been measured on three fresh (non-edit) generations -- an initial \"8 units darker\" instruction produced base_drift -9.23, -12.21 and -15.18 (all overshooting the +-8 tolerance on the dark side), while a follow-up \"4 units darker\" instruction on the same identity landed at -5.11, cleanly inside tolerance. Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Pale mauve-pink to dusty flesh tone throughout, darker rose shading in the creases and where the twin heads meet the body, no red glow and no bone spikes; dry neutral charcoal disc with restrained copper-grey bevel -- the pale body needs a clearly darker disc value beneath it so it does not wash out against the base."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity, type/subtype, define_as, unique flag and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (matches CONTRACTS-B5-B7-20260929.md §2). No live fixture in this assigned task; no discrepancy found so none is required.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-e-20260929/source-contracts.json",
+          "sha256": "92455671765a820311ccffdac736c667beaae5b4bb497924bd674f8ca0cb7fdf"
+        }
+      ]
+    },
+    {
+      "asset_id": "celia",
+      "native_name": "Celia",
+      "scope": "last-hope-graveyard boss; exact identity only, no rarity field, no live fixture",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/last-hope-graveyard/npcs.lua",
+          "sha256": "4454448fe6fd55ed480a9d990d6089632adb2e542cbc32a10e2eadabd59ffd2b",
+          "line": 29,
+          "anchor": "name = \"Celia\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_celia.png",
+          "sha256": "fd5d1b328eb919e38c139921e538b24b1f71c188b8d8621f6285d23d46719976",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A tall, gaunt pregnant woman standing in profile-turned three-quarter pose in a stained, drab khaki-tan robe, sickly pale skin, pale straw-blonde hair, one hand holding a plain wooden staff planted at her side, the other holding a small dagger low against her body. No aura, no glow.",
+        "contrast": "Shares humanoid/human with this batch's own Urkis; Celia must read as the quiet, pale, unlit one of the pair -- a drab tan-grey robe and sickly skin with no aura or lightning fringe at all, a female silhouette with a pregnant abdomen and staff+dagger held low, unlike Urkis's bright lightning-wreathed male silhouette with arms held open.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated: this batch (monster-boss-e, same style reference) has now been measured on three fresh (non-edit) generations -- an initial \"8 units darker\" instruction produced base_drift -9.23, -12.21 and -15.18 (all overshooting the +-8 tolerance on the dark side), while a follow-up \"4 units darker\" instruction on the same identity landed at -5.11, cleanly inside tolerance. Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Sallow, sickly pale skin with faint grey-green undertones, pale straw-blonde hair, drab stained khaki-tan robe, plain grey wooden staff, dull steel dagger; dry neutral charcoal disc with restrained copper-grey bevel, no glow or particle effects anywhere."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity, type/subtype, define_as, unique flag and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (matches CONTRACTS-B5-B7-20260929.md §2). No live fixture in this assigned task; no discrepancy found so none is required.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-e-20260929/source-contracts.json",
+          "sha256": "92455671765a820311ccffdac736c667beaae5b4bb497924bd674f8ca0cb7fdf"
+        }
+      ]
+    }
+  ]
+}

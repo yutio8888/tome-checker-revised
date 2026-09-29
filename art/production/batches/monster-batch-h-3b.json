@@ -1,0 +1,132 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-h-3b",
+  "assets": [
+    {
+      "asset_id": "necromancer",
+      "native_name": "Necromancer",
+      "scope": "blighted-ruins named non-unique humanoid/human caster (define_as NECROMANCER) -- FRESH REGENERATION: call 1 passed the gate (-3.37) but the robe read near-black and the small figure dark-on-dark at 48px (masked luminance 49.4, same weakness as harno); retry with a lifted lavender-grey robe and a larger figure",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/blighted-ruins/npcs.lua",
+          "sha256": "383d6aa4ca48a2f2b219020522a29eb4c30b9c8e88e18efd88a8f924b56d3a03",
+          "line": 30,
+          "anchor": "define_as = \"NECROMANCER\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/blighted-ruins/npcs.lua",
+          "sha256": "383d6aa4ca48a2f2b219020522a29eb4c30b9c8e88e18efd88a8f924b56d3a03",
+          "line": 33,
+          "anchor": "name = \"Necromancer\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature.",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_necromancer.png",
+          "sha256": "e1c05d9279c0684465157c88da97a83be47231695c82fe6d650c6475a7c714a2",
+          "role": "identity",
+          "note": "Native species shape: gaunt human in a black robe holding a tall staff with a small flag-like ornament."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/harno.png",
+          "sha256": "6f093ad763d39cfeb6180eff0033174e495a732940ac10ed4a74e999c46a4931",
+          "role": "family",
+          "note": "Shipped catalog humanoid/human: hooded blue-grey cloak with two knives. The Necromancer is a bare-headed robed staff-holder; also stay distinct from urkis (lightning) and celia (pale dress)."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A gaunt bald human man with a pale drawn face in a long light slate-lavender robe with tattered hem and a high collar, standing upright and filling most of the disc height, one bone-pale hand raised in a casting gesture and the other holding a short twisted dark staff close to the body, its top no higher than a hand above his head. The figure is large and broad in the frame with the raised hand and staff well inside the inner four-fifths of the disc.",
+        "contrast": "Fifth humanoid/human catalog identity next to urkis (blue-grey robe with lightning), celia (pale tan dress and wooden staff), harno (hooded cloak with two knives) and the plain thief/rogue figures. The Necromancer is bare-headed and fully robed with a raised pale hand and a short dark staff; silhouette (bald head, long straight robe, raised hand) and value (mid-dark slate-violet robe with lifted lighter fold planes, bone-pale face and hand as the value break) separate it. The robe must never be near-black.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Light slate-lavender robe with pale grey-violet fold highlights and cream-grey ragged trim, clearly a mid-light value robe and never black or charcoal, bone-pale skin at the head and hand, dark brown staff with a small pale grey ornament; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Necromancer, define_as=NECROMANCER, type=humanoid/subtype=human, not unique, blighted-ruins/npcs.lua:30-34); details and hashes in evidence/monster-batch-h-20260929/source-contracts.json. No image=/nice_tile; NPC.lua:33 formula gives npc/humanoid_human_necromancer.png (present, inspected); no moddable_tile. Resolves via the generic actor.image==entry.image \"single\" appearance path. Non-unique: exact single-image catalog entry, never a whole-subtype mapping. Fresh regeneration handoff (visual reject of call 1, not a gate failure).",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-h-20260929/source-contracts.json",
+          "sha256": "7de519f5332e856fa10e27933e77d45d353392cc1894eb713d861488692b8076"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-h-3/necromancer/imagegen-calls/call-1/call.json",
+          "sha256": "6c0dbe0d5c540f6a8848a33bc8e965f5eef9ccef6bbe39d3126792386749dce1"
+        }
+      ]
+    },
+    {
+      "asset_id": "sanguine-experiment",
+      "native_name": "sanguine experiment",
+      "scope": "blighted-ruins named non-unique stationary undead/horror (rarity 1) -- FRESH REGENERATION: call 1 passed the gate (-1.49) but the deep blood-red clot went near-black in grayscale and on real floors (masked luminance 34.1, below the 39.8 rejected Kryl-Feijan draft); retry with a much brighter scarlet body",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/blighted-ruins/npcs.lua",
+          "sha256": "383d6aa4ca48a2f2b219020522a29eb4c30b9c8e88e18efd88a8f924b56d3a03",
+          "line": 191,
+          "anchor": "name = \"sanguine experiment\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 24,
+          "anchor": "type = \"undead\", subtype = \"horror\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature.",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_horror_sanguine_experiment.png",
+          "sha256": "4179cfd433e57ce4c6c1b2c2ed89e8ec49de8b72c49b59c080ddb83bff3fa92e",
+          "role": "identity",
+          "note": "Native species shape: a glossy red blood clot blob."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/the-abomination.png",
+          "sha256": "e6b827a671a60b0f66531736d0eafae7ea99f3b532ba52c40d3898ce1af7032d",
+          "role": "family",
+          "note": "Shipped catalog horror/corrupted: red-brown tentacle mass with a toothed mouth. The sanguine experiment is one smooth glossy clot with no tentacles, teeth or mouth."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A single smooth glossy blood clot: a rounded slightly lumpy blob of bright wet scarlet-red congealed blood with a slick sheen, a few short drips and small bubbles on its surface and several broad soft bright pink-white specular highlights covering a large part of the upper surface, no bones, no limbs, no strands, no face. Stationary blob fully inside the disc.",
+        "contrast": "Three sibling undead/horror experiments: sanguine is the smooth single glossy dark-red clot (rounded, no protrusions); fleshy (lumpy pink-brown mound with trailing strands) and boney (spiky ivory bone pile) are otherwise. Silhouette (smooth rounded oval) and value (saturated blood red, darkest of the three but with broad bright highlights and lighter crimson upper planes) separate it, not hue alone. Not faceted like the crimson crystal.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Vivid scarlet and tomato-red body with light orange-red upper planes and large pale pink-white specular highlights, only a small darker crimson shadow at the lower right, clearly a bright mid-value red and never dark maroon or black; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=sanguine experiment, type=undead/subtype=horror, no define_as, not unique, blighted-ruins/npcs.lua:191); details and hashes in evidence/monster-batch-h-20260929/source-contracts.json. No image=/nice_tile; NPC.lua:33 formula gives npc/undead_horror_sanguine_experiment.png (present, inspected). Resolves via the generic actor.image==entry.image \"single\" appearance path. Non-unique: exact single-image catalog entry, never a whole-subtype mapping. Fresh regeneration handoff (visual reject of call 1, not a gate failure).",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-h-20260929/source-contracts.json",
+          "sha256": "7de519f5332e856fa10e27933e77d45d353392cc1894eb713d861488692b8076"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-h-3/sanguine-experiment/imagegen-calls/call-1/call.json",
+          "sha256": "5460d13b9d4c63bb4722dfe35102b061f143413811c88ab26b015bc97eb1e2d7"
+        }
+      ]
+    }
+  ]
+}

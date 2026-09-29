@@ -1,0 +1,73 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "human-sun-paladin": 103.38,
+    "high-sun-paladin-rodmour": 94.78,
+    "aluin-the-fallen": 70.04,
+    "argoniel": 97.93,
+    "elandar": 73.43,
+    "mindworm": 104.49,
+    "berethh": 66.86,
+    "companion-warrior": 70.08,
+    "companion-archer": 75.56,
+    "greater-mummy-lord": 103.62,
+    "kors-fury": 141.31,
+    "borfast": 83.33,
+    "berethh OLD v1 (rejected by gate: base_drift -8.19)": 69.36,
+    "berethh OLD v2 (rejected by gate: base_drift +9.63, disc over-lightened)": 72.15,
+    "borfast OLD v1 (rejected by gate: base_drift -10.61, dark brown-bronze figure)": 71.86,
+    "aluin-the-fallen OLD v1 (superseded: dark rust-brown blob at 48px, luminance 59.1)": 58.71,
+    "aluin-the-fallen OLD v2 (superseded: brown-grey plate still a mid-dark mass at 48px, luminance 64.0)": 63.28,
+    "companion-warrior OLD v1 (superseded: mid-dark russet, luminance 62.2)": 61.91
+  },
+  "floors": {
+    "burnt ground (charred-scar)": 72.7,
+    "meadow grass (keepsake, trollmire)": 108.97,
+    "caldera floor (noxious-caldera)": 96.54,
+    "cave rock (ancient-elven-ruins, dreadfell)": 130.64,
+    "korpul floor A (ruins-kor-pul)": 131.79,
+    "korpul floor B (ruins-kor-pul)": 134.11,
+    "sand (dry ruins)": 110.23
+  },
+  "zone_floors": {
+    "human-sun-paladin": {
+      "burnt ground (charred-scar)": 72.7
+    },
+    "high-sun-paladin-rodmour": {
+      "burnt ground (charred-scar)": 72.7
+    },
+    "aluin-the-fallen": {
+      "meadow grass (keepsake, trollmire)": 108.97
+    },
+    "argoniel": {
+      "burnt ground (charred-scar)": 72.7
+    },
+    "elandar": {
+      "burnt ground (charred-scar)": 72.7
+    },
+    "mindworm": {
+      "caldera floor (noxious-caldera)": 96.54
+    },
+    "berethh": {
+      "meadow grass (keepsake, trollmire)": 108.97
+    },
+    "companion-warrior": {
+      "meadow grass (keepsake, trollmire)": 108.97
+    },
+    "companion-archer": {
+      "meadow grass (keepsake, trollmire)": 108.97
+    },
+    "greater-mummy-lord": {
+      "cave rock (ancient-elven-ruins, dreadfell)": 130.64
+    },
+    "kors-fury": {
+      "korpul floor A (ruins-kor-pul)": 131.79,
+      "korpul floor B (ruins-kor-pul)": 134.11
+    },
+    "borfast": {
+      "cave rock (ancient-elven-ruins, dreadfell)": 130.64
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

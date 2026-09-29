@@ -1,0 +1,1271 @@
+{
+  "schema": 1,
+  "assets": [
+    {
+      "id": "wrathroot",
+      "master": "masters/wrathroot-v2.png",
+      "sha256": "fbd48192e785bed37dce86b9babe166acdee768d9e43a1fba95d7c5618e9b11c",
+      "exports": [
+        {
+          "path": "sprites/128/wrathroot.png",
+          "size": 128,
+          "sha256": "2e4b91f445c408cc6c05be1945b141fbe55210debe2367cb8790ed5a8ba60c48"
+        }
+      ],
+      "style_gate": {
+        "asset_id": "wrathroot",
+        "token": {
+          "path": "art/monster-batch-a/sprites/128/wrathroot.png",
+          "sha256": "2e4b91f445c408cc6c05be1945b141fbe55210debe2367cb8790ed5a8ba60c48",
+          "sector_medians": [
+            59.23,
+            58.52,
+            56.23,
+            54.94,
+            45.62,
+            55.94,
+            71.79,
+            68.42
+          ],
+          "sector_offsets": [
+            -12.86,
+            -12.64,
+            -8.42,
+            -8.03,
+            -19.59,
+            -11.11,
+            -2.54,
+            -8.0
+          ],
+          "base_drift": -9.77,
+          "max_sector_intrusion": 7.23,
+          "max_opaque_radius": 0.8559,
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ring_samples": [
+            297,
+            303,
+            298,
+            300,
+            298,
+            303,
+            298,
+            303
+          ]
+        },
+        "master": {
+          "path": "art/monster-batch-a/masters/wrathroot-v2.png",
+          "sha256": "fbd48192e785bed37dce86b9babe166acdee768d9e43a1fba95d7c5618e9b11c",
+          "format": "PNG",
+          "mode": "RGBA",
+          "native_alpha_channel": true,
+          "alpha_min": 0,
+          "alpha_max": 255,
+          "size": [
+            1254,
+            1254
+          ]
+        },
+        "findings": [
+          {
+            "check": "master_native_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255",
+            "mode": "RGBA",
+            "alpha_min": 0,
+            "alpha_max": 255
+          },
+          {
+            "check": "disc_overflow",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6700\u5927\u4e0d\u900f\u660e\u534a\u5f84 0.856\uff08\u4e0a\u9650 0.867\uff09",
+            "value": 0.8559,
+            "limit": 0.867
+          },
+          {
+            "check": "base_drift",
+            "level": "blocking",
+            "ok": false,
+            "detail": "\u5e95\u76d8\u504f\u79fb\u4e2d\u4f4d -9.77\uff08\u5bb9\u5dee \u00b18\uff09",
+            "value": -9.77,
+            "limit": 8.0
+          },
+          {
+            "check": "subject_intrusion",
+            "level": "warning",
+            "ok": true,
+            "detail": "\u5355\u6247\u533a\u76f8\u5bf9\u672c\u6b3e\u4e2d\u4f4d\u6700\u5927\u4e0a\u504f +7.23\uff08\u5bb9\u5dee +20\uff09",
+            "value": 7.23,
+            "limit": 20.0
+          },
+          {
+            "check": "corner_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]",
+            "value": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "blocking": [
+          "base_drift"
+        ],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": true,
+        "notes": [
+          "Exact-byte monster batch A exception: Reviewed 48/64/96px silhouette and neutral disc visually; specific base brightness miss retained without changing the global \u00b18 limit."
+        ],
+        "passed": true
+      },
+      "provenance_call": "art/production/handoffs/monster-batch-a-1/wrathroot/imagegen-calls/call-2/call.json"
+    },
+    {
+      "id": "snaproot",
+      "master": "masters/snaproot-v2.png",
+      "sha256": "b4ead81254c4dbaf2ef07a5aa0917b375522ea56d4608976ae38a21218accfe5",
+      "exports": [
+        {
+          "path": "sprites/128/snaproot.png",
+          "size": 128,
+          "sha256": "0ec85d13c6f399ddf57058a1cdbd6ca24b035d6f95fa8070b3f5bb656484d04b"
+        }
+      ],
+      "style_gate": {
+        "asset_id": "snaproot",
+        "token": {
+          "path": "art/monster-batch-a/sprites/128/snaproot.png",
+          "sha256": "0ec85d13c6f399ddf57058a1cdbd6ca24b035d6f95fa8070b3f5bb656484d04b",
+          "sector_medians": [
+            63.94,
+            63.97,
+            65.18,
+            63.88,
+            45.54,
+            67.72,
+            81.12,
+            74.83
+          ],
+          "sector_offsets": [
+            -8.15,
+            -7.19,
+            0.52,
+            0.91,
+            -19.67,
+            0.67,
+            6.79,
+            -1.59
+          ],
+          "base_drift": -0.54,
+          "max_sector_intrusion": 7.33,
+          "max_opaque_radius": 0.8576,
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ring_samples": [
+            261,
+            302,
+            298,
+            266,
+            268,
+            303,
+            298,
+            274
+          ]
+        },
+        "master": {
+          "path": "art/monster-batch-a/masters/snaproot-v2.png",
+          "sha256": "b4ead81254c4dbaf2ef07a5aa0917b375522ea56d4608976ae38a21218accfe5",
+          "format": "PNG",
+          "mode": "RGBA",
+          "native_alpha_channel": true,
+          "alpha_min": 0,
+          "alpha_max": 255,
+          "size": [
+            1254,
+            1254
+          ]
+        },
+        "findings": [
+          {
+            "check": "master_native_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255",
+            "mode": "RGBA",
+            "alpha_min": 0,
+            "alpha_max": 255
+          },
+          {
+            "check": "disc_overflow",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6700\u5927\u4e0d\u900f\u660e\u534a\u5f84 0.858\uff08\u4e0a\u9650 0.867\uff09",
+            "value": 0.8576,
+            "limit": 0.867
+          },
+          {
+            "check": "base_drift",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u5e95\u76d8\u504f\u79fb\u4e2d\u4f4d -0.54\uff08\u5bb9\u5dee \u00b18\uff09",
+            "value": -0.54,
+            "limit": 8.0
+          },
+          {
+            "check": "subject_intrusion",
+            "level": "warning",
+            "ok": true,
+            "detail": "\u5355\u6247\u533a\u76f8\u5bf9\u672c\u6b3e\u4e2d\u4f4d\u6700\u5927\u4e0a\u504f +7.33\uff08\u5bb9\u5dee +20\uff09",
+            "value": 7.33,
+            "limit": 20.0
+          },
+          {
+            "check": "corner_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]",
+            "value": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "notes": [],
+        "passed": true
+      },
+      "provenance_call": "art/production/handoffs/monster-batch-a-1/snaproot/imagegen-calls/call-2/call.json"
+    },
+    {
+      "id": "minotaur-maze",
+      "master": "masters/minotaur-maze-v1.png",
+      "sha256": "40e4c3cc35e807f8fb9f64f6ee6b1d1929ce1d9b4e09bf7b45d0d5ef0e9b7afa",
+      "exports": [
+        {
+          "path": "sprites/128/minotaur-maze.png",
+          "size": 128,
+          "sha256": "4bc862c807accae2bea681a99521f27a6beef2c6c9ac6156b58df9a8e675e705"
+        }
+      ],
+      "style_gate": {
+        "asset_id": "minotaur-maze",
+        "token": {
+          "path": "art/monster-batch-a/sprites/128/minotaur-maze.png",
+          "sha256": "4bc862c807accae2bea681a99521f27a6beef2c6c9ac6156b58df9a8e675e705",
+          "sector_medians": [
+            62.38,
+            59.94,
+            56.64,
+            55.35,
+            53.57,
+            61.12,
+            68.14,
+            69.6
+          ],
+          "sector_offsets": [
+            -9.71,
+            -11.22,
+            -8.02,
+            -7.62,
+            -11.64,
+            -5.93,
+            -6.19,
+            -6.82
+          ],
+          "base_drift": -7.82,
+          "max_sector_intrusion": 1.89,
+          "max_opaque_radius": 0.8585,
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ring_samples": [
+            298,
+            303,
+            298,
+            303,
+            298,
+            303,
+            298,
+            303
+          ]
+        },
+        "master": {
+          "path": "art/monster-batch-a/masters/minotaur-maze-v1.png",
+          "sha256": "40e4c3cc35e807f8fb9f64f6ee6b1d1929ce1d9b4e09bf7b45d0d5ef0e9b7afa",
+          "format": "PNG",
+          "mode": "RGBA",
+          "native_alpha_channel": true,
+          "alpha_min": 0,
+          "alpha_max": 255,
+          "size": [
+            1254,
+            1254
+          ]
+        },
+        "findings": [
+          {
+            "check": "master_native_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255",
+            "mode": "RGBA",
+            "alpha_min": 0,
+            "alpha_max": 255
+          },
+          {
+            "check": "disc_overflow",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6700\u5927\u4e0d\u900f\u660e\u534a\u5f84 0.859\uff08\u4e0a\u9650 0.867\uff09",
+            "value": 0.8585,
+            "limit": 0.867
+          },
+          {
+            "check": "base_drift",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u5e95\u76d8\u504f\u79fb\u4e2d\u4f4d -7.82\uff08\u5bb9\u5dee \u00b18\uff09",
+            "value": -7.82,
+            "limit": 8.0
+          },
+          {
+            "check": "subject_intrusion",
+            "level": "warning",
+            "ok": true,
+            "detail": "\u5355\u6247\u533a\u76f8\u5bf9\u672c\u6b3e\u4e2d\u4f4d\u6700\u5927\u4e0a\u504f +1.89\uff08\u5bb9\u5dee +20\uff09",
+            "value": 1.89,
+            "limit": 20.0
+          },
+          {
+            "check": "corner_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]",
+            "value": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "notes": [],
+        "passed": true
+      },
+      "provenance_call": "art/production/handoffs/monster-batch-a-2/minotaur-maze/imagegen-calls/call-1/call.json"
+    },
+    {
+      "id": "sandworm-queen",
+      "master": "masters/sandworm-queen-v1.png",
+      "sha256": "e554e4bfbe83efe8857981a13a1ac8ea86653ed6260ce74ac18e4dafb9aa5c16",
+      "exports": [
+        {
+          "path": "sprites/128/sandworm-queen.png",
+          "size": 128,
+          "sha256": "b83e818a5bcbbfc302871328e5763f2a0c62ee8fb6a39ee56bf29cf4f7564cd7"
+        }
+      ],
+      "style_gate": {
+        "asset_id": "sandworm-queen",
+        "token": {
+          "path": "art/monster-batch-a/sprites/128/sandworm-queen.png",
+          "sha256": "b83e818a5bcbbfc302871328e5763f2a0c62ee8fb6a39ee56bf29cf4f7564cd7",
+          "sector_medians": [
+            73.18,
+            75.56,
+            66.28,
+            60.89,
+            57.99,
+            48.42,
+            67.64,
+            73.68
+          ],
+          "sector_offsets": [
+            1.09,
+            4.4,
+            1.62,
+            -2.08,
+            -7.22,
+            -18.63,
+            -6.69,
+            -2.74
+          ],
+          "base_drift": -2.41,
+          "max_sector_intrusion": 6.81,
+          "max_opaque_radius": 0.8596,
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ring_samples": [
+            298,
+            303,
+            298,
+            303,
+            298,
+            303,
+            298,
+            303
+          ]
+        },
+        "master": {
+          "path": "art/monster-batch-a/masters/sandworm-queen-v1.png",
+          "sha256": "e554e4bfbe83efe8857981a13a1ac8ea86653ed6260ce74ac18e4dafb9aa5c16",
+          "format": "PNG",
+          "mode": "RGBA",
+          "native_alpha_channel": true,
+          "alpha_min": 0,
+          "alpha_max": 255,
+          "size": [
+            1254,
+            1254
+          ]
+        },
+        "findings": [
+          {
+            "check": "master_native_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255",
+            "mode": "RGBA",
+            "alpha_min": 0,
+            "alpha_max": 255
+          },
+          {
+            "check": "disc_overflow",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6700\u5927\u4e0d\u900f\u660e\u534a\u5f84 0.860\uff08\u4e0a\u9650 0.867\uff09",
+            "value": 0.8596,
+            "limit": 0.867
+          },
+          {
+            "check": "base_drift",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u5e95\u76d8\u504f\u79fb\u4e2d\u4f4d -2.41\uff08\u5bb9\u5dee \u00b18\uff09",
+            "value": -2.41,
+            "limit": 8.0
+          },
+          {
+            "check": "subject_intrusion",
+            "level": "warning",
+            "ok": true,
+            "detail": "\u5355\u6247\u533a\u76f8\u5bf9\u672c\u6b3e\u4e2d\u4f4d\u6700\u5927\u4e0a\u504f +6.81\uff08\u5bb9\u5dee +20\uff09",
+            "value": 6.81,
+            "limit": 20.0
+          },
+          {
+            "check": "corner_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]",
+            "value": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "notes": [],
+        "passed": true
+      },
+      "provenance_call": "art/production/handoffs/monster-batch-a-2/sandworm-queen/imagegen-calls/call-1/call.json"
+    },
+    {
+      "id": "corrupted-sand-wyrm",
+      "master": "masters/corrupted-sand-wyrm-v1.png",
+      "sha256": "c3b64865db60ea56a05b0b5093b10aef398f81d380464765fce7770476d85a7a",
+      "exports": [
+        {
+          "path": "sprites/128/corrupted-sand-wyrm.png",
+          "size": 128,
+          "sha256": "c50ec7b10618784bcba701ec371817bb983131a344876b93129c4b64bdc734c9"
+        }
+      ],
+      "style_gate": {
+        "asset_id": "corrupted-sand-wyrm",
+        "token": {
+          "path": "art/monster-batch-a/sprites/128/corrupted-sand-wyrm.png",
+          "sha256": "c50ec7b10618784bcba701ec371817bb983131a344876b93129c4b64bdc734c9",
+          "sector_medians": [
+            76.47,
+            70.19,
+            62.89,
+            65.49,
+            58.31,
+            56.01,
+            72.19,
+            74.49
+          ],
+          "sector_offsets": [
+            4.38,
+            -0.97,
+            -1.77,
+            2.52,
+            -6.9,
+            -11.04,
+            -2.14,
+            -1.93
+          ],
+          "base_drift": -1.85,
+          "max_sector_intrusion": 6.23,
+          "max_opaque_radius": 0.8585,
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ring_samples": [
+            298,
+            303,
+            298,
+            303,
+            298,
+            303,
+            298,
+            303
+          ]
+        },
+        "master": {
+          "path": "art/monster-batch-a/masters/corrupted-sand-wyrm-v1.png",
+          "sha256": "c3b64865db60ea56a05b0b5093b10aef398f81d380464765fce7770476d85a7a",
+          "format": "PNG",
+          "mode": "RGBA",
+          "native_alpha_channel": true,
+          "alpha_min": 0,
+          "alpha_max": 255,
+          "size": [
+            1254,
+            1254
+          ]
+        },
+        "findings": [
+          {
+            "check": "master_native_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255",
+            "mode": "RGBA",
+            "alpha_min": 0,
+            "alpha_max": 255
+          },
+          {
+            "check": "disc_overflow",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6700\u5927\u4e0d\u900f\u660e\u534a\u5f84 0.859\uff08\u4e0a\u9650 0.867\uff09",
+            "value": 0.8585,
+            "limit": 0.867
+          },
+          {
+            "check": "base_drift",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u5e95\u76d8\u504f\u79fb\u4e2d\u4f4d -1.85\uff08\u5bb9\u5dee \u00b18\uff09",
+            "value": -1.85,
+            "limit": 8.0
+          },
+          {
+            "check": "subject_intrusion",
+            "level": "warning",
+            "ok": true,
+            "detail": "\u5355\u6247\u533a\u76f8\u5bf9\u672c\u6b3e\u4e2d\u4f4d\u6700\u5927\u4e0a\u504f +6.23\uff08\u5bb9\u5dee +20\uff09",
+            "value": 6.23,
+            "limit": 20.0
+          },
+          {
+            "check": "corner_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]",
+            "value": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "notes": [],
+        "passed": true
+      },
+      "provenance_call": "art/production/handoffs/monster-batch-a-2/corrupted-sand-wyrm/imagegen-calls/call-1/call.json"
+    },
+    {
+      "id": "rantha",
+      "master": "masters/rantha-v1.png",
+      "sha256": "7ee326bdce48f7f09aadefdc7c2811f85b057028132cfd724ba2c32aad4ef28e",
+      "exports": [
+        {
+          "path": "sprites/128/rantha.png",
+          "size": 128,
+          "sha256": "fbe545dd28909b1fbcfa98e80728e26c8c17ab57656d1e342e2443259244ba44"
+        }
+      ],
+      "style_gate": {
+        "asset_id": "rantha",
+        "token": {
+          "path": "art/monster-batch-a/sprites/128/rantha.png",
+          "sha256": "fbe545dd28909b1fbcfa98e80728e26c8c17ab57656d1e342e2443259244ba44",
+          "sector_medians": [
+            65.33,
+            57.94,
+            54.09,
+            54.23,
+            65.19,
+            57.16,
+            66.53,
+            68.53
+          ],
+          "sector_offsets": [
+            -6.76,
+            -13.22,
+            -10.57,
+            -8.73,
+            -0.02,
+            -9.89,
+            -7.8,
+            -7.89
+          ],
+          "base_drift": -8.31,
+          "max_sector_intrusion": 8.29,
+          "max_opaque_radius": 0.8585,
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ring_samples": [
+            298,
+            303,
+            298,
+            303,
+            298,
+            303,
+            298,
+            303
+          ]
+        },
+        "master": {
+          "path": "art/monster-batch-a/masters/rantha-v1.png",
+          "sha256": "7ee326bdce48f7f09aadefdc7c2811f85b057028132cfd724ba2c32aad4ef28e",
+          "format": "PNG",
+          "mode": "RGBA",
+          "native_alpha_channel": true,
+          "alpha_min": 0,
+          "alpha_max": 255,
+          "size": [
+            1254,
+            1254
+          ]
+        },
+        "findings": [
+          {
+            "check": "master_native_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255",
+            "mode": "RGBA",
+            "alpha_min": 0,
+            "alpha_max": 255
+          },
+          {
+            "check": "disc_overflow",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6700\u5927\u4e0d\u900f\u660e\u534a\u5f84 0.859\uff08\u4e0a\u9650 0.867\uff09",
+            "value": 0.8585,
+            "limit": 0.867
+          },
+          {
+            "check": "base_drift",
+            "level": "blocking",
+            "ok": false,
+            "detail": "\u5e95\u76d8\u504f\u79fb\u4e2d\u4f4d -8.31\uff08\u5bb9\u5dee \u00b18\uff09",
+            "value": -8.31,
+            "limit": 8.0
+          },
+          {
+            "check": "subject_intrusion",
+            "level": "warning",
+            "ok": true,
+            "detail": "\u5355\u6247\u533a\u76f8\u5bf9\u672c\u6b3e\u4e2d\u4f4d\u6700\u5927\u4e0a\u504f +8.29\uff08\u5bb9\u5dee +20\uff09",
+            "value": 8.29,
+            "limit": 20.0
+          },
+          {
+            "check": "corner_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]",
+            "value": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "blocking": [
+          "base_drift"
+        ],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": true,
+        "notes": [
+          "Exact-byte monster batch A exception: Reviewed 48/64/96px silhouette and neutral disc visually; specific base brightness miss retained without changing the global \u00b18 limit."
+        ],
+        "passed": true
+      },
+      "provenance_call": "art/production/handoffs/monster-batch-a-2/rantha/imagegen-calls/call-1/call.json"
+    },
+    {
+      "id": "varsha",
+      "master": "masters/varsha-v1.png",
+      "sha256": "2c9ccb10c951c3f7da30d2de95a84cb3939a400c191cf59a9953adc2ded41a39",
+      "exports": [
+        {
+          "path": "sprites/128/varsha.png",
+          "size": 128,
+          "sha256": "3592b2a7bbab3e4e4ecaa1dcebe7103e18abc91ece8440314f3f124b2d515f77"
+        }
+      ],
+      "style_gate": {
+        "asset_id": "varsha",
+        "token": {
+          "path": "art/monster-batch-a/sprites/128/varsha.png",
+          "sha256": "3592b2a7bbab3e4e4ecaa1dcebe7103e18abc91ece8440314f3f124b2d515f77",
+          "sector_medians": [
+            63.65,
+            58.12,
+            51.94,
+            45.27,
+            51.09,
+            64.12,
+            70.9,
+            72.49
+          ],
+          "sector_offsets": [
+            -8.44,
+            -13.04,
+            -12.72,
+            -17.7,
+            -14.12,
+            -2.93,
+            -3.43,
+            -3.93
+          ],
+          "base_drift": -10.58,
+          "max_sector_intrusion": 7.65,
+          "max_opaque_radius": 0.8585,
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ring_samples": [
+            298,
+            303,
+            298,
+            303,
+            298,
+            303,
+            298,
+            303
+          ]
+        },
+        "master": {
+          "path": "art/monster-batch-a/masters/varsha-v1.png",
+          "sha256": "2c9ccb10c951c3f7da30d2de95a84cb3939a400c191cf59a9953adc2ded41a39",
+          "format": "PNG",
+          "mode": "RGBA",
+          "native_alpha_channel": true,
+          "alpha_min": 0,
+          "alpha_max": 255,
+          "size": [
+            1254,
+            1254
+          ]
+        },
+        "findings": [
+          {
+            "check": "master_native_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255",
+            "mode": "RGBA",
+            "alpha_min": 0,
+            "alpha_max": 255
+          },
+          {
+            "check": "disc_overflow",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6700\u5927\u4e0d\u900f\u660e\u534a\u5f84 0.859\uff08\u4e0a\u9650 0.867\uff09",
+            "value": 0.8585,
+            "limit": 0.867
+          },
+          {
+            "check": "base_drift",
+            "level": "blocking",
+            "ok": false,
+            "detail": "\u5e95\u76d8\u504f\u79fb\u4e2d\u4f4d -10.58\uff08\u5bb9\u5dee \u00b18\uff09",
+            "value": -10.58,
+            "limit": 8.0
+          },
+          {
+            "check": "subject_intrusion",
+            "level": "warning",
+            "ok": true,
+            "detail": "\u5355\u6247\u533a\u76f8\u5bf9\u672c\u6b3e\u4e2d\u4f4d\u6700\u5927\u4e0a\u504f +7.65\uff08\u5bb9\u5dee +20\uff09",
+            "value": 7.65,
+            "limit": 20.0
+          },
+          {
+            "check": "corner_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]",
+            "value": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "blocking": [
+          "base_drift"
+        ],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": true,
+        "notes": [
+          "Exact-byte monster batch A exception: Reviewed 48/64/96px silhouette and neutral disc visually; specific base brightness miss retained without changing the global \u00b18 limit."
+        ],
+        "passed": true
+      },
+      "provenance_call": "art/production/handoffs/monster-batch-a-3/varsha/imagegen-calls/call-1/call.json"
+    },
+    {
+      "id": "norgos-frozen",
+      "master": "masters/norgos-frozen-v1.png",
+      "sha256": "fbf8363967e0f31c2c6175269ddce00967b1f7fa52ea241403af71fa6b50e225",
+      "exports": [
+        {
+          "path": "sprites/128/norgos-frozen.png",
+          "size": 128,
+          "sha256": "15a4c9e274e1712e92ec881259f7b665904778e7712019baa282365eccaf0f62"
+        }
+      ],
+      "style_gate": {
+        "asset_id": "norgos-frozen",
+        "token": {
+          "path": "art/monster-batch-a/sprites/128/norgos-frozen.png",
+          "sha256": "15a4c9e274e1712e92ec881259f7b665904778e7712019baa282365eccaf0f62",
+          "sector_medians": [
+            81.92,
+            69.42,
+            72.1,
+            73.49,
+            70.9,
+            73.04,
+            86.85,
+            91.16
+          ],
+          "sector_offsets": [
+            9.83,
+            -1.74,
+            7.44,
+            10.52,
+            5.69,
+            5.99,
+            12.52,
+            14.74
+          ],
+          "base_drift": 8.63,
+          "max_sector_intrusion": 6.11,
+          "max_opaque_radius": 0.863,
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ring_samples": [
+            298,
+            303,
+            298,
+            301,
+            298,
+            303,
+            298,
+            303
+          ]
+        },
+        "master": {
+          "path": "art/monster-batch-a/masters/norgos-frozen-v1.png",
+          "sha256": "fbf8363967e0f31c2c6175269ddce00967b1f7fa52ea241403af71fa6b50e225",
+          "format": "PNG",
+          "mode": "RGBA",
+          "native_alpha_channel": true,
+          "alpha_min": 0,
+          "alpha_max": 255,
+          "size": [
+            1254,
+            1254
+          ]
+        },
+        "findings": [
+          {
+            "check": "master_native_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255",
+            "mode": "RGBA",
+            "alpha_min": 0,
+            "alpha_max": 255
+          },
+          {
+            "check": "disc_overflow",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6700\u5927\u4e0d\u900f\u660e\u534a\u5f84 0.863\uff08\u4e0a\u9650 0.867\uff09",
+            "value": 0.863,
+            "limit": 0.867
+          },
+          {
+            "check": "base_drift",
+            "level": "blocking",
+            "ok": false,
+            "detail": "\u5e95\u76d8\u504f\u79fb\u4e2d\u4f4d +8.63\uff08\u5bb9\u5dee \u00b18\uff09",
+            "value": 8.63,
+            "limit": 8.0
+          },
+          {
+            "check": "subject_intrusion",
+            "level": "warning",
+            "ok": true,
+            "detail": "\u5355\u6247\u533a\u76f8\u5bf9\u672c\u6b3e\u4e2d\u4f4d\u6700\u5927\u4e0a\u504f +6.11\uff08\u5bb9\u5dee +20\uff09",
+            "value": 6.11,
+            "limit": 20.0
+          },
+          {
+            "check": "corner_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]",
+            "value": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "blocking": [
+          "base_drift"
+        ],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": true,
+        "notes": [
+          "Exact-byte monster batch A exception: Reviewed 48/64/96px silhouette and neutral disc visually; specific base brightness miss retained without changing the global \u00b18 limit."
+        ],
+        "passed": true
+      },
+      "provenance_call": "art/production/handoffs/monster-batch-a-3/norgos-frozen/imagegen-calls/call-1/call.json"
+    },
+    {
+      "id": "electric-eel",
+      "master": "masters/electric-eel-v1.png",
+      "sha256": "5d00b089ebab25930dee50d51035809728346f66e5d62383d20283e31209d4c6",
+      "exports": [
+        {
+          "path": "sprites/128/electric-eel.png",
+          "size": 128,
+          "sha256": "a241e8d642fb11b5db29fb4d7d4416c66c161237a812f32ee19efef93374e56a"
+        }
+      ],
+      "style_gate": {
+        "asset_id": "electric-eel",
+        "token": {
+          "path": "art/monster-batch-a/sprites/128/electric-eel.png",
+          "sha256": "a241e8d642fb11b5db29fb4d7d4416c66c161237a812f32ee19efef93374e56a",
+          "sector_medians": [
+            72.9,
+            67.12,
+            61.71,
+            66.12,
+            58.95,
+            61.71,
+            72.49,
+            73.31
+          ],
+          "sector_offsets": [
+            0.81,
+            -4.04,
+            -2.95,
+            3.15,
+            -6.26,
+            -5.34,
+            -1.84,
+            -3.11
+          ],
+          "base_drift": -3.03,
+          "max_sector_intrusion": 6.18,
+          "max_opaque_radius": 0.8604,
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ring_samples": [
+            298,
+            303,
+            298,
+            303,
+            298,
+            303,
+            298,
+            303
+          ]
+        },
+        "master": {
+          "path": "art/monster-batch-a/masters/electric-eel-v1.png",
+          "sha256": "5d00b089ebab25930dee50d51035809728346f66e5d62383d20283e31209d4c6",
+          "format": "PNG",
+          "mode": "RGBA",
+          "native_alpha_channel": true,
+          "alpha_min": 0,
+          "alpha_max": 255,
+          "size": [
+            1254,
+            1254
+          ]
+        },
+        "findings": [
+          {
+            "check": "master_native_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255",
+            "mode": "RGBA",
+            "alpha_min": 0,
+            "alpha_max": 255
+          },
+          {
+            "check": "disc_overflow",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6700\u5927\u4e0d\u900f\u660e\u534a\u5f84 0.860\uff08\u4e0a\u9650 0.867\uff09",
+            "value": 0.8604,
+            "limit": 0.867
+          },
+          {
+            "check": "base_drift",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u5e95\u76d8\u504f\u79fb\u4e2d\u4f4d -3.03\uff08\u5bb9\u5dee \u00b18\uff09",
+            "value": -3.03,
+            "limit": 8.0
+          },
+          {
+            "check": "subject_intrusion",
+            "level": "warning",
+            "ok": true,
+            "detail": "\u5355\u6247\u533a\u76f8\u5bf9\u672c\u6b3e\u4e2d\u4f4d\u6700\u5927\u4e0a\u504f +6.18\uff08\u5bb9\u5dee +20\uff09",
+            "value": 6.18,
+            "limit": 20.0
+          },
+          {
+            "check": "corner_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]",
+            "value": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "notes": [],
+        "passed": true
+      },
+      "provenance_call": "art/production/handoffs/monster-batch-a-3/electric-eel/imagegen-calls/call-1/call.json"
+    },
+    {
+      "id": "ancient-dragon-turtle",
+      "master": "masters/ancient-dragon-turtle-v1.png",
+      "sha256": "6c5de0f860e48e2e7069a39ec2a5fa0f0b40c3bbff4557efade4b6a1e35c1b04",
+      "exports": [
+        {
+          "path": "sprites/128/ancient-dragon-turtle.png",
+          "size": 128,
+          "sha256": "8281444cca339ee2d3d1f40df7ee034c8aab10fa98bfac2e1b64dacf3fcab288"
+        }
+      ],
+      "style_gate": {
+        "asset_id": "ancient-dragon-turtle",
+        "token": {
+          "path": "art/monster-batch-a/sprites/128/ancient-dragon-turtle.png",
+          "sha256": "8281444cca339ee2d3d1f40df7ee034c8aab10fa98bfac2e1b64dacf3fcab288",
+          "sector_medians": [
+            71.66,
+            58.23,
+            62.78,
+            73.27,
+            65.53,
+            53.12,
+            69.83,
+            78.09
+          ],
+          "sector_offsets": [
+            -0.43,
+            -12.92,
+            -1.88,
+            10.3,
+            0.32,
+            -13.93,
+            -4.5,
+            1.67
+          ],
+          "base_drift": -1.15,
+          "max_sector_intrusion": 11.46,
+          "max_opaque_radius": 0.8585,
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "ring_samples": [
+            298,
+            303,
+            298,
+            303,
+            298,
+            303,
+            298,
+            303
+          ]
+        },
+        "master": {
+          "path": "art/monster-batch-a/masters/ancient-dragon-turtle-v1.png",
+          "sha256": "6c5de0f860e48e2e7069a39ec2a5fa0f0b40c3bbff4557efade4b6a1e35c1b04",
+          "format": "PNG",
+          "mode": "RGBA",
+          "native_alpha_channel": true,
+          "alpha_min": 0,
+          "alpha_max": 255,
+          "size": [
+            1254,
+            1254
+          ]
+        },
+        "findings": [
+          {
+            "check": "master_native_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255",
+            "mode": "RGBA",
+            "alpha_min": 0,
+            "alpha_max": 255
+          },
+          {
+            "check": "disc_overflow",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u6700\u5927\u4e0d\u900f\u660e\u534a\u5f84 0.859\uff08\u4e0a\u9650 0.867\uff09",
+            "value": 0.8585,
+            "limit": 0.867
+          },
+          {
+            "check": "base_drift",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u5e95\u76d8\u504f\u79fb\u4e2d\u4f4d -1.15\uff08\u5bb9\u5dee \u00b18\uff09",
+            "value": -1.15,
+            "limit": 8.0
+          },
+          {
+            "check": "subject_intrusion",
+            "level": "warning",
+            "ok": true,
+            "detail": "\u5355\u6247\u533a\u76f8\u5bf9\u672c\u6b3e\u4e2d\u4f4d\u6700\u5927\u4e0a\u504f +11.46\uff08\u5bb9\u5dee +20\uff09",
+            "value": 11.46,
+            "limit": 20.0
+          },
+          {
+            "check": "corner_alpha",
+            "level": "blocking",
+            "ok": true,
+            "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]",
+            "value": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "notes": [],
+        "passed": true
+      },
+      "provenance_call": "art/production/handoffs/monster-batch-a-4/ancient-dragon-turtle/imagegen-calls/call-1/call.json"
+    }
+  ]
+}

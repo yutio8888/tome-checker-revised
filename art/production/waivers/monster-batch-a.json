@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "scope": "monster batch A only; exact master and 128px export bytes; no alpha, geometry or occupancy waiver",
+  "assets": [
+    {
+      "id": "wrathroot",
+      "call": "art/production/handoffs/monster-batch-a-1/wrathroot/imagegen-calls/call-2/call.json",
+      "master_sha256": "fbd48192e785bed37dce86b9babe166acdee768d9e43a1fba95d7c5618e9b11c",
+      "runtime_sha256": "2e4b91f445c408cc6c05be1945b141fbe55210debe2367cb8790ed5a8ba60c48",
+      "base_drift": -9.77,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "Reviewed 48/64/96px silhouette and neutral disc visually; specific base brightness miss retained without changing the global \u00b18 limit."
+    },
+    {
+      "id": "rantha",
+      "call": "art/production/handoffs/monster-batch-a-2/rantha/imagegen-calls/call-1/call.json",
+      "master_sha256": "7ee326bdce48f7f09aadefdc7c2811f85b057028132cfd724ba2c32aad4ef28e",
+      "runtime_sha256": "fbe545dd28909b1fbcfa98e80728e26c8c17ab57656d1e342e2443259244ba44",
+      "base_drift": -8.31,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "Reviewed 48/64/96px silhouette and neutral disc visually; specific base brightness miss retained without changing the global \u00b18 limit."
+    },
+    {
+      "id": "varsha",
+      "call": "art/production/handoffs/monster-batch-a-3/varsha/imagegen-calls/call-1/call.json",
+      "master_sha256": "2c9ccb10c951c3f7da30d2de95a84cb3939a400c191cf59a9953adc2ded41a39",
+      "runtime_sha256": "3592b2a7bbab3e4e4ecaa1dcebe7103e18abc91ece8440314f3f124b2d515f77",
+      "base_drift": -10.58,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "Reviewed 48/64/96px silhouette and neutral disc visually; specific base brightness miss retained without changing the global \u00b18 limit."
+    },
+    {
+      "id": "norgos-frozen",
+      "call": "art/production/handoffs/monster-batch-a-3/norgos-frozen/imagegen-calls/call-1/call.json",
+      "master_sha256": "fbf8363967e0f31c2c6175269ddce00967b1f7fa52ea241403af71fa6b50e225",
+      "runtime_sha256": "15a4c9e274e1712e92ec881259f7b665904778e7712019baa282365eccaf0f62",
+      "base_drift": 8.63,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "Reviewed 48/64/96px silhouette and neutral disc visually; specific base brightness miss retained without changing the global \u00b18 limit."
+    }
+  ]
+}

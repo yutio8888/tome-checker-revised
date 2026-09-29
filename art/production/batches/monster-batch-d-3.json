@@ -1,0 +1,126 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-d-3",
+  "assets": [
+    {
+      "asset_id": "giant-carpenter-ant",
+      "native_name": "giant carpenter ant",
+      "scope": "ruins-kor-pul (HIDEOUT), old-forest, unremarkable-cave; giant-ant family member; redraw of the monster-batch-d-2 candidate rejected 2026-09-29 for being indistinct from giant black ant at 48px (see art/monster-batch-d/REVIEW.md 'Reviewer decision' and art/production/waivers/monster-batch-d-PENDING-REQUEST.json)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 63,
+          "anchor": "name = \"giant carpenter ant\", color=colors.BLACK, image=\"npc/carpenter_ant.png\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ANT\","
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9",
+          "line": 131,
+          "anchor": "\"name\": \"giant carpenter ant\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Approved ground-critter disc, camera, upper-left lighting and finish; copy only the disc/camera/lighting/finish, not the rat body plan."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/carpenter_ant.png",
+          "sha256": "5a61454a98bd410e9ccf2fd2f36014c43f1f2170e7359de5c8b4f8b3d0e17b00",
+          "role": "identity",
+          "note": "Native identity, inspected at 8x scale: massive curved mandibles that are visibly PALE ivory-grey where the rest of the head/body is glossy jet-black -- a value-contrast cue inside the creature itself, not just a size cue. Mandibles project forward well past the front legs and are wider than the head. Matches native desc 'a large black ant with huge mandibles' (ant.lua line 63) and the native's faster movement_speed=1.3 (leaner/quicker build)."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "value", "hue"],
+      "prompt_fields": {
+        "subject": "One giant carpenter ant seen from a steep overhead three-quarter angle: a compact insect body with a rounded thorax and a large glossy black gaster, six legs splayed in a lightly raised, quick-moving stance. A pair of massive mandibles curve open and project far forward from the head, clearly wider than the head itself and reaching past the front legs -- unmistakably the biggest bite in the family. The mandibles are a distinct pale ivory-grey, several value steps lighter than the glossy jet-black head and body they attach to, exactly like the native reference's pale-tipped huge mandibles. Chitin elsewhere is smooth and glossy black with only a small, tight highlight confined to the crown of the thorax.",
+        "contrast": "This is a new six-member family (white, brown, carpenter, blue, yellow, black ant) sharing one body plan; siblings must not be told apart by hue alone, and this identity shares its native black colour with giant black ant, so it needs a second, non-colour cue that survives 48px. Give carpenter ant two independent cues black ant does not have: (1) silhouette -- mandibles wider than the head, curved open, projecting past the front legs, unlike black ant's small mandibles that stay tucked inside the head's own outline; (2) an internal value contrast -- the pale ivory-grey mandibles read as a bright patch against the dark head/body even in grayscale at 48px, unlike black ant's mandibles which are the same near-black tone as its head and produce no internal contrast at all. Do not rely on a broad rim-light or glossy sheen as the distinguishing cue; the mandible shape and the mandible-vs-head value jump are the primary cues, present in both colour and grayscale.",
+        "composition": "One complete six-legged ant centred on one circular disc, steep overhead three-quarter view, body angled so the head, mandibles and two or three legs read clearly; the mandibles, every leg and antenna stay inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the head and mandibles out of the upper-right rank corner and upper-left interaction corner. No second creature, no web, no burrow, no scenery. Base-plate discipline (this batch's previous two attempts failed only on this): the neutral disc -- including the whole outer-sixth ring band -- must match the style reference disc's charcoal-brown body and bronze-grey bevel value exactly, copied rather than approximated; add no warm cast, glow, bounce-light, gradient or vignette brightening to the disc anywhere, including directly under or behind this black-bodied creature. Any highlight, rim-light or specular on the creature's own body must terminate strictly at the creature's silhouette edge and must never lighten, blur into or feather onto the disc surface.",
+        "palette": "Glossy jet-black chitin over most of the body, with the pair of mandibles rendered a distinctly lighter warm ivory-grey (not white, not glossy chrome -- a matte-to-satin pale horn tone) that reads as a clear bright patch against the black head at every size; a single small, tight, cool-white highlight on the dorsal thorax ridge only, not spread along the body edges; deep black-brown shading in the leg joints and creases; restrained copper-grey neutral bevel and charcoal disc held at the style reference's exact lightness; no colored faction aura."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Leaf newEntity carries an explicit image= (npc/carpenter_ant.png); BASE_NPC_ANT and the leaf have no add_mos/shader/anim/moddable_tile/add_displays/textures, no define_as, not unique. Static source inspection only, no fixture (evidence/monster-batch-d-20260929). This is a fresh redraw task package (new design direction: pale-mandible value contrast + explicit anti base-drift prompt language); giant-carpenter-ant was rejected in the monster-batch-d-2 review and never reached overload/mod/class/CheckerTokens.lua or data/token-manifest.json, so it is not 'already mapped' and no refinement block is required. Art-only task; runtime integration and 48/64/96 family review still pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/README.md",
+          "sha256": "e4092a9ce1de4196e045be9f334e5dd3b8f7dbdfc91a25b1b2de63e3d0fa9598"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9"
+        }
+      ]
+    },
+    {
+      "asset_id": "giant-black-ant",
+      "native_name": "giant black ant",
+      "scope": "old-forest; giant-ant family member; redraw of the monster-batch-d-2 candidate rejected 2026-09-29 for being indistinct from giant carpenter ant at 48px (see art/monster-batch-d/REVIEW.md 'Reviewer decision' and art/production/waivers/monster-batch-d-PENDING-REQUEST.json)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 120,
+          "anchor": "name = \"giant black ant\", color=colors.BLACK, image=\"npc/black_ant.png\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ANT\","
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9",
+          "line": 176,
+          "anchor": "\"name\": \"giant black ant\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Approved ground-critter disc, camera, upper-left lighting and finish; copy only the disc/camera/lighting/finish, not the rat body plan."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/black_ant.png",
+          "sha256": "cef557a3ac3db4ffdc61f1c03f81c98d5ed1091a71b315ff1acf019de1522d41",
+          "role": "identity",
+          "note": "Native identity, inspected at 8x scale: small mandibles the same near-black tone as the head (no pale contrast, unlike carpenter_ant.png), a lower/more compact hunched posture than carpenter's raised stance, and a plainer, less dramatic silhouette overall. Matches native desc 'a large black ant' (ant.lua line 120, no size/weapon callout, unlike carpenter's 'huge mandibles')."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "value", "hue"],
+      "prompt_fields": {
+        "subject": "One giant black ant seen from a steep overhead three-quarter angle: a compact, slightly hunched insect body held low and close to the disc, six legs tucked more directly beneath the body than a splayed stance, short antennae, and small, plain mandibles that stay tucked inside the head's own silhouette and are the same near-black tone as the head -- no pale patch, no contrast, nothing that reads as a separate bright shape. The chitin is matte, cool charcoal-black with a fine, jagged micro-texture along the leg segments (small angular facets rather than a smooth curve), and only a faint, tight highlight confined to the crown of the thorax.",
+        "contrast": "This is a new six-member family (white, brown, carpenter, blue, yellow, black ant) sharing one body plan; siblings must not be told apart by hue alone, and this identity shares its native black colour with giant carpenter ant, so it needs a second, non-colour cue that survives 48px. Give black ant two independent cues carpenter does not have: (1) silhouette -- a lower, more hunched posture with legs tucked beneath the body and mandibles that stay inside the head outline, unlike carpenter's raised stance and mandibles that project past the front legs; (2) no internal value contrast -- black ant's mandibles are exactly the same dark tone as its head (no bright patch anywhere on the body), unlike carpenter's pale ivory-grey mandibles which read as a bright patch even in grayscale at 48px. Finish is matte, not glossy, and the highlight stays small and dim; do not add a broad rim-light or bright specular, which would make this identity harder, not easier, to tell apart from carpenter.",
+        "composition": "One complete six-legged ant centred on one circular disc, steep overhead three-quarter view, body angled so the head and two or three legs read clearly; every leg, antenna and mandible stays inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the head and antennae out of the upper-right rank corner and upper-left interaction corner. No second creature, no web, no burrow, no scenery. Base-plate discipline (this batch's previous two attempts failed only on this): the neutral disc -- including the whole outer-sixth ring band -- must match the style reference disc's charcoal-brown body and bronze-grey bevel value exactly, copied rather than approximated; add no warm cast, glow, bounce-light, gradient or vignette brightening to the disc anywhere, including directly under or behind this black-bodied creature. Any highlight on the creature's own body must terminate strictly at the creature's silhouette edge and must never lighten, blur into or feather onto the disc surface.",
+        "palette": "Matte cool charcoal-black chitin uniformly, including the mandibles (no lighter tone anywhere on the body); a small, faint, soft grey highlight confined to the crown of the thorax from the upper-left light, dark neutral-grey shading in the body creases and leg joints, near-black eyes and mandible tips; restrained copper-grey neutral bevel and charcoal disc held at the style reference's exact lightness; no colored faction aura."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Leaf newEntity carries an explicit image= (npc/black_ant.png); BASE_NPC_ANT and the leaf have no add_mos/shader/anim/moddable_tile/add_displays/textures, no define_as, not unique. Static source inspection only, no fixture (evidence/monster-batch-d-20260929). This is a fresh redraw task package (new design direction: no-contrast mandibles + hunched posture + explicit anti base-drift prompt language); giant-black-ant was rejected in the monster-batch-d-2 review and never reached overload/mod/class/CheckerTokens.lua or data/token-manifest.json, so it is not 'already mapped' and no refinement block is required. Art-only task; runtime integration and 48/64/96 family review still pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/README.md",
+          "sha256": "e4092a9ce1de4196e045be9f334e5dd3b8f7dbdfc91a25b1b2de63e3d0fa9598"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9"
+        }
+      ]
+    }
+  ]
+}

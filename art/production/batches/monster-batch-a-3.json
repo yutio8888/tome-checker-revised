@@ -1,0 +1,194 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-a-3",
+  "assets": [
+    {
+      "asset_id": "varsha",
+      "native_name": "Varsha the Writhing",
+      "scope": "daikara; exact identity only; live check pending",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/daikara/npcs.lua",
+          "sha256": "c4d6d6b6387719554eb81b4eccb6abe0722bd435860d06d56dafcc778e8019ca",
+          "line": 99,
+          "anchor": "Varsha the Writhing"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/dragon-turtle-v1.png",
+          "sha256": "e6e0b9ac315b84bde6b6dfbf342b9aebb5c4d970e54102dcbd301ca67e6d29be",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_fire_varsha_the_writhing.png",
+          "sha256": "1b9088e3f79f55b6c80471a32423f4c9c35f0a0eafa6e84690a3876d746dd795",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "Fire dragon coiled low, wide outspread folded wing shoulders, a fan of backward jagged horns, broad wedge head and muscular curled tail.",
+        "contrast": "Low wide jagged silhouette unlike Rantha tall narrow neck and blade horns; broad pale orange chest against deep red scales.",
+        "composition": "One complete creature centered on one circular disc, steep overhead three-quarter view; all limbs, horns, tail and equipment inside inner five-sixths of disc radius, clear outer band.",
+        "palette": "Burnt crimson scales, amber horns, pale orange chest, charcoal wing membranes, no flames or aura."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity and native display contract inspected. No live fixture in this assigned task; live validation remains pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-a-20260929/source-contracts.json",
+          "sha256": "81db38a2e4a6fd3ada89165add84694221c3849f329de8ddc9342cc547d219bb"
+        }
+      ]
+    },
+    {
+      "asset_id": "norgos-frozen",
+      "native_name": "Norgos, the Frozen",
+      "scope": "norgos-lair; exact identity only; live check pending",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/norgos-lair/npcs.lua",
+          "sha256": "a6805cbc98001cf0765498d2f8c39f40bb51390e7e2def5a5f25e3da33d51a73",
+          "line": 51,
+          "anchor": "Norgos, the Frozen"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v3/masters/black-bear-v2.png",
+          "sha256": "a7bed49555f2252e441f7fbb61600a26dbdd2d402ef270b3f110b492332be582",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/animal_bear_norgos_the_frozen.png",
+          "sha256": "6dcfdda67aeebbc36b041a99900a8ec605218850e8a1aa5aecf5c2b4127d8fb3",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "Ancient bear dead and animated as a frozen statue: stiff upright forebody, blocky ice-crusted shoulders, rigid splayed forepaws and heavy muzzle, eyes dull.",
+        "contrast": "Rigid angular ice-encrusted silhouette versus Guardian natural low rounded bear stride; pale frozen shoulder masses separate from dark base.",
+        "composition": "One complete creature centered on one circular disc, steep overhead three-quarter view; all limbs, horns, tail and equipment inside inner five-sixths of disc radius, clear outer band.",
+        "palette": "Pale glacial blue, frost white, dark slate fur under ice; no snow or magic effect."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity and native display contract inspected. No live fixture in this assigned task; live validation remains pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-a-20260929/source-contracts.json",
+          "sha256": "81db38a2e4a6fd3ada89165add84694221c3849f329de8ddc9342cc547d219bb"
+        }
+      ]
+    },
+    {
+      "asset_id": "norgos-guardian",
+      "native_name": "Norgos, the Guardian",
+      "scope": "norgos-lair; exact identity only; live check pending",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/norgos-lair/npcs.lua",
+          "sha256": "a6805cbc98001cf0765498d2f8c39f40bb51390e7e2def5a5f25e3da33d51a73",
+          "line": 96,
+          "anchor": "Norgos, the Guardian"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v3/masters/black-bear-v2.png",
+          "sha256": "a7bed49555f2252e441f7fbb61600a26dbdd2d402ef270b3f110b492332be582",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/animal_bear_norgos_the_guardian.png",
+          "sha256": "27b354c194cd37e89b2f5f6f5f3096c5cf12ea83576eea03e2afc9e90b25b892",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "Ancient living guardian bear, exceptionally broad rounded shoulders, heavy long fur ruff, low forward prowling stride, one paw lifted, strong natural muzzle.",
+        "contrast": "Rounded forward low silhouette and flowing fur unlike Frozen rigid upright angular stance; warm brown highlights on deep fur.",
+        "composition": "One complete creature centered on one circular disc, steep overhead three-quarter view; all limbs, horns, tail and equipment inside inner five-sixths of disc radius, clear outer band.",
+        "palette": "Deep chestnut brown fur, warm tawny ruff, pale muzzle and claws, no ice or aura."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity and native display contract inspected. No live fixture in this assigned task; live validation remains pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-a-20260929/source-contracts.json",
+          "sha256": "81db38a2e4a6fd3ada89165add84694221c3849f329de8ddc9342cc547d219bb"
+        }
+      ]
+    },
+    {
+      "asset_id": "electric-eel",
+      "native_name": "electric eel",
+      "scope": "general; exact identity only; live check pending",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/aquatic_critter.lua",
+          "sha256": "3df4ea93796566f6da4347a22cd2d2eb3bedc394ca8206289d91a2440a30d354",
+          "line": 52,
+          "anchor": "electric eel"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/giant-eel-v1.png",
+          "sha256": "ecfab7987b5258ace6a0bec304a9bc336dfbddde1cdf3a90ca438de23fdbd352",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/aquatic_critter_electric_eel.png",
+          "sha256": "d44fda5f7614f3e5058db62b4b8972e0cd32efdcc73b3663ff8ecb3fb48bbeb3",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "Electric eel with long narrow body making a sharp double bend, slender pointed snout, distinct long narrow ventral fin; static creature with no lightning effect.",
+        "contrast": "Much slimmer, more angular zigzag body than giant eel broad smooth S coil; broad pale belly stripe and dark blue upper plane.",
+        "composition": "One complete creature centered on one circular disc, steep overhead three-quarter view; all limbs, horns, tail and equipment inside inner five-sixths of disc radius, clear outer band.",
+        "palette": "Deep steel blue back, silver belly band, restrained yellow-white small lateral spots, no electricity."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity and native display contract inspected. No live fixture in this assigned task; live validation remains pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-a-20260929/source-contracts.json",
+          "sha256": "81db38a2e4a6fd3ada89165add84694221c3849f329de8ddc9342cc547d219bb"
+        }
+      ]
+    }
+  ]
+}

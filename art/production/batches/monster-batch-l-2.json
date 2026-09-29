@@ -1,0 +1,228 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-l-2",
+  "assets": [
+    {
+      "asset_id": "elven-guard",
+      "native_name": "elven guard",
+      "scope": "rhaloren-camp, crypt-kryl-feijan and other shalore spawns (humanoid/shalore, default-name image, non-unique, no define_as)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/elven-warrior.lua",
+          "sha256": "28a4a2cc0c50f66f1e2b74bba82895adb490a9a9f4880eb86b195b545a5ee3a1",
+          "line": 54,
+          "anchor": "name = \"elven guard\", color=colors.LIGHT_UMBER"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_shalore_elven_guard.png",
+          "sha256": "6d4586fc3c72afc03cef4b3e772ea76b34b448391111ffb3b2b69e72b50caca3",
+          "role": "identity",
+          "note": "Native shape: an upright pale elf with pointed ears and blond hair in a forest-green tunic and trousers with a gold-embossed pauldron and belt, a big gold-rimmed kite shield on the left arm and a longsword held down at the right."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/rhaloren-inquisitor.png",
+          "sha256": "4b990a41aad89522796f47e16c9b5c78507aa14e05f5446d280d50fd08541132",
+          "role": "family",
+          "note": "Shipped Rhaloren Inquisitor (steel-plate knight with a trident): the guard wears green cloth and gold trim, not full steel plate."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A proud elven guard seen from a steep overhead three-quarter angle: an upright pale-skinned elf with pointed ears and swept blond hair, a bright forest-green tunic and trousers with brown leather belt and boots, a polished gold pauldron on the left shoulder, a large tall gold-rimmed kite shield with a gold emblem raised on the left arm, and a longsword with a bright blade held vertically upright in the right hand beside the head, a straight formal stance. Polished, disciplined and complete.",
+        "contrast": "Shalore tokens: Rhaloren Inquisitor (steel plate), Grand Corruptor, Kryl-Feijan acolyte (red robes), plus the elven casters and the mean looking elven guard built beside it. The elven guard is the polished one: bright forest green with gold pauldron, shield emblem and trim, upright sword raised beside the head, kite shield held high (silhouette: tall and symmetrical, sword vertical; hue: bright green and gold; value: mid-light). The mean looking guard is hunched, drab olive-brown, without gold, with the sword pointing low.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Bright forest-green cloth lifted with light leaf-green planes, gold pauldron and shield rim, brown leather belt and boots, pale skin, blond hair, bright steel blade; nothing darker than mid tone except seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=elven guard, define_as=None, type=humanoid/subtype=shalore, unique=False); details and hashes in evidence/monster-batch-l-20260929/source-contracts.json. base BASE_NPC_ELVEN_WARRIOR (humanoid/shalore, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives humanoid_shalore_elven_guard.png; crypt-kryl-feijan loads elven-warrior.lua with rarity only; the sibling \"mean looking elven guard\" is a separate name/image. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-l-20260929/source-contracts.json",
+          "sha256": "cf262c882fc0c76bb40508664d56eacf4edc8c285da13c44b0017769c1f93cd3"
+        }
+      ]
+    },
+    {
+      "asset_id": "mean-looking-elven-guard",
+      "native_name": "mean looking elven guard",
+      "scope": "rhaloren-camp, crypt-kryl-feijan and other shalore spawns (humanoid/shalore, default-name image, non-unique, no define_as)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/elven-warrior.lua",
+          "sha256": "28a4a2cc0c50f66f1e2b74bba82895adb490a9a9f4880eb86b195b545a5ee3a1",
+          "line": 68,
+          "anchor": "name = \"mean looking elven guard\", color=colors.UMBER"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_shalore_mean_looking_elven_guard.png",
+          "sha256": "fb89bbf35e0e23d4e483d518f02a86a9873f7f7305dd062ddcfa3b1acfcab88f",
+          "role": "identity",
+          "note": "Native shape: a scarred elf with a sullen face in a drab green-brown tunic without a pauldron, a battered tall shield on the left and a sword held low at the right."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/rhaloren-inquisitor.png",
+          "sha256": "4b990a41aad89522796f47e16c9b5c78507aa14e05f5446d280d50fd08541132",
+          "role": "family",
+          "note": "Shipped Rhaloren Inquisitor (steel-plate knight): the mean guard wears drab worn cloth and leather, no plate and no gold."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A sullen scarred elven guard seen from a steep overhead three-quarter angle: a hunched, forward-leaning elf with pointed ears, tangled dirty-blond hair and a scowling face with a visible scar, a drab worn olive-brown and moss tunic with tattered edges and a dark leather harness with no gold, a battered plain wooden kite shield with a dented iron rim held low on the left arm, a longsword with a nicked blade held low pointing out and forward to the right, wide aggressive crouched stance. Grim, ragged and complete.",
+        "contrast": "Shalore tokens: Rhaloren Inquisitor (steel plate), Grand Corruptor, acolyte plus the polished elven guard built beside it. The mean looking guard is the hunched drab one: olive-brown and leather with a dented plain shield and the sword pointing low and forward, no gold anywhere (silhouette: crouched and asymmetric, sword pointing out low; hue: muted olive-brown and leather; value: mid). The polished guard stands upright with a raised sword and gold trim.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid muted olive-brown and moss cloth lifted with lighter khaki planes, tan leather harness, weathered wood shield with iron rim, pale skin with a pink scar, dirty-blond hair, steel blade; nothing darker than mid tone except seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=mean looking elven guard, define_as=None, type=humanoid/subtype=shalore, unique=False); details and hashes in evidence/monster-batch-l-20260929/source-contracts.json. base BASE_NPC_ELVEN_WARRIOR (humanoid/shalore, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives humanoid_shalore_mean_looking_elven_guard.png. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-l-20260929/source-contracts.json",
+          "sha256": "cf262c882fc0c76bb40508664d56eacf4edc8c285da13c44b0017769c1f93cd3"
+        }
+      ]
+    },
+    {
+      "asset_id": "naga-nereid",
+      "native_name": "naga nereid",
+      "scope": "murgol-lair and slazish-fen (humanoid/naga, non-unique, nice_tile{tall=1} shorthand with no define_as; the two zone definitions are identical in name, base and art; the tall body is the default-name humanoid_naga_naga_nereid.png)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/murgol-lair/npcs.lua",
+          "sha256": "8e929697d368c99713805c7e25ceaa28675078db8e10c905a0f7435faa8ed2b5",
+          "line": 143,
+          "anchor": "name = \"naga nereid\", color=colors.YELLOW, resolvers.nice_tile{tall=1}"
+        },
+        {
+          "path": "game/modules/tome/data/zones/slazish-fen/npcs.lua",
+          "sha256": "59faab1fda3ad11fc2bca557f3152df86cad9dbe1bbce63d69d5c7828b99a4a5",
+          "line": 98,
+          "anchor": "name = \"naga nereid\", color=colors.YELLOW, resolvers.nice_tile{tall=1}"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_naga_naga_nereid.png",
+          "sha256": "d8c36be567590369983ed541749b3106dbf7f0bd060c5f126235b6294d556aaa",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a slim golden-haired woman with green eyes rising from a pale-gold coiled serpent tail with dark scaly green back, holding a staff that crackles with lilac magic sparks."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/lady-zoisla.png",
+          "sha256": "e687d2733faf44a22c78e2acd1a46824974c96eca10ddac6b78acd4603298d2b",
+          "role": "family",
+          "note": "Shipped Lady Zoisla (dark-haired, orange-red tail, trident): the nereid is golden-blonde with a pale gold and cream tail and a lilac-sparked staff, no trident."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A graceful naga nereid seen from a steep overhead three-quarter angle, drawn compact: a slim pale-skinned woman with long flowing golden-blonde hair and green eyes, in a light teal-green bodice, rising from a thick coiled serpent tail in pale gold with a wide cream-yellow banded belly and a dark olive-green scaly back ridge, the coil forming a low round spiral at the base, one hand raised holding a short wooden staff topped with a burst of bright lilac-violet magic sparks. Elegant, magical and complete.",
+        "contrast": "Naga tokens: naga tidewarden (brown man with shield), tidecaller (hooded dark), Lady Nashva (teal), Lady Zoisla (orange-red tail, dark hair, trident) and the myrmidon (cobalt tail, steel armour) built beside it. The nereid is the golden-blonde woman with a pale-gold cream tail and a raised staff bursting lilac sparks (silhouette: slim upper body, raised sparkling staff, round tail spiral; hue: pale gold with lilac accent; value: light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Light pale-gold and cream tail lifted with warm butter-yellow planes, olive-green back ridge, golden-blonde hair, light teal bodice, pale skin, bright lilac-violet spark accent; nothing darker than mid tone except the scale ridge. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=naga nereid, define_as=None, type=humanoid/subtype=naga, unique=False); details and hashes in evidence/monster-batch-l-20260929/source-contracts.json. base BASE_NPC_NAGA (humanoid/naga, no image=); the leaf uses resolvers.nice_tile{tall=1}: with nicer tiles it resolves (resolvers.lua:1375-1385) to image=invis.png plus one add_mos {image=<default-name PNG>, display_h=2, display_y=-1}; native sprite 64x128; the identical shorthand on xhaiak/shiaak/naga tidewarden/tidecaller was live-confirmed in batches F/G to resolve to the disk filename, and Kyless (same shorthand) was live-confirmed in batch J; non-unique, so the entry is native_tall=true; single-cell path also accepted (nicer tiles off). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-l-20260929/source-contracts.json",
+          "sha256": "cf262c882fc0c76bb40508664d56eacf4edc8c285da13c44b0017769c1f93cd3"
+        }
+      ]
+    },
+    {
+      "asset_id": "kyless",
+      "native_name": "Kyless",
+      "scope": "keepsake-meadow (humanoid/human, define_as KYLESS, unique, nice_tile{tall=1} shorthand with no image= anywhere; live-confirmed in the batch J census to be image=invis.png with a single add_mos {image=npc/humanoid_human_kyless.png, display_h=2, display_y=-1}; native sprite 64x128)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 320,
+          "anchor": "define_as=\"KYLESS\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_kyless.png",
+          "sha256": "2bf327241f38f17dce9c484ec03a94e3f635cae2722465c4a4e3dfd704e24683",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a dark-haired man in an olive-green tunic and brown boots and leather wrist-wraps, holding a curled spiral object at his belly, wreathed in curling black smoke tendrils."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/the-possessed.png",
+          "sha256": "e31e76dc8b1b0307ad67c7162f75a310483e4c0596bcb2e8edc699baa61e35b8",
+          "role": "family",
+          "note": "Shipped The Possessed (human unique, tall): Kyless is an ordinary olive-tunic man wreathed in smoky violet-grey tendrils, not a possessed robed figure."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A haunted human man seen from a steep overhead three-quarter angle, drawn compact: a lean dark-haired man with a weary corrupted face and glinting pale eyes, in a mid olive-green tunic with a tan leather belt and brown boots and wrist-wraps, holding a curled spiral horn against his belly with both hands, wreathed by several thick curling tendrils of smoky violet-grey shadow that coil up around his shoulders and arms and stay close to his body. Uneasy, sinister and complete.",
+        "contrast": "Human unique tokens: Subject Z, The Possessed, Harno, Assassin Lord, Ben Cruthdar. Kyless is the olive-tunic man with a spiral horn in a corona of smoky violet-grey tendrils (silhouette: narrow figure with curling tendrils around shoulders; hue: olive green with violet-grey smoke; value: mid, the smoke lighter than charcoal).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid olive-green tunic lifted with lighter moss planes, tan leather, brown boots, warm skin, smoky mid violet-grey tendrils with lighter edges that stay clearly lighter than the disc; nothing darker than mid tone except the hair and seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Kyless, define_as=KYLESS, type=humanoid/subtype=human, unique=True); details and hashes in evidence/monster-batch-l-20260929/source-contracts.json. no base; unique with define_as KYLESS, type humanoid/subtype human, no image=; resolvers.nice_tile{tall=1} (resolvers.lua:1375-1385) expands with nicer tiles to invis.png + add_mos {image=<default-name PNG>, display_h=2, display_y=-1}. The earlier static doubt (image nil at resolve time) was disproved by the batch J live census (evidence/monster-batch-j-live-20260929/census.json, keepsake-meadow-L6: image invis.png, add_mos[1].image npc/humanoid_human_kyless.png, display_h 2, display_y -1, no aura entry, moddable_tile false), the same shorthand that batches F/G confirmed for xhaiak/shiaak. Talents (Willful Strike, Deflection, Blast, Unseen Force, Feed, Devour Life, Feed Power, Feed Strengths, Creeping Darkness, Dark Vision, Dark Tendrils) and sustains_at_birth never write type/subtype/image; never_act and seen_by do not touch display. Unique catalog entries accept the tall path and the single-cell path. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-l-20260929/source-contracts.json",
+          "sha256": "cf262c882fc0c76bb40508664d56eacf4edc8c285da13c44b0017769c1f93cd3"
+        }
+      ]
+    }
+  ]
+}

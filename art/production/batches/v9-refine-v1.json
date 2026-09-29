@@ -1,0 +1,160 @@
+{
+  "schema": 1,
+  "batch_id": "v9-refine-v1",
+  "assets": [
+    {
+      "asset_id": "giant-brown-mouse",
+      "native_name": "giant brown mouse",
+      "scope": "Shared rodent pool (rodent.lua); Kor'Pul both layouts and rat-nest room first; exact identity only, no subtype-wide substitution. Replaces the C0b v1 artwork for the same identity; no other token changes.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_RODENT\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 57,
+          "anchor": "name = \"giant brown mouse\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v8-c0b/masters/giant-grey-mouse-v1.png",
+          "sha256": "bf261d33a8504040bea7c5091ac483ed58e50e946232e884b5e899a57b271ab0",
+          "role": "style",
+          "note": "Approved sibling token that already solved this problem: copy its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown disc and muted bronze-grey bevel at exactly that lightness, AND copy its body plan of sitting upright on the haunches with oversized round ears held high clear of the head. Do not copy its cool grey coat, its lifted head, its single raised forepaw or its straight trailing tail; this animal is brown and must hold a different upright pose."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_rodent_giant_brown_mouse.png",
+          "sha256": "356511e9696e2aee8fe9908744753b49ba6dcc87e699d0675ece0f58c9a8f509",
+          "role": "identity",
+          "note": "Native species and warm brown coat value only: a giant mouse with large round ears. Ignore the native camera, ignore its rat-like four-footed pose, ignore the blue engine effects."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "family",
+          "note": "The mapped giant brown rat. It shares this animal's warm umber coat, so it is the single hardest token to stay separable from, and it is also the approved neutral disc-lightness anchor: match its base plate exactly while making the creature read completely differently."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One giant mouse sitting upright on its haunches, body mass a tall rounded vertical egg, turned three-quarters toward the lower left. Both forepaws are lifted together right up to the muzzle as if nibbling, elbows tucked in, and the head is tipped down toward those paws. Two oversized round disc ears are carried high and fanned wide above the skull with open disc visible between them. Short blunt muzzle with fine whiskers, sturdy hind feet planted flat on the base plate, and one long thin bare tail curling forward around the right hind foot in a tight hook.",
+        "contrast": "Two separations must both hold, and both must survive grayscale at 48px. (1) Against the mapped giant brown rat, which shares this exact coat colour: that token is a long, low, HORIZONTAL four-footed profile with a pointed muzzle, small ears, one even body mass and a thick tail sweeping across the disc. This mouse must be its opposite in silhouette — a compact UPRIGHT vertical mass standing well clear of the base plate, topped by two big round ear discs that break the outline — and in value pattern: a broad pale lit plane over the crown, shoulders and throat, two distinctly darker mid-value ear discs, and one deep core shadow beneath the chest and haunches, instead of the rat's single even body. A smaller four-footed rat is the failure this brief exists to prevent; size alone and mirrored facing alone are NOT permitted distinctions. (2) Against the two mouse tokens already approved, which are also upright: the white one sits with its forepaws folded low at the chest and head turned aside, the grey one rears high with its head lifted and one forepaw raised. This brown one must instead read as head-down with BOTH forepaws up at the muzzle and a tail curled forward in a tight hook, and its coat must sit at a clearly darker middle value than the ivory white mouse and warmer and darker than the cool grey mouse.",
+        "composition": "One entire animal on one disc, steep overhead three-quarter view. Ears, forepaws, hind feet and the whole tail stay inside the disc with clear margin; the outer sixth of the disc radius stays bare base plate and nothing touches or crosses the rim. The animal fills the same share of the disc as the other rodent tokens — do not shrink it to make room. Keep the head out of the upper-right rank corner and leave the upper-left interaction corner clear. Keep a readable gap of dark disc between the curled tail and the body so they do not merge into one blob at 48px, and keep the two ears separated from each other by open disc. No second animal, no litter, no burrow.",
+        "palette": "Warm umber and russet-brown fur sitting at a clear middle value, with a paler tan lit plane across the crown, shoulders and throat and a cream chest patch, grey-pink bare inner ears and bare tail, dark eyes and nose, compact warm-grey contact shadow. The base plate stays the neutral charcoal-brown of the references and is not warmed or lightened to suit the coat. No glow, no effect, no ground stain."
+      },
+      "kind": "creature",
+      "gate": "ready",
+      "gate_reason": "Main agent approved the 0.6.8 detached native actor evidence in evidence/c0b-art-gate: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique. That admission gate is unchanged and is not re-litigated here; what changed is the art design direction, recorded in art/monsters-v9-refine/BRIEF.md. Art generation only; runtime integration, family separation review and in-game validation still pending.",
+      "max_attempts": 2,
+      "refinement": {
+        "supersedes": "giant-brown-mouse",
+        "previous_batch": "c0b-rodent-mice-v1",
+        "design_change_reason": "Not a third attempt at the C0b brief: that brief asked for a forward-leaning, nose-down four-footed sniffing pose, and the v1 master delivered exactly what it asked for and passed every mechanical gate. The 48px grayscale review then showed the brief itself was wrong — a low four-footed brown mouse is the same silhouette class as the mapped giant brown rat it shares a coat with, so no amount of repairing that image can separate them. This brief changes the design direction: the pose requirement moves from four-footed to upright-seated, the same direction that demonstrably worked for the white and grey mice, and the reference set is changed to attach the approved grey mouse as the pose anchor instead of the rat.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/monsters-v8-c0b/REVIEW.md",
+            "sha256": "473ba9174d6e5f12ddc49c41ee5644eeda7b25989eb3942c8c6750e222b3d87f"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/c0b-rodent-mice-v1/giant-brown-mouse/receipts/attempt-1.json",
+            "sha256": "ea3293009a756068f22f900725c96de58420b35f1263eab006544586981e6a70"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/c0b-rodent-mice-v1/giant-brown-mouse/imagegen-calls/call-2/call.json",
+            "sha256": "4040e7d0f5f285a6e6b8ea28a0ffc89d3c1ae4d4379f490c368c7b51ee9dc89f"
+          }
+        ]
+      },
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/README.md",
+          "sha256": "a68e8165953229082ca8c18512cb56f43f85c2a025ccf453cf832e81fa569f14"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/native-actors.tsv",
+          "sha256": "35b66e9491cf7cd75f04db24e228bf6c6a0e7a0fa4b27f436e21e4cde877e193"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/sources.json",
+          "sha256": "43071414fc86a870d05f6b52661f57cdbd89c4a25a47b7b2bdcdb8e2faa3ce53"
+        }
+      ]
+    },
+    {
+      "asset_id": "skeleton-warrior",
+      "native_name": "skeleton warrior",
+      "scope": "Shared skeleton pool (skeleton.lua); Kor'Pul amon-sul-crypt room and later undead zones; exact identity only, distinct from degenerated skeleton warrior",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_SKELETON\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 103,
+          "anchor": "name = \"skeleton warrior\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel at exactly that lightness. Do not copy its species, body plan or pose."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/skeleton_warrior.png",
+          "sha256": "e4f371de5e731cb079c867775924fde69e31b86f19dc67f5c8bb78ef0c8d6dba",
+          "role": "identity",
+          "note": "Native species only: an intact armoured skeleton warrior. Ignore its camera, its curved blade and the engine tint. The resolved native instance carries an iron greatsword and rusty body armour, and no shield."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v5/masters/degenerated-skeleton-warrior-v2.png",
+          "sha256": "a41bbd64fccbda3124170edf1fc2f1850842b97a8b84d20c85beaffa1277c683",
+          "role": "family",
+          "note": "Existing mapped degenerated skeleton warrior: a sprawling, bright bare-bone, half-collapsed one-armed skeleton with its sword low. The new skeleton warrior must not repeat that pose, that bare-bone brightness or that broken outline."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "One intact skeleton warrior standing upright at rest, squared up and seen from a steep overhead three-quarter angle, facing down-left. It wears a rusted iron cuirass and shoulder plates over the ribcage and a battered rusted open-faced helm on the skull; forearms and shins are bare bone with tarnished straps. Both arms are present — exactly two arms and two hands, no third limb. It holds a long two-handed iron greatsword POINT DOWN and dead vertical, gripped in both fists at chest height directly in front of its sternum, so the blade runs straight down the centre line of the body, flat against the torso and between the legs, and the point stops level with the ankles without touching the ground. The broad straight crossguard sits across the chest and the round pommel rises just under the chin. Stance is compact and balanced, feet planted apart. No shield.",
+        "contrast": "The mapped degenerated skeleton warrior is a pale, bare, crumbling one-armed skeleton sprawled low and wide across its disc with its sword down at its side. This skeleton warrior must differ in at least two dimensions: (1) silhouette — an upright, compact, vertical armoured figure with a clean unbroken outline, a helmed head and one bright vertical bar of steel down its centre, instead of a broken low sprawl; (2) value — a large dark mid-value armoured torso mass with only the skull, forearms and shins left as bright bone, instead of the degenerated one's overall bright bone body; (3) hue — cold grey steel and orange-brown rust against the degenerated one's neutral ivory. It must also not be confused with the mapped skeleton mage, which wears a flowing dark robe and holds a knobbed staff: this one is plate-and-blade, with hard straight metal edges. The greatsword must still be unmistakable at 48px, so keep the blade wide, keep it noticeably lighter and cooler than the rusted cuirass behind it, and let the crossguard read as a clear straight horizontal bar across the chest. Distinction must survive grayscale at 48px.",
+        "composition": "One entire figure on one disc, steep overhead three-quarter view. This is the point of this brief: the greatsword is held vertically along the body axis so that, under this steep camera, it is foreshortened and adds NO extent to the figure's outline — the whole sword, crossguard, grip, pommel and point included, must stay inside the vertical band already occupied by the torso and legs. A blade raised or swung out diagonally lies flat to the camera, reads at full length and overruns the disc; that is forbidden here. Helm, both hands, both feet and the whole sword stay inside the disc with clear margin; the outer sixth of the disc radius stays bare base plate and nothing — blade, point, elbow, foot, shoulder plate or cast shadow — may touch or cross the rim. Do NOT solve this by shrinking the figure: the skeleton must stand as tall on its disc as the other humanoid tokens, filling the inner five sixths of the disc from head to feet. Keep the skull out of the upper-right rank corner and leave the upper-left interaction corner clear. No banner, no base rubble, no grave.",
+        "palette": "Rusted iron armour in dull oxide-brown and dark slate steel with worn lighter edge highlights, weathered bone in warm ivory for skull, forearms and shins, dark empty eye sockets, tarnished leather straps, and a cool pale grey blade with a dull sheen that stands clear of the armour behind it. Matte and dry. No red eye glow, no magic light, no aura, no effect."
+      },
+      "kind": "creature",
+      "gate": "ready",
+      "gate_reason": "Main agent approved the 0.6.8 detached native actor evidence in evidence/c0b-art-gate: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique. That admission gate is unchanged and is not re-litigated here; what changed is the art design direction, recorded in art/monsters-v9-refine/BRIEF.md. Art generation only; runtime integration, family separation review and in-game validation still pending.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/README.md",
+          "sha256": "a68e8165953229082ca8c18512cb56f43f85c2a025ccf453cf832e81fa569f14"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/native-actors.tsv",
+          "sha256": "35b66e9491cf7cd75f04db24e228bf6c6a0e7a0fa4b27f436e21e4cde877e193"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/sources.json",
+          "sha256": "43071414fc86a870d05f6b52661f57cdbd89c4a25a47b7b2bdcdb8e2faa3ce53"
+        }
+      ]
+    }
+  ]
+}

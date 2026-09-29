@@ -1,0 +1,20 @@
+window.monsterCatalog = [
+  {
+    "id": "naga-tidewarden"
+  },
+  {
+    "id": "naga-tidecaller"
+  },
+  {
+    "id": "treant"
+  },
+  {
+    "id": "kryl-feijan"
+  },
+  {
+    "id": "shivgoroth"
+  },
+  {
+    "id": "greater-shivgoroth"
+  }
+];

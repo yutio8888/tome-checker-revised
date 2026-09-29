@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-g-3b",
+  "assets": [
+    {
+      "asset_id": "massok",
+      "native_name": "Massok the Dragonslayer",
+      "scope": "daikara side-quest unique boss (no rarity field, scripted placement) -- FRESH REGENERATION: attempt monster-batch-g-3 call-2 had excellent art and base drift -7.26 but the greatsword extended far past the disc (max opaque radius 1.204 vs 0.867 limit); call-1 died unrecorded",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/daikara/npcs.lua",
+          "sha256": "c4d6d6b6387719554eb81b4eccb6abe0722bd435860d06d56dafcc778e8019ca",
+          "line": 163,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/humanoid_orc_massok_the_dragonslayer.png\", display_h=2, display_y=-1}}},"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_massok_the_dragonslayer.png",
+          "sha256": "1b21ad0427290b98625dc5f01759c510014fb0de41f29faafad16ad1c20d9fba",
+          "role": "identity",
+          "note": "Native species shape: huge orc, dragon-skull helm, raised two-handed greatsword, dark green-black plate."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/golbug.png",
+          "sha256": "4f7047dc4d3756bbce03ee27b1740345f17cb9764399ac774169994f40d008d6",
+          "role": "family",
+          "note": "Shipped catalog humanoid/orc: hammer + shield, gold-trimmed armour. Massok/Krogar must stay distinct from this and from each other."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A huge, heavily armoured orc warrior wearing a dragon skull as a helm, its bone jaw framing the orc's face and pale horns curving up from the sides. He grips a massive two-handed sword raised diagonally across his body, dark green-black plate armour with jagged pauldrons. The two-handed greatsword is held upright and close against his body, angled only slightly, and is drawn SHORT: the blade tip ends below the top of the horned skull helm, well inside the disc. The sword must be fully contained within the disc.",
+        "contrast": "Third humanoid/orc catalog identity (with golbug the hammer-and-shield destroyer and brotoq the dual-axe reaver already shipped, and Krogar shipping in the same handoff group). Massok's dragon-skull helm and single massive raised greatsword must read as a clearly different silhouette from golbug (hammer+shield) and brotoq (dual axes) -- no shield, no dual weapons, a distinctive pale bone-helm silhouette breaking up the dark armour read. Silhouette (dragon-skull helm + single raised greatsword) and value (pale bone helm against dark green-black armour) are the anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. HARD LIMIT: the sword blade tip, pauldron spikes and horn tips must all end inside the inner four-fifths of the disc radius; no part of the sword may reach or cross the disc rim (a previous attempt swung a long diagonal blade beyond the disc edge at radius 1.20). Shrink the figure slightly and keep the sword short, held compactly.",
+        "palette": "Dark green-black plate armour with jagged metal pauldrons, a pale bone-white dragon skull helm with visible curved horns as the dominant value break, dull grey greatsword blade; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's armour so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name/type=humanoid/subtype=orc/define_as=MASSOK/unique=true) and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (CONTRACTS-B5-B7-20260929.md 3, READY). native-tall via unique=true, following the ancient-dragon-turtle/batch-E precedent covered by tests/token_mapping.lua's generic unique loop. No live fixture needed for a scripted no-rarity boss (same precedent as every batch-E/F unique). Fresh regeneration handoff: attempt monster-batch-g-3 call-2 had excellent art and base drift -7.26 but the greatsword extended far past the disc (max opaque radius 1.204 vs 0.867 limit); call-1 died unrecorded",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-g-3/massok/imagegen-calls/call-2/call.json",
+          "sha256": "a9d2b9fa8bce7a891a12ddde69a7e93c5c1010ae8247de7112082b2f745b75ff"
+        }
+      ]
+    }
+  ]
+}

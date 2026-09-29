@@ -1,0 +1,228 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-k-2",
+  "assets": [
+    {
+      "asset_id": "weaver-hatchling",
+      "native_name": "weaver hatchling",
+      "scope": "unhallowed-morass (spiderkin/spider, explicit image=npc/spiderkin_spider_weaver_young.png, non-unique; also spawned as an escort/summon by the same entity name)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/unhallowed-morass/npcs.lua",
+          "sha256": "10dac055e54c6f7a92c43c8a278caca4b7d51d0c4b002a165ad5a714bf4fec52",
+          "line": 42,
+          "anchor": "name = \"weaver hatchling\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/unhallowed-morass/npcs.lua",
+          "sha256": "10dac055e54c6f7a92c43c8a278caca4b7d51d0c4b002a165ad5a714bf4fec52",
+          "line": 42,
+          "anchor": "image=\"npc/spiderkin_spider_weaver_young.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_weaver_young.png",
+          "sha256": "607ad607b59a0aac23d41f3160a7eae80149f668c4f8d6a69c994a9323ddbba2",
+          "role": "identity",
+          "note": "Native shape: a small round nearly translucent pale-blue spider hatchling with a bulbous banded body and bright glowing white orbs around its feet."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/weaver-queen.png",
+          "sha256": "39f935a31e7e84f9068461d0288b87c7cbc184483d81dd9b22eae6c678a8ea86",
+          "role": "family",
+          "note": "Shipped Weaver Queen (large frost-white furry spider): the hatchling is small, smooth and glassy with glowing orbs, not a furry queen."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A small round spider hatchling seen from a steep overhead three-quarter angle: a plump smooth glassy pale-aqua abdomen with faint darker-blue curved stripes and a soft inner glow, a small rounded head with a cluster of big dark eyes with white highlights, eight short delicate pale blue-grey legs tucked in a tight radial spread, and a bright white-blue glowing orb of light at the tip of about four of the legs. Tiny, delicate, translucent, complete.",
+        "contrast": "Spider tokens: Ungole (large black, red marks), Weaver Queen (large frost-white furry with blue legs). The weaver hatchling is the small smooth translucent one with a plump round striped abdomen and glowing white orbs at its feet (silhouette: small round body with orb-tipped short legs; hue: pale aqua and blue stripes; value: light). Built beside the orb spinner (long ribbed body, long legs) so the two blue spiders differ by shape, not only size.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Light translucent aqua and pale cyan-white glassy body with mid-blue curved stripes, bright white glowing orbs, pale blue-grey legs, dark eyes with white glints; nothing darker than mid tone except the eyes. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=weaver hatchling, define_as=None, type=spiderkin/subtype=spider, unique=False); details and hashes in evidence/monster-batch-k-20260929/source-contracts.json. zone-local BASE_NPC_SPIDER (spiderkin/spider, no image=); explicit image= npc/spiderkin_spider_weaver_young.png (the PNG name differs from the default-name formula, so the pin is the explicit image); no nice_tile/add_mos/shader/anim/moddable_tile/tint; single path. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-k-20260929/source-contracts.json",
+          "sha256": "28f50e7a65078712b05e51600724121549410c937ea2a8f0d9084b8158382041"
+        }
+      ]
+    },
+    {
+      "asset_id": "orb-spinner",
+      "native_name": "orb spinner",
+      "scope": "unhallowed-morass (spiderkin/spider, default-name image, non-unique; its escort is an orb weaver, not covered)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/unhallowed-morass/npcs.lua",
+          "sha256": "10dac055e54c6f7a92c43c8a278caca4b7d51d0c4b002a165ad5a714bf4fec52",
+          "line": 58,
+          "anchor": "name = \"orb spinner\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_orb_spinner.png",
+          "sha256": "5b69b9c668f5175f530622f324a81e268e1328ebd479ee846bd57425daf710b1",
+          "role": "identity",
+          "note": "Native shape: a long-bodied pale steel-blue and bone-white ribbed spider with a segmented striped abdomen and long thin legs."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/weaver-queen.png",
+          "sha256": "39f935a31e7e84f9068461d0288b87c7cbc184483d81dd9b22eae6c678a8ea86",
+          "role": "family",
+          "note": "Shipped Weaver Queen (round furry frost-white spider): the orb spinner has a long ribbed segmented body with hard bone-white bands, no fur."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A long-bodied spider seen from a steep overhead three-quarter angle: an elongated tapering abdomen made of many ribbed segments alternating steel-blue and bone-white like a striped shell, a narrow head with a row of small dark eyes and two curved fangs with a drip of pale fluid, and eight long thin angular legs with pale joints held in a wide asymmetric spread. Sleek, ribbed, elegant, complete.",
+        "contrast": "Spider tokens: Ungole (round black), Weaver Queen (round furry frost-white), weaver hatchling (small round glassy with glowing orbs). The orb spinner is the elongated ribbed one: long tapering abdomen banded steel-blue and bone-white with long thin legs (silhouette: long ribbed teardrop with wide leg spread; hue: steel-blue with bone bands; value: mid with bright bone stripes).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid steel-blue and slate-blue abdomen shell with bright bone-white rib bands, pale blue-grey legs with pale joints, dark eyes; nothing darker than mid tone except the eyes. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orb spinner, define_as=None, type=spiderkin/subtype=spider, unique=False); details and hashes in evidence/monster-batch-k-20260929/source-contracts.json. zone-local BASE_NPC_SPIDER (spiderkin/spider, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile on the leaf or its base; no tint; generic actor.image==entry.image single path; NPC.lua:33 gives spiderkin_spider_orb_spinner.png. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-k-20260929/source-contracts.json",
+          "sha256": "28f50e7a65078712b05e51600724121549410c937ea2a8f0d9084b8158382041"
+        }
+      ]
+    },
+    {
+      "asset_id": "giant-spider",
+      "native_name": "giant spider",
+      "scope": "ardhungol, daikara, forest vaults and other general spawns (spiderkin/spider, default-name image, no define_as). Same-name actors that must stay native: tutorial-combat-stats TUT_SPIDER_1 (same type, define_as differs) and the player-summoned giant spider (animal/spider)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 50,
+          "anchor": "name = \"giant spider\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_giant_spider.png",
+          "sha256": "cf331d22ed1db2b6aa6941293c6af377ec0f19e86705e5f24f683e00579bb36d",
+          "role": "identity",
+          "note": "Native shape: a big dark slate-grey spider with a glossy shell, pale silvery veined markings on the oval abdomen, glossy black eyes and long banded legs."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/ungole.png",
+          "sha256": "68c78ccd8392b026a7e37f20f1ea0205ebb643fac53d5d2435d1e38e7b2a3489",
+          "role": "family",
+          "note": "Shipped Ungole (round pitch-black spider with red eyes and red marks): the giant spider is a lighter slate-grey with pale silver dorsal markings and no red."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A large ordinary giant spider seen from a steep overhead three-quarter angle: an oval slate-grey glossy abdomen with a bold pale-silver chevron and vein pattern across its back, a rounded cephalothorax with four big glossy black eyes with white glints and small pale pedipalps, and eight long slender angular legs in mid grey with pale silver bands at each joint, spread wide in an open radial pose. Elegant, lanky, complete.",
+        "contrast": "Spider tokens: Ungole (round pitch-black body, red eyes and marks, short-legged), Weaver Queen (frost-white furry), the pale ribbed orb spinner, the brown spitting spider and the ivory chitinous spider (built alongside). The giant spider is the slate-grey lanky one with pale silver chevron markings on an oval abdomen and long banded legs (silhouette: oval body with long wide-spread thin legs; hue: neutral slate-grey with silver, no red; value: mid-grey clearly lighter than Ungole).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid slate-grey glossy shell lifted with light steel-grey planes, bold pale silver dorsal chevron, pale silver leg bands, black glossy eyes with white glints; the body must read as mid grey, never black. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=giant spider, define_as=None, type=spiderkin/subtype=spider, unique=False); details and hashes in evidence/monster-batch-k-20260929/source-contracts.json. base BASE_NPC_SPIDER (spiderkin/spider, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile on the leaf or its base; no tint; generic actor.image==entry.image single path; NPC.lua:33 gives spiderkin_spider_giant_spider.png. Name collisions handled by the exact-identity contract itself: the tutorial spider carries define_as TUT_SPIDER_1 (entry requires none) and the wild-gift summon is type animal (entry requires spiderkin), so neither can wear this token; no name+define_as key extension needed. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-k-20260929/source-contracts.json",
+          "sha256": "28f50e7a65078712b05e51600724121549410c937ea2a8f0d9084b8158382041"
+        }
+      ]
+    },
+    {
+      "asset_id": "spitting-spider",
+      "native_name": "spitting spider",
+      "scope": "ardhungol, daikara, forest vaults (spiderkin/spider, default-name image, non-unique)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 67,
+          "anchor": "name = \"spitting spider\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_spitting_spider.png",
+          "sha256": "45abd4535a0a21c97a3d4f2ad01128ffadb2598e28a749813f9fd44f95e4d6ed",
+          "role": "identity",
+          "note": "Native shape: a hairy chestnut-brown spider with a round high abdomen, big glossy black eyes and long fangs with a stream of yellow-green venom spitting from its mouth."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/ungole.png",
+          "sha256": "68c78ccd8392b026a7e37f20f1ea0205ebb643fac53d5d2435d1e38e7b2a3489",
+          "role": "family",
+          "note": "Shipped Ungole (black spider with red): the spitting spider is warm chestnut-brown with a green venom spray, no red marks."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A hairy chestnut-brown spider rearing slightly forward, seen from a steep overhead three-quarter angle: a tall round bristly abdomen in warm brown with lighter tan hairs, a broad head with big glossy black eyes with white glints and two long curved dark fangs, a thin stream of bright acid-green venom spraying forward from the fangs in a short arc that stays on the disc, and eight sturdy bent legs in brown with tan joints, front legs raised. Aggressive and complete.",
+        "contrast": "Spider tokens: Ungole (black, red), giant spider (slate-grey, silver chevrons), Weaver Queen (frost-white), chitinous spider (ivory plates). The spitting spider is the warm brown hairy one that is spraying an acid-green venom stream (silhouette: reared front with a visible venom arc; hue: chestnut brown plus acid green; value: mid).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Warm mid chestnut-brown with lighter tan hair tufts and tan leg joints, bright acid-green venom stream as the accent, black glossy eyes with white glints; nothing darker than mid tone except the eyes. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=spitting spider, define_as=None, type=spiderkin/subtype=spider, unique=False); details and hashes in evidence/monster-batch-k-20260929/source-contracts.json. base BASE_NPC_SPIDER (spiderkin/spider, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile on the leaf or its base; no tint; generic actor.image==entry.image single path; NPC.lua:33 gives spiderkin_spider_spitting_spider.png. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-k-20260929/source-contracts.json",
+          "sha256": "28f50e7a65078712b05e51600724121549410c937ea2a8f0d9084b8158382041"
+        }
+      ]
+    }
+  ]
+}

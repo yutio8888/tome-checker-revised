@@ -1,0 +1,618 @@
+[
+  {
+    "id": "floor-a",
+    "output": "review/48/floor-a.png",
+    "size": 48,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0,
+    "selected_master": "masters/floor-a-v2.png"
+  },
+  {
+    "id": "floor-b",
+    "output": "review/48/floor-b.png",
+    "size": 48,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0,
+    "selected_master": "masters/floor-b-v2.png"
+  },
+  {
+    "id": "wall",
+    "output": "review/48/wall.png",
+    "size": 48,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      88,
+      128,
+      1178,
+      1154
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "hardwall",
+    "output": "review/48/hardwall.png",
+    "size": 48,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      77,
+      99,
+      1181,
+      1155
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "door-closed-horizontal",
+    "output": "review/48/door-closed-horizontal.png",
+    "size": 48,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      92,
+      386,
+      1166,
+      934
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "door-open-horizontal",
+    "output": "review/48/door-open-horizontal.png",
+    "size": 48,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      91,
+      302,
+      1166,
+      935
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "door-closed-vertical",
+    "output": "review/48/door-closed-vertical.png",
+    "size": 48,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      482,
+      99,
+      777,
+      1159
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "door-open-vertical",
+    "output": "review/48/door-open-vertical.png",
+    "size": 48,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      181,
+      98,
+      781,
+      1162
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "floor-a",
+    "output": "review/64/floor-a.png",
+    "size": 64,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0,
+    "selected_master": "masters/floor-a-v2.png"
+  },
+  {
+    "id": "floor-b",
+    "output": "review/64/floor-b.png",
+    "size": 64,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0,
+    "selected_master": "masters/floor-b-v2.png"
+  },
+  {
+    "id": "wall",
+    "output": "review/64/wall.png",
+    "size": 64,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      88,
+      128,
+      1178,
+      1154
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "hardwall",
+    "output": "review/64/hardwall.png",
+    "size": 64,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      77,
+      99,
+      1181,
+      1155
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "door-closed-horizontal",
+    "output": "review/64/door-closed-horizontal.png",
+    "size": 64,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      92,
+      386,
+      1166,
+      934
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "door-open-horizontal",
+    "output": "review/64/door-open-horizontal.png",
+    "size": 64,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      91,
+      302,
+      1166,
+      935
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "door-closed-vertical",
+    "output": "review/64/door-closed-vertical.png",
+    "size": 64,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      482,
+      99,
+      777,
+      1159
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "door-open-vertical",
+    "output": "review/64/door-open-vertical.png",
+    "size": 64,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      181,
+      98,
+      781,
+      1162
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "floor-a",
+    "output": "review/96/floor-a.png",
+    "size": 96,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0,
+    "selected_master": "masters/floor-a-v2.png"
+  },
+  {
+    "id": "floor-b",
+    "output": "review/96/floor-b.png",
+    "size": 96,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0,
+    "selected_master": "masters/floor-b-v2.png"
+  },
+  {
+    "id": "wall",
+    "output": "review/96/wall.png",
+    "size": 96,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      88,
+      128,
+      1178,
+      1154
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "hardwall",
+    "output": "review/96/hardwall.png",
+    "size": 96,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      77,
+      99,
+      1181,
+      1155
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "door-closed-horizontal",
+    "output": "review/96/door-closed-horizontal.png",
+    "size": 96,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      92,
+      386,
+      1166,
+      934
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "door-open-horizontal",
+    "output": "review/96/door-open-horizontal.png",
+    "size": 96,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      91,
+      302,
+      1166,
+      935
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "door-closed-vertical",
+    "output": "review/96/door-closed-vertical.png",
+    "size": 96,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      482,
+      99,
+      777,
+      1159
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "door-open-vertical",
+    "output": "review/96/door-open-vertical.png",
+    "size": 96,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      181,
+      98,
+      781,
+      1162
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "floor-a",
+    "output": "review/128/floor-a.png",
+    "size": 128,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0,
+    "selected_master": "masters/floor-a-v2.png"
+  },
+  {
+    "id": "floor-b",
+    "output": "review/128/floor-b.png",
+    "size": 128,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0,
+    "selected_master": "masters/floor-b-v2.png"
+  },
+  {
+    "id": "wall",
+    "output": "review/128/wall.png",
+    "size": 128,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      88,
+      128,
+      1178,
+      1154
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "hardwall",
+    "output": "review/128/hardwall.png",
+    "size": 128,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      77,
+      99,
+      1181,
+      1155
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "door-closed-horizontal",
+    "output": "review/128/door-closed-horizontal.png",
+    "size": 128,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      92,
+      386,
+      1166,
+      934
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "door-open-horizontal",
+    "output": "review/128/door-open-horizontal.png",
+    "size": 128,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      91,
+      302,
+      1166,
+      935
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "door-closed-vertical",
+    "output": "review/128/door-closed-vertical.png",
+    "size": 128,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      482,
+      99,
+      777,
+      1159
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  },
+  {
+    "id": "door-open-vertical",
+    "output": "review/128/door-open-vertical.png",
+    "size": 128,
+    "master_width": 1254,
+    "master_height": 1254,
+    "visible_bbox": [
+      181,
+      98,
+      781,
+      1162
+    ],
+    "export_window": [
+      0.0,
+      0.0,
+      1254.0
+    ],
+    "target_occupancy": 1.0
+  }
+]

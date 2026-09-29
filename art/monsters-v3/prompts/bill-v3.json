@@ -1,0 +1,52 @@
+{
+  "asset_id": "bill-v3",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "status": "generated-reviewed-candidate",
+  "prompt": "Use case: precise-object-edit.\nAsset type: one transparent 2D tabletop monster miniature token for Tales of Maj'Eyal, intended to remain readable when the token is 48 or 64 pixels.\nInput images: Image 1 is Bill-v2, the exact miniature to redesign. Image 2 is Prox-v2, only a comparison so Bill must NOT resemble its hammer, belly/chest strap pose; use matching paint and disc style. Image 3 is the original tiny Bill game sprite, identity context only. The native lore describes a big brawny troll carrying a small tree trunk; it does not require a particular skin color.\nPrimary request: redesign BILL THE STONE TROLL as a huge broad cool-slate-gray troll holding a thick whole tree-trunk club across his upper torso in both hands. This new cool gray palette is a deliberate readability design choice.\nBody and silhouette: a complete powerful bulky creature with wide blocky shoulders and torso, a massive muscular neck, asymmetrical forward braced stance and two complete feet firmly inside the disc. Long pointed ears, a broad blunt face and small ivory tusks. Both hands visibly gripping the weapon. The creature itself stays LARGE in the base; do not turn him into a bust or reduce his body to make room for the prop. Pale blue-gray shoulder planes and near-white gray light on arms make a clear silhouette against the base, with dark cool slate shadow planes. No olive/green skin. Brown forearm wraps and a simple rough brown loincloth.\nDefining weapon: one thick cylindrical TREE TRUNK diagonally crosses the upper chest and shoulder area, from lower-left to upper-right. It is a broad wooden column about the thickness of the troll's head, NOT a thin club with a bulb at one end, NOT a hammer, NOT a staff. Brown bark, one large pale cut wood end with very simple growth rings facing viewer. Two hands bear its weight. Keep the complete trunk within the interior of the circular disc, with a substantial gap before the rim at both ends; shorten it rather than shrinking Bill. Arrange the head above and to the side of the trunk so it is not hidden.\nShared style/invariants: high-angle overhead three-quarter view, hand-painted carved fantasy miniature, broad economical brush planes, upper-left soft light, dry matte surfaces. Preserve the same shallow dark charcoal-brown round disc and thin muted bronze bevel as Image 1. Complete base, centered, ample transparent margin all around. Real transparent alpha background, never baked black, white or checkerboard. Everything including ears, feet, elbows and wood must be INSIDE the circular rim.\nNo gold rarity rings, faction colors, medals, symbols, labels, numbers, selection halos, glowing eyes, particle effects, ground scenery, external shadows or extra characters. No photoreal plastic gloss. The readable identity is COOL BLOCKY BODY + VERY THICK DIAGONAL LOG + PALE ROUND CUT END, distinct from Prox's square hammer and the ordinary stone troll's empty fists.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v2/masters/bill-v2.png",
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/troll_bill.png"
+  ],
+  "reference_roles": [
+    "edit target; preserve disc/material and full creature while redesigning body/log silhouette",
+    "comparison reference; distinguish from square-headed greatmaul and belly/chest strap",
+    "native Bill sprite identity context, not a required skin palette"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0dd7b-caa5-7ca0-96df-7e69d393c50b/exec-ac6f4527-d6ef-4d4f-9b7a-b0a5c7cfb6ea.png",
+  "saved_output_path": "art/monsters-v3/masters/bill-v3.png",
+  "parent_asset_id": "bill-v2",
+  "preserved_native_alpha": true,
+  "image_processing": "Copied generated PNG without pixel edits or alpha changes.",
+  "review": "Full powerful cool-slate-gray troll remains large in the disc. Broad log now crosses the torso as one thick diagonal column with a large pale cut end, distinct from Prox's square hammer and empty-fisted stone troll. Both complete feet, arms and all weapon edges lie inside the base rim. Large silhouette/material checks pass; actual 48/64px export and runtime judgment remain for parent.",
+  "selection": "recommended for parent small-scale export and runtime review",
+  "design_note": "Cool slate-gray skin is an intentional new readability choice; the source sprite is olive and the name Stone Troll does not itself imply a canonical gray skin palette.",
+  "identity_sources": [
+    "game/modules/tome/data/zones/trollmire/npcs.lua:179-200",
+    "art/monsters-v2/masters/bill-v2.png"
+  ],
+  "native_description": "Big, brawny, powerful and with a taste for Halfling. He is wielding a small tree trunk and lumbering toward you.",
+  "sha256": "aa2fb3be36bd168f536c36b69fcfa30cc48c8c1d3b034c663f96e8f6fd29c77d",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_alpha_bbox": [
+      112,
+      103,
+      1142,
+      1152
+    ],
+    "transparent_pixels": 719873
+  },
+  "reviewed_at_utc": "2026-09-26T11:38:13.623017+00:00"
+}

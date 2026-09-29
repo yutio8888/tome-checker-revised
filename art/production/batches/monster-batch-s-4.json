@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-s-4",
+  "assets": [
+    {
+      "asset_id": "greater-mummy-lord",
+      "native_name": "Greater Mummy Lord",
+      "scope": "ancient-elven-ruins (zones/ancient-elven-ruins/npcs.lua:35, unique, define_as GREATER_MUMMY_LORD, undead/mummy, rank 4, no base, default-name image; guardian of zone.lua:49, no rarity); single definition; resolvers.racial(\"shalore\"); auto_classes Bulwark and Archmage from level 30",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 35,
+          "anchor": "define_as = \"GREATER_MUMMY_LORD\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 38,
+          "anchor": "name = \"Greater Mummy Lord\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 68,
+          "anchor": "resolvers.racial(\"shalore\")"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 99,
+          "anchor": "auto_classes={"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_mummy_greater_mummy_lord.png",
+          "sha256": "2f2b5e473d49b2820c6d4862c25d667b51defbac9d0fb4bf09c50cedfdbc4c5b",
+          "role": "identity",
+          "note": "Native shape (64x64): a mummy wrapped in cream bandages with arms flung wide, surrounded by a purple aura."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/armoured-skeleton-warrior.png",
+          "sha256": "1870531b091bb19cc62b3c0fe2e6d248a6d32066799b46595c1f7cb4eb2ad620",
+          "role": "family",
+          "note": "Shipped armoured skeleton warrior (bony undead in plate with sword and shield): the Greater Mummy Lord must not be a bone-and-plate skeleton."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "The Greater Mummy Lord seen from a steep overhead three-quarter angle: a massive hulking undead lord wrapped head to foot in thick PALE CREAM and sand-coloured linen bandages, ragged bandage tails streaming out to the LEFT behind him as if blown by a strong wind, a BRONZE-GOLD crested crown-helm with a sculpted mask face and two glowing pale blue-white eyes, broad bronze pauldrons over the wrapped shoulders, a ROUND bronze-rimmed shield on the left arm and a wide pale-steel longsword held low across the front of the body in the right hand, feet planted wide. Ancient, regal, bandaged and complete.",
+        "contrast": "Undead uniques: the GREATER MUMMY LORD is the BROAD BANDAGED LORD with a crowned bronze mask, a round shield and a low sword, bandage tails streaming to one side (silhouette: wide shouldered blocky mass with a round shield and a horizontal sword line and a streaming tail; hue: cream linen with bronze and pale blue eyes; value: light). Kor's Fury is a pale spiral-tailed spectre with a skull face; Borfast is a squat armoured grey-green dwarf ghoul with a cage chest; the shipped armoured skeleton warrior is bone in plate.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, staffs, capes and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, cape end or bandage tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Cream and sand linen bandages with near-white highlight planes and warm tan shadows, bronze-gold crown-helm, pauldrons and shield rim with lighter gold highlights, pale steel blade, pale blue-white eyes; nothing darker than dark tan-brown except the eye sockets; the disc stays neutral charcoal with no cream cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Greater Mummy Lord, define_as=GREATER_MUMMY_LORD, type=undead/subtype=mummy, unique=True, native_tall=False); details and hashes in evidence/monster-batch-s-20260929/source-contracts.json. no base (undead/mummy on the leaf, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip longsword (LONGSWORD_WINTERTIDE), shield, mummy armour and head armour (equipment only, no moddable_tile); talents Armour Training, Shield Pummel, Assault, Overpower, Blinding Speed, Weapons Mastery, Weapon Combat, Freeze, Ice Storm, Invisibility, Rotting Disease, Tricks of the Trade; resolvers.racial(\"shalore\") adds racial levelup talents only; no sustains_at_birth; auto_classes Bulwark/Archmage (see runtime_mutation_scan); a cast Invisibility applies the temporary EFF_INVISIBILITY shader invis_edge (native art while active, not at birth). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-s-20260929/source-contracts.json",
+          "sha256": "f6556ef4ac78f044ee83f4d27ed60d1586fa243b923da96651cade0aa5ba49a2"
+        }
+      ]
+    },
+    {
+      "asset_id": "kors-fury",
+      "native_name": "Kor's Fury",
+      "scope": "ruins-kor-pul (zones/ruins-kor-pul/npcs.lua:138, unique, define_as KOR_FURY, undead/ghost, rank 4, no base, default-name image; backup guardian created by activateBackupGuardian('KOR_FURY') after The Possessed/The Shade die); single definition; auto_classes Archmage and Corruptor from level 39",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "sha256": "ccf6405af2919d0074c4d876ad14a96bd77dee83dcb071178652fd60226844e4",
+          "line": 138,
+          "anchor": "define_as = \"KOR_FURY\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "sha256": "ccf6405af2919d0074c4d876ad14a96bd77dee83dcb071178652fd60226844e4",
+          "line": 141,
+          "anchor": "name = \"Kor's Fury\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "sha256": "ccf6405af2919d0074c4d876ad14a96bd77dee83dcb071178652fd60226844e4",
+          "line": 189,
+          "anchor": "auto_classes={{class=\"Archmage\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_ghost_kor_s_fury.png",
+          "sha256": "aa9accbf4bdbd1298d7f3b5a3322fa009d7a9b0dfe8534c495d4e7ca44339759",
+          "role": "identity",
+          "note": "Native shape (64x64): a translucent cyan spectre with flowing shroud and arms held forward."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/shade-of-telos.png",
+          "sha256": "fd463ea671c899d7fce1f2c151ed2a71aca1019b53106f4f164d665b1cc4816f",
+          "role": "family",
+          "note": "Shipped Shade of Telos (upright translucent ice-blue humanoid figure): Kor's Fury must not be an upright blue humanoid ghost."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Kor's Fury seen from a steep overhead three-quarter angle: a vengeful insane spectre in a PALE SEA-FOAM GREEN-CYAN semi-translucent form, a BONE-WHITE SKULL FACE with hollow dark eye sockets and a wide screaming open mouth under a ragged hood, two long thin CLAWED ARMS hooked forward with the fingers curled, a few pale ribs glimpsed through the shroud, the lower body a long ragged shroud COILED INTO A TIGHT SPIRAL beneath it like a drill (the whole spiral inside the inner three quarters of the disc). Furious, coiled, spectral and complete.",
+        "contrast": "Undead uniques: KOR'S FURY is a SKULL-FACED SPECTRE with hooked claw arms over a TIGHT SPIRAL TAIL (silhouette: round spiral mass with a small skull head and two forward claws; hue: pale sea-foam cyan-green with bone white; value: light). The shipped Shade of Telos is an UPRIGHT ICE-BLUE humanoid ghost with a smooth face and no spiral tail; the Greater Mummy Lord is a broad cream bandaged lord; Borfast is an armoured dwarf ghoul.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, staffs, capes and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, cape end or bandage tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Pale sea-foam green-cyan translucent shroud with near-white highlight planes and mid teal-grey shadows, bone-white skull face and ribs, dark hollow sockets; nothing darker than mid teal-grey except the sockets and mouth; the ghost must not glow onto or tint the disc; keep the body light rather than dark. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Kor's Fury, define_as=KOR_FURY, type=undead/subtype=ghost, unique=True, native_tall=False); details and hashes in evidence/monster-batch-s-20260929/source-contracts.json. no base (undead/ghost on the leaf, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip staff, light armour and the VOX amulet (equipment only, no moddable_tile); talents Manathrust, Freeze, Tidal Wave, Ice Storm, Burning Hex, Empathic Hex, Curse of Death, Curse of Impotence, Virulent Disease (activated, none sustained); no sustains_at_birth; auto_classes Archmage/Corruptor (see runtime_mutation_scan). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-s-20260929/source-contracts.json",
+          "sha256": "f6556ef4ac78f044ee83f4d27ed60d1586fa243b923da96651cade0aa5ba49a2"
+        }
+      ]
+    },
+    {
+      "asset_id": "borfast",
+      "native_name": "Borfast the Broken",
+      "scope": "dreadfell (zones/dreadfell/npcs.lua:210, unique, define_as BORFAST, undead/ghoul, rank 3.5, rarity 50 pool unique, no base, default-name image); single definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 210,
+          "anchor": "define_as = \"BORFAST\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 214,
+          "anchor": "name = \"Borfast the Broken\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_ghoul_borfast_the_broken.png",
+          "sha256": "425372b414ed314063253846a2a0cd89bdff5a4b18d22c9ce6937c3fff4c9efc",
+          "role": "identity",
+          "note": "Native shape (64x64): a stocky bearded dwarf ghoul in silver plate with a round shield and a raised sword."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/ghoul.png",
+          "sha256": "930a37274dfe7a0988e55c0e30e02dd1393acd333949c8acf8943d0650213910",
+          "role": "family",
+          "note": "Shipped ghoul (bare hunched grey-brown ghoul crawling on all fours): Borfast must not be a bare crawling ghoul."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Borfast the Broken seen from a steep overhead three-quarter angle: a SQUAT broad dwarf ghoul standing hunched, sagging PALE GREY-GREEN flesh hanging loosely from the bones, half of the face seared away with a drooping eyeball, a ragged tuft of white-grey beard on the chin, a bare balding head, a scavenged MID-GREY iron plate with a rusted iron CAGE of bars around the chest, a LARGE ROUND IRON-BOSSED SHIELD held forward on the left arm and a spiked flanged mace raised over the right shoulder, heavy boots. Sorrowful, hulking, armoured and complete.",
+        "contrast": "Undead uniques: BORFAST is a SQUAT ARMOURED DWARF with a big ROUND SHIELD forward, a cage chest and a raised mace, grey-green flesh (silhouette: short wide block with a round shield disc in front and a mace head above; hue: pale grey-green flesh with mid steel-grey and rust; value: mid-light). The shipped ghoul and ghoulking are bare crawling ghouls; the Greater Mummy Lord is a tall cream bandaged lord; Kor's Fury is a pale spiral spectre. The sun-paladin also has a round shield: Borfast is grey-green, short and cage-chested, with a ghoul face.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, staffs, capes and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, cape end or bandage tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Pale grey-green flesh with lighter sickly highlight planes, mid steel-grey plate and shield with pale highlight planes and rust-brown seams, iron cage bars, white-grey beard tuft, steel mace head; nothing darker than dark slate-grey except the eye socket and seams; keep the plate mid grey rather than black; the disc stays neutral charcoal with no green cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Borfast the Broken, define_as=BORFAST, type=undead/subtype=ghoul, unique=True, native_tall=False); details and hashes in evidence/monster-batch-s-20260929/source-contracts.json. no base (undead/ghoul on the leaf, faction dreadfell, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip mace, shield, BORFAST_CAGE massive armour, head, hands and feet (equipment only, no moddable_tile); talents Shield Pummel, Assault, Rush, Spell Shield, Perfect Strike, Shield Wall, Shield Expertise, Thick Skin, Armour Training, Weapons Mastery, Weapon Combat, Unflinching Resolve, Daunting Presence, Ghoul, Ghoulish Leap, Retch plus Keepsake Phase Door, Willful Strike, Reproach and Mind Sear; no sustains_at_birth and no sustained talent (Shield Wall is a sustained shield stance started only by the AI: temporary values); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-s-20260929/source-contracts.json",
+          "sha256": "f6556ef4ac78f044ee83f4d27ed60d1586fa243b923da96651cade0aa5ba49a2"
+        }
+      ]
+    }
+  ]
+}

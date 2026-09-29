@@ -1,0 +1,242 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-h-1",
+  "assets": [
+    {
+      "asset_id": "sandworm",
+      "native_name": "sandworm",
+      "scope": "maze and sandworm-lair random pool (rarity 1), vermin/sandworm, non-unique",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/sandworm.lua",
+          "sha256": "d3b650d818aa36a5560a366bb100fc2c4a1895b0d64e39930571b7af78d612d2",
+          "line": 52,
+          "anchor": "name = \"sandworm\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/sandworm.lua",
+          "sha256": "d3b650d818aa36a5560a366bb100fc2c4a1895b0d64e39930571b7af78d612d2",
+          "line": 24,
+          "anchor": "type = \"vermin\", subtype = \"sandworm\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature.",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_sandworm_sandworm.png",
+          "sha256": "278e97e1f748313e9136b56fcee03954082d82c00c71462cfb1594ab7e05b949",
+          "role": "identity",
+          "note": "Native species shape: one slender glossy orange-tan worm lying in a smooth S-curve, small blunt head."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/sandworm-queen.png",
+          "sha256": "b83e818a5bcbbfc302871328e5763f2a0c62ee8fb6a39ee56bf29cf4f7564cd7",
+          "role": "family",
+          "note": "Shipped catalog vermin/sandworm: fat tan segmented coil with a toothy frilled maw and spined back. The plain sandworm must stay a slim smooth S-curve, not another coil with a big maw."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A single slender giant sandworm lying in one smooth open S-curve, glossy warm orange-tan segmented body of even thickness with fine ring-shaped segment lines, a small rounded blunt head with a modest round mouth (no large fangs, no frill, no spines, no armour plates), the tail tapering to a soft point. Low, smooth and unarmoured; the whole S-curve stays well inside the disc.",
+        "contrast": "Second vermin/sandworm catalog identity next to sandworm-queen (fat tan coil with toothy frilled maw and spined back) and, in the same family batch, sandworm destroyer (thick dark-armoured tight ring) and sandworm burrower (two green arches out of a sand heap). The plain sandworm is the slim open S-curve: long thin smooth silhouette, lightest warm orange-tan value of the sandworms, no armour and no spines.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Warm glossy orange-tan sand-coloured hide with paler cream segment lines and a slightly deeper orange belly edge, small dark round mouth; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=sandworm, type=vermin/subtype=sandworm, no define_as, not unique, sandworm.lua:52); details and hashes in evidence/monster-batch-h-20260929/source-contracts.json. No image=/nice_tile; NPC.lua:33 formula gives npc/vermin_sandworm_sandworm.png (present on disk, inspected). Resolves via the generic actor.image==entry.image \"single\" appearance path. Non-unique: exact single-image catalog entry, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-h-20260929/source-contracts.json",
+          "sha256": "7de519f5332e856fa10e27933e77d45d353392cc1894eb713d861488692b8076"
+        }
+      ]
+    },
+    {
+      "asset_id": "sandworm-destroyer",
+      "native_name": "sandworm destroyer",
+      "scope": "dreadfell and sandworm-lair random pool (rarity 3), vermin/sandworm, non-unique",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/sandworm.lua",
+          "sha256": "d3b650d818aa36a5560a366bb100fc2c4a1895b0d64e39930571b7af78d612d2",
+          "line": 58,
+          "anchor": "name = \"sandworm destroyer\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/sandworm.lua",
+          "sha256": "d3b650d818aa36a5560a366bb100fc2c4a1895b0d64e39930571b7af78d612d2",
+          "line": 24,
+          "anchor": "type = \"vermin\", subtype = \"sandworm\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature.",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_sandworm_sandworm_destroyer.png",
+          "sha256": "d1e28ba64ea104190ee81c6e386bf1480cdc4fd105c4b6be70389964f623c1ca",
+          "role": "identity",
+          "note": "Native species shape: thick armoured worm curled into a ring with an open toothed maw at the front."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/sandworm-queen.png",
+          "sha256": "b83e818a5bcbbfc302871328e5763f2a0c62ee8fb6a39ee56bf29cf4f7564cd7",
+          "role": "family",
+          "note": "Shipped catalog vermin/sandworm: fat tan coil with frilled maw and tail flourish. The destroyer must read as a heavier, darker, closed ring of armour plates, not a copy of the queen."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A heavy armoured sandworm coiled into one tight thick ring around its own body, the head raised at the front of the ring with a wide open circular maw lined with short pale bone-cream teeth, thick rust-brown chitin plates banded across the whole back with a row of short blunt spines, paler sand-tan belly showing between the plates. Compact closed doughnut-like silhouette fully inside the disc.",
+        "contrast": "Third vermin/sandworm identity: the destroyer is the thick heavy closed ring with visible armour banding and cream teeth as the value break, versus the plain sandworm (slim open pale S-curve, no armour), versus sandworm-queen (tan frilled coil with a tail flourish) and versus the burrower (two separate olive-green arches). Distinguish by silhouette (closed ring vs open S vs two arches) and value (mid rust-brown plates with pale tan plate edges, not pale, not near-black).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid rust-brown armour plates with lighter tan-orange plate edges and highlights, pale bone-cream teeth, sand-tan belly, dark red-brown mouth interior; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=sandworm destroyer, type=vermin/subtype=sandworm, no define_as, not unique, sandworm.lua:58); details and hashes in evidence/monster-batch-h-20260929/source-contracts.json. No image=/nice_tile; NPC.lua:33 formula gives npc/vermin_sandworm_sandworm_destroyer.png (present, inspected). Resolves via the generic actor.image==entry.image \"single\" appearance path. Non-unique: exact single-image catalog entry, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-h-20260929/source-contracts.json",
+          "sha256": "7de519f5332e856fa10e27933e77d45d353392cc1894eb713d861488692b8076"
+        }
+      ]
+    },
+    {
+      "asset_id": "sandworm-burrower",
+      "native_name": "sandworm burrower",
+      "scope": "sandworm-lair scripted tunnel-guide worm (define_as SANDWORM_TUNNELER, invulnerable, never_anger), vermin/sandworm, non-unique",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/sandworm-lair/npcs.lua",
+          "sha256": "944fad4800a0c7181abbbf5a61a021223f4803340a0c1b5c7cb74f208daaf418",
+          "line": 34,
+          "anchor": "name = \"sandworm burrower\","
+        },
+        {
+          "path": "game/modules/tome/data/zones/sandworm-lair/npcs.lua",
+          "sha256": "944fad4800a0c7181abbbf5a61a021223f4803340a0c1b5c7cb74f208daaf418",
+          "line": 32,
+          "anchor": "define_as = \"SANDWORM_TUNNELER\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature.",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_sandworm_sandworm_burrower.png",
+          "sha256": "798943825d616f9700f76c17dbb1c9362787856eff4f5ead0308742ea2b6c447",
+          "role": "identity",
+          "note": "Native species shape: an olive-brown worm seen as two separate arches, a head arch and a tail arch, diving through the ground."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/sandworm-queen.png",
+          "sha256": "b83e818a5bcbbfc302871328e5763f2a0c62ee8fb6a39ee56bf29cf4f7564cd7",
+          "role": "family",
+          "note": "Shipped catalog vermin/sandworm: tan coil with frilled maw. The burrower must be a green two-arch diving worm, not a coil."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A sandworm caught mid-dive through a small low heap of pale sand: two separate arches of one olive-green segmented worm body rise out of the sand heap, a larger arch at left-front ending in a rounded blunt head with a small round mouth, and a smaller tapering tail arch at right-back, the two arches clearly separated by the sand heap between them. Smooth body with pale cream segment rings. The sand heap is small, contained and entirely inside the disc; no dust cloud.",
+        "contrast": "The only green sandworm and the only two-arch silhouette: versus the plain sandworm (one continuous pale orange S-curve), the destroyer (closed dark-armoured ring) and the queen (tan coil). Silhouette (two separated arches over a heap) and hue/value (mid olive-green with cream rings) both differ.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Muted mid olive-green hide with pale yellow-cream segment rings and lighter olive underside, small pale beige sand heap; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=sandworm burrower, define_as=SANDWORM_TUNNELER, type=vermin/subtype=sandworm, not unique, sandworm-lair/npcs.lua:32-34); details and hashes in evidence/monster-batch-h-20260929/source-contracts.json. No image=/nice_tile; NPC.lua:33 formula gives npc/vermin_sandworm_sandworm_burrower.png (present, inspected). Invulnerable scripted guide, not a combat unit; token still exact-identity gated by define_as. Resolves via the generic actor.image==entry.image \"single\" appearance path. Non-unique: exact single-image catalog entry, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-h-20260929/source-contracts.json",
+          "sha256": "7de519f5332e856fa10e27933e77d45d353392cc1894eb713d861488692b8076"
+        }
+      ]
+    },
+    {
+      "asset_id": "white-crystal",
+      "native_name": "white crystal",
+      "scope": "scintillating-caves random pool (rarity 1), immovable/crystal, non-unique",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/crystal.lua",
+          "sha256": "d6cdbfe8d69dc00a9167ec1c348469f915103835ee7485534f8e0086982decc2",
+          "line": 109,
+          "anchor": "name = \"white crystal\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/crystal.lua",
+          "sha256": "d6cdbfe8d69dc00a9167ec1c348469f915103835ee7485534f8e0086982decc2",
+          "line": 24,
+          "anchor": "type = \"immovable\", subtype = \"crystal\", image = \"npc/crystal_npc.png\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature.",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/crystal_npc.png",
+          "sha256": "75aa7b9a43f3980ff5ac3c269b1d552dc6e6a0274fe7833abab2b902525bb379",
+          "role": "identity",
+          "note": "Native species: a translucent pale ice-blue crystal formation. Keep pale ice-white; the native spidery-arch shape is NOT to be copied."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/spellblaze-crystal.png",
+          "sha256": "edf1531bb8ecb360c21fedfefe951b1e50735b6929c0334931d99a88c13d7c89",
+          "role": "family",
+          "note": "Shipped catalog immovable/crystal: round dense purple starburst cluster. The white crystal must be tall and upright, not a round cluster."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A tall upright cluster of opaque faceted hexagonal crystal prisms growing from a small rocky base: one tall central spire flanked by four shorter spires of graduated heights fanning outward like a bouquet, pointed tips, clean flat facets. Solid opaque facets with clearly visible bright lit planes and slightly darker shaded planes; no transparency, no see-through holes, no glow.",
+        "contrast": "Family of immovable/crystal with spellblaze-crystal (round dense purple starburst) and, in the same batch, red crystal (long horizontal fan of thin blade shards) and crimson crystal (two thick blocky leaning prisms). The white crystal is the tall narrow vertical central-spire fan and the lightest value of the family; silhouette (tall vertical bouquet) and value (palest) separate it, not hue alone.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Cool pale ice-white and very pale blue-grey crystal facets with slightly deeper blue-grey shaded planes and crisp white highlights, small grey-brown rocky base; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=white crystal, type=immovable/subtype=crystal, no define_as, not unique, crystal.lua:109); details and hashes in evidence/monster-batch-h-20260929/source-contracts.json. No entity image=; inherits BASE_NPC_CRYSTAL image npc/crystal_npc.png (crystal.lua:24, present, inspected); native tint is a colour modulation only. Resolves via the generic actor.image==entry.image \"single\" appearance path. Non-unique: exact single-image catalog entry, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-h-20260929/source-contracts.json",
+          "sha256": "7de519f5332e856fa10e27933e77d45d353392cc1894eb713d861488692b8076"
+        }
+      ]
+    }
+  ]
+}

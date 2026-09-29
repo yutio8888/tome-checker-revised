@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-r-7",
+  "assets": [
+    {
+      "asset_id": "corrupted-war-dog",
+      "native_name": "corrupted war dog",
+      "scope": "keepsake-meadow (zones/keepsake-meadow/npcs.lua:118, animal/canine, non-unique, define_as CORRUPTED_WAR_DOG, rank 1, base BASE_NPC_CANINE, explicit image=npc/canine_dw.png, rarity 5 with cave_rarity 5; zone-private pool E12.5); shares the PNG with the dire wolf and with the same zone's \"war dog\" (other names, other catalog state)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 118,
+          "anchor": "define_as = \"CORRUPTED_WAR_DOG\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 119,
+          "anchor": "name = \"corrupted war dog\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/canine.lua",
+          "sha256": "edbbc6bd1d02c92bf53b569e210e26cfb4eb25ecba1b077f90697f390cab5e7a",
+          "line": 75,
+          "anchor": "name = \"dire wolf\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/canine_dw.png",
+          "sha256": "31784e483aaa0b3dfd8dc583698416b61d0f4188dccf2ef6ec038b9a70074a4f",
+          "role": "identity",
+          "note": "Native shape (64x64): a large dark brown dog facing forward, thick-set, ears up, baring teeth."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/dire-wolf.png",
+          "sha256": "d1bba94a9cba2a01e47013e398c5ab80537dce0c48a0795aeafcf48632c7910e",
+          "role": "family",
+          "note": "Shipped dire wolf (brown wolf prowling side-on, head level with the shoulders): the corrupted war dog must not be a brown side-on prowling wolf."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A corrupted war dog seen from a steep overhead three-quarter angle: a heavy thick-set black-furred mastiff-type war dog CROUCHED BACK ON ITS HAUNCHES in a coiled pouncing stance, chest low and front paws planted forward, head lowered and turned up toward the viewer with the jaws wide open and slavering, a studded iron collar with a short broken chain, patches of fur torn away to show glowing sickly violet-green veins and cracks running along the ribs, shoulders and muzzle, small glowing green eyes, cropped notched ears, a stiff short tail. Twisted, coiled, corrupted and complete.",
+        "contrast": "Canine family: the corrupted WAR DOG is a COILED POUNCING CROUCH facing the viewer with an open slavering mouth, a spiked collar and glowing violet-green corruption veins on black fur (silhouette: compact haunch-heavy crouch with head forward; hue: black-charcoal fur with violet-green veins; value: mid-dark with bright veins). The shipped dire wolf is a brown wolf prowling SIDE-ON; the shipped warg is a dark grey side-on wolf.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, tails, weapons, staffs and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, leg or drip reaches the outer sixth ring band or crosses the disc rim. Calibration from the previous generation of this exact token: it passed the gate, but at 48px the near-black fur merged into one dark blob on the charcoal disc. This time draw the corrupted war dog SIDE-ON in a snarling lunging stance, seen from the side and slightly above, head turned toward the viewer with the jaws WIDE OPEN showing pale teeth, front legs and hind legs clearly separated from the body with daylight between them, the head clearly separate from the shoulders. Make the coat a MID charcoal-grey, clearly LIGHTER than the disc, with broad pale ash-grey highlight planes on the back, shoulders and haunches, a PALE BONE-WHITE ash underbelly, chest and muzzle, a studded iron collar with a short broken chain, and BRIGHT violet and acid-green glowing corruption veins and cracks across the ribs, shoulders and face, glowing green eyes. Distinct from the shipped brown dire wolf: grey not brown, spiked collar, open jaws, glowing veins. Never near-black anywhere except the mouth interior.",
+        "palette": "Charcoal-black fur with lighter grey-brown highlight planes on the back and shoulders, glowing violet-green corruption veins, iron studded collar with lighter steel highlights, pale bone teeth, green eyes; nothing darker than very dark charcoal except the mouth interior; keep the fur clearly lighter than the disc rim and mid-value overall, never near-black; the veins must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=corrupted war dog, define_as=CORRUPTED_WAR_DOG, type=animal/subtype=canine, unique=False); details and hashes in evidence/monster-batch-r-20260929/source-contracts.json. base BASE_NPC_CANINE (animal/canine, no image=); leaf carries define_as CORRUPTED_WAR_DOG, so the entry binds it exactly; explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; talents Rush, Grappling Stance, Clinch (Grappling Stance is sustained but the leaf has no sustains_at_birth, and it writes only temporary values); no sustains_at_birth and no sustained talent. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-r-20260929/source-contracts.json",
+          "sha256": "588ddd99e3d398bf93163ca804f053510ce1388654ff89c900e866205ae58c92"
+        }
+      ]
+    }
+  ]
+}

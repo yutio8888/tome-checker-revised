@@ -1,0 +1,240 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-i-2",
+  "assets": [
+    {
+      "asset_id": "harkor-zun-fragment",
+      "native_name": "The Fragmented Essence of Harkor'Zun",
+      "scope": "tempest-peak unique elemental/xorn (xorn.lua; rarity 50; five clones share the entry)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/xorn.lua",
+          "sha256": "9157ba56ba268a92785c4afa8c26d68d68fa8944837358b19467b4681b49e837",
+          "line": 93,
+          "anchor": "name = \"The Fragmented Essence of Harkor'Zun\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_xorn_fragmented_harkor_zun.png",
+          "sha256": "36da42e3905f7d555c249b085cac6e00a140978849d621a81a097a6adaef680c",
+          "role": "identity",
+          "note": "Native shape: a jagged fractured heap of brown earth-rock spikes, no limbs."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/boney-experiment.png",
+          "sha256": "664939a15fc7eafcc3fb895a682b5552eda22098d43f9578f005cb3f4191c15b",
+          "role": "family",
+          "note": "Shipped boney experiment (ivory spiky bone pile): the fragment must be opaque earth-rock with glowing cracks, not bone."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A compact upright cluster of jagged tan-ochre earth and rock shards, fractured apart: one central cracked spire with four broken splinters hovering just off its surface, a rough boulder-like lump at the base, and hairline glowing violet-lilac cracks running through the stone. Solid opaque rock with light-catching flat facets. No limbs, no head, no face.",
+        "contrast": "Siblings and lookalikes: Harkor'Zun himself (a huge horned four-armed humanoid, drawn separately), boney experiment (ivory bone spikes), crystal tokens (translucent white, red, crimson and violet crystals) and the sandworm-burrower sand heap. The fragment is a headless heap of splinters with a tall central spire (silhouette), opaque light tan-ochre rock with violet cracks (hue), clearly lighter than the darkest parts of the base.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Light tan-ochre and sandstone rock facets with slightly darker terracotta cracks and thin glowing violet-lilac fracture lines; never dark brown-black. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=The Fragmented Essence of Harkor'Zun, define_as=None, type=elemental/subtype=xorn, unique=True); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. nice_tile resolver sets image=\"invis.png\" + add_mos[1]={image=<sprite>, display_h=2, display_y=-1} when nicer_tiles is on; the catalog unique entry matches that native-tall body (and the plain image when it is off); NPC.lua:33 formula is never reached. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    },
+    {
+      "asset_id": "harkor-zun",
+      "native_name": "Harkor'Zun",
+      "scope": "tempest-peak unique demon/major (xorn.lua, FULL_HARKOR_ZUN, no rarity; only spawned when five fragments die)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/xorn.lua",
+          "sha256": "9157ba56ba268a92785c4afa8c26d68d68fa8944837358b19467b4681b49e837",
+          "line": 166,
+          "anchor": "define_as = \"FULL_HARKOR_ZUN\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/xorn.lua",
+          "sha256": "9157ba56ba268a92785c4afa8c26d68d68fa8944837358b19467b4681b49e837",
+          "line": 168,
+          "anchor": "name = \"Harkor'Zun\", color=colors.VIOLET, unique=true,"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_xorn_harkor_zun.png",
+          "sha256": "5d598aeab3301694af5aae14837e662a7c8037dda826f3a69fd05f3f6ea7326d",
+          "role": "identity",
+          "note": "Native shape: a huge hunched earth-brown horned humanoid with extra lower arms, arms raised."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/lithfengel.png",
+          "sha256": "48459b7dbaaf8362cdd8dc6bb7e2a1b608dd32add5ee921300b92f49bfce5a19",
+          "role": "family",
+          "note": "Shipped Lithfengel (demon/major, hulking brown horned beast): Harkor'Zun must be a stone humanoid, greyer and with raised arms, not this brown beast."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A hulking hunched earth-demon built of grey-tan stone and clay: very broad shoulders, a small horned head with two glowing amber eyes, two big upper arms raised and spread wide ending in heavy blocky fists, two shorter lower arms braced forward like a crab, thick pillar legs, carved rocky ridges along the back, glowing amber-orange cracks across the chest. Compact stance, fists and elbows well inside the disc.",
+        "contrast": "Lookalikes: Lithfengel (brown hulking horned beast on all fours), the fragment of Harkor'Zun (headless splinter heap, drawn separately), Prox/Bill trolls and the crystal tokens. Harkor'Zun is an upright stone humanoid with a horned head and arms raised in a wide V (silhouette), grey-tan stone with amber glowing cracks (hue/value), lighter than Lithfengel's brown.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Warm grey-tan stone and pale clay planes with darker terracotta joints and glowing amber-orange cracks and eyes; body never darker than mid-tone. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Harkor'Zun, define_as=FULL_HARKOR_ZUN, type=demon/subtype=major, unique=True); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. nice_tile resolver sets image=\"invis.png\" + add_mos[1]={image=<sprite>, display_h=2, display_y=-1} when nicer_tiles is on; the catalog unique entry matches that native-tall body (and the plain image when it is off); NPC.lua:33 formula is never reached. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    },
+    {
+      "asset_id": "burb-snow-giant-champion",
+      "native_name": "Burb the snow giant champion",
+      "scope": "tempest-peak unique giant/ice (snow-giant.lua, BURB_SNOW_GIANT, rarity 10)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/snow-giant.lua",
+          "sha256": "0d1acc9131e7c4691f3c5213bbf33b8f5c13bb2c1e9de93c53dfd10cac6eb042",
+          "line": 110,
+          "anchor": "define_as = \"BURB_SNOW_GIANT\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/snow-giant.lua",
+          "sha256": "0d1acc9131e7c4691f3c5213bbf33b8f5c13bb2c1e9de93c53dfd10cac6eb042",
+          "line": 111,
+          "anchor": "name = \"Burb the snow giant champion\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ice_burb_the_snow_giant_champion.png",
+          "sha256": "721935d2e489941b1b28ccf07937314ae40cee5ab6ac6323a4a086f09dd1d7df",
+          "role": "identity",
+          "note": "Native shape: armoured horned-helm snow giant with a fur mantle and pale blue frost sparks; the sprite armour is dark."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/bill.png",
+          "sha256": "41543243196311517082c546e74b5502b8edbd8a7aab9646547ff3aa19cf91da",
+          "role": "family",
+          "note": "Shipped Bill (giant/troll, grey hulk with a log): Burb is a pale cold armoured giant with fur and no club."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A towering maddened snow giant champion: pale frost-grey and ice-blue plate armour, a thick white fur mantle across the shoulders, a horned iron helm above a wild white beard and wide angry eyes, one huge clenched fist raised and the other arm hanging, a few pale blue frost sparks crackling close to the body. Hunched forward and compact, everything inside the inner four-fifths of the disc.",
+        "contrast": "The only giant/ice in the catalog. Giants nearby: Prox, Bill and Shax (brown, grey and green trolls with clubs) and the shivgoroth (crystalline blue ice elemental). Burb is pale white-blue armoured with fur and horns and no weapon (silhouette: horned helm, fur mantle, raised fist), with light frost values instead of the trolls' earth tones (hue/value). His armour must read light frost-blue-grey, not the sprite's near-black plate.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Light frost-grey and ice-blue plate with white fur, mid-grey iron helm and horns, pale cyan frost sparks; nothing darker than mid grey. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Burb the snow giant champion, define_as=BURB_SNOW_GIANT, type=giant/subtype=ice, unique=True); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. nice_tile resolver sets image=\"invis.png\" + add_mos[1]={image=<sprite>, display_h=2, display_y=-1} when nicer_tiles is on; the catalog unique entry matches that native-tall body (and the plain image when it is off); NPC.lua:33 formula is never reached. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    },
+    {
+      "asset_id": "norgan",
+      "native_name": "Norgan",
+      "scope": "reknor-escape unique humanoid/dwarf (NORGAN, dwarf-start squadmate, control=order party member)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/reknor-escape/npcs.lua",
+          "sha256": "96f161dde6a72cc4771f72d0f48480b7262511298e742763387baa0ccd33e1e1",
+          "line": 91,
+          "anchor": "define_as = \"NORGAN\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/reknor-escape/npcs.lua",
+          "sha256": "96f161dde6a72cc4771f72d0f48480b7262511298e742763387baa0ccd33e1e1",
+          "line": 93,
+          "anchor": "name = \"Norgan\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_dwarf_norgan.png",
+          "sha256": "50cc3f69c4ede4f4b86d277297bc8090f12f53d0758fe71605db9ceab79b40cb",
+          "role": "identity",
+          "note": "Native shape: broad dwarf berserker with a big brown beard, olive tabard and an iron maul on the shoulder."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/krogar.png",
+          "sha256": "efa3e73b8f761fa8e7b80bf45290ed1d35f7f71747d576a66614abe0a3a44d92",
+          "role": "family",
+          "note": "Shipped Krogar (orc in heavy armour with a staff): Norgan is a squat bearded dwarf with a maul, not a tall armoured orc."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A short, very broad dwarf berserker with a bare head, a huge braided chestnut-brown beard, thick bare forearms, an olive-green tabard over iron mail, a big iron greatmaul resting on one shoulder with its head kept close to his ear, the other hand clenched into a fist forward, a small brass lantern hanging at his belt. Squat and wide, wider than tall.",
+        "contrast": "The only dwarf in the catalog; the other humanoid tokens are tall: human thieves/bandits, Celia, Urkis, Harno, Necromancer, elf Fillarel and orc Krogar. Norgan is squat with a huge beard and shoulder maul (silhouette: wider than tall), warm chestnut and olive on a mid-light value.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Chestnut-brown beard and hair, warm skin tones, olive-green tabard, mid grey iron mail and maul head, brass lantern; all values mid or lighter. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Norgan, define_as=NORGAN, type=humanoid/subtype=dwarf, unique=True); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. formula: standalone entry (no base), unique=true, no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint; equipment is resolvers.equip only (no paper-doll for an NPC without moddable_tile); NPC.lua:33 formula gives npc/humanoid_dwarf_norgan.png; generic single path. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    }
+  ]
+}

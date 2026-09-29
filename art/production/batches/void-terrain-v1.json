@@ -1,0 +1,171 @@
+{
+  "schema": 1,
+  "batch_id": "void-terrain-v1",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Native identities and rules audited in evidence/void-20260928/identity.md.",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/void-20260928/identity.md",
+          "sha256": "b4a61c5af11f8f9102478dc4986bfae20866a53ee2a5c58c61129f307e35362c",
+          "role": "evidence",
+          "note": "Native source audit"
+        }
+      ],
+      "scope": "unhallowed-morass, abashed-expanse, temporal-rift exact identities only",
+      "asset_id": "void-walkable-platform",
+      "native_name": "VOID",
+      "kind": "terrain-floor",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/void.lua",
+          "sha256": "1346d53dfc56cc7d7e6a01f666523d3ecc0d22e88fe899e950cb5c70fb53fdf4",
+          "role": "source",
+          "note": "",
+          "line": 23,
+          "anchor": "define_as = \"VOID\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/rift/rift_inner_05_01.png",
+          "sha256": "eccae1b4a9e04fe708cfae8a1008c8aa519e2f0f734242db16405dafec8b3b6a",
+          "role": "identity",
+          "note": "Native visual identity"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/refined/daikara/rock-ground0.png",
+          "sha256": "85fbdb7e93a83b3350a1d68e3b9702dbc1f2becdf5f7ee077f63481dc68cb0ef",
+          "role": "style",
+          "note": "Existing painted board texture and scale"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Walkable.",
+        "sight": "Open.",
+        "danger": "No native on_stand damage.",
+        "interaction": "None.",
+        "export": "Opaque seamless 128px tabletop floor; parity pair."
+      },
+      "prompt_fields": {
+        "subject": "Pale lavender-grey astral stone platform with fine teal and violet temporal inlays and weathered radial fracture lines.",
+        "contrast": "Light walkable plane must be plainly brighter than the dark blocked rift at 48px.",
+        "composition": "Top-down fully opaque seamless square, no cliff edge or isolated disc; connected floor across all borders.",
+        "palette": "Pale grey-violet stone, cyan and amethyst veins, soft top-left light.",
+        "mechanics": "Walkable and harmless. No symbols, people, text, arrows or raised obstacle."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native identities and rules audited in evidence/void-20260928/identity.md.",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/void-20260928/identity.md",
+          "sha256": "b4a61c5af11f8f9102478dc4986bfae20866a53ee2a5c58c61129f307e35362c",
+          "role": "evidence",
+          "note": "Native source audit"
+        }
+      ],
+      "scope": "unhallowed-morass, abashed-expanse, temporal-rift exact identities only",
+      "asset_id": "void-blocked-fracture",
+      "native_name": "SPACETIME_RIFT",
+      "kind": "terrain-floor",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/void.lua",
+          "sha256": "1346d53dfc56cc7d7e6a01f666523d3ecc0d22e88fe899e950cb5c70fb53fdf4",
+          "role": "source",
+          "note": "",
+          "line": 45,
+          "anchor": "define_as = \"SPACETIME_RIFT\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/rift/rift_inner_05_01.png",
+          "sha256": "eccae1b4a9e04fe708cfae8a1008c8aa519e2f0f734242db16405dafec8b3b6a",
+          "role": "identity",
+          "note": "Native visual identity"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/refined/daikara/rock-ground0.png",
+          "sha256": "85fbdb7e93a83b3350a1d68e3b9702dbc1f2becdf5f7ee077f63481dc68cb0ef",
+          "role": "style",
+          "note": "Existing painted board texture and scale"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Blocks movement.",
+        "sight": "General grid open; Unhallowed override blocks sight.",
+        "danger": "No damage callback.",
+        "interaction": "No dig.",
+        "export": "Opaque dark fracture interior; 16-way exposed raised edge derived on export."
+      },
+      "prompt_fields": {
+        "subject": "Otherworldly broken edge of reality, deep indigo and black fracture field with violet shards and sparse turquoise glints.",
+        "contrast": "Much darker than pale walkable platform, clearly impassable even in dim remembered view.",
+        "composition": "Top-down opaque seamless fractured abyss to all four edges, no all-around island border; exporter adds a hard rim on sides adjoining walkable cells.",
+        "palette": "Midnight indigo, black violet, restrained cyan highlights.",
+        "mechanics": "Blocks movement but causes no contact damage; no warning triangles, flames, arrows or text."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native identities and rules audited in evidence/void-20260928/identity.md.",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/void-20260928/identity.md",
+          "sha256": "b4a61c5af11f8f9102478dc4986bfae20866a53ee2a5c58c61129f307e35362c",
+          "role": "evidence",
+          "note": "Native source audit"
+        }
+      ],
+      "scope": "unhallowed-morass, abashed-expanse, temporal-rift exact identities only",
+      "asset_id": "space-floating-platform",
+      "native_name": "FLOATING_ROCKS",
+      "kind": "terrain-floor",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/void.lua",
+          "sha256": "1346d53dfc56cc7d7e6a01f666523d3ecc0d22e88fe899e950cb5c70fb53fdf4",
+          "role": "source",
+          "note": "",
+          "line": 60,
+          "anchor": "define_as = \"FLOATING_ROCKS\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/floating_rocks05_01.png",
+          "sha256": "2a432766a0c33c99bd3522343272ad6eeba187fc77c6110b1448054bcce5ecd6",
+          "role": "identity",
+          "note": "Native visual identity"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/refined/daikara/rock-ground0.png",
+          "sha256": "85fbdb7e93a83b3350a1d68e3b9702dbc1f2becdf5f7ee077f63481dc68cb0ef",
+          "role": "style",
+          "note": "Existing painted board texture and scale"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Walkable moving platform.",
+        "sight": "Open.",
+        "danger": "No damage callback.",
+        "interaction": "Zone on_turn moves platforms; leave callback untouched.",
+        "export": "Opaque neutral rock master, 16-way perimeter connected to OUTERSPACE."
+      },
+      "prompt_fields": {
+        "subject": "A suspended ancient stone platform made of pale lunar rock and carved thin star-chart lines, tactically clear flat walking surface.",
+        "contrast": "Bright enough to contrast with blocked dark outer space at 48px.",
+        "composition": "Top-down fully opaque seamless square of flat weathered rock, no border across connected tiles; exporter adds raised chipped perimeter at exposure to space.",
+        "palette": "Cool slate grey, muted violet and worn silver; tabletop painted finish.",
+        "mechanics": "Walkable platform that can relocate; no teleport symbol, arrow, creatures or text."
+      }
+    }
+  ]
+}

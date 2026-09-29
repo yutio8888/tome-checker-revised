@@ -1,0 +1,242 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-h-2",
+  "assets": [
+    {
+      "asset_id": "red-crystal",
+      "native_name": "red crystal",
+      "scope": "scintillating-caves random pool (rarity 1), immovable/crystal, non-unique",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/crystal.lua",
+          "sha256": "d6cdbfe8d69dc00a9167ec1c348469f915103835ee7485534f8e0086982decc2",
+          "line": 97,
+          "anchor": "name = \"red crystal\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/crystal.lua",
+          "sha256": "d6cdbfe8d69dc00a9167ec1c348469f915103835ee7485534f8e0086982decc2",
+          "line": 24,
+          "anchor": "type = \"immovable\", subtype = \"crystal\", image = \"npc/crystal_npc.png\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature.",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/crystal_red.png",
+          "sha256": "362d6d4e7e2ed26546f7083b9c8e5900d324363291bbcf3d31e3a3c2049fd5c5",
+          "role": "identity",
+          "note": "Native species: coral-red translucent crystal formation. Keep coral-red hue; do NOT copy the spidery-arch shape."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/spellblaze-crystal.png",
+          "sha256": "edf1531bb8ecb360c21fedfefe951b1e50735b6929c0334931d99a88c13d7c89",
+          "role": "family",
+          "note": "Shipped catalog immovable/crystal: round dense purple starburst cluster. The red crystal must be an elongated horizontal blade fan, not round."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A horizontal fan of five long jagged blade-like opaque crystal shards of different lengths, all rooted in one small rocky boss at the left and spreading toward the right and slightly upward like a spray of swords, sharp asymmetric tips, flat lit facets and darker shaded facets. Elongated left-to-right silhouette that stays low; the longest shard tip stops well inside the inner four-fifths of the disc. Solid opaque facets, no transparency, no glow.",
+        "contrast": "Family of immovable/crystal with spellblaze-crystal (round purple cluster), white crystal (tall vertical central-spire bouquet, palest) and crimson crystal (two thick blocky prisms, darker). The red crystal is the long horizontal many-blade fan: silhouette (thin horizontal blades) and value (bright mid-value coral red) separate it from the others, not hue alone.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Bright coral-red and orange-red crystal facets with pale pink-orange lit edges and deeper red shaded planes, small grey-brown rocky root; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=red crystal, type=immovable/subtype=crystal, no define_as, not unique, crystal.lua:97); details and hashes in evidence/monster-batch-h-20260929/source-contracts.json. Explicit image=\"npc/crystal_red.png\" (present, inspected); native tint is a colour modulation only. Resolves via the generic actor.image==entry.image \"single\" appearance path. Non-unique: exact single-image catalog entry, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-h-20260929/source-contracts.json",
+          "sha256": "7de519f5332e856fa10e27933e77d45d353392cc1894eb713d861488692b8076"
+        }
+      ]
+    },
+    {
+      "asset_id": "crimson-crystal",
+      "native_name": "crimson crystal",
+      "scope": "scintillating-caves random pool (rarity 3), immovable/crystal, non-unique",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/crystal.lua",
+          "sha256": "d6cdbfe8d69dc00a9167ec1c348469f915103835ee7485534f8e0086982decc2",
+          "line": 131,
+          "anchor": "name = \"crimson crystal\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/crystal.lua",
+          "sha256": "d6cdbfe8d69dc00a9167ec1c348469f915103835ee7485534f8e0086982decc2",
+          "line": 24,
+          "anchor": "type = \"immovable\", subtype = \"crystal\", image = \"npc/crystal_npc.png\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature.",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/crystal_darkred.png",
+          "sha256": "b258d00b34789ab99f192a18378eef076bf9d9bd79790c19e673a4dc08305a6a",
+          "role": "identity",
+          "note": "Native species: dark red translucent crystal formation. Keep deep crimson hue; do NOT copy the spidery-arch shape."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/spellblaze-crystal.png",
+          "sha256": "edf1531bb8ecb360c21fedfefe951b1e50735b6929c0334931d99a88c13d7c89",
+          "role": "family",
+          "note": "Shipped catalog immovable/crystal: round dense purple starburst cluster. The crimson crystal must be two chunky blocky prisms, not a spiky cluster."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "Two thick chunky opaque crystal prisms with flat wide faceted sides, leaning toward one another and fused at a shared rocky base: a larger one at the rear left and a smaller one at the front right, plus one tiny loose crystal chip at the base. Blunt chiselled angular tops, not needle-thin spires, solid and heavy like cut gemstones. Broad lit facets face the upper left so the body is never a dark blob. No transparency, no glow.",
+        "contrast": "Family of immovable/crystal with spellblaze-crystal (round purple starburst), white crystal (tall vertical pale bouquet) and red crystal (long horizontal fan of thin blades). The crimson crystal is the squat, heavy, blocky twin-prism form and the deepest hue, but with broad pale rose lit facets so it never merges into the disc; silhouette (paired blocky prisms) and value (deep crimson with wide pale lit planes) separate it, not hue alone.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Deep crimson-garnet crystal with broad pale rose-pink lit facets facing upper left and darker wine-red shaded facets, small grey-brown rocky base; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=crimson crystal, type=immovable/subtype=crystal, no define_as, not unique, crystal.lua:131); details and hashes in evidence/monster-batch-h-20260929/source-contracts.json. Explicit image=\"npc/crystal_darkred.png\" (present, inspected); native tint is a colour modulation only. Resolves via the generic actor.image==entry.image \"single\" appearance path. Non-unique: exact single-image catalog entry, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-h-20260929/source-contracts.json",
+          "sha256": "7de519f5332e856fa10e27933e77d45d353392cc1894eb713d861488692b8076"
+        }
+      ]
+    },
+    {
+      "asset_id": "poison-ivy",
+      "native_name": "poison ivy",
+      "scope": "trollmire and unremarkable-cave random pool (rarity 2), immovable/plants, non-unique",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/plant.lua",
+          "sha256": "5f6a594f8dd91919aabb24b89c84b047d234cd92863b449349f03c9576b6658a",
+          "line": 76,
+          "anchor": "name = \"poison ivy\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/plant.lua",
+          "sha256": "5f6a594f8dd91919aabb24b89c84b047d234cd92863b449349f03c9576b6658a",
+          "line": 26,
+          "anchor": "type = \"immovable\", subtype = \"plants\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature.",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/immovable_plants_poison_ivy.png",
+          "sha256": "225fcf2ec62bbfd7ef7977fd110cd4c7629d8786279953fd1860aa58f20261f4",
+          "role": "identity",
+          "note": "Native species shape: low wiry climbing vine with small glossy yellow-green leaves."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/venus-flytrap.png",
+          "sha256": "cbed86869610e30e1f1f5fdb39f58ad94bb9a8a9eb608eb61cf6b5397fd81b6f",
+          "role": "family",
+          "note": "Shipped catalog immovable/plants: broad-leaved plant with a big red toothed mouth. The ivy has no mouth, no large petals or broad leaves."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A low sprawling tangle of climbing ivy vines: several thin curling vine stems radiating from a small central knot, each carrying sharp three-lobed glossy leaves (leaflets in threes) of bright yellow-green, with a few pale-green tendril curls and two or three small cream-white berries. Low, open, wiry web silhouette with visible gaps between vine loops; every tendril tip stays inside the disc.",
+        "contrast": "Second immovable/plants identity next to giant venus flytrap (big broad leaves around a red toothed mouth) and, in the same batch, honey tree (tall round-canopied tree). The ivy is the low open wiry vine web of small three-lobed leaves in bright yellow-green, with no mouth, no flower and no trunk; silhouette (open web) and value (lightest, brightest plant) separate it.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Bright yellow-green and mid-green glossy leaves with pale lime highlights, thin olive-brown vine stems, cream-white berries; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=poison ivy, type=immovable/subtype=plants, no define_as, not unique, plant.lua:76); details and hashes in evidence/monster-batch-h-20260929/source-contracts.json. No image=/nice_tile; NPC.lua:33 formula gives npc/immovable_plants_poison_ivy.png (present, inspected). Resolves via the generic actor.image==entry.image \"single\" appearance path. Non-unique: exact single-image catalog entry, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-h-20260929/source-contracts.json",
+          "sha256": "7de519f5332e856fa10e27933e77d45d353392cc1894eb713d861488692b8076"
+        }
+      ]
+    },
+    {
+      "asset_id": "honey-tree",
+      "native_name": "honey tree",
+      "scope": "old-forest random pool (rarity 3), immovable/plants, non-unique bee-summoning tree",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/plant.lua",
+          "sha256": "5f6a594f8dd91919aabb24b89c84b047d234cd92863b449349f03c9576b6658a",
+          "line": 91,
+          "anchor": "name = \"honey tree\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/plant.lua",
+          "sha256": "5f6a594f8dd91919aabb24b89c84b047d234cd92863b449349f03c9576b6658a",
+          "line": 26,
+          "anchor": "type = \"immovable\", subtype = \"plants\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature.",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/immovable_plants_honey_tree.png",
+          "sha256": "951feb96045afa328434eff8299a1a8e2a40f1908c9b8dbee34d7259fd1e6e0e",
+          "role": "identity",
+          "note": "Native species shape: a broad round-canopied small tree with a short trunk and a pale hive at the side."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/venus-flytrap.png",
+          "sha256": "cbed86869610e30e1f1f5fdb39f58ad94bb9a8a9eb608eb61cf6b5397fd81b6f",
+          "role": "family",
+          "note": "Shipped catalog immovable/plants: broad-leaved plant with a red toothed mouth. The honey tree is a real tree with a trunk and a hanging honeycomb, no mouth."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A compact broad-canopied small tree seen from a steep three-quarter angle: a short thick gnarled umber-brown trunk with visible roots, a rounded dense leafy crown of golden-green leaves, and one large amber honeycomb hive hanging from a low branch at the front left, with three or four tiny bees kept right beside the hive. The whole crown and roots stay well inside the disc.",
+        "contrast": "Third immovable/plants identity next to giant venus flytrap (broad leaves around a red mouth) and, in the same batch, poison ivy (low open bright-green vine web). The honey tree is the only tree: round canopy on a thick trunk with a hanging amber honeycomb; silhouette (mushroom of crown over trunk) and value (warm golden-green, darker trunk) separate it.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Warm golden-green and olive canopy leaves with yellow highlights, thick umber-brown trunk, amber-gold honeycomb with darker hexagon cells, tiny black-and-yellow bees; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=honey tree, type=immovable/subtype=plants, no define_as, not unique, plant.lua:91); details and hashes in evidence/monster-batch-h-20260929/source-contracts.json. No image=/nice_tile; NPC.lua:33 formula gives npc/immovable_plants_honey_tree.png (present, inspected). Summoner with combat=false. Resolves via the generic actor.image==entry.image \"single\" appearance path. Non-unique: exact single-image catalog entry, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-h-20260929/source-contracts.json",
+          "sha256": "7de519f5332e856fa10e27933e77d45d353392cc1894eb713d861488692b8076"
+        }
+      ]
+    }
+  ]
+}

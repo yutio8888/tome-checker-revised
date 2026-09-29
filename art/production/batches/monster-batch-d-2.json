@@ -1,0 +1,246 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-d-2",
+  "assets": [
+    {
+      "asset_id": "giant-carpenter-ant",
+      "native_name": "giant carpenter ant",
+      "scope": "ruins-kor-pul (HIDEOUT), old-forest, unremarkable-cave; giant-ant family member",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 63,
+          "anchor": "name = \"giant carpenter ant\", color=colors.BLACK, image=\"npc/carpenter_ant.png\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ANT\","
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9",
+          "line": 131,
+          "anchor": "\"name\": \"giant carpenter ant\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Approved ground-critter disc, camera, upper-left lighting and finish; copy only the disc/camera/lighting/finish, not the rat body plan."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/carpenter_ant.png",
+          "sha256": "5a61454a98bd410e9ccf2fd2f36014c43f1f2170e7359de5c8b4f8b3d0e17b00",
+          "role": "identity",
+          "note": "Native identity: a giant ant with smooth glossy jet-black chitin and prominently oversized mandibles/pincers extending forward from the head, larger and sharper than an ordinary ant's, matching the native description 'huge mandibles'."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "value", "hue"],
+      "prompt_fields": {
+        "subject": "One giant carpenter ant seen from a steep overhead three-quarter angle: a compact insect body with a rounded thorax and abdomen, six legs splayed for a stable stance, and a pair of prominently oversized, sharp black mandibles projecting forward from the head, clearly larger than an ordinary ant's bite. The chitin is smooth and glossy jet-black, with a strong cool rim-light along the upper-left edges of the head, thorax and mandibles so the dark body stays readable on a dark disc.",
+        "contrast": "This is a new six-member family (white, brown, carpenter, blue, yellow, black ant) sharing one body plan; siblings must not be told apart by hue alone, and this identity shares its native black colour with giant black ant so it needs a second, non-colour cue. Give carpenter ant the family's most distinctive silhouette feature: oversized forward-projecting mandibles clearly bigger than any other sibling's, on an otherwise smooth, glossy carapace (silhouette: big pincers, sleek smooth legs, unlike black ant's plain mandibles and bristly matte legs, and unlike brown ant's hairy fringe). Value/finish: glossy jet-black with a broad cool-white rim-light and crisp specular highlights, distinct from black ant's duller, matte charcoal finish with a smaller, warmer highlight.",
+        "composition": "One complete six-legged ant centred on one circular disc, steep overhead three-quarter view, body angled so the head, mandibles and two or three legs read clearly; the mandibles, every leg and antenna stay inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the head and mandibles out of the upper-right rank corner and upper-left interaction corner. No second creature, no web, no burrow, no scenery.",
+        "palette": "Glossy jet-black chitin with a broad cool light-grey rim-light along the upper-left edges of the head, thorax and mandibles, crisp small specular highlights, deep black-brown shading in the leg joints and creases; restrained copper-grey neutral bevel and charcoal disc at the style reference lightness; no colored faction aura."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Leaf newEntity carries an explicit image= (npc/carpenter_ant.png); BASE_NPC_ANT and the leaf have no add_mos/shader/anim/moddable_tile/add_displays/textures, no define_as, not unique. Static source inspection only, no fixture (evidence/monster-batch-d-20260929). Art-only task; runtime integration and 48/64/96 family review still pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/README.md",
+          "sha256": "e4092a9ce1de4196e045be9f334e5dd3b8f7dbdfc91a25b1b2de63e3d0fa9598"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9"
+        }
+      ]
+    },
+    {
+      "asset_id": "giant-blue-ant",
+      "native_name": "giant blue ant",
+      "scope": "unremarkable-cave; giant-ant family member",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 96,
+          "anchor": "name = \"giant blue ant\", color=colors.BLUE, image=\"npc/blue_ant.png\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ANT\","
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9",
+          "line": 146,
+          "anchor": "\"name\": \"giant blue ant\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Approved ground-critter disc, camera, upper-left lighting and finish; copy only the disc/camera/lighting/finish, not the rat body plan."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/blue_ant.png",
+          "sha256": "af677d3c4bf84ebf10939f74121d908cd2f4e7030a43678b095eba8cbf15ce02",
+          "role": "identity",
+          "note": "Native identity: a giant ant with smooth glossy sapphire-blue chitin, a standard compact build and standard-sized mandibles; no unusual texture or oversized features."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "value", "hue"],
+      "prompt_fields": {
+        "subject": "One giant blue ant seen from a steep overhead three-quarter angle: a compact insect body with a rounded thorax and abdomen, six legs splayed for a stable stance, short antennae and standard-sized mandibles. The chitin is smooth and glossy sapphire-blue, with soft cool-indigo shading in the segment creases and a bright highlight on the thorax.",
+        "contrast": "This is a new six-member family (white, brown, carpenter, blue, yellow, black ant) sharing one body plan; siblings must not be told apart by hue alone. Give blue ant a smooth glossy standard build with no oversized features and no hair fringe (silhouette: plain compact ant shape, distinct from carpenter ant's oversized mandibles and brown ant's bristly fringe). Value/hue: a saturated cool sapphire-blue body, the coolest hue of the set and distinct from every sibling's value, with a crisp glossy highlight as the finish cue shared only with carpenter/yellow's glossy family but never their hue.",
+        "composition": "One complete six-legged ant centred on one circular disc, steep overhead three-quarter view, body angled so the head and two or three legs read clearly; every leg, antenna and mandible stays inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the head and antennae out of the upper-right rank corner and upper-left interaction corner. No second creature, no web, no burrow, no scenery.",
+        "palette": "Glossy sapphire and cobalt blue chitin with cool indigo shading in the body creases and leg joints, a bright cool-white highlight on the thorax from the upper-left light, dark blue-black eyes and mandible tips; restrained copper-grey neutral bevel and charcoal disc at the style reference lightness; no colored faction aura."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Leaf newEntity carries an explicit image= (npc/blue_ant.png); BASE_NPC_ANT and the leaf have no add_mos/shader/anim/moddable_tile/add_displays/textures, no define_as, not unique. Static source inspection only, no fixture (evidence/monster-batch-d-20260929). Art-only task; runtime integration and 48/64/96 family review still pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/README.md",
+          "sha256": "e4092a9ce1de4196e045be9f334e5dd3b8f7dbdfc91a25b1b2de63e3d0fa9598"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9"
+        }
+      ]
+    },
+    {
+      "asset_id": "giant-yellow-ant",
+      "native_name": "giant yellow ant",
+      "scope": "unremarkable-cave; giant-ant family member",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 108,
+          "anchor": "name = \"giant yellow ant\", color=colors.YELLOW, image=\"npc/yellow_ant.png\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ANT\","
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9",
+          "line": 161,
+          "anchor": "\"name\": \"giant yellow ant\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Approved ground-critter disc, camera, upper-left lighting and finish; copy only the disc/camera/lighting/finish, not the rat body plan."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/yellow_ant.png",
+          "sha256": "5bdafbe287ca40617572c28b37fa7336d39fbc62ff569e7d5120f88a11065cc2",
+          "role": "identity",
+          "note": "Native identity: a giant ant with smooth glossy amber-gold chitin, a standard build, legs shown splayed dynamically, and standard-sized mandibles."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "value", "hue"],
+      "prompt_fields": {
+        "subject": "One giant yellow ant seen from a steep overhead three-quarter angle: a compact insect body with a rounded thorax and abdomen, six legs splayed wide for a dynamic, alert stance, short antennae and standard-sized mandibles. The chitin is smooth and glossy amber-gold, with a bright warm highlight on the thorax and deeper amber-brown shading in the creases.",
+        "contrast": "This is a new six-member family (white, brown, carpenter, blue, yellow, black ant) sharing one body plan; siblings must not be told apart by hue alone. Give yellow ant the brightest, most saturated warm hue of the set and the widest, most splayed leg stance (silhouette: legs spread wider and more dynamically than the other five, distinct from white ant's compact neutral stance). Value/hue: warm saturated amber-gold, the brightest body of the family, with a crisp glossy highlight distinct from white ant's cool pale value and brown ant's dull matte umber.",
+        "composition": "One complete six-legged ant centred on one circular disc, steep overhead three-quarter view, body angled so the head and two or three legs read clearly; every leg, antenna and mandible stays inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the head and antennae out of the upper-right rank corner and upper-left interaction corner. No second creature, no web, no burrow, no scenery.",
+        "palette": "Glossy amber-gold chitin with a bright warm-yellow highlight on the thorax from the upper-left light, deeper amber-brown shading in the body creases and leg joints, dark brown eyes and mandible tips; restrained copper-grey neutral bevel and charcoal disc at the style reference lightness; no colored faction aura."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Leaf newEntity carries an explicit image= (npc/yellow_ant.png); BASE_NPC_ANT and the leaf have no add_mos/shader/anim/moddable_tile/add_displays/textures, no define_as, not unique. Static source inspection only, no fixture (evidence/monster-batch-d-20260929). Art-only task; runtime integration and 48/64/96 family review still pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/README.md",
+          "sha256": "e4092a9ce1de4196e045be9f334e5dd3b8f7dbdfc91a25b1b2de63e3d0fa9598"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9"
+        }
+      ]
+    },
+    {
+      "asset_id": "giant-black-ant",
+      "native_name": "giant black ant",
+      "scope": "old-forest; giant-ant family member",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 120,
+          "anchor": "name = \"giant black ant\", color=colors.BLACK, image=\"npc/black_ant.png\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ANT\","
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9",
+          "line": 176,
+          "anchor": "\"name\": \"giant black ant\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Approved ground-critter disc, camera, upper-left lighting and finish; copy only the disc/camera/lighting/finish, not the rat body plan."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/black_ant.png",
+          "sha256": "cef557a3ac3db4ffdc61f1c03f81c98d5ed1091a71b315ff1acf019de1522d41",
+          "role": "identity",
+          "note": "Native identity: a giant ant with matte, cool-toned dark charcoal-black chitin and slightly spiky, jagged-textured legs and antennae, plainer and less glossy than the carpenter ant that shares its base colour, with standard-sized mandibles (no oversized pincers)."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "value", "hue"],
+      "prompt_fields": {
+        "subject": "One giant black ant seen from a steep overhead three-quarter angle: a compact insect body with a rounded thorax and abdomen, six legs splayed for a stable stance, short antennae and standard-sized mandibles (no oversized pincers). The chitin is matte, cool charcoal-black with a slightly rough, jagged texture along the leg segments and antennae rather than a smooth glossy sheen, and only a small, soft highlight on the thorax.",
+        "contrast": "This is a new six-member family (white, brown, carpenter, blue, yellow, black ant) sharing one body plan; siblings must not be told apart by hue alone, and this identity shares its native black colour with giant carpenter ant so it needs a second, non-colour cue. Give black ant plain standard-sized mandibles and a matte, slightly jagged/spiky leg texture with only a small dim highlight (silhouette: no oversized mandibles, faintly rough leg outline, unlike carpenter ant's big smooth pincers and strong rim-light). Value/finish: dull matte cool charcoal, the darkest and least reflective body in the set, distinct from carpenter ant's glossy jet-black with a broad bright rim-light.",
+        "composition": "One complete six-legged ant centred on one circular disc, steep overhead three-quarter view, body angled so the head and two or three legs read clearly; every leg, antenna and mandible stays inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the head and antennae out of the upper-right rank corner and upper-left interaction corner. No second creature, no web, no burrow, no scenery.",
+        "palette": "Matte cool charcoal-black chitin with a small soft grey highlight on the thorax from the upper-left light, dark neutral-grey shading in the body creases and leg joints, near-black eyes and mandible tips; restrained copper-grey neutral bevel and charcoal disc at the style reference lightness; no colored faction aura."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Leaf newEntity carries an explicit image= (npc/black_ant.png); BASE_NPC_ANT and the leaf have no add_mos/shader/anim/moddable_tile/add_displays/textures, no define_as, not unique. Static source inspection only, no fixture (evidence/monster-batch-d-20260929). Art-only task; runtime integration and 48/64/96 family review still pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/README.md",
+          "sha256": "e4092a9ce1de4196e045be9f334e5dd3b8f7dbdfc91a25b1b2de63e3d0fa9598"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9"
+        }
+      ]
+    }
+  ]
+}

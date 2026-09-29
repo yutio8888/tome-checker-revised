@@ -1,0 +1,52 @@
+{
+  "asset_id": "wolf-v2",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "use_case": "precise-object-edit",
+  "status": "generated-reviewed-candidate",
+  "prompt": "Use case: precise-object-edit. Edit this exact wolf miniature image with ONE targeted correction: make the WOLF alone about 12% smaller and center it comfortably within the existing round base, so the entire silhouette including the upper back, tail, ears and all paws is wholly inside the circular outer edge and a continuous strip of visible base surrounds it. Keep the base size, shape, thin rim, color and position unchanged. Keep the same wolf identity, anatomy, pose, fur colors, hand-painted carved style, steep overhead angle, lighting and resolution. Do not redesign the wolf. Preserve genuine transparent alpha outside the base. Do not add any background, pattern, scenery, external shadow, markings, colored rings, text or extra objects. Only reduce the wolf and its contact shadow within the existing unchanged base; this is a contained tabletop token.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/wolf-v1.png"
+  ],
+  "reference_roles": [
+    "edit target; keep style and base, reduce subject to remain inside base"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0dd21-b1f1-7472-b28c-5b68d8636421/exec-113423fb-93f3-48ce-92f4-aac511dad574.png",
+  "saved_output_path": "game/addons/tome-checker-revised/art/monsters-v1/masters/wolf-v2.png",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      113,
+      87,
+      1192,
+      1230
+    ],
+    "visible_alpha_bbox": [
+      179,
+      198,
+      1075,
+      1105
+    ],
+    "transparent_pixels": 934833,
+    "partial_alpha_pixels": 637453
+  },
+  "review": "Containment correction successful: clear continuous base rim, upper back and tail wholly inside. Wolf retained species identity and carved paint style; reduction is stronger than requested, check 48px before runtime selection. Far hind paw remains naturally occluded by body.",
+  "sha256": "01ea31cefef4dfb786c8e2bd060c51e8be61a692e68c471dbaf5b51a4e8ec342",
+  "tool": "image_gen.imagegen",
+  "tool_result_keys": [
+    "image_url",
+    "output_hint"
+  ],
+  "preserved_native_alpha": true,
+  "image_processing": "Copied original generated PNG without pixel edits, resizing, background extraction or alpha modification.",
+  "reviewed_at_utc": "2026-09-26T10:02:59.316540+00:00",
+  "selection": "candidate"
+}

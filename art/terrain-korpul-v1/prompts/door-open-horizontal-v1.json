@@ -1,0 +1,70 @@
+{
+  "asset_id": "door-open-horizontal-v1",
+  "material": "door-open-horizontal",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "intent": "reference-guided generation/edit",
+  "prompt": "Use case: precise-object-edit. Change this CLOSED horizontal doorway into the matching OPEN doorway. Preserve BOTH stone jambs at exactly the same locations, their scale/material, camera, upper-left light, square transparent canvas. Move ONLY the oak leaf: hinge it at the inner left jamb and swing it 90 degrees inward toward NORTH so it stands parallel to the north-south passage along the LEFT side of that passage. Keep the leaf entirely within the square canvas. From overhead its thick top edge and small visible side make a narrow wood strip extending upward from the left hinge, not across the center. The center must be a WIDE CLEAR TRANSPARENT north-south passage, at least the original opening width between jambs. No dark rectangle pretending to be a hole, no black fill, no floor, no lintel crossing the route, no threshold step. Genuine transparent alpha shows the eventual floor through the center as well as outside the object. Keep wood grain, two simple iron straps and same hardware, coherent hinge attachment; no duplicate leaf and no door lying flat on ground. Ordinary open door is traversable, visually obvious at 48px. Don't shift stone jambs or add debris, arrows, glow, words, locks, actor base or icons. One open door component only.",
+  "references": [
+    "door-closed-horizontal-v1"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-8efb6c97-1eae-4a30-b6e4-7bf867779d56.png",
+  "saved_output_path": "art/terrain-korpul-v1/masters/door-open-horizontal-v1.png",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "native_alpha_required": true,
+  "selection": "design-candidate-not-runtime-ready",
+  "rejection_reason": null,
+  "processing": "Copy original unchanged; small-size whole-canvas resampling only. No alpha extraction, relighting, recolouring, rotation, or painted geometry.",
+  "sha256": "7eefee7368c14181ea074484729db95e2acfc986c6ac89d39da094e188cc34b5",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      81,
+      21,
+      1218,
+      1236
+    ],
+    "transparent_pixels": 1189613,
+    "partial_alpha_pixels": 382241,
+    "opaque_pixels": 662,
+    "visible_alpha_bbox_gt8": [
+      91,
+      302,
+      1166,
+      935
+    ],
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "references_resolved": [
+    "masters/door-closed-horizontal-v1.png"
+  ],
+  "static_review": {
+    "sheet": "review/design-sheet.png",
+    "actual_sizes": [
+      48,
+      64,
+      96
+    ],
+    "floor_repeat_size": 128,
+    "grayscale": "CSS display only",
+    "runtime_verified": false,
+    "connected_masks_verified": false
+  }
+}

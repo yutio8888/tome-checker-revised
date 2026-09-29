@@ -1,0 +1,240 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-r-3",
+  "assets": [
+    {
+      "asset_id": "quasit",
+      "native_name": "quasit",
+      "scope": "minor-demon.lua (demon/minor, non-unique, no define_as, rarity 1, rank 2, size 1, base BASE_NPC_DEMON; only onilug uses nice_tile{tall=1} in this file); valley-moon-caverns (E13.9), demon-plane, crypt-kryl-feijan and 7 more zones; lava_island vault filters by name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/minor-demon.lua",
+          "sha256": "80520f8ae1b87b97ea599207de45fdf3703b00ca0e48c100b653dafb735f2050",
+          "line": 123,
+          "anchor": "name = \"quasit\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_minor_quasit.png",
+          "sha256": "fea4c3ea85fa603aa24b0df42caab1122b03ca687a4cd16d1df37d150ed98bb8",
+          "role": "identity",
+          "note": "Native shape (64x64): a squat brown armoured demon hunched forward, rocky skin."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/onilug.png",
+          "sha256": "134c4a8bb060b091266a3625406262a32e147709e707d2d057259fc39dc50e6c",
+          "role": "family",
+          "note": "Shipped onilug (tall grey gaunt demon with a staff) and wretchling/water imp (small imps): the quasit must not be a gaunt grey demon or a small bright imp."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A quasit seen from a steep overhead three-quarter angle: a SQUAT stocky heavily armoured minor demon crouched behind a big round bronze-studded shield held out in front of its body, a short broad sword held low behind the shield, its skin dark warm brown and pebbly like rock with thick riveted dark-bronze plate on the shoulders and a spiked back, a big flat head with two short curved horns, a wide grinning mouth with pale fangs and small glowing orange eyes, a stubby tail. Stubborn, heavy, armoured and complete.",
+        "contrast": "Demon family: the QUASIT is a SQUAT ARMOURED BRUISER behind a big round SHIELD, warm brown with bronze plate (silhouette: wide low block with a round shield disc in front and two short horns; hue: warm brown and bronze with pale fangs; value: mid). The onilug is a tall gaunt grey demon with a staff; the wretchling is a small bright yellow imp; the water imp is a small teal imp.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, tails, weapons, staffs and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, leg or drip reaches the outer sixth ring band or crosses the disc rim.",
+        "palette": "Warm mid-brown pebbly skin with lighter tan highlight planes, dark bronze plates and shield with lighter gold-bronze highlights, pale bone fangs and horn tips, orange eyes; nothing darker than dark brown except the eyes and mouth; keep the body mid-value; the disc stays neutral charcoal with no brown cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=quasit, define_as=None, type=demon/subtype=minor, unique=False); details and hashes in evidence/monster-batch-r-20260929/source-contracts.json. base BASE_NPC_DEMON (demon/minor, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip longsword, shield, heavy armour (equipment only, no moddable_tile); talents Armour Training, Shield Pummel, Riposte, Overpower, Rush (none sustained); no sustains_at_birth and no sustained talent. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-r-20260929/source-contracts.json",
+          "sha256": "588ddd99e3d398bf93163ca804f053510ce1388654ff89c900e866205ae58c92"
+        }
+      ]
+    },
+    {
+      "asset_id": "elven-warrior",
+      "native_name": "elven warrior",
+      "scope": "elven-warrior.lua (humanoid/shalore, non-unique, no define_as, rarity 1, rank 2, base BASE_NPC_ELVEN_WARRIOR); crypt-kryl-feijan (pool, E12.7); vault entity filters by name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/elven-warrior.lua",
+          "sha256": "28a4a2cc0c50f66f1e2b74bba82895adb490a9a9f4880eb86b195b545a5ee3a1",
+          "line": 82,
+          "anchor": "name = \"elven warrior\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_shalore_elven_warrior.png",
+          "sha256": "318ac0cf64a929bbc3906045e73f3f2551e05bc6a6548b6729394d0d5bacd89e",
+          "role": "identity",
+          "note": "Native shape (64x64): a slim elf in full grey plate armour with a tall shield and a long weapon."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/elven-guard.png",
+          "sha256": "2dd2ffdc73e61c95c773876361c0f79f280090f53ff6f41bf34b6f2f18fce287",
+          "role": "family",
+          "note": "Shipped elven guard (green-tunic elf standing with sword and small shield): the elven warrior must not be a green-tunic sword elf."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An elven warrior seen from a steep overhead three-quarter angle: a slender tall elf sheathed in full polished silver-grey plate armour with gold-cream trim, a closed winged helm with a long pale-blond horsehair plume swept back, a tall kite shield held forward on the left arm with a gold sun crest, a long-hafted single-bladed war axe raised diagonally over the right shoulder, a short cream tabard hanging over the plate, feet planted in a firm guarding stance, pointed ears just visible below the helm. Disciplined, gleaming, heavily armoured and complete.",
+        "contrast": "Shalore family: the elven WARRIOR is a FULLY PLATED SILVER-GREY KNIGHT with a tall crested shield and a diagonal WAR AXE over the shoulder (silhouette: narrow plated figure with a shield edge and a diagonal axe line; hue: silver-grey plate with gold-cream and blond plume; value: light-mid). The shipped elven guard is a green-tunic elf with a sword and small shield; the mean looking elven guard is leather with a sword; the elven mage, tempest and blood mage are robed casters.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, tails, weapons, staffs and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, leg or drip reaches the outer sixth ring band or crosses the disc rim.",
+        "palette": "Polished silver-grey plate with lighter white-silver highlight planes and cool slate shadows, gold-cream trim and shield crest, pale blond plume, cream tabard, steel axe blade; nothing darker than dark slate-grey except the eye slit; keep the armour light-mid value; the disc stays neutral charcoal with no silver cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=elven warrior, define_as=None, type=humanoid/subtype=shalore, unique=False); details and hashes in evidence/monster-batch-r-20260929/source-contracts.json. base BASE_NPC_ELVEN_WARRIOR (humanoid/shalore, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip waraxe, shield, heavy armour (equipment only, no moddable_tile); talents Armour Training, Weapon Combat, Weapons Mastery, Shield Pummel; resolvers.racial() adds shalore racial levelup talents (Secrets of the Eternals is sustained but only learnt by level-up, not at birth: the leaf has no sustains_at_birth); no sustains_at_birth and no sustained talent. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-r-20260929/source-contracts.json",
+          "sha256": "588ddd99e3d398bf93163ca804f053510ce1388654ff89c900e866205ae58c92"
+        }
+      ]
+    },
+    {
+      "asset_id": "corrupted-war-dog",
+      "native_name": "corrupted war dog",
+      "scope": "keepsake-meadow (zones/keepsake-meadow/npcs.lua:118, animal/canine, non-unique, define_as CORRUPTED_WAR_DOG, rank 1, base BASE_NPC_CANINE, explicit image=npc/canine_dw.png, rarity 5 with cave_rarity 5; zone-private pool E12.5); shares the PNG with the dire wolf and with the same zone's \"war dog\" (other names, other catalog state)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 118,
+          "anchor": "define_as = \"CORRUPTED_WAR_DOG\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 119,
+          "anchor": "name = \"corrupted war dog\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/canine.lua",
+          "sha256": "edbbc6bd1d02c92bf53b569e210e26cfb4eb25ecba1b077f90697f390cab5e7a",
+          "line": 75,
+          "anchor": "name = \"dire wolf\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/canine_dw.png",
+          "sha256": "31784e483aaa0b3dfd8dc583698416b61d0f4188dccf2ef6ec038b9a70074a4f",
+          "role": "identity",
+          "note": "Native shape (64x64): a large dark brown dog facing forward, thick-set, ears up, baring teeth."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/dire-wolf.png",
+          "sha256": "d1bba94a9cba2a01e47013e398c5ab80537dce0c48a0795aeafcf48632c7910e",
+          "role": "family",
+          "note": "Shipped dire wolf (brown wolf prowling side-on, head level with the shoulders): the corrupted war dog must not be a brown side-on prowling wolf."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A corrupted war dog seen from a steep overhead three-quarter angle: a heavy thick-set black-furred mastiff-type war dog CROUCHED BACK ON ITS HAUNCHES in a coiled pouncing stance, chest low and front paws planted forward, head lowered and turned up toward the viewer with the jaws wide open and slavering, a studded iron collar with a short broken chain, patches of fur torn away to show glowing sickly violet-green veins and cracks running along the ribs, shoulders and muzzle, small glowing green eyes, cropped notched ears, a stiff short tail. Twisted, coiled, corrupted and complete.",
+        "contrast": "Canine family: the corrupted WAR DOG is a COILED POUNCING CROUCH facing the viewer with an open slavering mouth, a spiked collar and glowing violet-green corruption veins on black fur (silhouette: compact haunch-heavy crouch with head forward; hue: black-charcoal fur with violet-green veins; value: mid-dark with bright veins). The shipped dire wolf is a brown wolf prowling SIDE-ON; the shipped warg is a dark grey side-on wolf.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, tails, weapons, staffs and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, leg or drip reaches the outer sixth ring band or crosses the disc rim.",
+        "palette": "Charcoal-black fur with lighter grey-brown highlight planes on the back and shoulders, glowing violet-green corruption veins, iron studded collar with lighter steel highlights, pale bone teeth, green eyes; nothing darker than very dark charcoal except the mouth interior; keep the fur clearly lighter than the disc rim and mid-value overall, never near-black; the veins must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=corrupted war dog, define_as=CORRUPTED_WAR_DOG, type=animal/subtype=canine, unique=False); details and hashes in evidence/monster-batch-r-20260929/source-contracts.json. base BASE_NPC_CANINE (animal/canine, no image=); leaf carries define_as CORRUPTED_WAR_DOG, so the entry binds it exactly; explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; talents Rush, Grappling Stance, Clinch (Grappling Stance is sustained but the leaf has no sustains_at_birth, and it writes only temporary values); no sustains_at_birth and no sustained talent. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-r-20260929/source-contracts.json",
+          "sha256": "588ddd99e3d398bf93163ca804f053510ce1388654ff89c900e866205ae58c92"
+        }
+      ]
+    },
+    {
+      "asset_id": "grannor-vor",
+      "native_name": "grannor'vor",
+      "scope": "horror-corrupted.lua (horror/corrupted, non-unique, no define_as, rarity 2, rank 2, base BASE_NPC_CORRUPTED_HORROR, clone_on_hit); deep-bellow (E6.8), maze (E5.2); clones made by clone_on_hit are same-name copies of the same actor and keep the same token",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 189,
+          "anchor": "name = \"grannor'vor\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 213,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_grannor_vor.png",
+          "sha256": "ece74f7e47ea4a2c4a86aa2d49faa4a5ef7a819ed92f85e6e40b40f316cb718a",
+          "role": "identity",
+          "note": "Native shape (64x64): a big blue-grey slug curled in a ring with a melting humanoid face and a curled tail."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/slimy-crawler.png",
+          "sha256": "af9b184e6f10d6da63065238064c26eee24e42fdfb865c243ba0457ae2a2b144",
+          "role": "family",
+          "note": "Shipped slimy crawler (green segmented caterpillar-like horror): the grannor'vor must not be a green segmented crawler."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A grannor'vor seen from a steep overhead three-quarter angle: a big swollen blue-grey slug curled in a fat CRESCENT with its head at one end and its tail curling back beside it, wet glistening teal-grey skin with pale bluish underside folds, at the head a strangely HUMANOID FACE half melted into the body with sunken pale eyes and an open slack mouth, a ridged back with a darker blue-teal mottled pattern, and thick bright acid-green slime dripping from the mouth and pooling in a few small glistening beads right beside the body. Slimy, swollen, melted and complete.",
+        "contrast": "Corrupted horror family: the GRANNOR'VOR is a FAT SMOOTH CRESCENT SLUG with a melted HUMANOID FACE and dripping acid-green slime, blue-grey teal (silhouette: thick crescent with a face at one end; hue: blue-grey teal with acid green drips; value: mid-light). The shipped slimy crawler is a green segmented caterpillar-like horror with many small legs; the drem and dremling are armoured horrors; the brecklorn is an orange bat.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, tails, weapons, staffs and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, leg or drip reaches the outer sixth ring band or crosses the disc rim.",
+        "palette": "Blue-grey teal skin with lighter pale blue-white highlight planes and darker blue-teal mottling, pale sunken eyes, bright acid-green slime; nothing darker than dark blue-teal except the mouth; keep the body mid-light; the slime must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=grannor'vor, define_as=None, type=horror/subtype=corrupted, unique=False); details and hashes in evidence/monster-batch-r-20260929/source-contracts.json. base BASE_NPC_CORRUPTED_HORROR (horror/corrupted, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; talents Crawl Acid, Acid Blood (Acid Blood is a passive); resolvers.sustains_at_birth() present but no sustained talent is known; clone_on_hit clones the whole actor (same name/type/image). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-r-20260929/source-contracts.json",
+          "sha256": "588ddd99e3d398bf93163ca804f053510ce1388654ff89c900e866205ae58c92"
+        }
+      ]
+    }
+  ]
+}

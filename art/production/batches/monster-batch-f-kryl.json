@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-f-kryl",
+  "assets": [
+    {
+      "asset_id": "kryl-feijan",
+      "native_name": "Kryl-Feijan",
+      "scope": "crypt-kryl-feijan zone-finale boss; already shipped (monster-batch-e-2, catalog id kryl-feijan) under a reviewer-approved base_drift-only waiver; this pack redraws the art only, for 48px dark-floor readability, not the identity/display contract",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/crypt-kryl-feijan/npcs.lua",
+          "sha256": "25fe3830a2b9dbbb4f5a90ec092f3e542069bf67a67e6baec3e2c412b087181f",
+          "line": 30,
+          "anchor": "name = \"Kryl-Feijan\", color=colors.VIOLET, unique = true,"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 26,
+          "anchor": "type = \"demon\", subtype = \"major\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_kryl_feijan.png",
+          "sha256": "e87bf6ae8963b6b1af4504e0c3d7ef48a1481b7ecb4cb2f0fd11c22317869ace",
+          "role": "identity",
+          "note": "Native species shape: a roiling black smoke/hair mass with two visible eye glints and clawed reach. Camera/base come from the style reference, not from this native crop."
+        }
+      ],
+      "contrast_dimensions": ["value", "hue"],
+      "prompt_fields": {
+        "subject": "A towering amorphous mass of roiling shadow-smoke shaped like an inverted teardrop, tapering to a point near the base disc; two pale blue-white clawed arms reach forward and outward from within the smoke, fingers spread, with glowing red eyes visible within the upper mass. Keep the same identity as the shipped kryl-feijan token (smoke-mass body, reaching pale claws, red eyes) but render the smoke itself noticeably lighter overall -- a mid charcoal-violet-grey, not near-black -- so the creature's own silhouette carries contrast against a dark floor, not only its claws and eyes.",
+        "contrast": "First and only demon/major identity in the catalog, so no in-family collision; the anchor is unchanged from the shipped v1 (non-humanoid billowing smoke silhouette with pale reaching claws), but the design direction now prioritises overall body VALUE: the shipped v1 master reads as an almost pure black blob at 48px on a real dark stone floor (evidence/monster-live-e-20260929/crops/kryl-feijan-placed-crypt-kryl-feijan-L5-48-crop.png), so this redraw must raise the smoke's own mid-tone lightness, not merely rely on the claws and eyes as isolated bright accents.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11); the shipped v1 kryl-feijan master itself measured -10.97 under the 4-unit instruction and shipped only under an approved waiver. Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate for the disc -- the creature's own smoke body must be visibly LIGHTER than the shipped v1 master, independent of the disc instruction. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere.",
+        "palette": "Mid charcoal-violet-grey roiling smoke body (noticeably lighter than near-black), pale cold blue-white clawed hands and forearms, bright ember-red glowing eyes as the strongest accent; dry neutral charcoal disc with restrained copper-grey bevel, kept visibly darker than the now-lighter smoke body so the creature's own silhouette edge separates from the disc without relying only on the claws."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name=Kryl-Feijan/type=demon/subtype=major/define_as=KRYL_FEIJAN/unique=true) and native invis.png+add_mos{display_h=2, display_y=-1} display contract unchanged from the already-shipped monster-batch-e-2/kryl-feijan (re-verified against the same source lines this round). This pack redraws only the master art for readability; render_evidence pins both the original source-contract verification and the in-game 48px crop that motivates the redraw.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-f-20260929/source-contracts.json",
+          "sha256": "b12b3c0cc83fbed3bcbb9331c7cf52917aa40213069c818d0fc1aee1d4595d54"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-live-e-20260929/crops/kryl-feijan-placed-crypt-kryl-feijan-L5-48-crop.png",
+          "sha256": "b840ed16558b4b04e5d3e00b508ae58a8879048cf4b6a5ceaec770307e2e0c6d"
+        }
+      ],
+      "refinement": {
+        "supersedes": "kryl-feijan",
+        "previous_batch": "monster-batch-e-2",
+        "design_change_reason": "monster-batch-e-2's kryl-feijan master (base_drift -10.97, shipped only under a reviewer-approved base_drift waiver) kept the smoke body itself near-black and relied on the disc-darkening instruction plus small claw/eye accents for contrast; the isolated-fixture live check in evidence/monster-live-e-20260929 found that on a real dark stone floor at 48px the figure reads as an almost pure black blob, with the claws barely distinguishable. The design direction changes from 'dark smoke + bright accents on a calibrated disc' to 'lighter mid-tone smoke body as the primary readability fix', independent of the disc instruction, per this task's explicit finding that edit-based brighten repairs overshoot roughly 5x and a fresh generation is preferred.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/production/waivers/monster-batch-e.json",
+            "sha256": "222952d316598dac5bc5e69bff4144eda28400c2f203cfcc2b259377d2a91281"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/evidence/monster-live-e-20260929/crops/kryl-feijan-placed-crypt-kryl-feijan-L5-48-crop.png",
+            "sha256": "b840ed16558b4b04e5d3e00b508ae58a8879048cf4b6a5ceaec770307e2e0c6d"
+          }
+        ]
+      }
+    }
+  ]
+}

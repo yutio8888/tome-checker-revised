@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "batch_id": "norgos-snow-down-refine-v1",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Same native down transition identity; first master passed mechanical gates, but 64px review sheet showed near-identical up/down silhouettes. This is a new direction within the global eight-call budget, preserving the first original and provenance.",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/norgos-20260928/identity.md",
+          "sha256": "61ad011547bfc395fd92057984bb814b22bb48dbfb32cc7479085c97e7d8b302"
+        }
+      ],
+      "asset_id": "snow-exit-down-cave",
+      "native_name": "ROCKY descending stairwell recessed variant",
+      "kind": "terrain-prop",
+      "scope": "Norgos Lair DEFAULT and INVADED, all three levels; Daikara reuse candidate only, not enabled.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/mountain.lua",
+          "sha256": "f29f818ca31d2c360a9d9e53cc12026feed0c2f53bbf6dfe12b81ab03ccd1d6f",
+          "line": 174,
+          "anchor": "define_as = \"ROCKY_DOWN4\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/norgos-lair/grids.lua",
+          "sha256": "797063aeae1fc7142c08a4ac3d903ab9492b28f437597752d742161375a45a40",
+          "line": 21,
+          "anchor": "snowy_grass.png"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-norgos-snow-v1/masters/snow-exit-down-v1.png",
+          "sha256": "0763893cb74115ba742f7777d72bcbf4b5ff30dd6d7ac9a8f99365be4a6ccbac",
+          "role": "style",
+          "note": "First accepted down stair shares material and snow finish, but its face-on stepped silhouette is too similar to the up stair at 64px. Use finish only, change geometry."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/way_next_4.png",
+          "sha256": "a0ddc7f36525351d16d4639b0a9942ea8c9ffc2cd0196da821366a216d155372",
+          "role": "identity",
+          "note": "Native down transition display reference."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Passable.",
+        "sight": "No sight block.",
+        "danger": "No hazard.",
+        "interaction": "Native level/zone transition, preserve direction.",
+        "export": "Transparent marker over snow-rock floor; exporter adds parity."
+      },
+      "prompt_fields": {
+        "subject": "A low recessed descending stone stairwell cut into the snow-rock ground, with visibly inward-sloping side stones and a dark but clearly walkable stair passage that drops away from the viewer. The stair footprint is sunken and narrow, unlike the raised up-stair monument.",
+        "palette": "Weathered gray stone, snow dusting, restrained copper/umber accents.",
+        "contrast": "At 64px, read as a downward, recessed passage with dark descending center; the existing up stair is an elevated bright outward stair with two posts. Make their silhouettes and light-dark masses distinct. No pit, hazard, locked door or impassable wall.",
+        "composition": "Single low centered passable stair construction, transparent border on four sides, the bottom of the construction reaches the lower quarter of the canvas. No text, glyph arrow or border.",
+        "mechanics": "Walkable exit; down transition only; no door or danger."
+      }
+    }
+  ]
+}

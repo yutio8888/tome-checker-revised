@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-i-3",
+  "assets": [
+    {
+      "asset_id": "slimy-crawler",
+      "native_name": "slimy crawler",
+      "scope": "deep-bellow non-unique horror/corrupted, define_as SLIMY_CRAWLER (The Mouth's summon; facings.lua only sets flipx=false)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/deep-bellow/npcs.lua",
+          "sha256": "d85b1f727ac0687aac2381598602a8d8241c133dba1787bf659fe800972e2146",
+          "line": 91,
+          "anchor": "define_as = \"SLIMY_CRAWLER\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/deep-bellow/npcs.lua",
+          "sha256": "d85b1f727ac0687aac2381598602a8d8241c133dba1787bf659fe800972e2146",
+          "line": 92,
+          "anchor": "name = \"slimy crawler\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_slimy_crawler.png",
+          "sha256": "9ea51589eca9d5d9b1e9bfec08ddc14ca39ded66707b43d83564699d063d2eca",
+          "role": "identity",
+          "note": "Native shape: pale ivory plated many-legged crawler with pincers."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/sandworm.png",
+          "sha256": "728830fc2e9cc89b555929c0f26b5f4c52b2f3b490e080631c233c9631fbfeb1",
+          "role": "family",
+          "note": "Shipped sandworm (slim pale open S-curve, no legs): the crawler has many legs, plates and pincers and must not read as a worm."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A low plated centipede-like crawler seen from above: a pale ivory-olive body of about eight overlapping segment plates coated in glistening green slime, many short legs along both sides, two curved pincers at its head, the body bent into a compact C shape, green slime dripping in a few fat drops. Small and wiry, not a worm.",
+        "contrast": "Lookalikes: the three sandworm tokens and sandworm queen (legless smooth worms), the six ant tokens, green-worm-mass and the other horror/corrupted tokens (The Mouth, The Abomination, Horned Horror, dremling). The slimy crawler is the only plated multi-legged body with pincers, C-curved (silhouette), pale ivory with green slime (hue), lighter than the base's dark parts.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Pale ivory-olive plates, bright green glossy slime, warm grey leg tips and small dark pincer tips; body never darker than mid-tone. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=slimy crawler, define_as=SLIMY_CRAWLER, type=horror/subtype=corrupted, unique=False); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. formula: no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint in the entity or BASE_NPC_CORRUPTED_HORROR; NPC.lua:33 formula gives npc/horror_corrupted_slimy_crawler.png; generic single path. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    },
+    {
+      "asset_id": "spellblaze-simulacrum",
+      "native_name": "Spellblaze Simulacrum",
+      "scope": "scintillating-caves unique immovable/crystal (SPELLBLAZE_SIMULACRUM, backup guardian; image= and nice_tile name the same PNG)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/scintillating-caves/npcs.lua",
+          "sha256": "ca974c3c694abd74225a9bf0434a1f8d89892b7a2558bdada32dbefdb000b873",
+          "line": 75,
+          "anchor": "define_as = \"SPELLBLAZE_SIMULACRUM\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/scintillating-caves/npcs.lua",
+          "sha256": "ca974c3c694abd74225a9bf0434a1f8d89892b7a2558bdada32dbefdb000b873",
+          "line": 78,
+          "anchor": "name = \"Spellblaze Simulacrum\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spellblaze_simulacrum.png",
+          "sha256": "39b7c740f8efe9321571f4061467234499499b4f2fc075df73804859f8bc71a7",
+          "role": "identity",
+          "note": "Native shape: a large upright humanoid figure made of faceted purple crystal."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/spellblaze-crystal.png",
+          "sha256": "edf1531bb8ecb360c21fedfefe951b1e50735b6929c0334931d99a88c13d7c89",
+          "role": "family",
+          "note": "Shipped Spellblaze Crystal (round purple spiky cluster): the Simulacrum must be an upright person-shaped figure instead."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "An upright person-shaped figure of faceted violet crystal: angular head, broad shoulders, two long arms hanging slightly away from the body ending in blunt crystal fists, faceted legs, a brighter pink-lilac glowing core in the chest, shards jutting at the elbows and shoulders. Stiff statue-like stance seen from a three-quarter overhead angle.",
+        "contrast": "Crystal tokens: Spellblaze Crystal (round purple spiky cluster, no figure), white crystal (tall pale bouquet), red crystal (long blade fan), crimson crystal (two chunky prisms). The Simulacrum is the only person-shaped crystal (head, arms, legs silhouette), medium-light violet with pale facet planes (value), not a cluster.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Medium-light violet and amethyst facets with pale lilac highlight planes, brighter pink-lilac chest core, darker plum only in thin facet creases. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Spellblaze Simulacrum, define_as=SPELLBLAZE_SIMULACRUM, type=immovable/subtype=crystal, unique=True); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. explicit image= plus nice_tile naming the same PNG (no =BASE=TILE=): image is npc/spellblaze_simulacrum.png without nicer_tiles and invis.png+add_mos with it; the catalog unique entry matches both. No tint/shader on the leaf (BASE_NPC_CRYSTAL has none either). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    },
+    {
+      "asset_id": "kryl-feijan-acolyte",
+      "native_name": "Acolyte of the Sect of Kryl-Feijan",
+      "scope": "crypt-kryl-feijan non-unique humanoid/elf, define_as ACOLYTE (explicit image= reusing the elven corruptor portrait)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/crypt-kryl-feijan/npcs.lua",
+          "sha256": "25fe3830a2b9dbbb4f5a90ec092f3e542069bf67a67e6baec3e2c412b087181f",
+          "line": 121,
+          "anchor": "define_as = \"ACOLYTE\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/crypt-kryl-feijan/npcs.lua",
+          "sha256": "25fe3830a2b9dbbb4f5a90ec092f3e542069bf67a67e6baec3e2c412b087181f",
+          "line": 123,
+          "anchor": "image = \"npc/humanoid_shalore_elven_corruptor.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_shalore_elven_corruptor.png",
+          "sha256": "cc147ada2ea82016b782c555dd02e60ce514dcbf71232e9e8d3be82581439577",
+          "role": "identity",
+          "note": "Native portrait (shared with the elven corruptor): an elf in dark robes. The acolyte must read as a mad cultist, not this pointed-hat staff caster."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/necromancer.png",
+          "sha256": "6807e8a467ab87d4a6b3d87206296c94dc93db38683ae531c4ee7499721ef736",
+          "role": "family",
+          "note": "Shipped Necromancer (bald human in slate-violet robe with staff): the acolyte is an elf with long hair, pointed ears and a dagger, no staff."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A bare-headed elven cultist with long pale silver hair swept back, long pointed ears, wide staring mad eyes and a thin pale face, in a floor-length plum-charcoal robe with wide crimson-lined bell sleeves and a blood-red sigil sash: one hand raised holding a small glowing crimson blood orb, the other hand low holding a curved ritual dagger with a red tip. No hat, no hood, no staff. Compact upright pose.",
+        "contrast": "Nearby humanoids: Necromancer (bald human, slate-violet robe, staff), Harno (hooded blue-grey cloak, two knives), Celia (pale gown and staff), Urkis and Fillarel (elf mage in gold). The elven corruptor keeps native art and wears a pointed hat with a tall staff. The acolyte has bare silver hair, long ears, bell sleeves with a red orb and a dagger (silhouette: swept-back hair, ears, wide sleeves), plum-crimson robe on a mid value (hue/value).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Plum-charcoal robe lifted with broad mid-violet fold planes, crimson lining and sash, pale skin and silver hair as the value break, glowing crimson orb, dull grey dagger; the robe is never near-black. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Acolyte of the Sect of Kryl-Feijan, define_as=ACOLYTE, type=humanoid/subtype=elf, unique=False); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. explicit image= (npc/humanoid_shalore_elven_corruptor.png, shared natively with the elven corruptor); standalone entry, no nice_tile/add_mos/shader/anim/moddable_tile; the catalog entry is bound to the exact name and define_as ACOLYTE so the corruptor keeps native art. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    },
+    {
+      "asset_id": "zquikzshl",
+      "native_name": "Z'quikzshl the skeletal mold",
+      "scope": "general unique undead/molds (molds.lua; rarity 50; type overridden from immovable; explicit image=)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/molds.lua",
+          "sha256": "0b40d03a904bb0f4a569904a2207a53eb7a40c09b4bd1f410b0d90c2327595ef",
+          "line": 104,
+          "anchor": "name = \"Z'quikzshl the skeletal mold\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/molds.lua",
+          "sha256": "0b40d03a904bb0f4a569904a2207a53eb7a40c09b4bd1f410b0d90c2327595ef",
+          "line": 103,
+          "anchor": "type = \"undead\", subtype = \"molds\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/immovable_molds_skeletal_mold.png",
+          "sha256": "e36b47b98b626ea65f67b6bb20522c72e31b5c408bfc54172ace50140c96632f",
+          "role": "identity",
+          "note": "Native shape: a low pile of pale bones lying on a dark green mould mat."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/boney-experiment.png",
+          "sha256": "664939a15fc7eafcc3fb895a682b5552eda22098d43f9578f005cb3f4191c15b",
+          "role": "family",
+          "note": "Shipped boney experiment (bare ivory spiky bone pile): the mould must read as a green-violet mat over the bones, not a bare bone heap."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A low rounded mound of pale bones thickly overgrown by a sickly green-and-violet mould mat: a skull at the front, a curved rib cage arching over the middle like a cage, two thigh bones crossing, and pale fuzzy mould patches with a few violet spore caps and tiny spore puffs spreading over the bones. The whole heap is about as wide as it is tall, sitting fully inside the disc.",
+        "contrast": "Molds: green mold (cluster of olive bulbs), brown mold (round frilled disc), shining mold (tan coral stalks), grey mold (grey frilled fan); boney experiment (bare ivory spiky bone pile with skulls). Z'quikzshl is a rounded green-teal mould mat over a skull and rib cage, with violet caps (silhouette: skull plus rib arch under a mould blanket; hue: green-violet mat around ivory bones).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid green-teal and violet-tinged mould mat with lighter sage fuzz, ivory-white skull and ribs as the value break, small violet spore caps; nothing darker than mid tone. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Z'quikzshl the skeletal mold, define_as=None, type=undead/subtype=molds, unique=True); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. explicit image= npc/immovable_molds_skeletal_mold.png on the leaf; no nice_tile/add_mos/shader/anim/moddable_tile; type overridden to undead so the four immovable/molds tokens can never match it. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    }
+  ]
+}

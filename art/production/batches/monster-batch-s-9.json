@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-s-9",
+  "assets": [
+    {
+      "asset_id": "companion-warrior",
+      "native_name": "Companion Warrior",
+      "scope": "keepsake-meadow (zones/keepsake-meadow/npcs.lua:273, humanoid/thalore, non-unique, define_as BERETHH_WARRIOR, rank 2, base BASE_BERETHH_COMPANION with faction enemies, explicit image=npc/humanoid_elenulach_thief.png); spawned by quests/keepsake.lua:296 after Berethh dies; single definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 273,
+          "anchor": "define_as = \"BERETHH_WARRIOR\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 274,
+          "anchor": "name = \"Companion Warrior\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 275,
+          "anchor": "image=\"npc/humanoid_elenulach_thief.png\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 293,
+          "anchor": "resolvers.racial()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_elenulach_thief.png",
+          "sha256": "c4427469f9a039392494f9d9cc1598d803da0c2c0021ee3a8bb564dfbfeafe84",
+          "role": "identity",
+          "note": "Native shape (64x64): a brown-haired commoner in a tan tunic, brown belt and boots, arms down."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/elven-guard.png",
+          "sha256": "2dd2ffdc73e61c95c773876361c0f79f280090f53ff6f41bf34b6f2f18fce287",
+          "role": "family",
+          "note": "Shipped elven guard (green-tunic elf standing upright with a sword and small shield): no Keepsake elf may be a standing green-tunic swordsman."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A Berethh companion warrior seen from a steep overhead three-quarter angle: a lean pointed-eared elf swordsman in a LOW FORWARD LUNGE, knees bent and weight on the front leg, a steel longsword thrust forward at a low angle in the right hand (the sword short enough that its tip stays well inside the disc), the left hand thrown back for balance, RUSSET-BROWN light leather armour with brass buckles, a bright TEAL scarf whipping back from the neck, tan bracers and boots, short chestnut hair. Aggressive, low, russet and teal and complete.",
+        "contrast": "Keepsake elves: the COMPANION WARRIOR is a LOW LUNGING russet swordsman with a forward sword and a teal scarf, no bow, no cloak (silhouette: low wide diagonal lunge with one sword line; hue: russet brown, teal and steel; value: mid-light). Berethh is a standing olive-grey hooded archer at full draw; the Companion Archer is a kneeling gold-and-green archer; the shipped elven guard is an upright green-tunic swordsman with a shield.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, staffs, capes and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, cape end or bandage tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere. Calibration from the previous generation of this exact token: it passed the gate, but the russet-brown leather was a mid-dark mass with low contrast against the charcoal disc at 48px. This time keep the same low forward lunge with the steel longsword thrust forward and the bright teal scarf, but make the whole figure LIGHTER: a pale cream linen shirt showing widely at the chest and sleeves, light BUFF-TAN leather armour with broad pale-yellow highlight planes (not russet or dark brown), light tan bracers and boots, bright sandy-ginger hair, bright polished steel sword blade with a pale edge, the teal scarf bright aqua with pale highlights, so the figure is a mid-light to light shape clearly above the disc value with a bright edge along its upper-left side. Nothing brown darker than a light tan except tiny seams.",
+        "palette": "Russet-brown leather in a mid-light value with lighter tan-orange highlight planes, brass buckles, bright teal scarf with pale aqua highlights, steel sword blade, chestnut hair, tan skin; nothing darker than dark russet except the eyes and seams; the disc stays neutral charcoal with no brown cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Companion Warrior, define_as=BERETHH_WARRIOR, type=humanoid/subtype=thalore, unique=False, native_tall=False); details and hashes in evidence/monster-batch-s-20260929/source-contracts.json. base BASE_BERETHH_COMPANION (humanoid/thalore, its own image=\"player/thalore_male.png\" is overridden by the leaf); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip longsword and light armour (equipment only, no moddable_tile); talents Weapons Mastery, Assault; resolvers.racial() adds thalore racial levelup talents only; no sustains_at_birth and no sustained talent. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-s-20260929/source-contracts.json",
+          "sha256": "f6556ef4ac78f044ee83f4d27ed60d1586fa243b923da96651cade0aa5ba49a2"
+        }
+      ]
+    }
+  ]
+}

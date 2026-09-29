@@ -1,0 +1,626 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "shax",
+      "master": "masters/shax-v1.png",
+      "sha256": "bb33c4615a77c3ee130e2922fdd6b66370e80c291e2d4d6def9a6ea621b1f098",
+      "exports": [
+        {
+          "path": "sprites/48/shax.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1166,
+            1173
+          ],
+          "export_window": [
+            -13.453488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6d361d3e362cd7777c49fa11d4412d9b999aca41702861611304ba9815e7704a"
+        },
+        {
+          "path": "sprites/64/shax.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1166,
+            1173
+          ],
+          "export_window": [
+            -13.453488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2c90f1a10504da42658025dde34585dd1f49e9c673f1490a12c08d7d36e8fbf8"
+        },
+        {
+          "path": "sprites/96/shax.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1166,
+            1173
+          ],
+          "export_window": [
+            -13.453488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e86cead67aaa98e9281ce6ab6f6f6c650a27194978f76f6e13e4c3a81ba34462"
+        },
+        {
+          "path": "sprites/128/shax.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1166,
+            1173
+          ],
+          "export_window": [
+            -13.453488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e7eea887ab9eabe238c11bb2e593bd734b13ebcb8ecaeb5da16c1fedbc122f2f"
+        },
+        {
+          "path": "sprites/256/shax.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1166,
+            1173
+          ],
+          "export_window": [
+            -13.453488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0a72f45a5c3ff8c7e048ed7b9ebfeb026cf698d49a7c9189a407a0846ddc955c"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -9.99,
+        "max_sector_intrusion": 3.71,
+        "max_opaque_radius": 0.8585,
+        "blocking": [
+          "base_drift"
+        ],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": true,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "horned-horror",
+      "master": "masters/horned-horror-v1.png",
+      "sha256": "fe50ca67244e207bfbb1e64daea4ffd6122b12c464aade439651dcb01f9e2516",
+      "exports": [
+        {
+          "path": "sprites/48/horned-horror.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f81a02f56c76869c0432314a57e2801ffd85b508127c1df579b0ea1996bfac32"
+        },
+        {
+          "path": "sprites/64/horned-horror.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a921031a894c20cb7dca23114adf9776a944a072cdb190e086ce5b8577e37504"
+        },
+        {
+          "path": "sprites/96/horned-horror.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "04d0965e1b55767c16b24fefc5944ac186de6988d35dfda11bb9ae395b4a715d"
+        },
+        {
+          "path": "sprites/128/horned-horror.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c9bb09b63789d44ebb7b23ddec02eb940c6047e15b8da7f6e0187265acfa5af0"
+        },
+        {
+          "path": "sprites/256/horned-horror.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e7abe8b28bd9125785845c4849afe035f1e69a2e1104e49147835fa98635d443"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -10.01,
+        "max_sector_intrusion": 3.1,
+        "max_opaque_radius": 0.8596,
+        "blocking": [
+          "base_drift"
+        ],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": true,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "norgos-guardian",
+      "master": "masters/norgos-guardian-v2.png",
+      "sha256": "b9bf1dcc5e60cfe076ac294ebf81997362b0f58c00e171fc42855cf100b7151c",
+      "exports": [
+        {
+          "path": "sprites/48/norgos-guardian.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            116,
+            112,
+            1138,
+            1142
+          ],
+          "export_window": [
+            28.162791,
+            28.162791,
+            1197.674419
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b73d45bbbf4c794aef0c10d8711a9d83a76926baee9b4dd08633b830e4eccf2c"
+        },
+        {
+          "path": "sprites/64/norgos-guardian.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            116,
+            112,
+            1138,
+            1142
+          ],
+          "export_window": [
+            28.162791,
+            28.162791,
+            1197.674419
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9a30a969309896648a4d4bb9be45b2954ded58302749ccc6fc1f313b33768bd1"
+        },
+        {
+          "path": "sprites/96/norgos-guardian.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            116,
+            112,
+            1138,
+            1142
+          ],
+          "export_window": [
+            28.162791,
+            28.162791,
+            1197.674419
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b5c81c209f7da87e239b445f6c572d056c8e089608f920d69574fa60014ee56a"
+        },
+        {
+          "path": "sprites/128/norgos-guardian.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            116,
+            112,
+            1138,
+            1142
+          ],
+          "export_window": [
+            28.162791,
+            28.162791,
+            1197.674419
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "dc260cae3635bbecb483a480dafd1aa9254539938f5188eb0553c90b16bdc5f8"
+        },
+        {
+          "path": "sprites/256/norgos-guardian.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            116,
+            112,
+            1138,
+            1142
+          ],
+          "export_window": [
+            28.162791,
+            28.162791,
+            1197.674419
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4b678ee077ed01bbe3e7bb1bed63e4890a011cf5ea890f1ecac8dde18774fc0d"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -12.09,
+        "max_sector_intrusion": 6.79,
+        "max_opaque_radius": 0.8585,
+        "blocking": [
+          "base_drift"
+        ],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": true,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "skeleton-archer",
+      "master": "masters/skeleton-archer-v1.png",
+      "sha256": "efc408df459167ead49a140b4d10d11489deda05d442fd0e7e7abea18d6f2063",
+      "exports": [
+        {
+          "path": "sprites/48/skeleton-archer.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            125,
+            121,
+            1129,
+            1125
+          ],
+          "export_window": [
+            43.27907,
+            39.27907,
+            1167.44186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6e121e694616de61cde73766cc6d865d317663b48b91135a9cdcd37750701450"
+        },
+        {
+          "path": "sprites/64/skeleton-archer.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            125,
+            121,
+            1129,
+            1125
+          ],
+          "export_window": [
+            43.27907,
+            39.27907,
+            1167.44186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d38cb325e904ae6aaec0189263b16b868323a3677d541b882a9d8bcadfee40a4"
+        },
+        {
+          "path": "sprites/96/skeleton-archer.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            125,
+            121,
+            1129,
+            1125
+          ],
+          "export_window": [
+            43.27907,
+            39.27907,
+            1167.44186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0a84a6aa3505d1efa73082ad04f8892d96e8341527b93e1c4ed622013566ac0f"
+        },
+        {
+          "path": "sprites/128/skeleton-archer.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            125,
+            121,
+            1129,
+            1125
+          ],
+          "export_window": [
+            43.27907,
+            39.27907,
+            1167.44186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "60d3aee9d674115da5059331bf9fd717329e551e612a3034d5ce80081440963b"
+        },
+        {
+          "path": "sprites/256/skeleton-archer.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            125,
+            121,
+            1129,
+            1125
+          ],
+          "export_window": [
+            43.27907,
+            39.27907,
+            1167.44186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e6dbd807808d28668be32da6d3482f1a4d5e00172f3f2e1cb3be9c80bd28b7e6"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -7.07,
+        "max_sector_intrusion": 3.61,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "armoured-skeleton-warrior",
+      "master": "masters/armoured-skeleton-warrior-v1.png",
+      "sha256": "84fa42f0a28416689fadb98a64afd9e494ac5c1eb7ba4fbeced554c2eae3f32c",
+      "exports": [
+        {
+          "path": "sprites/48/armoured-skeleton-warrior.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            74,
+            77,
+            1179,
+            1183
+          ],
+          "export_window": [
+            -16.523256,
+            -13.023256,
+            1286.046512
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "301fe2bca4cdb6d437946ad0aa45a773883bebe742fc3810d2bdbf0ef9fd4430"
+        },
+        {
+          "path": "sprites/64/armoured-skeleton-warrior.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            74,
+            77,
+            1179,
+            1183
+          ],
+          "export_window": [
+            -16.523256,
+            -13.023256,
+            1286.046512
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "39665aa61125208bd8df2ea2cf89bd89a439e304fe616ed664f8b7f164509d27"
+        },
+        {
+          "path": "sprites/96/armoured-skeleton-warrior.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            74,
+            77,
+            1179,
+            1183
+          ],
+          "export_window": [
+            -16.523256,
+            -13.023256,
+            1286.046512
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2ba00fb70798205edd39178c7c5abc547db8d7a8985bd9e6ec8363da302d386d"
+        },
+        {
+          "path": "sprites/128/armoured-skeleton-warrior.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            74,
+            77,
+            1179,
+            1183
+          ],
+          "export_window": [
+            -16.523256,
+            -13.023256,
+            1286.046512
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1870531b091bb19cc62b3c0fe2e6d248a6d32066799b46595c1f7cb4eb2ad620"
+        },
+        {
+          "path": "sprites/256/armoured-skeleton-warrior.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            74,
+            77,
+            1179,
+            1183
+          ],
+          "export_window": [
+            -16.523256,
+            -13.023256,
+            1286.046512
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d628ce42d23b84c6951d7f151dc0c9c739c10a9cec7947eb4cf21161ec16bc69"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 5.37,
+        "max_sector_intrusion": 5.6,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

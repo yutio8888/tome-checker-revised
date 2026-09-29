@@ -1,0 +1,225 @@
+{
+  "schema": 1,
+  "batch_id": "f1-flooded-bog-misc-v1",
+  "assets": [
+    {
+      "asset_id": "bog-misc-1",
+      "native_name": "BOGWATER_MISC1 (paired with MISC2, reed-cluster group)",
+      "kind": "terrain-prop",
+      "scope": "FLOODED floor2 generator, 20% of the non-BOGTREE cells (zone.lua:55). BOGWATER_MISC1..7 are 7 native sub-identities produced by one loop (grids.lua:86), all rule-identical to plain BOGWATER. This master stands in for the thin pale reed-tuft pair (native misc_bog1.png/misc_bog2.png); CONTRACT.md Section 9.4 allows one master to cover more than one of the 7 native decorations since none of them differ in rules.",
+      "gate": "ready",
+      "gate_reason": "add_displays-only decoration, verified rule-identical to BOGWATER via base=\"BOGWATER\" inheritance (grids.lua:82-83) with only a display layer added (grids.lua:86). Per AGENTS.md's terrain rule this must not suggest an obstacle or a speed bonus. Export naming prop-bog-misc-{1,2,3} has already been exercised end-to-end by the exporter's F1 placeholder validation (EXPORTER.md Section 4). Gate is ready only for run_imagegen.py status/dry-run generate per this task's instructions; no isolated-fixture screenshot was taken and none is claimed. --execute must not run until the main agent has reviewed prompt.txt.",
+      "max_attempts": 2,
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 77,
+          "anchor": "define_as = \"BOGWATER\","
+        },
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 83,
+          "anchor": "define_as = \"BOGWATER_MISC\","
+        },
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 86,
+          "anchor": "add_displays={class.new{image=\"terrain/misc_bog\"..i..\".png\"}}}"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-forest-v1/masters-derived/prop-exit.png",
+          "sha256": "44842679fa14ba254912fc96bf06bf2adeef0c90c1443d5a9c2bcdd1274a462a",
+          "role": "style",
+          "note": "Composition reference only for a low, flat, transparent overlay construct on a floor tile; do not copy its exit iconography or identity."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/misc_bog1.png",
+          "sha256": "b7b80a187b95140affadb9cd6652cfecb0f717157b08375c8b27419ae1ee1b90",
+          "role": "identity",
+          "note": "Native reed-tuft decoration this master stands in for."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/misc_bog2.png",
+          "sha256": "01f65b6ba18a65a0088956bdf817ac49ca68886f3d8dfc393e8ca4057f22c5f3",
+          "role": "identity",
+          "note": "Second native reed-tuft decoration covered by this same master (CONTRACT 9.4 grouping)."
+        }
+      ],
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/docs/g0-terrain-contract-20260927/EXPORTER.md",
+          "sha256": "2e18be9fa75d11db778706c2c8703299ab0f62b05c607594282d47bc07b1163f"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/g0-terrain-contract-20260927/ACCEPTANCE.md",
+          "sha256": "7916d97ae7ec2f975b5de2ad303ab013f2ad829f629b5130a85da6af2021bf6d"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Identical to BOGWATER: no does_block_move anywhere in the inheritance chain (grids.lua:76-86).",
+        "sight": "Identical to BOGWATER: not blocked.",
+        "danger": "None; no air_level/on_stand anywhere in this chain.",
+        "interaction": "None. The only difference from plain BOGWATER is one extra add_displays layer (terrain/misc_bogN.png, grids.lua:86); purely cosmetic.",
+        "export": "prop-bog-misc-1 master, transparent overlay, composited on top of the bog-water floor/bank tile at any mask value (it floats on the water surface, it does not depend on the bog-water adjacency mask the way bog-tree does). The exporter should pick among bog-misc-1/2/3 per cell with a deterministic selector, matching EXPORTER.md's already-validated prop-bog-misc-{1,2,3}.png naming."
+      },
+      "prompt_fields": {
+        "subject": "A small cluster of two to three thin pale sedge-green reed or grass tufts emerging just above the waterline, sparse and delicate, no thick stems.",
+        "palette": "Muted pale sedge-green and straw tones, restrained tabletop-material palette, no bright saturated color.",
+        "contrast": "Purely decorative -- must read as harmless floating or emergent vegetation, never as a wall, fence, raised obstacle or speed-boosting pad. Distinct in shape from the moss-clump (bog-misc-2) and driftwood (bog-misc-3) variants so the three read as different decorations, not recolors of one shape.",
+        "composition": "Low, flat silhouette hugging the waterline; the whole motif must stay inside a transparent margin on all four sides and must not read as tall enough to block sight. It sits at the water surface, so it is not required to fill the canvas's lower 25% the way an upright tree trunk is.",
+        "mechanics": "Zero rule difference from plain bog water: does not block movement, sight, sense or ESP; no hazard. Do not paint anything implying blocking, bonus movement or hazard -- no glow, no bubbles, no spikes, no poison tint."
+      }
+    },
+    {
+      "asset_id": "bog-misc-2",
+      "native_name": "BOGWATER_MISC3 (paired with MISC4, moss-clump group)",
+      "kind": "terrain-prop",
+      "scope": "Same FLOODED floor2 generator slot as bog-misc-1 (zone.lua:55). Stands in for the denser olive moss/grass-clump pair (native misc_bog3.png/misc_bog4.png).",
+      "gate": "ready",
+      "gate_reason": "Same rule verification and export-naming basis as bog-misc-1 (see that asset's gate_reason); this is the second of the three grouped decorations. Gate is ready only for run_imagegen.py status/dry-run generate; --execute must not run until the main agent has reviewed prompt.txt.",
+      "max_attempts": 2,
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 77,
+          "anchor": "define_as = \"BOGWATER\","
+        },
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 83,
+          "anchor": "define_as = \"BOGWATER_MISC\","
+        },
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 86,
+          "anchor": "add_displays={class.new{image=\"terrain/misc_bog\"..i..\".png\"}}}"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-forest-v1/masters-derived/prop-exit.png",
+          "sha256": "44842679fa14ba254912fc96bf06bf2adeef0c90c1443d5a9c2bcdd1274a462a",
+          "role": "style",
+          "note": "Composition reference only for a low, flat, transparent overlay construct; do not copy its identity."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/misc_bog3.png",
+          "sha256": "dc611da627559925a9039e05421577a715527bc1e11a7dd241ebbeda50d4af81",
+          "role": "identity",
+          "note": "Native moss/grass-clump decoration this master stands in for."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/misc_bog4.png",
+          "sha256": "e43eb7ff5b39832a829580b8ac25c2261395b5e8da7942ade379de233208fa2d",
+          "role": "identity",
+          "note": "Second native moss/grass-clump decoration covered by this same master."
+        }
+      ],
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/docs/g0-terrain-contract-20260927/EXPORTER.md",
+          "sha256": "2e18be9fa75d11db778706c2c8703299ab0f62b05c607594282d47bc07b1163f"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/g0-terrain-contract-20260927/ACCEPTANCE.md",
+          "sha256": "7916d97ae7ec2f975b5de2ad303ab013f2ad829f629b5130a85da6af2021bf6d"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Identical to BOGWATER: no does_block_move anywhere in the chain.",
+        "sight": "Identical to BOGWATER: not blocked.",
+        "danger": "None.",
+        "interaction": "None; cosmetic add_displays layer only.",
+        "export": "prop-bog-misc-2 master, transparent overlay on the bog-water floor/bank tile, alternated with bog-misc-1/3 by the exporter's per-cell selector."
+      },
+      "prompt_fields": {
+        "subject": "A single low, rounded clump of dense olive-green moss or marsh grass sitting at the waterline, bushier and denser than a reed tuft but still clearly low and flat.",
+        "palette": "Muted olive-green and damp brown-green tones, restrained tabletop-material palette.",
+        "contrast": "Purely decorative, must read as harmless emergent vegetation, never a wall, mound obstacle or speed-boosting pad. Distinct in shape from the sparse reed cluster (bog-misc-1) and the driftwood log (bog-misc-3).",
+        "composition": "Low, flat, rounded silhouette hugging the waterline, inside a transparent margin on all four sides, not tall enough to imply blocked sight.",
+        "mechanics": "Zero rule difference from plain bog water: no movement, sight, sense or ESP block; no hazard. Do not paint anything implying blocking, bonus movement or hazard."
+      }
+    },
+    {
+      "asset_id": "bog-misc-3",
+      "native_name": "BOGWATER_MISC5 (paired with MISC6, driftwood group)",
+      "kind": "terrain-prop",
+      "scope": "Same FLOODED floor2 generator slot as bog-misc-1/2 (zone.lua:55). Stands in for the weathered floating driftwood pair (native misc_bog5.png/misc_bog6.png); misc_bog7.png (a third driftwood-like shape) is left uncovered by this three-master budget and reverts to whichever of the three closest masters the exporter's selector assigns.",
+      "gate": "ready",
+      "gate_reason": "Same rule verification and export-naming basis as bog-misc-1/2. This variant carries an extra visual risk flagged for the main agent: a flat log lying across the water could be misread as a crossable bridge, which would visually invent a passage the grid does not have (BOGWATER_MISC has no does_block_move and grants no special crossing -- it is exactly as walkable/swimmable as plain bog water, no more, no less). The prompt fields below constrain the pose to avoid that misreading. Gate is ready only for run_imagegen.py status/dry-run generate; --execute must not run until the main agent has reviewed prompt.txt.",
+      "max_attempts": 2,
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 77,
+          "anchor": "define_as = \"BOGWATER\","
+        },
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 83,
+          "anchor": "define_as = \"BOGWATER_MISC\","
+        },
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 86,
+          "anchor": "add_displays={class.new{image=\"terrain/misc_bog\"..i..\".png\"}}}"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-forest-v1/masters-derived/prop-exit.png",
+          "sha256": "44842679fa14ba254912fc96bf06bf2adeef0c90c1443d5a9c2bcdd1274a462a",
+          "role": "style",
+          "note": "Composition reference only for a low, flat, transparent overlay construct; do not copy its identity."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/misc_bog5.png",
+          "sha256": "646c84664fe4f4f05a89affe55a9c50d28be759ccf5cb65393fe74bb3bb7cf0d",
+          "role": "identity",
+          "note": "Native driftwood/log decoration this master stands in for."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/misc_bog6.png",
+          "sha256": "4a5e28c4794a0a968ba27edcbc552589088501d43451ce503fc48e1599d26ef2",
+          "role": "identity",
+          "note": "Second native driftwood/log decoration covered by this same master."
+        }
+      ],
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/docs/g0-terrain-contract-20260927/EXPORTER.md",
+          "sha256": "2e18be9fa75d11db778706c2c8703299ab0f62b05c607594282d47bc07b1163f"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/g0-terrain-contract-20260927/ACCEPTANCE.md",
+          "sha256": "7916d97ae7ec2f975b5de2ad303ab013f2ad829f629b5130a85da6af2021bf6d"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Identical to BOGWATER: no does_block_move anywhere in the chain. Explicitly: this decoration must NOT read as a bridge or plank granting passage that plain bog water does not already grant.",
+        "sight": "Identical to BOGWATER: not blocked.",
+        "danger": "None.",
+        "interaction": "None; cosmetic add_displays layer only.",
+        "export": "prop-bog-misc-3 master, transparent overlay on the bog-water floor/bank tile, alternated with bog-misc-1/2 by the exporter's per-cell selector."
+      },
+      "prompt_fields": {
+        "subject": "A single short, weathered, partially submerged driftwood branch or broken log fragment lying diagonally across part of the water surface, dark textured bark, no leaves, clearly broken and irregular rather than a straight milled plank.",
+        "palette": "Dark weathered brown-grey wood tones, matching a restrained tabletop-material palette.",
+        "contrast": "Purely decorative, must read as harmless flotsam, never as a wall or raised obstacle. Distinct in shape from the reed cluster (bog-misc-1) and moss clump (bog-misc-2).",
+        "composition": "The log must be short relative to the tile and clearly broken/irregular in outline, angled diagonally rather than spanning the full tile edge-to-edge; do not draw a continuous straight plank that reaches two opposite tile edges, which would visually invent a bridge or crossing that this grid does not provide. Stay inside a transparent margin on all four sides.",
+        "mechanics": "Zero rule difference from plain bog water: does not block movement, sight, sense or ESP, and grants no special crossing or speed bonus -- swimming/wading through this tile is exactly as easy or hard as through plain bog water. No hazard."
+      }
+    }
+  ]
+}

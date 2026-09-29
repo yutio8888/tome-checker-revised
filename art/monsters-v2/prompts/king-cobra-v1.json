@@ -1,0 +1,147 @@
+{
+  "id": "king-cobra-v1",
+  "created_date": "2026-09-26",
+  "tool": "built-in image_gen.imagegen",
+  "skill": "~/.codex/skills/.system/imagegen/SKILL.md",
+  "use_case": "precise-object-edit",
+  "intent": "edit",
+  "prompt": "Use case: precise-object-edit. Edit reference image 1, this already painted green cobra token. Correct ONE geometric issue: its head and neck hood currently overlap the top outer contour of the round base. Lower and tilt the whole raised forebody gently toward the center of the disc so the entire head and hood are safely INSIDE the circular base silhouette in the image plane. There must be an uninterrupted visible band of gray-brown base behind the top of the cobra head and hood. Keep the broad hood open and the cobra tall relative to its coil, do not shrink the subject to a tiny creature. Preserve the same nearly circular shallow disc, coil anatomy, olive and cream colors, one head, expression, painterly sculptural material, high-overhead oblique camera and soft top-left illumination. Base should remain centered, about 86% of square canvas width, with complete contour. No other changes, no new creature, no marks or symbols, no faction-colored rim. Actual PNG transparency everywhere outside the disc; no scene, floor, supports or shadows outside the disc.",
+  "references": [
+    {
+      "path": "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v2/masters/king-cobra-v0-overhang.png",
+      "role": "edit target: same cobra, lower raised forebody so silhouette fits inside circular base"
+    }
+  ],
+  "source_identity_evidence": "data/general/npcs/snake.lua:91-92 describes a large snake with a hooded face.",
+  "source_tool_path": "~/.codex/generated_images/01a0dd25-86d8-71f0-8868-f3586117d75e/exec-cae64f11-76ac-4c07-ba46-b65ae6dd6737.png",
+  "saved_path": "masters/king-cobra-v1.png",
+  "processing": "Copied original generated PNG byte-for-byte. No cleanup, masking, repaint, recolor or resizing performed by this agent.",
+  "alpha_inspection": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox_by_min_value": {
+      "1": [
+        59,
+        142,
+        1192,
+        1228
+      ],
+      "8": [
+        140,
+        144,
+        1114,
+        1127
+      ],
+      "32": [
+        140,
+        145,
+        1113,
+        1127
+      ],
+      "128": [
+        141,
+        145,
+        1113,
+        1126
+      ],
+      "250": [
+        143,
+        146,
+        1112,
+        1126
+      ]
+    },
+    "fully_transparent_pixels": 819903,
+    "fully_opaque_pixels": 314,
+    "low_alpha_pixels_1_to_7": 4858,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sha256": "4dd71aad3620701141420b6f3c357c5c782e9f73f66dffd85ef9ac501edec2fd"
+  },
+  "review": {
+    "inspected_with": "view_image on actual saved master",
+    "visual": "Broad expanded olive hood, pale raised belly and compact lower coil clearly differ from the first brown snake. One directed edit lowered head and hood inside the base; the final neutral rim is visible behind the head.",
+    "transparency": "Real RGBA alpha with zero-alpha corners. Very faint native alpha 1–7 dust occurs beyond the visible disc; recorded and preserved. Alpha>=8 bbox is for sizing inspection only.",
+    "status": "Recommended for parent uniform export and 48/64/96px inspection; not a gameplay-validated asset."
+  },
+  "previous_candidate": {
+    "status": "Rejected for visible head/hood overlap beyond top of disc; exactly one targeted pose correction.",
+    "saved_path": "masters/king-cobra-v0-overhang.png",
+    "source_tool_path": "~/.codex/generated_images/01a0dd25-86d8-71f0-8868-f3586117d75e/exec-d785c1f9-29d9-4300-81e8-d67485b03c9b.png",
+    "prompt": "Use case: stylized-concept.\nAsset type: one transparent PNG monster miniature for a tactical tabletop videogame, readable at 64 pixels.\nPrimary request: create ONE KING COBRA token in the same hand-painted miniature family as style reference 1.\nInput images: Image 1 is the approved BROWN SNAKE token STYLE reference only (neutral dark gray-brown shallow disc, high overhead oblique camera, matte painted sculptural material, soft upper-left lighting). Image 2 is the original KING COBRA game sprite IDENTITY reference (green cobra); game description explicitly calls it a large snake with a hooded face. This is a NEW species: do not copy the brown snake's head or low-coil pose.\nSubject: an olive-green king cobra with a large unmistakable expanded neck hood and a raised forward body. Broad pale warm-cream front of hood, green patterned outer edges, a single sharp snake head angled toward the viewer. Lower body forms one compact loose coil supporting the broad hood. The hood is the dominant shape, not a long clutter of loops. No crown, ornaments, extra heads, horns, limbs, armor or weapons.\nStyle: painted carved wood/resin fantasy game piece, simplified chunky shapes, a few expressive brush highlights. Species must be distinguishable by silhouette from a low brown coiled snake at 64px.\nComposition: high overhead oblique view showing head and back. Place whole creature safely inside a neutral shallow nearly circular gray-brown base. IMPORTANT: even the highest part of the raised hood remains INSIDE the base outline in the image plane; tilt its body toward viewer if needed. Base rim is visible all around. Square image, complete base about 86% of canvas width, centered. Creature large, occupying most of base, not a tiny miniature. All contour remains within one circular token.\nLighting: soft upper-left, short contact shadow only inside disc. Matte finish, no glow.\nBackground: genuine fully transparent PNG alpha outside the disc, clean corners and transparent space; no water, grass, scenery, surface, supports or drop shadow beyond disc.\nAvoid: faction-colored ring, red rim, blue rim, colored status glow, letters, numbers, labels, rank stars, watermark. Creature coloring only; base is neutral.",
+    "references": [
+      {
+        "path": "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/brown-snake-v1.png",
+        "role": "style reference only"
+      },
+      {
+        "path": "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/green-snake.png",
+        "role": "species identity reference"
+      }
+    ],
+    "alpha_inspection": {
+      "mode": "RGBA",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox_by_min_value": {
+        "1": [
+          59,
+          40,
+          1136,
+          1226
+        ],
+        "8": [
+          145,
+          114,
+          1109,
+          1127
+        ],
+        "32": [
+          145,
+          114,
+          1109,
+          1126
+        ],
+        "128": [
+          146,
+          115,
+          1108,
+          1126
+        ],
+        "250": [
+          147,
+          116,
+          1107,
+          1125
+        ]
+      },
+      "fully_transparent_pixels": 819890,
+      "fully_opaque_pixels": 377,
+      "low_alpha_pixels_1_to_7": 6719,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "2bbd2c6040ff5ac910ba4399f0f71c7cf630f6404fa0effa656997b34fc0b611"
+    }
+  }
+}

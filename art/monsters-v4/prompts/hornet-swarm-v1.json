@@ -1,0 +1,108 @@
+{
+  "asset_id": "hornet-swarm-v1",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "status": "generated-static-reviewed-with-runtime-supplement",
+  "prompt": "Use case: precise-object-edit\nAsset type: one transparent PNG HORNET SWARM tabletop miniature for 48/64/96px RPG display.\nPrimary request: replace the three bees in Image 1 with FOUR distinctly shaped HORNETS. Image 1 is the style/base edit target: preserve its neutral dark grey-brown thin circular disc with subdued bronze-grey bevel, hand-painted sculpted miniature finish, steep downward three-quarter camera and soft upper-left illumination. Image 2 is the native hornet-swarm identity reference.\nSubject and group silhouette: exactly four complete adult hornets in a loose STAGGERED DIAGONAL advancing group from upper-left toward lower-right, each angled slightly differently but with clear forward intent. Keep dark disc gaps between their bodies. This must differ from the three plump bees in an equilateral triangle and from a cloud of many tiny midges. Four longer angular insect silhouettes create the group's shape; do not merely recolour the bees.\nHornet anatomy: smooth firm chestnut-dark thorax, small alert insect head with two curved antennae, SIX bent legs, a strongly pinched narrow waist, and a LONG TAPERED OCHRE-YELLOW AND BLACK STRIPED ABDOMEN ending in a small natural sharp tip. Not a fuzzy bumblebee, not a round barrel abdomen. Each hornet has a coherent PAIR of long translucent smoky-grey forewings attached to its thorax, with the smaller hindwings naturally aligned beneath them; both left and right wing masses are visible from above. All head, thorax, waist, abdomen, wings and legs join plausibly. No detached wing or extra head. Wings and abdomen are elongated rather than broad and round.\nColour/value: warm muted ochre/yellow identity bands, dark chestnut and charcoal structural blocks, pale smoke-silver wings. Use fewer broad readable stripes rather than many tiny lines; saturation remains controlled so runtime faction and status UI stays dominant. The unfluffy narrow waist and pointed long abdomen must still separate hornets from bees in grayscale. No glow or bright halo.\nFraming: square 1024x1024 canvas; centred nearly circular thin disc about 86% of canvas width. The complete four-hornet group spans around 80% of disc diameter, leaving a visible neutral perimeter around every antenna, leg, wing and abdomen tip. Keep all creatures inside the disc. Put main heads away from the top-right 23% by 18% canvas badge reserve; no guide or marker.\nMatte painted resin/carved miniature style, broad sculpted body planes, restrained wing veining, upper-left soft light and only tiny internal shadows. No rods, stands, grass, rocks, hive, scenic effects or outside cast shadow.\nBackdrop: real native transparent alpha outside the disc with clean antialiased edges.\nAvoid: fuzzy bees, three-bee triangle, seven-midge cloud, saturated yellow flood, blood, huge wasp queen, magic effects, faction ring, coloured rim, rank, crown, HP, shield, selection, text, numbers, icons, watermark, black/white background, painted checkerboard. One swarm on one neutral base, not a sheet.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v2/masters/bee-swarm-v1.png",
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/hornet_swarm.png"
+  ],
+  "reference_roles": [
+    "Style/base edit target and negative family contrast; retain tabletop disc/light/material/camera but replace three fuzzy fat bees and their triangle arrangement.",
+    "Native hornet swarm identity reference; elongated striped abdomen, narrow waist, long wings and defensive group."
+  ],
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "saved_output_path": "art/monsters-v4/masters/hornet-swarm-v1.png",
+  "generated_at_utc": "2026-09-27T01:01:40.488220+00:00",
+  "batch_group": "B",
+  "authorization": "Parent approved second group after first-four runtime review.",
+  "original_output_path": "~/.codex/generated_images/01a0e03a-d37e-7f70-a65b-cc566c7bb09b/exec-b53c4d0a-e617-498b-831b-fea836d22bb8.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Original built-in image_gen output copied byte-for-byte. No creature pixel editing, recolouring, matting, alpha replacement or re-encoding.",
+  "sha256": "528da618d7f67f7f8896a8e8ea72bb42caa0278318cbeef25b188047aea03f2f",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      19,
+      1174,
+      1200
+    ],
+    "visible_alpha_bbox": [
+      89,
+      90,
+      1166,
+      1159
+    ],
+    "transparent_pixels": 659948,
+    "partial_alpha_pixels": 911940,
+    "opaque_pixels": 628,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "selection": "static-approved-runtime-integration-candidate",
+  "reference_sha256": {
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v2/masters/bee-swarm-v1.png": "d1d42774e1ccb58749594e05c4cc829b99f17a4fcae112ecd2e376e6f28352c3",
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/hornet_swarm.png": "24bb0c67c63d204bfb9b1b89480198082867fe0adf93914f5e1e74d42f390c5f"
+  },
+  "review": {
+    "observations": [
+      "Four complete hornets with smooth chestnut thoraxes, clearly pinched waists and pointed elongated striped abdomens.",
+      "Paired long forewing masses attach at each thorax, with smaller hindwing planes visible beneath; antennae, legs and body sections are coherent.",
+      "Four staggered bodies and long pointed abdomens differ structurally from three fuzzy plump bees; no colour-only substitution.",
+      "All wings, feet, antennae and abdomen tips remain within the disc; no critical head lies in the top-right badge reserve.",
+      "Yellow stripes and facial marks are bright; compare their visual weight with relation/HP UI at real size."
+    ],
+    "remaining_limits": [
+      "Screenshots inspected are frozen-AI static family scenes, not continuous combat or blind player testing.",
+      "Complex particles, grayscale runtime, exact identity behaviour and worm multiplication require parent test evidence.",
+      "Native master remains the unchanged 1254 square output."
+    ]
+  },
+  "static_review": {
+    "reviewed_at_utc": "2026-09-27T01:11:49.348229+00:00",
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "backgrounds": [
+      "flat muted grass green",
+      "flat dark water blue",
+      "neutral CSS grayscale display"
+    ],
+    "method": "Parent mechanically exported native-alpha masters with the existing C tool. Existing CJS Chromium capture displayed native sprite dimensions at device scale 1. Both screenshots viewed at original resolution. No creature pixels changed.",
+    "preview_paths": [
+      "art/monsters-v4/review/second-four-grass.png",
+      "art/monsters-v4/review/second-four-water.png"
+    ],
+    "preview_sha256": {
+      "second-four-grass.png": "b52dc7b6b458d0d043c382ca77ae538dd1e9050bf10ac457879113c23b9e9a98",
+      "second-four-water.png": "8d17fd5f6c797dc7df0f05af2889429c90555c344b3bec79b042593939455e91"
+    },
+    "observation": "Four staggered elongated pointed bodies distinguish the three plump bees even in grayscale; at 48px overall group silhouette matters more than fine waist detail.",
+    "runtime_screenshot": false
+  },
+  "inspected_runtime_supplement": [
+    "evidence/runtime-v052/screenshots/swarms-1920-64.png",
+    "evidence/runtime-v052/screenshots/swarms-1920-48.png"
+  ]
+}

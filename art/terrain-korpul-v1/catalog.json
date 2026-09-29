@@ -1,0 +1,130 @@
+[
+  {
+    "id": "floor-a",
+    "design": "floor-a",
+    "kind": "opaque-floor",
+    "source": "game/modules/tome/data/general/grids/basic.lua",
+    "status": "runtime-exported-static-reviewed-awaiting-parent-live-validation",
+    "runtime_size": [
+      128,
+      128
+    ],
+    "orientation": null,
+    "mask_support": "0 only",
+    "parity_support": "0 and 1 exported",
+    "production_manifest": "runtime-manifest.json",
+    "concept_master": "masters/floor-a-v2.png"
+  },
+  {
+    "id": "floor-b",
+    "design": "floor-b",
+    "kind": "opaque-floor",
+    "source": "game/modules/tome/data/general/grids/basic.lua",
+    "status": "runtime-exported-static-reviewed-awaiting-parent-live-validation",
+    "runtime_size": [
+      128,
+      128
+    ],
+    "orientation": null,
+    "mask_support": "0 only",
+    "parity_support": "0 and 1 exported",
+    "production_manifest": "runtime-manifest.json",
+    "concept_master": "masters/floor-b-v2.png"
+  },
+  {
+    "id": "wall",
+    "design": "wall",
+    "kind": "transparent-component",
+    "source": "game/modules/tome/data/general/grids/basic.lua",
+    "status": "runtime-exported-static-reviewed-awaiting-parent-live-validation",
+    "runtime_size": [
+      128,
+      128
+    ],
+    "orientation": null,
+    "mask_support": "all 16 exported",
+    "parity_support": "0 and 1 exported",
+    "production_manifest": "runtime-manifest.json",
+    "concept_master": "masters/wall-v1.png"
+  },
+  {
+    "id": "hardwall",
+    "design": "hardwall",
+    "kind": "transparent-component",
+    "source": "game/modules/tome/data/general/grids/basic.lua",
+    "status": "runtime-exported-static-reviewed-awaiting-parent-live-validation",
+    "runtime_size": [
+      128,
+      128
+    ],
+    "orientation": null,
+    "mask_support": "all 16 exported",
+    "parity_support": "0 and 1 exported",
+    "production_manifest": "runtime-manifest.json",
+    "concept_master": "masters/hardwall-v1.png"
+  },
+  {
+    "id": "door-closed-horizontal",
+    "design": "door-closed",
+    "kind": "transparent-component",
+    "source": "game/modules/tome/data/general/grids/basic.lua",
+    "status": "runtime-exported-static-reviewed-awaiting-parent-live-validation",
+    "runtime_size": [
+      128,
+      128
+    ],
+    "orientation": "horizontal",
+    "mask_support": "all 16 exported",
+    "parity_support": "0 and 1 exported",
+    "production_manifest": "runtime-manifest.json",
+    "concept_master": "masters/door-closed-horizontal-v1.png"
+  },
+  {
+    "id": "door-open-horizontal",
+    "design": "door-open",
+    "kind": "transparent-component",
+    "source": "game/modules/tome/data/general/grids/basic.lua",
+    "status": "runtime-exported-static-reviewed-awaiting-parent-live-validation",
+    "runtime_size": [
+      128,
+      128
+    ],
+    "orientation": "horizontal",
+    "mask_support": "all 16 exported",
+    "parity_support": "0 and 1 exported",
+    "production_manifest": "runtime-manifest.json",
+    "concept_master": "masters/door-open-horizontal-v1.png"
+  },
+  {
+    "id": "door-closed-vertical",
+    "design": "door-closed",
+    "kind": "transparent-component",
+    "source": "game/modules/tome/data/general/grids/basic.lua",
+    "status": "runtime-exported-static-reviewed-awaiting-parent-live-validation",
+    "runtime_size": [
+      128,
+      128
+    ],
+    "orientation": "vertical",
+    "mask_support": "all 16 exported",
+    "parity_support": "0 and 1 exported",
+    "production_manifest": "runtime-manifest.json",
+    "concept_master": "masters/door-closed-vertical-v1.png"
+  },
+  {
+    "id": "door-open-vertical",
+    "design": "door-open",
+    "kind": "transparent-component",
+    "source": "game/modules/tome/data/general/grids/basic.lua",
+    "status": "runtime-exported-static-reviewed-awaiting-parent-live-validation",
+    "runtime_size": [
+      128,
+      128
+    ],
+    "orientation": "vertical",
+    "mask_support": "all 16 exported",
+    "parity_support": "0 and 1 exported",
+    "production_manifest": "runtime-manifest.json",
+    "concept_master": "masters/door-open-vertical-v2.png"
+  }
+]

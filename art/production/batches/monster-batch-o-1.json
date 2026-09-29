@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-o-1",
+  "assets": [
+    {
+      "asset_id": "white-ooze",
+      "native_name": "white ooze",
+      "scope": "ooze.lua loader (vermin/oozes, default-name image, non-unique, no define_as, no nice_tile); sandworm-lair, conclave-vault, Arena (entity filter by name only); clone_on_hit is absent, the leaf is a plain blob",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 86,
+          "anchor": "name = \"white ooze\", color=colors.WHITE"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_oozes_white_ooze.png",
+          "sha256": "b6a705c4711506cb50cff0e311992d0b2a75873e2b29f1394801b2d818fb1d94",
+          "role": "identity",
+          "note": "Native shape: a low flat puddle of milky white slime with a lumpy top, two small detached drops beside it."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/white-jelly.png",
+          "sha256": "7b24189c40f9aa69767d34944316d3404e14044e52d4087a49d6594d412b84f5",
+          "role": "family",
+          "note": "Shipped white jelly (a tall domed bright-white cloud-shaped mound): the white ooze is a LOW WIDE flat puddle with a rippled edge, not a domed mound."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A white ooze seen from a steep overhead three-quarter angle: a low wide flat puddle of glossy milky-white slime, with a rippled scalloped edge, a few small bubbles on its glossy surface, faint pearl-blue shadows in the folds and bright white highlights along the upper-left of each lump, three small round drops detached beside the puddle. No eyes, no face. Wet, simple and complete.",
+        "contrast": "Ooze family, shipped black/yellow/red/blue/green/crimson oozes and the white jelly: the white ooze is the LOW FLAT scalloped puddle with three detached drops (silhouette: wide flat scalloped puddle, three separate drops; hue: milky white with pearl-blue shade; value: very light). The white jelly is a tall domed mound; do not draw a dome.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Milky white slime with pearl-blue and pale-lavender shade planes, bright white highlights; nothing darker than a light mid-grey-blue; the disc stays neutral charcoal and receives no glow or white cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=white ooze, define_as=None, type=vermin/subtype=oozes, unique=False); details and hashes in evidence/monster-batch-o-20260929/source-contracts.json. base BASE_NPC_OOZE (vermin/oozes, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives vermin_oozes_white_ooze.png (64x64); no talents, no sustains_at_birth. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-o-20260929/source-contracts.json",
+          "sha256": "d8d01218f85afa424e662a8f08ea1dcfac1dc6aef902034dbb35f6b53f4b494b"
+        }
+      ]
+    }
+  ]
+}

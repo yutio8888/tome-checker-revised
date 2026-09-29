@@ -1,0 +1,45 @@
+{
+  "asset_id": "floor-b-v2",
+  "material": "floor-b",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "intent": "edit",
+  "prompt": "Use case: precise-object-edit. Create a subtle FLOOR B variant of this quiet seamless warm-grey limestone material. Preserve identical muted grey-taupe palette, average brightness, full-bleed flat opaque square, homogeneous calm perimeter with no seams crossing edges. Change only the distribution of fine mineral mottling and introduce very faint broader polished wear patches with no sharp boundary, not centered and not a repeated symbol. It must be the same floor material and same traversability; decorative variation almost disappears at 48px. Truly seamless repeat on all four sides, no large cracks, no outlined flagstones, no edge-darkening, no vignette. Uniform diffuse lighting. Matte hand-painted miniature-board surface. No object, hole, step, border, grid, text, symbol, shadow, scenery or transparency. Single tileable surface PNG.",
+  "references": [
+    "floor-a-v2"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-8be5792c-407a-4a62-b6ef-3d15f12c61d7.png",
+  "saved_output_path": "art/terrain-korpul-v1/masters/floor-b-v2.png",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "native_alpha_required": false,
+  "selection": "design-candidate-not-runtime-ready",
+  "processing": "Original byte copy, mechanical whole-canvas downsampling only.",
+  "sha256": "340f923a153b78765ea43e0079421fd58d0d58a98d558ccc5e5604a9ca84dbeb",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGB",
+    "size": [
+      1254,
+      1254
+    ],
+    "opaque_pixels": 1572516
+  },
+  "references_resolved": [
+    "masters/floor-a-v2.png"
+  ],
+  "static_review": {
+    "sheet": "review/design-sheet.png",
+    "actual_sizes": [
+      48,
+      64,
+      96
+    ],
+    "floor_repeat_size": 128,
+    "grayscale": "CSS display only",
+    "runtime_verified": false,
+    "connected_masks_verified": false
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "asset_id": "floor-a-v1",
+  "material": "floor-a",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "intent": "generate",
+  "prompt": "Use case: stylized-concept. Asset: ONE stone dungeon FLOOR A material master for a flat printed tabletop game board, square PNG ideally 1024x1024. Seamlessly tileable full-bleed opaque painted stone texture, orthographic straight down, no perspective, no border, no bevel, no raised platform, no transparency. Muted warm grey limestone with subtle olive-grey and brown mineral variation, matte hand-painted miniature-board finish. A few broad worn shallow flagstone surfaces with very low contrast fine irregular seams; large calm center area to keep actor miniatures readable at 48/64/96 pixels. Edges must continue seamlessly on all four sides; texture feature scale restrained, no central motif. Soft diffuse upper-left tonal lighting but essentially flat, no directional cast shadows. Match visual restraint of existing muted grass and dirt board squares while changing material to old ruined stone. Low-mid brightness, muted saturation. No objects, debris piles, holes, stairs, moss clumps, cracks suggesting impassability, tilesheet, grid lines, furniture, symbols, letters, numbers, icons, arrows or watermark. A single complete surface, not a photograph of a physical tile.",
+  "references": [],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-c8d06092-5481-4d3e-b380-5f446b003961.png",
+  "saved_output_path": "art/terrain-korpul-v1/masters/floor-a-v1.png",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "native_alpha_required": false,
+  "selection": "rejected-for-repeat-seams",
+  "rejection_reason": "3x2 repeated 128px review reveals interrupted large slab seams at tile boundaries.",
+  "processing": "Copy original unchanged; small-size whole-canvas resampling only. No alpha extraction, relighting, recolouring, rotation, or painted geometry.",
+  "sha256": "2ef345a72e1d3ce6f42980ce72470b23e1e4725b75366d68f2226c14ce88b21c",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGB",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": null,
+    "alpha_bbox": null,
+    "transparent_pixels": 0,
+    "partial_alpha_pixels": 0,
+    "opaque_pixels": 1572516
+  },
+  "references_resolved": [],
+  "static_review": {
+    "sheet": "review/design-sheet.png",
+    "actual_sizes": [
+      48,
+      64,
+      96
+    ],
+    "floor_repeat_size": 128,
+    "grayscale": "CSS display only",
+    "runtime_verified": false,
+    "connected_masks_verified": false
+  }
+}

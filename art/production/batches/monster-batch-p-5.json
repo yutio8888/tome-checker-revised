@@ -1,0 +1,126 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-p-5",
+  "assets": [
+    {
+      "asset_id": "snow-giant",
+      "native_name": "snow giant",
+      "scope": "snow-giant.lua (giant/ice, non-unique, no define_as, resolvers.nice_tile with the explicit PNG in add_mos); daikara, tempest-peak, lesser vault snow-giant-camp (entity filters by name only); the plain member of the family, rarity 1",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/snow-giant.lua",
+          "sha256": "0d1acc9131e7c4691f3c5213bbf33b8f5c13bb2c1e9de93c53dfd10cac6eb042",
+          "line": 52,
+          "anchor": "name = \"snow giant\", color=colors.WHITE"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/snow-giant.lua",
+          "sha256": "0d1acc9131e7c4691f3c5213bbf33b8f5c13bb2c1e9de93c53dfd10cac6eb042",
+          "line": 53,
+          "anchor": "add_mos = {{image=\"npc/giant_ice_snow_giant.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ice_snow_giant.png",
+          "sha256": "803903d03efc516a1bfb6c892a3206c700ca7158e59953438ebaa4f5e4b89125",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a bald, heavy-browed pale blue-grey giant in a dark hide tunic, arms hanging, no weapon shown, standing upright."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/burb-snow-giant-champion.png",
+          "sha256": "300287abfbbb04ccebc1cb5c7003b2275918c761d8c8b5db0880d9709c44a9b3",
+          "role": "family",
+          "note": "Shipped Burb the snow giant champion (silver plate armour, horned helm, blue lightning): none of the four ordinary snow giants wears plate armour or that silver-white palette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A snow giant seen from a steep overhead three-quarter angle: a huge hunched bald humanoid giant with pale slate blue-grey skin, thick bare shoulders and arms with dark leather wristbands, a heavy-browed flat grim face with a wide jaw and deep-set eyes, a dark charcoal hide tunic with a rope belt, heavy dark boots wrapped in frost-white fur, patches of white frost on the shoulders and knuckles, a short thick grey stone-headed maul held low in the right hand against the hip and the left hand hanging open. No horned helm, no beard, no armour, no lightning. Cold, heavy and complete.",
+        "contrast": "Four snow giants share this body: this is the PLAIN one (silhouette: bald round head, broad shoulders, both arms LOW with a short maul at the hip; hue: cool pale slate blue-grey; value: mid-light with a dark tunic). The thunderer raises crackling fists and has a white beard, the boulder thrower holds a huge boulder overhead, the chieftain wears horns and a fur mantle; the shipped Burb is silver-armoured.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. This is a huge giant, but on the tabletop disc it is drawn COMPACT: hunched forward with rolled shoulders, bent knees and elbows kept in close, the weapon held short and close to the body, so the whole figure is a broad chunky mass that fills the inner three quarters of the disc yet never reaches the outer sixth ring band. Do not draw a tall standing figure that would run off the disc; the feet and the head both stay well inside the disc. Calibration from the previous generation of this exact token: the whole neutral disc came out slightly DARKER than the style reference (measured about 8 to 9 brightness units too dark, spread over the whole plate and worst in the outer ring band). This time render the entire disc, the outer ring band and the bevel included, visibly a touch LIGHTER and warmer-grey than the style reference's own plate, while keeping the creature exactly as described, the same pose, size and colours.",
+        "palette": "Pale slate blue-grey skin with lighter icy highlight planes, dark charcoal tunic, grey stone maul head, white frost patches; nothing darker than dark grey except tunic seams and boots; the disc stays neutral charcoal with no blue cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=snow giant, define_as=None, type=giant/subtype=ice, unique=False); details and hashes in evidence/monster-batch-p-20260929/source-contracts.json. base BASE_NPC_SNOW_GIANT (giant/ice, no image=); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/giant_ice_snow_giant.png\", display_h=2, display_y=-1}}} names the PNG explicitly (no {tall=1} shorthand and no =BASE=TILE= indirection), so the resolved tall body is statically pinnable (same form as the batch K gigantic sandworm tunneler and batch M gwelgoroth entries); native sprite 64x128; talent Mind Disruption (activated npc talent, misc/npcs.lua); resolvers.inscriptions(1,\"infusion\") (random infusion, no display write); ingredient_on_death only; no sustains_at_birth. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-p-20260929/source-contracts.json",
+          "sha256": "3eb4cdb07da21fc9292934f54d928caa0b1dbe86aeff6b6877e103ba4cf2f182"
+        }
+      ]
+    },
+    {
+      "asset_id": "snow-giant-boulder-thrower",
+      "native_name": "snow giant boulder thrower",
+      "scope": "snow-giant.lua (giant/ice, non-unique, no define_as, resolvers.nice_tile with the explicit PNG in add_mos); daikara, tempest-peak, lesser vault snow-giant-camp (entity filters by name only); rarity 3; Throw Boulder (activated npc talent, misc/npcs.lua)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/snow-giant.lua",
+          "sha256": "0d1acc9131e7c4691f3c5213bbf33b8f5c13bb2c1e9de93c53dfd10cac6eb042",
+          "line": 77,
+          "anchor": "name = \"snow giant boulder thrower\", color=colors.UMBER"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/snow-giant.lua",
+          "sha256": "0d1acc9131e7c4691f3c5213bbf33b8f5c13bb2c1e9de93c53dfd10cac6eb042",
+          "line": 78,
+          "anchor": "add_mos = {{image=\"npc/giant_ice_snow_giant_boulder_thrower.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ice_snow_giant_boulder_thrower.png",
+          "sha256": "b1f5e779aedd1dfabdd0b9e5cd495949c8179093d826e55a7acbb622e8356ae4",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a bald grey giant hoisting a huge grey boulder above his head with both arms, mouth open in effort."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/burb-snow-giant-champion.png",
+          "sha256": "300287abfbbb04ccebc1cb5c7003b2275918c761d8c8b5db0880d9709c44a9b3",
+          "role": "family",
+          "note": "Shipped Burb the snow giant champion (silver plate armour, horned helm, blue lightning): none of the four ordinary snow giants wears plate armour or that silver-white palette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A snow giant boulder thrower seen from a steep overhead three-quarter angle: a huge hunched bald giant with weathered warm grey-brown skin, thick bare arms with dark leather wristbands, a brown hide tunic with a rope belt and heavy boots, both arms raised in front of him and lifting a huge rounded rough grey boulder with a few frost patches up to chest height, shoulders hunched with effort, his face grimacing with an open mouth, small pebbles falling from the boulder. No beard, no horned helm, no armour. Straining, heavy and complete.",
+        "contrast": "Four snow giants share this body: the BOULDER THROWER is the one lifting a big round grey boulder in both arms (silhouette: a round rock mass in front of the chest with both arms up around it; hue: warm grey-brown skin and brown tunic with a cool grey boulder; value: mid). The plain snow giant holds a maul low, the thunderer has raised crackling fists and a white beard, the chieftain is horned.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. This is a huge giant, but on the tabletop disc it is drawn COMPACT: hunched forward with rolled shoulders, bent knees and elbows kept in close, the weapon held short and close to the body, so the whole figure is a broad chunky mass that fills the inner three quarters of the disc yet never reaches the outer sixth ring band. Do not draw a tall standing figure that would run off the disc; the feet and the head both stay well inside the disc. Calibration from the previous generation of this exact token: the whole neutral disc came out slightly DARKER than the style reference (measured about 8 to 9 brightness units too dark, spread over the whole plate and worst in the outer ring band). This time render the entire disc, the outer ring band and the bevel included, visibly a touch LIGHTER and warmer-grey than the style reference's own plate, while keeping the creature exactly as described, the same pose, size and colours.",
+        "palette": "Weathered warm grey-brown skin with lighter tan highlight planes, brown hide tunic, cool light-grey boulder with white frost; nothing darker than dark brown except tunic seams and boots; the disc stays neutral charcoal. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=snow giant boulder thrower, define_as=None, type=giant/subtype=ice, unique=False); details and hashes in evidence/monster-batch-p-20260929/source-contracts.json. base BASE_NPC_SNOW_GIANT (giant/ice, no image=); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/giant_ice_snow_giant_boulder_thrower.png\", display_h=2, display_y=-1}}} names the PNG explicitly (no {tall=1} shorthand and no =BASE=TILE= indirection), so the resolved tall body is statically pinnable (same form as the batch K gigantic sandworm tunneler and batch M gwelgoroth entries); native sprite 64x128; talent Throw Boulder (activated, no sustain); resolvers.inscriptions(1,\"infusion\") (random infusion, no display write); ingredient_on_death only; no sustains_at_birth. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-p-20260929/source-contracts.json",
+          "sha256": "3eb4cdb07da21fc9292934f54d928caa0b1dbe86aeff6b6877e103ba4cf2f182"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# Preserve raw evidence: a trailing TSV separator is an empty final field.
+evidence/runtime-v062/**/*.tsv whitespace=-blank-at-eol
+# This archived engine transcript intentionally retains its exact EOF.
+evidence/runtime-v062/diagnostics/non-idempotent-stage/validation-default.txt whitespace=-blank-at-eof

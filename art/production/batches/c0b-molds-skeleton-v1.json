@@ -1,0 +1,278 @@
+{
+  "schema": 1,
+  "batch_id": "c0b-molds-skeleton-v1",
+  "assets": [
+    {
+      "asset_id": "brown-mold",
+      "native_name": "brown mold",
+      "scope": "Shared mold pool (molds.lua); Kor'Pul both layouts and snake-pit room first; exact identity only, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/molds.lua",
+          "sha256": "0b40d03a904bb0f4a569904a2207a53eb7a40c09b4bd1f410b0d90c2327595ef",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_MOLD\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/molds.lua",
+          "sha256": "0b40d03a904bb0f4a569904a2207a53eb7a40c09b4bd1f410b0d90c2327595ef",
+          "line": 60,
+          "anchor": "name = \"brown mold\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel at exactly that lightness. Do not copy its species, body plan, pose or tail."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/immovable_molds_brown_mold.png",
+          "sha256": "4f5c418e378f21045f0c77ac8b808dd5aefafc175acdd461feb8c0663a2f7eac",
+          "role": "identity",
+          "note": "Native species and rusty red-brown colour only. Ignore the native flat fuzzy blob rendering and its camera; our version is a sculpted three-dimensional organism."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v5/masters/grey-mold-v1.png",
+          "sha256": "33ec16b7f1cf6425c03b096262874171746eab885f4847991940756955cb48cd",
+          "role": "family",
+          "note": "Existing mapped grey mold: the ruffled lobed rosette shape is already taken. Brown mold must not repeat it."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "One brown mold: a low, wide, leathery crust clamped to the base plate, built from three or four concentric raised growth rings that step down from a slightly domed centre to a thin scalloped outer edge, like a bracket fungus seen from above. The rings are firm and hard-edged with dry cracked ridges between them and a few small dark pores in the middle. This is a living monster that attacks, not scenery: it must read as one solid three-dimensional organism sitting on the token with its own cast shadow, never as a flat stain, patch of ground decoration or terrain texture. Give it a clear sculpted mass with a top plane, sides and a base, not an evenly fuzzy blur.",
+        "contrast": "The already mapped grey mold is a ruffled rosette of broad wavy overlapping lobes, like layered frilled petals, in even mid-grey. All three new molds must be separable from it and from each other by SHAPE first and colour only second, and must stay separable in grayscale at 48px: brown mold = a flat low crust of concentric growth rings; green mold = a lumpy cluster of swollen rounded nodules; shining mold = an open radial burst of slender upright stalks. Do not draw any of them as frilled petals. Brown mold specifically: (1) silhouette — a flat wide low disc-like crust with a stepped concentric ring structure and a scalloped rim, much lower and broader than the grey mold's upright ruffled rosette; (2) value — dark rusty core with distinctly paler ring crests, giving strong concentric light-dark banding instead of even mid-grey; (3) hue — warm rust-brown. Its rings must not be mistaken for the green mold's bulging nodules or the shining mold's upright stalks.",
+        "composition": "One single growth centred on one disc, steep overhead three-quarter view. The whole organism stays inside the disc with clear margin and the outer sixth of the disc radius stays bare base plate; nothing spreads to the rim or spills off the edge. Keep the upper-right rank corner and upper-left interaction corner clear. Keep the form coarse enough to read as its own distinct shape at 48px; avoid fine hairlike fuzz that dissolves into noise. No spores in the air, no cloud, no puddle, no second growth.",
+        "palette": "Rusty red-brown and dark chestnut body, paler ochre-tan ring crests catching the upper-left light, deep umber cracks and pores, and a tight warm-grey contact shadow. Matte and dry. No glow, no spore cloud, no slime, no effect."
+      },
+      "kind": "creature",
+      "gate": "ready",
+      "gate_reason": "Main agent approved the 0.6.8 detached native actor evidence in evidence/c0b-art-gate: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/README.md",
+          "sha256": "a68e8165953229082ca8c18512cb56f43f85c2a025ccf453cf832e81fa569f14"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/native-actors.tsv",
+          "sha256": "35b66e9491cf7cd75f04db24e228bf6c6a0e7a0fa4b27f436e21e4cde877e193"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/sources.json",
+          "sha256": "43071414fc86a870d05f6b52661f57cdbd89c4a25a47b7b2bdcdb8e2faa3ce53"
+        }
+      ]
+    },
+    {
+      "asset_id": "green-mold",
+      "native_name": "green mold",
+      "scope": "Shared mold pool (molds.lua); Kor'Pul both layouts and snake-pit room first; exact identity only, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/molds.lua",
+          "sha256": "0b40d03a904bb0f4a569904a2207a53eb7a40c09b4bd1f410b0d90c2327595ef",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_MOLD\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/molds.lua",
+          "sha256": "0b40d03a904bb0f4a569904a2207a53eb7a40c09b4bd1f410b0d90c2327595ef",
+          "line": 88,
+          "anchor": "name = \"green mold\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel at exactly that lightness. Do not copy its species, body plan, pose or tail."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/immovable_molds_green_mold.png",
+          "sha256": "ac8f4f023ded04256bfb43f2d49c1e764cc6e245f142f16d568ae13a94c1934e",
+          "role": "identity",
+          "note": "Native species and sickly green colour only. Ignore the native flat fuzzy blob rendering and its camera; our version is a sculpted three-dimensional organism."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v5/masters/grey-mold-v1.png",
+          "sha256": "33ec16b7f1cf6425c03b096262874171746eab885f4847991940756955cb48cd",
+          "role": "family",
+          "note": "Existing mapped grey mold: the ruffled lobed rosette shape is already taken. Green mold must not repeat it."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "One green mold: a tight cluster of six to nine swollen rounded nodules of different sizes piled into one compact heap, like a clump of wet bulbous blisters. Each nodule is a smooth taut dome with its own highlight; deep dark crevices separate them, and two or three of the larger domes have a small open pore at the top. A thin sagging skirt of growth grips the base plate under the heap. This is a living monster that attacks, not scenery: it must read as one solid three-dimensional organism sitting on the token with its own cast shadow, never as a flat stain, patch of ground decoration or terrain texture. Give it a clear sculpted mass with a top plane, sides and a base, not an evenly fuzzy blur.",
+        "contrast": "The already mapped grey mold is a ruffled rosette of broad wavy overlapping lobes, like layered frilled petals, in even mid-grey. All three new molds must be separable from it and from each other by SHAPE first and colour only second, and must stay separable in grayscale at 48px: brown mold = a flat low crust of concentric growth rings; green mold = a lumpy cluster of swollen rounded nodules; shining mold = an open radial burst of slender upright stalks. Do not draw any of them as frilled petals. Green mold specifically: (1) silhouette — a bumpy cauliflower-like outline made of overlapping circular bulges, taller and lumpier than the brown mold's flat rings and completely unlike the grey mold's thin wavy frills; (2) value — many small bright dome highlights separated by very dark crevices, a strong spotty high-contrast pattern; (3) hue — sickly olive and yellow-green. Its bulges must not be mistaken for the shining mold's slender stalks.",
+        "composition": "One single growth centred on one disc, steep overhead three-quarter view. The whole organism stays inside the disc with clear margin and the outer sixth of the disc radius stays bare base plate; nothing spreads to the rim or spills off the edge. Keep the upper-right rank corner and upper-left interaction corner clear. Keep the form coarse enough to read as its own distinct shape at 48px; avoid fine hairlike fuzz that dissolves into noise. No spores in the air, no cloud, no puddle, no second growth.",
+        "palette": "Sickly olive and moss green with yellow-green lit dome tops, deep blackish-green crevices, a dull grey-green sagging basal skirt, and a tight cool-grey contact shadow. Wet-looking but matte. Poison is suggested by the sickly green colour only: no gas, no droplets, no glow, no effect."
+      },
+      "kind": "creature",
+      "gate": "ready",
+      "gate_reason": "Main agent approved the 0.6.8 detached native actor evidence in evidence/c0b-art-gate: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/README.md",
+          "sha256": "a68e8165953229082ca8c18512cb56f43f85c2a025ccf453cf832e81fa569f14"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/native-actors.tsv",
+          "sha256": "35b66e9491cf7cd75f04db24e228bf6c6a0e7a0fa4b27f436e21e4cde877e193"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/sources.json",
+          "sha256": "43071414fc86a870d05f6b52661f57cdbd89c4a25a47b7b2bdcdb8e2faa3ce53"
+        }
+      ]
+    },
+    {
+      "asset_id": "shining-mold",
+      "native_name": "shining mold",
+      "scope": "Shared mold pool (molds.lua); Kor'Pul both layouts first; exact identity only, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/molds.lua",
+          "sha256": "0b40d03a904bb0f4a569904a2207a53eb7a40c09b4bd1f410b0d90c2327595ef",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_MOLD\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/molds.lua",
+          "sha256": "0b40d03a904bb0f4a569904a2207a53eb7a40c09b4bd1f410b0d90c2327595ef",
+          "line": 73,
+          "anchor": "name = \"shining mold\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel at exactly that lightness. Do not copy its species, body plan, pose or tail."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/immovable_molds_shining_mold.png",
+          "sha256": "12e9c30c61019d43b4e84aac8e588aac74f9e83c9b649a0512cb1e322cf46823",
+          "role": "identity",
+          "note": "Native species and pale golden colour only. The native actor carries no shader, no animation and no light source, so do NOT paint emitted light; ignore the native flat fuzzy blob rendering and its camera."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v5/masters/grey-mold-v1.png",
+          "sha256": "33ec16b7f1cf6425c03b096262874171746eab885f4847991940756955cb48cd",
+          "role": "family",
+          "note": "Existing mapped grey mold: the ruffled lobed rosette shape is already taken. Shining mold must not repeat it."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "One shining mold: an open radial burst of ten to fourteen slender upright stalks growing out of a small dark knotted base, splaying outward and upward like a spray of thin fingers. Each stalk is a smooth tapering rod ending in a swollen pale waxy knob; the stalks lean at different angles and are separated by clear gaps of dark disc so the cluster reads as open, not solid. The knobs look like polished wax or pale amber — bright material, not a light source. This is a living monster that attacks, not scenery: it must read as one solid three-dimensional organism sitting on the token with its own cast shadow, never as a flat stain, patch of ground decoration or terrain texture. Give it a clear sculpted mass with a top plane, sides and a base, not an evenly fuzzy blur.",
+        "contrast": "The already mapped grey mold is a ruffled rosette of broad wavy overlapping lobes, like layered frilled petals, in even mid-grey. All three new molds must be separable from it and from each other by SHAPE first and colour only second, and must stay separable in grayscale at 48px: brown mold = a flat low crust of concentric growth rings; green mold = a lumpy cluster of swollen rounded nodules; shining mold = an open radial burst of slender upright stalks. Do not draw any of them as frilled petals. Shining mold specifically: (1) silhouette — an open spiky starburst with real gaps between separate stalks, the only mold in the set whose outline is broken rather than solid; (2) value — the brightest of the four molds, pale waxy knobs over a very dark compact base, giving a light-tipped dark-rooted pattern that the flat brown crust and the lumpy green heap do not have; (3) hue — pale straw-gold. It is luminescent in name only: paint no emitted light, no halo, no bloom and no coloured rim light, and do not lighten the disc under it.",
+        "composition": "One single growth centred on one disc, steep overhead three-quarter view. The whole organism stays inside the disc with clear margin and the outer sixth of the disc radius stays bare base plate; nothing spreads to the rim or spills off the edge. Keep the upper-right rank corner and upper-left interaction corner clear. Keep the form coarse enough to read as its own distinct shape at 48px; avoid fine hairlike fuzz that dissolves into noise. No spores in the air, no cloud, no puddle, no second growth.",
+        "palette": "Pale straw-gold and warm cream waxy knobs, honey-ochre stalks shading to dark olive-brown at the knotted base, deep shadow between stalks, tight neutral contact shadow. The charcoal-brown disc and bronze-grey bevel keep exactly the style reference's lightness despite the pale subject. No glow, no bloom, no spore burst, no effect."
+      },
+      "kind": "creature",
+      "gate": "ready",
+      "gate_reason": "Main agent approved the 0.6.8 detached native actor evidence in evidence/c0b-art-gate: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/README.md",
+          "sha256": "a68e8165953229082ca8c18512cb56f43f85c2a025ccf453cf832e81fa569f14"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/native-actors.tsv",
+          "sha256": "35b66e9491cf7cd75f04db24e228bf6c6a0e7a0fa4b27f436e21e4cde877e193"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/sources.json",
+          "sha256": "43071414fc86a870d05f6b52661f57cdbd89c4a25a47b7b2bdcdb8e2faa3ce53"
+        }
+      ]
+    },
+    {
+      "asset_id": "skeleton-warrior",
+      "native_name": "skeleton warrior",
+      "scope": "Shared skeleton pool (skeleton.lua); Kor'Pul amon-sul-crypt room and later undead zones; exact identity only, distinct from degenerated skeleton warrior",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_SKELETON\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 103,
+          "anchor": "name = \"skeleton warrior\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel at exactly that lightness. Do not copy its species, body plan, pose or tail."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/skeleton_warrior.png",
+          "sha256": "e4f371de5e731cb079c867775924fde69e31b86f19dc67f5c8bb78ef0c8d6dba",
+          "role": "identity",
+          "note": "Native species only: an intact armoured skeleton warrior. Ignore its camera, its curved blade and the engine tint. The resolved native instance carries an iron greatsword and rusty body armour, and no shield."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v5/masters/degenerated-skeleton-warrior-v2.png",
+          "sha256": "a41bbd64fccbda3124170edf1fc2f1850842b97a8b84d20c85beaffa1277c683",
+          "role": "family",
+          "note": "Existing mapped degenerated skeleton warrior: a sprawling, bright bare-bone, half-collapsed one-armed skeleton with its sword low. The new skeleton warrior must not repeat that pose, that bare-bone brightness or that broken outline."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "One intact skeleton warrior standing upright and squared up, seen from a steep overhead three-quarter angle, facing down-left. It wears a rusted iron cuirass and shoulder plates over the ribcage and a battered rusted open-faced helm on the skull; forearms and shins are bare bone with tarnished straps. Both arms are present and it grips a long two-handed iron greatsword, the blade raised diagonally across its body from the lower left to the upper right, held clear of the body. Stance is compact and balanced, feet planted apart. No shield.",
+        "contrast": "The mapped degenerated skeleton warrior is a pale, bare, crumbling one-armed skeleton sprawled low and wide across its disc with its sword down. This skeleton warrior must differ in at least two dimensions: (1) silhouette — an upright, compact, vertical armoured figure with a clean unbroken outline, a helmed head and one long straight diagonal blade, instead of a broken low sprawl; (2) value — a large dark mid-value armoured torso mass with only the skull, forearms and shins left as bright bone, instead of the degenerated one's overall bright bone body. It must also not be confused with the mapped skeleton mage, which wears a flowing dark robe and holds a knobbed staff: this one is plate-and-blade, with hard straight metal edges. Distinction must survive grayscale at 48px.",
+        "composition": "One entire figure on one disc, steep overhead three-quarter view. Helm, both hands, the whole blade including its point, and both feet stay inside the disc with clear margin; the outer sixth of the disc radius stays bare base plate and the blade must not cross the rim. Keep the skull out of the upper-right rank corner and the upper-left interaction corner clear. Leave a readable gap of dark disc between the blade and the torso so they do not merge at 48px. No banner, no base rubble, no grave.",
+        "palette": "Rusted iron armour in dull oxide-brown and dark slate steel with worn lighter edge highlights, weathered bone in warm ivory for skull, forearms and shins, dark empty eye sockets, tarnished leather straps, and a cool grey blade with a dull sheen. Matte and dry. No red eye glow, no magic light, no aura, no effect."
+      },
+      "kind": "creature",
+      "gate": "ready",
+      "gate_reason": "Main agent approved the 0.6.8 detached native actor evidence in evidence/c0b-art-gate: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/README.md",
+          "sha256": "a68e8165953229082ca8c18512cb56f43f85c2a025ccf453cf832e81fa569f14"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/native-actors.tsv",
+          "sha256": "35b66e9491cf7cd75f04db24e228bf6c6a0e7a0fa4b27f436e21e4cde877e193"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/sources.json",
+          "sha256": "43071414fc86a870d05f6b52661f57cdbd89c4a25a47b7b2bdcdb8e2faa3ce53"
+        }
+      ]
+    }
+  ]
+}

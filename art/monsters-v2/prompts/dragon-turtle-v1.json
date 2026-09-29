@@ -1,0 +1,82 @@
+{
+  "id": "dragon-turtle-v1",
+  "created_date": "2026-09-26",
+  "tool": "built-in image_gen.imagegen",
+  "skill": "~/.codex/skills/.system/imagegen/SKILL.md",
+  "use_case": "stylized-concept",
+  "intent": "generate",
+  "prompt": "Use case: stylized-concept.\nAsset type: one transparent PNG monster miniature for a fantasy tactical tabletop videogame, readable at 64 pixels.\nPrimary request: create ONE DRAGON TURTLE monster token with a strong shell-and-four-limbs silhouette, matching the established miniature family.\nInput images: Image 1 is the approved forest-troll token STYLE reference only: high overhead oblique camera, matte hand-painted sculptural material, neutral gray-brown shallow round base, soft upper-left lighting. Do not include troll features. Image 2 is the original dragon turtle game sprite SPECIES IDENTITY reference: bulky armored yellow-olive/sea-green reptile with a ridged shell, stout legs, tail and strong reptilian head. The game describes a huge elongated sea-green reptile; this is a dragon TURTLE, not a winged dragon or a tortoise carrying scenery.\nSubject: a compact hulking olive/sea-green dragon turtle in a low four-legged stance. Dominant broad domed turtle shell with a few large angular dark olive scutes and short chunky ridge points, not dozens of tiny spikes. Its elongated angular reptilian head projects clearly forward from the shell, with a heavy blunt dragonlike jaw and short neck. Four thick splayed clawed legs visibly project around the shell; broad warm ivory claws. A stout tapering reptilian tail curves to one side but remains inside the disc. The shell should occupy about half the creature silhouette, balanced by unmistakable head and limbs. No added long horns or wings, no fire or breath effect, no rider, armor, saddle, gems, buildings or other decorations.\nStyle: hand-painted carved wood/resin fantasy board-game piece. Matte brushwork, simplified readable sculptural shapes and drybrush highlights, not a photoreal reptile. Use restrained sea-green/olive coloration with warmer yellow-olive lit ridges so shell and feet separate clearly from the neutral base. Readability at 64px takes priority over fine skin details.\nComposition: high overhead oblique view shows the shell top AND the forward head. Entire creature safely INSIDE one nearly circular thin dark gray-brown disc, with a visible quiet rim around all claws, tail and shell edges. Creature fills 75–88% of the disc, not a tiny figurine. Square canvas, centered base about 86% canvas width. Whole base contour visible, no low-angle narrow ellipse or tall pedestal.\nLighting: soft upper-left light and brief lower-right contact shadow within base only.\nBackground: genuine transparent PNG alpha outside the base, clean empty corners, no scene or ground. No water, splashes, foam, rocks, grass or aquarium habitat.\nAvoid: colored faction rim, red/blue/green status ring, selection glow, text, numbers, labels, rank symbols, watermark, supports or cast shadow beyond the disc.",
+  "references": [
+    {
+      "path": "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/forest-troll-v1.png",
+      "role": "style only: camera, neutral thin base, matte painted miniature material and lighting"
+    },
+    {
+      "path": "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/aquatic_critter_dragon_turtle.png",
+      "role": "original species identity; inspected with view_image"
+    }
+  ],
+  "source_identity_evidence": "data/general/npcs/aquatic_critter.lua:67-68: huge elongated sea-green reptile; original sprite shows armored reptilian shell/body.",
+  "source_tool_path": "~/.codex/generated_images/01a0dd25-86d8-71f0-8868-f3586117d75e/exec-4fe75d33-c28c-4e35-8666-361b76bb6e5a.png",
+  "saved_path": "masters/dragon-turtle-v1.png",
+  "processing": "Copied original generated PNG byte-for-byte. No cleanup, masking, repaint, recolor or resizing performed by this agent.",
+  "alpha_inspection": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox_by_min_value": {
+      "1": [
+        55,
+        51,
+        1202,
+        1201
+      ],
+      "8": [
+        82,
+        74,
+        1172,
+        1177
+      ],
+      "32": [
+        83,
+        76,
+        1172,
+        1175
+      ],
+      "128": [
+        83,
+        76,
+        1171,
+        1175
+      ],
+      "250": [
+        84,
+        77,
+        1170,
+        1174
+      ]
+    },
+    "fully_transparent_pixels": 619238,
+    "fully_opaque_pixels": 838,
+    "low_alpha_pixels_1_to_7": 11167,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sha256": "e6e0b9ac315b84bde6b6dfbf342b9aebb5c4d970e54102dcbd301ca67e6d29be"
+  },
+  "review": {
+    "inspected_with": "view_image on actual saved master",
+    "visual": "Large angular shell, four distinct stout legs, clear reptilian head and curving tail. Creature occupies most of the disc while claws/tail stay inside rim. Olive palette and warm carved highlights match the set.",
+    "transparency": "Real RGBA alpha with zero-alpha corners. Very faint native alpha 1–7 dust occurs beyond the visible disc; recorded and preserved. Alpha>=8 bbox is for sizing inspection only.",
+    "status": "Recommended for parent uniform export and 48/64/96px inspection; not a gameplay-validated asset."
+  }
+}

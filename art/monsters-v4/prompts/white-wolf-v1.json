@@ -1,0 +1,103 @@
+{
+  "asset_id": "white-wolf-v1",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "status": "generated-static-reviewed-runtime-pending",
+  "prompt": "Use case: precise-object-edit\nAsset type: one transparent PNG full-body creature miniature, readable at 48/64/96px in a tabletop RPG.\nPrimary request: replace the creature in Image 1 with a WHITE WOLF while keeping the shared neutral circular disc and painted-miniature art language. Image 1 is the style/base edit target only, not the desired pose. Image 2 is the ordinary grey wolf as a contrast reference: the new white wolf must not copy its downward-left walking pose. Image 3 is the native white-wolf sprite for identity.\nSubject: exactly one complete muscular northern WHITE WOLF, thick cold-white fur with broad cool pale-grey shadow planes, dark charcoal nose and small natural eyes. Matte animal fur, not snow, ice, light or magical energy.\nPose and large silhouette: a clearly SIDE-TURNING BOUND to the RIGHT, viewed from a steep overhead three-quarter angle. The curved torso runs left to right rather than toward the viewer. Put the narrow canine head and muzzle on the right-middle/lower-right of the disc, nose pointing right and slightly down. One foreleg reaches forward to the right and the other is lifted and bent; the two powerful hindlegs are gathered beneath the left half of the body. Show all four anatomically coherent paws. The thick tail sweeps inward in a broad curve on the left of the rump. Preserve a visible open space between the paired forelegs and between chest and hindleg, making a light, angular leaping silhouette instead of a low creeping rectangle or frontal paw-brace. The wolf is one full-bodied miniature, not a cropped head or portrait.\nFamily distinction: read as a large light cold-white mass with a sideways springing arch, unlike Image 2's pale-grey diagonal walk and Image 1's dark frontal stance. Broad white flank and shoulder planes must remain recognizable at 48px; restrained shadow planes separate legs and torso. No dark back saddle and no giant face that hides the body. Ears remain pointed, muzzle canine, no fox, bear or lion proportions.\nShared base and framing: square 1024x1024 canvas; centred, nearly circular neutral dark grey-brown thin disc at approximately 86% of canvas width, thin subdued bronze-grey bevel, identical tabletop finish to Image 1. Creature fills about 80–86% of disc diameter with an exposed disc strip around every fur tip, ear, tail and paw. All anatomy remains inside the round base. Top-right 23% by 18% of canvas contains no face or critical identity feature; draw no guide or badge.\nSoft upper-left illumination, muted matte painted resin with sculpted fur planes and restrained brush texture; only tiny contact shading within the disc. No uniform luminous outline, no bloom.\nBackdrop: genuine native transparent alpha outside the disc, clean antialiased edge. No scene and no cast shadow outside the base.\nAvoid: glow, ice crystals, snow piles, breath cloud, fog, halos, scenery, coloured faction rim, rank, crowns, HP, shields, text, numbers, icons, watermark, collar, armour, weapons, extra animals, black/white backdrop, checkerboard. Exactly one wolf and one neutral base; a single asset, not a sheet.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v3/masters/great-wolf-v3.png",
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/wolf-v2.png",
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/canine_ww.png"
+  ],
+  "reference_roles": [
+    "Style/base edit target; retain neutral tabletop base, camera, material and lighting; replace creature and stance.",
+    "Ordinary grey wolf contrast reference; avoid diagonal downward-left walking pose.",
+    "Native white wolf identity reference; muscular cold-white northern wolf."
+  ],
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "saved_output_path": "art/monsters-v4/masters/white-wolf-v1.png",
+  "generated_at_utc": "2026-09-27T00:30:41.965404+00:00",
+  "original_output_path": "~/.codex/generated_images/01a0e03a-d37e-7f70-a65b-cc566c7bb09b/exec-2255c77e-a9fe-43c4-be4f-96883538ec7e.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Original built-in image_gen output copied byte-for-byte. No image pixel edit, recolouring, matte, or alpha replacement.",
+  "sha256": "cf4ac4a1c5a97863bcdc532bf1989677de57b2f3a171e0206dee2f483ea50959",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      71,
+      1170,
+      1221
+    ],
+    "visible_alpha_bbox": [
+      147,
+      157,
+      1106,
+      1121
+    ],
+    "transparent_pixels": 843144,
+    "partial_alpha_pixels": 729044,
+    "opaque_pixels": 328,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "selection": "recommended-for-runtime-test",
+  "reference_sha256": {
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v3/masters/great-wolf-v3.png": "056af1ffe8c4769ff974886175078cbd58fff2baa879e2834f1ec9b90310d9de",
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/wolf-v2.png": "01ea31cefef4dfb786c8e2bd060c51e8be61a692e68c471dbaf5b51a4e8ec342",
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/canine_ww.png": "49f3a6fabe5d6f9dbf617b4b989c59ff83e17b425c5f980a21ba3e7b64934647"
+  },
+  "review": {
+    "observations": [
+      "Cold-white full-body canine turned clearly to the right, with an extended leading foreleg, a bent trailing foreleg and gathered hindquarters.",
+      "The pose reads as a springing forward stride rather than a fully airborne leap; confirm the requested bounding silhouette at 64px.",
+      "Body is bright and matte without emission or ice scenery. Face sits lower right, outside the top-right badge reserve.",
+      "Leading forepaw approaches or overlaps the inner bevel, but appears within the outer disc boundary; inspect after mechanical export."
+    ],
+    "remaining_limits": [
+      "Default shader, dense same-family comparison, relation/HP/rank overlays and motion still require parent runtime validation.",
+      "Original output is native 1254 square despite the requested 1024; original master remains unchanged."
+    ]
+  },
+  "static_review": {
+    "reviewed_at_utc": "2026-09-27T00:41:53.913927+00:00",
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "backgrounds": [
+      "flat muted grass green",
+      "flat dark water blue",
+      "neutral CSS grayscale display"
+    ],
+    "method": "Parent mechanically exported original masters with the existing C tool. Existing CJS Chromium capture displayed each sprite at its actual native pixel dimensions, device scale 1. Both screenshots inspected with view_image at original resolution. No creature pixels changed.",
+    "preview_paths": [
+      "art/monsters-v4/review/first-four-grass.png",
+      "art/monsters-v4/review/first-four-water.png"
+    ],
+    "preview_sha256": {
+      "first-four-grass.png": "18a0d5edf4e34fe95328807dac83dff0d83af0fe2d4352b1184442c5fb26e814",
+      "first-four-water.png": "d22f96911b3e7bf39c1daf75b3ba3b831016b34eb93d39577380bb13cc1d15f3"
+    },
+    "observation": "White right-facing stride remains clear at 48/64px and in grayscale; leading forepaw remains close to inner bevel and requires runtime ring check.",
+    "runtime_screenshot": false
+  }
+}

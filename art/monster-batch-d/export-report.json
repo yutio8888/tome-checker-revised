@@ -1,0 +1,993 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "red-jelly",
+      "master": "masters/red-jelly-v1.png",
+      "sha256": "bb7219938144243eb87ee62697149bb9dcc17b27c503a535a88e8dbc0886eb30",
+      "exports": [
+        {
+          "path": "sprites/48/red-jelly.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            93,
+            84,
+            1159,
+            1160
+          ],
+          "export_window": [
+            0.418605,
+            -3.581395,
+            1251.162791
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "15966dd595d16329e9acea63ef42b68b68ee35583b6bc8f16c7f4f882e3bc312"
+        },
+        {
+          "path": "sprites/64/red-jelly.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            93,
+            84,
+            1159,
+            1160
+          ],
+          "export_window": [
+            0.418605,
+            -3.581395,
+            1251.162791
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cc7bdef79cbc64ed56bb68b63ff430f6f25b0c6a6cff062618265e321d012a47"
+        },
+        {
+          "path": "sprites/96/red-jelly.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            93,
+            84,
+            1159,
+            1160
+          ],
+          "export_window": [
+            0.418605,
+            -3.581395,
+            1251.162791
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8172ca119a8d839a54a707415e7eab4c76b2ba8b431b30fa68a726867f0394d1"
+        },
+        {
+          "path": "sprites/128/red-jelly.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            93,
+            84,
+            1159,
+            1160
+          ],
+          "export_window": [
+            0.418605,
+            -3.581395,
+            1251.162791
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a796065badfc9c6d5b8c11ed0c425173f7fc8a0011051c3666561be0777cdfd9"
+        },
+        {
+          "path": "sprites/256/red-jelly.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            93,
+            84,
+            1159,
+            1160
+          ],
+          "export_window": [
+            0.418605,
+            -3.581395,
+            1251.162791
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bde32101f2b40213a622e13f52e76a6cb0ce02be1a38c05ec26b7bd756ede041"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.49,
+        "max_sector_intrusion": 3.21,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "blue-jelly",
+      "master": "masters/blue-jelly-v1.png",
+      "sha256": "e1822c347551205f775e8aaa66e80d57588df58c772c8e22e4b473217db65d9c",
+      "exports": [
+        {
+          "path": "sprites/48/blue-jelly.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            91,
+            87,
+            1161,
+            1162
+          ],
+          "export_window": [
+            1.0,
+            -0.5,
+            1250.0
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "358b027e5904ebd652407476e5bb1a171ae7c9cb87cd10bd1efd7214768d4481"
+        },
+        {
+          "path": "sprites/64/blue-jelly.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            91,
+            87,
+            1161,
+            1162
+          ],
+          "export_window": [
+            1.0,
+            -0.5,
+            1250.0
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1da58a9121c4a0ae8e6aa840c40021463fc740e3a99b85fbab6549e81760ba27"
+        },
+        {
+          "path": "sprites/96/blue-jelly.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            91,
+            87,
+            1161,
+            1162
+          ],
+          "export_window": [
+            1.0,
+            -0.5,
+            1250.0
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a5886278703e0dddb5048da97d3eaddee9afcd6648a8accee5ef77f627cec5bf"
+        },
+        {
+          "path": "sprites/128/blue-jelly.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            91,
+            87,
+            1161,
+            1162
+          ],
+          "export_window": [
+            1.0,
+            -0.5,
+            1250.0
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "612724b24a7bf0e8822e95f289fd24c1ba816ca642572dec68dbe7100915587b"
+        },
+        {
+          "path": "sprites/256/blue-jelly.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            91,
+            87,
+            1161,
+            1162
+          ],
+          "export_window": [
+            1.0,
+            -0.5,
+            1250.0
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b6b675531a5b76ee51b9f4b3cf1dd777d32c267c3b6f99ab6197f49d7b6d1b4e"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.54,
+        "max_sector_intrusion": 4.88,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "giant-white-ant",
+      "master": "masters/giant-white-ant-v1.png",
+      "sha256": "7ae289d844ddf6199e925797364244323156437d0f6a4b1f4cfba8a8edc5af6b",
+      "exports": [
+        {
+          "path": "sprites/48/giant-white-ant.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            112,
+            112,
+            1142,
+            1142
+          ],
+          "export_window": [
+            28.162791,
+            28.162791,
+            1197.674419
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2cef3de5ac04ae7ef7cbc1d0567a5e3a85f5a1132cbfb4b71ab3cd46e28099ea"
+        },
+        {
+          "path": "sprites/64/giant-white-ant.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            112,
+            112,
+            1142,
+            1142
+          ],
+          "export_window": [
+            28.162791,
+            28.162791,
+            1197.674419
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cb022b6de1aba2fd9a4a20391826037a9b0230d3937a3191bfc16f3d0c4f9263"
+        },
+        {
+          "path": "sprites/96/giant-white-ant.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            112,
+            112,
+            1142,
+            1142
+          ],
+          "export_window": [
+            28.162791,
+            28.162791,
+            1197.674419
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "eb51bb3423ededad8e2e1785f01776ddc23c1d55e2c5120336461f2fcdd53448"
+        },
+        {
+          "path": "sprites/128/giant-white-ant.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            112,
+            112,
+            1142,
+            1142
+          ],
+          "export_window": [
+            28.162791,
+            28.162791,
+            1197.674419
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "91f5d157b6874a3e5b14b8cc5f0affffdf60c4e2b365e6e0ac60a6278d247017"
+        },
+        {
+          "path": "sprites/256/giant-white-ant.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            112,
+            112,
+            1142,
+            1142
+          ],
+          "export_window": [
+            28.162791,
+            28.162791,
+            1197.674419
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "01dd82693fdfb0b4462337518f1da9b192264e665cd0af394d5224733d7dc2fd"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 7.61,
+        "max_sector_intrusion": 6.79,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "giant-yellow-ant",
+      "master": "masters/giant-yellow-ant-v1.png",
+      "sha256": "8da0a7bf69d6a2af17682449f8261798842351b7a2b01265547b7a3875e1403b",
+      "exports": [
+        {
+          "path": "sprites/48/giant-yellow-ant.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            78,
+            79,
+            1175,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -12.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "53a4804adfcb6405f3cc4dbc6cdc4fe88ebc933c61d2bdf99acffb276d5b8059"
+        },
+        {
+          "path": "sprites/64/giant-yellow-ant.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            78,
+            79,
+            1175,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -12.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "376437e41f9ca57cf6f1cf980ab961d3448816fe93f7bdb9ed8b1f40e2a360a8"
+        },
+        {
+          "path": "sprites/96/giant-yellow-ant.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            78,
+            79,
+            1175,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -12.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "19e8bf359aa8a8bfaab8fb744479ebe6c0d98f50bf76c3b7b1ab15daf0503d85"
+        },
+        {
+          "path": "sprites/128/giant-yellow-ant.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            78,
+            79,
+            1175,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -12.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "56ad2d213532fcc1932d52f57d7c4eeb214713308542f5c47d4edc80af949031"
+        },
+        {
+          "path": "sprites/256/giant-yellow-ant.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            78,
+            79,
+            1175,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -12.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a3ea3a0e4c998bcb71103a9e1b7a3cd0db90930e09f0568cb2271b58d0e9ad12"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 4.76,
+        "max_sector_intrusion": 9.76,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "giant-brown-ant",
+      "master": "masters/giant-brown-ant-v1.png",
+      "sha256": "97d9bc8c674852bcfbf690906479cace7fc6d8a5e98a7d42637a1bb3a0988e8a",
+      "exports": [
+        {
+          "path": "sprites/48/giant-brown-ant.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            100,
+            102,
+            1154,
+            1148
+          ],
+          "export_window": [
+            14.209302,
+            12.209302,
+            1225.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e4ca2bce504721f84fb69ab94049861a209e58e08fc1396be05e525ae6475c7a"
+        },
+        {
+          "path": "sprites/64/giant-brown-ant.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            100,
+            102,
+            1154,
+            1148
+          ],
+          "export_window": [
+            14.209302,
+            12.209302,
+            1225.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "499bbc19db25f687c80cefbba316bfbebcfdbf58821d89894fdbdc6d2bdc1c16"
+        },
+        {
+          "path": "sprites/96/giant-brown-ant.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            100,
+            102,
+            1154,
+            1148
+          ],
+          "export_window": [
+            14.209302,
+            12.209302,
+            1225.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c8edfde0116fa3837fe3a361c7db3b20e6e67374d4fcd381d858ab55797f6290"
+        },
+        {
+          "path": "sprites/128/giant-brown-ant.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            100,
+            102,
+            1154,
+            1148
+          ],
+          "export_window": [
+            14.209302,
+            12.209302,
+            1225.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1c9632f55a943ec092ccd4db4a6bdd7c26b0b775a501fc7787b387dab7392ae3"
+        },
+        {
+          "path": "sprites/256/giant-brown-ant.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            100,
+            102,
+            1154,
+            1148
+          ],
+          "export_window": [
+            14.209302,
+            12.209302,
+            1225.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "308281208c60cd5defe8f682906efb22c16c4d32af119e511ce3733028deb039"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 8.39,
+        "max_sector_intrusion": 5.73,
+        "max_opaque_radius": 0.8559,
+        "blocking": [
+          "base_drift"
+        ],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": true,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "giant-blue-ant",
+      "master": "masters/giant-blue-ant-v1.png",
+      "sha256": "3e74582a30563aefe230d1a6962cc29d369a5426af8ab22b00e141bbe4d8bc7f",
+      "exports": [
+        {
+          "path": "sprites/48/giant-blue-ant.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            107,
+            107,
+            1147,
+            1146
+          ],
+          "export_window": [
+            22.348837,
+            21.848837,
+            1209.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9a5644105546e71f26a6d712098905aa02142b22cf83bf1dc2cfdadd1b3fc060"
+        },
+        {
+          "path": "sprites/64/giant-blue-ant.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            107,
+            107,
+            1147,
+            1146
+          ],
+          "export_window": [
+            22.348837,
+            21.848837,
+            1209.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "654b5903315659b646b632ee41295fa7dc02f7751003d020a98064e34f065a3f"
+        },
+        {
+          "path": "sprites/96/giant-blue-ant.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            107,
+            107,
+            1147,
+            1146
+          ],
+          "export_window": [
+            22.348837,
+            21.848837,
+            1209.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "da11616b6043c85c52778313baa589a3a8c41483d9fcc2a8a7cf6aadd91a7248"
+        },
+        {
+          "path": "sprites/128/giant-blue-ant.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            107,
+            107,
+            1147,
+            1146
+          ],
+          "export_window": [
+            22.348837,
+            21.848837,
+            1209.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "82dde6f30b8155f4366afbe6626a4a51950fc4980632d692555794920494e351"
+        },
+        {
+          "path": "sprites/256/giant-blue-ant.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            107,
+            107,
+            1147,
+            1146
+          ],
+          "export_window": [
+            22.348837,
+            21.848837,
+            1209.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b29b3bc9e87cc684861ac7907f81a3ea142fcecd0ab55cf0318c93e0c792f0d8"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 8.45,
+        "max_sector_intrusion": 3.58,
+        "max_opaque_radius": 0.8599,
+        "blocking": [
+          "base_drift"
+        ],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": true,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "giant-carpenter-ant",
+      "master": "masters/giant-carpenter-ant-redraw2-v1.png",
+      "sha256": "abb29f12fb6c004c291b6bd0f9b1e23478f61e74f32fccee6baeec1127a83649",
+      "exports": [
+        {
+          "path": "sprites/48/giant-carpenter-ant.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            112,
+            112,
+            1142,
+            1141
+          ],
+          "export_window": [
+            28.162791,
+            27.662791,
+            1197.674419
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bc8e64dcf360dbbfa25fc3861ddfdbfea83d3f4515aca983d226fe5622763261"
+        },
+        {
+          "path": "sprites/64/giant-carpenter-ant.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            112,
+            112,
+            1142,
+            1141
+          ],
+          "export_window": [
+            28.162791,
+            27.662791,
+            1197.674419
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "66fee4ec4b86da90f45d5dae581b47405d1933d7275d75b256af674baa27bbef"
+        },
+        {
+          "path": "sprites/96/giant-carpenter-ant.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            112,
+            112,
+            1142,
+            1141
+          ],
+          "export_window": [
+            28.162791,
+            27.662791,
+            1197.674419
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7ea40ea9be488a1316ded7f47cae78fca2a2a5c525751654561cce31ae14bc32"
+        },
+        {
+          "path": "sprites/128/giant-carpenter-ant.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            112,
+            112,
+            1142,
+            1141
+          ],
+          "export_window": [
+            28.162791,
+            27.662791,
+            1197.674419
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a26454e0f4e528ea1a5bcca9908c242e45e4244fc7976004d4179e518a075db0"
+        },
+        {
+          "path": "sprites/256/giant-carpenter-ant.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            112,
+            112,
+            1142,
+            1141
+          ],
+          "export_window": [
+            28.162791,
+            27.662791,
+            1197.674419
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2c68b2378cc4beeb1cc1a48ae0aadab015aa5c720a3a1b179ab9c68baeca6503"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -7.27,
+        "max_sector_intrusion": 2.97,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "giant-black-ant",
+      "master": "masters/giant-black-ant-redraw2-v1.png",
+      "sha256": "045e22368335c0f3f5aa8f548245836ddaa67358753d2c1f772311615667d063",
+      "exports": [
+        {
+          "path": "sprites/48/giant-black-ant.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            114,
+            113,
+            1141,
+            1142
+          ],
+          "export_window": [
+            29.244186,
+            29.244186,
+            1196.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "055d58b863c74592b83ed241b9814898bc963b9f4c7a1b432f8dc2318a561d35"
+        },
+        {
+          "path": "sprites/64/giant-black-ant.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            114,
+            113,
+            1141,
+            1142
+          ],
+          "export_window": [
+            29.244186,
+            29.244186,
+            1196.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "348de65a2ceccf05bc844491e94d360222827e94c3e0d01cb860d70f3475045b"
+        },
+        {
+          "path": "sprites/96/giant-black-ant.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            114,
+            113,
+            1141,
+            1142
+          ],
+          "export_window": [
+            29.244186,
+            29.244186,
+            1196.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b26c533404ccc60ffc1872a4faaa88d5af44a6a9352cce9de292a7dc3a161c71"
+        },
+        {
+          "path": "sprites/128/giant-black-ant.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            114,
+            113,
+            1141,
+            1142
+          ],
+          "export_window": [
+            29.244186,
+            29.244186,
+            1196.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "07582c78b2fbb29d7950be44dbb28893d6b070d61a02cf01cf4b5dabff97fb44"
+        },
+        {
+          "path": "sprites/256/giant-black-ant.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            114,
+            113,
+            1141,
+            1142
+          ],
+          "export_window": [
+            29.244186,
+            29.244186,
+            1196.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b4be28f20de7856ce07f9fbc7f892e5028e29f902ed1ee855608aa973537575a"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -5.43,
+        "max_sector_intrusion": 2.35,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

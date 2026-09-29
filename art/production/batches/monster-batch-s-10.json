@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-s-10",
+  "assets": [
+    {
+      "asset_id": "aluin-the-fallen",
+      "native_name": "Aluin the Fallen",
+      "scope": "trollmire (zones/trollmire/npcs.lua:223, unique, define_as ALUIN, humanoid/human, rank 4, no base, default-name image); backup guardian created by activateBackupGuardian(\"ALUIN\") after Prox/Shax die (only once the player has gone east); single definition; auto_classes Sun Paladin and Cursed from level 36",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "sha256": "c8ec847929ebae259c9b3524121f71008ae553f1b6ec2043b2a169c6303ebe44",
+          "line": 223,
+          "anchor": "define_as = \"ALUIN\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "sha256": "c8ec847929ebae259c9b3524121f71008ae553f1b6ec2043b2a169c6303ebe44",
+          "line": 226,
+          "anchor": "name = \"Aluin the Fallen\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "sha256": "c8ec847929ebae259c9b3524121f71008ae553f1b6ec2043b2a169c6303ebe44",
+          "line": 273,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "sha256": "c8ec847929ebae259c9b3524121f71008ae553f1b6ec2043b2a169c6303ebe44",
+          "line": 276,
+          "anchor": "auto_classes={{class=\"Sun Paladin\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_aluin_the_fallen.png",
+          "sha256": "a5a8124cd1f55267c36283fe47f04665c6a1e5dd8844235bc4f587ddaca7e980",
+          "role": "identity",
+          "note": "Native shape (64x64): a dark-haired human in dull grey plate armour standing with a sword."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/elven-warrior.png",
+          "sha256": "d44351443a30279d68f32cee392a8c61de26befcc82154e4c876ec31f440d499",
+          "role": "family",
+          "note": "Shipped elven warrior (slender silver-plate elf with a winged plumed helm, a tall kite shield and a diagonal war axe): no sun-paladin token may be a silver plate knight with a kite shield and an axe."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Aluin the Fallen seen from a steep overhead three-quarter angle: a big human knight HUNCHED and slumped forward with his head bowed and a tangled dark-brown beard, in weathered TARNISHED BRONZE-GREY steel plate armour crusted with dull rust-red bloodstains and one cracked, dented pauldron, a ragged deep-crimson cloak torn at the hem hanging from one shoulder, a heavy double-headed waraxe held LOW in one hand with its blade dragging diagonally down beside his leg, a small round blood-red shield strapped to the other forearm, heavy boots dragging. Broken, grim, tarnished and complete.",
+        "contrast": "Human knights: ALUIN is the HUNCHED, ASYMMETRIC, tarnished bronze-grey knight with a DRAGGING axe, rust-red stains and a torn crimson cloak (silhouette: slumped rounded shoulders with a diagonal axe blade low on one side and a small round red shield; hue: tarnished bronze-grey with crimson and rust; value: mid). The sun-paladin is upright warm gold with a big sunburst shield and a raised mace; Rodmour is ivory with a violet cloak and a vertical planted sword; the shipped elven warrior is slender silver with a kite shield and a raised axe.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, staffs, capes and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, cape end or bandage tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere. Calibration from two previous generations of this exact token: both passed the gate, but at 48px the plate armour still read as a dark brown-grey mass. This time keep the same hunched, slumped, head-bowed knight with the axe dragging low diagonally beside his leg, the small round red shield and the torn crimson cloak, but paint the plate armour PALE polished SILVER-STEEL, light grey close to white on all the lit upper-left planes (pauldrons, breastplate, helm-less head, knees, gauntlets), with only light warm-grey shadows and just a few small dull rust-red stains, no brown or bronze main masses at all, the cloak a bright CRIMSON-RED with pinkish highlights, the round shield bright blood-red with a pale silver rim, a pale bright steel axe blade, a short grey-brown beard and a pale tan face. The whole figure must be a light shape clearly above the disc value, with a bright pale edge along its upper-left side.",
+        "palette": "Tarnished mid bronze-grey plate with lighter warm-grey highlight planes and dull rust-red stains, a torn deep crimson cloak with brighter red-brown highlight planes, a small blood-red round shield, dark-brown beard, tan skin, pale steel axe blade; nothing darker than dark warm grey except the eyes and seams; keep the armour mid tan-grey rather than black; the disc stays neutral charcoal with no red cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Aluin the Fallen, define_as=ALUIN, type=humanoid/subtype=human, unique=True, native_tall=False); details and hashes in evidence/monster-batch-s-20260929/source-contracts.json. no base (humanoid/human on the leaf, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip waraxe, SANGUINE_SHIELD and massive armour (equipment only, no moddable_tile); talents Armour Training, Weapon Combat, Weapons Mastery, Rush, Blindside, Gloom, Weakness, Dismay, Sanctuary, Chant of Light, Searing Light, Martyrdom, Barrier, Weapon of Light, Crusade, Firebeam, Arcane Might, Irresistible Sun; resolvers.sustains_at_birth() starts the sustained ones (temporary values, callbacks and particles only, no type/subtype/image/add_mos write) plus auto_classes Sun Paladin/Cursed (see runtime_mutation_scan). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-s-20260929/source-contracts.json",
+          "sha256": "f6556ef4ac78f044ee83f4d27ed60d1586fa243b923da96651cade0aa5ba49a2"
+        }
+      ]
+    }
+  ]
+}

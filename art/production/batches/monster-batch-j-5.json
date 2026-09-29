@@ -1,0 +1,126 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-j-5",
+  "assets": [
+    {
+      "asset_id": "grand-corruptor",
+      "native_name": "Grand Corruptor",
+      "scope": "mark-spellblaze guaranteed guardian on the last-level static map (humanoid/shalore unique, default-name image); town-zigur defines a second, same-named Grand Corruptor (unique=\"Grand Corruptor Zigur\", same define_as, same default image)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/mark-spellblaze/npcs.lua",
+          "sha256": "339951c47a93abdf40cfc24e9f2211e9cbd380e97cffed21f869623fba972043",
+          "line": 30,
+          "anchor": "define_as = \"GRAND_CORRUPTOR\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/mark-spellblaze/npcs.lua",
+          "sha256": "339951c47a93abdf40cfc24e9f2211e9cbd380e97cffed21f869623fba972043",
+          "line": 32,
+          "anchor": "name = \"Grand Corruptor\", color=colors.VIOLET, unique = true"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_shalore_grand_corruptor.png",
+          "sha256": "5cc0c60ac024d8d184dc3b6ae448391036974aaa2b5d7d9513bea38af7cfface",
+          "role": "identity",
+          "note": "Native shape: a pale elf in a horned indigo-black cowl and dark blue robe with a crimson-pink sigil sash, holding a tall dark staff."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/rhaloren-inquisitor.png",
+          "sha256": "4b990a41aad89522796f47e16c9b5c78507aa14e05f5446d280d50fd08541132",
+          "role": "family",
+          "note": "Shipped Rhaloren Inquisitor (armoured elf knight with a sword): the Grand Corruptor is a robed staff caster in a horned cowl, no armour, no sword."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A gaunt pale elven blood-mage: a tall horned cowl with two curved horn tips in a bright royal sapphire-blue over a pale narrow face with long pointed ears, a long robe in clearly mid-light cobalt and steel-blue with broad pale periwinkle fold planes and light silver-blue edge highlights, a bright crimson-magenta sigil sash and bright crimson trim, pale hands holding a tall warm-brown staff topped with a glowing blood-red orb. Upright imposing stance seen from a steep overhead three-quarter angle.",
+        "contrast": "Robed casters: necromancer (bald human, slate-violet robe), Kryl-Feijan acolyte (bare silver hair, mauve robe), Harno (hooded blue-grey), Fillarel (gold robe), Celia (pale gown), Urkis (blue lightning). Rhaloren Inquisitor is an armoured knight. A first draft of this token was a near-black navy robe that merged with dark floors at 48px. This redraw is a bright cobalt and steel-blue robe with pale fold planes (value/hue) in a horned cowl with a crimson sash and a red-orb staff (silhouette), far lighter than the first draft.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Robe and cowl in bright cobalt and steel-blue at mid-light value, lifted with broad pale periwinkle fold planes and silver-blue rim light; bright crimson-magenta sash and trim; pale face and hands; warm-brown staff with a glowing red orb; nothing darker than mid tone, never navy, indigo-black or near-black. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Grand Corruptor, define_as=GRAND_CORRUPTOR, type=humanoid/subtype=shalore, unique=True); details and hashes in evidence/monster-batch-j-20260929/source-contracts.json. base BASE_NPC_ELVEN_CASTER (humanoid/shalore, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile; NPC.lua:33 gives humanoid_shalore_grand_corruptor.png; Actor tint (native colour modulation) does not change identity or display structure. town-zigur/npcs.lua:28 defines the same name, define_as and image (unique=\"Grand Corruptor Zigur\", rank 3.5): it is the same character design, so the exact entry also serves it (documented, tested). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-j-20260929/source-contracts.json",
+          "sha256": "f3b0d7b9e65b2c18c6416b37aae96e1dee28c95e6f4f57ed619039699ef6e83b"
+        }
+      ]
+    },
+    {
+      "asset_id": "the-possessed",
+      "native_name": "The Possessed",
+      "scope": "ruins-kor-pul guaranteed guardian in the HIDEOUT layout (humanoid/human unique, nice_tile native-tall)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "sha256": "ccf6405af2919d0074c4d876ad14a96bd77dee83dcb071178652fd60226844e4",
+          "line": 93,
+          "anchor": "define_as = \"THE_POSSESSED\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "sha256": "ccf6405af2919d0074c4d876ad14a96bd77dee83dcb071178652fd60226844e4",
+          "line": 96,
+          "anchor": "image=\"npc/humanoid_human_the_possessed.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_the_possessed.png",
+          "sha256": "80d215f6faf59e2d37699e6ab16a17799078f69cef226b30180001a71ff580dc",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a cloaked dagger fighter whose face is a glowing green mask, in a dark green cloak with gold trim, with an orange flame-like halo crown behind the head."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/harno.png",
+          "sha256": "6f093ad763d39cfeb6180eff0033174e495a732940ac10ed4a74e999c46a4931",
+          "role": "family",
+          "note": "Shipped Harno (hooded blue-grey cloak, two knives): The Possessed has a bare glowing green face, a green cloak and a fiery crown, not a blue-grey hood."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A tall gaunt human bandit possessed by a spirit: a glowing pale-green skull-like face with hollow bright eyes, an orange-gold flame-shaped spectral crown rising behind the head, a long light sage-green cloak with bright gold trim thrown wide over warm tan-brown leathers, a dagger in each hand, one held high and one low, in a menacing dual-dagger stance. Compact upright composition seen from a steep overhead three-quarter angle.",
+        "contrast": "Human rogue tokens: thief (brown hooded), rogue (dark blue), cutpurse (white shirt), bandit (bare-chested), Harno (blue-grey hooded cloak), Celia and Necromancer. A first draft of this token had a dark forest-green cloak that read as a dim mass at 48px. This redraw is a clearly lighter sage-green cloak with gold trim, a glowing green skull face and an orange flame crown (silhouette: wide cloak with a flame crown; hue: sage green plus orange; value: mid-light cloak).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Cloak in light sage and moss green at mid-light value with broad pale-olive fold planes and bright gold trim, warm tan leathers, glowing pale-green face and orange-gold flame crown as the brightest planes, steel daggers; nothing darker than mid tone, never a dark forest-green or black cloak. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=The Possessed, define_as=THE_POSSESSED, type=humanoid/subtype=human, unique=True); details and hashes in evidence/monster-batch-j-20260929/source-contracts.json. resolvers.nice_tile{image=\"invis.png\", add_mos={{image=<png>, display_h=2, display_y=-1}}} names the PNG explicitly (no =BASE=TILE= indirection, so the resolve-order issue that keeps {tall=1} shorthand native does not apply); nativeTallImage matches the exact one-body add_mos, unique entry, native-tall path; base BASE_NPC_THIEF has no image=/shader; native sprite is 64x128. Ordinary thieves/rogues/cutpurses keep their own catalog entries. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-j-20260929/source-contracts.json",
+          "sha256": "f3b0d7b9e65b2c18c6416b37aae96e1dee28c95e6f4f57ed619039699ef6e83b"
+        }
+      ]
+    }
+  ]
+}

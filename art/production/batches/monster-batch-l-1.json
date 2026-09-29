@@ -1,0 +1,222 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-l-1",
+  "assets": [
+    {
+      "asset_id": "orc-warrior",
+      "native_name": "orc warrior",
+      "scope": "reknor, reknor-escape, grushnak/gorbat pride, eruan, dreams, high-peak and other general orc spawns (humanoid/orc, define_as HILL_ORC_WARRIOR, default-name image, non-unique). The Charred Scar attacker of the same name (define_as ORC_ATTACK, other base) must stay native",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 51,
+          "anchor": "name = \"orc warrior\", color=colors.LIGHT_UMBER"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_warrior.png",
+          "sha256": "6fcfa18c5d62c8cb3624a1815238684aeeeb25b63b1cdd6f27c717d36e572fff",
+          "role": "identity",
+          "note": "Native shape: a hunched, wide-stanced olive-green orc in grey-green plate over a torn dark skirt, holding a long curved scimitar out to the left, bare head with a heavy jaw."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/krogar.png",
+          "sha256": "efa3e73b8f761fa8e7b80bf45290ed1d35f7f71747d576a66614abe0a3a44d92",
+          "role": "family",
+          "note": "Shipped Krogar (brown leather-clad brute with a mace): the orc warrior is a lighter olive-green regular soldier with a curved blade, not a brown leather brute."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A hardy hunched orc warrior seen from a steep overhead three-quarter angle: olive-green skin, a heavy jawed bare head with small tusks, a rounded olive-green breastplate with worn brass rivets over a rust-brown leather tunic and a ragged khaki skirt, thick arms, a long curved scimitar with a bright steel blade held out low to the left side in a wide diagonal slash, the other fist clenched, a wide braced stance. Weathered, sturdy and complete.",
+        "contrast": "Orc tokens: Brotoq (near-black plate, raised sword), Golbug (gold horned), Krogar (brown leather brute), Massok (dark horned helm). The three ordinary orcs are built together: the warrior is the one with the long curved scimitar swung out to the left over olive and rust-brown plate (silhouette: wide stance plus a diagonal curved blade; hue: olive green with rust-brown leather; value: mid). The soldier carries a heavy axe in grey spiked steel; the archer holds a tall bow in khaki leather.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid olive-green skin and breastplate lifted with lighter moss planes, rust-brown leather, tan khaki skirt, bright steel blade; nothing darker than mid tone except small seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc warrior, define_as=HILL_ORC_WARRIOR, type=humanoid/subtype=orc, unique=False); details and hashes in evidence/monster-batch-l-20260929/source-contracts.json. base BASE_NPC_ORC (humanoid/orc, no image=); leaf define_as HILL_ORC_WARRIOR; no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives humanoid_orc_orc_warrior.png; reknor-escape only lowers level_range; charred-scar defines a second \"orc warrior\" (define_as ORC_ATTACK, base BASE_NPC_ORC_ATTACKER) that the define_as check rejects, so no name+define_as key extension is needed. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-l-20260929/source-contracts.json",
+          "sha256": "cf262c882fc0c76bb40508664d56eacf4edc8c285da13c44b0017769c1f93cd3"
+        }
+      ]
+    },
+    {
+      "asset_id": "orc-soldier",
+      "native_name": "orc soldier",
+      "scope": "reknor, reknor-escape, grushnak/gorbat pride, dreams, eruan, high-peak and orc group spawns (humanoid/orc, define_as ORC, default-name image, non-unique)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 95,
+          "anchor": "name = \"orc soldier\", color=colors.DARK_RED"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_soldier.png",
+          "sha256": "604e444c8f259f7b06ba3de8f91bcee325b076cbb733d40f282acaf6ccc49835",
+          "role": "identity",
+          "note": "Native shape: a heavily armoured orc in dark grey-green spiked plate with jagged shoulder blades and a tattered fringe of cloth strips, a big battleaxe hanging low on the left and a tusked helmeted face."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/massok.png",
+          "sha256": "a31830ddd0b689bb434e02dc9a87859af29eb0bc46feff8a1a40ecc36da6aebc",
+          "role": "family",
+          "note": "Shipped Massok (near-black horned orc): the orc soldier is a plain regular soldier in lighter grey steel spiked plate with an axe, no horned crown."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A heavily armoured orc soldier seen from a steep overhead three-quarter angle: a stocky figure in cool grey steel plate with sharp jagged spiked shoulder plates and spiked knees over a fringe of tattered olive-brown cloth strips, an olive-green tusked face under a plain open steel cap, and a big two-bladed battleaxe held low on the left with a broad bright steel axe head that sticks out clearly to the side, stout planted legs. Brutal, armoured and complete.",
+        "contrast": "Orc tokens: Brotoq (near-black plate), Golbug (gold), Krogar (brown leather), Massok (dark horned helm), plus the ordinary orc warrior (olive-and-rust with a curved scimitar) and archer (khaki with a tall bow) built beside it. The soldier is the one in cool light-grey spiked steel plate with a broad-headed axe (silhouette: spiked jagged shoulders, wide axe head at the side; hue: cool grey steel with olive skin; value: mid-light steel).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid-light cool grey steel plate with pale highlights and bright edges, olive-green skin, olive-brown cloth fringe, bright steel axe head; nothing darker than mid tone except seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc soldier, define_as=ORC, type=humanoid/subtype=orc, unique=False); details and hashes in evidence/monster-batch-l-20260929/source-contracts.json. base BASE_NPC_ORC (humanoid/orc, no image=); leaf define_as ORC; no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives humanoid_orc_orc_soldier.png; group spawns reference the name only. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-l-20260929/source-contracts.json",
+          "sha256": "cf262c882fc0c76bb40508664d56eacf4edc8c285da13c44b0017769c1f93cd3"
+        }
+      ]
+    },
+    {
+      "asset_id": "orc-archer",
+      "native_name": "orc archer",
+      "scope": "reknor, reknor-escape, grushnak/gorbat pride, dreams, eruan, high-peak, grushnak-armory and orc-hatred vault (humanoid/orc, define_as HILL_ORC_ARCHER, default-name image, non-unique)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 72,
+          "anchor": "name = \"orc archer\", color=colors.UMBER"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_archer.png",
+          "sha256": "9dad569d83595d6b4878f0e146ff369e38f0a80658195c3f2dae3b433e0e24a8",
+          "role": "identity",
+          "note": "Native shape: a hunched olive-green orc in grey-green armour drawing a big longbow held across the body, an arrow nocked, tusked face under a heavy brow."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/brotoq.png",
+          "sha256": "01c73c4116abc7e80bada4ae2162a6bf159a13e78f295ac5c0ae593df953460f",
+          "role": "family",
+          "note": "Shipped Brotoq (near-black plate orc with a raised curved blade): the archer is a lean khaki-leather bowman with a tall bow, not a heavy sword fighter."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A lean orc archer seen from a steep overhead three-quarter angle: olive-green skin, tusked face under a heavy brow and a khaki-tan leather hood pushed back, khaki and sand-brown leather jerkin with a few dull steel plates, a quiver of feathered arrows at the shoulder, a large tall longbow of pale wood with a taut string held upright across the body in the front and a long arrow nocked and aimed, crouched wide stance. Alert and complete.",
+        "contrast": "Orc tokens: Brotoq, Golbug, Krogar, Massok plus the ordinary orc warrior (olive-and-rust with a curved scimitar) and orc soldier (grey spiked steel with an axe) built beside it. The archer is the lean one in light khaki leather with a tall upright bow arc and nocked arrow (silhouette: tall bow arc plus arrow line; hue: khaki tan and pale wood; value: mid-light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid-light khaki tan and sand-brown leather with pale wood bow, olive-green skin, dull steel plates, pale feathers; nothing darker than mid tone except the string and seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc archer, define_as=HILL_ORC_ARCHER, type=humanoid/subtype=orc, unique=False); details and hashes in evidence/monster-batch-l-20260929/source-contracts.json. base BASE_NPC_ORC (humanoid/orc, no image=); leaf define_as HILL_ORC_ARCHER; no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives humanoid_orc_orc_archer.png; the grushnak-armory random_boss archer changes the name, so it cannot match. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-l-20260929/source-contracts.json",
+          "sha256": "cf262c882fc0c76bb40508664d56eacf4edc8c285da13c44b0017769c1f93cd3"
+        }
+      ]
+    },
+    {
+      "asset_id": "naga-myrmidon",
+      "native_name": "naga myrmidon",
+      "scope": "temple-of-creation, ardhungol, naga portal events and arena (humanoid/naga, explicit image=npc/naga_myrmidon.png, no define_as, non-unique, single-cell 64x64)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/naga.lua",
+          "sha256": "082cfb5e3044418b8ee2c6bb8ff4eaa09a32d7c4f1b39493f2b9f7e6696039fd",
+          "line": 53,
+          "anchor": "name = \"naga myrmidon\", color=colors.DARK_UMBER, image=\"npc/naga_myrmidon.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/naga_myrmidon.png",
+          "sha256": "74f468369f262c7b464fb18fb0ef40abadf66b47f874e3af47af794893a6d2de",
+          "role": "identity",
+          "note": "Native shape: a muscular fair-haired man in slate-grey scale armour rising from a coiled cobalt-blue serpent tail with pale belly bands, gripping a long trident across his body."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/naga-tidewarden.png",
+          "sha256": "0f8bb84d1a48af84191625dcb40ee2508218f78298837c54fa16a20dab4face0",
+          "role": "family",
+          "note": "Shipped naga tidewarden (brown-skinned, round shield, brown-grey tail): the myrmidon is fair-skinned in steel armour with a cobalt blue tail and a two-handed trident, no shield."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A naga warrior seen from a steep overhead three-quarter angle: the upper body of a muscular fair-skinned blond man in slate-grey scale armour with steel pauldrons and dark bracers, both hands gripping a long trident with a bright steel head held diagonally across the chest, rising from a thick coiled serpent tail in bright cobalt blue with a wide pale cream-white banded belly, the coil forming a clear open spiral at the base. Fierce, armoured and complete.",
+        "contrast": "Naga tokens: naga tidewarden (brown man, round shield, brown-grey tail), naga tidecaller (hooded dark caster), Lady Nashva (teal woman, water), Lady Zoisla (orange-red tail woman). The myrmidon is the steel-armoured fair man with a diagonal two-handed trident and a bright cobalt-blue tail with cream belly bands (silhouette: diagonal trident plus open tail spiral, no shield; hue: cobalt blue and steel grey; value: mid-light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Bright cobalt-blue tail with cream belly bands, mid slate-grey scale armour with lighter steel highlights, fair skin and blond hair, bright steel trident; nothing darker than mid tone except armour seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=naga myrmidon, define_as=None, type=humanoid/subtype=naga, unique=False); details and hashes in evidence/monster-batch-l-20260929/source-contracts.json. base BASE_NPC_NAGA (humanoid/naga, no image=); leaf sets the explicit image npc/naga_myrmidon.png (64x64; sibling files naga_myrmidon_2/_no_armor are Birther race preview art, not NPC images); no nice_tile/add_mos/shader/anim/moddable_tile/tint; the tall naga nereid and the shipped tidewarden/tidecaller/Nashva/Zoisla are other names. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-l-20260929/source-contracts.json",
+          "sha256": "cf262c882fc0c76bb40508664d56eacf4edc8c285da13c44b0017769c1f93cd3"
+        }
+      ]
+    }
+  ]
+}

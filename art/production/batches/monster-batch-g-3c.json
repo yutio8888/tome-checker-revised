@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-g-3c",
+  "assets": [
+    {
+      "asset_id": "krogar",
+      "native_name": "Krogar",
+      "scope": "unremarkable-cave recruitable ally boss (no rarity field, scripted placement) -- FRESH REGENERATION: call 1 had staff crossing the disc (radius 0.984) and base_drift -9.44; retry with short staff and no-darkening disc wording",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/unremarkable-cave/npcs.lua",
+          "sha256": "dcf167549044780831e0c939e5bf5a2fb16d400457cb52ad4f700e6382b0448f",
+          "line": 105,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/humanoid_orc_krogar.png\", display_h=2, display_y=-1}}},"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_krogar.png",
+          "sha256": "29b3d55ab46b8d3e65d04f9cf376a8ac2d8f08b3f6f205d9fcec7be724968dde",
+          "role": "identity",
+          "note": "Native species shape: stocky orc in mail armour, single tall staff, no shield."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/golbug.png",
+          "sha256": "4f7047dc4d3756bbce03ee27b1740345f17cb9764399ac774169994f40d008d6",
+          "role": "family",
+          "note": "Shipped catalog humanoid/orc: hammer + shield, gold-trimmed armour. Massok/Krogar must stay distinct from this and from each other."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A stocky, heavily armoured orc in dull green-grey mail plate, standing solidly with a tall gnarled wooden staff held upright in one hand, the other hand free and clawed. The staff must be held short and close to the body, fully inside the disc: its top end must stay below the top of his head level and well inside the inner four-fifths of the disc radius (a previous attempt had a long staff crossing the disc edge, radius 0.98). No long protruding weapon; compact pose.",
+        "contrast": "Fourth humanoid/orc catalog identity alongside golbug (hammer+shield), brotoq (dual axes) and massok (dragon-skull helm+greatsword, shipping in this same handoff group). Krogar carries a single tall staff and no shield or bladed weapon, and wears plainer dull green-grey mail rather than massok's dark green-black plate with a bone helm -- silhouette (single vertical staff, bare-headed, no helm) and value/hue (duller cooler green-grey armour, no pale bone accent) keep it apart from the other three orcs at a glance.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Dull green-grey mail plate armour with darker leather straps, weathered warm-brown wooden staff, olive-green orc skin visible at the face and hands; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's armour so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name/type=humanoid/subtype=orc/define_as=CORRUPTOR/unique=true) and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (CONTRACTS-B5-B7-20260929.md 3, READY). native-tall via unique=true, same precedent as every batch-E/F unique. No live fixture needed for a scripted no-rarity recruitable boss. Fresh regeneration handoff: call 1 had staff crossing the disc (radius 0.984) and base_drift -9.44; retry with short staff and no-darkening disc wording",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-g-3/krogar/imagegen-calls/call-1/call.json",
+          "sha256": "c31109667b5e7d9c7d8532f203064a1efd3c798f0d34f554bd2ea6905f3ce75d"
+        }
+      ]
+    }
+  ]
+}

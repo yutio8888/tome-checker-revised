@@ -1,0 +1,77 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "white-ooze": 197.16,
+    "gigantic-corrosive-tunneler": 97.01,
+    "gigantic-gravity-worm": 95.58,
+    "slimy-ooze": 122.46,
+    "poison-ooze": 80.26,
+    "carrion-worm-mass": 102.37,
+    "brittle-clear-ooze": 149.82,
+    "cute-little-bunny": 128.37,
+    "dredgling": 86.4,
+    "onilug": 70.89,
+    "wretchling": 85.75,
+    "brecklorn": 82.49,
+    "cute-little-bunny OLD v1 (rejected by gate: ear tips radius 0.879)": 134.43,
+    "onilug OLD v1 (superseded: thin faint column at 48px)": 66.03
+  },
+  "floors": {
+    "sand (sandworm-lair, briagh-lair)": 110.23,
+    "cave rock (ardhungol)": 130.64,
+    "cave mushroom (ardhungol)": 134.28,
+    "grass (old-forest)": 108.97,
+    "flower meadow (old-forest)": 107.27,
+    "void (temporal-rift, mark-spellblaze)": 163.25,
+    "burnt (demon-plane, valley-moon-caverns)": 72.7,
+    "gloom plain creep (deep-bellow)": 73.03,
+    "korpul stone (ancient-elven-ruins)": 131.79
+  },
+  "zone_floors": {
+    "white-ooze": {
+      "sand (sandworm-lair, briagh-lair)": 110.23,
+      "cave rock (ardhungol)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "slimy-ooze": {
+      "cave rock (ardhungol)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "poison-ooze": {
+      "cave rock (ardhungol)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "brittle-clear-ooze": {
+      "cave rock (ardhungol)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "gigantic-corrosive-tunneler": {
+      "sand (sandworm-lair, briagh-lair)": 110.23
+    },
+    "gigantic-gravity-worm": {
+      "sand (sandworm-lair, briagh-lair)": 110.23
+    },
+    "carrion-worm-mass": {
+      "void (temporal-rift, mark-spellblaze)": 163.25,
+      "korpul stone (ancient-elven-ruins)": 131.79
+    },
+    "cute-little-bunny": {
+      "grass (old-forest)": 108.97,
+      "flower meadow (old-forest)": 107.27
+    },
+    "dredgling": {
+      "void (temporal-rift, mark-spellblaze)": 163.25
+    },
+    "onilug": {
+      "burnt (demon-plane, valley-moon-caverns)": 72.7
+    },
+    "wretchling": {
+      "burnt (demon-plane, valley-moon-caverns)": 72.7
+    },
+    "brecklorn": {
+      "gloom plain creep (deep-bellow)": 73.03
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

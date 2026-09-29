@@ -1,0 +1,128 @@
+{
+  "schema": 1,
+  "batch_id": "spellblaze-rework-v1",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Native source, movement, appearance and reviewer failure verified in evidence/spellblaze-20260928.",
+      "max_attempts": 2,
+      "scope": "mark-spellblaze L1 Forest and L2 Forest + static map only",
+      "asset_id": "spellblaze-burnt-tree",
+      "native_name": "BURNT_TREE / BURNT_TREE1..20",
+      "kind": "terrain-prop",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/spellblaze-20260928/identity.md",
+          "sha256": "980cfeb072ac8ecbdc7163b91f8ba49bda98df4fc050fcc0f3cad878e780b197"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/spellblaze-20260928/screenshots/spellblaze-L1-open-48.png",
+          "sha256": "a6eebcd2643ecc392442e3e185335685859e3fac167fa72d86ea1e34ff20d40b"
+        }
+      ],
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/burntland.lua",
+          "sha256": "dd86f61aa600a27be6b7593df466c46f7fb3c304b5cc87dffe78cd20c86563c3",
+          "line": 21,
+          "anchor": "define_as = \"BURNT_TREE\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/mark-spellblaze/zone.lua",
+          "sha256": "327c3c67371036d83dd4988b38625bbb52feba030aaa62c5c06d298c06d371de",
+          "line": 44,
+          "anchor": "wall = \"BURNT_TREE\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/trees/burned_tree_01_trunk.png",
+          "sha256": "af99974c9fd0cd7fea5da610f3b2db03ee7464b2144c06c3b1b32d76430de006",
+          "role": "identity",
+          "note": "Native charred trunk; identify dead wood, not leafy canopy"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/refined/tree-hard0.png",
+          "sha256": "70ec2b505bbcdbcd241f7d26eecc34106c3f4006cfba9302163229c7b64e71cc",
+          "role": "style",
+          "note": "Established full-cell board obstacle scale; do not copy foliage"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Blocks movement; native pass_tree=1 and DIG to BURNT_GROUND1 stay unchanged.",
+        "sight": "Blocks line of sight.",
+        "danger": "No damaging glow, status sign or warning badge.",
+        "interaction": "Can be dug to burnt ground.",
+        "export": "Single native-alpha prop master composed over burnt floor; parity pair at 128px."
+      },
+      "prompt_fields": {
+        "subject": "A proper dead charred tree obstacle: thick split blackened trunk, exposed roots, wide jagged leafless branch structure, a few pale ash edges and tiny deep ember glints, no leafy canopy or round bush crown.",
+        "contrast": "At 48px still visibly a tree with trunk and branch forks, not a dark circular blob, shadow, pit or rock. Distinct against warm scorched ground.",
+        "composition": "One complete blocking tree seen from elevated three-quarter tabletop view; broad branched silhouette occupying most of one square but safely inset from canvas edges, roots touch lower area, transparent outside silhouette. No ground disc.",
+        "palette": "Deep charcoal wood, warm ash-grey edge highlights, sparse dull orange embers; soft top-left light matching painted forest/snow board pieces.",
+        "mechanics": "Blocks movement and sight but no damage. No icon, text, ring or gameplay overlay."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native source, movement, appearance and reviewer failure verified in evidence/spellblaze-20260928.",
+      "max_attempts": 2,
+      "scope": "mark-spellblaze L1 Forest and L2 Forest + static map only",
+      "asset_id": "spellblaze-molten-pool",
+      "native_name": "LAVA / LAVA2..5",
+      "kind": "terrain-floor",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/spellblaze-20260928/identity.md",
+          "sha256": "980cfeb072ac8ecbdc7163b91f8ba49bda98df4fc050fcc0f3cad878e780b197"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/spellblaze-20260928/screenshots/spellblaze-L1-lava-64.png",
+          "sha256": "be0633142424cdf8d96fa049bb425e76f237465a8e9ce5e738de26308589af02"
+        }
+      ],
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/lava.lua",
+          "sha256": "9b844dc3bc7fe9247bee7e2529119714124505227088fac73788e5b75352e0d0",
+          "line": 60,
+          "anchor": "define_as = \"LAVA\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/mark-spellblaze/zone.lua",
+          "sha256": "327c3c67371036d83dd4988b38625bbb52feba030aaa62c5c06d298c06d371de",
+          "line": 50,
+          "anchor": "pond = {{0.6, \"LAVA\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/lava/molten_lava_5_01.png",
+          "sha256": "47bcc82aaa3773f22e7b0a342f8eb83f901bcee3d45f91011d06ecede6912a6b",
+          "role": "identity",
+          "note": "Native molten material and hue"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-daikara-v1/masters/mountain-wall-solid-v3.png",
+          "sha256": "f01581cb4eb898ecf2cdf628670b334b9ffc307aee2199e7827844592971024a",
+          "role": "style",
+          "note": "Painted raised cooled-rock material and board lighting; do not copy grey color"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Molten pool blocks movement; native pass_projectile=true stays unchanged.",
+        "sight": "Does not block line of sight.",
+        "danger": "No on_stand damage in this zone; no warning/danger symbol or flames.",
+        "interaction": "Impassable pool, no dig.",
+        "export": "Opaque seamless molten interior master; 16 N/E/S/W shore masks and 128px parity pairs added by exporter."
+      },
+      "prompt_fields": {
+        "subject": "Top-down single square of unmistakable molten material for an impassable lava pool: broad dark cooled basalt crust plates broken by vivid orange and yellow liquid fissures, irregular molten channels, rich glow within fissures.",
+        "contrast": "Clearly brighter and warmer than adjacent brown scorched ground at 48px; pooled interior must stay distinct from walkable ground, with strong value and hue separation.",
+        "composition": "Opaque seamless overhead square, molten material to all four edges. No full perimeter ring or isolated circular puddle; adjacent tiles will join, exporter adds raised cooled-rock rim only on exposed shoreline.",
+        "palette": "Charcoal basalt, intense amber-orange and yellow fissures, warm reflected edge light; painted tabletop terrain.",
+        "mechanics": "Blocks movement but does not cause on-stand damage. No danger symbols, warning triangles, flames, text or arrows."
+      }
+    }
+  ]
+}

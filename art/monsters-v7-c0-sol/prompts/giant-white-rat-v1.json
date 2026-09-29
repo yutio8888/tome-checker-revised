@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "asset_id": "giant-white-rat",
+  "tool": "image_gen.imagegen",
+  "original_output_path": "~/.codex/generated_images/01a0e205-35a6-7ed0-9868-ecb9672f8a8f/exec-809be09a-f513-41d6-9145-d947019d85ec.png",
+  "saved_output_path": "art/monsters-v7-c0-sol/masters/giant-white-rat-v1.png",
+  "sha256": "e52f7f3bee25030329ffc581c6a297a9a3c15aedfec7205ae138e7cb22dcf3ac",
+  "prompt_sha256": "506cedba01e99365b044a03823f41dfcd657cc5b1dbbdc31c63e103e035f3ac5",
+  "full_prompt": "Use case: stylized-concept. Deliver ONE square transparent PNG miniature token for Tales of Maj'Eyal: giant white rat. Request 1024 x 1024 pixels; retain the tool's native resolution and alpha.\n\nIdentity brief: One large adult ivory rat, unmistakably a rat rather than a small mouse: long pointed muzzle, rounded ears, four visible clawed feet, long naked tail. Alert forebody held visibly higher than its haunches, head angled down-left and separated front paws. Its upper torso forms a tall broad triangle.\nFamily separation: Compared with the compact warm-brown low crouch of the existing brown rat, this white rat has a taller raised front silhouette and one broad light-value ivory back. Compared with the planned grey rat, keep this one more upright, lighter, and shorter in horizontal reach.\nComposition: One entire animal on one disc. Curl the long tail loosely around the left/back inside the rim, clearly detached from the torso; do not put the face in the upper-right UI margin. Keep nose, paws, ears and tail entirely within the disc and readable at 48px.\n\nMatch the designated style reference's steep overhead three-quarter camera, upper-left soft light, matte painted miniature finish and thin charcoal-brown physical disc with a restrained bronze-grey bevel. The disc occupies about 82% of the canvas width. All anatomy and equipment must remain inside it, with a clear margin. Use broad readable value planes and a crisp silhouette at 48/64/96px; dark bodies need a broad pale rim or lighter facing plane, not tiny glowing outlines. Keep identity-defining features out of the upper-right rank area and upper-left interaction-marker area. Native references establish identity; they do not override the style reference's camera or disc. Do not copy another species from a style reference.\n\nPalette/material: Warm ivory and bone-white fur in broad areas, soft pink-grey ears and bare tail, dark eyes and nose, gentle warm-grey contact shadow. No glow or effect.\nTrue transparent alpha outside the disc; no painted checkerboard. Keep the entire disc in frame and transparent corners. This is a static identity illustration. Add no faction ring, health arc, shield, rank, crown, UI marker, number, text, aura, scene or floor outside the disc. No recolor-only substitute for a different species, no montage and no alternate variants in one image. Anatomy must match the identity brief, including intentional missing limbs.\n\nReference roles:\nImage 1: style — Use the approved high three-quarter overhead camera, matte sculpted fur, dark physical disc and muted copper-grey rim; do not copy its body or tail pose.\nImage 2: identity — Native species and light coat only; ignore native camera and blue effects.\n",
+  "references": [
+    {
+      "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+      "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+      "role": "style",
+      "note": "Use the approved high three-quarter overhead camera, matte sculpted fur, dark physical disc and muted copper-grey rim; do not copy its body or tail pose."
+    },
+    {
+      "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_rodent_giant_white_rat.png",
+      "sha256": "250b99cf4660c731aaaa3cf978df751978a65e2c084534152563c9c02199ef1a",
+      "role": "identity",
+      "note": "Native species and light coat only; ignore native camera and blue effects."
+    }
+  ],
+  "attempt": 1,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alpha_bbox": [
+      95,
+      94,
+      1174,
+      1254
+    ]
+  },
+  "preserved_original_bytes": true,
+  "mechanical_check": "pass",
+  "visual_review": "pending",
+  "runtime_review": "pending",
+  "accepted": false
+}

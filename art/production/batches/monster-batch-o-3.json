@@ -1,0 +1,126 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-o-3",
+  "assets": [
+    {
+      "asset_id": "gigantic-corrosive-tunneler",
+      "native_name": "gigantic corrosive tunneler",
+      "scope": "briagh-lair, sandworm-lair (sandworm.lua, vermin/sandworm, non-unique, no define_as, nice_tile with the explicit PNG vermin_sandworm_gigantic_corrosive_tunneler.png); batch K kept it native and shipped only the sibling gigantic sandworm tunneler",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/sandworm.lua",
+          "sha256": "d3b650d818aa36a5560a366bb100fc2c4a1895b0d64e39930571b7af78d612d2",
+          "line": 135,
+          "anchor": "name = \"gigantic corrosive tunneler\", color=colors.GREEN"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/sandworm.lua",
+          "sha256": "d3b650d818aa36a5560a366bb100fc2c4a1895b0d64e39930571b7af78d612d2",
+          "line": 136,
+          "anchor": "add_mos = {{image=\"npc/vermin_sandworm_gigantic_corrosive_tunneler.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_sandworm_gigantic_corrosive_tunneler.png",
+          "sha256": "86fe7a95a9abb44d7ee6832e621721fa8d8a66898eb9e44263fd403232db3dcd",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a dark green-grey scaled worm body rising and curving up, with a coral four-petal mouth on top and yellow acid dripping down."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/gigantic-sandworm-tunneler.png",
+          "sha256": "fa6a3ce312c98ea8ddf405fa6eef8b304bec546f92f824eb91a7537f9b803a17",
+          "role": "family",
+          "note": "Shipped gigantic sandworm tunneler (olive-sand worm with a four-petal mouth on a sand heap): do NOT reuse its olive colour, sand heap or petal flower."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A gigantic corrosive tunneler seen from a steep overhead three-quarter angle: a thick segmented worm of vivid acid lime-green scales with pale yellow-green belly bands, coiled into a low S-shape and lifting its front third up, the head an open round toothy maw ringed with pale jagged fangs and glistening yellow-green acid, thick glowing yellow acid drooling down onto a small bubbling puddle of yellow-green acid at its base with a couple of scorched pebbles. No flower petals, no sand heap. Corrosive, heavy and complete.",
+        "contrast": "Sandworm family, shipped: sandworm (slim orange S-curve), destroyer (closed armoured brown ring), burrower (olive arches over a sand heap), gigantic sandworm tunneler (olive worm with petal mouth on sand), queen. The corrosive tunneler is the LIME-GREEN S-coil with a round fanged maw dripping into an acid puddle (silhouette: S-coil with raised round-mouthed head and a puddle; hue: vivid acid lime-green with yellow; value: mid-light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle.",
+        "palette": "Vivid acid lime-green scales with pale yellow-green belly bands and bright yellow acid; nothing darker than mid green except small scale seams; the acid must not cast green light or a green cast onto the disc, which stays neutral charcoal. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=gigantic corrosive tunneler, define_as=None, type=vermin/subtype=sandworm, unique=False); details and hashes in evidence/monster-batch-o-20260929/source-contracts.json. base BASE_NPC_SANDWORM (vermin/sandworm, no image=); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/vermin_sandworm_gigantic_corrosive_tunneler.png\", display_h=2, display_y=-1}}} names the PNG explicitly (no {tall=1} shorthand and no =BASE=TILE= indirection), so the resolved tall body is statically pinnable (same form as the batch K gigantic sandworm tunneler and batch M gwelgoroth entries); native sprite 64x128; talents Acid Blood (passive), Rush and Grab (activated); no sustains_at_birth; on_die adds a map effect only. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-o-20260929/source-contracts.json",
+          "sha256": "d8d01218f85afa424e662a8f08ea1dcfac1dc6aef902034dbb35f6b53f4b494b"
+        }
+      ]
+    },
+    {
+      "asset_id": "gigantic-gravity-worm",
+      "native_name": "gigantic gravity worm",
+      "scope": "briagh-lair, sandworm-lair (sandworm.lua, vermin/sandworm, non-unique, no define_as, nice_tile with the explicit PNG vermin_sandworm_gigantic_gravity_worm.png); batch K kept it native",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/sandworm.lua",
+          "sha256": "d3b650d818aa36a5560a366bb100fc2c4a1895b0d64e39930571b7af78d612d2",
+          "line": 114,
+          "anchor": "name = \"gigantic gravity worm\", color=colors.UMBER"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/sandworm.lua",
+          "sha256": "d3b650d818aa36a5560a366bb100fc2c4a1895b0d64e39930571b7af78d612d2",
+          "line": 115,
+          "anchor": "add_mos = {{image=\"npc/vermin_sandworm_gigantic_gravity_worm.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_sandworm_gigantic_gravity_worm.png",
+          "sha256": "ae312aa1a110dae5d165744d769a145860bc05f6ee37f9f8d94e608180a8a9be",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a slate-grey scaled worm rising up with a coral four-petal mouth and blue lightning crackling around it."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/gigantic-sandworm-tunneler.png",
+          "sha256": "fa6a3ce312c98ea8ddf405fa6eef8b304bec546f92f824eb91a7537f9b803a17",
+          "role": "family",
+          "note": "Shipped gigantic sandworm tunneler (olive-sand worm with a four-petal mouth on a sand heap): do NOT reuse its olive colour, sand heap or petal flower."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A gigantic gravity worm seen from a steep overhead three-quarter angle: a thick segmented worm of cool slate blue-grey scales with pale silver belly bands, coiled into a tight round spiral like a wound rope with its head raised in the middle, the head a small blunt mouth with a ring of coral-pink petal lobes, a ring of pale grey pebbles and small stones floating in orbit around its raised head, a few thin pale-blue arcs of energy between the pebbles. No sand heap, no acid. Weighty, bending space and complete.",
+        "contrast": "Sandworm family, shipped: sandworm (slim orange S-curve), destroyer (closed armoured brown ring), burrower (olive arches over sand), gigantic sandworm tunneler (olive petal-mouthed worm on sand). The gravity worm is the SLATE BLUE-GREY TIGHT SPIRAL with orbiting pebbles round a raised head (silhouette: round wound coil with a ring of floating stones; hue: cool slate blue-grey with pale silver; value: mid-light). The corrosive tunneler is a green S-coil; do not draw green.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle.",
+        "palette": "Cool slate blue-grey scales with pale silver bands, coral-pink petals, pale grey pebbles, pale-blue arcs; nothing darker than mid tone except scale seams; the arcs must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=gigantic gravity worm, define_as=None, type=vermin/subtype=sandworm, unique=False); details and hashes in evidence/monster-batch-o-20260929/source-contracts.json. base BASE_NPC_SANDWORM (vermin/sandworm, no image=); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/vermin_sandworm_gigantic_gravity_worm.png\", display_h=2, display_y=-1}}} names the PNG explicitly (no {tall=1} shorthand and no =BASE=TILE= indirection), so the resolved tall body is statically pinnable (same form as the batch K gigantic sandworm tunneler and batch M gwelgoroth entries); native sprite 64x128; talents Gravity Well, Gravity Spike (activated), Gravity Locus (sustained, chronomancy/gravity.lua, but the leaf has no sustains_at_birth; when used it adds a temporary value and a particle, no display write), Rush, Grab. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-o-20260929/source-contracts.json",
+          "sha256": "d8d01218f85afa424e662a8f08ea1dcfac1dc6aef902034dbb35f6b53f4b494b"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "schema": 1,
+  "batch_id": "player-tokens-v1-ghoul-skeleton-golem",
+  "assets": [
+    {
+      "asset_id": "player-ghoul",
+      "native_name": "ghoul",
+      "scope": "Native player body family (paper-doll), not a class or NPC; identity key descriptor.subrace x descriptor.sex -> moddable_tile per overload/mod/class/CheckerPlayerTokens.lua. Covers birth subrace Ghoul (native descriptor allows only sex=Male; moddable_tile \"ghoul\", moddable_tile_nude=1, i.e. the native doll is already a complete rotting body with no separate nude/clothed layering). Runtime id player-ghoul, exported to data/gfx/tokens/player-ghoul.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/birth/races/undead.lua",
+          "sha256": "8916f0d41137af14c3ff98b89be7643788241e5488c1a381a4fa1c7029d1d6c4",
+          "line": 129,
+          "anchor": "moddable_tile = \"ghoul\""
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/ghoul/base_01.png",
+          "sha256": "2cb59444fe90353ef965c66a7882a17807d40f44116c93d99bfbf0eb14839af3"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte painted miniature finish, thin charcoal-brown disc and bronze-grey bevel at exactly that lightness. Do not copy its crouching combat pose, bald head, daggers, leather vest or sash; this token is a calm standing figure in plain traveller's clothes with no weapon.",
+          "sha256": "a571c4618354fd68d89eebf282ac5c8940ad00157fc5a4e330731914dd56d199"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/ghoul/base_01.png",
+          "sha256": "2cb59444fe90353ef965c66a7882a17807d40f44116c93d99bfbf0eb14839af3",
+          "role": "identity",
+          "note": "Native unequipped paper-doll base body (skin-tone option 1 of several cosmetic choices; any option is equally native). Establishes body proportions and base skin/fur/bone value only: a gaunt, rotting humanoid with mottled green-brown flesh and a sunken, fanged face; this decayed flesh is its native identity, not a costume or wound effect. Ignore its flat front-facing T-pose, flat top light and total nudity; the token uses the style reference's camera, disc and pose instead, and the figure must be dressed per the brief."
+        }
+      ],
+      "contrast_dimensions": [
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "One gaunt, undead ghoul, humanoid in build but visibly rotting: mottled green-brown patchy flesh, a sunken face with a wide fanged mouth and hollow eyes, standing in a calm neutral pose, weight even on both feet, arms relaxed at its sides with open clawed hands. Wears simple ragged but plain traveller clothing (a torn tunic or wrap, no armour, no class item) hanging loosely on its gaunt frame.",
+        "contrast": "Must occupy a clearly separate value/hue band from both skeleton and runic golem in this same package, none of the three collapsing into a generic dark humanoid blob against the charcoal-brown disc: (1) value — a mid-dark, uneven mottled value pattern (patchy rot, not a flat silhouette), distinctly darker overall than the skeleton's pale bone; (2) hue — a sickly green-brown hue running through the flesh, absent from the skeleton's neutral bone-grey and the golem's neutral stone-grey. Gaunt, sunken humanoid anatomy (not a bare bone frame, not a blocky carved stone body) is itself a silhouette cue.",
+        "composition": "One entire figure on one disc, steep overhead three-quarter view, facing down-left or down-right. Head, hands and feet stay well inside the disc with a clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. No second figure, no mount, no companion, no ground clutter.",
+        "palette": "Mottled sickly green-brown and grey-green rotting flesh, darker patches at joints and sunken face, yellowed teeth/claws, a plain ragged earth-toned wrap or tunic (dirty grey-brown). No blood spatter, no glow, no visible bone protruding through flesh (that belongs to the skeleton family)."
+      },
+      "kind": "player",
+      "gate": "ready",
+      "gate_reason": "Main agent reviewed the native contract for this body family: overload/mod/class/CheckerPlayerTokens.lua's M.families/M.moddable/M.keys table (independent of the monster catalog, paper-doll aware) names this exact family and the birth subrace(s) that expand to it, and docs/player-token-plan-20260928/PLAN.md records the resolved identity-key, granularity and neutral-appearance decisions this batch follows. Art generation only; the runtime switch, manifest wiring and in-game validation in PLAN.md sections 2-4 are separate, unstarted work.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/overload/mod/class/CheckerPlayerTokens.lua",
+          "sha256": "4a41f96a7cb958c85ca1df15df8444cb4917bf20de4da15d6016bfe713d0a4b9"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/player-token-plan-20260928/PLAN.md",
+          "sha256": "570c36028f835c3152dd4762ba907885dc16ad0e126be333db153561d311195c"
+        }
+      ]
+    },
+    {
+      "asset_id": "player-skeleton",
+      "native_name": "skeleton",
+      "scope": "Native player body family (paper-doll), not a class or NPC; identity key descriptor.subrace x descriptor.sex -> moddable_tile per overload/mod/class/CheckerPlayerTokens.lua. Covers birth subrace Skeleton (native descriptor allows only sex=Male; moddable_tile \"skeleton\", moddable_tile_nude=1). The Lich descriptor (undead.lua later in the same file) reuses this same moddable_tile \"skeleton\" but is reached only by post-birth conversion, is excluded from this family, and keeps native art. Runtime id player-skeleton, exported to data/gfx/tokens/player-skeleton.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/birth/races/undead.lua",
+          "sha256": "8916f0d41137af14c3ff98b89be7643788241e5488c1a381a4fa1c7029d1d6c4",
+          "line": 223,
+          "anchor": "moddable_tile = \"skeleton\""
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/skeleton/base_01.png",
+          "sha256": "eb72fb03da6537c126dc2530088a36f4b77e8d1433978f23a6972f4c09156b58"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte painted miniature finish, thin charcoal-brown disc and bronze-grey bevel at exactly that lightness. Do not copy its crouching combat pose, bald head, daggers, leather vest or sash; this token is a calm standing figure in plain traveller's clothes with no weapon.",
+          "sha256": "a571c4618354fd68d89eebf282ac5c8940ad00157fc5a4e330731914dd56d199"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/skeleton/base_01.png",
+          "sha256": "eb72fb03da6537c126dc2530088a36f4b77e8d1433978f23a6972f4c09156b58",
+          "role": "identity",
+          "note": "Native unequipped paper-doll base body (skin-tone option 1 of several cosmetic choices; any option is equally native). Establishes body proportions and base skin/fur/bone value only: a bare bone humanoid frame, pale bone-white/grey, with visible ribcage and joints and no flesh at all. Ignore its flat front-facing T-pose, flat top light and total nudity; the token uses the style reference's camera, disc and pose instead, and the figure must be dressed per the brief."
+        }
+      ],
+      "contrast_dimensions": [
+        "value",
+        "silhouette"
+      ],
+      "prompt_fields": {
+        "subject": "One animate skeleton, a bare bone humanoid frame with a visible ribcage, jointed limb bones and a bare skull, no flesh anywhere, standing in a calm neutral pose, weight even on both feet, arms relaxed at its sides with open bony hands. Wears only a simple plain traveller garment draped loosely over the frame (a plain tunic or wrap, no armour, no class item, no robe), leaving the ribcage, skull and limb bones clearly visible through or around it.",
+        "contrast": "Must occupy a clearly separate value/hue band from both ghoul and runic golem in this same package: (1) value — a pale bone-white to bone-grey body, distinctly lighter than the disc and lighter than the ghoul's mottled flesh or the golem's mid-grey stone, so it stays readable as bone rather than a dark humanoid shape; (2) silhouette — an openwork bare bone frame (visible ribcage gaps, thin limb bones) rather than the ghoul's solid gaunt flesh mass or the golem's blocky solid stone mass. Do not add a hooded robe or a staff (that belongs to the existing skeleton-mage monster token, a different identity), and do not tint the bone green or grey-green like the ghoul.",
+        "composition": "One entire figure on one disc, steep overhead three-quarter view, facing down-left or down-right. Head, hands and feet stay well inside the disc with a clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. No second figure, no mount, no companion, no ground clutter.",
+        "palette": "Pale bone-white to warm bone-grey bone, dark eye sockets, a thin plain undyed or dust-grey wrap or tunic draped loosely so bone stays visible. No glow, no blue engine-style rim light, no robe, no weapon."
+      },
+      "kind": "player",
+      "gate": "ready",
+      "gate_reason": "Main agent reviewed the native contract for this body family: overload/mod/class/CheckerPlayerTokens.lua's M.families/M.moddable/M.keys table (independent of the monster catalog, paper-doll aware) names this exact family and the birth subrace(s) that expand to it, and docs/player-token-plan-20260928/PLAN.md records the resolved identity-key, granularity and neutral-appearance decisions this batch follows. Art generation only; the runtime switch, manifest wiring and in-game validation in PLAN.md sections 2-4 are separate, unstarted work.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/overload/mod/class/CheckerPlayerTokens.lua",
+          "sha256": "4a41f96a7cb958c85ca1df15df8444cb4917bf20de4da15d6016bfe713d0a4b9"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/player-token-plan-20260928/PLAN.md",
+          "sha256": "570c36028f835c3152dd4762ba907885dc16ad0e126be333db153561d311195c"
+        }
+      ]
+    },
+    {
+      "asset_id": "player-runic-golem",
+      "native_name": "runic_golem",
+      "scope": "Native player body family (paper-doll), not a class or NPC; identity key descriptor.subrace x descriptor.sex -> moddable_tile per overload/mod/class/CheckerPlayerTokens.lua. Covers birth subrace Runic Golem (native descriptor allows only sex=Male; moddable_tile \"runic_golem\", moddable_tile_nude=1). Runtime id player-runic-golem, exported to data/gfx/tokens/player-runic-golem.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/birth/races/construct.lua",
+          "sha256": "d722e474045cf950f3debf515364220dea633d264d24bf6c9c7ebf07de89d1ef",
+          "line": 110,
+          "anchor": "moddable_tile = \"runic_golem\""
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/runic_golem/base_01.png",
+          "sha256": "07e83128d99d3276e3f3c40d8e2a724336a29b1b9c5fd444ac97181b7c93e6e7"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte painted miniature finish, thin charcoal-brown disc and bronze-grey bevel at exactly that lightness. Do not copy its crouching combat pose, bald head, daggers, leather vest or sash; this token is a calm standing figure in plain traveller's clothes with no weapon.",
+          "sha256": "a571c4618354fd68d89eebf282ac5c8940ad00157fc5a4e330731914dd56d199"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/runic_golem/base_01.png",
+          "sha256": "07e83128d99d3276e3f3c40d8e2a724336a29b1b9c5fd444ac97181b7c93e6e7",
+          "role": "identity",
+          "note": "Native unequipped paper-doll base body (skin-tone option 1 of several cosmetic choices; any option is equally native). Establishes body proportions and base skin/fur/bone value only: a humanoid body carved from grey-white stone, marked with incised dark rune lines over its whole surface; this stone body and its runes are its native identity, not paint or a costume. Ignore its flat front-facing T-pose, flat top light and total nudity; the token uses the style reference's camera, disc and pose instead, and the figure must be dressed per the brief."
+        }
+      ],
+      "contrast_dimensions": [
+        "value",
+        "silhouette",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "One humanoid construct carved from solid grey-white stone, its whole surface incised with dark angular rune lines, standing in a calm neutral pose, weight even on both feet, arms relaxed at its sides with open blocky hands. No separate clothing: the carved stone body is the entire surface, jointed at the shoulders, elbows, hips and knees like sculpted armour plates rather than flesh.",
+        "contrast": "Must occupy a clearly separate value/hue band from both ghoul and skeleton in this same package: (1) value — a mid-grey stone value, darker than the pale skeleton bone but more even and less mottled than the ghoul's patchy flesh; (2) silhouette — a blocky, solid, sculpted body with flat jointed plates (a carved statue), unlike the skeleton's openwork bone frame or the ghoul's gaunt organic form; (3) hue — a neutral stone grey-white cut through by dark rune-line hue accents, found on no other family in this set. Keep the rune lines as incised carving, not a glowing magical effect (this family has no native shader).",
+        "composition": "One entire figure on one disc, steep overhead three-quarter view, facing down-left or down-right. Head, hands and feet stay well inside the disc with a clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. No second figure, no mount, no companion, no ground clutter.",
+        "palette": "Grey-white to pale slate stone body, dark charcoal-grey incised rune lines over joints and chest, no other colour. No glow, no light emission from the runes, no moss or weathering beyond the native stone tone."
+      },
+      "kind": "player",
+      "gate": "ready",
+      "gate_reason": "Main agent reviewed the native contract for this body family: overload/mod/class/CheckerPlayerTokens.lua's M.families/M.moddable/M.keys table (independent of the monster catalog, paper-doll aware) names this exact family and the birth subrace(s) that expand to it, and docs/player-token-plan-20260928/PLAN.md records the resolved identity-key, granularity and neutral-appearance decisions this batch follows. Art generation only; the runtime switch, manifest wiring and in-game validation in PLAN.md sections 2-4 are separate, unstarted work.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/overload/mod/class/CheckerPlayerTokens.lua",
+          "sha256": "4a41f96a7cb958c85ca1df15df8444cb4917bf20de4da15d6016bfe713d0a4b9"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/player-token-plan-20260928/PLAN.md",
+          "sha256": "570c36028f835c3152dd4762ba907885dc16ad0e126be333db153561d311195c"
+        }
+      ]
+    }
+  ]
+}

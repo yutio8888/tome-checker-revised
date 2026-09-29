@@ -1,0 +1,159 @@
+{
+  "schema": 1,
+  "batch_id": "maze-terrain-v1",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Maze source identities and rules verified in identity.md",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/maze-20260928/identity.md",
+          "sha256": "d12d050cc08097d6b0fdcc89692d0c442e6b78107f6faf13fe8b523ec1c7a08d"
+        }
+      ],
+      "asset_id": "old-lichen-wall-top",
+      "native_name": "OLD_WALL old lichen-covered granite wall",
+      "kind": "terrain-floor",
+      "scope": "Maze DEFAULT L1-L2 and COLLAPSED L1-L4; old wall later reusable in Ancient Elven Ruins",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/basic.lua",
+          "sha256": "f8d3f0c85a131749827cd108303c5c60bdb1644a4bf806e58463e8533e748809",
+          "line": 288,
+          "anchor": "define_as = \"OLD_WALL\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-korpul-v1/masters/wall-top-v1.png",
+          "sha256": "0a3ce0291ea740979b1d1f72ce4718b2aaa24b6b5c36cdfba3fafee6bfc3bf56",
+          "role": "style",
+          "note": "Accepted continuous Kor Pul wall top structure"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/granite_wall_lichen_1.png",
+          "sha256": "701d34c8f3770dbc7fb878f0de6349c8f879e489bb93cf1cd84ab02780168b7d",
+          "role": "identity",
+          "note": "Native lichen granite wall"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Blocks",
+        "sight": "Blocks",
+        "danger": "None",
+        "interaction": "Undiggable",
+        "export": "Opaque wall top sampled into Kor Pul 16 mask geometry"
+      },
+      "prompt_fields": {
+        "subject": "Seamless overhead top plane of ancient lichen-covered granite masonry, broad worn slabs and embedded olive lichen, age cracks.",
+        "palette": "Muted cool granite gray, dusty olive moss, upper-left light.",
+        "contrast": "Clearly older and darker than clean Kor Pul masonry but legible at 48px.",
+        "composition": "Full opaque square, even continuous material reaching all edges, no isolated wall block or perspective side.",
+        "mechanics": "Solid undiggable wall blocks movement and sight, no doors or hazards."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Maze source identities and rules verified in identity.md",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/maze-20260928/identity.md",
+          "sha256": "d12d050cc08097d6b0fdcc89692d0c442e6b78107f6faf13fe8b523ec1c7a08d"
+        }
+      ],
+      "asset_id": "old-lichen-wall-edge",
+      "native_name": "OLD_WALL old lichen-covered granite wall edges",
+      "kind": "terrain-prop",
+      "scope": "Maze DEFAULT L1-L2 and COLLAPSED L1-L4; old wall later reusable in Ancient Elven Ruins",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/basic.lua",
+          "sha256": "f8d3f0c85a131749827cd108303c5c60bdb1644a4bf806e58463e8533e748809",
+          "line": 288,
+          "anchor": "define_as = \"OLD_WALL\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-korpul-v1/masters/wall-v1.png",
+          "sha256": "63382a3e42d2f4e1585ee3bd509f10d29a59b18fc3079b12e5a38f21448bee04",
+          "role": "style",
+          "note": "Kor Pul wall block with world-facing four edges"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/granite_wall_lichen_1.png",
+          "sha256": "701d34c8f3770dbc7fb878f0de6349c8f879e489bb93cf1cd84ab02780168b7d",
+          "role": "identity",
+          "note": "Native lichen granite wall"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Blocks",
+        "sight": "Blocks",
+        "danger": "None",
+        "interaction": "Undiggable",
+        "export": "Transparent edge source for Kor Pul 16 mask geometry"
+      },
+      "prompt_fields": {
+        "subject": "Single broad raised ancient granite block, top stone slabs with embedded gray-green lichen and four visible beveled edges.",
+        "palette": "Cool gray granite, olive-gray lichen, upper-left light and dark right/south faces.",
+        "contrast": "Older lichen-covered material distinct from clean Kor Pul wall; clear solid barrier.",
+        "composition": "Centered raised block with transparent native RGBA margin; complete north east south west edges, broad top, no clipping.",
+        "mechanics": "Undiggable movement and sight barrier, no door or danger."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Maze source identities and rules verified in identity.md",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/maze-20260928/identity.md",
+          "sha256": "d12d050cc08097d6b0fdcc89692d0c442e6b78107f6faf13fe8b523ec1c7a08d"
+        }
+      ],
+      "asset_id": "maze-chasm",
+      "native_name": "CRACKS huge crack in the floor",
+      "kind": "terrain-floor",
+      "scope": "Maze DEFAULT L1-L2 and COLLAPSED L1-L4; old wall later reusable in Ancient Elven Ruins",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/maze/grids.lua",
+          "sha256": "ab11bffaab73e976921edb68539367c62db7593681fe88148d9842bd83052431",
+          "line": 33,
+          "anchor": "define_as = \"CRACKS\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/cracks/ground_9_01.png",
+          "sha256": "3b52281b959ecbb1ed160c1ddb947abc57127dd6cf231c18b16fbc1b7dbc982b",
+          "role": "identity",
+          "note": "Native chasm terrain"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-korpul-v1/masters/floor-a-v2.png",
+          "sha256": "aa50b00c1a936cb30e29e67e7a24a0243f8d936be8c9d413926a2a507aa42d29",
+          "role": "style",
+          "note": "Accepted stone board floor scale"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Function block_move asks player whether to jump down",
+        "sight": "Open",
+        "danger": "Fall to next level on confirmation",
+        "interaction": "Passes projectiles",
+        "export": "Opaque full cell chasm tile"
+      },
+      "prompt_fields": {
+        "subject": "Overhead ancient masonry floor split by a broad jagged black chasm, broken stone lips and depth shading.",
+        "palette": "Dark black-blue abyss, cool slate gray broken edges, restrained olive wear.",
+        "contrast": "Immediate void and fall risk at 48px, visually unlike raised wall or safe floor.",
+        "composition": "Opaque full square terrain tile, broad dark jagged fissure through center, broken lips remain below wall height; no bridges, text or icon.",
+        "mechanics": "Blocks ordinary movement via prompt to drop a level; projectiles pass through, sight remains open; not a solid wall."
+      }
+    }
+  ]
+}

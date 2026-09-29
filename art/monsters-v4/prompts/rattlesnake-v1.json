@@ -1,0 +1,108 @@
+{
+  "asset_id": "rattlesnake-v1",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "status": "generated-static-reviewed-with-runtime-supplement",
+  "prompt": "Use case: precise-object-edit\nAsset type: one transparent PNG full-body monster miniature for a square-grid tabletop RPG, readable at 48/64/96px.\nPrimary request: replace the brown snake in Image 1 with a RATTLESNAKE in a new compact warning pose. Image 1 is the style/base edit target only: preserve its hand-painted sculpted finish, high downward three-quarter view, soft upper-left light, neutral dark grey-brown thin round disc and subdued bronze-grey bevel. Do NOT keep its single closed donut-shaped coil. Image 2 is the original game's rattlesnake identity reference.\nSubject and pose: exactly one complete rattlesnake with one continuous body, one triangular viper head and one terminal rattle. Arrange the body in a COMPACT LOW TRIANGULAR WARNING COIL: two compressed offset bends make a squat angular mound across the centre, rather than one large circular ring with an empty centre. Lift the short neck and clearly triangular head at the LEFT-FRONT, facing down-left toward the viewer; the head must remain separate from the coil. On the RIGHT-FRONT, the tapering tail rises from the outer coil into a visible upright ivory-tan segmented RATTLE, clearly attached as the single end of the body. The lifted head and rattle form two distinct asymmetric endpoints separated by dark disc. Keep the rattle in the right-middle/lower-right, never in the top-right badge area. A rattle is a short dry stack of rounded interlocking segments, not a second head, blade, horn or musical object.\nAnatomy: one head only; no cobra hood, horns, legs, wings, fins or extra tail. The body must be visually continuous through the coils into the one raised rattle. Small restrained forked tongue is allowed. Do not crop or sever any section. The head is a modest part of a full snake, not a portrait.\nColour and value: muted warm brick-ochre and chestnut body, broad pale sand saddle markings and a light cream throat. The pale segmented rattle is a legible secondary feature at 64px. Use broad matte scale planes with controlled texture. Family distinction must come from triangular compressed coil plus lifted separate rattle/head posture, not merely a redder version of Image 1. Avoid saturated red; identity colours must not overpower runtime UI.\nFraming: square 1024x1024 canvas. Centred nearly circular thin disc, about 86% of canvas width. Creature spans about 80–86% of disc diameter; all tongue, head, rattle and body remain inside the disc with a continuous visible perimeter strip. Keep the top-right 23% by 18% of canvas free of head and rattle; do not draw the reserved area.\nMatte painted resin/carved miniature, sculpted body planes, soft upper-left illumination, only small contact shadows inside the base.\nBackdrop: genuine transparent native alpha outside the disc, clean antialiased edge, no outside cast shadow or scene. Preserve the generated alpha.\nAvoid: glowing eyes, bright outline, faction rings, coloured rims, rank, crowns, HP, shields, selection, text, numbers, icons, watermark, grass, rocks, scenery, fog, black/white background or painted checkerboard. Exactly one rattlesnake and one neutral base; a single asset, not a sheet.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/brown-snake-v1.png",
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/firebrick-snake.png"
+  ],
+  "reference_roles": [
+    "Style/base edit target and negative pose contrast; retain disc/material/light/camera, replace large closed ring with compact angular warning coil.",
+    "Native rattlesnake identity reference; one snake with warning posture and terminal rattle."
+  ],
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "saved_output_path": "art/monsters-v4/masters/rattlesnake-v1.png",
+  "generated_at_utc": "2026-09-27T00:51:13.819882+00:00",
+  "batch_group": "B",
+  "authorization": "Parent approved group B after first-four 64px runtime review; freeze first-four records until parent confirms commit.",
+  "original_output_path": "~/.codex/generated_images/01a0e03a-d37e-7f70-a65b-cc566c7bb09b/exec-0aabb83a-cda4-4f37-900e-4d9f2b9d8187.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Original built-in image_gen output copied byte-for-byte. No creature pixel editing, recolouring, matting, alpha replacement or re-encoding.",
+  "sha256": "4af1fa77c7e4551055d006d758d5b494b96bb63735c175558379570789b34b40",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      103,
+      47,
+      1218,
+      1254
+    ],
+    "visible_alpha_bbox": [
+      147,
+      146,
+      1106,
+      1119
+    ],
+    "transparent_pixels": 830396,
+    "partial_alpha_pixels": 741739,
+    "opaque_pixels": 381,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "selection": "static-approved-runtime-integration-candidate",
+  "reference_sha256": {
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/brown-snake-v1.png": "54dd572dbe3114d155664345e9b9e3a6c16fdc6d8fff7487810808e58a06bec6",
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/firebrick-snake.png": "ce9f4d8e8ebece83af353f20b48064a6b61c618452be1c937cae778aedbb7ba6"
+  },
+  "review": {
+    "observations": [
+      "One triangular viper head and one attached segmented terminal rattle; no extra head, limb, wing, hood or tail is visible.",
+      "Offset stacked coils and separately raised head/rattle replace the brown snake single open-centre ring; large pale zigzag saddles add a second broad value pattern.",
+      "Palette remains warm ochre/chestnut rather than strongly red; species distinction must therefore survive on pose, rattle and value pattern.",
+      "Head, tongue, rattle and coils remain within the outer disc. Rattle is on right-middle, clear of the top-right badge reserve."
+    ],
+    "remaining_limits": [
+      "Screenshots inspected are frozen-AI static family scenes, not continuous combat or blind player testing.",
+      "Complex particles, grayscale runtime, exact identity behaviour and worm multiplication require parent test evidence.",
+      "Native master remains the unchanged 1254 square output.",
+      "48px cannot reliably show rattle segmentation; species read relies on stacked posture plus separate light tail endpoint."
+    ]
+  },
+  "static_review": {
+    "reviewed_at_utc": "2026-09-27T01:11:49.347087+00:00",
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "backgrounds": [
+      "flat muted grass green",
+      "flat dark water blue",
+      "neutral CSS grayscale display"
+    ],
+    "method": "Parent mechanically exported native-alpha masters with the existing C tool. Existing CJS Chromium capture displayed native sprite dimensions at device scale 1. Both screenshots viewed at original resolution. No creature pixels changed.",
+    "preview_paths": [
+      "art/monsters-v4/review/second-four-grass.png",
+      "art/monsters-v4/review/second-four-water.png"
+    ],
+    "preview_sha256": {
+      "second-four-grass.png": "b52dc7b6b458d0d043c382ca77ae538dd1e9050bf10ac457879113c23b9e9a98",
+      "second-four-water.png": "8d17fd5f6c797dc7df0f05af2889429c90555c344b3bec79b042593939455e91"
+    },
+    "observation": "64px stacked coils, raised head and separate pale rattle distinguish the brown closed ring; grayscale saddle pattern survives. At 48px tail segmentation is not reliable.",
+    "runtime_screenshot": false
+  },
+  "inspected_runtime_supplement": [
+    "evidence/runtime-v052/screenshots/snakes-1920-64.png",
+    "evidence/runtime-v052/screenshots/snakes-1920-48.png"
+  ]
+}

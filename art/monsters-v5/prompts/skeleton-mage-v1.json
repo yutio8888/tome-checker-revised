@@ -1,0 +1,61 @@
+{
+  "asset_id": "skeleton-mage-v1",
+  "intent": "generate",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: stylized-concept. One square transparent PNG SKELETON MAGE tabletop game miniature, ideally 1024x1024. Reference 1 cave troll is the style/base reference: same steep overhead three-quarter camera, matte painted sculpted resin, soft upper-left illumination, thin nearly circular dark grey-brown base with subdued bronze-grey fine physical rim. Reference 2 native skeleton mage is identity only; do not copy its spell flames. Entire miniature INCLUDING SKULL AND STAFF TOP must fit strictly within the projected circular base, with visible neutral perimeter all around, no vertical overhang above far edge. Centered base diameter 86% of square; subject within 78% of disc diameter; skull near canvas x48% y38%, staff head near x70% y32%. Crumbling ivory skeleton wearing torn charcoal and very muted dark blue draped cloth over shoulders and hips; open ribcage and separate bone feet remain visible. One complete skeletal hand holds an upright plain dark wooden staff at the right side; static carved crooked bulb staff head, no orb or flame. Other complete bony hand extends toward front-left in a compact spellcasting gesture with coherent fingers. Skull and reaching hand are bright readable ivory blocks; cloak a broad dark asymmetrical triangular plane with soft cool painted highlights clearly separated from disc. The staff's tall thin silhouette and cloak distinguish this from bare one-armed sword skeleton and side-on bow skeleton. All arms and legs connect naturally. No magic particles, aura, shield, fireball, faction/rank/HP/UI ring, letters, numbers, scenery, debris, grass or watermark. Top-left/top-right corner reserves clear. Actual transparent alpha outside base, no outside cast shadow. Single token only.",
+  "references": [
+    "art/monsters-v3/masters/cave-troll-v3.png",
+    "game/modules/tome/data/gfx/shockbolt/npc/skeleton_mage.png"
+  ],
+  "reference_roles": [
+    "style/base reference",
+    "identity or style supporting reference"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-dc88afb0-a0e1-4b5c-adab-9a1a5e862f30.png",
+  "saved_output_path": "art/monsters-v5/masters/skeleton-mage-v1.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Byte-for-byte original copy; mechanical C downsampling only in sprites, no artwork editing.",
+  "selection": "rejected",
+  "review": "Staff head protrudes across upper-right rim; targeted inward-shorter staff edit required.",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "generated_at_utc": "2026-09-27",
+  "sha256": "403322cbd34cb0954ee626492014f4473626753f149b07fcba7f9a410ef96a75",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      9,
+      1222,
+      1198
+    ],
+    "visible_alpha_bbox": [
+      162,
+      168,
+      1093,
+      1104
+    ],
+    "transparent_pixels": 874654,
+    "partial_alpha_pixels": 697607,
+    "opaque_pixels": 255,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "small_size_review": null
+}

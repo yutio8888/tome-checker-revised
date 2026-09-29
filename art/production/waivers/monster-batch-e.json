@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "scope": "monster batch E exact-byte base_drift only; approved by reviewer 2026-09-29 for seven entries (see art/monster-batch-e/REVIEW.md 'Reviewer decision'); no alpha, geometry or occupancy waiver. The kryl-feijan entry originally approved here was removed 2026-09-29 (monster-batch-f): the batch-E master read as an almost pure black blob at 48px on a real dark stone floor (evidence/monster-live-e-20260929), and monster-batch-f shipped a pale storm-grey redraw (kryl-feijan-c, mean masked-body luminance +44% over the superseded master) that clears the style gate cleanly with no waiver, so the waiver is no longer needed or applicable -- see overload/mod/class/CheckerTokens.lua and art/monster-batch-f/REVIEW.md.",
+  "assets": [
+    {
+      "id": "urkis",
+      "call": "art/production/handoffs/monster-batch-e-1/urkis/imagegen-calls/call-1/call.json",
+      "master_sha256": "efc747dcfdf3f584afbdbfc4a7a9438745b89258b34a0291bc2e0110590daef5",
+      "runtime_sha256": "644bdf7182e5ffe84f73a68f279f5071ba3fd535d295759acb28a8fc5f3d6c3a",
+      "base_drift": -12.21,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "Single call, base_drift-only (magnitude 4.21 over the +-8 tolerance). 48/64/96px reviewed on art/monster-batch-e/review/humans-color-48-64-96.png and grayscale sheet: a commanding bearded robed figure wrapped in a bright cyan-white lightning aura, reads clearly at all sizes and is unmistakable from this batch's own Celia (pale unlit robed female, no aura). Approved by reviewer 2026-09-29; see art/production/waivers/monster-batch-e-PENDING-REQUEST.json for the full reasoning."
+    },
+    {
+      "id": "golbug",
+      "call": "art/production/handoffs/monster-batch-e-1/golbug/imagegen-calls/call-1/call.json",
+      "master_sha256": "f9550b97e0b72011880aaabf720e04d29c431f782f1642b21a02fcde430bcf00",
+      "runtime_sha256": "4f7047dc4d3756bbce03ee27b1740345f17cb9764399ac774169994f40d008d6",
+      "base_drift": -15.18,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "Single call, base_drift-only (magnitude 7.18 over tolerance -- the largest overrun in this batch). 48/64/96px reviewed: upswept horned brass-trimmed pauldrons and a low diagonal sword read clearly and are unmistakable from this batch's own Brotoq (angular helm, near-black plate, sword raised, shipped as brotoq-v2 with no waiver). Approved by reviewer 2026-09-29; see art/production/waivers/monster-batch-e-PENDING-REQUEST.json for the full reasoning."
+    },
+    {
+      "id": "ungole",
+      "call": "art/production/handoffs/monster-batch-e-2/ungole/imagegen-calls/call-1/call.json",
+      "master_sha256": "244c9022f42b813cbba0fec605d554d24c175ad621ccebcd3b4e8b0f72ecbd56",
+      "runtime_sha256": "68c78ccd8392b026a7e37f20f1ea0205ebb643fac53d5d2435d1e38e7b2a3489",
+      "base_drift": -9.47,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "Attempt 1: base_drift-only (magnitude 1.47 over tolerance, the smallest overrun in this batch). Attempt 2 (metric-driven repair) overshot to +44.24 and was rejected outright; attempt-1's master is the one waived here. First spiderkin/spider identity in the catalog; 48/64/96px reviewed, glowing red eye-cluster against a near-black body reads clearly and there is no in-family sibling to confuse it with. A dark subject on a dark base -- confirm readability against real floor tiles at 48px in the live fixture; revoke this waiver if it vanishes against real terrain. Approved by reviewer 2026-09-29; see art/production/waivers/monster-batch-e-PENDING-REQUEST.json for the full reasoning."
+    },
+    {
+      "id": "half-finished-bone-giant",
+      "call": "art/production/handoffs/monster-batch-e-2/half-finished-bone-giant/imagegen-calls/call-1/call.json",
+      "master_sha256": "11407d67e6508222bb958c935edf6f80bf977b629c496b117102867a39232ccd",
+      "runtime_sha256": "17faccc721ded0674ab8b854ebb1fcf50c246b54b2b002ccb6e4dea2b3fd072d",
+      "base_drift": -12.83,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "Single call, base_drift-only (magnitude 4.83 over tolerance). First undead/giant identity in the catalog. 48/64/96px reviewed: asymmetric mismatched-bone gangly silhouette with a pale lavender aura fringe reads clearly and is unmistakable from the existing undead/skeleton family (all human-sized, no aura). Approved by reviewer 2026-09-29; see art/production/waivers/monster-batch-e-PENDING-REQUEST.json for the full reasoning."
+    },
+    {
+      "id": "atamathon",
+      "call": "art/production/handoffs/monster-batch-e-2/atamathon/imagegen-calls/call-1/call.json",
+      "master_sha256": "812b588bd47e64210e5adef1cbd7d1bd30eecc15d8ce5e70f6415facb1d26641",
+      "runtime_sha256": "6614c844e9cfe4023206fe54a2a2f0a9b817c71d9906f655d36574c578379747",
+      "base_drift": -10.6,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "Single call, base_drift-only (magnitude 2.60 over tolerance). First construct/golem identity in the catalog. 48/64/96px reviewed: pale marble body with dark voratun joint bands and glowing ruby eyes reads clearly at every size; no in-family sibling to confuse it with. Contract maps only the verified native-tall body per evidence/monster-batch-e-20260929/source-contracts.json (the nicer_tiles-off npc/atamathon.png single-icon fallback is intentionally left native and unmapped). Approved by reviewer 2026-09-29; see art/production/waivers/monster-batch-e-PENDING-REQUEST.json for the full reasoning."
+    },
+    {
+      "id": "ritch-hive-mother",
+      "call": "art/production/handoffs/monster-batch-e-3/ritch-hive-mother/imagegen-calls/call-1/call.json",
+      "master_sha256": "9b64eef18c8a63b0cd5c81ca1460bbc7bd9c5da2bc92453174a5cb48681060b1",
+      "runtime_sha256": "f829d76d172ae899c013a735f3d4796ee59294ca53bdfa05a3e387b88f745827",
+      "base_drift": -10.34,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "Single call, base_drift-only (magnitude 2.34 over tolerance). First insect/ritch identity in the catalog (distinct body plan from insect/ant and insect/swarms). 48/64/96px reviewed: rust-orange crab-like hunched body with cool blue joint accents and raised oversized claws reads clearly at every size; no in-family sibling to confuse it with. Approved by reviewer 2026-09-29; see art/production/waivers/monster-batch-e-PENDING-REQUEST.json for the full reasoning."
+    }
+  ]
+}

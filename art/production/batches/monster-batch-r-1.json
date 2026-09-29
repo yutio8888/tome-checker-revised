@@ -1,0 +1,270 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-r-1",
+  "assets": [
+    {
+      "asset_id": "orc-necromancer",
+      "native_name": "orc necromancer",
+      "scope": "orc-rak-shor.lua (humanoid/orc, non-unique, no define_as, rarity 1, rank 2, base BASE_NPC_ORC_RAK_SHOR, autolevel caster); rak-shor-pride (pool, E13.4), ardhungol, reknor; vault entity filters by name (renegade-undead, greater/orc-necromancer, rak-shor-pride mapscript random_filter)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-rak-shor.lua",
+          "sha256": "c4875efb25a55eac7f55ca07b7d20f7602722458e70a3dfa6fcbad80207d7192",
+          "line": 53,
+          "anchor": "name = \"orc necromancer\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-rak-shor.lua",
+          "sha256": "c4875efb25a55eac7f55ca07b7d20f7602722458e70a3dfa6fcbad80207d7192",
+          "line": 112,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_necromancer.png",
+          "sha256": "d43acda4730342dce93871f80d0e7fbfd4b72b3e910426da30b319522adf6eae",
+          "role": "identity",
+          "note": "Native shape (64x64): a green-skinned orc in long dark indigo robes with gold trim, hunched and clawed, standing."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/krogar.png",
+          "sha256": "efa3e73b8f761fa8e7b80bf45290ed1d35f7f71747d576a66614abe0a3a44d92",
+          "role": "family",
+          "note": "Shipped Krogar (brown-armoured orc corruptor standing upright with a staff): the orc necromancer and Rak'shor must not be a brown armoured staff orc."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orc necromancer seen from a steep overhead three-quarter angle: a hunched green-skinned orc leaning forward in long dark indigo-blue robes with pale gold trim and a deep hood thrown back, a heavy brutish brow with small glowing yellow eyes and a jutting lower jaw with two tusks, NO STAFF, one clawed hand stretched forward open with a small floating sphere of sickly green-white soul flame hovering just above the palm, the other hand clenched near the chest, a bone-white skull charm on a cord at the belt, the robe hem flaring round bare clawed feet. Menacing, hunched, spell-casting and complete.",
+        "contrast": "Orc family: the orc NECROMANCER is a HUNCHED CASTER with NO WEAPON and one open hand offering a green soul flame, dark indigo robes (silhouette: bent forward, one arm extended, compact robed mass; hue: dark indigo with pale green flame; value: mid-dark with bright flame). Rak'shor is an UPRIGHT figure with a tall bone-crook staff and spiked shoulders; the orc assassin is a low crouching dark-leather figure with two daggers; Gnarg is a huge horizontal-sword brute. The shipped Krogar is a brown-armoured orc with a staff.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, tails, weapons, staffs and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, leg or drip reaches the outer sixth ring band or crosses the disc rim.",
+        "palette": "Dark indigo-blue robes with lighter periwinkle highlight planes and pale gold trim, olive-green skin with lighter olive highlights, pale green-white soul flame, bone-white skull charm; nothing darker than dark indigo except the eyes and mouth; keep the robe mid-dark rather than black; the flame must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc necromancer, define_as=None, type=humanoid/subtype=orc, unique=False); details and hashes in evidence/monster-batch-r-20260929/source-contracts.json. base BASE_NPC_ORC_RAK_SHOR (humanoid/orc, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; talents Hiemal Shield, Desolate Waste, Bleak Guard, Blurred Mortality, Soul Leech, Staff Mastery plus one rngtalentsets theme; resolvers.racial() adds only orc racial levelup talents; resolvers.sustains_at_birth() starts Hiemal Shield, Necrotic Aura, Putrescent Liquefaction, Suffer for Me, Erupting Shadows or River of Souls: temporary values, callbacks and particles only, no type/subtype/image/add_mos write. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-r-20260929/source-contracts.json",
+          "sha256": "588ddd99e3d398bf93163ca804f053510ce1388654ff89c900e866205ae58c92"
+        }
+      ]
+    },
+    {
+      "asset_id": "rak-shor",
+      "native_name": "Rak'shor, Grand Necromancer of the Pride",
+      "scope": "rak-shor-pride (zones/rak-shor-pride/npcs.lua:32, unique, define_as RAK_SHOR, humanoid/orc, rank 5, guardian of zone.lua:60, default-name image, no nice_tile); single definition (the shadow-crypt CULTIST_RAK_SHOR is another name); auto_classes Necromancer and Corruptor from level 35",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 32,
+          "anchor": "define_as = \"RAK_SHOR\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 34,
+          "anchor": "name = \"Rak'shor, Grand Necromancer of the Pride\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 101,
+          "anchor": "auto_classes={"
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 105,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_rak_shor__grand_necromancer_of_the_pride.png",
+          "sha256": "0c7eff0d61019e3ade83aea3323306d7105ea7b5d9c2787a1398655c4536b5b1",
+          "role": "identity",
+          "note": "Native shape (64x64): an old green orc in purple-blue robes standing upright with a tall bone-crook staff."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/krogar.png",
+          "sha256": "efa3e73b8f761fa8e7b80bf45290ed1d35f7f71747d576a66614abe0a3a44d92",
+          "role": "family",
+          "note": "Shipped Krogar (brown-armoured orc corruptor standing upright with a staff): the orc necromancer and Rak'shor must not be a brown armoured staff orc."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Rak'shor, Grand Necromancer of the Pride seen from a steep overhead three-quarter angle: an old towering green-skinned orc standing UPRIGHT and imperious in a heavy black-and-deep-violet robe with a tall stiff spiked collar and bone-white spiked shoulder pauldrons, a bald scarred head with a white braided beard and glowing violet eyes, one hand gripping a TALL BONE STAFF planted upright at his side topped by a curled skull-and-crescent crook, the other hand raised with clawed fingers spread, a chain of small skulls across the chest, the robe falling to the ground in heavy folds. Ancient, commanding, ornate and complete.",
+        "contrast": "Orc family: RAK'SHOR is the UPRIGHT TALL FIGURE with a vertical bone-crook staff, spiked collar and shoulder pauldrons in black and violet (silhouette: vertical staff line beside a wide spiked shoulder mass; hue: black-violet with bone white; value: mid-dark with bright bone accents). The orc necromancer is a hunched staffless caster in indigo with a green flame; the orc assassin is a low crouch; Gnarg is a huge horizontal-sword brute. The shipped Krogar is a brown-armoured orc with a staff.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, tails, weapons, staffs and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, leg or drip reaches the outer sixth ring band or crosses the disc rim.",
+        "palette": "Deep violet and blue-black robes with lighter violet-grey highlight planes, bone-white spikes, staff and skulls, olive-green skin with lighter olive highlights, glowing violet eyes; nothing darker than dark violet-black except the eye sockets; keep the robe mid-dark rather than black; the disc stays neutral charcoal with no violet cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Rak'shor, Grand Necromancer of the Pride, define_as=RAK_SHOR, type=humanoid/subtype=orc, unique=True); details and hashes in evidence/monster-batch-r-20260929/source-contracts.json. base BASE_NPC_ORC_RAK_SHOR (humanoid/orc, no image=); unique with define_as RAK_SHOR; NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip staff, BLACK_ROBE and charm (equipment only, no moddable_tile); talents Summon, Necrotic Aura, Call of the Crypt, Call of the Mausoleum, Lord of Skulls, Discarded Refuse, Corpse Explosion, Assemble, Putrescent Liquefaction, Soul Rot, Blood Grasp, Curse of Vulnerability, Bone Shield, Blood Spray, Staff Mastery, Blighted Summoning, Endless Woes; resolvers.sustains_at_birth() starts Necrotic Aura, Discarded Refuse, Putrescent Liquefaction and Bone Shield (temporary values and particles) plus auto_classes Necromancer/Corruptor (see runtime_mutation_scan). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-r-20260929/source-contracts.json",
+          "sha256": "588ddd99e3d398bf93163ca804f053510ce1388654ff89c900e866205ae58c92"
+        }
+      ]
+    },
+    {
+      "asset_id": "warmaster-gnarg",
+      "native_name": "Warmaster Gnarg",
+      "scope": "vor-armoury (zones/vor-armoury/npcs.lua:29, unique, define_as GNARG, humanoid/orc, rank 4, base BASE_NPC_ORC_GRUSHNAK, last-level static map guardian, default-name image, no nice_tile); single definition; auto_classes Berserker from level 35",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/vor-armoury/npcs.lua",
+          "sha256": "5cd0f152fbbd9e9371484fc82be20d10d153da27d91c81541efb4627b0c1e35d",
+          "line": 29,
+          "anchor": "define_as = \"GNARG\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/vor-armoury/npcs.lua",
+          "sha256": "5cd0f152fbbd9e9371484fc82be20d10d153da27d91c81541efb4627b0c1e35d",
+          "line": 31,
+          "anchor": "name = \"Warmaster Gnarg\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/vor-armoury/npcs.lua",
+          "sha256": "5cd0f152fbbd9e9371484fc82be20d10d153da27d91c81541efb4627b0c1e35d",
+          "line": 80,
+          "anchor": "auto_classes={{class=\"Berserker\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/vor-armoury/npcs.lua",
+          "sha256": "5cd0f152fbbd9e9371484fc82be20d10d153da27d91c81541efb4627b0c1e35d",
+          "line": 82,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_warmaster_gnarg.png",
+          "sha256": "7a164572f859bcae6c7014c862a4d553b2d70129686dda821bef97e36ee9a0bc",
+          "role": "identity",
+          "note": "Native shape (64x64): a huge green orc in dark spiked armour hefting a giant greatsword across his body."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/massok.png",
+          "sha256": "a31830ddd0b689bb434e02dc9a87859af29eb0bc46feff8a1a40ecc36da6aebc",
+          "role": "family",
+          "note": "Shipped Massok the Dragonslayer (black plate orc with horned helm, upright, axe): Warmaster Gnarg must not be an upright black-plate horned orc with an axe."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Warmaster Gnarg seen from a steep overhead three-quarter angle: a hulking green-skinned orc warlord in massive dark violet-steel plate armour with tall curved spiked shoulder pauldrons, a heavy tusked scowling face with a crested iron helm, a short tattered crimson cloak, both hands gripping a HUGE WIDE-BLADED SERRATED GREATSWORD held HORIZONTALLY across the front of his body at chest height (the blade a broad pale steel bar with a notched edge, the whole sword no longer than the width of his shoulders and kept inside the disc), legs planted wide in a braced stance. Brutal, massive, armoured and complete.",
+        "contrast": "Orc family: GNARG is a WIDE BRACED BRUTE with a HORIZONTAL greatsword bar across his chest and spiked pauldrons in violet-steel with a crimson cloak (silhouette: broad horizontal bar over a wide shouldered mass; hue: violet-steel plate with crimson and pale steel blade; value: mid with a bright blade). The shipped Massok is an UPRIGHT black-plate horned orc with an axe; the orc soldier is grey plate with a shield; the orc necromancer and Rak'shor are robed casters; the orc assassin is a low crouch.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, tails, weapons, staffs and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, leg or drip reaches the outer sixth ring band or crosses the disc rim.",
+        "palette": "Violet-tinted steel plate with lighter lavender-grey highlight planes and dark violet recesses, pale steel sword blade, crimson cloak, olive-green skin, gold-brown eyes; nothing darker than dark violet-grey except the eye slits; keep the armour mid-value rather than black; the disc stays neutral charcoal with no violet cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Warmaster Gnarg, define_as=GNARG, type=humanoid/subtype=orc, unique=True); details and hashes in evidence/monster-batch-r-20260929/source-contracts.json. base BASE_NPC_ORC_GRUSHNAK (humanoid/orc, no image=); unique with define_as GNARG; NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip MURDERBLADE greatsword and massive armour (equipment only, no moddable_tile); talents Giant Leap, Windblade, Rush, Warshout, Stunning Blow, Sunder Armour, Slow Motion, Shattering Shout, Second Wind; resolvers.sustains_at_birth() (leaf and base) starts Slow Motion only (temporary speed values) plus auto_classes Berserker (see runtime_mutation_scan). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-r-20260929/source-contracts.json",
+          "sha256": "588ddd99e3d398bf93163ca804f053510ce1388654ff89c900e866205ae58c92"
+        }
+      ]
+    },
+    {
+      "asset_id": "orc-assassin",
+      "native_name": "orc assassin",
+      "scope": "orc.lua (humanoid/orc, non-unique, no define_as, rarity 3, rank 2, base BASE_NPC_ORC, autolevel rogue, color_b randomised 175-195); reknor (pool, E9.2), rak-shor-pride, vor-armoury",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 175,
+          "anchor": "name = \"orc assassin\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 199,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_assassin.png",
+          "sha256": "b4056cf814d2435b2f32f254e02b3507ed3258d110c8d2b8dab832fbd0d2dfa2",
+          "role": "identity",
+          "note": "Native shape (64x64): a lean olive-green orc in a loincloth mid-stride with a blade raised."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/orc-warrior.png",
+          "sha256": "b6938966c1ee9e7847b2d2c6907119acea1a97b1fc42eee5e3c82ba9d0675874",
+          "role": "family",
+          "note": "Shipped orc warrior (leather-clad green orc with a curved blade): the orc assassin must not be a bare-armed green orc with a curved sword."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orc assassin seen from a steep overhead three-quarter angle: a lean sinewy olive-green orc CROUCHED VERY LOW in a stalking crouch, knees deeply bent and one hand almost touching the ground, a dark navy-blue leather hood pulled over the head with a cloth mask across the lower face leaving only narrow glowing yellow eyes and one tusk tip, dark navy leather jerkin with a bandolier of small vials, a short dagger held in each hand in reverse grip pointing back along the forearms, a small green-glinting poison drip on one blade. Stealthy, coiled, blue-black and complete.",
+        "contrast": "Orc family: the orc ASSASSIN is a LOW COILED CROUCH in DARK NAVY hooded leather with two reverse-grip daggers (silhouette: low wide crouch with two short blades pointing back; hue: navy blue-black leather with olive skin and steel; value: mid-dark with pale blade and eye accents). The orc warrior is an upright leather orc with a curved blade; Gnarg is a huge horizontal-sword brute; the necromancer and Rak'shor are robed casters.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, tails, weapons, staffs and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, leg or drip reaches the outer sixth ring band or crosses the disc rim.",
+        "palette": "Dark navy-blue leather with lighter slate-blue highlight planes, olive-green skin with lighter olive highlights, pale steel daggers, small green poison drip, glowing yellow eyes; nothing darker than dark navy except the eye slits; keep the leather mid-dark rather than black; the disc stays neutral charcoal with no blue cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc assassin, define_as=None, type=humanoid/subtype=orc, unique=False); details and hashes in evidence/monster-batch-r-20260929/source-contracts.json. base BASE_NPC_ORC (humanoid/orc, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip two daggers and light armour (equipment only); talents Knife Mastery, Stealth, Lethality, Apply Poison, Venomous Strike; resolvers.sustains_at_birth() starts Stealth and Apply Poison: Stealth changes visibility, not display (an actor-visibility matter the overlay already respects, as for the batch J Assassin Lord), no type/subtype/image/add_mos write; color_b is a colour modulation of the same image. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-r-20260929/source-contracts.json",
+          "sha256": "588ddd99e3d398bf93163ca804f053510ce1388654ff89c900e866205ae58c92"
+        }
+      ]
+    }
+  ]
+}

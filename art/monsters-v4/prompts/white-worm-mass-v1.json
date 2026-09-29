@@ -1,0 +1,107 @@
+{
+  "asset_id": "white-worm-mass-v1",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "status": "generated-static-reviewed-with-runtime-supplement",
+  "prompt": "Use case: precise-object-edit\nAsset type: one transparent PNG WHITE WORM MASS miniature on a neutral tabletop disc, readable at 48/64/96px.\nPrimary request: replace all insects in Image 1 with a low clustered mass of white worms. Image 1 is the style/base edit target ONLY: keep its neutral dark grey-brown thin circular disc and subdued bronze-grey bevel, high downward three-quarter camera, soft upper-left light and matte hand-painted sculpted miniature finish. Image 2 is the native white-worm-mass identity reference: many pale small worms together.\nSubject and silhouette: one irregular LOW CROWD OF ABOUT NINE short, plump, ivory-white WORMS, huddled and gently overlapping across the middle of the disc. They are short rounded segmented limbless animals, each with a simple blunt head end and a tapering blunt tail end, no snake faces or eyes. The group forms a lobed asymmetric mound with several rounded ends protruding around its perimeter and a few dark base gaps between bodies. The worms bend in small J and C curves; no single long S dominates, no closed circular snake ring and no neat radial or circular arrangement. This must read as MANY short bodies making one mass, not a single white snake, pile of noodles, cloud of white dots or flying swarm.\nAnatomy and texture: soft pale segmented bodies with broad transverse ring folds, continuous fleshy volume, short rounded ends; each visible worm is connected and unbranched. No arms, legs, wings, antennae, shells, scales, claws, horns, eyes, teeth, tongue or exposed organs. A few overlapping worms may partially hide one another naturally, but the major top bodies and several complete front bodies remain traceable. Make broad dark creases between neighbouring worms so the mass does not collapse into one bright blob at 48px. No mucus drips, blood, rot or scene debris.\nColour/value: matte warm ivory and light bone, restrained pale taupe/cool grey shadows in folds and contacts; broad softly lit upper surfaces and clearly darker undersides. Keep all worms light enough to separate from the disc, but avoid pure glowing white or a bright perimeter halo. This is animal colour, not light, snow, magic or foam.\nShared framing: square 1024x1024 canvas; centred almost-circular thin disc around 86% of canvas width. The whole clustered mass spans around 78–84% of disc diameter, with every worm inside the disc and an exposed perimeter strip. Keep recognisable blunt ends out of the top-right 23% by 18% canvas badge reserve; no guide is drawn.\nMatte carved/resin miniature paint, simplified sculpted folds, soft upper-left illumination and only tiny shadows inside the disc. No props or terrain.\nBackdrop: genuinely transparent native alpha outside the disc, clean antialiased edges and no outside cast shadow.\nAvoid: single long snake, snake head, cobra hood, fins, worms forming letters, insects, wings, grass, rocks, scene, fog, glow, faction rings, coloured rim, rank, crown, HP, shield, selection, text, numbers, icons, watermark, black/white backdrop or painted checkerboard. Exactly one worm mass on one neutral base; a single asset, not a sheet.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v2/masters/bee-swarm-v1.png",
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/vermin_worms_white_worm_mass.png"
+  ],
+  "reference_roles": [
+    "Style/base edit target only; retain neutral disc/paint/light/camera and replace every bee with a low worm cluster.",
+    "Native white worm mass identity reference; many pale limbless worm bodies forming one mass."
+  ],
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "saved_output_path": "art/monsters-v4/masters/white-worm-mass-v1.png",
+  "generated_at_utc": "2026-09-27T01:03:33.411824+00:00",
+  "batch_group": "B",
+  "authorization": "Parent approved second group after first-four runtime review.",
+  "original_output_path": "~/.codex/generated_images/01a0e03a-d37e-7f70-a65b-cc566c7bb09b/exec-717a032b-13be-48f8-8b20-ae72484d3149.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Original built-in image_gen output copied byte-for-byte. No creature pixel editing, recolouring, matting, alpha replacement or re-encoding.",
+  "sha256": "ce957c3fa428731ff049cd16879e5fbc9fd75c723e080abc54fb09ebce88fcca",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      41,
+      21,
+      1228,
+      1254
+    ],
+    "visible_alpha_bbox": [
+      120,
+      123,
+      1134,
+      1129
+    ],
+    "transparent_pixels": 763848,
+    "partial_alpha_pixels": 808226,
+    "opaque_pixels": 442,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "selection": "static-approved-runtime-integration-candidate",
+  "reference_sha256": {
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v2/masters/bee-swarm-v1.png": "d1d42774e1ccb58749594e05c4cc829b99f17a4fcae112ecd2e376e6f28352c3",
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/vermin_worms_white_worm_mass.png": "5accc8538b49c435143714602db1b61bf46f0923bf69b2b8943ad39e07687345"
+  },
+  "review": {
+    "observations": [
+      "A low irregular cluster of short pale segmented bodies, with multiple blunt ends and separate dark gaps; no single long S or closed snake ring dominates.",
+      "Main visible worms are unbranched, limb-free and wing-free; no snake faces, eyes, mouths, horns or detached tail-like parts appear.",
+      "Broad transverse folds and overlapping short C/J bodies distinguish the white mass from the white snake; the palette stays matte ivory with grey-taupe creases.",
+      "All bodies remain inside the neutral disc with an exposed margin."
+    ],
+    "remaining_limits": [
+      "Screenshots inspected are frozen-AI static family scenes, not continuous combat or blind player testing.",
+      "Complex particles, grayscale runtime, exact identity behaviour and worm multiplication require parent test evidence.",
+      "Native master remains the unchanged 1254 square output."
+    ]
+  },
+  "static_review": {
+    "reviewed_at_utc": "2026-09-27T01:11:49.348551+00:00",
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "backgrounds": [
+      "flat muted grass green",
+      "flat dark water blue",
+      "neutral CSS grayscale display"
+    ],
+    "method": "Parent mechanically exported native-alpha masters with the existing C tool. Existing CJS Chromium capture displayed native sprite dimensions at device scale 1. Both screenshots viewed at original resolution. No creature pixels changed.",
+    "preview_paths": [
+      "art/monsters-v4/review/second-four-grass.png",
+      "art/monsters-v4/review/second-four-water.png"
+    ],
+    "preview_sha256": {
+      "second-four-grass.png": "b52dc7b6b458d0d043c382ca77ae538dd1e9050bf10ac457879113c23b9e9a98",
+      "second-four-water.png": "8d17fd5f6c797dc7df0f05af2889429c90555c344b3bec79b042593939455e91"
+    },
+    "observation": "Short lobed bodies and dark gaps remain distinct at 48/64px; grayscale does not merge the mass into the white snake single open S.",
+    "runtime_screenshot": false
+  },
+  "inspected_runtime_supplement": [
+    "evidence/runtime-v052/screenshots/swarms-1920-64.png",
+    "evidence/runtime-v052/screenshots/swarms-1920-48.png"
+  ]
+}

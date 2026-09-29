@@ -1,0 +1,326 @@
+{
+  "method": "Built-in ImageGen native alpha; existing tools/export_token.c premultiplied-alpha area filter and centered 86% visible-bounds fit; no painting or recoloring",
+  "assets": [
+    {
+      "id": "stairs-up",
+      "master": "masters/stairs-up-v1.png",
+      "sha256": "d5440b06e8d337acf106032d685abcbd86738d697574d0e7e33f1ed1f89da1bf",
+      "exports": [
+        {
+          "path": "sprites/48/stairs-up.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            290,
+            216,
+            969,
+            1037
+          ],
+          "export_window": [
+            152.174419,
+            149.174419,
+            954.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "976025b8040f86c299f357216894b50cd0e0c55809db590a0336ea6e379323b9"
+        },
+        {
+          "path": "sprites/64/stairs-up.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            290,
+            216,
+            969,
+            1037
+          ],
+          "export_window": [
+            152.174419,
+            149.174419,
+            954.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2614dad28da2d5aee9bde1f18e7b010823fe8bbc4854e9c83be1b32360f2a933"
+        },
+        {
+          "path": "sprites/96/stairs-up.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            290,
+            216,
+            969,
+            1037
+          ],
+          "export_window": [
+            152.174419,
+            149.174419,
+            954.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "96518e1f82fdb0cb997aba7911d02405c8afe427b81d1725845b936d4485107a"
+        },
+        {
+          "path": "sprites/128/stairs-up.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            290,
+            216,
+            969,
+            1037
+          ],
+          "export_window": [
+            152.174419,
+            149.174419,
+            954.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0549958a875e7fa0bff978dc4c682f64fc2549c5161dcc2e876a1e7791834e0c"
+        },
+        {
+          "path": "sprites/256/stairs-up.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            290,
+            216,
+            969,
+            1037
+          ],
+          "export_window": [
+            152.174419,
+            149.174419,
+            954.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "83951ba792a359e34c65119f027ee24f40bf8331d69b163c12ef5d619feef36b"
+        }
+      ],
+      "runtime": {
+        "path": "data/gfx/refined/korpul/stairs-up.png",
+        "engine_path": "checker-revised+refined/korpul/stairs-up.png",
+        "sha256": "83951ba792a359e34c65119f027ee24f40bf8331d69b163c12ef5d619feef36b"
+      }
+    },
+    {
+      "id": "stairs-down",
+      "master": "masters/stairs-down-v1.png",
+      "sha256": "0aabb65fd329902877aa72ec29d8aa80507e53bf7e7f7abae825b52ef52eeeb8",
+      "exports": [
+        {
+          "path": "sprites/48/stairs-down.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            141,
+            128,
+            1117,
+            1096
+          ],
+          "export_window": [
+            61.55814,
+            44.55814,
+            1134.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d7f93febfc4a3b613ccb48d9871490a0f63f02a6ab91a953c8914947561f59f6"
+        },
+        {
+          "path": "sprites/64/stairs-down.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            141,
+            128,
+            1117,
+            1096
+          ],
+          "export_window": [
+            61.55814,
+            44.55814,
+            1134.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e038a6fd3b3a7d431ba53c6c619dd9932b7ba7f6fdf9d994292c0c07b641f34f"
+        },
+        {
+          "path": "sprites/96/stairs-down.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            141,
+            128,
+            1117,
+            1096
+          ],
+          "export_window": [
+            61.55814,
+            44.55814,
+            1134.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "77d51d604c8de3c4dcbab0d88a50336d669535a43efbab700f20ef8f56e5fba3"
+        },
+        {
+          "path": "sprites/128/stairs-down.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            141,
+            128,
+            1117,
+            1096
+          ],
+          "export_window": [
+            61.55814,
+            44.55814,
+            1134.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4cb8647ac79e4c26b0e2cf36568ec72a5a300425e8b9364008c76cfdb64592d7"
+        },
+        {
+          "path": "sprites/256/stairs-down.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            141,
+            128,
+            1117,
+            1096
+          ],
+          "export_window": [
+            61.55814,
+            44.55814,
+            1134.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "109fd921d7ebad1dc383d5250dad7aa9d850bb8e1807dff5561dcbae6ac818ed"
+        }
+      ],
+      "runtime": {
+        "path": "data/gfx/refined/korpul/stairs-down.png",
+        "engine_path": "checker-revised+refined/korpul/stairs-down.png",
+        "sha256": "109fd921d7ebad1dc383d5250dad7aa9d850bb8e1807dff5561dcbae6ac818ed"
+      }
+    },
+    {
+      "id": "stairs-world",
+      "master": "masters/stairs-world-v1.png",
+      "sha256": "1f29c24f5ee5d5ba968a28ee4250b14e6b1025d73ec2486e557377cb895fa801",
+      "exports": [
+        {
+          "path": "sprites/48/stairs-world.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            253,
+            118,
+            1000,
+            1137
+          ],
+          "export_window": [
+            34.05814,
+            35.05814,
+            1184.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b5b4273ed3c6420ebd361f00bd0488cbeaf1f6553c9fcf261134d66d2e054ab7"
+        },
+        {
+          "path": "sprites/64/stairs-world.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            253,
+            118,
+            1000,
+            1137
+          ],
+          "export_window": [
+            34.05814,
+            35.05814,
+            1184.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6a4dd53bc11f888abc52a86b50055597661f7f97cfae1cd5308fd97661b5bfc4"
+        },
+        {
+          "path": "sprites/96/stairs-world.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            253,
+            118,
+            1000,
+            1137
+          ],
+          "export_window": [
+            34.05814,
+            35.05814,
+            1184.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1ee5409e45dda696e6e9ba747bd21b9f0091ed8ea1769e92bb19a36f9240f8cb"
+        },
+        {
+          "path": "sprites/128/stairs-world.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            253,
+            118,
+            1000,
+            1137
+          ],
+          "export_window": [
+            34.05814,
+            35.05814,
+            1184.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d0a6401da66e5ffc5709fbffa865b9323bb8570c4f43b5bf2523dad11aaaa4fc"
+        },
+        {
+          "path": "sprites/256/stairs-world.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            253,
+            118,
+            1000,
+            1137
+          ],
+          "export_window": [
+            34.05814,
+            35.05814,
+            1184.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "de49da0d7af173ef942dcce063cc4ad2bc3dc259225eabb7fb88d1d505008f54"
+        }
+      ],
+      "runtime": {
+        "path": "data/gfx/refined/korpul/stairs-world.png",
+        "engine_path": "checker-revised+refined/korpul/stairs-world.png",
+        "sha256": "de49da0d7af173ef942dcce063cc4ad2bc3dc259225eabb7fb88d1d505008f54"
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "asset_id": "degenerated-skeleton-archer-v1",
+  "intent": "generate",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: stylized-concept. Create ONE new transparent PNG degenerated skeleton archer game miniature, square about 1024x1024. Reference image 1 (cave troll) establishes EXACT base/camera/material: steep overhead three-quarter view, thin nearly round grey-brown disc and subdued bronze-grey rim, painted matte sculpted miniature, upper-left soft light. Reference image 2 is native identity only. Replace subject with a frail cracked ivory skeleton archer in a side-on compact bent-knee aiming pose, entire head, body, feet, bow and arrow lying within the projected circular disc. VERY IMPORTANT: overhead camera means the skull is well inside the disc perimeter, not protruding above the far edge. Disc centered and 86% canvas diameter; silhouette uses 75% disc diameter; skull around canvas x50% y35%. Clearly separated tall dark wood bow curve toward left-mid disc with visible taut triangular bowstring and a single horizontal arrow aimed left. Left arm ends in ONE complete hand holding the bow grip. Right arm has NO hand or fingers: ends at a blunt exposed notched wrist bone, and the string hooks into that notch to draw the bow. Both arms present, precisely ONE hand total. Draw arm bent toward skull but leave wrist-string contact visible against dark empty disc. Broad ivory skull and ribs, deep rib gaps, simple muted brown cloth at hips, separated bent legs. Bow, arrow, draw wrist, empty gap and asymmetric aiming silhouette must read at small sizes. No shield, quiver clutter, extra limb, magic, aura, scenic floor, rocks, grass, text, faction/rank/HP/state ring or watermark. Keep top-left and top-right corner reserves empty of key details. Genuine native transparent alpha outside complete disc, no cast shadow outside. Do not copy troll anatomy or enlarge head outside disc.",
+  "references": [
+    "art/monsters-v3/masters/cave-troll-v3.png",
+    "game/modules/tome/data/gfx/shockbolt/npc/undead_skeleton_degenerated_skeleton_archer.png"
+  ],
+  "reference_roles": [
+    "style/base reference",
+    "identity or style supporting reference"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-195f8323-4839-4426-b0d5-4e6f676ba69a.png",
+  "saved_output_path": "art/monsters-v5/masters/degenerated-skeleton-archer-v1.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Byte-for-byte original copy; mechanical C downsampling only in sprites, no artwork editing.",
+  "selection": "static-reviewed-integration-candidate",
+  "review": "Single hand on bow, blunt notched draw wrist, two coherent string segments. Arrow and entire figure inside rim.",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "generated_at_utc": "2026-09-27",
+  "sha256": "d57d95026c84b83eed782c0d82850927d6b2d2eee53bec69b19aab87c189685c",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      23,
+      1236,
+      1254
+    ],
+    "visible_alpha_bbox": [
+      129,
+      123,
+      1125,
+      1121
+    ],
+    "transparent_pixels": 788203,
+    "partial_alpha_pixels": 783956,
+    "opaque_pixels": 357,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "small_size_review": {
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "method": "Existing C exporter, each output actually opened using view_image original",
+    "runtime_verified": false
+  }
+}

@@ -1,0 +1,20 @@
+layout,scope,name,base_or_define,type_subtype,declared_image_or_nice_tile,level_range,rank,source_ref,display_or_equipment_risk,live_status
+DEFAULT,direct,degenerated skeleton warrior,BASE_NPC_SKELETON,undead/skeleton,npc/degenerated_skeleton_warrior.png,1-18,2,data/general/npcs/skeleton.lua:58,one arm; greatsword resolver; inherited body and display; final overlays pending,unverified
+DEFAULT,direct,degenerated skeleton archer,BASE_NPC_SKELETON,undead/skeleton,no explicit image,3-20,2,data/general/npcs/skeleton.lua:68,missing hand; longbow and arrow resolvers; final image pending,unverified
+DEFAULT,direct,skeleton mage,BASE_NPC_SKELETON,undead/skeleton,npc/skeleton_mage.png,5-25,2,data/general/npcs/skeleton.lua:82,staff and spell talents; final overlays pending,unverified
+DEFAULT|HIDEOUT,direct,grey mold,BASE_NPC_MOLD,immovable/molds,no explicit image,1-15,1,data/general/npcs/molds.lua:46,never_move inherited; actor rather than terrain; final image pending,unverified
+HIDEOUT,direct,cutpurse,BASE_NPC_THIEF,humanoid/human,no explicit image,1+,2,data/general/npcs/thieve.lua:62,dual daggers and light armor inherited; final image pending,unverified
+HIDEOUT,direct,rogue,BASE_NPC_THIEF,humanoid/human,no explicit image,2+,2,data/general/npcs/thieve.lua:72,stealth talent and inherited equipment; display state pending,unverified
+HIDEOUT,direct,thief,BASE_NPC_THIEF,humanoid/human,no explicit image,3+,2,data/general/npcs/thieve.lua:82,stealth and inherited equipment; also Possessed escort,unverified
+HIDEOUT,direct,bandit,BASE_NPC_THIEF;THIEF_BANDIT,humanoid/human,no explicit image,5+,2,data/general/npcs/thieve.lua:98,stealth and inherited equipment; define_as must match,unverified
+DEFAULT,fixed-boss,The Shade,SHADE,undead/skeleton,no explicit image,7+,4,data/zones/ruins-kor-pul/npcs.lua:41,unique_glow shader and staff; token fallback expected until contract,unverified
+HIDEOUT,fixed-boss,The Possessed,BASE_NPC_THIEF;THE_POSSESSED,humanoid/human,invis.png + npc/humanoid_human_the_possessed.png add_mos h2 y-1,7+,4,data/zones/ruins-kor-pul/npcs.lua:93,nice_tile tall layer; dagger and light armor; thief escort,unverified
+HIDEOUT,shared-import,skeleton family,/data/general/npcs/all.lua,undead/skeleton,varies,varies,varies,data/general/npcs/all.lua:69,shared rarity(4 35) means alternate layout is not strict absence,unverified
+DEFAULT,shared-import,thieve family,/data/general/npcs/all.lua,humanoid/human,varies,varies,varies,data/general/npcs/all.lua:78,shared rarity(4 35) means alternate layout is not strict absence,unverified
+DEFAULT|HIDEOUT,conditional-room,amon-sul-crypt,room specialList,skeleton/ghoul,varies,room filters,varies,data/maps/vaults/amon-sul-crypt.lua:22,four branches with level offsets including magus and master archer,unverified
+DEFAULT|HIDEOUT,conditional-room,skeleton-mage-cabal,room specialList,skeleton/thief/horror,varies,level 5-25,varies,data/maps/vaults/auto/lesser/skeleton-mage-cabal.lua:21,one chosen mob with add_levels 8; includes thief and bloated horror,unverified
+DEFAULT|HIDEOUT,conditional-room,rat-nest,room specialList,rodent/molds,varies,level <=6,varies,data/maps/vaults/auto/lesser/rat-nest.lua:21,molds filter add_levels 4; rodent import required,unverified
+DEFAULT|HIDEOUT,conditional-room,crystal-cabal,room specialList,crystal,varies,level 5-25,varies,data/maps/vaults/auto/lesser/crystal-cabal.lua:21,crystal subtype filter add_levels 4; layers need validation,unverified
+DEFAULT|HIDEOUT,conditional-room,snake-pit,room specialList,mixed,varies,room filters,varies,data/maps/vaults/snake-pit.lua:24,nine-name random pool including green mold; conditional only,unverified
+DEFAULT|HIDEOUT,conditional-room,circle,active actor pool,mixed,varies,room filters,varies,data/maps/vaults/auto/lesser/circle.lua:27,unnamed filters add_levels 17 or 20; native results needed,unverified
+HIDEOUT,escort,thief,THE_POSSESSED make_escort,humanoid/human,no explicit image,generated,generated,data/zones/ruins-kor-pul/npcs.lua:114,one escort; final faction rank and display need live capture,unverified

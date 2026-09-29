@@ -1,0 +1,54 @@
+{
+  "asset_id": "brown-rat-v2",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "use_case": "precise-object-edit",
+  "status": "generated-reviewed-candidate",
+  "prompt": "Use case: precise-object-edit\nEdit this exact giant brown rat miniature with ONE targeted anatomical correction: replace the visibly detached bare tail with a single tail that is naturally and visibly attached to the rat's rump. The present isolated tail has two free tips and looks like a separate worm; fix only that defect.\nA single thick tail root must emerge continuously from the upper-right rear of the furry rat, just above its visible hind leg. From that attached root, curve the naked pink-brown tail upward along the inside right edge of the disc and then leftward along the upper inside arc, ending in exactly ONE tapered free tip at the upper left. Remove the old separate lower-right loose tail segment. The attachment must be unmistakable, with no gap between the furry rump and the thick tail root. Keep the tail entirely inside the disc.\nPreserve all other features exactly: rat identity, its body size and position, round ears, pointed snout, whiskers, four-footed stance, brown hand-painted fur, bare paws, camera angle, light, base size and thin neutral rim, resolution, and genuine transparent alpha outside the base. Do not recolor or resize the rat or base. No extra animal, no worm, no new objects, no faction ring, text, watermark, glow or background. Only repair the single tail and its local contact shadow.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v1.png"
+  ],
+  "reference_roles": [
+    "edit target: giant brown rat v1; change tail attachment only"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0dd1f-f08f-7b92-8e97-46f0099eb1de/exec-1fe3aba2-d2fb-4a52-81a3-9230269d6d9d.png",
+  "saved_output_path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+  "review": "Tail attachment repaired: a thick root now joins the furry rump above the visible hind leg, arcs across the far side of the base, and ends in one free tip. The stray lower-right detached tail segment is removed. Rat body, feet, ears, head, framing and base remain coherent with v1. All visible parts stay within the outer base. Full miniature reviewed; reduced-size integration remains for parent.",
+  "tool": "image_gen.imagegen",
+  "tool_result_keys": [
+    "image_url",
+    "output_hint"
+  ],
+  "preserved_native_alpha": true,
+  "image_processing": "Copied original generated PNG without pixel edits, resizing, background extraction or alpha modification.",
+  "reviewed_at_utc": "2026-09-26T10:17:45.142Z",
+  "selection": "candidate",
+  "supersedes": "brown-rat-v1",
+  "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      111,
+      111,
+      1143,
+      1142
+    ],
+    "visible_alpha_bbox": [
+      114,
+      115,
+      1140,
+      1139
+    ],
+    "transparent_pixels": 741395,
+    "partial_alpha_pixels": 830256,
+    "opaque_pixels": 865
+  }
+}

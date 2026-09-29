@@ -1,0 +1,50 @@
+{
+  "asset_id": "floor-b-v1",
+  "material": "floor-b",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "intent": "reference-guided generation/edit",
+  "prompt": "Use case: precise-object-edit. Create FLOOR B variation of this single stone floor material. Preserve the flat orthographic full-bleed square opaque material, subdued warm grey limestone palette, mean brightness, fine mineral hand-painted texture and shallow flagstone language. Rearrange ONLY the broad worn stone shapes into somewhat larger calmer stones and a few gentler seams, so B is a quiet decorative sibling rather than a different terrain rule. No feature in the central half should dominate miniature actors. Opposite edges should continue seamlessly; low contrast perimeter, no border or vignette. Same flat diffuse upper-left illumination, no cast shadows. No objects, raised blocks, floor holes, obstacles, moss tufts, letters, numbers, arrows, icon or grid. Seamlessly tileable entire square texture, one asset not a sheet. Preserve fully opaque floor; no transparent gaps. No change of material, no wooden or ceramic floor.",
+  "references": [
+    "floor-a-v1"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-a46d691f-1b60-4148-bb0d-002cca428c09.png",
+  "saved_output_path": "art/terrain-korpul-v1/masters/floor-b-v1.png",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "native_alpha_required": false,
+  "selection": "rejected-for-repeat-seams",
+  "rejection_reason": "3x2 repeated 128px review reveals interrupted large slab seams at tile boundaries.",
+  "processing": "Copy original unchanged; small-size whole-canvas resampling only. No alpha extraction, relighting, recolouring, rotation, or painted geometry.",
+  "sha256": "7df5b4c77b97450114fddd2988d854a04043d06d6cb130c41734a0d510452e57",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGB",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": null,
+    "alpha_bbox": null,
+    "transparent_pixels": 0,
+    "partial_alpha_pixels": 0,
+    "opaque_pixels": 1572516
+  },
+  "references_resolved": [
+    "masters/floor-a-v1.png"
+  ],
+  "static_review": {
+    "sheet": "review/design-sheet.png",
+    "actual_sizes": [
+      48,
+      64,
+      96
+    ],
+    "floor_repeat_size": 128,
+    "grayscale": "CSS display only",
+    "runtime_verified": false,
+    "connected_masks_verified": false
+  }
+}

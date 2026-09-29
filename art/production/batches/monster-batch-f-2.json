@@ -1,0 +1,162 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-f-2",
+  "assets": [
+    {
+      "asset_id": "naga-tidewarden",
+      "native_name": "naga tidewarden",
+      "scope": "slazish-fen random pool (rarity=1, level_range {1,nil}, define_as NAGA_TIDEWARDEN); non-unique native-tall body per CONTRACTS-B5-B7-20260929.md 4.1",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/slazish-fen/npcs.lua",
+          "sha256": "59faab1fda3ad11fc2bca557f3152df86cad9dbe1bbce63d69d5c7828b99a4a5",
+          "line": 61,
+          "anchor": "newEntity{ base = \"BASE_NPC_NAGA\", define_as = \"NAGA_TIDEWARDEN\","
+        },
+        {
+          "path": "game/modules/tome/data/zones/slazish-fen/npcs.lua",
+          "sha256": "59faab1fda3ad11fc2bca557f3152df86cad9dbe1bbce63d69d5c7828b99a4a5",
+          "line": 64,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/humanoid_naga_naga_tidewarden.png\", display_h=2, display_y=-1}}},"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_naga_naga_tidewarden.png",
+          "sha256": "37f265dc3508f80490e2b43a6294a17f5f538eb9355a2b0197cffb501ac23872",
+          "role": "identity",
+          "note": "Male naga warrior, trident and shield raised, muscular elven-featured torso, dark umber scaled serpent tail."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_naga_naga_tidecaller.png",
+          "sha256": "737cbbf0eef00aa8ca0da2020ffd6446b3c1cccc8bdb2e069be0ac57db688040",
+          "role": "family",
+          "note": "The robed female caster sibling shipping in this same batch as naga tidecaller -- tidewarden must stay a weapon-and-shield fighting silhouette clearly unlike her staff-and-robe casting silhouette."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "hue"],
+      "prompt_fields": {
+        "subject": "A tall, muscular male naga warrior: bare-chested torso with an elven-featured bearded face, gripping a raised trident in one hand and a round shield in the other in an active combat stance, tail coiled beneath supporting the body in place of legs.",
+        "contrast": "First non-unique humanoid/naga identity in the catalog (the existing naga entry, Lady Zoisla, is a unique violet-robed boss). Ships in the same batch as naga tidecaller, a robed female staff-caster -- tidewarden must read unmistakably as an armed fighter (trident raised, shield forward, bare muscular torso) against tidecaller's passive hooded-robe-and-staff casting pose. Silhouette (weapon-and-shield fighting stance vs. robed staff-holding stance) and hue (warm dark umber scales vs. tidecaller's cool blue-black robe) are the anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy, weapon and tail coil well inside the inner four-fifths of disc radius -- the trident tip must not cross the disc's outer band. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere.",
+        "palette": "Warm dark umber-brown scaled tail with a paler tan underbelly stripe, sun-weathered olive-tan bare torso skin, dull bronze trident and shield; dry neutral charcoal disc with restrained copper-grey bevel, kept clearly cooler and darker than the warm umber tail so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name/type=humanoid/subtype=naga/define_as=NAGA_TIDEWARDEN/no unique) and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source. No live fixture in this task; native_tall=true follows the ancient-dragon-turtle precedent already covered by tests/token_mapping.lua's generic native_tall loop.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-f-20260929/source-contracts.json",
+          "sha256": "b12b3c0cc83fbed3bcbb9331c7cf52917aa40213069c818d0fc1aee1d4595d54"
+        }
+      ]
+    },
+    {
+      "asset_id": "naga-tidecaller",
+      "native_name": "naga tidecaller",
+      "scope": "slazish-fen random pool (rarity=1, level_range {2,nil}, define_as NAGA_TIDECALLER, female); non-unique native-tall body per CONTRACTS-B5-B7-20260929.md 4.1",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/slazish-fen/npcs.lua",
+          "sha256": "59faab1fda3ad11fc2bca557f3152df86cad9dbe1bbce63d69d5c7828b99a4a5",
+          "line": 78,
+          "anchor": "newEntity{ base = \"BASE_NPC_NAGA\", define_as = \"NAGA_TIDECALLER\","
+        },
+        {
+          "path": "game/modules/tome/data/zones/slazish-fen/npcs.lua",
+          "sha256": "59faab1fda3ad11fc2bca557f3152df86cad9dbe1bbce63d69d5c7828b99a4a5",
+          "line": 80,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/humanoid_naga_naga_tidecaller.png\", display_h=2, display_y=-1}}},"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_naga_naga_tidecaller.png",
+          "sha256": "737cbbf0eef00aa8ca0da2020ffd6446b3c1cccc8bdb2e069be0ac57db688040",
+          "role": "identity",
+          "note": "Female naga sorceress, dark hooded robe, staff, glowing hand, snake tail."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_naga_naga_tidewarden.png",
+          "sha256": "37f265dc3508f80490e2b43a6294a17f5f538eb9355a2b0197cffb501ac23872",
+          "role": "family",
+          "note": "The male warrior sibling shipping in this same batch as naga tidewarden -- tidecaller must stay a robed staff-casting silhouette clearly unlike his weapon-and-shield fighting silhouette."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "hue"],
+      "prompt_fields": {
+        "subject": "A slender female naga sorceress wrapped in a dark hooded robe that covers her upper body, holding a tall wooden staff upright in one hand, the other hand raised and glowing with a faint cold blue light, tail coiled beneath supporting the body in place of legs.",
+        "contrast": "Ships in the same batch as naga tidewarden, a bare-chested male warrior with trident and shield -- tidecaller must read unmistakably as a robed spellcaster (hood, staff, glowing hand, no visible weapon or shield) against his active fighting stance. Silhouette (robed staff-holding pose vs. weapon-and-shield fighting stance) and hue (cool blue-black robe with a pale blue magic glow vs. tidewarden's warm dark umber scales) are the anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy, staff and tail coil well inside the inner four-fifths of disc radius -- the staff tip must not cross the disc's outer band. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. The glowing hand may carry its own small pale-blue light but must not cast a visible glow, gradient or bloom onto the disc itself.",
+        "palette": "Deep blue-black robe with a subtle darker tail pattern beneath the hood, pale cold blue glow on the raised spellcasting hand only, dull grey-brown wooden staff; dry neutral charcoal disc with restrained copper-grey bevel, kept clearly distinct from the robe's blue-black tone."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name/type=humanoid/subtype=naga/define_as=NAGA_TIDECALLER/no unique) and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source. No live fixture in this task; native_tall=true follows the ancient-dragon-turtle precedent already covered by tests/token_mapping.lua's generic native_tall loop.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-f-20260929/source-contracts.json",
+          "sha256": "b12b3c0cc83fbed3bcbb9331c7cf52917aa40213069c818d0fc1aee1d4595d54"
+        }
+      ]
+    },
+    {
+      "asset_id": "treant",
+      "native_name": "treant",
+      "scope": "old-forest random pool (rarity=2, level_range {12,nil}); non-unique native-tall body per CONTRACTS-B5-B7-20260929.md 1 (originally miscategorised as pure-art batch 5, actually a contract-extension case, per CONTRACTS-B5-B7-20260929.md 1)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/plant.lua",
+          "sha256": "5f6a594f8dd91919aabb24b89c84b047d234cd92863b449349f03c9576b6658a",
+          "line": 63,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/immovable_plants_treant.png\", display_h=2, display_y=-1}}},"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/immovable_plants_treant.png",
+          "sha256": "ee5df984ebeee3c4fe05fdee6333f367218ce4a313d5d3a6abcb88f48db04086",
+          "role": "identity",
+          "note": "Tall tree-humanoid: bark trunk-and-limb body, leafy green canopy head, gnarled root-like legs."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "value"],
+      "prompt_fields": {
+        "subject": "A tall, near-sentient tree given humanoid proportions: a thick, deeply-furrowed brown bark trunk for a torso, long gnarled branch-like arms ending in twiggy claw-hands, a head and shoulders crowned by a dense cluster of green leaves, and legs formed from thick, root-like woody limbs planted wide.",
+        "contrast": "First immovable/plants tall identity in the catalog; the existing immovable/plants entry (giant venus flytrap) is a squat single flytrap-head plant with no limbs. Treant must read as a completely different silhouette: a tall, vertical, humanoid tree shape with a distinct leafy canopy crown, bark trunk torso and root-leg base, unlike the flytrap's low rounded single-mass shape. Silhouette (tall vertical tree-humanoid vs. squat rounded flytrap) and value (mixed brown bark and green canopy vs. the flytrap's uniform green) are the anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. The canopy and root-legs must stay well inside the inner four-fifths of disc radius even though the subject is tall -- compress the pose rather than letting branches cross the outer band. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias.",
+        "palette": "Deep furrowed umber-brown bark with darker bark-crack shadow lines, a dense mid-to-dark green leaf canopy on top; dry neutral charcoal disc with restrained copper-grey bevel, kept a distinctly different hue and value from both the bark and the canopy so the silhouette edge stays crisp."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name=treant/type=immovable/subtype=plants/no define_as/no unique) and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source. No live fixture in this task; native_tall=true follows the ancient-dragon-turtle precedent already covered by tests/token_mapping.lua's generic native_tall loop.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-f-20260929/source-contracts.json",
+          "sha256": "b12b3c0cc83fbed3bcbb9331c7cf52917aa40213069c818d0fc1aee1d4595d54"
+        }
+      ]
+    }
+  ]
+}

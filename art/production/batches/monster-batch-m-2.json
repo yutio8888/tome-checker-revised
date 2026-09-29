@@ -1,0 +1,180 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-m-2",
+  "assets": [
+    {
+      "asset_id": "gwelgoroth",
+      "native_name": "gwelgoroth",
+      "scope": "tempest-peak, mark-spellblaze, infinite-dungeon, tannen-tower, ruined-dungeon, town-zigur and the town spawns (elemental/air, default-name image, non-unique, no define_as, no nice_tile)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/gwelgoroth.lua",
+          "sha256": "d90977254ea9d48b9b95507de15324b793ec68b90e408de3a530df6f82ac26b4",
+          "line": 56,
+          "anchor": "name = \"gwelgoroth\", color=colors.AQUAMARINE"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_air_gwelgoroth.png",
+          "sha256": "6760dd50120b789db210c390aacb1ba408a746df8b2da6f9c6149db2a397dc16",
+          "role": "identity",
+          "note": "Native shape: a single slim tilted funnel of pale grey-blue wind bands, wider at the top, with a few specks of brown dust at its foot."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/greater-shivgoroth.png",
+          "sha256": "31f51ff3f20eca63ac812089e5ffa15639197b696047c075c93d796864cbf9e5",
+          "role": "family",
+          "note": "Shipped greater shivgoroth (bright frost-white crystalline giant): the gwelgoroth trio are wind vortices, not crystal bodies."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An air elemental seen from a steep overhead three-quarter angle: one slender storm vortex, a narrow funnel of pale grey-blue wind bands wider at the top and tapering to a point at the foot, leaning gently toward the lower right, a few thin bright yellow-white lightning sparks running through the bands and a small scatter of tan dust specks near the foot. Light, fast and complete.",
+        "contrast": "Gwelgoroth family built together (all wind vortices): the plain gwelgoroth is ONE slim pale funnel with no debris (silhouette: narrow leaning cone; hue: pale grey-blue with tiny yellow sparks; value: light). The greater gwelgoroth is a fat heavy cone with three separate rings and orbiting rocks in slate steel-blue; the ultimate gwelgoroth is a huge wide column with a storm-cloud crown and forked lightning in royal blue. The shipped shivgoroths are crystal giants, not vortices.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Pale grey-blue and off-white wind bands with lighter cream highlights, thin yellow-white lightning sparks, tan dust specks; nothing darker than mid tone; no glow or light cast onto the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=gwelgoroth, define_as=None, type=elemental/subtype=air, unique=False); details and hashes in evidence/monster-batch-m-20260929/source-contracts.json. base BASE_NPC_GWELGOROTH (elemental/air, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives elemental_air_gwelgoroth.png (64x64); Lightning is not a sustain; no sustains_at_birth; the town loaders only move rarity into derth_rarity/POINT_ZERO_rarity. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-m-20260929/source-contracts.json",
+          "sha256": "e1e1ce2bb74930aee311c48add949ac79706f0b7cf006cd96c4a2efee123d992"
+        }
+      ]
+    },
+    {
+      "asset_id": "greater-gwelgoroth",
+      "native_name": "greater gwelgoroth",
+      "scope": "mark-spellblaze, tempest-peak, infinite-dungeon and town spawns; also named in quests/antimagic.lua (elemental/air, non-unique, no define_as, explicit tall nice_tile PNG elemental_air_greater_gwelgoroth.png)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/gwelgoroth.lua",
+          "sha256": "d90977254ea9d48b9b95507de15324b793ec68b90e408de3a530df6f82ac26b4",
+          "line": 70,
+          "anchor": "name = \"greater gwelgoroth\", color=colors.STEEL_BLUE"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/gwelgoroth.lua",
+          "sha256": "d90977254ea9d48b9b95507de15324b793ec68b90e408de3a530df6f82ac26b4",
+          "line": 71,
+          "anchor": "image=\"npc/elemental_air_greater_gwelgoroth.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_air_greater_gwelgoroth.png",
+          "sha256": "9e79e4c3d5ce4b0c8b7c4f63a950eba772e1d98ce87ecdb356b0edb1eeb2f851",
+          "role": "identity",
+          "note": "Native shape: a fat slate-blue inverted-cone tornado of layered wind bands with brown rock and wood fragments spinning through the middle."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/greater-shivgoroth.png",
+          "sha256": "31f51ff3f20eca63ac812089e5ffa15639197b696047c075c93d796864cbf9e5",
+          "role": "family",
+          "note": "Shipped greater shivgoroth (bright frost-white crystalline giant): the gwelgoroth trio are wind vortices, not crystal bodies."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A greater air elemental seen from a steep overhead three-quarter angle, drawn compact: a fat heavy inverted-cone tornado of slate steel-blue wind bands with three clearly separate rotating rings, a wide rounded top and a narrower foot, chunks of brown rock and splintered wood orbiting in the middle band, thick bright cyan-white lightning bolts crackling across the front of the cone. Heavy, violent and complete.",
+        "contrast": "Gwelgoroth family built together (all wind vortices): the greater gwelgoroth is the fat slate-steel-blue cone with three rings and orbiting brown debris plus thick cyan-white lightning (silhouette: broad heavy cone with ring steps and chunks around it; hue: slate steel blue with brown rock; value: mid). The plain gwelgoroth is one slim pale funnel; the ultimate gwelgoroth is a much wider royal-blue column with a storm-cloud crown.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid slate steel-blue wind bands with lighter pale-blue ring highlights, brown rock and wood chunks, bright cyan-white lightning; nothing darker than mid tone except the debris; no glow or light cast onto the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=greater gwelgoroth, define_as=None, type=elemental/subtype=air, unique=False); details and hashes in evidence/monster-batch-m-20260929/source-contracts.json. base BASE_NPC_GWELGOROTH (elemental/air); the leaf has resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/elemental_air_greater_gwelgoroth.png\", display_h=2, display_y=-1}}} names the PNG explicitly (no {tall=1} shorthand and no =BASE=TILE= indirection), so the resolved tall body is statically pinnable (same form as the batch F shivgoroth/greater shivgoroth, batch K Walrog/tunneler and batch J Weaver Queen entries); native sprite 64x128; non-unique so the entry is native_tall=true; sustains_at_birth activates no sustain that writes body fields (Lightning and Shock are bolts; Hurricane, the one sustain of the ultimate variant, writes nothing). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-m-20260929/source-contracts.json",
+          "sha256": "e1e1ce2bb74930aee311c48add949ac79706f0b7cf006cd96c4a2efee123d992"
+        }
+      ]
+    },
+    {
+      "asset_id": "ultimate-gwelgoroth",
+      "native_name": "ultimate gwelgoroth",
+      "scope": "mark-spellblaze, tempest-peak, infinite-dungeon and town spawns (elemental/air, rank 3, non-unique, no define_as, explicit tall nice_tile PNG elemental_air_ultimate_gwelgoroth.png)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/gwelgoroth.lua",
+          "sha256": "d90977254ea9d48b9b95507de15324b793ec68b90e408de3a530df6f82ac26b4",
+          "line": 87,
+          "anchor": "name = \"ultimate gwelgoroth\", color=colors.ROYAL_BLUE"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/gwelgoroth.lua",
+          "sha256": "d90977254ea9d48b9b95507de15324b793ec68b90e408de3a530df6f82ac26b4",
+          "line": 88,
+          "anchor": "image=\"npc/elemental_air_ultimate_gwelgoroth.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_air_ultimate_gwelgoroth.png",
+          "sha256": "e02dabbeb980a93691454281685da5fbf97631bc6e6adbce3f5b56ea44d9abfe",
+          "role": "identity",
+          "note": "Native shape: a towering wide pale-blue storm column with dark rock fragments spinning through it and a broad rounded crown."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/greater-shivgoroth.png",
+          "sha256": "31f51ff3f20eca63ac812089e5ffa15639197b696047c075c93d796864cbf9e5",
+          "role": "family",
+          "note": "Shipped greater shivgoroth (bright frost-white crystalline giant): the gwelgoroth trio are wind vortices, not crystal bodies."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An ultimate air elemental seen from a steep overhead three-quarter angle, drawn compact but filling more of the disc than its siblings: a towering wide near-cylindrical storm column of deep royal-blue and white wind bands that flares at the top into a thick storm-cloud crown, lit from within by yellow-white lightning, three bright forked lightning bolts bursting outward and downward across the body, dark rock fragments orbiting, a pale glowing storm eye near the top. Imposing and complete.",
+        "contrast": "Gwelgoroth family built together (all wind vortices): the ultimate gwelgoroth is the tallest widest one, a royal-blue and white column with a cloud crown and three forked yellow-white lightning bolts (silhouette: wide column with a flared crown and radiating bolts; hue: royal blue with white and yellow; value: mid with bright highlights). The plain gwelgoroth is one slim pale funnel; the greater gwelgoroth is a slate-blue cone with rings and orbiting debris.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid royal-blue and white wind bands with lighter sky-blue highlights, bright yellow-white lightning forks, dark rock fragments kept small; nothing darker than mid tone except the fragments; no glow or light cast onto the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ultimate gwelgoroth, define_as=None, type=elemental/subtype=air, unique=False); details and hashes in evidence/monster-batch-m-20260929/source-contracts.json. base BASE_NPC_GWELGOROTH (elemental/air); the leaf has resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/elemental_air_ultimate_gwelgoroth.png\", display_h=2, display_y=-1}}} names the PNG explicitly (no {tall=1} shorthand and no =BASE=TILE= indirection), so the resolved tall body is statically pinnable (same form as the batch F shivgoroth/greater shivgoroth, batch K Walrog/tunneler and batch J Weaver Queen entries); native sprite 64x128; non-unique so the entry is native_tall=true; its sustains_at_birth activates Hurricane (storm.lua:104), whose activate returns {} and deactivate returns true (storm.lua:126-131: a proc-only sustain that writes no field at all). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-m-20260929/source-contracts.json",
+          "sha256": "e1e1ce2bb74930aee311c48add949ac79706f0b7cf006cd96c4a2efee123d992"
+        }
+      ]
+    }
+  ]
+}

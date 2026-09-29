@@ -1,0 +1,96 @@
+{
+  "asset_id": "black-bear-v2",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "status": "generated-reviewed-candidate",
+  "prompt": "Use case: precise-object-edit\nAsset type: one transparent PNG black bear miniature token for a square-grid tabletop RPG, intended to remain legible at 48 and 64 pixels.\nPrimary request: improve only the readable painted light-and-dark volumes on the BLACK BEAR in Image 1. Image 1 is the edit target: preserve its exact identity, complete quadruped pose, lower-right-facing head, body shape, neutral circular base, steep overhead camera and framing. Image 2 is the brown bear from the same set, supplied as a contrast reference only: the edited animal must still be distinctly BLACK, not brown or pale grey. Image 3 is the original game's black bear sprite for identity.\nSpecific lighting/paint adjustment: add stronger, broader cool slate-grey dry-brushed facets on the upper shoulders, shoulder-to-foreleg planes, back ridge, ear rims, cheek and the outer surfaces of the legs. These should describe a large coherent shoulder mass, a clearly separated face and separated paws even after reduction to 48px. Open the deep shoulder and neck shadows slightly so the front legs do not merge into the dark base. Keep deep charcoal-black visible across most of the coat and on the flanks, with real dark recesses between fur clumps. Make the small tan muzzle a touch lighter and warmer so the nose-face direction reads; preserve a dark nose and alert animal eyes. This is painted miniature dry brushing and diffuse form lighting, not luminous outlines. Use a few broad masses, not thousands of isolated bright hair flecks.\nInvariants: keep exactly the same high-angle hand-painted miniature material, matte sculpted fur, realistic stocky bear proportions, round ears, four paws and short tail as Image 1. Keep the neutral dark grey-brown base and its thin bronze-grey bevel unchanged in style, colour and thickness. Keep the full disc centered at the same scale, with transparent margin outside it. Do not brighten the base to compensate. All fur, claws, ears and paws remain fully inside its outer rim, with enough clear bevel to preserve the circle. Upper-left soft diffuse light and minimal contact shadow contained on the base.\nBackdrop: actual native transparent alpha everywhere beyond the base. No solid black/white backdrop, checkerboard painting or cast shadow beyond the base.\nConstraints: one bear, one neutral base, no text, watermark, rank marker, coloured faction ring, border symbol, halo, glowing rim light, neon, magical effect, armour, equipment, grass, rocks or scenery. Do not turn the whole animal white, silver, grey or brown; it must still read as a black bear.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v2/masters/black-bear-v1.png",
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/brown-bear-v2.png",
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/black_bear.png"
+  ],
+  "reference_roles": [
+    "Edit target; preserve identity, pose, camera and base while strengthening readable fur volume.",
+    "Brown bear contrast reference; black bear must remain distinct and black.",
+    "Original game black bear; animal identity only."
+  ],
+  "inspected_additional_context": [
+    "evidence/runtime-v040/screenshots/beasts-1920-96.png",
+    "evidence/runtime-v040/screenshots/dense-1366-48.png"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0dd7b-5f20-7d22-8dd0-3de0c20d8894/exec-dd7d220e-91f6-4f9c-a97d-e95fd771c2e3.png",
+  "saved_output_path": "art/monsters-v3/masters/black-bear-v2.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Original generated PNG copied byte-for-byte. Review thumbnails use the existing mechanical C exporter; no creature pixels are painted, recoloured or matted.",
+  "generated_at_utc": "2026-09-26T11:34:57.491Z",
+  "selection": "recommended-for-runtime-test",
+  "sha256": "a7bed49555f2252e441f7fbb61600a26dbdd2d402ef270b3f110b492332be582",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      142,
+      163,
+      1096,
+      1254
+    ],
+    "visible_alpha_bbox": [
+      158,
+      167,
+      1094,
+      1105
+    ],
+    "transparent_pixels": 877048,
+    "partial_alpha_pixels": 695189,
+    "opaque_pixels": 279,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "review": {
+    "selection_reason": "Preserves the existing black-bear identity and stance while opening cool shoulder, cheek and leg highlights and the tan muzzle. Remains black and visually distinct from the warm brown bear. No new silhouette or containment defect was introduced; one built-in edit call used.",
+    "observations": [
+      "At 96px the broad cool shoulder/back planes and cheek are stronger than the previous master, while the flanks remain dark.",
+      "At 64px the shoulder ridge and front paws separate more clearly from the disc.",
+      "At 48px the change is modest: muzzle and broad shoulder still read, but limb details are limited. This is an incremental improvement, not proof that all runtime dark-background cases are solved.",
+      "Claws approach the inner bevel but remain within the outer disc. No coloured edge, glow or rank mark is baked into the art."
+    ],
+    "remaining_limits": [
+      "Runtime lighting and fog may reduce the benefit; use actual game screenshots before claiming the black-bear visibility issue closed.",
+      "No luminance standard-deviation threshold was used as an artistic acceptance substitute."
+    ]
+  },
+  "reviewed_at_utc": "2026-09-26T11:36:43.431033+00:00",
+  "static_review": {
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "backgrounds": [
+      "flat muted grass green",
+      "flat deep water blue"
+    ],
+    "original_reference_comparison": true,
+    "preview_path": "/tmp/monster-beast-refinement-review/review.png",
+    "method": "Existing C exporter generates normalized native-alpha thumbnails. Chromium lays out each thumbnail at its actual pixel size. Full-page screenshot inspected at original resolution. Not an in-game screenshot.",
+    "preview_sha256": "bed6e6ad953e0b3eaa6b1a760d17e8ca39722724d3ef5bb6bb9e357af47b549b"
+  },
+  "reference_sha256": {
+    "game/addons/tome-checker-revised/art/monsters-v2/masters/black-bear-v1.png": "e2a9860653191e0f36f9e8b3deeaf08094776cfc14fcad9129985bbf725a5243",
+    "game/addons/tome-checker-revised/art/monsters-v1/masters/brown-bear-v2.png": "63a68f9102fd938818288f4989ff09755e73f9dc88e045bb53e82e6012a51c10",
+    "game/modules/tome/data/gfx/shockbolt/npc/black_bear.png": "e6dbd07711f8bf51d92d0f86aa20924f3c2b15c4873b6944147c7ccae0163871"
+  }
+}

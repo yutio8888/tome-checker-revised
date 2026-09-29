@@ -1,0 +1,173 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-o-4",
+  "assets": [
+    {
+      "asset_id": "carrion-worm-mass",
+      "native_name": "carrion worm mass",
+      "scope": "mark-spellblaze, ancient-elven-ruins, worms vault (vermin/worms, default-name image, non-unique, define_as CARRION_WORM_MASS); the Corruptions Worm Rot / Infestation summon (talents/corruptions/rot.lua:62) has the same name, type, subtype and explicit PNG but NO define_as and a summoner: it is rejected by the define_as binding and stays native (open decision reported, see evidence)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/vermin.lua",
+          "sha256": "00356bcc7f67dd0171daaad2d5f394550aeb64e2d02099127e93709ff74c3c8e",
+          "line": 67,
+          "anchor": "define_as = \"CARRION_WORM_MASS\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/corruptions/rot.lua",
+          "sha256": "05702ee27a51c8b814d897755d8017ad914f017431b755289d763dddf635c36e",
+          "line": 65,
+          "anchor": "name = \"carrion worm mass\", faction = self.faction"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_worms_carrion_worm_mass.png",
+          "sha256": "5c9964021620dde529384a80de753491aebedb913bde9b9c4d2a591e0ce091cf",
+          "role": "identity",
+          "note": "Native shape: two thick pale grey-white ringed worms curling up, each with a small dark bitten mouth."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/white-worm-mass.png",
+          "sha256": "55671a39ff9388694837a3a72073a516196d8401dfa0bb807a374b34a442efc8",
+          "role": "family",
+          "note": "Shipped white worm mass (a cream cluster of many small worms) and green worm mass (many thin olive worms): the carrion worm mass is FEW FAT dirty worms, not a cluster of many."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A carrion worm mass seen from a steep overhead three-quarter angle: three fat segmented worms of sallow tan-brown and dirty pink-grey flesh, ringed with darker sand-brown bands, entwined in a sprawling heap with two heads raised and open showing small sharp pale teeth, glistening wet sores and pale-green rot patches on the bodies, a small wisp of pale green gas rising at one side. Rotting, fat and complete.",
+        "contrast": "Worm family, shipped: white worm mass (cream cluster of many small worms) and green worm mass (many thin olive worms), plus the sandworms. The carrion worm mass is FEW FAT worms in a heap with two raised toothy heads (silhouette: three thick bodies, two raised heads; hue: sallow tan-brown and dirty pink with pale-green rot; value: mid-light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle.",
+        "palette": "Sallow tan-brown and dirty pink-grey worm flesh with lighter sand bands, pale sickly green rot patches and pale teeth; nothing darker than mid tone except small seams and mouths; the gas must not cast green light onto the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=carrion worm mass, define_as=CARRION_WORM_MASS, type=vermin/subtype=worms, unique=False); details and hashes in evidence/monster-batch-o-20260929/source-contracts.json. base BASE_NPC_WORM (vermin/worms, no image=); leaf no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives vermin_worms_carrion_worm_mass.png (64x64); can_multiply clones keep define_as; talents Crawl Acid, Rotting Disease, Multiply (activated, no sustain); on_die adds a blight map effect only. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-o-20260929/source-contracts.json",
+          "sha256": "d8d01218f85afa424e662a8f08ea1dcfac1dc6aef902034dbb35f6b53f4b494b"
+        }
+      ]
+    },
+    {
+      "asset_id": "cute-little-bunny",
+      "native_name": "cute little bunny",
+      "scope": "old-forest (vermin/rodent, default-name image, non-unique, no define_as, no nice_tile; rarity 200; allow_infinite_dungeon); the Old Forest rabbit is a single definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "sha256": "6d7918b8d3808f8fc74739a990d3b0b6dbc4906668439672f2f783a86baf0121",
+          "line": 145,
+          "anchor": "name = \"cute little bunny\", color=colors.SALMON"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_rodent_cute_little_bunny.png",
+          "sha256": "a51474d13155653e719d4b7020fccb8b55f3b49cf37b26f1b6db3efc7947a49f",
+          "role": "identity",
+          "note": "Native shape: a plump grey-white rabbit sitting sideways with blue eyes, long upright ears and a green sprig in its mouth."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/giant-white-mouse.png",
+          "sha256": "64af1f7a2e0357259d7b98a188a634b449eec8218af1c9a997ca09c218a5b02f",
+          "role": "family",
+          "note": "Shipped giant white mouse (pale mouse with a long pink tail and small round ears) and giant white rat: the bunny is a chunky rabbit with LONG UPRIGHT EARS and a fluffy cotton tail, no long tail."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A cute little bunny seen from a steep overhead three-quarter angle: a plump round white-and-pale-grey rabbit sitting upright and facing the viewer at a slight angle, two very long upright ears with pink insides, big round bright blue eyes, a pink nose, soft fluffy fur with light-grey shading, a fluffy round cotton tail, small pink front paws held up, and just two tiny pointed white teeth showing over the lower lip. Adorable, soft and complete.",
+        "contrast": "Rodent family, shipped: giant white and grey mice and rats with long tails and small round ears. The bunny is the round fluffy rabbit with two LONG UPRIGHT EARS and a cotton tail (silhouette: round body with two tall ears; hue: white with pink and blue eyes; value: very light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle.",
+        "palette": "Warm white and pale grey fur with light cool-grey shade, pink ears, nose and paws, bright blue eyes; nothing darker than a light mid-grey; the disc stays neutral charcoal. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=cute little bunny, define_as=None, type=vermin/subtype=rodent, unique=False); details and hashes in evidence/monster-batch-o-20260929/source-contracts.json. base BASE_NPC_RODENT (vermin/rodent, no image=); leaf no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives vermin_rodent_cute_little_bunny.png (64x64); no talents, no sustains_at_birth; can_multiply clones keep the identity. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-o-20260929/source-contracts.json",
+          "sha256": "d8d01218f85afa424e662a8f08ea1dcfac1dc6aef902034dbb35f6b53f4b494b"
+        }
+      ]
+    },
+    {
+      "asset_id": "dredgling",
+      "native_name": "dredgling",
+      "scope": "temporal-rift, maze (horror/temporal, default-name image, non-unique, no define_as, no nice_tile; dredge=1); Batch F/K shipped dremling and drem (different name and PNG)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_temporal.lua",
+          "sha256": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+          "line": 50,
+          "anchor": "name = \"dredgling\", color=colors.TAN"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_temporal_dredgling.png",
+          "sha256": "989c877f53bfd07c2798160dca3efea03f2af231fd587b83ccc33ac71d2bba04",
+          "role": "identity",
+          "note": "Native shape: a hunched pink-skinned hairless humanoid crouching on all fours with huge bulbous white eyes and a wide open mouth."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/drem.png",
+          "sha256": "a9801d4b807a5c8230dcfe2127335ff08b3b8289c2a60253e25c99726d7620a0",
+          "role": "family",
+          "note": "Shipped drem (armoured brown dwarf-like warrior with axe and shield) and dremling (pale stone-grey giant): the dredgling is a small bare pink skinned crawler, unarmoured, no weapon."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A dredgling seen from a steep overhead three-quarter angle: a small hunched hairless humanoid of pale salmon-pink flesh crouching low on bent limbs with long-fingered hands planted forward, an oversized head with two huge bulbous glossy white-and-cream eyes with tiny dark pupils and a wide gaping mouth with a pink tongue, ribs faintly showing, a thin wrinkled skin with paler belly. No clothes, no weapon, no armour. Creepy, small and complete.",
+        "contrast": "Dredge family, shipped: drem is an armoured brown warrior with axe and shield, dremling a tall stone-grey giant. The dredgling is the BARE SALMON-PINK CROUCHING crawler with huge round eyes (silhouette: low four-limbed crouch, oversized head, two big round eyes; hue: salmon-pink; value: light-mid).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle.",
+        "palette": "Pale salmon-pink and coral skin with lighter peach highlight planes, cream-white eyes, pink mouth; nothing darker than mid pink except the pupils and mouth interior. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=dredgling, define_as=None, type=horror/subtype=temporal, unique=False); details and hashes in evidence/monster-batch-o-20260929/source-contracts.json. base BASE_NPC_HORROR_TEMPORAL (horror/temporal, no image=); leaf no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives horror_temporal_dredgling.png (64x64); talents Dust to Dust (activated chronomancy); resolvers.sustains_at_birth() present but the only sustained candidates are none (Dust to Dust is not sustained), so nothing is activated at birth; no type/subtype/image write. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-o-20260929/source-contracts.json",
+          "sha256": "d8d01218f85afa424e662a8f08ea1dcfac1dc6aef902034dbb35f6b53f4b494b"
+        }
+      ]
+    }
+  ]
+}

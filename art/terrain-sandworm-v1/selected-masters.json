@@ -1,0 +1,79 @@
+{
+  "sand-floor": {
+    "source": "masters/sand-floor-v1.png",
+    "sha256": "f83b32f48d7e1715a3cdb3a3496d71e5659bac2ec10e15afd6a1da81c91fb6b3",
+    "gate_passed": true,
+    "gate_findings": [
+      {
+        "check": "floor_opaque",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u5730\u677f\u6bcd\u7248 alpha \u8303\u56f4 (255, 255)\uff08\u987b\u6052\u4e3a 255\uff0cACCEPTANCE A2\uff09"
+      }
+    ]
+  },
+  "sand-wall": {
+    "source": "masters/sand-wall-v1.png",
+    "sha256": "1314fa7b3dca5fa9c82ced2c2c7bf3040b6bb2234d24df71bb0d93a96e76f720",
+    "gate_passed": true,
+    "gate_findings": [
+      {
+        "check": "master_native_alpha",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255\uff08\u987b\u539f\u751f RGBA/LA/PA\u3001\u8de8 0\u2013240+\uff0cACCEPTANCE A1\uff09"
+      },
+      {
+        "check": "corner_alpha",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]\uff08\u987b \u22644\uff0cACCEPTANCE A1.5/A8.3 \u7684\u5b9e\u6d4b\u5bb9\u5dee\u7248\uff09"
+      },
+      {
+        "check": "not_edge_touching",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u4e0d\u900f\u660e\u5305\u56f4\u76d2 (31, 140, 1237, 1146)\uff0c\u987b\u8ddd\u56db\u8fb9 \u226525.1px\uff08ACCEPTANCE A8.1\uff09\uff1b\u6309\u9010\u8d44\u4ea7\u8c41\u514d\u901a\u8fc7\uff08a8-edge-margin.json\uff09\uff1aComplete native-alpha cell-filling sand wall has 17px transparent right margin, no clipping at 48/64/96px; exporter recenters within 128px. Other alpha, corners and grounding checks remain enforced. One call used and no reset.",
+        "waived": true
+      },
+      {
+        "check": "grounded_a8",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u4e0d\u900f\u660e\u5305\u56f4\u76d2\u4e0b\u8fb9\u7f18 1146/1254=0.914\uff08\u987b \u22650.75\uff0cACCEPTANCE A8.2 \u63a5\u5730\uff09"
+      }
+    ]
+  },
+  "sand-ladder": {
+    "source": "masters/sand-ladder-v1.png",
+    "sha256": "8ca0bf007d841772ddaafa40c9d57011778e818fcb832ea796259fdca2819c2b",
+    "gate_passed": true,
+    "gate_findings": [
+      {
+        "check": "master_native_alpha",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255\uff08\u987b\u539f\u751f RGBA/LA/PA\u3001\u8de8 0\u2013240+\uff0cACCEPTANCE A1\uff09"
+      },
+      {
+        "check": "corner_alpha",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]\uff08\u987b \u22644\uff0cACCEPTANCE A1.5/A8.3 \u7684\u5b9e\u6d4b\u5bb9\u5dee\u7248\uff09"
+      },
+      {
+        "check": "not_edge_touching",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u4e0d\u900f\u660e\u5305\u56f4\u76d2 (47, 225, 1222, 1127)\uff0c\u987b\u8ddd\u56db\u8fb9 \u226525.1px\uff08ACCEPTANCE A8.1\uff09",
+        "waived": false
+      },
+      {
+        "check": "grounded_a8",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u4e0d\u900f\u660e\u5305\u56f4\u76d2\u4e0b\u8fb9\u7f18 1127/1254=0.899\uff08\u987b \u22650.75\uff0cACCEPTANCE A8.2 \u63a5\u5730\uff09"
+      }
+    ]
+  }
+}

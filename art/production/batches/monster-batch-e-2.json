@@ -1,0 +1,212 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-e-2",
+  "assets": [
+    {
+      "asset_id": "ungole",
+      "native_name": "Ungolë",
+      "scope": "ardhungol zone-finale boss; exact identity only, no rarity field, no live fixture",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/ardhungol/npcs.lua",
+          "sha256": "93033ee5cc7294cd4a86ca1762153b67b0c4d61df92d1391786d54642fa81dc2",
+          "line": 28,
+          "anchor": "name = \"Ungolë\", color=colors.VIOLET, unique = true,"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_ungole.png",
+          "sha256": "4327e9a05a90f997409b0ecd040445b2317e6800dbc5244808c56797e16a74fb",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A huge hunched spider seen from a steep overhead three-quarter angle: bulbous dark abdomen, eight legs radiating low and wide around the body, small cluster of glowing red eyes on a forward-lowered head. Body held low and broad rather than tall.",
+        "contrast": "First spiderkin/spider identity in the catalog, so no in-family collision; the silhouette (low broad radial 8-leg spread, no other current token shares that shape) and the glowing red eye-cluster (the one bright value accent on an otherwise dark body) are the identity anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated: this batch (monster-boss-e, same style reference) has now been measured on three fresh (non-edit) generations -- an initial \"8 units darker\" instruction produced base_drift -9.23, -12.21 and -15.18 (all overshooting the +-8 tolerance on the dark side), while a follow-up \"4 units darker\" instruction on the same identity landed at -5.11, cleanly inside tolerance. Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Near-black charcoal carapace with a faint deep-violet sheen, small cluster of glowing ember-red eyes, dull grey-brown leg tips; dry neutral charcoal disc with restrained copper-grey bevel -- keep the dark body from merging into the disc by preserving a lighter facing plane on the forward legs and head."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity, type/subtype, define_as, unique flag and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (matches CONTRACTS-B5-B7-20260929.md §2). No live fixture in this assigned task; no discrepancy found so none is required.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-e-20260929/source-contracts.json",
+          "sha256": "92455671765a820311ccffdac736c667beaae5b4bb497924bd674f8ca0cb7fdf"
+        }
+      ]
+    },
+    {
+      "asset_id": "half-finished-bone-giant",
+      "native_name": "Half-Finished Bone Giant",
+      "scope": "blighted-ruins zone-finale boss; exact identity only, no rarity field, no live fixture",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/blighted-ruins/npcs.lua",
+          "sha256": "383d6aa4ca48a2f2b219020522a29eb4c30b9c8e88e18efd88a8f924b56d3a03",
+          "line": 75,
+          "anchor": "name = \"Half-Finished Bone Giant\", color=colors.VIOLET, unique=true,"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+          "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+          "line": 24,
+          "anchor": "type = \"undead\", subtype = \"giant\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_half_finished_bone_giant.png",
+          "sha256": "5311494351da078b36738f942d4f165f543564ddbbcaf830c2dbdf5627aa8c9c",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A towering, gaunt skeletal giant assembled from mismatched bones: an asymmetric ribcage left visibly open, overlong gangly limbs of uneven thickness, and a faint pale lavender unholy aura outline around the whole body, conveying an unfinished, hastily bound construction rather than a clean skeleton.",
+        "contrast": "First undead/giant identity in the catalog (distinct from the existing undead/skeleton family, which are all human-sized single-body skeletons); the towering gangly asymmetric silhouette and pale aura fringe are the anchors, and it must not be confused with any skeleton token by simply being 'a big skeleton' -- the visibly unfinished, mismatched-bone asymmetry is the specific cue.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated: this batch (monster-boss-e, same style reference) has now been measured on three fresh (non-edit) generations -- an initial \"8 units darker\" instruction produced base_drift -9.23, -12.21 and -15.18 (all overshooting the +-8 tolerance on the dark side), while a follow-up \"4 units darker\" instruction on the same identity landed at -5.11, cleanly inside tolerance. Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Bleached ivory-tan bone, exposed grey-brown binding sinew at the joints, thin pale lavender aura fringe; dry neutral charcoal disc with restrained copper-grey bevel, aura fringe must not bleed onto the disc itself."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity, type/subtype, define_as, unique flag and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (matches CONTRACTS-B5-B7-20260929.md §2). No live fixture in this assigned task; no discrepancy found so none is required.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-e-20260929/source-contracts.json",
+          "sha256": "92455671765a820311ccffdac736c667beaae5b4bb497924bd674f8ca0cb7fdf"
+        }
+      ]
+    },
+    {
+      "asset_id": "kryl-feijan",
+      "native_name": "Kryl-Feijan",
+      "scope": "crypt-kryl-feijan zone-finale boss; exact identity only, no rarity field, no live fixture",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/crypt-kryl-feijan/npcs.lua",
+          "sha256": "25fe3830a2b9dbbb4f5a90ec092f3e542069bf67a67e6baec3e2c412b087181f",
+          "line": 30,
+          "anchor": "name = \"Kryl-Feijan\", color=colors.VIOLET, unique = true,"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 26,
+          "anchor": "type = \"demon\", subtype = \"major\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_kryl_feijan.png",
+          "sha256": "e87bf6ae8963b6b1af4504e0c3d7ef48a1481b7ecb4cb2f0fd11c22317869ace",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A towering amorphous mass of roiling black shadow-smoke shaped like an inverted teardrop, tapering to a point near the base disc; two pale blue-white clawed arms reach forward and outward from within the smoke, fingers spread, with a faint suggestion of glowing red eyes deep inside the mass.",
+        "contrast": "First demon/major identity in the catalog, so no in-family collision; the non-humanoid billowing smoke silhouette with two pale reaching claws breaking out of a dark mass is the anchor -- nothing else in the catalog is a formless shadow shape, and the pale blue-white claws against black smoke give a clean value/hue contrast that survives grayscale as a bright accent on a dark mass.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated: this batch (monster-boss-e, same style reference) has now been measured on three fresh (non-edit) generations -- an initial \"8 units darker\" instruction produced base_drift -9.23, -12.21 and -15.18 (all overshooting the +-8 tolerance on the dark side), while a follow-up \"4 units darker\" instruction on the same identity landed at -5.11, cleanly inside tolerance. Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Matte near-black smoke body with a faint violet-grey edge glow, pale cold blue-white clawed hands and forearms, dim ember-red eye glints buried deep in the mass; dry neutral charcoal disc with restrained copper-grey bevel -- the dark smoke must keep a lighter facing plane so it does not merge into the disc."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity, type/subtype, define_as, unique flag and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (matches CONTRACTS-B5-B7-20260929.md §2). No live fixture in this assigned task; no discrepancy found so none is required.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-e-20260929/source-contracts.json",
+          "sha256": "92455671765a820311ccffdac736c667beaae5b4bb497924bd674f8ca0cb7fdf"
+        }
+      ]
+    },
+    {
+      "asset_id": "atamathon",
+      "native_name": "Atamathon the Giant Golem",
+      "scope": "golem-graveyard zone-finale boss; exact identity only, no rarity field, no live fixture. Contract maps ONLY the verified native-tall invis.png+add_mos body (construct_golem_athamathon_the_giant_golem.png); the zone source also sets a separate top-level image=\"npc/atamathon.png\" (a different 64x64 file) as the nicer_tiles-off icon fallback per CONTRACTS-B5-B7-20260929.md §2 -- that fallback path is intentionally left native and is not mapped or invented here.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/golem-graveyard/npcs.lua",
+          "sha256": "405703c8b9695c982b4ac6982fdada94001f5b2feb7f46e42c406b64b02bc80f",
+          "line": 27,
+          "anchor": "name = \"Atamathon the Giant Golem\", image = \"npc/atamathon.png\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/construct.lua",
+          "sha256": "61cbeb027f35ccbbfeb5b33fe7a6a46684f630f079a5ad8ff651ef68ae5ae36a",
+          "line": 24,
+          "anchor": "type = \"construct\", subtype = \"golem\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/construct_golem_athamathon_the_giant_golem.png",
+          "sha256": "bc2939c0b00b7f72eec987c095dc54d833a5ee9e70a965701944b089250375a4",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A massive humanoid golem carved from pale marble with dark voratun joint fittings at the neck, shoulders, elbows and knees, standing in a rigid, wide-braced upright stance with both fists lowered at its sides. Glowing ruby-red eyes are the only warm accent on an otherwise cold pale body.",
+        "contrast": "First construct/golem identity in the catalog, so no in-family collision; the anchor is the pale stone body broken only by dark metal joint bands and the two glowing ruby eye points -- a cold, rigid, geometric silhouette unlike any organic creature in the catalog.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated: this batch (monster-boss-e, same style reference) has now been measured on three fresh (non-edit) generations -- an initial \"8 units darker\" instruction produced base_drift -9.23, -12.21 and -15.18 (all overshooting the +-8 tolerance on the dark side), while a follow-up \"4 units darker\" instruction on the same identity landed at -5.11, cleanly inside tolerance. Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Pale grey-white veined marble body, near-black voratun joint bands, glowing ruby-red eyes as the single warm accent; dry neutral charcoal disc with restrained copper-grey bevel, pale stone body must not wash out against the disc -- keep the dark joint bands as clear internal separators."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity, type/subtype, define_as, unique flag and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (matches CONTRACTS-B5-B7-20260929.md §2). No live fixture in this assigned task; no discrepancy found so none is required.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-e-20260929/source-contracts.json",
+          "sha256": "92455671765a820311ccffdac736c667beaae5b4bb497924bd674f8ca0cb7fdf"
+        }
+      ]
+    }
+  ]
+}

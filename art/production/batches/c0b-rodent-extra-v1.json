@@ -1,0 +1,141 @@
+{
+  "schema": 1,
+  "batch_id": "c0b-rodent-extra-v1",
+  "assets": [
+    {
+      "asset_id": "giant-rabbit",
+      "native_name": "giant rabbit",
+      "scope": "Shared rodent pool (rodent.lua); Kor'Pul both layouts first; exact identity only, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_RODENT\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 94,
+          "anchor": "name = \"giant rabbit\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v7-c0-sol/masters/giant-white-rat-v1.png",
+          "sha256": "e52f7f3bee25030329ffc581c6a297a9a3c15aedfec7205ae138e7cb22dcf3ac",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel at exactly that lightness. Do not copy its species, body plan, pose or tail."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_rodent_giant_rabbit.png",
+          "sha256": "3009df5094ec669621a1219b0a732ea8d41b1be00579e3f3c84e8862e813bbb7",
+          "role": "identity",
+          "note": "Native species only: a heavy brown hare-like rabbit with long ears and powerful haunches. Ignore the native camera and lighting."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "family",
+          "note": "Existing mapped giant brown rat. The rabbit shares its warm brown value range, so it must never be readable as a large rat: no long bare tail, no pointed rat muzzle, no low horizontal four-footed bar silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One heavy giant rabbit crouched low on the disc in a three-quarter front view, head toward the lower left. Thick loaf-shaped body, very large muscular hind haunches folded under it, short tucked forelegs, blunt rounded muzzle with a cleft lip and short whiskers, and two long narrow upright ears rising well above the head as a tall parallel pair with a visible gap of dark disc between them. Only a small round puff of a tail, tight against the rump.",
+        "contrast": "The mapped giant brown rat is a long low horizontal four-footed bar with a pointed muzzle, small ears and a long thick bare tail arcing across the disc. This rabbit must differ in at least two dimensions: (1) silhouette — a tall compact hunched mass whose outline is dominated by two long narrow vertical ears and a huge rounded haunch, with no long tail anywhere; (2) value pattern — a bright lit crown and shoulder plane over one very dark deep haunch/chest core and pale ear interiors, instead of the rat art's single even body mass. It must also not be confused with the giant mice in the same batch: the mice sit upright with two round disc ears and a long thin tail, the rabbit crouches with two long blade ears and no visible tail. Distinction must survive grayscale at 48px.",
+        "composition": "One entire animal on one disc, steep overhead three-quarter view. Ear tips, forefeet, hind feet and rump all stay inside the disc with clear margin; the outer sixth of the disc radius stays bare base plate. Lean the ear pair slightly away from the upper-right rank corner and keep the upper-left interaction corner clear. Keep the two ears separated by a readable dark gap so they do not fuse into one blob at 48px.",
+        "palette": "Warm umber and russet-brown dorsal fur with a paler oatmeal-tan chest and cheek, dusty pink-grey inner ear lining, dark liquid eye, dark nose, and a compact warm-grey contact shadow. Matte painted fur, no glow, no effect, no grass or burrow."
+      },
+      "kind": "creature",
+      "gate": "ready",
+      "gate_reason": "Main agent approved the 0.6.8 detached native actor evidence in evidence/c0b-art-gate: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/README.md",
+          "sha256": "a68e8165953229082ca8c18512cb56f43f85c2a025ccf453cf832e81fa569f14"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/native-actors.tsv",
+          "sha256": "35b66e9491cf7cd75f04db24e228bf6c6a0e7a0fa4b27f436e21e4cde877e193"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/sources.json",
+          "sha256": "43071414fc86a870d05f6b52661f57cdbd89c4a25a47b7b2bdcdb8e2faa3ce53"
+        }
+      ]
+    },
+    {
+      "asset_id": "giant-crystal-rat",
+      "native_name": "giant crystal rat",
+      "scope": "Shared rodent pool (rodent.lua); Kor'Pul both layouts first; exact identity only, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_RODENT\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 107,
+          "anchor": "name = \"giant crystal rat\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel at exactly that lightness. Do not copy its species, body plan, pose or tail."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_rodent_giant_crystal_rat.png",
+          "sha256": "52005e302a22c4d5ca0fb392a31ca34fda93fa5997ca885f27d89400de147231",
+          "role": "identity",
+          "note": "Native species only: a rat whose back and flanks carry a crust of pale angular crystal shards. Ignore the native camera and the engine blue tint; the crystals are ordinary matte mineral, not a light source."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v7-c0-sol/masters/giant-white-rat-v1.png",
+          "sha256": "e52f7f3bee25030329ffc581c6a297a9a3c15aedfec7205ae138e7cb22dcf3ac",
+          "role": "family",
+          "note": "Existing mapped giant white rat. This crystal rat is also pale, so it must never be readable as the white rat: break the smooth back line with hard angular crystal ridges and keep the fur clearly darker than the crystals."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "One large adult rat seen from a steep overhead three-quarter angle, walking to the right with its head lowered at the lower right and haunches raised at the upper left. Long pointed muzzle, rounded ears, four clawed feet and a long bare tail curving down and back to the left. A dense crust of pale angular crystal shards grows out of the fur along the whole spine and over both shoulders and the rump, forming a jagged sawtooth ridge that clearly breaks the smooth outline of the back. A few smaller facets sit on the flanks. The crystals are hard, faceted and matte-translucent, like rose quartz grown through fur; they are armour, not light.",
+        "contrast": "The mapped giant white rat is one smooth broad ivory mass with a raised forebody and a soft rounded back line; the mapped giant grey rat is a smooth low slate bar. This crystal rat must differ in at least two dimensions: (1) silhouette — the top edge of the body is a hard jagged crystalline sawtooth ridge instead of a smooth fur curve; (2) value pattern — dark dusty mauve-grey fur carrying a chain of small hard-edged bright facets with sharp cast shadows, a high-frequency light-on-dark pattern that no other rat in the set has. Hue is a third, secondary cue only. Do not reduce this to a recoloured white rat. Distinction must survive grayscale at 48px.",
+        "composition": "One entire animal on one disc, steep overhead three-quarter view. Muzzle, ears, all four feet, the whole tail and every crystal tip stay inside the disc with clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner clear. Leave a readable wedge of dark disc between the tail and the body. Keep the crystal ridge coarse enough that it still reads as spikes at 48px, not as noise.",
+        "palette": "Dusty mauve-grey and dark taupe fur, pale rose-quartz and bone-pink crystal facets with cool grey shadow planes, bare pink-grey tail, feet and ears, dark eyes. Matte mineral, no emitted light, no glow, no sparkle stars, no blue engine tint, no effect."
+      },
+      "kind": "creature",
+      "gate": "ready",
+      "gate_reason": "Main agent approved the 0.6.8 detached native actor evidence in evidence/c0b-art-gate: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/README.md",
+          "sha256": "a68e8165953229082ca8c18512cb56f43f85c2a025ccf453cf832e81fa569f14"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/native-actors.tsv",
+          "sha256": "35b66e9491cf7cd75f04db24e228bf6c6a0e7a0fa4b27f436e21e4cde877e193"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/sources.json",
+          "sha256": "43071414fc86a870d05f6b52661f57cdbd89c4a25a47b7b2bdcdb8e2faa3ce53"
+        }
+      ]
+    }
+  ]
+}

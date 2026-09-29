@@ -1,0 +1,242 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-h-3",
+  "assets": [
+    {
+      "asset_id": "necromancer",
+      "native_name": "Necromancer",
+      "scope": "blighted-ruins named non-unique humanoid/human caster (define_as NECROMANCER)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/blighted-ruins/npcs.lua",
+          "sha256": "383d6aa4ca48a2f2b219020522a29eb4c30b9c8e88e18efd88a8f924b56d3a03",
+          "line": 30,
+          "anchor": "define_as = \"NECROMANCER\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/blighted-ruins/npcs.lua",
+          "sha256": "383d6aa4ca48a2f2b219020522a29eb4c30b9c8e88e18efd88a8f924b56d3a03",
+          "line": 33,
+          "anchor": "name = \"Necromancer\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature.",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_necromancer.png",
+          "sha256": "e1c05d9279c0684465157c88da97a83be47231695c82fe6d650c6475a7c714a2",
+          "role": "identity",
+          "note": "Native species shape: gaunt human in a black robe holding a tall staff with a small flag-like ornament."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/harno.png",
+          "sha256": "6f093ad763d39cfeb6180eff0033174e495a732940ac10ed4a74e999c46a4931",
+          "role": "family",
+          "note": "Shipped catalog humanoid/human: hooded blue-grey cloak with two knives. The Necromancer is a bare-headed robed staff-holder; also stay distinct from urkis (lightning) and celia (pale dress)."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A gaunt bald human man with a pale drawn face in a long slate-violet robe with tattered hem and a high collar, standing upright, one bone-pale hand raised in a casting gesture and the other holding a short twisted dark staff close to the body, its top no higher than a hand above his head. Compact pose, the staff and raised hand well inside the inner four-fifths of the disc.",
+        "contrast": "Fifth humanoid/human catalog identity next to urkis (blue-grey robe with lightning), celia (pale tan dress and wooden staff), harno (hooded cloak with two knives) and the plain thief/rogue figures. The Necromancer is bare-headed and fully robed with a raised pale hand and a short dark staff; silhouette (bald head, long straight robe, raised hand) and value (mid-dark slate-violet robe with lifted lighter fold planes, bone-pale face and hand as the value break) separate it. The robe must never be near-black.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid-dark slate-violet robe with lighter grey-violet fold highlights and a dull grey trim, bone-pale skin at the head and hand, dark brown-black staff with a small dull grey ornament; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Necromancer, define_as=NECROMANCER, type=humanoid/subtype=human, not unique, blighted-ruins/npcs.lua:30-34); details and hashes in evidence/monster-batch-h-20260929/source-contracts.json. No image=/nice_tile; NPC.lua:33 formula gives npc/humanoid_human_necromancer.png (present, inspected); no moddable_tile. Resolves via the generic actor.image==entry.image \"single\" appearance path. Non-unique: exact single-image catalog entry, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-h-20260929/source-contracts.json",
+          "sha256": "7de519f5332e856fa10e27933e77d45d353392cc1894eb713d861488692b8076"
+        }
+      ]
+    },
+    {
+      "asset_id": "fleshy-experiment",
+      "native_name": "fleshy experiment",
+      "scope": "blighted-ruins named non-unique stationary undead/horror (rarity 1)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/blighted-ruins/npcs.lua",
+          "sha256": "383d6aa4ca48a2f2b219020522a29eb4c30b9c8e88e18efd88a8f924b56d3a03",
+          "line": 128,
+          "anchor": "name = \"fleshy experiment\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 24,
+          "anchor": "type = \"undead\", subtype = \"horror\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature.",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_horror_fleshy_experiment.png",
+          "sha256": "f24bfd527028444efeb8afacecd3dc2c7695f7ccaa48ffdfa7d14b55bd104d16",
+          "role": "identity",
+          "note": "Native species shape: a heap of pinkish-brown flesh with trailing strands."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/the-abomination.png",
+          "sha256": "e6b827a671a60b0f66531736d0eafae7ea99f3b532ba52c40d3898ce1af7032d",
+          "role": "family",
+          "note": "Shipped catalog horror/corrupted: dark red-brown tentacle mass with a toothed mouth. The fleshy experiment is a paler pink-brown lumpy mound with trailing rope-like strands and no big fanged maw."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A low lumpy mound of raw pinkish-brown rotting flesh: glistening muscle folds heaped together, several thick ropey strand-like limbs trailing out to the front and sides, two small milky eyes and a couple of wet mouth slits on top of the mound, pale greenish-grey rot patches. Stationary heap fully inside the disc.",
+        "contrast": "Three sibling undead/horror experiments: fleshy (lumpy pink-brown flesh mound with trailing strands, mid value), boney (upright ivory pile of angular bone spikes, lightest) and sanguine (smooth single glossy dark-red clot, darkest with bright highlights). The fleshy one is the multi-lobed mound with several trailing strands: silhouette (lumpy with trailing ropes) and value (mid pinkish tan-brown) separate it, not hue alone.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid pinkish-brown raw flesh with lighter pink-tan highlights and darker maroon creases, pale greenish-grey rot patches, milky pale eyes; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=fleshy experiment, type=undead/subtype=horror, no define_as, not unique, blighted-ruins/npcs.lua:128); details and hashes in evidence/monster-batch-h-20260929/source-contracts.json. No image=/nice_tile; NPC.lua:33 formula gives npc/undead_horror_fleshy_experiment.png (present, inspected). Resolves via the generic actor.image==entry.image \"single\" appearance path. Non-unique: exact single-image catalog entry, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-h-20260929/source-contracts.json",
+          "sha256": "7de519f5332e856fa10e27933e77d45d353392cc1894eb713d861488692b8076"
+        }
+      ]
+    },
+    {
+      "asset_id": "boney-experiment",
+      "native_name": "boney experiment",
+      "scope": "blighted-ruins named non-unique stationary undead/horror (rarity 1)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/blighted-ruins/npcs.lua",
+          "sha256": "383d6aa4ca48a2f2b219020522a29eb4c30b9c8e88e18efd88a8f924b56d3a03",
+          "line": 159,
+          "anchor": "name = \"boney experiment\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 24,
+          "anchor": "type = \"undead\", subtype = \"horror\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature.",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_horror_boney_experiment.png",
+          "sha256": "0a37a915d312fc37fb084be1691a50f6cffe4abd5ae2f040485cfc243893a504",
+          "role": "identity",
+          "note": "Native species shape: a heap of pale bones with spikes."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/half-finished-bone-giant.png",
+          "sha256": "17faccc721ded0674ab8b854ebb1fcf50c246b54b2b002ccb6e4dea2b3fd072d",
+          "role": "family",
+          "note": "Shipped catalog undead/giant: a standing skeleton giant with a violet aura. The boney experiment is a low pile of loose bones, not a standing figure, and has no aura."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A tangled heap of pale yellow-ivory bones: ribs, long bones, vertebrae and two small skulls piled into a rough mound, with several jagged bone spikes jutting upward and outward at angles; angular brittle silhouette with dark gaps between the bones. Stationary heap fully inside the disc.",
+        "contrast": "Three sibling undead/horror experiments: boney is the spiky angular ivory bone pile and the lightest of the three; fleshy (lumpy pink-brown flesh mound with trailing strands) and sanguine (smooth glossy dark-red clot) are soft and rounded. Silhouette (angular spikes vs soft lumps) and value (palest, ivory) separate it, not hue alone. Also not a standing skeleton like the shipped skeleton tokens.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Pale yellow-ivory bone with warm grey shaded planes and dark brown-grey gaps between the bones, a few dull rust stains; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=boney experiment, type=undead/subtype=horror, no define_as, not unique, blighted-ruins/npcs.lua:159); details and hashes in evidence/monster-batch-h-20260929/source-contracts.json. No image=/nice_tile; NPC.lua:33 formula gives npc/undead_horror_boney_experiment.png (present, inspected). Resolves via the generic actor.image==entry.image \"single\" appearance path. Non-unique: exact single-image catalog entry, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-h-20260929/source-contracts.json",
+          "sha256": "7de519f5332e856fa10e27933e77d45d353392cc1894eb713d861488692b8076"
+        }
+      ]
+    },
+    {
+      "asset_id": "sanguine-experiment",
+      "native_name": "sanguine experiment",
+      "scope": "blighted-ruins named non-unique stationary undead/horror (rarity 1)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/blighted-ruins/npcs.lua",
+          "sha256": "383d6aa4ca48a2f2b219020522a29eb4c30b9c8e88e18efd88a8f924b56d3a03",
+          "line": 191,
+          "anchor": "name = \"sanguine experiment\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 24,
+          "anchor": "type = \"undead\", subtype = \"horror\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature.",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_horror_sanguine_experiment.png",
+          "sha256": "4179cfd433e57ce4c6c1b2c2ed89e8ec49de8b72c49b59c080ddb83bff3fa92e",
+          "role": "identity",
+          "note": "Native species shape: a glossy red blood clot blob."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/the-abomination.png",
+          "sha256": "e6b827a671a60b0f66531736d0eafae7ea99f3b532ba52c40d3898ce1af7032d",
+          "role": "family",
+          "note": "Shipped catalog horror/corrupted: red-brown tentacle mass with a toothed mouth. The sanguine experiment is one smooth glossy clot with no tentacles, teeth or mouth."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A single smooth glossy blood clot: a rounded slightly lumpy blob of congealed dark red blood with a slick wet sheen, a few short drips and small bubbles on its surface and two or three broad soft bright specular highlights, no bones, no limbs, no strands, no face. Stationary blob fully inside the disc.",
+        "contrast": "Three sibling undead/horror experiments: sanguine is the smooth single glossy dark-red clot (rounded, no protrusions); fleshy (lumpy pink-brown mound with trailing strands) and boney (spiky ivory bone pile) are otherwise. Silhouette (smooth rounded oval) and value (saturated blood red, darkest of the three but with broad bright highlights and lighter crimson upper planes) separate it, not hue alone. Not faceted like the crimson crystal.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Saturated blood red, never black, with lighter crimson-orange upper planes, broad pale pink specular highlights and a darker wine core shadow at lower right; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=sanguine experiment, type=undead/subtype=horror, no define_as, not unique, blighted-ruins/npcs.lua:191); details and hashes in evidence/monster-batch-h-20260929/source-contracts.json. No image=/nice_tile; NPC.lua:33 formula gives npc/undead_horror_sanguine_experiment.png (present, inspected). Resolves via the generic actor.image==entry.image \"single\" appearance path. Non-unique: exact single-image catalog entry, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-h-20260929/source-contracts.json",
+          "sha256": "7de519f5332e856fa10e27933e77d45d353392cc1894eb713d861488692b8076"
+        }
+      ]
+    }
+  ]
+}

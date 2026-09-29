@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "asset_id": "copperhead-snake",
+  "tool": "image_gen.imagegen",
+  "original_output_path": "~/.codex/generated_images/01a0e205-35a6-7ed0-9868-ecb9672f8a8f/exec-012d764e-c266-47ec-8248-4139a45dc200.png",
+  "saved_output_path": "art/monsters-v7-c0-sol/masters/copperhead-snake-v1.png",
+  "sha256": "0b6ee54d1dea3827455b6a9faadfff610a103f356481c345ef5b923d16fa30c4",
+  "prompt_sha256": "527024e9d9aab2c03484d72a4453267e0799790dabf8fd8115703dbee237457b",
+  "full_prompt": "Use case: stylized-concept. Deliver ONE square transparent PNG miniature token for Tales of Maj'Eyal: copperhead snake. Request 1024 x 1024 pixels; retain the tool's native resolution and alpha.\n\nIdentity brief: One complete copperhead viper with a distinctly broad copper-colored triangular head, narrow neck and tapering tail. Its body makes a loose open double bend like an offset S, rather than closing into a circle; head low and forward at lower left, tail curving toward upper left.\nFamily separation: Existing brown snake is a thick round closed coil with central dark hole and near-uniform warm brown body. Copperhead must read as a longer, more open serpentine diagonal with separated head and tail; broad bright copper head and darker deep-russet body create a different large-value pattern. Avoid a rattlesnake rattle or cobra hood.\nComposition: One entire animal on one thin disc. Keep head, tail and every bend inside rim; open disc gap between separated body turns. Leave upper-right UI margin free of head. Scale the wedge head large enough to remain apparent at 48px, without exaggerating into a dragon head.\n\nMatch the designated style reference's steep overhead three-quarter camera, upper-left soft light, matte painted miniature finish and thin charcoal-brown physical disc with a restrained bronze-grey bevel. The disc occupies about 82% of the canvas width. All anatomy and equipment must remain inside it, with a clear margin. Use broad readable value planes and a crisp silhouette at 48/64/96px; dark bodies need a broad pale rim or lighter facing plane, not tiny glowing outlines. Keep identity-defining features out of the upper-right rank area and upper-left interaction-marker area. Native references establish identity; they do not override the style reference's camera or disc. Do not copy another species from a style reference.\n\nPalette/material: Copper-orange head, deep reddish-brown body, muted pale tan broad hourglass saddles and underbelly. Matte natural scales with restrained highlights. No fangs as a separate status symbol, poison cloud, liquid or green glow.\nTrue transparent alpha outside the disc; no painted checkerboard. Keep the entire disc in frame and transparent corners. This is a static identity illustration. Add no faction ring, health arc, shield, rank, crown, UI marker, number, text, aura, scene or floor outside the disc. No recolor-only substitute for a different species, no montage and no alternate variants in one image. Anatomy must match the identity brief, including intentional missing limbs.\n\nReference roles:\nImage 1: style — Use the approved high three-quarter overhead camera, matte sculpted fur, dark physical disc and muted copper-grey rim; do not copy its body or tail pose.\nImage 2: identity — Native copper head and reddish brown serpent, not body pose or effects.\nImage 3: family — Existing brown snake: avoid its thick closed circular coil and similar overall warm-brown value.\n",
+  "references": [
+    {
+      "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+      "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+      "role": "style",
+      "note": "Use the approved high three-quarter overhead camera, matte sculpted fur, dark physical disc and muted copper-grey rim; do not copy its body or tail pose."
+    },
+    {
+      "path": "game/modules/tome/data/gfx/shockbolt/npc/salmon-snake.png",
+      "sha256": "ca0ad07b3875339609a877c5fa1a94134ae8b175908d23c9d778008d02f3b68d",
+      "role": "identity",
+      "note": "Native copper head and reddish brown serpent, not body pose or effects."
+    },
+    {
+      "path": "game/addons/tome-checker-revised/art/monsters-v1/masters/brown-snake-v1.png",
+      "sha256": "54dd572dbe3114d155664345e9b9e3a6c16fdc6d8fff7487810808e58a06bec6",
+      "role": "family",
+      "note": "Existing brown snake: avoid its thick closed circular coil and similar overall warm-brown value."
+    }
+  ],
+  "attempt": 1,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alpha_bbox": [
+      0,
+      41,
+      1184,
+      1254
+    ]
+  },
+  "preserved_original_bytes": true,
+  "mechanical_check": "pass",
+  "visual_review": "pending",
+  "runtime_review": "pending",
+  "accepted": false
+}

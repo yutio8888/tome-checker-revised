@@ -1,0 +1,194 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-a-2",
+  "assets": [
+    {
+      "asset_id": "minotaur-maze",
+      "native_name": "Minotaur of the Labyrinth",
+      "scope": "maze; exact identity only; live check pending",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/maze/npcs.lua",
+          "sha256": "f07231a5244764f2896978554836c032d56a19d06a56dc7c8528181e5a813c71",
+          "line": 104,
+          "anchor": "Minotaur of the Labyrinth"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_minotaur_minotaur_of_the_labyrinth.png",
+          "sha256": "40d1bfcaa5adb70595e36ca1b60621f7716e6158ec51095aeab768c62dabe74f",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "Upright powerful bull-headed minotaur with broad chest, clear two horns, cloven hooves and a heavy iron labyrinth axe held diagonally inside disc.",
+        "contrast": "Tall biped silhouette and axe separate it from low four-legged Horned Horror; tawny fur and dark leather value blocks.",
+        "composition": "One complete creature centered on one circular disc, steep overhead three-quarter view; all limbs, horns, tail and equipment inside inner five-sixths of disc radius, clear outer band.",
+        "palette": "Warm umber fur, pale muzzle and horn tips, weathered iron axe, leather wraps."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity and native display contract inspected. No live fixture in this assigned task; live validation remains pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-a-20260929/source-contracts.json",
+          "sha256": "81db38a2e4a6fd3ada89165add84694221c3849f329de8ddc9342cc547d219bb"
+        }
+      ]
+    },
+    {
+      "asset_id": "sandworm-queen",
+      "native_name": "Sandworm Queen",
+      "scope": "sandworm-lair; exact identity only; live check pending",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/sandworm-lair/npcs.lua",
+          "sha256": "944fad4800a0c7181abbbf5a61a021223f4803340a0c1b5c7cb74f208daaf418",
+          "line": 87,
+          "anchor": "Sandworm Queen"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/giant-eel-v1.png",
+          "sha256": "ecfab7987b5258ace6a0bec304a9bc336dfbddde1cdf3a90ca438de23fdbd352",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_sandworm_sandworm_queen.png",
+          "sha256": "97d5214e8bd0bb6ebb4fdddf6d2240932c3a50efcba92179a0058d30a768702d",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "Huge female sandworm rearing a segmented front half from a curled heavy body; ringed jaws open, dark mouth, stout hooked digging mandibles, no crown.",
+        "contrast": "Thick circular segmented body and round maw unlike Corrupted Sand Wyrm slender reptilian dragon head and spines.",
+        "composition": "One complete creature centered on one circular disc, steep overhead three-quarter view; all limbs, horns, tail and equipment inside inner five-sixths of disc radius, clear outer band.",
+        "palette": "Sand ochre and umber chitin, pale cream undersides, dark mouth cavity."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity and native display contract inspected. No live fixture in this assigned task; live validation remains pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-a-20260929/source-contracts.json",
+          "sha256": "81db38a2e4a6fd3ada89165add84694221c3849f329de8ddc9342cc547d219bb"
+        }
+      ]
+    },
+    {
+      "asset_id": "corrupted-sand-wyrm",
+      "native_name": "Corrupted Sand Wyrm",
+      "scope": "sandworm-lair; exact identity only; live check pending",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/sandworm-lair/npcs.lua",
+          "sha256": "944fad4800a0c7181abbbf5a61a021223f4803340a0c1b5c7cb74f208daaf418",
+          "line": 176,
+          "anchor": "Corrupted Sand Wyrm"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/giant-eel-v1.png",
+          "sha256": "ecfab7987b5258ace6a0bec304a9bc336dfbddde1cdf3a90ca438de23fdbd352",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_sand_corrupted_sand_wyrm.png",
+          "sha256": "85591c080c53044e53c680f15a4068a297e321e640ff07f4c8ac358038deeddf",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "Sand dragon wyrm with narrow reptilian head, angular hornlets, long sinuous scaly body coiled in an S, dorsal bony spikes and clawed forelimbs; no wings.",
+        "contrast": "Angular dragon head, spine and claws distinguish it from round segmented Sandworm Queen; dark rust plates over pale sand underside.",
+        "composition": "One complete creature centered on one circular disc, steep overhead three-quarter view; all limbs, horns, tail and equipment inside inner five-sixths of disc radius, clear outer band.",
+        "palette": "Corrupted russet, dark ochre, pale sandy belly, matte bone spines."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity and native display contract inspected. No live fixture in this assigned task; live validation remains pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-a-20260929/source-contracts.json",
+          "sha256": "81db38a2e4a6fd3ada89165add84694221c3849f329de8ddc9342cc547d219bb"
+        }
+      ]
+    },
+    {
+      "asset_id": "rantha",
+      "native_name": "Rantha the Worm",
+      "scope": "daikara; exact identity only; live check pending",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/daikara/npcs.lua",
+          "sha256": "c4d6d6b6387719554eb81b4eccb6abe0722bd435860d06d56dafcc778e8019ca",
+          "line": 37,
+          "anchor": "Rantha the Worm"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/dragon-turtle-v1.png",
+          "sha256": "e6e0b9ac315b84bde6b6dfbf342b9aebb5c4d970e54102dcbd301ca67e6d29be",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_ice_rantha_the_worm.png",
+          "sha256": "d7ace374cec37fb7d0a977e8003cc459b54820386912a17e4e7aed46ba2c4f7a",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "Ancient ice dragon with long narrow serpentine neck, deep chest, swept-back blade-like ice horns, folded wings forming a sharp triangular back, coiled tail.",
+        "contrast": "Narrow high icy blade silhouette versus Varsha broad flame-swept horn fan and lower spread wings; light ice planes separate from base.",
+        "composition": "One complete creature centered on one circular disc, steep overhead three-quarter view; all limbs, horns, tail and equipment inside inner five-sixths of disc radius, clear outer band.",
+        "palette": "Glacier blue, frosted white, blue-grey wing membranes, dark navy shadows, no snow effect."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity and native display contract inspected. No live fixture in this assigned task; live validation remains pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-a-20260929/source-contracts.json",
+          "sha256": "81db38a2e4a6fd3ada89165add84694221c3849f329de8ddc9342cc547d219bb"
+        }
+      ]
+    }
+  ]
+}

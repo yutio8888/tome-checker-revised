@@ -1,0 +1,177 @@
+{
+  "schema": 1,
+  "batch_id": "scintillating-terrain-v1",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Native source, rules, variants and visual screenshot verified in the Scintillating identity evidence.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/scintillating-20260928/identity.md",
+          "sha256": "3d7025026c4a51ea4bd90783b5b45339dbb52081adab6058cb58d147fa1afa2a"
+        }
+      ],
+      "scope": "scintillating-caves DEFAULT L1-L3 and TWISTED L1-L5 only",
+      "asset_id": "crystal-floor",
+      "native_name": "CRYSTAL_FLOOR floor",
+      "kind": "terrain-floor",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/crystal.lua",
+          "sha256": "c9ad5e44b50aa6b188de84e4328bb13a32dc93b8ce8f0b77dfedb961c2435581",
+          "line": 37,
+          "anchor": "define_as = \"CRYSTAL_FLOOR\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/scintillating-caves/zone.lua",
+          "sha256": "38dde4692043dca5c6a58cb84afd2d27c63882d76493880aa82777777d37effb",
+          "line": 20,
+          "anchor": "local layout ="
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/crystal_floor1.png",
+          "sha256": "e5769644e58044bb27065bf0120c69cc6cd2bc583fccb4de18457779785ca332",
+          "role": "identity",
+          "note": "Native crystal form and palette"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-sandworm-v1/masters/sand-wall-v1.png",
+          "sha256": "1314fa7b3dca5fa9c82ced2c2c7bf3040b6bb2234d24df71bb0d93a96e76f720",
+          "role": "style",
+          "note": "Approved cell-filling tabletop wall scale and lighting"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Floor and ladders passable; wall blocks movement with pass_wall=1 and dig to CRYSTAL_FLOOR.",
+        "sight": "Floor and ladders open; wall blocks sight.",
+        "danger": "No inherent hazard; unrelated vault grids remain native.",
+        "interaction": "Ladders keep native level and world destinations; DIG unchanged.",
+        "export": "128px parity pair; wall connected N/E/S/W 16-mask set."
+      },
+      "prompt_fields": {
+        "subject": "Opaque flat dark slate crystal-cave ground with small embedded violet and cyan mineral flecks, subtle broad mineral seams, no raised obstacles or implied speed bonus.",
+        "contrast": "Readable at 48/64/96px; solid wall at least 18% value apart from floor; calm connected interior.",
+        "composition": "Overhead seamless square, all edges opaque. The bright flecks are sparse; this is a passable floor.",
+        "palette": "Cool desaturated indigo, slate, violet and muted turquoise with broad readable value.",
+        "mechanics": "Preserve native movement, sight, digging and destinations in art; no text, symbols, actor or hazard icon."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native source, rules, variants and visual screenshot verified in the Scintillating identity evidence.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/scintillating-20260928/identity.md",
+          "sha256": "3d7025026c4a51ea4bd90783b5b45339dbb52081adab6058cb58d147fa1afa2a"
+        }
+      ],
+      "scope": "scintillating-caves DEFAULT L1-L3 and TWISTED L1-L5 only",
+      "asset_id": "crystal-wall",
+      "native_name": "CRYSTAL_WALL wall",
+      "kind": "terrain-prop",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/crystal.lua",
+          "sha256": "c9ad5e44b50aa6b188de84e4328bb13a32dc93b8ce8f0b77dfedb961c2435581",
+          "line": 22,
+          "anchor": "define_as = \"CRYSTAL_WALL\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/scintillating-caves/zone.lua",
+          "sha256": "38dde4692043dca5c6a58cb84afd2d27c63882d76493880aa82777777d37effb",
+          "line": 20,
+          "anchor": "local layout ="
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/crystal_alpha1.png",
+          "sha256": "e8d5420b088facc9ed19b9dbca25d2e8729cf54fe8e59a08678f39e10d057c28",
+          "role": "identity",
+          "note": "Native crystal form and palette"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-sandworm-v1/masters/sand-wall-v1.png",
+          "sha256": "1314fa7b3dca5fa9c82ced2c2c7bf3040b6bb2234d24df71bb0d93a96e76f720",
+          "role": "style",
+          "note": "Approved cell-filling tabletop wall scale and lighting"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Floor and ladders passable; wall blocks movement with pass_wall=1 and dig to CRYSTAL_FLOOR.",
+        "sight": "Floor and ladders open; wall blocks sight.",
+        "danger": "No inherent hazard; unrelated vault grids remain native.",
+        "interaction": "Ladders keep native level and world destinations; DIG unchanged.",
+        "export": "128px parity pair; wall connected N/E/S/W 16-mask set."
+      },
+      "prompt_fields": {
+        "subject": "Solid massive faceted crystal-bearing rock, wide compact calm top planes and a lower exposed cliff face, blocking cell-filling mass. Facets are broad and subdued in the interior; no isolated spikes.",
+        "contrast": "Readable at 48/64/96px; solid wall at least 18% value apart from floor; calm connected interior.",
+        "composition": "Single complete raised mass nearly filling the square, transparent beyond its outline, top and front visible. Crystal facets should form rock material, not individual slender stalagmites.",
+        "palette": "Deep indigo and dark blue-green rock, restrained cyan and amethyst facets, significantly darker than the floor.",
+        "mechanics": "Preserve native movement, sight, digging and destinations in art; no text, symbols, actor or hazard icon."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native source, rules, variants and visual screenshot verified in the Scintillating identity evidence.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/scintillating-20260928/identity.md",
+          "sha256": "3d7025026c4a51ea4bd90783b5b45339dbb52081adab6058cb58d147fa1afa2a"
+        }
+      ],
+      "scope": "scintillating-caves DEFAULT L1-L3 and TWISTED L1-L5 only",
+      "asset_id": "crystal-ladder",
+      "native_name": "CRYSTAL_LADDER_UP and DOWN",
+      "kind": "terrain-prop",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/crystal.lua",
+          "sha256": "c9ad5e44b50aa6b188de84e4328bb13a32dc93b8ce8f0b77dfedb961c2435581",
+          "line": 47,
+          "anchor": "define_as = \"CRYSTAL_LADDER_DOWN\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/scintillating-caves/zone.lua",
+          "sha256": "38dde4692043dca5c6a58cb84afd2d27c63882d76493880aa82777777d37effb",
+          "line": 20,
+          "anchor": "local layout ="
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/crystal_ladder_down.png",
+          "sha256": "7eeb7b6e5e5021206f360191ab66bf8f3dc1b0c2ae20973699123be54869cfca",
+          "role": "identity",
+          "note": "Native crystal form and palette"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-sandworm-v1/masters/sand-wall-v1.png",
+          "sha256": "1314fa7b3dca5fa9c82ced2c2c7bf3040b6bb2234d24df71bb0d93a96e76f720",
+          "role": "style",
+          "note": "Approved cell-filling tabletop wall scale and lighting"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Floor and ladders passable; wall blocks movement with pass_wall=1 and dig to CRYSTAL_FLOOR.",
+        "sight": "Floor and ladders open; wall blocks sight.",
+        "danger": "No inherent hazard; unrelated vault grids remain native.",
+        "interaction": "Ladders keep native level and world destinations; DIG unchanged.",
+        "export": "128px parity pair; wall connected N/E/S/W 16-mask set."
+      },
+      "prompt_fields": {
+        "subject": "A small sturdy carved stone ladder well with crystal-lined rim and visible descending rungs, a compact architectural opening.",
+        "contrast": "Readable at 48/64/96px; solid wall at least 18% value apart from floor; calm connected interior.",
+        "composition": "Centered three-quarter overhead cutout, fully within square with native transparent corners; no floor painted underneath.",
+        "palette": "Dark indigo stone, muted violet mineral trim and pale cyan edges.",
+        "mechanics": "Preserve native movement, sight, digging and destinations in art; no text, symbols, actor or hazard icon."
+      }
+    }
+  ]
+}

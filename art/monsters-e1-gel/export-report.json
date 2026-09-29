@@ -1,0 +1,997 @@
+{
+  "method": "existing C export_token.c; native alpha; bbox placement; premultiplied-alpha area downsampling; 128px style gate with allow_grandfather=False",
+  "assets": [
+    {
+      "id": "green-jelly",
+      "master": "masters/green-jelly-v1.png",
+      "sha256": "cf512860b9abf513f1d5981362dccfea0e7304d3c1af359aae2d5f45166dcbee",
+      "exports": [
+        {
+          "path": "exports/48/green-jelly.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            95,
+            89,
+            1158,
+            1159
+          ],
+          "export_window": [
+            4.406977,
+            1.906977,
+            1244.186047
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1d6a533c1c23cd83a7990839fd3bf7517d99bea2ee22f7f1ff8402da5a82c4a8"
+        },
+        {
+          "path": "exports/64/green-jelly.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            95,
+            89,
+            1158,
+            1159
+          ],
+          "export_window": [
+            4.406977,
+            1.906977,
+            1244.186047
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4cfbf414727fac7b5cb0df3e2beaa1fcf2548cc7bea39bd2ab8ff422296e1c60"
+        },
+        {
+          "path": "exports/96/green-jelly.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            95,
+            89,
+            1158,
+            1159
+          ],
+          "export_window": [
+            4.406977,
+            1.906977,
+            1244.186047
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "36502b07c3c8595b8c1e60517ac75866f627ebb2865e895cbc5c611b0cde7e97"
+        },
+        {
+          "path": "exports/128/green-jelly.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            95,
+            89,
+            1158,
+            1159
+          ],
+          "export_window": [
+            4.406977,
+            1.906977,
+            1244.186047
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1a1560b1fe8e95b9a52989669d5bdf58a65731983305e7f4b8dbb7550f7bb69e"
+        },
+        {
+          "path": "exports/256/green-jelly.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            95,
+            89,
+            1158,
+            1159
+          ],
+          "export_window": [
+            4.406977,
+            1.906977,
+            1244.186047
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c4e274499a98774f80b1970158035dd79f53d08cd326d03d963faec5a14d07f4"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "allow_grandfather": false,
+        "base_drift": 0.07,
+        "max_sector_intrusion": 3.74,
+        "max_opaque_radius": 0.8576,
+        "export_occupancy": 0.859375,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true
+      }
+    },
+    {
+      "id": "black-jelly",
+      "master": "masters/black-jelly-v1.png",
+      "sha256": "7979a2a9bcf3ac409473b28ea18be51904ea628d1e3778cb85ce4e18ff7d11ad",
+      "exports": [
+        {
+          "path": "exports/48/black-jelly.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            94,
+            85,
+            1157,
+            1159
+          ],
+          "export_window": [
+            1.081395,
+            -2.418605,
+            1248.837209
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "991766ca1314185a8c62f64f73589886abcb6991e677de590131c93f87f5efef"
+        },
+        {
+          "path": "exports/64/black-jelly.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            94,
+            85,
+            1157,
+            1159
+          ],
+          "export_window": [
+            1.081395,
+            -2.418605,
+            1248.837209
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8f24ea8e98bcd0434e6d97dee3c52ecae19512f282c31194dffa045d3c9328d0"
+        },
+        {
+          "path": "exports/96/black-jelly.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            94,
+            85,
+            1157,
+            1159
+          ],
+          "export_window": [
+            1.081395,
+            -2.418605,
+            1248.837209
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a668bb04e1c305a5b194970dbb9de4d642deb2ac6bebad56caf5b0c7c5a7e41f"
+        },
+        {
+          "path": "exports/128/black-jelly.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            94,
+            85,
+            1157,
+            1159
+          ],
+          "export_window": [
+            1.081395,
+            -2.418605,
+            1248.837209
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d3583d6e349e2714c0c653f87f37e430d356c7fcce4a167c173f210aad1816d2"
+        },
+        {
+          "path": "exports/256/black-jelly.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            94,
+            85,
+            1157,
+            1159
+          ],
+          "export_window": [
+            1.081395,
+            -2.418605,
+            1248.837209
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ed9e2adfbd2a7b175ce1b88a5eefd8ed20b972ab7ccfa8c40a19b88240a349bd"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "allow_grandfather": false,
+        "base_drift": -0.32,
+        "max_sector_intrusion": 2.82,
+        "max_opaque_radius": 0.8576,
+        "export_occupancy": 0.859375,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true
+      }
+    },
+    {
+      "id": "white-jelly",
+      "master": "masters/white-jelly-v1.png",
+      "sha256": "dcbf1e18b5c1368144ccef058f8d33293a2afba6c58c07d23277a0f07ac3b829",
+      "exports": [
+        {
+          "path": "exports/48/white-jelly.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            96,
+            88,
+            1155,
+            1163
+          ],
+          "export_window": [
+            0.5,
+            0.5,
+            1250.0
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0b96f6971cef079e8dd01d213e303c790d7bc987c447941f505f1567168908f7"
+        },
+        {
+          "path": "exports/64/white-jelly.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            96,
+            88,
+            1155,
+            1163
+          ],
+          "export_window": [
+            0.5,
+            0.5,
+            1250.0
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1114af9346722e95a33b529c7a93ab95fc9bf0e31855882d570a7959fa8a0efa"
+        },
+        {
+          "path": "exports/96/white-jelly.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            96,
+            88,
+            1155,
+            1163
+          ],
+          "export_window": [
+            0.5,
+            0.5,
+            1250.0
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5c26f4e18c709e655fec3b9ad6734e0c623d763b8f2a0cf79561a2fc90ff665c"
+        },
+        {
+          "path": "exports/128/white-jelly.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            96,
+            88,
+            1155,
+            1163
+          ],
+          "export_window": [
+            0.5,
+            0.5,
+            1250.0
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7b24189c40f9aa69767d34944316d3404e14044e52d4087a49d6594d412b84f5"
+        },
+        {
+          "path": "exports/256/white-jelly.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            96,
+            88,
+            1155,
+            1163
+          ],
+          "export_window": [
+            0.5,
+            0.5,
+            1250.0
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ab13cbcf64b012f8b77b0948716aa75687f4e15184d1a3f14bc7fd736a2521bc"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "allow_grandfather": false,
+        "base_drift": -2.15,
+        "max_sector_intrusion": 5.05,
+        "max_opaque_radius": 0.8576,
+        "export_occupancy": 0.859375,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true
+      }
+    },
+    {
+      "id": "yellow-jelly",
+      "master": "masters/yellow-jelly-v1.png",
+      "sha256": "172553e7b76b2e0b04d1da9526046c41f12ccfb74a7b5ab38264ad7c852a2881",
+      "exports": [
+        {
+          "path": "exports/48/yellow-jelly.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            93,
+            89,
+            1158,
+            1159
+          ],
+          "export_window": [
+            3.406977,
+            1.906977,
+            1244.186047
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "36d14db64e86cf1074c332ffdadcf5f25aafddc77258a0dfc48511c397069600"
+        },
+        {
+          "path": "exports/64/yellow-jelly.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            93,
+            89,
+            1158,
+            1159
+          ],
+          "export_window": [
+            3.406977,
+            1.906977,
+            1244.186047
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e205fe4f91393e1918cf45c38d06617e6cb56477e5bdee4d0c2f8559ae77c7ac"
+        },
+        {
+          "path": "exports/96/yellow-jelly.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            93,
+            89,
+            1158,
+            1159
+          ],
+          "export_window": [
+            3.406977,
+            1.906977,
+            1244.186047
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "91f49c56c244dbdc52b7316e4052e56046ad2d7ad83b304b6c499addbda18af1"
+        },
+        {
+          "path": "exports/128/yellow-jelly.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            93,
+            89,
+            1158,
+            1159
+          ],
+          "export_window": [
+            3.406977,
+            1.906977,
+            1244.186047
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c1319c8a0341b04dfbdfcacdd9a524fba5fd062e715051b7ad7cf4d737ed74fd"
+        },
+        {
+          "path": "exports/256/yellow-jelly.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            93,
+            89,
+            1158,
+            1159
+          ],
+          "export_window": [
+            3.406977,
+            1.906977,
+            1244.186047
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a30d244b7e3354f643904d5461e72041bc2df5f521db0c656fb882666f47f6f2"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "allow_grandfather": false,
+        "base_drift": 3.0,
+        "max_sector_intrusion": 3.31,
+        "max_opaque_radius": 0.8576,
+        "export_occupancy": 0.859375,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true
+      }
+    },
+    {
+      "id": "black-ooze",
+      "master": "masters/black-ooze-v1.png",
+      "sha256": "5048c0366eafd09a28cd49945dd9ab0e2c0102c8f4a7d501b85a5a0b15fbf8ca",
+      "exports": [
+        {
+          "path": "exports/48/black-ooze.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            106,
+            112,
+            1145,
+            1148
+          ],
+          "export_window": [
+            21.430233,
+            25.930233,
+            1208.139535
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ed3d4168d419a357b95968ba7cf94149f8e18d769ef600c1b50a55e0f8a2d7ab"
+        },
+        {
+          "path": "exports/64/black-ooze.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            106,
+            112,
+            1145,
+            1148
+          ],
+          "export_window": [
+            21.430233,
+            25.930233,
+            1208.139535
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c91fd4689913bc6fde2ce022596b61a7f0adffe2a4c5b74784b6e0687401a237"
+        },
+        {
+          "path": "exports/96/black-ooze.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            106,
+            112,
+            1145,
+            1148
+          ],
+          "export_window": [
+            21.430233,
+            25.930233,
+            1208.139535
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4f596ee7eb7559d249fe06643c6945f673abe3060a1218d5c8c51cc08dedfdde"
+        },
+        {
+          "path": "exports/128/black-ooze.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            106,
+            112,
+            1145,
+            1148
+          ],
+          "export_window": [
+            21.430233,
+            25.930233,
+            1208.139535
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "08694c912bae8bd03b833c40eac453f3d4ce6570078f33edf0a273920396a7a2"
+        },
+        {
+          "path": "exports/256/black-ooze.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            106,
+            112,
+            1145,
+            1148
+          ],
+          "export_window": [
+            21.430233,
+            25.930233,
+            1208.139535
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d1fa05102d91d5f9921c79ae32901c7111d3ef69b38f0152476bd5c951b2ed09"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "allow_grandfather": false,
+        "base_drift": 0.83,
+        "max_sector_intrusion": 4.51,
+        "max_opaque_radius": 0.8596,
+        "export_occupancy": 0.859375,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true
+      }
+    },
+    {
+      "id": "yellow-ooze",
+      "master": "masters/yellow-ooze-v1.png",
+      "sha256": "947c5f5a16934a85e9c7996522c08f528bb0df69e7ce3145734adbccae4986db",
+      "exports": [
+        {
+          "path": "exports/48/yellow-ooze.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            88,
+            1165,
+            1163
+          ],
+          "export_window": [
+            -1.825581,
+            -1.825581,
+            1254.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c5ef50f58a121f954c38f22c54049ea1e53f7eeee0d067ff60999d2f836c5116"
+        },
+        {
+          "path": "exports/64/yellow-ooze.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            88,
+            1165,
+            1163
+          ],
+          "export_window": [
+            -1.825581,
+            -1.825581,
+            1254.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6e1abc6dd36d87406e1b8c7d6bff07edd980d849c41e1d6122aa6f76b28193ca"
+        },
+        {
+          "path": "exports/96/yellow-ooze.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            88,
+            1165,
+            1163
+          ],
+          "export_window": [
+            -1.825581,
+            -1.825581,
+            1254.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0a3f4487e815c0b2eaefc179a552e04e1b939269b6461414ae8212a2796c3508"
+        },
+        {
+          "path": "exports/128/yellow-ooze.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            88,
+            1165,
+            1163
+          ],
+          "export_window": [
+            -1.825581,
+            -1.825581,
+            1254.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "edf8cebbba2ee8bd5ff3a7029c93ac262bd51e134db3022805471dce95bb04d4"
+        },
+        {
+          "path": "exports/256/yellow-ooze.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            88,
+            1165,
+            1163
+          ],
+          "export_window": [
+            -1.825581,
+            -1.825581,
+            1254.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "dc684ea9670b60bad85597b91d69bd747dce39e2fd754d9020f04ebfb65983be"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "allow_grandfather": false,
+        "base_drift": 1.25,
+        "max_sector_intrusion": 5.3,
+        "max_opaque_radius": 0.8585,
+        "export_occupancy": 0.859375,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true
+      }
+    },
+    {
+      "id": "red-ooze",
+      "master": "masters/red-ooze-v1.png",
+      "sha256": "638dbd93ef284d234a4636c95502c30308567655db45e8226d0dea5fc623ceec",
+      "exports": [
+        {
+          "path": "exports/48/red-ooze.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            106,
+            112,
+            1146,
+            1150
+          ],
+          "export_window": [
+            21.348837,
+            26.348837,
+            1209.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "845d076b5400540423ffc9981ba01e288fd07c1f47eda2442ed7352f7028e970"
+        },
+        {
+          "path": "exports/64/red-ooze.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            106,
+            112,
+            1146,
+            1150
+          ],
+          "export_window": [
+            21.348837,
+            26.348837,
+            1209.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "240928ce6ff48f6a2ba34937ab9006a02b3a31e40186e3ebec983c87a1ac1b11"
+        },
+        {
+          "path": "exports/96/red-ooze.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            106,
+            112,
+            1146,
+            1150
+          ],
+          "export_window": [
+            21.348837,
+            26.348837,
+            1209.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7f814663277f1cf17d799abbd0d20d5c5dd97a9d82dfc6e5fc113046dd5e3918"
+        },
+        {
+          "path": "exports/128/red-ooze.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            106,
+            112,
+            1146,
+            1150
+          ],
+          "export_window": [
+            21.348837,
+            26.348837,
+            1209.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6ef893b8b3abeb365533ca206a89989926a88d4dff17445865a7250cb584284d"
+        },
+        {
+          "path": "exports/256/red-ooze.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            106,
+            112,
+            1146,
+            1150
+          ],
+          "export_window": [
+            21.348837,
+            26.348837,
+            1209.302326
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7f2210f5c3e7b7245bcecdb6354f79e83fac00d1962e56a90ba3fb53edc4c54e"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "allow_grandfather": false,
+        "base_drift": 0.35,
+        "max_sector_intrusion": 5.17,
+        "max_opaque_radius": 0.8596,
+        "export_occupancy": 0.859375,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true
+      }
+    },
+    {
+      "id": "blue-ooze",
+      "master": "masters/blue-ooze-v1.png",
+      "sha256": "4ed947edbd1ba2e84a09dc72d08bd514946e9761f5bea97bde04a4a2b63674ac",
+      "exports": [
+        {
+          "path": "exports/48/blue-ooze.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            103,
+            108,
+            1146,
+            1149
+          ],
+          "export_window": [
+            18.104651,
+            22.104651,
+            1212.790698
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1c0bc02c4f63e333d4f4d69d503d3b80474b60d7dc46a2af43aeffa532580b5c"
+        },
+        {
+          "path": "exports/64/blue-ooze.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            103,
+            108,
+            1146,
+            1149
+          ],
+          "export_window": [
+            18.104651,
+            22.104651,
+            1212.790698
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3c74e7a0561a52b6d5afc3f9342d79e1b42b0e39476853bc29e1235991688377"
+        },
+        {
+          "path": "exports/96/blue-ooze.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            103,
+            108,
+            1146,
+            1149
+          ],
+          "export_window": [
+            18.104651,
+            22.104651,
+            1212.790698
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8969fba593c321209bc689e03c61910dc1b8f7c03646060f57ec2ddf26ee2f4e"
+        },
+        {
+          "path": "exports/128/blue-ooze.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            103,
+            108,
+            1146,
+            1149
+          ],
+          "export_window": [
+            18.104651,
+            22.104651,
+            1212.790698
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b1482d61122f0fa7901e41a31ef5ac99b17233d8bbfa3d653425fbce8f77b489"
+        },
+        {
+          "path": "exports/256/blue-ooze.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            103,
+            108,
+            1146,
+            1149
+          ],
+          "export_window": [
+            18.104651,
+            22.104651,
+            1212.790698
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "dec5c54e29bc1457d35fa2fece78f6021a1ad153c7841d9945e8f571f16cf632"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "allow_grandfather": false,
+        "base_drift": -1.27,
+        "max_sector_intrusion": 8.5,
+        "max_opaque_radius": 0.8596,
+        "export_occupancy": 0.859375,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true
+      }
+    }
+  ]
+}

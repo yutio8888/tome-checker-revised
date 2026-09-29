@@ -1,0 +1,140 @@
+{
+  "schema": 1,
+  "status": "APPROVED by reviewer 2026-09-29 for all seven entries (see art/monster-batch-e/REVIEW.md); wiring into a trusted monster-batch-e.json, the catalog and the manifest is pending. Ungolë and Kryl-Feijan must be checked in-game at 48px.",
+  "scope": "monster-batch-e (12 recommended zone-finale bosses, CONTRACTS-B5-B7-20260929.md §2); exact-byte base_drift-only waiver requests. No alpha, geometry or occupancy waiver requested for any entry.",
+  "assets": [
+    {
+      "id": "urkis",
+      "native_name": "Urkis, the High Tempest",
+      "call": "art/production/handoffs/monster-batch-e-1/urkis/imagegen-calls/call-1/call.json",
+      "receipt": "art/production/handoffs/monster-batch-e-1/urkis/receipts/attempt-1.json",
+      "master_path": "art/monster-batch-e/masters/urkis-v1.png",
+      "master_sha256": "efc747dcfdf3f584afbdbfc4a7a9438745b89258b34a0291bc2e0110590daef5",
+      "runtime_128_export_sha256": "644bdf7182e5ffe84f73a68f279f5071ba3fd535d295759acb28a8fc5f3d6c3a",
+      "base_drift": -12.21,
+      "disc_overflow_max_opaque_radius": 0.8585,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "attempts_used": 1,
+      "reason": "Single call, base_drift-only (magnitude 4.21 over the +-8 tolerance). 48/64/96px reviewed on art/monster-batch-e/review/humans-color-48-64-96.png and grayscale sheet: a commanding bearded robed figure wrapped in a bright cyan-white lightning aura, reads clearly at all sizes and is unmistakable from this batch's own Celia (pale unlit robed female, no aura). A repair (edit pass) was deliberately not attempted: this batch's edit-based brighten repairs on lady-zoisla (+9 ask -> +52.61 actual) and ungole (+9.47 ask -> +44.24 actual) both overshot by roughly 5x, so a second call risked wasting the pack's last attempt for a worse result; the fresh (non-edit) master already reads cleanly and is presented for a waiver decision rather than a gamble on a repair call."
+    },
+    {
+      "id": "golbug",
+      "native_name": "Golbug the Destroyer",
+      "call": "art/production/handoffs/monster-batch-e-1/golbug/imagegen-calls/call-1/call.json",
+      "receipt": "art/production/handoffs/monster-batch-e-1/golbug/receipts/attempt-1.json",
+      "master_path": "art/monster-batch-e/masters/golbug-v1.png",
+      "master_sha256": "f9550b97e0b72011880aaabf720e04d29c431f782f1642b21a02fcde430bcf00",
+      "runtime_128_export_sha256": "4f7047dc4d3756bbce03ee27b1740345f17cb9764399ac774169994f40d008d6",
+      "base_drift": -15.18,
+      "disc_overflow_max_opaque_radius": 0.8596,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "attempts_used": 1,
+      "reason": "Single call, base_drift-only (magnitude 7.18 over tolerance -- the largest overrun in this batch). 48/64/96px reviewed: upswept horned brass-trimmed pauldrons and a low diagonal sword read clearly and are unmistakable from this batch's own Brotoq (angular helm, near-black plate, sword raised, shipped as brotoq-v2 with no waiver). No repair attempted for the same edit-overshoot reason as urkis above; flagged for reviewer judgment given the larger magnitude."
+    },
+    {
+      "id": "ungole",
+      "native_name": "Ungolë",
+      "call": "art/production/handoffs/monster-batch-e-2/ungole/imagegen-calls/call-1/call.json",
+      "receipt": "art/production/handoffs/monster-batch-e-2/ungole/receipts/attempt-1.json",
+      "master_path": "art/monster-batch-e/masters/ungole-v1.png",
+      "master_sha256": "244c9022f42b813cbba0fec605d554d24c175ad621ccebcd3b4e8b0f72ecbd56",
+      "runtime_128_export_sha256": "68c78ccd8392b026a7e37f20f1ea0205ebb643fac53d5d2435d1e38e7b2a3489",
+      "base_drift": -9.47,
+      "disc_overflow_max_opaque_radius": 0.8585,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "attempts_used": 2,
+      "reason": "Attempt 1: base_drift-only (magnitude 1.47 over tolerance, the smallest overrun in this batch). Attempt 2 (metric-driven repair asking to brighten ~9 units) overshot to +44.24 and was rejected outright, confirming the edit-overshoot pattern; attempt-1's master is the one presented here (attempt-2's failed master is not saved to art/monster-batch-e/masters/ and is not part of this request). First spiderkin/spider identity in the catalog; 48/64/96px reviewed, glowing red eye-cluster against a near-black body reads clearly and there is no in-family sibling to confuse it with. This pack's 2-call budget is now exhausted."
+    },
+    {
+      "id": "half-finished-bone-giant",
+      "native_name": "Half-Finished Bone Giant",
+      "call": "art/production/handoffs/monster-batch-e-2/half-finished-bone-giant/imagegen-calls/call-1/call.json",
+      "receipt": "art/production/handoffs/monster-batch-e-2/half-finished-bone-giant/receipts/attempt-1.json",
+      "master_path": "art/monster-batch-e/masters/half-finished-bone-giant-v1.png",
+      "master_sha256": "11407d67e6508222bb958c935edf6f80bf977b629c496b117102867a39232ccd",
+      "runtime_128_export_sha256": "17faccc721ded0674ab8b854ebb1fcf50c246b54b2b002ccb6e4dea2b3fd072d",
+      "base_drift": -12.83,
+      "disc_overflow_max_opaque_radius": 0.8585,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "attempts_used": 1,
+      "reason": "Single call, base_drift-only (magnitude 4.83 over tolerance). First undead/giant identity in the catalog. 48/64/96px reviewed: asymmetric mismatched-bone gangly silhouette with a pale lavender aura fringe reads clearly and is unmistakable from the existing undead/skeleton family (all human-sized, no aura). No repair attempted for the same edit-overshoot reason as urkis above."
+    },
+    {
+      "id": "kryl-feijan",
+      "native_name": "Kryl-Feijan",
+      "call": "art/production/handoffs/monster-batch-e-2/kryl-feijan/imagegen-calls/call-1/call.json",
+      "receipt": "art/production/handoffs/monster-batch-e-2/kryl-feijan/receipts/attempt-1.json",
+      "master_path": "art/monster-batch-e/masters/kryl-feijan-v1.png",
+      "master_sha256": "78455189c39576c2a223ac56fefeaebd9237d483dfb5d8914d656e8013566685",
+      "runtime_128_export_sha256": "94dbb0f8d7bcb6862dd86ddf688da5d250c49a354395955b12dc627d35d73a60",
+      "base_drift": -10.97,
+      "disc_overflow_max_opaque_radius": 0.8576,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "attempts_used": 1,
+      "reason": "Single call, base_drift-only (magnitude 2.97 over tolerance). First demon/major identity in the catalog. 48/64/96px reviewed: pale blue-white claws breaking out of a near-black roiling smoke mass with red eye glints read clearly at every size against the dark disc; no in-family sibling to confuse it with. No repair attempted for the same edit-overshoot reason as urkis above."
+    },
+    {
+      "id": "atamathon",
+      "native_name": "Atamathon the Giant Golem",
+      "call": "art/production/handoffs/monster-batch-e-2/atamathon/imagegen-calls/call-1/call.json",
+      "receipt": "art/production/handoffs/monster-batch-e-2/atamathon/receipts/attempt-1.json",
+      "master_path": "art/monster-batch-e/masters/atamathon-v1.png",
+      "master_sha256": "812b588bd47e64210e5adef1cbd7d1bd30eecc15d8ce5e70f6415facb1d26641",
+      "runtime_128_export_sha256": "6614c844e9cfe4023206fe54a2a2f0a9b817c71d9906f655d36574c578379747",
+      "base_drift": -10.6,
+      "disc_overflow_max_opaque_radius": 0.8585,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "attempts_used": 1,
+      "reason": "Single call, base_drift-only (magnitude 2.60 over tolerance). First construct/golem identity in the catalog. 48/64/96px reviewed: pale marble body with dark voratun joint bands and glowing ruby eyes reads clearly at every size; no in-family sibling to confuse it with. No repair attempted for the same edit-overshoot reason as urkis above. Contract maps only the verified native-tall body per evidence/monster-batch-e-20260929/source-contracts.json (the nicer_tiles-off npc/atamathon.png single-icon fallback is intentionally left native and unmapped, see that evidence file and CONTRACTS-B5-B7-20260929.md §2)."
+    },
+    {
+      "id": "ritch-hive-mother",
+      "native_name": "Ritch Great Hive Mother",
+      "call": "art/production/handoffs/monster-batch-e-3/ritch-hive-mother/imagegen-calls/call-1/call.json",
+      "receipt": "art/production/handoffs/monster-batch-e-3/ritch-hive-mother/receipts/attempt-1.json",
+      "master_path": "art/monster-batch-e/masters/ritch-hive-mother-v1.png",
+      "master_sha256": "9b64eef18c8a63b0cd5c81ca1460bbc7bd9c5da2bc92453174a5cb48681060b1",
+      "runtime_128_export_sha256": "f829d76d172ae899c013a735f3d4796ee59294ca53bdfa05a3e387b88f745827",
+      "base_drift": -10.34,
+      "disc_overflow_max_opaque_radius": 0.8576,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "attempts_used": 1,
+      "reason": "Single call, base_drift-only (magnitude 2.34 over tolerance). First insect/ritch identity in the catalog (distinct body plan from insect/ant and insect/swarms). 48/64/96px reviewed: rust-orange crab-like hunched body with cool blue joint accents and raised oversized claws reads clearly at every size; no in-family sibling to confuse it with. No repair attempted for the same edit-overshoot reason as urkis above."
+    }
+  ]
+}

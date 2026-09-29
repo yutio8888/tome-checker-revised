@@ -1,0 +1,70 @@
+{
+  "asset_id": "door-closed-vertical-v1",
+  "material": "door-closed-vertical",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "intent": "reference-guided generation/edit",
+  "prompt": "Use case: stylized-concept. Create the VERTICAL-AXIS orientation of this CLOSED ordinary dungeon door component. Same square true-alpha PNG, pale chipped limestone jamb material, warm dull oak leaf and plain dark iron straps, same matte hand-painted overhead miniature style. Reconstruct geometry under FIXED UPPER-LEFT WORLD LIGHT, do not rotate the lighting. Vertical wall line runs NORTH-SOUTH through middle; passage runs EAST-WEST. Put one compact stone jamb at NORTH-center and one at SOUTH-center. A closed upright thick wooden door leaf spans north-to-south between these jambs, blocking east-west crossing. Camera very steep overhead, so see broad stone tops, thick long wood top edge and modest EAST-facing wood face with iron straps and small ring handle. Preserve counterpart's construction, proportions and material. Top jamb around x50%, y24%; bottom jamb around x50%,y75%; door between. All geometry stays inside 8..92% of square and no alpha touches canvas edge. Side faces and contact shadows remain in-cell. No floor, backdrop, lintel over opening, circular base, decorative objects, cracks through doorway, symbols, text, arrows, lock icon, runes or watermark. Closed leaf joins both jambs so crossing is visibly blocked. One asset, no sheet. Entire outside is genuine alpha transparent.",
+  "references": [
+    "door-closed-horizontal-v1"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-f36eb1ca-001a-44ec-b2aa-b0f58aae2aaf.png",
+  "saved_output_path": "art/terrain-korpul-v1/masters/door-closed-vertical-v1.png",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "native_alpha_required": true,
+  "selection": "design-candidate-not-runtime-ready",
+  "rejection_reason": null,
+  "processing": "Copy original unchanged; small-size whole-canvas resampling only. No alpha extraction, relighting, recolouring, rotation, or painted geometry.",
+  "sha256": "9599feec6daaf4cf5d4dab953eba53813d50604cc710ac835eb0bc3edf6e13f7",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      103,
+      21,
+      1200,
+      1223
+    ],
+    "transparent_pixels": 1327052,
+    "partial_alpha_pixels": 245210,
+    "opaque_pixels": 254,
+    "visible_alpha_bbox_gt8": [
+      482,
+      99,
+      777,
+      1159
+    ],
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "references_resolved": [
+    "masters/door-closed-horizontal-v1.png"
+  ],
+  "static_review": {
+    "sheet": "review/design-sheet.png",
+    "actual_sizes": [
+      48,
+      64,
+      96
+    ],
+    "floor_repeat_size": 128,
+    "grayscale": "CSS display only",
+    "runtime_verified": false,
+    "connected_masks_verified": false
+  }
+}

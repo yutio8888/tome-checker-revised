@@ -1,0 +1,38 @@
+window.monsterCatalog = [
+  {
+    "id": "xhaiak-arachnomancer"
+  },
+  {
+    "id": "shiaak-venomblade"
+  },
+  {
+    "id": "dremling"
+  },
+  {
+    "id": "pale-drake"
+  },
+  {
+    "id": "fillarel-aldaren"
+  },
+  {
+    "id": "krogar"
+  },
+  {
+    "id": "spellblaze-crystal"
+  },
+  {
+    "id": "the-master"
+  },
+  {
+    "id": "rhaloren-inquisitor"
+  },
+  {
+    "id": "harno"
+  },
+  {
+    "id": "lithfengel"
+  },
+  {
+    "id": "massok"
+  }
+];

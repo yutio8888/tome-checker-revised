@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-f-kryl-c",
+  "assets": [
+    {
+      "asset_id": "kryl-feijan",
+      "native_name": "Kryl-Feijan",
+      "scope": "crypt-kryl-feijan zone-finale boss; third and final redraw attempt (max 3/asset budget) -- monster-batch-f-kryl-b cleared the style gate (base_drift -6.80) but a pixel-luminance measurement of the masked creature body found its mean luminance (59.05) is statistically identical to the superseded batch-E v1 (59.29) that started this whole redraw -- the disc-only fix did not actually achieve the required 'markedly lighter creature' outcome, only fixed the disc metric",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/crypt-kryl-feijan/npcs.lua",
+          "sha256": "25fe3830a2b9dbbb4f5a90ec092f3e542069bf67a67e6baec3e2c412b087181f",
+          "line": 30,
+          "anchor": "name = \"Kryl-Feijan\", color=colors.VIOLET, unique = true,"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 26,
+          "anchor": "type = \"demon\", subtype = \"major\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_kryl_feijan.png",
+          "sha256": "e87bf6ae8963b6b1af4504e0c3d7ef48a1481b7ecb4cb2f0fd11c22317869ace",
+          "role": "identity",
+          "note": "Native species shape: a roiling black smoke/hair mass with two visible eye glints and clawed reach. Camera/base come from the style reference, not from this native crop."
+        }
+      ],
+      "contrast_dimensions": ["value", "hue"],
+      "prompt_fields": {
+        "subject": "A towering amorphous mass of roiling smoke shaped like an inverted teardrop, tapering to a point near the base disc; two pale blue-white clawed arms reach forward and outward from within the smoke, fingers spread, with glowing red eyes visible within the upper mass. The smoke itself must be rendered as a visibly pale, storm-cloud grey mass -- like thick fog or ash-grey smoke lit from above -- NOT charcoal, NOT near-black, NOT dark violet. Think 'pale grey storm cloud with darker grey wisps threaded through it', roughly the same overall lightness as an overcast sky, clearly readable as grey (not black) even in a thumbnail.",
+        "contrast": "First and only demon/major identity in the catalog; unchanged silhouette from the two earlier attempts. This is a corrective third attempt: measuring the actual pixel luminance of monster-batch-f-kryl-b's master (mean 59.05 in the masked creature-body region) against the original superseded batch-E master (mean 59.29) found them statistically identical -- despite asking for a 'lighter mid-tone smoke body', the previous redraw only fixed the disc's base_drift metric and left the creature body itself just as dark as the version it was meant to replace. This attempt must produce a creature body with a substantially higher mean luminance than either earlier attempt -- aim for a body that reads as clearly pale/grey rather than dark/black at a glance, not merely 'less pure black'.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy well inside the inner four-fifths of disc radius. Render the neutral disc -- including the whole outer-sixth ring band -- at exactly the style reference's own brightness and colour; do not apply any additional darkening bias (the -b attempt's disc, unmodified from the reference, passed base_drift -6.80 cleanly -- keep matching the reference disc exactly, this part already works). Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere.",
+        "palette": "Pale ash-grey to storm-cloud-grey smoke body with darker grey wisps for internal texture (this is the one thing that must change from every earlier attempt: the body reads as grey, not black or charcoal), pale cold blue-white clawed hands and forearms, bright ember-red glowing eyes; dry neutral charcoal disc with restrained copper-grey bevel at exactly the style reference's own lightness -- the disc must now read distinctly DARKER than the pale-grey smoke body, a reversal from earlier attempts where both were similarly dark."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name=Kryl-Feijan/type=demon/subtype=major/define_as=KRYL_FEIJAN/unique=true) and native invis.png+add_mos{display_h=2, display_y=-1} display contract unchanged, re-verified against the same source lines a third time. Third and final redraw attempt (max 3/asset budget) after measuring that the second attempt's style-gate pass did not translate into an actually lighter creature body.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-f-20260929/source-contracts.json",
+          "sha256": "b12b3c0cc83fbed3bcbb9331c7cf52917aa40213069c818d0fc1aee1d4595d54"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-f-kryl-b/kryl-feijan/receipts/attempt-1.json",
+          "sha256": "1936ec8a01cbe221d2e68567f5cf3742e1376722a7d37b12ff68dc92863eb876"
+        }
+      ],
+      "refinement": {
+        "supersedes": "kryl-feijan",
+        "previous_batch": "monster-batch-f-kryl-b",
+        "design_change_reason": "monster-batch-f-kryl-b cleared the style gate (base_drift -6.80, disc unmodified from the reference) but a direct pixel-luminance measurement of the masked creature-body region found its mean luminance (59.05) statistically identical to the superseded batch-E v1 (59.29) -- the fix only addressed the disc metric, not the actual visual defect (a too-dark creature body) that motivated this whole redraw. The design direction changes from 'ask for a vaguely lighter mid-tone smoke' (which the model rendered as still-dark charcoal/violet) to an explicit, unambiguous pale storm-cloud-grey body, with the disc now expected to read distinctly darker than the creature rather than similarly dark.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-f-kryl-b/kryl-feijan/receipts/attempt-1.json",
+            "sha256": "1936ec8a01cbe221d2e68567f5cf3742e1376722a7d37b12ff68dc92863eb876"
+          }
+        ]
+      }
+    }
+  ]
+}

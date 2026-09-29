@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-n-9",
+  "assets": [
+    {
+      "asset_id": "vampire",
+      "native_name": "vampire",
+      "scope": "dreadfell, ardhungol, greater-crypt / paladin-vs-vampire vaults, antimagic quest (undead/vampire, explicit image=npc/vampire.png, non-unique, no define_as, no nice_tile). Sustains: sustains_at_birth activates Eternal Night and Blur Sight",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/vampire.lua",
+          "sha256": "a797781c111911f9d7294c763701ce0b000280c7a4ba0b17b18a634816ad769c",
+          "line": 79,
+          "anchor": "name = \"vampire\", color=colors.SLATE, image = \"npc/vampire.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vampire.png",
+          "sha256": "8ba4c880d767b84a332fd26272a7b6eb332799ab293f787a371ee6c87725ded7",
+          "role": "identity",
+          "note": "Native shape: a crouching man in a red jacket and a big flared red cape with a high collar, pale face, one hand raised clawing, brown boots."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/the-master.png",
+          "sha256": "5aa75458ec8b3174c34852e212555d71d8ae0090a0077717530aca4e71576834",
+          "role": "family",
+          "note": "Shipped The Master (upright robed vampire with a red-gem staff): the vampire crouches in a wide flared scarlet cape with a black lining, no staff, no long robe."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A vampire seen from a steep overhead three-quarter angle: a pale-faced dark-haired man with visible fangs crouching in a predatory lunge, wrapped in a wide flared BRIGHT vivid scarlet-red cape with a high collar, the cape lit with light coral-red highlight planes on every fold and lined only with a thin band of mid crimson (never black), a bright brick-red jacket underneath, one hand raised with curled claws, the other low, mid-grey-brown trousers and tan-brown boots. No staff, no hood. Menacing, predatory and complete, clearly lit.",
+        "contrast": "Vampire family, four grades: the vampire is the CROUCHING one in a wide flared scarlet cape with black lining (silhouette: low diagonal lunge, big cape fan, raised claw; hue: scarlet red with black; value: mid-light). The lesser vampire is a plain orange-tunic young man without a cape, the master vampire a tall indigo-cloaked figure, the elder vampire a hooded burgundy robe with violet magic, and the shipped The Master an upright crimson robe with a staff.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. Calibration from the previous generation of this exact token: it was drawn too dark to read at 48px on a dark floor. This time the creature is clearly LIGHTER and more saturated in every lit plane while the disc stays exactly at the reference lightness: brighter mid-light body colours, strong lighter highlight planes on the upper-left of every fold and limb, no large black or near-black areas anywhere on the body.",
+        "palette": "Bright vivid scarlet cape with light coral-red highlights, brick-red jacket, mid crimson lining, luminous pale skin, dark-brown hair, mid-grey-brown trousers, tan boots; the body is mid-light overall and nothing on it is near-black. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=vampire, define_as=None, type=undead/subtype=vampire, unique=False); details and hashes in evidence/monster-batch-n-20260929/source-contracts.json. base BASE_NPC_VAMPIRE (undead/vampire, no image=); leaf explicit leaf image= (no nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base BASE); generic actor.image==entry.image single path; sustains_at_birth starts Eternal Night and Blur Sight (npcs.lua:3753: combat_def temporary value plus a phantasm_shield particle) - particles/temporary values only, no type/subtype/image/add_mos/shader write; Circle of Death, Stun, Rotting Disease are activated; runes as for the lesser vampire (timed shader, matcher fallback). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-n-20260929/source-contracts.json",
+          "sha256": "dad625ba87d3d81ab2a542faf25e2a55fafb5093319a6d1269d4019f0cde564b"
+        }
+      ]
+    }
+  ]
+}

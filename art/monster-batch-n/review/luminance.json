@@ -1,0 +1,100 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "skeleton-magus": 69.02,
+    "ghast": 76.09,
+    "ghoulking": 61.56,
+    "bone-giant": 90.58,
+    "lesser-vampire": 63.45,
+    "vampire": 52.6,
+    "master-vampire": 63.97,
+    "elder-vampire": 52.57,
+    "forest-wight": 60.11,
+    "grave-wight": 121.71,
+    "shadow-stalker": 72.63,
+    "shade-of-telos": 137.15,
+    "vampire OLD v1 (superseded: too dark, lum 42.8)": 42.79,
+    "elder-vampire OLD v2 (superseded: too dark, lum 42.6)": 42.62,
+    "elder-vampire OLD v3 (superseded: dark wine robe, reads as The Master)": 49.87,
+    "master-vampire OLD v1 (superseded: dark navy column)": 58.47,
+    "ghoulking OLD v1 (superseded: dark on real floors, lum 50.8)": 50.8,
+    "skeleton-magus OLD v2 (superseded: tiny figure)": 63.81
+  },
+  "floors": {
+    "korpul stone A (dreadfell/halfling-ruins/telmur)": 131.79,
+    "korpul stone B (dreadfell/halfling-ruins/telmur)": 134.11,
+    "cave rock (ardhungol/keepsake caves)": 130.64,
+    "cave mushroom (ardhungol)": 134.28,
+    "rakshor A (rak-shor-pride)": 163.04,
+    "rakshor B (rak-shor-pride)": 139.73,
+    "grass (keepsake-meadow)": 108.97,
+    "flower meadow (keepsake-meadow)": 107.27
+  },
+  "zone_floors": {
+    "skeleton-magus": {
+      "korpul stone A (dreadfell/halfling-ruins/telmur)": 131.79,
+      "korpul stone B (dreadfell/halfling-ruins/telmur)": 134.11
+    },
+    "ghast": {
+      "korpul stone A (dreadfell/halfling-ruins/telmur)": 131.79,
+      "korpul stone B (dreadfell/halfling-ruins/telmur)": 134.11
+    },
+    "ghoulking": {
+      "korpul stone A (dreadfell/halfling-ruins/telmur)": 131.79,
+      "korpul stone B (dreadfell/halfling-ruins/telmur)": 134.11
+    },
+    "bone-giant": {
+      "korpul stone A (dreadfell/halfling-ruins/telmur)": 131.79,
+      "korpul stone B (dreadfell/halfling-ruins/telmur)": 134.11,
+      "rakshor A (rak-shor-pride)": 163.04,
+      "rakshor B (rak-shor-pride)": 139.73
+    },
+    "lesser-vampire": {
+      "korpul stone A (dreadfell/halfling-ruins/telmur)": 131.79,
+      "korpul stone B (dreadfell/halfling-ruins/telmur)": 134.11,
+      "cave rock (ardhungol/keepsake caves)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "vampire": {
+      "korpul stone A (dreadfell/halfling-ruins/telmur)": 131.79,
+      "korpul stone B (dreadfell/halfling-ruins/telmur)": 134.11,
+      "cave rock (ardhungol/keepsake caves)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "master-vampire": {
+      "korpul stone A (dreadfell/halfling-ruins/telmur)": 131.79,
+      "korpul stone B (dreadfell/halfling-ruins/telmur)": 134.11,
+      "cave rock (ardhungol/keepsake caves)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "elder-vampire": {
+      "korpul stone A (dreadfell/halfling-ruins/telmur)": 131.79,
+      "korpul stone B (dreadfell/halfling-ruins/telmur)": 134.11,
+      "cave rock (ardhungol/keepsake caves)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "forest-wight": {
+      "korpul stone A (dreadfell/halfling-ruins/telmur)": 131.79,
+      "korpul stone B (dreadfell/halfling-ruins/telmur)": 134.11,
+      "cave rock (ardhungol/keepsake caves)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "grave-wight": {
+      "korpul stone A (dreadfell/halfling-ruins/telmur)": 131.79,
+      "korpul stone B (dreadfell/halfling-ruins/telmur)": 134.11,
+      "cave rock (ardhungol/keepsake caves)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "shadow-stalker": {
+      "cave rock (ardhungol/keepsake caves)": 130.64,
+      "grass (keepsake-meadow)": 108.97,
+      "flower meadow (keepsake-meadow)": 107.27
+    },
+    "shade-of-telos": {
+      "korpul stone A (dreadfell/halfling-ruins/telmur)": 131.79,
+      "korpul stone B (dreadfell/halfling-ruins/telmur)": 134.11
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

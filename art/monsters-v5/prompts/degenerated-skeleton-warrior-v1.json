@@ -1,0 +1,52 @@
+{
+  "asset_id": "degenerated-skeleton-warrior-v1",
+  "intent": "generate",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: stylized-concept. Asset: one square transparent PNG tabletop miniature token for ToME, degenerated skeleton warrior, ideally 1024x1024. Create a new sculpted hand-painted matte miniature consistent with the viewed cave-troll miniature: high overhead three-quarter camera, whole body, soft upper-left light, broad readable painted bone planes. Genuine transparent alpha outside the base, no background or cast shadow outside. One centered nearly circular thin dark grey-brown base with a subtle dark bronze-grey physical rim occupies 86% of canvas. Entire creature AND sword strictly inside the circular rim. Subject: frail crumbling ivory skeleton, damaged open ribcage, large readable skull at upper center, uneven bent legs and tilted body. Exactly ONE arm and ONE hand total: its right arm holds a heavy long steel greatsword low on a diagonal across the lower part of the base; the other arm is completely absent from shoulder, visibly empty shoulder socket and open space. Do not restore the absent arm or add a shield. Modest torn dull brown hip cloth. Sword reads as a long broad greatsword with long handle and crossguard, not dagger. Strong dark gaps through ribcage and between legs; deliberate asymmetry, compact sculpted shapes readable at 64 pixels. Top left and top right corners remain free of important features for UI overlays; skull stays below top 20% and near center. No scenic debris, grass, rocks, magic, aura, rank, faction ring, text, numbers, watermark, shield, healthbar or symbols. Native reference depicts old equipment; source definition overrides it: single arm and greatsword mandatory. Match established neutral base, matte painted finish and viewing angle, not photographic real human bones.",
+  "references_inspected": [
+    "game/modules/tome/data/gfx/shockbolt/npc/degenerated_skeleton_warrior.png",
+    "art/monsters-v3/masters/cave-troll-v3.png",
+    "art/monsters-v4/review/second-four-grass.png"
+  ],
+  "reference_arguments": "None; first generation used inspected conversation references and text.",
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-d725d6c0-2714-43dd-bef9-72708cbdb0e8.png",
+  "selection": "rejected",
+  "review": "One arm and greatsword correct, but skull protrudes beyond far disc rim. Requires overhead/composition correction; not selected.",
+  "sha256": "e30e52e031c9ed8912e2d2c5143ae412a9c25c77392118cf8939c76fe2f7cb13",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      21,
+      1200,
+      1238
+    ],
+    "visible_alpha_bbox": [
+      77,
+      40,
+      1177,
+      1231
+    ],
+    "transparent_pixels": 643356,
+    "partial_alpha_pixels": 928333,
+    "opaque_pixels": 827,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "saved_output_path": "art/monsters-v5/masters/degenerated-skeleton-warrior-v1.png",
+  "small_size_review": null
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "cutpurse",
+    "name": "扒手",
+    "entity": "cutpurse",
+    "group": "humanoid",
+    "trait": "裸头浅麻衣、低姿宽三角腿形，双短刃下持。",
+    "original": "npc/humanoid_human_cutpurse.png",
+    "source": "game/modules/tome/data/general/npcs/thieve.lua",
+    "source_line": 63,
+    "rank": 2,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "rogue",
+    "name": "游荡者",
+    "entity": "rogue",
+    "group": "humanoid",
+    "trait": "冷灰蓝尖兜帽与角形短披肩，左横右低双短刃。",
+    "original": "npc/humanoid_human_rogue.png",
+    "source": "game/modules/tome/data/general/npcs/thieve.lua",
+    "source_line": 73,
+    "rank": 2,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "thief",
+    "name": "窃贼",
+    "entity": "thief",
+    "group": "humanoid",
+    "trait": "烟褐长斗篷向左低蹲，弯曲侧向轮廓与前伸双短刃。",
+    "original": "npc/humanoid_human_thief.png",
+    "source": "game/modules/tome/data/general/npcs/thieve.lua",
+    "source_line": 83,
+    "rank": 2,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "bandit",
+    "name": "强盗",
+    "entity": "bandit",
+    "group": "humanoid",
+    "trait": "秃头裸臂、宽肩方形蹲姿，双粗短匕首与暗锈褐腰布。",
+    "original": "npc/humanoid_human_bandit.png",
+    "source": "game/modules/tome/data/general/npcs/thieve.lua",
+    "source_line": 99,
+    "rank": 2,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  }
+]

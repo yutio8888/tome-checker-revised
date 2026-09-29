@@ -1,0 +1,103 @@
+{
+  "asset_id": "dire-wolf-v1",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "status": "generated-static-reviewed-runtime-pending",
+  "prompt": "Use case: precise-object-edit\nAsset type: one complete transparent PNG creature miniature for a square-grid tabletop RPG, intended for 48/64/96px display.\nPrimary request: create the DIRE WOLF identity by replacing only the wolf in Image 1. Image 1 is the style/base edit target: preserve its hand-painted sculpted miniature finish, steep downward three-quarter camera, soft upper-left light, and neutral thin dark grey-brown circular disc with a subdued bronze-grey bevel. Image 2 is an ordinary-wolf contrast reference only; do not repeat its pale diagonal walking pose. Image 3 is the native dire-wolf identity reference only.\nSubject and silhouette: exactly one complete, very muscular, long-bodied brown DIRE WOLF in a low stalking crouch, viewed from above. The overall body axis is strongly horizontal across the middle of the round disc: large head and long muzzle on the left, broad low shoulders near centre-left, elongated back and powerful tucked hindquarters on the right. The muzzle turns a little toward the lower-left viewer; not a front-facing symmetric pose. Four plausible legs remain discernible, with one heavy forepaw advancing low toward the lower-left and the other foreleg planted beneath the chest. The belly and shoulders sit low; a thick tail curls inward beside the right hindquarters. Keep pointed canine ears, strong canine muzzle and one coherent body. Do not turn it into a bear, lion, hyena, portrait or oversized head.\nValue and colour: deep warm umber-brown coat, broad tawny shoulder and back planes, warm bone-grey muzzle and a restrained light chest patch. This must be materially darker and browner than Image 2, yet with readable broad sculpted planes distinct from the grey-brown disc even in grayscale. Distinguish this animal from Image 1 through the low, long horizontal silhouette and asymmetric side-facing posture, not just colour. No silver neck wreath. Fur detail is subordinate to the long muscular mass.\nFraming: output a square 1024x1024 image; centre the almost-circular thin disc at approximately 86% of the canvas width. Show the entire creature, all paws, ears and tail inside the disc with a continuous exposed strip of disc around them. Creature spans about 80–86% of the disc diameter. Leave the top-right 23% by 18% of the canvas free of face or other essential species features for runtime badges; do not draw a badge or reserved-area marking.\nLighting/material: muted matte painted resin or carved miniature, soft light from upper-left, broad intentional highlights and small contact shadow only on the disc. Do not add a uniform glowing edge; no theatrical lighting.\nBackground: true transparent native alpha outside the disc, clean antialiased edges, no scene and no external cast shadow. Preserve generated native alpha.\nAvoid: faction rings, coloured rims, rank, crowns, HP bars, shields, selection markers, text, numbers, icons, letters, watermark, collars, armour, weapons, grass, rocks, fog, terrain, painted transparency checkerboard, black/white backdrop, extra creatures. Exactly one wolf and one neutral base; not a contact sheet.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v3/masters/great-wolf-v3.png",
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/wolf-v2.png",
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/canine_dw.png"
+  ],
+  "reference_roles": [
+    "Style/base edit target; retain shared tabletop material, angle, lighting and neutral disc while replacing creature identity and pose.",
+    "Ordinary wolf contrast reference; avoid its light grey diagonal walking silhouette.",
+    "Native dire wolf identity reference; brown muscular wolf anatomy."
+  ],
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "saved_output_path": "art/monsters-v4/masters/dire-wolf-v1.png",
+  "generated_at_utc": "2026-09-27T00:25:15.381421+00:00",
+  "original_output_path": "~/.codex/generated_images/01a0e03a-d37e-7f70-a65b-cc566c7bb09b/exec-884c19b6-e7ca-4279-944b-1ae4f23dd617.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Original built-in image_gen output copied byte-for-byte. No image pixel edit, recolouring, matte, or alpha replacement.",
+  "sha256": "90d6160bfe2766e3debfda8785ea8b3f07cbb9196990d17fc5466eb29d9dafc3",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      45,
+      1240,
+      1254
+    ],
+    "visible_alpha_bbox": [
+      164,
+      171,
+      1094,
+      1111
+    ],
+    "transparent_pixels": 881061,
+    "partial_alpha_pixels": 691233,
+    "opaque_pixels": 222,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "selection": "recommended-for-runtime-test",
+  "reference_sha256": {
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v3/masters/great-wolf-v3.png": "056af1ffe8c4769ff974886175078cbd58fff2baa879e2834f1ec9b90310d9de",
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/wolf-v2.png": "01ea31cefef4dfb786c8e2bd060c51e8be61a692e68c471dbaf5b51a4e8ec342",
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/canine_dw.png": "31784e483aaa0b3dfd8dc583698416b61d0f4188dccf2ef6ec038b9a70074a4f"
+  },
+  "review": {
+    "observations": [
+      "A full warm-brown long-bodied wolf in a low horizontal-diagonal crouch; four paws, inward-curled tail and neutral base are visible.",
+      "The muzzle is at lower left and broad shoulders are lower and more lateral than the frontal great-wolf reference.",
+      "The result still shares some face and tail language with the ordinary wolf, so 64px same-family comparison remains required.",
+      "Disc and creature are contained; right-upper badge reserve contains no face."
+    ],
+    "remaining_limits": [
+      "Default shader, dense same-family comparison, relation/HP/rank overlays and motion still require parent runtime validation.",
+      "Original output is native 1254 square despite the requested 1024; original master remains unchanged."
+    ]
+  },
+  "static_review": {
+    "reviewed_at_utc": "2026-09-27T00:41:53.913341+00:00",
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "backgrounds": [
+      "flat muted grass green",
+      "flat dark water blue",
+      "neutral CSS grayscale display"
+    ],
+    "method": "Parent mechanically exported original masters with the existing C tool. Existing CJS Chromium capture displayed each sprite at its actual native pixel dimensions, device scale 1. Both screenshots inspected with view_image at original resolution. No creature pixels changed.",
+    "preview_paths": [
+      "art/monsters-v4/review/first-four-grass.png",
+      "art/monsters-v4/review/first-four-water.png"
+    ],
+    "preview_sha256": {
+      "first-four-grass.png": "18a0d5edf4e34fe95328807dac83dff0d83af0fe2d4352b1184442c5fb26e814",
+      "first-four-water.png": "d22f96911b3e7bf39c1daf75b3ba3b831016b34eb93d39577380bb13cc1d15f3"
+    },
+    "observation": "64px low horizontal deep warm body is distinguishable from the light diagonal ordinary wolf and the frontal great wolf; grayscale retains posture plus value differences.",
+    "runtime_screenshot": false
+  }
+}

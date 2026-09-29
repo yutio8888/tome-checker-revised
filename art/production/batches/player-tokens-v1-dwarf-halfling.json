@@ -1,0 +1,226 @@
+{
+  "schema": 1,
+  "batch_id": "player-tokens-v1-dwarf-halfling",
+  "assets": [
+    {
+      "asset_id": "player-dwarf-male",
+      "native_name": "dwarf_male",
+      "scope": "Native player body family (paper-doll), not a class or NPC; identity key descriptor.subrace x descriptor.sex -> moddable_tile per overload/mod/class/CheckerPlayerTokens.lua. Covers birth subrace Dwarf at sex=Male (moddable_tile \"dwarf_#sex#\"; native default cosmetic ornament for this sex is a beard). Runtime id player-dwarf-male, exported to data/gfx/tokens/player-dwarf-male.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/birth/races/dwarf.lua",
+          "sha256": "a5e81d1206e896aa7f45f6d7e182a257aa65be46f6599478aa8525ddcbc8b20a",
+          "line": 77,
+          "anchor": "moddable_tile = \"dwarf_#sex#\""
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/dwarf_male/base_01.png",
+          "sha256": "8dfa4af19147f66e1de4d4506d8d99ab85a068883be3750d6c58d8f09b706832"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte painted miniature finish, thin charcoal-brown disc and bronze-grey bevel at exactly that lightness. Do not copy its crouching combat pose, bald head, daggers, leather vest or sash; this token is a calm standing figure in plain traveller's clothes with no weapon.",
+          "sha256": "a571c4618354fd68d89eebf282ac5c8940ad00157fc5a4e330731914dd56d199"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/dwarf_male/base_01.png",
+          "sha256": "8dfa4af19147f66e1de4d4506d8d99ab85a068883be3750d6c58d8f09b706832",
+          "role": "identity",
+          "note": "Native unequipped paper-doll base body (skin-tone option 1 of several cosmetic choices; any option is equally native). Establishes body proportions and base skin/fur/bone value only: a short, stocky, wide-shouldered man; native cosmetic options add a beard by default (moddable_tile_ornament2), which this token keeps as an identity trait, not equipment. Ignore its flat front-facing T-pose, flat top light and total nudity; the token uses the style reference's camera, disc and pose instead, and the figure must be dressed per the brief."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One adult dwarf man, short, stocky and wide-shouldered, standing in a calm neutral pose, weight even on both feet, arms relaxed at his sides with open hands. A visible short, full beard on the jaw and chin (a natural feature, not equipment). Wears a simple long-sleeved tunic belted at the waist over plain trousers and sturdy low boots.",
+        "contrast": "Must read apart from human/elf and, most of all, from halfling_male at 48px in grayscale: (1) silhouette — noticeably shorter and much broader through the shoulders and torso than any other family, with a visible beard adding mass to the lower face/jaw silhouette; (2) value — a compact, dense body mass reads as one broad dark-mid value block rather than the halfling's smaller, more rounded block. The halfling in this same package must NOT share this beard or this shoulder width; it must read as a distinctly smaller, slighter, big-headed body, not a smaller copy of this dwarf.",
+        "composition": "One entire figure on one disc, steep overhead three-quarter view, facing down-left or down-right. Head, hands and feet stay well inside the disc with a clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. No second figure, no mount, no companion, no ground clutter.",
+        "palette": "Ruddy, weathered mid-tone skin, brown, auburn or grey beard and hair, a plain earth-toned tunic (rust, umber or slate), darker trousers and heavy boots. No bright saturated dye, no metallic sheen, no jewellery."
+      },
+      "kind": "player",
+      "gate": "ready",
+      "gate_reason": "Main agent reviewed the native contract for this body family: overload/mod/class/CheckerPlayerTokens.lua's M.families/M.moddable/M.keys table (independent of the monster catalog, paper-doll aware) names this exact family and the birth subrace(s) that expand to it, and docs/player-token-plan-20260928/PLAN.md records the resolved identity-key, granularity and neutral-appearance decisions this batch follows. Art generation only; the runtime switch, manifest wiring and in-game validation in PLAN.md sections 2-4 are separate, unstarted work.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/overload/mod/class/CheckerPlayerTokens.lua",
+          "sha256": "4a41f96a7cb958c85ca1df15df8444cb4917bf20de4da15d6016bfe713d0a4b9"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/player-token-plan-20260928/PLAN.md",
+          "sha256": "570c36028f835c3152dd4762ba907885dc16ad0e126be333db153561d311195c"
+        }
+      ]
+    },
+    {
+      "asset_id": "player-dwarf-female",
+      "native_name": "dwarf_female",
+      "scope": "Native player body family (paper-doll), not a class or NPC; identity key descriptor.subrace x descriptor.sex -> moddable_tile per overload/mod/class/CheckerPlayerTokens.lua. Covers birth subrace Dwarf at sex=Female (moddable_tile \"dwarf_#sex#\"; native default cosmetic ornament for this sex is a braid, not a beard). Runtime id player-dwarf-female, exported to data/gfx/tokens/player-dwarf-female.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/birth/races/dwarf.lua",
+          "sha256": "a5e81d1206e896aa7f45f6d7e182a257aa65be46f6599478aa8525ddcbc8b20a",
+          "line": 77,
+          "anchor": "moddable_tile = \"dwarf_#sex#\""
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/dwarf_female/base_01.png",
+          "sha256": "9e8614199cca66e0771231c297e13e59498063ae39540bc4354704223b0c15f3"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte painted miniature finish, thin charcoal-brown disc and bronze-grey bevel at exactly that lightness. Do not copy its crouching combat pose, bald head, daggers, leather vest or sash; this token is a calm standing figure in plain traveller's clothes with no weapon.",
+          "sha256": "a571c4618354fd68d89eebf282ac5c8940ad00157fc5a4e330731914dd56d199"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/dwarf_female/base_01.png",
+          "sha256": "9e8614199cca66e0771231c297e13e59498063ae39540bc4354704223b0c15f3",
+          "role": "identity",
+          "note": "Native unequipped paper-doll base body (skin-tone option 1 of several cosmetic choices; any option is equally native). Establishes body proportions and base skin/fur/bone value only: a short, stocky, wide-shouldered woman; native cosmetic options add a braid by default (moddable_tile_ornament2), not a beard. Ignore its flat front-facing T-pose, flat top light and total nudity; the token uses the style reference's camera, disc and pose instead, and the figure must be dressed per the brief."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One adult dwarf woman, short, stocky and broad-shouldered for her height, standing in a calm neutral pose, weight even on both feet, arms relaxed at her sides with open hands. Hair worn in a thick single braid, no beard. Wears a simple long-sleeved tunic or belted dress over plain trousers or a plain skirt and sturdy low boots.",
+        "contrast": "Must read apart from human/elf and from halfling_female at 48px in grayscale: (1) silhouette — noticeably shorter and broader through the shoulders and torso than any other family, with a thick braid adding a distinct shape at the back of the head; (2) value — a compact, dense body mass reads as one broad dark-mid value block rather than the halfling's smaller, more rounded block. The halfling in this same package must read as distinctly smaller, slighter and big-headed, not a smaller copy of this dwarf; this dwarf must never carry a beard (that belongs to dwarf_male only).",
+        "composition": "One entire figure on one disc, steep overhead three-quarter view, facing down-left or down-right. Head, hands and feet stay well inside the disc with a clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. No second figure, no mount, no companion, no ground clutter.",
+        "palette": "Ruddy, weathered mid-tone skin, brown, auburn or grey hair, a plain earth-toned tunic or dress (rust, umber or moss), darker trousers/skirt and sturdy boots. No bright saturated dye, no metallic sheen, no jewellery."
+      },
+      "kind": "player",
+      "gate": "ready",
+      "gate_reason": "Main agent reviewed the native contract for this body family: overload/mod/class/CheckerPlayerTokens.lua's M.families/M.moddable/M.keys table (independent of the monster catalog, paper-doll aware) names this exact family and the birth subrace(s) that expand to it, and docs/player-token-plan-20260928/PLAN.md records the resolved identity-key, granularity and neutral-appearance decisions this batch follows. Art generation only; the runtime switch, manifest wiring and in-game validation in PLAN.md sections 2-4 are separate, unstarted work.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/overload/mod/class/CheckerPlayerTokens.lua",
+          "sha256": "4a41f96a7cb958c85ca1df15df8444cb4917bf20de4da15d6016bfe713d0a4b9"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/player-token-plan-20260928/PLAN.md",
+          "sha256": "570c36028f835c3152dd4762ba907885dc16ad0e126be333db153561d311195c"
+        }
+      ]
+    },
+    {
+      "asset_id": "player-halfling-male",
+      "native_name": "halfling_male",
+      "scope": "Native player body family (paper-doll), not a class or NPC; identity key descriptor.subrace x descriptor.sex -> moddable_tile per overload/mod/class/CheckerPlayerTokens.lua. Covers birth subrace Halfling at sex=Male (moddable_tile \"halfling_#sex#\"). Runtime id player-halfling-male, exported to data/gfx/tokens/player-halfling-male.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/birth/races/halfling.lua",
+          "sha256": "ea1e2005091302f74d2bf508fb54601c19444c3ec7d2f8e143523ba381970524",
+          "line": 119,
+          "anchor": "moddable_tile = \"halfling_#sex#\""
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/halfling_male/base_01.png",
+          "sha256": "1aa1ba5302c445f5916442a7582692ea010b786c1134827b01a34814eaf29151"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte painted miniature finish, thin charcoal-brown disc and bronze-grey bevel at exactly that lightness. Do not copy its crouching combat pose, bald head, daggers, leather vest or sash; this token is a calm standing figure in plain traveller's clothes with no weapon.",
+          "sha256": "a571c4618354fd68d89eebf282ac5c8940ad00157fc5a4e330731914dd56d199"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/halfling_male/base_01.png",
+          "sha256": "1aa1ba5302c445f5916442a7582692ea010b786c1134827b01a34814eaf29151",
+          "role": "identity",
+          "note": "Native unequipped paper-doll base body (skin-tone option 1 of several cosmetic choices; any option is equally native). Establishes body proportions and base skin/fur/bone value only: a small man with a proportionally larger, rounder head and a slight, beardless build. Ignore its flat front-facing T-pose, flat top light and total nudity; the token uses the style reference's camera, disc and pose instead, and the figure must be dressed per the brief."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One adult halfling man, small and slightly built with a proportionally larger, rounder head, standing in a calm neutral pose, weight even on both feet, arms relaxed at his sides with open hands. Clean-shaven, no beard. Wears a simple long-sleeved tunic or waistcoat over plain trousers, with bare hairy feet or small soft boots.",
+        "contrast": "Must read apart from dwarf_male at 48px in grayscale even though both are the shortest families: (1) silhouette — a distinctly smaller overall body volume than the dwarf, a proportionally larger and rounder head-to-body ratio (child-like head proportion), narrower shoulders and no beard mass on the jaw; (2) value — a lighter, more evenly lit small rounded block, not the dwarf's dense broad-shouldered mass. Must not be a simple smaller recolor of the dwarf_male token.",
+        "composition": "One entire figure on one disc, steep overhead three-quarter view, facing down-left or down-right. Head, hands and feet stay well inside the disc with a clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. No second figure, no mount, no companion, no ground clutter.",
+        "palette": "Warm, healthy mid-tone skin, curly brown or sandy hair, a plain earth-toned tunic or waistcoat (moss green, oat or warm brown), plain trousers, bare feet or small soft boots. No bright saturated dye, no metallic sheen, no jewellery."
+      },
+      "kind": "player",
+      "gate": "ready",
+      "gate_reason": "Main agent reviewed the native contract for this body family: overload/mod/class/CheckerPlayerTokens.lua's M.families/M.moddable/M.keys table (independent of the monster catalog, paper-doll aware) names this exact family and the birth subrace(s) that expand to it, and docs/player-token-plan-20260928/PLAN.md records the resolved identity-key, granularity and neutral-appearance decisions this batch follows. Art generation only; the runtime switch, manifest wiring and in-game validation in PLAN.md sections 2-4 are separate, unstarted work.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/overload/mod/class/CheckerPlayerTokens.lua",
+          "sha256": "4a41f96a7cb958c85ca1df15df8444cb4917bf20de4da15d6016bfe713d0a4b9"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/player-token-plan-20260928/PLAN.md",
+          "sha256": "570c36028f835c3152dd4762ba907885dc16ad0e126be333db153561d311195c"
+        }
+      ]
+    },
+    {
+      "asset_id": "player-halfling-female",
+      "native_name": "halfling_female",
+      "scope": "Native player body family (paper-doll), not a class or NPC; identity key descriptor.subrace x descriptor.sex -> moddable_tile per overload/mod/class/CheckerPlayerTokens.lua. Covers birth subrace Halfling at sex=Female (moddable_tile \"halfling_#sex#\"). Runtime id player-halfling-female, exported to data/gfx/tokens/player-halfling-female.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/birth/races/halfling.lua",
+          "sha256": "ea1e2005091302f74d2bf508fb54601c19444c3ec7d2f8e143523ba381970524",
+          "line": 119,
+          "anchor": "moddable_tile = \"halfling_#sex#\""
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/halfling_female/base_01.png",
+          "sha256": "1cdaa823506a4b4db62df2a5dd9b4ad19c2841c8c00e7fd2b9961c17471be8b1"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte painted miniature finish, thin charcoal-brown disc and bronze-grey bevel at exactly that lightness. Do not copy its crouching combat pose, bald head, daggers, leather vest or sash; this token is a calm standing figure in plain traveller's clothes with no weapon.",
+          "sha256": "a571c4618354fd68d89eebf282ac5c8940ad00157fc5a4e330731914dd56d199"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/halfling_female/base_01.png",
+          "sha256": "1cdaa823506a4b4db62df2a5dd9b4ad19c2841c8c00e7fd2b9961c17471be8b1",
+          "role": "identity",
+          "note": "Native unequipped paper-doll base body (skin-tone option 1 of several cosmetic choices; any option is equally native). Establishes body proportions and base skin/fur/bone value only: a small woman with a proportionally larger, rounder head and a slight build. Ignore its flat front-facing T-pose, flat top light and total nudity; the token uses the style reference's camera, disc and pose instead, and the figure must be dressed per the brief."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One adult halfling woman, small and slightly built with a proportionally larger, rounder head, standing in a calm neutral pose, weight even on both feet, arms relaxed at her sides with open hands. Hair worn loose or in a short simple tie. Wears a simple long-sleeved tunic or belted dress over plain trousers or a plain skirt, with bare hairy feet or small soft boots.",
+        "contrast": "Must read apart from dwarf_female at 48px in grayscale even though both are the shortest families: (1) silhouette — a distinctly smaller overall body volume than the dwarf, a proportionally larger and rounder head-to-body ratio (child-like head proportion) and narrower shoulders, with no braid-added head mass; (2) value — a lighter, more evenly lit small rounded block, not the dwarf's dense broad-shouldered mass. Must not be a simple smaller recolor of the dwarf_female token.",
+        "composition": "One entire figure on one disc, steep overhead three-quarter view, facing down-left or down-right. Head, hands and feet stay well inside the disc with a clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. No second figure, no mount, no companion, no ground clutter.",
+        "palette": "Warm, healthy mid-tone skin, curly brown or sandy hair, a plain earth-toned tunic or dress (moss green, oat or dusty rose), plain trousers/skirt, bare feet or small soft boots. No bright saturated dye, no metallic sheen, no jewellery."
+      },
+      "kind": "player",
+      "gate": "ready",
+      "gate_reason": "Main agent reviewed the native contract for this body family: overload/mod/class/CheckerPlayerTokens.lua's M.families/M.moddable/M.keys table (independent of the monster catalog, paper-doll aware) names this exact family and the birth subrace(s) that expand to it, and docs/player-token-plan-20260928/PLAN.md records the resolved identity-key, granularity and neutral-appearance decisions this batch follows. Art generation only; the runtime switch, manifest wiring and in-game validation in PLAN.md sections 2-4 are separate, unstarted work.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/overload/mod/class/CheckerPlayerTokens.lua",
+          "sha256": "4a41f96a7cb958c85ca1df15df8444cb4917bf20de4da15d6016bfe713d0a4b9"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/player-token-plan-20260928/PLAN.md",
+          "sha256": "570c36028f835c3152dd4762ba907885dc16ad0e126be333db153561d311195c"
+        }
+      ]
+    }
+  ]
+}

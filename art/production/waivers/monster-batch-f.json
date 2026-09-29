@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "scope": "monster-batch-f (CONTRACTS-B5-B7-20260929.md 4.1 NEEDS-CONTRACT-EXTENSION identities) exact-byte base_drift only; approved by reviewer 2026-09-29 for shivgoroth and greater shivgoroth (see art/monster-batch-f/REVIEW.md 'Reviewer decision'). dremling was rejected in the same review (dark subject on a dark base, the same 48px failure as the old Kryl-Feijan master; redraw lighter before mapping) and has no entry here. No alpha, geometry, disc_overflow or occupancy waiver requested for either entry -- every other check passed cleanly on the first try for both.",
+  "assets": [
+    {
+      "id": "shivgoroth",
+      "call": "art/production/handoffs/monster-batch-f-1/shivgoroth/imagegen-calls/call-1/call.json",
+      "master_sha256": "fc51512877b621d7350bfc3077783c765f64c2a2133eda66155b3dfdf56e2e4a",
+      "runtime_sha256": "256b49c0369897fb68cbe9f171a5fc2c25d673f9d1b6a81c3509f027bf49d1ec",
+      "base_drift": -11.23,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "Single call, base_drift-only (magnitude 3.23 over the +-8 tolerance). First elemental/ice identity in the catalog; ships alongside greater shivgoroth (also approved here, same reason). 48/64/96px reviewed on art/monster-batch-f/review/elemental-ice-color-48-64-96.png and its grayscale sheet: a lean, low, hunched translucent mid-blue ice elemental with a low jagged crest reads clearly at every size and is unmistakable from greater shivgoroth's broad, upright, bright frost-white bulk in the same family sheet -- the separation (shape and value, not only size) holds in both color and grayscale. No repair attempted, per this batch's own overshoot-risk finding (see art/production/waivers/monster-batch-f-PENDING-REQUEST.json). Approved by reviewer 2026-09-29; see art/production/waivers/monster-batch-f-PENDING-REQUEST.json for the full reasoning."
+    },
+    {
+      "id": "greater-shivgoroth",
+      "call": "art/production/handoffs/monster-batch-f-1/greater-shivgoroth/imagegen-calls/call-1/call.json",
+      "master_sha256": "a2d993840f4eba66ad308da657ab414d6297e64443d23053aed5312deb1ab985",
+      "runtime_sha256": "31f51ff3f20eca63ac812089e5ffa15639197b696047c075c93d796864cbf9e5",
+      "base_drift": -9.4,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "Single call, base_drift-only (magnitude 1.4 over tolerance). Ships alongside shivgoroth (also approved here, same reason). 48/64/96px reviewed: a broad, thick-limbed, fully upright, bright frost-white-plated ice elemental with a tall shard crown reads clearly at every size and is unmistakable from shivgoroth's lean hunched darker form in the same family sheet. No repair attempted, per this batch's own overshoot-risk finding (see art/production/waivers/monster-batch-f-PENDING-REQUEST.json). Approved by reviewer 2026-09-29; see art/production/waivers/monster-batch-f-PENDING-REQUEST.json for the full reasoning."
+    }
+  ]
+}

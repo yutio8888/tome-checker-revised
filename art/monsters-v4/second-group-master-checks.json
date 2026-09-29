@@ -1,0 +1,93 @@
+{
+  "method": "Read-only Pillow/metadata/hash checks; no image processing. First-four screenshots verified against their frozen capture hashes.",
+  "native_output_count": 11,
+  "selected_count": 8,
+  "rejected_masters": [
+    "masters/white-snake-v1.png",
+    "masters/midge-swarm-v1.png",
+    "masters/midge-swarm-v2.png"
+  ],
+  "selected_master_checks": [
+    {
+      "id": "dire-wolf",
+      "master": "masters/dire-wolf-v1.png",
+      "sha256": "90d6160bfe2766e3debfda8785ea8b3f07cbb9196990d17fc5466eb29d9dafc3",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "alpha_check": "RGBA 0-255; four transparent corners; unchanged native output"
+    },
+    {
+      "id": "white-wolf",
+      "master": "masters/white-wolf-v1.png",
+      "sha256": "cf4ac4a1c5a97863bcdc532bf1989677de57b2f3a171e0206dee2f483ea50959",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "alpha_check": "RGBA 0-255; four transparent corners; unchanged native output"
+    },
+    {
+      "id": "warg",
+      "master": "masters/warg-v1.png",
+      "sha256": "12aed885f47dc2757f22dcca27b294580dfcf31154c4cd92f9db504b45b218a6",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "alpha_check": "RGBA 0-255; four transparent corners; unchanged native output"
+    },
+    {
+      "id": "white-snake",
+      "master": "masters/white-snake-v2.png",
+      "sha256": "0e8e1f819110d47aa40d3f305f3486ebd5859e83dc6f463001a97ead7f090a09",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "alpha_check": "RGBA 0-255; four transparent corners; unchanged native output"
+    },
+    {
+      "id": "rattlesnake",
+      "master": "masters/rattlesnake-v1.png",
+      "sha256": "4af1fa77c7e4551055d006d758d5b494b96bb63735c175558379570789b34b40",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "alpha_check": "RGBA 0-255; four transparent corners; unchanged native output"
+    },
+    {
+      "id": "midge-swarm",
+      "master": "masters/midge-swarm-v3.png",
+      "sha256": "d3e916b8c05322a6b203e0109ee29ef5f36a452f60182319af9ce35e390890e9",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "alpha_check": "RGBA 0-255; four transparent corners; unchanged native output"
+    },
+    {
+      "id": "hornet-swarm",
+      "master": "masters/hornet-swarm-v1.png",
+      "sha256": "528da618d7f67f7f8896a8e8ea72bb42caa0278318cbeef25b188047aea03f2f",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "alpha_check": "RGBA 0-255; four transparent corners; unchanged native output"
+    },
+    {
+      "id": "white-worm-mass",
+      "master": "masters/white-worm-mass-v1.png",
+      "sha256": "ce957c3fa428731ff049cd16879e5fbc9fd75c723e080abc54fb09ebce88fcca",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "alpha_check": "RGBA 0-255; four transparent corners; unchanged native output"
+    }
+  ],
+  "second_group_runtime_status": "not exported or tested by art agent"
+}

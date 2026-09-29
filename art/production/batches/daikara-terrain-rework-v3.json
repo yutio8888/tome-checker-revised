@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "batch_id": "daikara-terrain-rework-v3",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "The first cooled basalt rework passes the gate and reads as dark crust, but its tiny warm fissures disappear at 48/64 px. This design changes fissure scale while retaining the harmless subdued look.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/daikara-20260928/identity.md",
+          "sha256": "66779ee7e3b9c9e40d1150900b193b43858cfebe7d0b24b302377ede54370610"
+        }
+      ],
+      "asset_id": "cooled-lava-floor-v3",
+      "native_name": "LAVA_FLOOR Daikara harmless lava floor",
+      "kind": "terrain-floor",
+      "scope": "Daikara DEFAULT and VOLCANO levels 1\u20134, including VOLCANO L4 Caldera.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/lava.lua",
+          "sha256": "9b844dc3bc7fe9247bee7e2529119714124505227088fac73788e5b75352e0d0",
+          "line": 25,
+          "anchor": "define_as = \"LAVA_FLOOR\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/daikara/grids.lua",
+          "sha256": "da18012ce55e60ae3c7b1249e8f69b84746a0fb086ae19bc9dd548f16778c248",
+          "line": 22,
+          "anchor": "e.on_stand = nil"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/lava/lava_floor1.png",
+          "sha256": "a00ba471217c344b666ef141b617495177eb99f035d7df06d7d63aa4cb522a9e",
+          "role": "identity",
+          "note": "Native Daikara lava is dark mottled, passable and harmless after zone callback."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-daikara-v1/masters/cooled-lava-floor-v2.png",
+          "sha256": "92ad439c30a72b3304803af80e03baf965763ce9848d1a34c60c897b6abea196",
+          "role": "style",
+          "note": "Current cooled basalt plate structure is good, but its tiny sparse ember points disappear at board scale; broaden only a minority of fissures."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Passable.",
+        "sight": "Open.",
+        "danger": "No on_stand callback in Daikara; harmless.",
+        "interaction": "Caldera down exit may be assigned onto this floor.",
+        "export": "Opaque lava surface with parity and seams added by exporter."
+      },
+      "prompt_fields": {
+        "subject": "Overhead dormant cooled lava crust: broad irregular charcoal-black basalt plates separated by dark fissures. About one quarter of the fissure length reveals a very dim, narrow, deep copper-red ember seam within the black crack. That warm trace is the key identity cue, and must remain visible when this 1254px art is reduced to 48px. It is still solid cooled crust, safely walkable.",
+        "palette": "At least 90% dark neutral charcoal/slate basalt. Black fissures and restrained low-luminance deep rust-red seams; never yellow or bright orange.",
+        "contrast": "Visibly cooled lava at 48/64px rather than reddish dirt or ordinary dark gravel. Keep red seams sparse but continuous enough to survive reduction: approximately one or two source-image pixels wide per 60px at final 48px scale, not isolated single-source-pixel dots.",
+        "composition": "Flat overhead edge-to-edge matte tile with large contiguous basalt plates and low relief. No soil, pebbles, flames, molten pools, bright glowing cracks, hazard symbols or height suggesting a wall.",
+        "mechanics": "Daikara LAVA_FLOOR is passable and harmless. The ember seams indicate dormant geological history, not damage or active molten hazard."
+      }
+    }
+  ]
+}

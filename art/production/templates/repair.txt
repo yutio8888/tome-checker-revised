@@ -1,0 +1,5 @@
+Edit only the supplied generated master for $native_name.
+Observed failure at $review_scale px: $observed_failure
+Required correction: $required_change
+Preserve exactly: $invariants
+Keep the same subject identity, camera, lighting, physical base/footprint, native RGBA transparency and all approved details except the named correction. The base plate stays neutral at the approved lightness, its outer band stays bare, and nothing crosses its outer edge. Add no UI or scene. Return an RGBA PNG whose alpha channel is genuinely transparent outside the disc, exactly as the edit target already is. Do not paint a white, grey, black or checkerboard backdrop for someone to key out later, and do not return a flat opaque RGB image; a background that has to be removed afterwards is rejected outright, even when the named correction itself is right. Keep the entire disc in frame and keep the four corners fully transparent. Return one corrected master, not a comparison sheet. If this would require redesigning the family, stop the batch for design review instead of repeatedly making cosmetic variants.

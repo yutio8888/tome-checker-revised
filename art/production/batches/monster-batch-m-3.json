@@ -1,0 +1,174 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-m-3",
+  "assets": [
+    {
+      "asset_id": "faeros",
+      "native_name": "faeros",
+      "scope": "charred-scar, mark-spellblaze, daikara, noxious-caldera, infinite-dungeon, tannen-tower, ruined-dungeon, town-zigur; also named in quests/antimagic.lua (elemental/fire, default-name image, non-unique, no define_as)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/faeros.lua",
+          "sha256": "8828674803648a338924a957c0f76b0fbbf43c0259b2c7a412a7f2ddfb9cfb42",
+          "line": 57,
+          "anchor": "name = \"faeros\", color=colors.ORANGE"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_fire_faeros.png",
+          "sha256": "d2e05b352f8cf82cf3cd18bc7639db8b8bd3cfdecc55117d4a5e1d92c9086e87",
+          "role": "identity",
+          "note": "Native shape: a lean humanoid figure of bright orange flame with a yellow-white chest, arms flung wide, flame licking from elbows and legs."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/shivgoroth.png",
+          "sha256": "256b49c0369897fb68cbe9f171a5fc2c25d673f9d1b6a81c3509f027bf49d1ec",
+          "role": "family",
+          "note": "Shipped shivgoroth (hunched blue ice crystals): the faeros is a lean upright orange flame figure, not a crystal."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A fire elemental seen from a steep overhead three-quarter angle: a lean humanoid figure made entirely of licking bright orange flame with a yellow-white glowing core in the chest, thin limbs, both arms flung wide and slightly upward, a smooth teardrop head of flame with two small dark ember eyes, flame licks trailing from the elbows and knees. Fierce, quick and complete.",
+        "contrast": "Fire elementals built together: the plain faeros is the LEAN one, a slim bright-orange flame figure with arms flung wide (silhouette: thin X-shaped stance; hue: bright orange; value: mid-light). The greater faeros is a broad burly deep-orange figure with a tall flame crest and clawed hands, and Fyrk is a huge crimson-scarlet guardian with a glowing pale face and a three-pronged crown.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Bright orange and amber flame with a yellow-white core; nothing darker than mid tone except the two ember eyes; the flame must not cast orange light, glow or warm cast onto the disc, which stays neutral charcoal. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=faeros, define_as=None, type=elemental/subtype=fire, unique=False); details and hashes in evidence/monster-batch-m-20260929/source-contracts.json. base BASE_NPC_FAEROS (elemental/fire, no image=; lite=1 is a light radius, not a display field); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives elemental_fire_faeros.png (64x64); Flame is not a sustain; no sustains_at_birth; the sibling ultimate faeros has a tall nice_tile body and stays native. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-m-20260929/source-contracts.json",
+          "sha256": "e1e1ce2bb74930aee311c48add949ac79706f0b7cf006cd96c4a2efee123d992"
+        }
+      ]
+    },
+    {
+      "asset_id": "greater-faeros",
+      "native_name": "greater faeros",
+      "scope": "charred-scar, noxious-caldera, mark-spellblaze, renegade-pyromancers vault (random_filter by name), infinite-dungeon and other faeros.lua loaders (elemental/fire, default-name image, non-unique, no define_as, no nice_tile)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/faeros.lua",
+          "sha256": "8828674803648a338924a957c0f76b0fbbf43c0259b2c7a412a7f2ddfb9cfb42",
+          "line": 71,
+          "anchor": "name = \"greater faeros\", color=colors.ORANGE"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_fire_greater_faeros.png",
+          "sha256": "d5de074aed3abd210d5cbc7121eab8fad698eb7438d553208edb304d6f3ada93",
+          "role": "identity",
+          "note": "Native shape: a broad burly humanoid of layered orange and yellow flame with a tall flame crest, a glowing face and long hanging claws."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/greater-shivgoroth.png",
+          "sha256": "31f51ff3f20eca63ac812089e5ffa15639197b696047c075c93d796864cbf9e5",
+          "role": "family",
+          "note": "Shipped greater shivgoroth (frost-white crystal giant): the greater faeros is a burly deep-orange flame figure, no crystals."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A greater fire elemental seen from a steep overhead three-quarter angle: a broad burly humanoid built of layered flame in deep orange with a bright yellow-white inner core, a wide chest and heavy arms hanging forward with long clawed hands of flame, a tall crest of flames rising from the head, an incandescent white-yellow face with two dark ember eyes, curling flame plumes from the shoulders. Powerful, blazing and complete.",
+        "contrast": "Fire elementals built together: the greater faeros is the BROAD one, a burly deep-orange flame figure with a tall flame crest and heavy hanging claws (silhouette: wide shoulders and hanging arms, crest on top; hue: deep orange with a white-yellow core; value: mid-light). The plain faeros is a lean slim figure with arms flung wide, and Fyrk is a crimson-scarlet guardian with a glowing pale face and a three-pronged crown.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Deep orange and amber flame with a bright yellow-white core and face; nothing darker than mid tone except the two ember eyes; the flame must not cast orange light, glow or warm cast onto the disc, which stays neutral charcoal. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=greater faeros, define_as=None, type=elemental/subtype=fire, unique=False); details and hashes in evidence/monster-batch-m-20260929/source-contracts.json. base BASE_NPC_FAEROS (elemental/fire, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives elemental_fire_greater_faeros.png (64x64, NOT tall: the tall body belongs to ultimate faeros); Fiery Hands is a sustain started by sustains_at_birth but it only attaches two shader particle emitters (enhancement.lua:69, no type/subtype/image/add_mos/shader write). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-m-20260929/source-contracts.json",
+          "sha256": "e1e1ce2bb74930aee311c48add949ac79706f0b7cf006cd96c4a2efee123d992"
+        }
+      ]
+    },
+    {
+      "asset_id": "fyrk",
+      "native_name": "Fyrk, Faeros High Guard",
+      "scope": "charred-scar (elemental/fire, define_as FYRK, unique, explicit tall nice_tile PNG elemental_fire_fyrk__faeros_high_guard.png, single definition; allow_infinite_dungeon)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/charred-scar/npcs.lua",
+          "sha256": "870f0a44be585b992883d7353760e9b362df10daf674e1b042d4edf6ddfdcb87",
+          "line": 271,
+          "anchor": "define_as = \"FYRK\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/charred-scar/npcs.lua",
+          "sha256": "870f0a44be585b992883d7353760e9b362df10daf674e1b042d4edf6ddfdcb87",
+          "line": 275,
+          "anchor": "image=\"npc/elemental_fire_fyrk__faeros_high_guard.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_fire_fyrk__faeros_high_guard.png",
+          "sha256": "a74868d0cfc78ee5c47bb4dc43b5a3fc3435d2636ac86259a65a89da422c3bd2",
+          "role": "identity",
+          "note": "Native shape: a tall broad fire giant of orange and gold flame with a glowing yellow face, heavy shoulders, flames rising above the head and swirling around the body."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/greater-shivgoroth.png",
+          "sha256": "31f51ff3f20eca63ac812089e5ffa15639197b696047c075c93d796864cbf9e5",
+          "role": "family",
+          "note": "Shipped greater shivgoroth (frost-white crystal giant): Fyrk is a crimson-scarlet flame guardian, no crystals."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Fyrk, a faeros high guard, seen from a steep overhead three-quarter angle: a huge hulking figure of crimson-scarlet and molten-orange flame with a bright white-yellow core, broad heavy shoulders of layered flame, a glowing pale-yellow scowling face with dark heavy brows looking down in disdain, a tall three-pronged crown of white-yellow flames on the head, clawed hands held low in front, curling ribbons of fire around the body. Imperious, blazing and complete.",
+        "contrast": "Fire elementals built together: Fyrk is the crimson-scarlet guardian with a pale glowing face and a three-pronged flame crown (silhouette: heavy shoulders and a three-spike crown; hue: crimson and scarlet with white-yellow highlights; value: mid). The plain faeros is a lean bright-orange figure with arms flung wide and the greater faeros a burly deep-orange figure with a tall crest and hanging claws.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Crimson-scarlet and molten-orange flame lifted with bright yellow-white highlights on the face, crown and core; nothing darker than mid tone except the brow shadows; the flame must not cast red or orange light, glow or warm cast onto the disc, which stays neutral charcoal. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Fyrk, Faeros High Guard, define_as=FYRK, type=elemental/subtype=fire, unique=True); details and hashes in evidence/monster-batch-m-20260929/source-contracts.json. base BASE_NPC_FAEROS (elemental/fire); leaf define_as FYRK, unique=true; resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/elemental_fire_fyrk__faeros_high_guard.png\", display_h=2, display_y=-1}}} names the PNG explicitly (no {tall=1} shorthand and no =BASE=TILE= indirection), so the resolved tall body is statically pinnable (same form as the batch F shivgoroth/greater shivgoroth, batch K Walrog/tunneler and batch J Weaver Queen entries); native sprite 64x128; sustains_at_birth activates Fiery Hands, Wildfire and Burning Wake: the first two attach particles, Burning Wake calls addShaderAura(\"burning_wake\", ...) (wildfire.lua:67-95) which only appends an add_mos entry flagged _isshaderaura that nativeTallImage/emptyIgnoringAura already ignore (the batch I Harkor'Zun Stone Skin case); no talent writes type/subtype/image. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-m-20260929/source-contracts.json",
+          "sha256": "e1e1ce2bb74930aee311c48add949ac79706f0b7cf006cd96c4a2efee123d992"
+        }
+      ]
+    }
+  ]
+}

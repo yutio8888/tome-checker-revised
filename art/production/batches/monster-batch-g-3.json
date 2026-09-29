@@ -1,0 +1,212 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-g-3",
+  "assets": [
+    {
+      "asset_id": "massok",
+      "native_name": "Massok the Dragonslayer",
+      "scope": "daikara side-quest unique boss (no rarity field, scripted placement)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/daikara/npcs.lua",
+          "sha256": "c4d6d6b6387719554eb81b4eccb6abe0722bd435860d06d56dafcc778e8019ca",
+          "line": 163,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/humanoid_orc_massok_the_dragonslayer.png\", display_h=2, display_y=-1}}},"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_massok_the_dragonslayer.png",
+          "sha256": "1b21ad0427290b98625dc5f01759c510014fb0de41f29faafad16ad1c20d9fba",
+          "role": "identity",
+          "note": "Native species shape: huge orc, dragon-skull helm, raised two-handed greatsword, dark green-black plate."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/golbug.png",
+          "sha256": "4f7047dc4d3756bbce03ee27b1740345f17cb9764399ac774169994f40d008d6",
+          "role": "family",
+          "note": "Shipped catalog humanoid/orc: hammer + shield, gold-trimmed armour. Massok/Krogar must stay distinct from this and from each other."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A huge, heavily armoured orc warrior wearing a dragon skull as a helm, its bone jaw framing the orc's face and pale horns curving up from the sides. He grips a massive two-handed sword raised diagonally across his body, dark green-black plate armour with jagged pauldrons.",
+        "contrast": "Third humanoid/orc catalog identity (with golbug the hammer-and-shield destroyer and brotoq the dual-axe reaver already shipped, and Krogar shipping in the same handoff group). Massok's dragon-skull helm and single massive raised greatsword must read as a clearly different silhouette from golbug (hammer+shield) and brotoq (dual axes) -- no shield, no dual weapons, a distinctive pale bone-helm silhouette breaking up the dark armour read. Silhouette (dragon-skull helm + single raised greatsword) and value (pale bone helm against dark green-black armour) are the anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Dark green-black plate armour with jagged metal pauldrons, a pale bone-white dragon skull helm with visible curved horns as the dominant value break, dull grey greatsword blade; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's armour so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name/type=humanoid/subtype=orc/define_as=MASSOK/unique=true) and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (CONTRACTS-B5-B7-20260929.md 3, READY). native-tall via unique=true, following the ancient-dragon-turtle/batch-E precedent covered by tests/token_mapping.lua's generic unique loop. No live fixture needed for a scripted no-rarity boss (same precedent as every batch-E/F unique).",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        }
+      ]
+    },
+    {
+      "asset_id": "pale-drake",
+      "native_name": "Pale Drake",
+      "scope": "dreadfell backup guardian boss (no rarity field, spawned by The Master's on_die)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 144,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/undead_skeleton_pale_drake.png\", display_h=2, display_y=-1}}},"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_skeleton_pale_drake.png",
+          "sha256": "8be6ffbb3ff2fd322cc5ed353ca6e743f24319900e1d53bd3dcf471e481f6b29",
+          "role": "identity",
+          "note": "Native species shape: tall gaunt skeletal archmage, ornate dark robe, tall staff with glowing skull finial."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/skeleton-master-archer.png",
+          "sha256": "a6a807e08cbcfeba6dc49f417d6063408374e9274078b67a99622455c557baf8",
+          "role": "family",
+          "note": "Shipped catalog undead/skeleton closest in ornateness: black-and-gold armoured archer with a bow. Pale Drake must read as an unarmoured robed archmage with a staff, not an armoured archer."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A tall, gaunt skeletal archmage wrapped in a tattered dark robe with ornate gold trim, wielding a long ornate staff topped with a glowing skull finial. Bone visible at the hands and beneath a hood-like cowl.",
+        "contrast": "Eighth undead/skeleton catalog identity. Must read as a clearly different silhouette from the seven shipped skeletons (degenerated-skeleton-warrior/archer are bare bone with sword/bow, skeleton-mage is a plain robed caster, skeleton-warrior/armoured-skeleton-warrior are sword-and-shield melee bodies, skeleton-archer is a standing bowman, skeleton-master-archer is black-and-gold armoured with a bow). Pale Drake is a tall gaunt archmage in a long dark ornate robe with a single tall staff and glowing skull finial -- no bow, no sword, no shield, and a distinctly grander, more ornate silhouette than the plain skeleton-mage or the armoured master archer. Silhouette (tall robed archmage + tall single staff) and value (dark robe with gold-trim highlights vs. the family's mostly bare bone-white or black-armoured reads) are the anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Weathered bone-white skull and hands, deep dark violet-black tattered robe with restrained gold trim at the hem and shoulders, a dull gold-and-bone staff topped with a pale glowing skull finial as the single brightest accent; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's robe so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name/type=undead/subtype=skeleton/define_as=PALE_DRAKE/unique=true) and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (CONTRACTS-B5-B7-20260929.md 3, READY). native-tall via unique=true, same precedent as every batch-E/F unique. No live fixture needed for a scripted no-rarity backup boss.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        }
+      ]
+    },
+    {
+      "asset_id": "fillarel-aldaren",
+      "native_name": "Fillarel Aldaren",
+      "scope": "unremarkable-cave recruitable ally boss (no rarity field, scripted placement)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/unremarkable-cave/npcs.lua",
+          "sha256": "dcf167549044780831e0c939e5bf5a2fb16d400457cb52ad4f700e6382b0448f",
+          "line": 34,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/humanoid_elf_fillarel_aldaren.png\", display_h=2, display_y=-1}}},"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_elf_fillarel_aldaren.png",
+          "sha256": "f19113be4ee61a38d489793bf29707fc35e17dea3cbe1fd8ead6c0c278f8b304",
+          "role": "identity",
+          "note": "Native species shape: slender elven woman, pale cream-and-gold robe with sun/moon symbols, single staff."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A tall, slender elven woman in a flowing pale cream-and-gold robe decorated with subtle sun-and-moon symbols, standing upright and serene, holding a tall wooden staff topped with a small glowing orb.",
+        "contrast": "First humanoid/elf catalog identity, no family collision yet. Distinct in silhouette from the shipped native-tall humanoid subtypes already in the catalog (naga tidecaller is a robed staff caster but with a coiled serpent-tail lower body, not legs; Rhaloren Inquisitor, a shalore, ships in this same batch group armoured with a greatsword and shield) -- Fillarel is unarmoured, in a flowing pale robe, standing on ordinary legs, unmistakably a benign light-aligned caster. Silhouette (slender standing robed figure, single staff, no armour) and value (pale cream-and-gold palette, the lightest-value humanoid in the catalog) are the anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Pale cream and warm gold flowing robe with subtle embroidered sun-and-moon motifs, fair skin and pale blonde hair, a warm honey-gold wooden staff with a small pale glowing orb finial; dry neutral charcoal disc with restrained copper-grey bevel, deliberately kept a clearly darker value than the pale robe so the bright figure never bleeds into the disc ring."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name/type=humanoid/subtype=elf/define_as=FILLAREL/unique=true) and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (CONTRACTS-B5-B7-20260929.md 3, READY). native-tall via unique=true, same precedent as every batch-E/F unique. No live fixture needed for a scripted no-rarity recruitable boss.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        }
+      ]
+    },
+    {
+      "asset_id": "krogar",
+      "native_name": "Krogar",
+      "scope": "unremarkable-cave recruitable ally boss (no rarity field, scripted placement)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/unremarkable-cave/npcs.lua",
+          "sha256": "dcf167549044780831e0c939e5bf5a2fb16d400457cb52ad4f700e6382b0448f",
+          "line": 105,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/humanoid_orc_krogar.png\", display_h=2, display_y=-1}}},"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_krogar.png",
+          "sha256": "29b3d55ab46b8d3e65d04f9cf376a8ac2d8f08b3f6f205d9fcec7be724968dde",
+          "role": "identity",
+          "note": "Native species shape: stocky orc in mail armour, single tall staff, no shield."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/golbug.png",
+          "sha256": "4f7047dc4d3756bbce03ee27b1740345f17cb9764399ac774169994f40d008d6",
+          "role": "family",
+          "note": "Shipped catalog humanoid/orc: hammer + shield, gold-trimmed armour. Massok/Krogar must stay distinct from this and from each other."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A stocky, heavily armoured orc in dull green-grey mail plate, standing solidly with a tall gnarled wooden staff held upright in one hand, the other hand free and clawed.",
+        "contrast": "Fourth humanoid/orc catalog identity alongside golbug (hammer+shield), brotoq (dual axes) and massok (dragon-skull helm+greatsword, shipping in this same handoff group). Krogar carries a single tall staff and no shield or bladed weapon, and wears plainer dull green-grey mail rather than massok's dark green-black plate with a bone helm -- silhouette (single vertical staff, bare-headed, no helm) and value/hue (duller cooler green-grey armour, no pale bone accent) keep it apart from the other three orcs at a glance.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Dull green-grey mail plate armour with darker leather straps, weathered warm-brown wooden staff, olive-green orc skin visible at the face and hands; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's armour so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name/type=humanoid/subtype=orc/define_as=CORRUPTOR/unique=true) and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (CONTRACTS-B5-B7-20260929.md 3, READY). native-tall via unique=true, same precedent as every batch-E/F unique. No live fixture needed for a scripted no-rarity recruitable boss.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        }
+      ]
+    }
+  ]
+}

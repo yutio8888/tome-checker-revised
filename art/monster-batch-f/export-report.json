@@ -1,0 +1,747 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "naga-tidewarden",
+      "master": "masters/naga-tidewarden-v2.png",
+      "sha256": "9e7f51ae700cec87c6431fc81106a17c7d4557848d45edc10d51688a16ec1173",
+      "exports": [
+        {
+          "path": "sprites/48/naga-tidewarden.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e02dc1bc89d70f6d4c8c4934bb9ee71f2e925c9b6f3593ae11c2d838a76d25d6"
+        },
+        {
+          "path": "sprites/64/naga-tidewarden.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "73510ba1e714f24f17f3794b5885429ddc3d728797aa86274bc976c982911f1e"
+        },
+        {
+          "path": "sprites/96/naga-tidewarden.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8081362f4d4d7e75ff8dabb9120f7442203cfc24f8e9039fd84f4de4def66928"
+        },
+        {
+          "path": "sprites/128/naga-tidewarden.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0f8bb84d1a48af84191625dcb40ee2508218f78298837c54fa16a20dab4face0"
+        },
+        {
+          "path": "sprites/256/naga-tidewarden.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8cfbc4dcbc6cf684b70de8712e0254ee693764de37d967d494c9775ad3276626"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.66,
+        "max_sector_intrusion": 2.14,
+        "max_opaque_radius": 0.8604,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "naga-tidecaller",
+      "master": "masters/naga-tidecaller-v2.png",
+      "sha256": "f0a4b415f38980f0bcd58611b97e0132c0f9661c19fb643b2c5184fed8384f95",
+      "exports": [
+        {
+          "path": "sprites/48/naga-tidecaller.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            76,
+            1170,
+            1174
+          ],
+          "export_window": [
+            -11.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a0a6c1e45edecb873c95c15fc32c2b94de2dcba044df0684de35ec2c421ad943"
+        },
+        {
+          "path": "sprites/64/naga-tidecaller.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            76,
+            1170,
+            1174
+          ],
+          "export_window": [
+            -11.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "42e47cd95cd2a58180655c67e0fb23cf3ee9e7e1d57f8a146ba157d057dc3a46"
+        },
+        {
+          "path": "sprites/96/naga-tidecaller.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            76,
+            1170,
+            1174
+          ],
+          "export_window": [
+            -11.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "07430c395eefa7f8b3aecc97fef38e3a41b21a00b0da1aba699b92efa331db4d"
+        },
+        {
+          "path": "sprites/128/naga-tidecaller.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            76,
+            1170,
+            1174
+          ],
+          "export_window": [
+            -11.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "162c1ea648860bd4846f440fed017dd4e5d8206ec2b46385b7d6954c46fb62be"
+        },
+        {
+          "path": "sprites/256/naga-tidecaller.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            76,
+            1170,
+            1174
+          ],
+          "export_window": [
+            -11.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "372630a45806effa686a2fb2e0cc2d4dc7cf11db98eb7fb89fcc8c3c3d65710c"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.51,
+        "max_sector_intrusion": 3.36,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "treant",
+      "master": "masters/treant-v2.png",
+      "sha256": "216a0f8ff7beb54daea7d82e0d946bb022088803699a3386b716621932656450",
+      "exports": [
+        {
+          "path": "sprites/48/treant.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "13f8a2a6111e54ded2337fb5b4d899d912928cc882652c3b4e21d5a6fcada5a0"
+        },
+        {
+          "path": "sprites/64/treant.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3232769b5859cf514ecb432a9a08d5597e4ebaa62cce65b6fefc49df2e76fbaf"
+        },
+        {
+          "path": "sprites/96/treant.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c5b9a123b5f23979efe5226dfba006162431553b28d237a928b2011665c35a31"
+        },
+        {
+          "path": "sprites/128/treant.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "be5747898e7a3aaa23b81264ee340fbb5601f60823360e20cf2d036c449e30b6"
+        },
+        {
+          "path": "sprites/256/treant.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "abe0185c81a82a08d31fdfb2ce9f6a34ad7c51af52ca4c3d68cc30c8932d589f"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.93,
+        "max_sector_intrusion": 3.41,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "kryl-feijan",
+      "master": "masters/kryl-feijan-c-v1.png",
+      "sha256": "ca3bc41a3d3a8a9f44b4fceae219b01c7141a1ce87e3da29910cc4642fc15999",
+      "exports": [
+        {
+          "path": "sprites/48/kryl-feijan.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -13.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a0c617e25fe979bd27941ad3c7c1cf44065ba1aad3c4351fe964084387f3d9bd"
+        },
+        {
+          "path": "sprites/64/kryl-feijan.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -13.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d53cfdafa6fb3355e394486ed1d7f649d7654fe7558bc59e067fdc32ae774b78"
+        },
+        {
+          "path": "sprites/96/kryl-feijan.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -13.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "61c51369952c056c445acec17b06a69751abd9c4610c0074865c0685ff8bfe8b"
+        },
+        {
+          "path": "sprites/128/kryl-feijan.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -13.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7a11c6ef821dd6c056b9bc4ada2d8662f32a6e9ed88bbd88c95c8008a959be2d"
+        },
+        {
+          "path": "sprites/256/kryl-feijan.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -13.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b931d76f42e323fbc04a351a04f27e16cc9561320b6e4925dc87396c11d39882"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -8.0,
+        "max_sector_intrusion": 7.72,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "shivgoroth",
+      "master": "masters/shivgoroth-v1.png",
+      "sha256": "fc51512877b621d7350bfc3077783c765f64c2a2133eda66155b3dfdf56e2e4a",
+      "exports": [
+        {
+          "path": "sprites/48/shivgoroth.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -10.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "57aab09801bfdeb362fbb0e5fbef46c1cb2b6bb8ca5a2c7167a3bffd44b480ae"
+        },
+        {
+          "path": "sprites/64/shivgoroth.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -10.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9fab8e8630a876f686fe5b10f14c4f0ecf1305c39c34c5f63c9d3e81164258d5"
+        },
+        {
+          "path": "sprites/96/shivgoroth.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -10.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c7ae7713b4152c206fbfd0f84e0fc6ad4032947f72b296763063f3855324e8ed"
+        },
+        {
+          "path": "sprites/128/shivgoroth.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -10.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "256b49c0369897fb68cbe9f171a5fc2c25d673f9d1b6a81c3509f027bf49d1ec"
+        },
+        {
+          "path": "sprites/256/shivgoroth.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -10.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8d293b27f50843166933244911c899bb2df29b3058b4b995797e72cb7accd2a1"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -11.23,
+        "max_sector_intrusion": 3.01,
+        "max_opaque_radius": 0.8576,
+        "blocking": [
+          "base_drift"
+        ],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": true,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "greater-shivgoroth",
+      "master": "masters/greater-shivgoroth-v1.png",
+      "sha256": "a2d993840f4eba66ad308da657ab414d6297e64443d23053aed5312deb1ab985",
+      "exports": [
+        {
+          "path": "sprites/48/greater-shivgoroth.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1174
+          ],
+          "export_window": [
+            -11.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3eca6dd5fb3d37ad7230180dd88aad4f7102f73d7d41151d2cbfe655341111f9"
+        },
+        {
+          "path": "sprites/64/greater-shivgoroth.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1174
+          ],
+          "export_window": [
+            -11.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3f01e2eec75c53376392112ae25cdd6e19fa9caae566ecd11668c2681d320602"
+        },
+        {
+          "path": "sprites/96/greater-shivgoroth.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1174
+          ],
+          "export_window": [
+            -11.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5f9a33417fdaac812983e7fbb45084bf98566a65682f0f3cbc099aea182e521d"
+        },
+        {
+          "path": "sprites/128/greater-shivgoroth.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1174
+          ],
+          "export_window": [
+            -11.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "31f51ff3f20eca63ac812089e5ffa15639197b696047c075c93d796864cbf9e5"
+        },
+        {
+          "path": "sprites/256/greater-shivgoroth.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1174
+          ],
+          "export_window": [
+            -11.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7d7fc3b4e8ca8c7d8d6db54a2f36d0a9a867e6e3177360a78c5ab625d39a046d"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -9.4,
+        "max_sector_intrusion": 6.48,
+        "max_opaque_radius": 0.8585,
+        "blocking": [
+          "base_drift"
+        ],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": true,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+batch,native_name,source,source_line,status,design,paired_phase
+M1,degenerated skeleton warrior,game/modules/tome/data/general/npcs/skeleton.lua,59,first-four,单臂斜剑与残损胸腔；缺臂不修补,P1
+M1,degenerated skeleton archer,game/modules/tome/data/general/npcs/skeleton.lua,69,first-four,侧身弓弧与胸腔留空；腕槽拉弦,P1
+M1,skeleton mage,game/modules/tome/data/general/npcs/skeleton.lua,83,first-four,骨白头与暗布；竖杖和侧伸施法手,P1
+M1,grey mold,game/modules/tome/data/general/npcs/molds.lua,47,first-four,低矮分叶菌落；圆底演员与地面装饰区分,P1
+M1,skeleton warrior,game/modules/tome/data/general/npcs/skeleton.lua,103,second-four,更完整的双臂骨架；直立持剑与残缺战士区分,P1
+M1,brown mold,game/modules/tome/data/general/npcs/molds.lua,60,second-four,宽分叶伞状簇；和灰霉菌轮廓及亮暗分布均不同,P1
+M1,green mold,game/modules/tome/data/general/npcs/molds.lua,88,second-four,高低错落的菌囊；绿色不能承担全部识别,P1
+M1,shining mold,game/modules/tome/data/general/npcs/molds.lua,73,second-four,疏朗亮菌冠；不以外溢光环冒充护盾,P1
+M2,green worm mass,game/modules/tome/data/general/npcs/vermin.lua,57,proposed,长短混合弯体与开放暗缝；不用白虫整体改色,P2/P4/P7
+M2,copperhead snake,game/modules/tome/data/general/npcs/snake.lua,67,proposed,低伏开放折弯；铜色头部作次要线索,P2/P4/P7
+M2,poison ivy,game/modules/tome/data/general/npcs/plant.lua,76,proposed,抬起卷藤和掌状叶；有底盘的演员不能似花地,P2/P4/P7
+M2,giant brown mouse,game/modules/tome/data/general/npcs/rodent.lua,57,proposed,大耳细身与抬首姿态；区别现有低背棕鼠,P2/P4/P7
+M2,giant grey rat,game/modules/tome/data/general/npcs/rodent.lua,132,proposed,较平长体与侧卷尾；灰色以外的形状差异,P2/P4/P7
+M2,giant white ant,game/modules/tome/data/general/npcs/ant.lua,46,proposed,浅甲单体六足；腹胸留空,P7
+M2,giant brown ant,game/modules/tome/data/general/npcs/ant.lua,54,proposed,宽头侧行与中等明度；区别白蚁正向轮廓,P7
+M2,giant carpenter ant,game/modules/tome/data/general/npcs/ant.lua,63,proposed,厚头大颚与低前身；暗甲宽面高光,P7
+M3,elven guard,game/modules/tome/data/general/npcs/elven-warrior.lua,54,proposed,正立剑盾；面孔和尖耳不是唯一特征,P6
+M3,mean looking elven guard,game/modules/tome/data/general/npcs/elven-warrior.lua,68,proposed,更低压身盾姿及分离的明暗护甲块,P6
+M3,elven mage,game/modules/tome/data/general/npcs/elven-caster.lua,56,proposed,纵向法杖与斜伸手；衣褶简化为大块,P6
+M3,elven tempest,game/modules/tome/data/general/npcs/elven-caster.lua,73,resolve-sustained-effects-first,宽袖或分腿施法姿；真实持续效果另层验证,P6
+M3,red crystal,game/modules/tome/data/general/npcs/crystal.lua,97,proposed,斜倾单主柱与小副柱；保留红色身份,P5/P7
+M3,white crystal,game/modules/tome/data/general/npcs/crystal.lua,109,proposed,双叉竖直浅主柱；低饱和不等于低明度,P5/P7
+M3,black crystal,game/modules/tome/data/general/npcs/crystal.lua,120,proposed,宽短台阶晶簇；暗面用棱面大反差分离,P5/P7
+M3,blue crystal,game/modules/tome/data/general/npcs/crystal.lua,142,proposed,低放射扇簇；蓝色不能被当作中立环,P5/P7
+M4,cutpurse,game/modules/tome/data/general/npcs/thieve.lua,63,resolve-stealth-first,单侧前探及收拢短刃；衣物分面清楚,P1/P8
+M4,rogue,game/modules/tome/data/general/npcs/thieve.lua,73,resolve-stealth-first,宽跨双刃；与前探cutpurse区别,P1/P8
+M4,thief,game/modules/tome/data/general/npcs/thieve.lua,83,resolve-stealth-first,转身低伏轮廓；动作差异不代替真实潜行状态,P1/P8
+M4,bandit,game/modules/tome/data/general/npcs/thieve.lua,99,resolve-stealth-first,较厚装束和直立姿态；保持原生双刃类别,P1/P8
+M4,minotaur,game/modules/tome/data/general/npcs/minotaur.lua,58,native-tall-adapter-first,横向双角与斧；普通高图精确白名单,P8
+M4,green ooze,game/modules/tome/data/general/npcs/ooze.lua,56,clone-on-hit-test-first,低矮不规则铺展；受击复制独立显示,P8
+M4,green jelly,game/modules/tome/data/general/npcs/jelly.lua,57,proposed,高拱圆胶体；与同色ooze高度轮廓区别,P8
+M4,gelatinous cube,game/modules/tome/data/general/npcs/ooze.lua,116,clone-on-hit-test-first,方形透明体块置于圆盘；不可画成地形格,P8
+M5,snow giant,game/modules/tome/data/general/npcs/snow-giant.lua,52,native-tall-adapter-first,宽身近战姿态；雪地上保持躯干边界,P9
+M5,snow giant thunderer,game/modules/tome/data/general/npcs/snow-giant.lua,64,native-tall-adapter-first,开臂施法与道具方向；不烘焙闪电状态,P9
+M5,snow giant boulder thrower,game/modules/tome/data/general/npcs/snow-giant.lua,77,native-tall-adapter-first,高举单块巨石；全轮廓留在约定显示范围,P9
+M5,cold drake hatchling,game/modules/tome/data/general/npcs/cold-drake.lua,47,proposed,短小翼尾与低头；不等同于成年龙缩小,P9
+M5,sandworm,game/modules/tome/data/general/npcs/sandworm.lua,52,sand-scene-first,弯身露头；与白色多虫团不是同类剪影,P10
+M5,sandworm destroyer,game/modules/tome/data/general/npcs/sandworm.lua,58,sand-scene-first,粗大张口与高抬前段；保留实际原生体征,P10
+M5,sandworm burrower,game/modules/tome/data/zones/sandworm-lair/npcs.lua,34,sand-scene-first,低头钻行；阵营实时读取不烘焙绿色,P10
+M5,huge sandworm burrower,game/modules/tome/data/zones/sandworm-lair/npcs.lua,59,native-display-footprint-study-first,先核对2x2视觉及掘洞行为再定尺度,P10

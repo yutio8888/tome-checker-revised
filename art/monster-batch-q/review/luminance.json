@@ -1,0 +1,83 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "fire-drake-hatchling": 92.76,
+    "cold-drake-hatchling": 100.29,
+    "storm-drake-hatchling": 72.4,
+    "sand-drake": 107.88,
+    "venom-drake-hatchling": 76.1,
+    "rantha-abomination": 70.83,
+    "briagh": 110.88,
+    "ukllmswwik": 85.56,
+    "fire-drake": 70.13,
+    "storm-drake": 94.72,
+    "cold-drake": 103.45,
+    "venom-drake": 70.33,
+    "ukllmswwik OLD v1 (rejected by gate: disc_overflow 0.908, trident and fin crossed the rim)": 78.15,
+    "storm-drake OLD v1 (superseded: thin muted violet, low contrast at 48px)": 70.76
+  },
+  "floors": {
+    "daikara rock (daikara, tempest-peak)": 118.73,
+    "snow ground (daikara snow)": 175.0,
+    "burnt ground (charred-scar)": 72.7,
+    "sand (sandworm, briagh)": 110.23,
+    "caldera ground (noxious-caldera)": 96.54,
+    "underwater floor (flooded cave)": 129.4,
+    "water (flooded cave)": 71.7,
+    "void floor (temporal-rift)": 163.25,
+    "cave rock (ardhungol)": 130.64
+  },
+  "zone_floors": {
+    "fire-drake-hatchling": {
+      "daikara rock (daikara, tempest-peak)": 118.73,
+      "snow ground (daikara snow)": 175.0,
+      "burnt ground (charred-scar)": 72.7
+    },
+    "fire-drake": {
+      "daikara rock (daikara, tempest-peak)": 118.73,
+      "snow ground (daikara snow)": 175.0,
+      "burnt ground (charred-scar)": 72.7
+    },
+    "cold-drake-hatchling": {
+      "daikara rock (daikara, tempest-peak)": 118.73,
+      "snow ground (daikara snow)": 175.0,
+      "cave rock (ardhungol)": 130.64
+    },
+    "cold-drake": {
+      "daikara rock (daikara, tempest-peak)": 118.73,
+      "snow ground (daikara snow)": 175.0,
+      "cave rock (ardhungol)": 130.64
+    },
+    "storm-drake-hatchling": {
+      "daikara rock (daikara, tempest-peak)": 118.73,
+      "cave rock (ardhungol)": 130.64
+    },
+    "storm-drake": {
+      "daikara rock (daikara, tempest-peak)": 118.73,
+      "cave rock (ardhungol)": 130.64
+    },
+    "sand-drake": {
+      "sand (sandworm, briagh)": 110.23
+    },
+    "briagh": {
+      "sand (sandworm, briagh)": 110.23
+    },
+    "venom-drake-hatchling": {
+      "caldera ground (noxious-caldera)": 96.54,
+      "cave rock (ardhungol)": 130.64
+    },
+    "venom-drake": {
+      "caldera ground (noxious-caldera)": 96.54,
+      "cave rock (ardhungol)": 130.64
+    },
+    "rantha-abomination": {
+      "void floor (temporal-rift)": 163.25
+    },
+    "ukllmswwik": {
+      "underwater floor (flooded cave)": 129.4,
+      "water (flooded cave)": 71.7
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

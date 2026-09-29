@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "batch_id": "static-props-t5-v1",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "T5 source audit confirms no callbacks and exact palm rule contract",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/t5-20260929/identity.md",
+          "sha256": "f7ba279febd353060f12daad167262714723f678b4390db985f4d70aab0d37e2",
+          "role": "evidence",
+          "note": "Native rule audit"
+        }
+      ],
+      "scope": "Sandworm Lair and Ritches Tunnels exact PALMTREE variants",
+      "asset_id": "sand-palm",
+      "native_name": "PALMTREE",
+      "kind": "terrain-prop",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/sand.lua",
+          "sha256": "d951bdb32b4280058b9db8ce5c37a15b08837aaf216899a580dc3ecff5de3c8e",
+          "role": "source",
+          "note": "Native palm definition",
+          "line": 116,
+          "anchor": "define_as = \"PALMTREE\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/palmtree_alpha1.png",
+          "sha256": "709e87270f3d1afb8c833d65832c3e5c88ae0c4fb9f2af021c5a7d2301cadc7c",
+          "role": "identity",
+          "note": "Native palm crown and trunk"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/refined/tree-willow0.png",
+          "sha256": "cfad4f208be91da296e681ba4927dd9217c4d31eac8540d98ff488b0ebe34210",
+          "role": "style",
+          "note": "Accepted board tree silhouette and lighting"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/refined/sand/floor0.png",
+          "sha256": "85de0e201e5357e833a22444856cd83d0e8d32cb54e0cfe76f477b3b7259f157",
+          "role": "family",
+          "note": "Accepted sand floor palette"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Blocks movement; pass_tree exception retained.",
+        "sight": "Blocks sight.",
+        "danger": "No native damage callback.",
+        "interaction": "Dig turns palm to SAND.",
+        "export": "Native-alpha transparent foreground at 128px, composited onto accepted sand floor; parity pair."
+      },
+      "prompt_fields": {
+        "subject": "Single ancient desert palm tree, top down to slightly elevated orthographic tabletop perspective, broad distinct fronds and a visible bent trunk with roots.",
+        "contrast": "Dark olive fronds and warm trunk must read as a solid blocking tree against ochre sand at 48px.",
+        "composition": "One isolated tree centered on a square transparent canvas, entire crown and roots visible, 10 percent transparent border, lowest roots grounded in bottom quarter. No floor or shadow plate.",
+        "palette": "Deep olive green, dark umber, ochre highlights; soft upper-left light matching the board tree reference.",
+        "mechanics": "Blocking palm, sight blocking, diggable to plain sand. No arrows, hazards, state marks, people, text, border or decorative props."
+      }
+    }
+  ]
+}

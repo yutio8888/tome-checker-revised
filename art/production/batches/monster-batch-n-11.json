@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-n-11",
+  "assets": [
+    {
+      "asset_id": "ghoulking",
+      "native_name": "ghoulking",
+      "scope": "dreadfell, halfling-ruins, greater-crypt/renegade-undead vaults and Master of Flesh minions (undead/ghoul, default-name image, rank 3, non-unique, no define_as, no nice_tile). Necromancer summons of the same name (\"ghoulking\", Master of Flesh) are the same creature with the same default PNG and no define_as: they are accepted as the same body (the shipped summoned-identity contract), unlike the batch K ghoul whose define_as GHOUL happens to exclude its minion",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ghoul.lua",
+          "sha256": "b1ec41fab65306b144321ea37ed991405c7c795fca3bdebac932c27ec1e11586",
+          "line": 88,
+          "anchor": "name = \"ghoulking\", color={0,0,0}"
+        },
+        {
+          "path": "game/modules/tome/data/talents/spells/master-of-flesh.lua",
+          "sha256": "251f90a3f2b1d21bf840e0e064d8c7e6f3580db8691b69a007e50f2ccd3c648c",
+          "line": 109,
+          "anchor": "name = \"ghoulking\", color={0,0,0}"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_ghoul_ghoulking.png",
+          "sha256": "7f6daa3285b9e2718f89a0d16521c5ff13339732b9aaa3e742b2cd7beed26be2",
+          "role": "identity",
+          "note": "Native shape: a lean dark-brown ghoul standing wide-legged with clawed hands out to the sides, a gold circlet on the brow and a black loincloth."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/ghoul.png",
+          "sha256": "930a37274dfe7a0988e55c0e30e02dd1393acd333949c8acf8943d0650213910",
+          "role": "family",
+          "note": "Shipped ghoul (tan low crawler): the ghoulking is a darker umber, upright, broad-shouldered ghoul wearing a bright gold crown, arms spread with claws."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A ghoulking seen from a steep overhead three-quarter angle: an upright broad-shouldered ghoul with leathery mid-light warm tan-brown skin (light saddle brown) lit with bright sand-tan highlights, standing wide-legged with both arms spread out and low, long pale bone-coloured claws on each hand, a heavy jaw with pointed teeth and glowing pale-yellow eyes, a bright polished gold crown of spikes on the brow, gold bands on the arms, a ragged brick-red loincloth. Regal, cruel and complete, clearly lit.",
+        "contrast": "Ghoul family: the shipped ghoul is a tan low crawler and the ghast a pale grey-green hunched brute with dangling arms. The ghoulking is the UMBER-brown one with a gold crown, standing upright with arms spread (silhouette: wide stance, arms spread, spiked crown on top; hue: umber brown with bright gold; value: mid with bright gold highlights).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. Calibration from the previous generation of this exact token: it was drawn too dark to read at 48px on a dark floor. This time the creature is clearly LIGHTER and more saturated in every lit plane while the disc stays exactly at the reference lightness: brighter mid-light body colours, strong lighter highlight planes on the upper-left of every fold and limb, no large black or near-black areas anywhere on the body.",
+        "palette": "Mid-light saddle-brown skin with bright sand-tan highlights, bright gold crown and arm bands, brick-red loincloth, pale bone claws, pale-yellow eyes; nothing on the body darker than mid-dark, only small seams; no glow or light cast onto the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ghoulking, define_as=None, type=undead/subtype=ghoul, unique=False); details and hashes in evidence/monster-batch-n-20260929/source-contracts.json. base BASE_NPC_GHOUL (undead/ghoul, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives undead_ghoul_ghoulking.png (64x64); talents Stun, Bite Poison, Summon, Rotting/Decrepitude/Weakness Disease are activated (none sustained), no sustains_at_birth; the leaf color={0,0,0} is only the ASCII colour, the sprite is a lit dark-brown ghoul with a gold crown. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-n-20260929/source-contracts.json",
+          "sha256": "dad625ba87d3d81ab2a542faf25e2a55fafb5093319a6d1269d4019f0cde564b"
+        }
+      ]
+    }
+  ]
+}

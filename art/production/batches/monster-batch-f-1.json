@@ -1,0 +1,150 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-f-1",
+  "assets": [
+    {
+      "asset_id": "dremling",
+      "native_name": "dremling",
+      "scope": "maze / deep-bellow etc. random pool (rarity=1, level_range {3,nil}); non-unique native-tall body per CONTRACTS-B5-B7-20260929.md 4.1",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 82,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/horror_corrupted_drem.png\", display_h=2, display_y=-1}}},"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_drem.png",
+          "sha256": "0b8983be6f0109320997a3d639c24b64ad71648e1da30399a02db3858405a3a0",
+          "role": "identity",
+          "note": "IMPORTANT: this is dremling's actual art file despite the confusingly-named-the-other-way filenames in this family (drem's own file is npc/horror_corrupted_dremling.png -- names are swapped between the two identities; verified against source). Large hulking black-skinned humanoid, spiky scabrous ridges, featureless hollow eye sockets, waraxe."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "value"],
+      "prompt_fields": {
+        "subject": "A hulking, broad-shouldered black-skinned humanoid warrior covered in jagged spiky scabrous ridges along its back, shoulders and forearms. Its face is entirely featureless -- no eyes, nose or mouth, just smooth obsidian-black skin with hollow dark eye sockets where a face would be. It grips a battered stone waraxe low and ready.",
+        "contrast": "First non-unique horror/corrupted identity in the catalog (existing horror-corrupted entries are all unique bosses: Horned Horror is a horned minotaur-like figure, The Mouth is a low wide red toothed mass, The Abomination is a tall pale two-headed spire). Dremling must read as a fourth, clearly different silhouette from all three: an upright hulking humanoid with a jagged spiky ridge crown along the shoulders/back and a completely blank, hollow-socketed face -- no horns, no visible mouth, no pale colouring. Silhouette (hulking humanoid + spiky ridge crest) and value (deep matte obsidian-black body against the neutral disc, not the pale/red tones of its shipped horror-corrupted siblings) are the anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Deep matte obsidian-black skin with a faint cool blue-grey sheen on the spiky ridges so the silhouette edge stays legible against the disc, small dull grey stone waraxe head, no bright accents anywhere on the body (the blank hollow eye sockets are darker-than-skin voids, not a glowing highlight); dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's skin so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name/type/subtype/no define_as/no unique) and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source, including the drem/dremling swapped-filename trap (dremling's true art file is npc/horror_corrupted_drem.png, confirmed by both source anchor and visual inspection). No live fixture in this task; native_tall=true follows the ancient-dragon-turtle precedent (overload/mod/class/CheckerTokens.lua:26) already covered by tests/token_mapping.lua's generic native_tall loop.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-f-20260929/source-contracts.json",
+          "sha256": "b12b3c0cc83fbed3bcbb9331c7cf52917aa40213069c818d0fc1aee1d4595d54"
+        }
+      ]
+    },
+    {
+      "asset_id": "shivgoroth",
+      "native_name": "shivgoroth",
+      "scope": "norgos-lair random pool (rarity=1, level_range {10,nil}); non-unique native-tall body per CONTRACTS-B5-B7-20260929.md 4.1",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/shivgoroth.lua",
+          "sha256": "9543c07c1c22d99f4ace1868e113bc613bc1d76fe8aa22e490de0953568207f5",
+          "line": 58,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/elemental_ice_shivgoroth.png\", display_h=2, display_y=-1}}},"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_ice_shivgoroth.png",
+          "sha256": "67e73447b74d079c5afb18fcfd47a1d292c2904465f99f471bfd8f6c82a2ef7b",
+          "role": "identity",
+          "note": "Lean, hunched translucent-blue ice elemental, low stance, jagged crest."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_ice_greater_shivgoroth.png",
+          "sha256": "487bbfc7145f061743530fb17c58684e9b682d1bf54234160b0b7078fbd39215",
+          "role": "family",
+          "note": "The larger, bulkier, upright sibling shipping in this same batch as greater-shivgoroth -- shivgoroth must stay visibly smaller-framed, leaner and more hunched than this so the two differ by shape, not only size."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "value"],
+      "prompt_fields": {
+        "subject": "A lean, hunched ice elemental standing low on bent, thin crystalline blue legs, torso pitched forward, arms held close. Its body is semi-translucent glacial blue ice with visible internal fracture lines, and a low jagged crest of thin ice shards runs along its spine and skull.",
+        "contrast": "First elemental/ice identity in the catalog, but ships in the same batch as its bulkier sibling greater shivgoroth, so the two must differ by more than hue: shivgoroth is lean, low and hunched, with thin limbs and a low jagged crest, and reads noticeably smaller-framed and more crouched than greater shivgoroth's broad upright bulk. Silhouette (lean hunched low stance vs. broad upright stance) and value (more translucent/darker ice vs. greater shivgoroth's brighter opaque frost crust) are the anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Semi-translucent glacial mid-blue ice with visible darker internal fracture lines, pale cyan-white highlight along the crest edge only; dry neutral charcoal disc with restrained copper-grey bevel, no frost or cold-mist effect spilling onto the disc."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name/type=elemental/subtype=ice/no define_as/no unique) and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source. No live fixture in this task; native_tall=true follows the ancient-dragon-turtle precedent already covered by tests/token_mapping.lua's generic native_tall loop.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-f-20260929/source-contracts.json",
+          "sha256": "b12b3c0cc83fbed3bcbb9331c7cf52917aa40213069c818d0fc1aee1d4595d54"
+        }
+      ]
+    },
+    {
+      "asset_id": "greater-shivgoroth",
+      "native_name": "greater shivgoroth",
+      "scope": "norgos-lair random pool (rarity=3, level_range {12,nil}); non-unique native-tall body per CONTRACTS-B5-B7-20260929.md 4.1",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/shivgoroth.lua",
+          "sha256": "9543c07c1c22d99f4ace1868e113bc613bc1d76fe8aa22e490de0953568207f5",
+          "line": 73,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/elemental_ice_greater_shivgoroth.png\", display_h=2, display_y=-1}}},"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_ice_greater_shivgoroth.png",
+          "sha256": "487bbfc7145f061743530fb17c58684e9b682d1bf54234160b0b7078fbd39215",
+          "role": "identity",
+          "note": "Bulkier, upright, thick-limbed ice elemental with brighter opaque frost plating."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_ice_shivgoroth.png",
+          "sha256": "67e73447b74d079c5afb18fcfd47a1d292c2904465f99f471bfd8f6c82a2ef7b",
+          "role": "family",
+          "note": "The smaller, leaner, hunched sibling shipping in this same batch as shivgoroth -- greater shivgoroth must stay visibly broader-framed and more upright than this so the two differ by shape, not only size."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "value"],
+      "prompt_fields": {
+        "subject": "A broad, thickly-built ice elemental standing fully upright on stout crystalline legs, chest and shoulders wide, arms held out slightly from the body. Its body is opaque frost-white ice crusted in thick angular plates, with a tall crown of larger ice shards rising from its shoulders and skull.",
+        "contrast": "Ships in the same batch as its leaner sibling shivgoroth, so the two must differ by more than hue: greater shivgoroth is broad, thick-limbed and fully upright, with large angular frost plating and a tall shard crown, reading noticeably bigger-framed and more squared-off than shivgoroth's lean hunched crouch. Silhouette (broad upright stance vs. lean hunched stance) and value (brighter opaque frost-white plating vs. shivgoroth's darker translucent ice) are the anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Opaque frost-white ice with thick angular pale-blue plate seams, brighter overall than shivgoroth's translucent body; dry neutral charcoal disc with restrained copper-grey bevel, no frost or cold-mist effect spilling onto the disc, and the bright white body must not be allowed to bloom past its own silhouette edge into the disc ring."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name/type=elemental/subtype=ice/no define_as/no unique) and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source. No live fixture in this task; native_tall=true follows the ancient-dragon-turtle precedent already covered by tests/token_mapping.lua's generic native_tall loop.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-f-20260929/source-contracts.json",
+          "sha256": "b12b3c0cc83fbed3bcbb9331c7cf52917aa40213069c818d0fc1aee1d4595d54"
+        }
+      ]
+    }
+  ]
+}

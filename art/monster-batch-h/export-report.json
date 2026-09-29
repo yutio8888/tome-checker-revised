@@ -1,0 +1,1481 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "sandworm",
+      "master": "masters/sandworm-v1.png",
+      "sha256": "6b8479e7257a2015f0232240bdf075116f75d63ca6e921a4d505714bf965e11c",
+      "exports": [
+        {
+          "path": "sprites/48/sandworm.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1166,
+            1173
+          ],
+          "export_window": [
+            -11.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7dff70de2db550f11b5facf08e4667b091c619bb7b7a8594026a818a64427389"
+        },
+        {
+          "path": "sprites/64/sandworm.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1166,
+            1173
+          ],
+          "export_window": [
+            -11.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "69ad70f17a8974eae4d7ca14bea3f23c0550bf15dda659fb150fb2ad3570c4b9"
+        },
+        {
+          "path": "sprites/96/sandworm.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1166,
+            1173
+          ],
+          "export_window": [
+            -11.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7a1337d7f0475a5bfe862b8eab7f1f2d432d9be8e37a14cd59fb55572c2a60be"
+        },
+        {
+          "path": "sprites/128/sandworm.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1166,
+            1173
+          ],
+          "export_window": [
+            -11.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "728830fc2e9cc89b555929c0f26b5f4c52b2f3b490e080631c233c9631fbfeb1"
+        },
+        {
+          "path": "sprites/256/sandworm.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1166,
+            1173
+          ],
+          "export_window": [
+            -11.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c5d6286cb41cd108890013093bb9f25c4df6dcc98a7b18d5a34d83710515d2d5"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.29,
+        "max_sector_intrusion": 2.66,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "sandworm-destroyer",
+      "master": "masters/sandworm-destroyer-v1.png",
+      "sha256": "b2d35ef0d729056c701740c8859b4b322dbe0aac16e981d404d1976f072a9650",
+      "exports": [
+        {
+          "path": "sprites/48/sandworm-destroyer.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -12.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bff5a8ead6705092cca58e7865952b2ea9a87d308fb24c6c1a066e1d7c37e35f"
+        },
+        {
+          "path": "sprites/64/sandworm-destroyer.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -12.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5b2a9a28e6882df942e2e38e6565ed17fe01a884ece6f7165c2990ddeb30157c"
+        },
+        {
+          "path": "sprites/96/sandworm-destroyer.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -12.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2fcc3e8d9539321df701497b00911c6c3d511036934fbf8e8f138fe1dec9a0d5"
+        },
+        {
+          "path": "sprites/128/sandworm-destroyer.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -12.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4210dcd572f66f7bbf1eb9e351970ff2f54f1bf27c2c312acc17760808a835ae"
+        },
+        {
+          "path": "sprites/256/sandworm-destroyer.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -12.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b179ce7dbd8097035857e5fb22c8e3f03302b380c30b37f2a1568c890c962240"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -6.16,
+        "max_sector_intrusion": 6.25,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "sandworm-burrower",
+      "master": "masters/sandworm-burrower-v1.png",
+      "sha256": "ceb4eef911f81cb29ab44065abc92bd4a5c85eecc3a75ab8ef8562ae7c2d2b5b",
+      "exports": [
+        {
+          "path": "sprites/48/sandworm-burrower.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.046512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4e59d0cc119dd949ca9513625bcd956a166d22029201b5a4f2447fd6d8ef1132"
+        },
+        {
+          "path": "sprites/64/sandworm-burrower.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.046512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ae63de4f30771bed8820e4123f533a97220254522c8b171271d76c9566390c06"
+        },
+        {
+          "path": "sprites/96/sandworm-burrower.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.046512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0ce2afa37713d7ede7636dea95cb52c3182ebd8594672239e4cf104839238200"
+        },
+        {
+          "path": "sprites/128/sandworm-burrower.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.046512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1931ae7388607ceb7fc5f1bd9fee9758c73ec2232d0ae86f0b1d7ecc6b86d32a"
+        },
+        {
+          "path": "sprites/256/sandworm-burrower.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.046512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d842f857ac1928ad480d6d82ab9a119ca0b3f2b24057c20310ae5b85faadc427"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.04,
+        "max_sector_intrusion": 4.45,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "white-crystal",
+      "master": "masters/white-crystal-v1.png",
+      "sha256": "26080b33c6c25a5f40fe19992281ae9659e40c8e7a6f32f7c12049eaf91474de",
+      "exports": [
+        {
+          "path": "sprites/48/white-crystal.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -12.372093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fc9d56b98d4f7b13ae578e4beaed27776dd75ad79f418f1923087cfffd7ec03c"
+        },
+        {
+          "path": "sprites/64/white-crystal.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -12.372093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0d4dff35bfcbef45385ee9ce7df80d005e58d87daeaa966fd5e2e0b004523521"
+        },
+        {
+          "path": "sprites/96/white-crystal.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -12.372093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bb8210db6e317f371a0f1a2e97f89c339daafc4ca0b64b04a7ace2cc235195f2"
+        },
+        {
+          "path": "sprites/128/white-crystal.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -12.372093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b96516975f001c057e058e0e8c875022ba92670b302ec6c3f49d6cedeb00510e"
+        },
+        {
+          "path": "sprites/256/white-crystal.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -12.372093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "87e780a96aaadf433e82166e6a7e60448ddeb52d11dccc5804a51eb785164417"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.33,
+        "max_sector_intrusion": 1.75,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "red-crystal",
+      "master": "masters/red-crystal-v1.png",
+      "sha256": "df130f9c2f9d4e3a69234fa591daa550801392e1b8c77c1fcbcf08a7d566f05e",
+      "exports": [
+        {
+          "path": "sprites/48/red-crystal.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -11.790698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9e246e1176d3f71cfd8735d0b4051fd9674df691f81b5b7d7768ead5cd993865"
+        },
+        {
+          "path": "sprites/64/red-crystal.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -11.790698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3129756fd117aed3d52a9c5852fedc55e14c5c32ce25f5900f5a03f906265c69"
+        },
+        {
+          "path": "sprites/96/red-crystal.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -11.790698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "981005855f5eb67da8dc1899868ba98900e6d71c129d65574a4587fbf4b983ba"
+        },
+        {
+          "path": "sprites/128/red-crystal.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -11.790698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "123eb5e4c66ae95e8f25d6f31d928ba982bc2957c76a16365175727a4ce53291"
+        },
+        {
+          "path": "sprites/256/red-crystal.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -11.790698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6f1af04ee9d0c22a07d8b98e0cc487cfcbdd612585417c0d8d715f380b8f0553"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.17,
+        "max_sector_intrusion": 2.9,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "crimson-crystal",
+      "master": "masters/crimson-crystal-v1.png",
+      "sha256": "b7eff345098eddf0e343fabd07bcb3ba515276b4416dc19e9821efc25bfdf3ae",
+      "exports": [
+        {
+          "path": "sprites/48/crimson-crystal.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1165,
+            1169
+          ],
+          "export_window": [
+            -9.465116,
+            -12.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "eb31abb9912253f91c7b97fd3fe3d9af51392d5ce2165a3804f177aa97c365e6"
+        },
+        {
+          "path": "sprites/64/crimson-crystal.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1165,
+            1169
+          ],
+          "export_window": [
+            -9.465116,
+            -12.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7596784c9d9c6fb6afd93a3b758e560d5814346c0c54fbfb9915c9180400b191"
+        },
+        {
+          "path": "sprites/96/crimson-crystal.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1165,
+            1169
+          ],
+          "export_window": [
+            -9.465116,
+            -12.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "58d2c373b3415708c0611cb2753a991805707ea0974ad9f727efc0819fc5dbdf"
+        },
+        {
+          "path": "sprites/128/crimson-crystal.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1165,
+            1169
+          ],
+          "export_window": [
+            -9.465116,
+            -12.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "81315258366548f33e13ce7c93b5a20bdc89484943c355b663cb0670774e3332"
+        },
+        {
+          "path": "sprites/256/crimson-crystal.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1165,
+            1169
+          ],
+          "export_window": [
+            -9.465116,
+            -12.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "afc636008e57e9bfa634472ee749028715db656d4ae8bad9f5954dcf39e933d0"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.97,
+        "max_sector_intrusion": 3.89,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "poison-ivy",
+      "master": "masters/poison-ivy-v1.png",
+      "sha256": "2370a062b088df84c806034883d5dca984859f68721ada2ceb1b18c4686ee959",
+      "exports": [
+        {
+          "path": "sprites/48/poison-ivy.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -11.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d296bd2e4e362ff46acd4c5cac869b4aa723768f923be938860ca62c3a2a7459"
+        },
+        {
+          "path": "sprites/64/poison-ivy.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -11.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "83c2c0e3d99bbab0aa618ab62357d99ee557b4461de757a36af891279c3a02d2"
+        },
+        {
+          "path": "sprites/96/poison-ivy.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -11.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5dcedfb9e5a6c536a5e232e62ec779a3d0b773f929876b06304ebd9ef8392b3c"
+        },
+        {
+          "path": "sprites/128/poison-ivy.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -11.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d7ee60bda0b2c526f4d2f7858e3651dd94cd8db0e9eccec69a4a0932860fcef3"
+        },
+        {
+          "path": "sprites/256/poison-ivy.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -11.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6b425a3428ace969076d8840bc7c763c0dc074604b384c7e1a22dacc8edf0f70"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 7.1,
+        "max_sector_intrusion": 2.65,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "honey-tree",
+      "master": "masters/honey-tree-v1.png",
+      "sha256": "44fb4ac958b1295d824cfe8e12443ddac7734fd4e0bbbcfebdb42d60d7c49580",
+      "exports": [
+        {
+          "path": "sprites/48/honey-tree.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bef260266c2fae231e536bb853f8895224a0e351347ca5f32d841dd2d2d1327f"
+        },
+        {
+          "path": "sprites/64/honey-tree.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f2072769242fc462824a645bf3c12612d6f10796f83ab2c6e78f912820f3631b"
+        },
+        {
+          "path": "sprites/96/honey-tree.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0c88473ebe679c46b7e66b715699f77ac4ca3b6078093315559ecb22885730a6"
+        },
+        {
+          "path": "sprites/128/honey-tree.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7d917a31d9cd3d2253dc984e9a4c2cb0cf898677f1df7c60a5c13dbd47ae4d25"
+        },
+        {
+          "path": "sprites/256/honey-tree.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3da356b9d65a54c0aa01708f8d47f238256e3d515471c16c243ca6f69046da2e"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -6.14,
+        "max_sector_intrusion": 4.62,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "necromancer",
+      "master": "masters/necromancer-v2.png",
+      "sha256": "8660a5f7bf276cc9db26f05dc5b6df6c9b9461157d71ba5aa6cbc553e744ec22",
+      "exports": [
+        {
+          "path": "sprites/48/necromancer.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -13.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "00bac0a0ef41d8d28f265c7b6e240c622f50145a5fc6f84781cd74511e4af7df"
+        },
+        {
+          "path": "sprites/64/necromancer.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -13.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8c370ed5596df3439f097ac6e6c5cff0af955e7d6ee36c92b34e99f65623f689"
+        },
+        {
+          "path": "sprites/96/necromancer.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -13.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5261bacfb9781ab5eaeca3b5ee2952759a35dc4734b408f5bd1b1222168a52e3"
+        },
+        {
+          "path": "sprites/128/necromancer.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -13.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6807e8a467ab87d4a6b3d87206296c94dc93db38683ae531c4ee7499721ef736"
+        },
+        {
+          "path": "sprites/256/necromancer.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -13.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "be40e87bb757626c1e340ff51586209846bc87b9bac32af253e12d4aeeec8e01"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -6.19,
+        "max_sector_intrusion": 1.79,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "fleshy-experiment",
+      "master": "masters/fleshy-experiment-v1.png",
+      "sha256": "65f4d0aa4034e8229d7ee33f9d9843d2fa9908a0f1c1da2bc44471070b0fffe7",
+      "exports": [
+        {
+          "path": "sprites/48/fleshy-experiment.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ac45c43ea5d56f4e8b1d8f497e7995585170fbf2669605b456d04cdbe9618eed"
+        },
+        {
+          "path": "sprites/64/fleshy-experiment.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1f01af2fd19beea752b28eae305b683754b90175f89d054509cca36383840b27"
+        },
+        {
+          "path": "sprites/96/fleshy-experiment.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b29e61512d4bf9b7461d4a159d1612373923039c7283c13296fb9f2c4172d331"
+        },
+        {
+          "path": "sprites/128/fleshy-experiment.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2c8586113960c9331343ffdcfb6b54db75a19f5e4a8500e66c5d904a5b84540a"
+        },
+        {
+          "path": "sprites/256/fleshy-experiment.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f98189b5dda2e1b4be80efe58c7917c319227d6183e87120cf742cbf95ae160b"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.08,
+        "max_sector_intrusion": 3.37,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "boney-experiment",
+      "master": "masters/boney-experiment-v1.png",
+      "sha256": "755ee5fd6dfe8c8a05004c119c6c89fed8fa066658c3632a7351cdf78cc9666c",
+      "exports": [
+        {
+          "path": "sprites/48/boney-experiment.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -11.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bd2349970eb62d9393bbe5be8d0bbc779364d339f4ad6bb158bb95dfbdea71f0"
+        },
+        {
+          "path": "sprites/64/boney-experiment.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -11.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e6d9f79c8221bf5a98a899cccfd7ef63f8d14f3042eac52908d03efcb52c0695"
+        },
+        {
+          "path": "sprites/96/boney-experiment.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -11.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7491c80ea2a9e4b4ad536346ebbd7c48330c23fc7fd7d53327274fef6c1ab3ff"
+        },
+        {
+          "path": "sprites/128/boney-experiment.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -11.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "664939a15fc7eafcc3fb895a682b5552eda22098d43f9578f005cb3f4191c15b"
+        },
+        {
+          "path": "sprites/256/boney-experiment.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -11.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "12aad2417b3231cf31ec3fe6f06fd07b0217f178deb02d243506b272e7586319"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -6.26,
+        "max_sector_intrusion": 3.34,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "sanguine-experiment",
+      "master": "masters/sanguine-experiment-v2.png",
+      "sha256": "faa760d05a513e80837b0ae775fed258b811fca9d769eae6f2e8bb4773476295",
+      "exports": [
+        {
+          "path": "sprites/48/sanguine-experiment.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bfa44285257cb1f0b8f2731e6a49b909d4f0c4543388db25d66decd55de096d8"
+        },
+        {
+          "path": "sprites/64/sanguine-experiment.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "15567b2864f40df977137bd4298fe4595f4c0f98bcea4c0e062e70e442a63041"
+        },
+        {
+          "path": "sprites/96/sanguine-experiment.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c86a4bd8f0c85422e489ebdf361913268369eedf29e42ba9d3fee9059ab88ccb"
+        },
+        {
+          "path": "sprites/128/sanguine-experiment.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e23d581c2a005fbddca24be483dee0424013050b8cb07cc502341e36a7282364"
+        },
+        {
+          "path": "sprites/256/sanguine-experiment.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "abb762f7b94ddcb3dd3cedfa58569fccc1c53673e0e47874b6198684889ecd85"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.75,
+        "max_sector_intrusion": 1.93,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

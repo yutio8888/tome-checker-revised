@@ -1,0 +1,174 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-o-5",
+  "assets": [
+    {
+      "asset_id": "wretchling",
+      "native_name": "wretchling",
+      "scope": "valley-moon-caverns, demon-plane, acidic-vault (demon/minor, default-name image, non-unique, no define_as, no nice_tile; make_escort of same-name wretchlings; Arena entity filter by name)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/minor-demon.lua",
+          "sha256": "80520f8ae1b87b97ea599207de45fdf3703b00ca0e48c100b653dafb735f2050",
+          "line": 67,
+          "anchor": "name = \"wretchling\", color=colors.GREEN"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_minor_wretchling.png",
+          "sha256": "85e5a967792b251b9cbb92f6a1483e26ac7d149409a0c9dbe92d645c439b4ddb",
+          "role": "identity",
+          "note": "Native shape: a small spiky olive-green imp with bat ears, yellow acid pustules spotting its body, arms spread and claws forward."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/water-imp.png",
+          "sha256": "f335cdbc416d1695f3d8b38c203d622680ea6a947b54ee871d7f4a5041c7bb7d",
+          "role": "family",
+          "note": "Shipped water imp (blue-teal smooth imp with two horns and bat ears, hands raised casting): the wretchling is olive-lime with yellow acid blisters and a spiky back, low pouncing pose, no horns."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A wretchling seen from a steep overhead three-quarter angle: a small squat lean imp of bright olive-lime green skin, low in a pouncing crouch with both clawed arms stretched forward and down, large pointed bat ears, a ridge of short spikes down the back, a grinning wide mouth with tiny fangs and two round yellow eyes, the whole body spotted with bright yellow-orange acid pustules and glistening drips of yellow-green acid from the fingers. No horns, no wings, no weapon. Acidic, feral and complete.",
+        "contrast": "Minor demons, shipped: the water imp is a smooth blue-teal imp with two horns standing and casting. The wretchling is the OLIVE-LIME spiky crouching pouncer covered in yellow acid blisters (silhouette: low forward pounce, big ears, spiky back, arms forward; hue: olive-lime with yellow-orange; value: mid-light). The onilug is tall and thin grey; the wretchling is small and squat.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle.",
+        "palette": "Bright olive-lime green skin with lighter yellow-green highlight planes, bright yellow-orange acid pustules, pale yellow eyes; nothing darker than mid olive except the mouth interior; the acid must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=wretchling, define_as=None, type=demon/subtype=minor, unique=False); details and hashes in evidence/monster-batch-o-20260929/source-contracts.json. base BASE_NPC_DEMON (demon/minor, no image=); leaf no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives demon_minor_wretchling.png (64x64); talents Rush, Acid Blood (passive), Corrosive Vapour (activated); no sustains_at_birth; escorts are the same entity by name. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-o-20260929/source-contracts.json",
+          "sha256": "d8d01218f85afa424e662a8f08ea1dcfac1dc6aef902034dbb35f6b53f4b494b"
+        }
+      ]
+    },
+    {
+      "asset_id": "onilug",
+      "native_name": "onilug",
+      "scope": "valley-moon-caverns, demon-plane (demon/minor, non-unique, no define_as, resolvers.nice_tile{tall=1} shorthand on the leaf, no image=); the {tall=1} shorthand was live-confirmed for xhaiak/shiaak (batch G, evidence/monster-live-f-20260929) and the naga nereid (batch L live, evidence/monster-batch-l-live-20260929): it resolves to invis.png + add_mos{display_h=2, display_y=-1} of the disk-formula PNG",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/minor-demon.lua",
+          "sha256": "80520f8ae1b87b97ea599207de45fdf3703b00ca0e48c100b653dafb735f2050",
+          "line": 92,
+          "anchor": "name = \"onilug\", color=colors.GREY"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/minor-demon.lua",
+          "sha256": "80520f8ae1b87b97ea599207de45fdf3703b00ca0e48c100b653dafb735f2050",
+          "line": 95,
+          "anchor": "resolvers.nice_tile{tall=1}"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_minor_onilug.png",
+          "sha256": "857c2efdded0b39bbb52ba28e4813b6034d99cef8824eaa8e1e69f2ada1e1402",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a gaunt, very tall thin grey leathery humanoid with over-long arms and legs, a small head with glowing red eyes and dark spiky hair or horns."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/water-imp.png",
+          "sha256": "f335cdbc416d1695f3d8b38c203d622680ea6a947b54ee871d7f4a5041c7bb7d",
+          "role": "family",
+          "note": "Shipped water imp (small blue-teal imp): the onilug is the tall thin grey-mauve one, standing upright and holding a staff, nothing like a small imp."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An onilug seen from a steep overhead three-quarter angle: a gaunt tall thin humanoid demon of mid-light warm grey-mauve leathery skin, standing upright with too-long arms and legs and a narrow chest, a small bald head with bright glowing red eyes, a thin cruel grin, holding a crooked pale-bone staff topped with a small violet crystal in one long-fingered hand, a tattered mid-grey loincloth, faint darker mauve ribs. No wings, no horns. Sinister, tall and complete.",
+        "contrast": "Minor demons: the shipped water imp is a small blue-teal imp, and the wretchling an olive-lime squat pouncer. The onilug is the TALL THIN GREY-MAUVE upright staff-bearer with red eyes (silhouette: narrow tall upright figure with a vertical staff; hue: warm grey-mauve with red eyes and a violet crystal; value: mid-light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle.",
+        "palette": "Mid-light warm grey-mauve skin with lighter lilac-grey highlight planes, pale-bone staff, violet crystal, bright red eyes; nothing darker than mid grey except the eye sockets and a few rib lines; the crystal and eyes must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=onilug, define_as=None, type=demon/subtype=minor, unique=False); details and hashes in evidence/monster-batch-o-20260929/source-contracts.json. base BASE_NPC_DEMON (demon/minor, no image=); NPC.lua:33 gives the disk-formula PNG demon_minor_onilug.png (64x128 tall) and resolvers.nice_tile{tall=1} expands (resolvers.lua:1375) to invis.png + add_mos{image=that PNG, display_h=2, display_y=-1}, the same shape the live probes recorded for the other {tall=1} identities; talents Curses, Soul Rot, Vimsense, Leech, Drain, Channel Staff (none sustained) and equipment resolvers (staff, rings, amulet); no sustains_at_birth; non-unique so native_tall=true. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-o-20260929/source-contracts.json",
+          "sha256": "d8d01218f85afa424e662a8f08ea1dcfac1dc6aef902034dbb35f6b53f4b494b"
+        }
+      ]
+    },
+    {
+      "asset_id": "brecklorn",
+      "native_name": "brecklorn",
+      "scope": "deep-bellow, maze (horror/corrupted, default-name image, non-unique, no define_as, no nice_tile; resolvers.sustains_at_birth present)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 161,
+          "anchor": "name = \"brecklorn\", color=colors.PINK"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_brecklorn.png",
+          "sha256": "edf5d7a1ab7a53fc4fd306d5e627ce5219c3eb1be349cd040c79680a05f7affd",
+          "role": "identity",
+          "note": "Native shape: a giant hairless bat with leathery rust-brown spread wings, sores on the body, and a screaming bearded dwarf-like face."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/drem.png",
+          "sha256": "a9801d4b807a5c8230dcfe2127335ff08b3b8289c2a60253e25c99726d7620a0",
+          "role": "family",
+          "note": "Shipped drem (armoured dwarf-like warrior): the brecklorn is a winged bat-body with a tormented pink face, not a warrior; it has no armour."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A brecklorn seen from a steep overhead three-quarter angle: a giant hairless bat with a pinkish-tan wrinkled body covered in pustulant yellow sores, two leathery wings of warm rust-orange membrane with lighter tan veins held half-spread and folded compactly in a wide V close around the body, clawed wing hands, and a dwarf-like human face twisted in a constant scream with wide open mouth, a short ragged tan beard and bulging pale eyes, small clawed feet. Grotesque, screaming and complete.",
+        "contrast": "Corrupted horrors, shipped: drem (armoured brown dwarf-like warrior) and dremling (pale stone-grey giant). The brecklorn is the WINGED PINK-FACED BAT with a screaming dwarf face (silhouette: bat wings spread in a wide V around a small body; hue: rust-orange membrane with pink flesh and yellow sores; value: mid-light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle.",
+        "palette": "Warm rust-orange wing membranes with lighter tan veins, pinkish-tan flesh, pale-yellow sores, tan beard, pale eyes; nothing darker than mid rust except the mouth interior and fold seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=brecklorn, define_as=None, type=horror/subtype=corrupted, unique=False); details and hashes in evidence/monster-batch-o-20260929/source-contracts.json. base BASE_NPC_CORRUPTED_HORROR (horror/corrupted, no image=); leaf no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives horror_corrupted_brecklorn.png (64x64); sustains_at_birth activates Gloom (talents/cursed/gloom.lua, sustained aura: temporary values and particles, no type/subtype/image/add_mos/shader write; Dwarf Resilience and Leech-type passives, Dredge Frenzy/Dominate/Spit Blight/Shriek are activated); the identity is not shared with drem/dremling (different names and PNGs). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-o-20260929/source-contracts.json",
+          "sha256": "d8d01218f85afa424e662a8f08ea1dcfac1dc6aef902034dbb35f6b53f4b494b"
+        }
+      ]
+    }
+  ]
+}

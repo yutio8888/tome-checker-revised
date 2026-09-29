@@ -1,0 +1,87 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "orc-necromancer": 57.98,
+    "rak-shor": 55.02,
+    "warmaster-gnarg": 76.63,
+    "orc-assassin": 55.93,
+    "weaver-young": 122.85,
+    "fate-spinner": 86.17,
+    "giant-green-ant": 65.82,
+    "giant-red-ant": 56.35,
+    "quasit": 68.63,
+    "elven-warrior": 86.33,
+    "corrupted-war-dog": 69.69,
+    "grannor-vor": 95.81,
+    "rak-shor OLD v1 (rejected by gate: disc_overflow 0.987, the tall staff crossed the rim)": 55.01,
+    "warmaster-gnarg OLD v1 (rejected by gate: base_drift -9.24)": 67.67,
+    "orc-assassin OLD v1 (superseded: near-black navy, luminance 48.4, dark blob at 48px)": 48.11,
+    "orc-assassin OLD v2 (superseded: still near-black at 48px, luminance 54.8)": 54.16,
+    "corrupted-war-dog OLD v1 (superseded: near-black fur, dark blob at 48px, luminance 53.5)": 53.06
+  },
+  "floors": {
+    "rak-shor floor (rak-shor-pride)": 163.04,
+    "cave rock (ardhungol, valley-moon-caverns)": 130.64,
+    "cave mushroom (ardhungol)": 134.28,
+    "void floor (unhallowed-morass)": 163.25,
+    "meadow grass (keepsake, old-forest)": 108.97,
+    "sand (ritch-tunnels)": 110.23,
+    "burnt ground (charred-scar, demon-plane)": 72.7,
+    "gloom pit floor (heart-gloom)": 110.67
+  },
+  "zone_floors": {
+    "orc-necromancer": {
+      "rak-shor floor (rak-shor-pride)": 163.04,
+      "cave rock (ardhungol, valley-moon-caverns)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "rak-shor": {
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "warmaster-gnarg": {
+      "cave rock (ardhungol, valley-moon-caverns)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "burnt ground (charred-scar, demon-plane)": 72.7
+    },
+    "orc-assassin": {
+      "rak-shor floor (rak-shor-pride)": 163.04,
+      "cave rock (ardhungol, valley-moon-caverns)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "weaver-young": {
+      "cave rock (ardhungol, valley-moon-caverns)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "void floor (unhallowed-morass)": 163.25
+    },
+    "fate-spinner": {
+      "void floor (unhallowed-morass)": 163.25
+    },
+    "giant-green-ant": {
+      "meadow grass (keepsake, old-forest)": 108.97,
+      "sand (ritch-tunnels)": 110.23
+    },
+    "giant-red-ant": {
+      "meadow grass (keepsake, old-forest)": 108.97,
+      "sand (ritch-tunnels)": 110.23
+    },
+    "quasit": {
+      "cave rock (ardhungol, valley-moon-caverns)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "burnt ground (charred-scar, demon-plane)": 72.7
+    },
+    "elven-warrior": {
+      "cave rock (ardhungol, valley-moon-caverns)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "corrupted-war-dog": {
+      "meadow grass (keepsake, old-forest)": 108.97
+    },
+    "grannor-vor": {
+      "cave rock (ardhungol, valley-moon-caverns)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "gloom pit floor (heart-gloom)": 110.67
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

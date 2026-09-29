@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "batch_id": "maze-chasm-rework-v1",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Reviewer rejected the first CRACKS art as a thin scratch at 48/64px; native identity and mechanics remain the verified Maze contract in evidence/maze-20260928/identity.md.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/maze-20260928/identity.md",
+          "sha256": "d12d050cc08097d6b0fdcc89692d0c442e6b78107f6faf13fe8b523ec1c7a08d"
+        }
+      ],
+      "asset_id": "maze-chasm-wide",
+      "native_name": "CRACKS huge open chasm in the Maze floor",
+      "kind": "terrain-floor",
+      "scope": "Maze COLLAPSED L1-L3 CRACKS cells; visual rework of rejected maze-chasm-v1 master, no runtime identity changes.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/maze/grids.lua",
+          "sha256": "ab11bffaab73e976921edb68539367c62db7593681fe88148d9842bd83052431",
+          "line": 33,
+          "anchor": "define_as = \"CRACKS\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-maze-v1/masters/maze-chasm-v1.png",
+          "sha256": "d8c54fddcee5efe2d01733bfda3344944c695df3f8a611e2a57b1b0059451eff",
+          "role": "style",
+          "note": "Previous master for material, palette and lighting only. Rejected because the void shrinks to a thin diagonal scratch at 48/64px; change its geometry substantially."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/cracks/ground_9_01.png",
+          "sha256": "3b52281b959ecbb1ed160c1ddb947abc57127dd6cf231c18b16fbc1b7dbc982b",
+          "role": "identity",
+          "note": "Native chasm terrain"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Function block_move asks player whether to jump down",
+        "sight": "Open",
+        "danger": "Fall to next level on confirmation",
+        "interaction": "Passes projectiles",
+        "export": "Opaque full cell chasm tile"
+      },
+      "prompt_fields": {
+        "subject": "A truly open, collapsed floor chasm seen directly from overhead: a large irregular black-blue abyss occupies roughly 55\u201365 percent of the whole tile area. Opposing jagged broken granite lips, sharply visible pale upper-left rim and deep cool shadowed inner rock faces surround it. This is an opening into depth, not a surface scratch.",
+        "palette": "Dark near-black blue depth dominates; muted old gray-brown granite at outer perimeter, selective cool pale highlights along broken upper-left lip. Matte tabletop paint consistent with accepted Maze materials.",
+        "contrast": "At 48 pixels it must read immediately as a large impassable opening. Keep a connected dark interior at least half a cell wide across its broadest portion and enough area that the dark hole remains dominant after downsampling. Clearly lower than the raised old wall and not traversable like ordinary floor.",
+        "composition": "One opaque full-bleed square tile, overhead camera. Broad irregular central hole with separated opposing rims and very little intact floor: only a narrow broken stone perimeter at cell edges. The void should fill the central area rather than trace a thin diagonal line; no bridge, walkway, floating islands, or traversable ledge across the opening. Use low relief only, not a tall wall, cliff tower or freestanding object.",
+        "mechanics": "Function block_move prompts player to drop to the next level; projectiles pass and line of sight remains open. No warning symbol, icon, text, border badge, door or stairs."
+      }
+    }
+  ]
+}

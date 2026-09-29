@@ -1,0 +1,246 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-n-1",
+  "assets": [
+    {
+      "asset_id": "skeleton-magus",
+      "native_name": "skeleton magus",
+      "scope": "dreadfell, halfling-ruins, collapsed-tower and amon-sul-crypt vault loots (undead/skeleton, default-name image, non-unique, no define_as, no nice_tile); the skeleton warrior/archer/mage siblings are separate shipped names",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 129,
+          "anchor": "name = \"skeleton magus\", color=colors.LIGHT_RED"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_skeleton_skeleton_magus.png",
+          "sha256": "412ea06ec6011ac229ce07ee84f3822975b0066881ca8402cec884a08556bb3d",
+          "role": "identity",
+          "note": "Native shape: a golden-ivory skeleton with both arms raised out to the sides, orange fire burning in each hand, blue ribbon sashes streaming around the ribs and legs."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/skeleton-mage.png",
+          "sha256": "49f2d7cc8f25596469983b3e95fcc4e4eafe39ca3cdccc2c4e722f2ed54edb05",
+          "role": "family",
+          "note": "Shipped skeleton mage (hunched skeleton wrapped in a dark blue-black cloak with a gold-lit skull): the magus is NOT cloaked; it is an open bare-boned figure with both arms raised, a flame in each hand and streaming cobalt ribbons."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A skeleton magus seen from a steep overhead three-quarter angle: a tall thin skeleton of warm ivory and pale gold bone standing upright and clearly open, with no cloak or hood, both arms raised up and out in a wide V, a small bright orange-and-yellow flame burning in each open hand, a faint gold light in the eye sockets, long ribbon sashes of bright cobalt blue with pale-blue edges wrapping the ribcage and streaming to both sides, small tarnished-gold trinkets on the wrists. Arcane, gaunt and complete.",
+        "contrast": "Skeleton family: the shipped skeleton mage is a hunched figure wrapped in a dark cloak, the skeleton warrior is a steel-armoured sword bearer, the archer is a bare skeleton drawing a bow. The magus is the OPEN figure with arms raised in a wide V and a flame in each hand, trailing cobalt-blue ribbons (silhouette: upright V of raised arms, no cloak, two hand flames; hue: ivory-gold bone with cobalt and orange accents; value: light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Light warm ivory and pale-gold bone, bright cobalt-blue ribbons, orange and yellow hand flames; nothing darker than mid tone except the eye sockets and rib gaps; the hand flames must not cast orange light, glow or warm cast onto the disc, which stays neutral charcoal. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=skeleton magus, define_as=None, type=undead/subtype=skeleton, unique=False); details and hashes in evidence/monster-batch-n-20260929/source-contracts.json. base BASE_NPC_SKELETON (undead/skeleton, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives undead_skeleton_skeleton_magus.png (64x64); talents Staff Mastery (passive), Flame, Manathrust (bolts), Arcane Power (sustained, arcane.lua:84: resist/spellpower temporary values plus an arcane_power particle, no display field) - but the leaf has no sustains_at_birth, so nothing is even activated at birth; racial skeleton talents are passive/activated with no body write (Skeleton Reassemble only reads shader particles). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-n-20260929/source-contracts.json",
+          "sha256": "dad625ba87d3d81ab2a542faf25e2a55fafb5093319a6d1269d4019f0cde564b"
+        }
+      ]
+    },
+    {
+      "asset_id": "ghast",
+      "native_name": "ghast",
+      "scope": "dreadfell, halfling-ruins, amon-sul-crypt vault and Master of Flesh minions (undead/ghoul, default-name image, non-unique, no define_as, no nice_tile). Necromancer summons of the same name (\"ghast\", Master of Flesh) are the same creature with the same default PNG and no define_as: they are accepted as the same body (the shipped summoned-identity contract), unlike the batch K ghoul whose define_as GHOUL happens to exclude its minion",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ghoul.lua",
+          "sha256": "b1ec41fab65306b144321ea37ed991405c7c795fca3bdebac932c27ec1e11586",
+          "line": 67,
+          "anchor": "name = \"ghast\", color=colors.UMBER"
+        },
+        {
+          "path": "game/modules/tome/data/talents/spells/master-of-flesh.lua",
+          "sha256": "251f90a3f2b1d21bf840e0e064d8c7e6f3580db8691b69a007e50f2ccd3c648c",
+          "line": 80,
+          "anchor": "name = \"ghast\", color=colors.UMBER"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_ghoul_ghast.png",
+          "sha256": "04b4ef3f2734a8fe66ec4b69dcee1b10e539b89adca7f303144b99be10b5f922",
+          "role": "identity",
+          "note": "Native shape: a hulking hunched pale grey-tan ghoul with long drooping arms that reach the ground, a wide open jaw with a lolling tongue and a knotted spine."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/ghoul.png",
+          "sha256": "930a37274dfe7a0988e55c0e30e02dd1393acd333949c8acf8943d0650213910",
+          "role": "family",
+          "note": "Shipped ghoul (crouching tan-brown ghoul with claws forward): the ghast is a larger, paler, upright-hunched grey-green brute with long dangling arms and a wide-open jaw, not a low crawler."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A ghast seen from a steep overhead three-quarter angle: a hulking pale grey-green ghoul standing hunched, rotting skin in mid-light ash grey with sickly olive-green patches, a knotted bony spine and ribs showing, very long arms hanging down and forward with big pale-yellow talons, a large heavy head with a wide open fanged jaw and small dull yellow eyes, a ragged strip of cloth at the hip. Foul, heavy and complete.",
+        "contrast": "Ghoul family: the shipped ghoul is a tan-brown low crawler with claws forward; the ghast is the PALE hunched brute standing on two legs with long arms hanging (silhouette: upright hunch, dangling long arms, big open jaw; hue: ash grey with olive green; value: light). The ghoulking is a darker umber ghoul with a gold crown and broad shoulders, standing with arms out.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Light ash-grey and olive-green skin with pale bone and yellow talons, dull yellow eyes; nothing darker than mid tone except the mouth and the shadow under the ribs. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ghast, define_as=None, type=undead/subtype=ghoul, unique=False); details and hashes in evidence/monster-batch-n-20260929/source-contracts.json. base BASE_NPC_GHOUL (undead/ghoul, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives undead_ghoul_ghast.png (64x64); talents Stun, Bite Poison, Summon, Rotting Disease, Decrepitude Disease are activated (none sustained), no sustains_at_birth; racial Ghoul talents are passive/activated (Ghoulish Leap only resets the move animation while jumping, Gnaw only reads invisibility). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-n-20260929/source-contracts.json",
+          "sha256": "dad625ba87d3d81ab2a542faf25e2a55fafb5093319a6d1269d4019f0cde564b"
+        }
+      ]
+    },
+    {
+      "asset_id": "ghoulking",
+      "native_name": "ghoulking",
+      "scope": "dreadfell, halfling-ruins, greater-crypt/renegade-undead vaults and Master of Flesh minions (undead/ghoul, default-name image, rank 3, non-unique, no define_as, no nice_tile). Necromancer summons of the same name (\"ghoulking\", Master of Flesh) are the same creature with the same default PNG and no define_as: they are accepted as the same body (the shipped summoned-identity contract), unlike the batch K ghoul whose define_as GHOUL happens to exclude its minion",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ghoul.lua",
+          "sha256": "b1ec41fab65306b144321ea37ed991405c7c795fca3bdebac932c27ec1e11586",
+          "line": 88,
+          "anchor": "name = \"ghoulking\", color={0,0,0}"
+        },
+        {
+          "path": "game/modules/tome/data/talents/spells/master-of-flesh.lua",
+          "sha256": "251f90a3f2b1d21bf840e0e064d8c7e6f3580db8691b69a007e50f2ccd3c648c",
+          "line": 109,
+          "anchor": "name = \"ghoulking\", color={0,0,0}"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_ghoul_ghoulking.png",
+          "sha256": "7f6daa3285b9e2718f89a0d16521c5ff13339732b9aaa3e742b2cd7beed26be2",
+          "role": "identity",
+          "note": "Native shape: a lean dark-brown ghoul standing wide-legged with clawed hands out to the sides, a gold circlet on the brow and a black loincloth."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/ghoul.png",
+          "sha256": "930a37274dfe7a0988e55c0e30e02dd1393acd333949c8acf8943d0650213910",
+          "role": "family",
+          "note": "Shipped ghoul (tan low crawler): the ghoulking is a darker umber, upright, broad-shouldered ghoul wearing a bright gold crown, arms spread with claws."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A ghoulking seen from a steep overhead three-quarter angle: an upright broad-shouldered ghoul with leathery mid-tone umber-brown skin lit with warm tan highlights, standing wide-legged with both arms spread out and low, long dark claws on each hand, a heavy jaw with pointed teeth and glowing pale-yellow eyes, a bright polished gold crown of spikes on the brow, gold bands on the arms, a ragged dark-red loincloth. Regal, cruel and complete, clearly lit.",
+        "contrast": "Ghoul family: the shipped ghoul is a tan low crawler and the ghast a pale grey-green hunched brute with dangling arms. The ghoulking is the UMBER-brown one with a gold crown, standing upright with arms spread (silhouette: wide stance, arms spread, spiked crown on top; hue: umber brown with bright gold; value: mid with bright gold highlights).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid umber-brown skin with lighter tan highlights, bright gold crown and arm bands, dark-red loincloth, pale-yellow eyes; the darkest tones stay mid-dark and are limited to small seams; no glow or light cast onto the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ghoulking, define_as=None, type=undead/subtype=ghoul, unique=False); details and hashes in evidence/monster-batch-n-20260929/source-contracts.json. base BASE_NPC_GHOUL (undead/ghoul, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives undead_ghoul_ghoulking.png (64x64); talents Stun, Bite Poison, Summon, Rotting/Decrepitude/Weakness Disease are activated (none sustained), no sustains_at_birth; the leaf color={0,0,0} is only the ASCII colour, the sprite is a lit dark-brown ghoul with a gold crown. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-n-20260929/source-contracts.json",
+          "sha256": "dad625ba87d3d81ab2a542faf25e2a55fafb5093319a6d1269d4019f0cde564b"
+        }
+      ]
+    },
+    {
+      "asset_id": "bone-giant",
+      "native_name": "bone giant",
+      "scope": "rak-shor-pride, telmur and other bone-giant.lua loaders (undead/giant, non-unique, no define_as, nice_tile with the explicit PNG undead_giant_bone_giant.png). Necromancer summons of the same name (\"bone giant\", Master of Bones) are the same creature with the same default PNG and no define_as: they are accepted as the same body (the shipped summoned-identity contract), unlike the batch K ghoul whose define_as GHOUL happens to exclude its minion",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+          "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+          "line": 60,
+          "anchor": "name = \"bone giant\", color=colors.WHITE"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+          "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+          "line": 63,
+          "anchor": "add_mos = {{image=\"npc/undead_giant_bone_giant.png\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/spells/master-of-bones.lua",
+          "sha256": "4318c0328da28c7a7767bf96027d8ccc449ab120b17558d8af699a6a6a05d170",
+          "line": 357,
+          "anchor": "name = \"bone giant\", color=colors.WHITE"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_bone_giant.png",
+          "sha256": "f617abd61d90a34b9bc275c04cbc21ac7c698e39b4219c5c43c2007db27625c1",
+          "role": "identity",
+          "note": "Native shape: a tall lanky humanoid framework assembled from dozens of tan bones, long arms ending in clustered bone fists, a small bone head, pale lilac fringe on the edges."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/half-finished-bone-giant.png",
+          "sha256": "17faccc721ded0674ab8b854ebb1fcf50c246b54b2b002ccb6e4dea2b3fd072d",
+          "role": "family",
+          "note": "Shipped Half-Finished Bone Giant (thin purple-aura skeleton frame with gaps): the bone giant is the complete, massive, densely packed mass of bones, no purple aura."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A bone giant seen from a steep overhead three-quarter angle: a hulking heavy humanoid mass assembled from dozens of large ivory and tan bones, ribcages and vertebra fused into a broad torso and thick shoulders, very heavy arms of stacked femurs ending in huge clustered bone fists resting low in front, thick bone-plate legs, a small skull head with dark hollow eyes sunk between the shoulders, tarnished sinew and small skulls studding the shoulders. Dense, massive and complete.",
+        "contrast": "Undead giants: the shipped Half-Finished Bone Giant is a thin spindly frame with a purple aura and gaps. The bone giant is the COMPLETE dense one, a wide heavy mass of stacked ivory bones with big fists (silhouette: broad blocky shoulders, huge low fists, small head; hue: warm ivory and tan; value: light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Light warm ivory and tan bone with mid-tone brown sinew and dark hollow eye sockets; nothing darker than mid tone except sockets and gaps between bones; no glow or light cast onto the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=bone giant, define_as=None, type=undead/subtype=giant, unique=False); details and hashes in evidence/monster-batch-n-20260929/source-contracts.json. base BASE_NPC_BONE_GIANT (undead/giant, no image=); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/undead_giant_bone_giant.png\", display_h=2, display_y=-1}}} names the PNG explicitly (no {tall=1} shorthand and no =BASE=TILE= indirection), so the resolved tall body is statically pinnable (same form as the batch F shivgoroth/greater shivgoroth, batch K Walrog/tunneler and batch J Weaver Queen entries); native sprite 64x128; talents Bone Armour and Stun are activated (Bone Armour is not a sustain), no sustains_at_birth; the eternal/heavy/runed/other bone giants are other names with other PNGs; the Necromancer Lord of Skulls effect renames its minion (exact name no longer matches). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-n-20260929/source-contracts.json",
+          "sha256": "dad625ba87d3d81ab2a542faf25e2a55fafb5093319a6d1269d4019f0cde564b"
+        }
+      ]
+    }
+  ]
+}

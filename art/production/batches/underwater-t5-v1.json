@@ -1,0 +1,171 @@
+{
+  "schema": 1,
+  "batch_id": "underwater-t5-v1",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Exact native identities and rules audited in T5 identity.md",
+      "max_attempts": 1,
+      "scope": "Lake of Nur L2 and FLOODED L3; exact underwater family only",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/t5-20260929/identity.md",
+          "sha256": "1cd0a645ea56a1aa38ed27f8360f6c538e7fa0d4014b461748b3503daf15d7da",
+          "role": "evidence",
+          "note": "Source audit"
+        }
+      ],
+      "asset_id": "underwater-floor",
+      "native_name": "WATER_FLOOR",
+      "kind": "terrain-floor",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/water.lua",
+          "sha256": "3f791b27b0bef7a11d23224f7edd1d6b578dd257ac1a624c6c23f53c71f86b75",
+          "role": "source",
+          "note": "Native definition",
+          "line": 25,
+          "anchor": "define_as = \"WATER_FLOOR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/underwater/subsea_floor_02.png",
+          "sha256": "c98938909a0d2b050a469af221a11b6c8d1e181902306180b66964d1abc77500",
+          "role": "identity",
+          "note": "Native underwater look"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/refined/korpul/floor-a-0-0.png",
+          "sha256": "b96ed0940fb402a3b09e641970b41df59ac1a5cddfd88b324c9e5091a083d999",
+          "role": "style",
+          "note": "Existing board stone texture"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Floor walkable; wall blocked; door preserves native open/close.",
+        "sight": "Floor open; wall and closed door opaque.",
+        "danger": "Underwater air drain remains native; no painted hazard.",
+        "interaction": "Wall dig and door toggles remain native.",
+        "export": "Opaque 128px parity pair with wall masks and door variants."
+      },
+      "prompt_fields": {
+        "subject": "Top down seamless submerged blue green stone floor with fine silt, coral flecks, hand painted tabletop map surface; no raised obstruction.",
+        "contrast": "Walkable but consumes air. Bright plane readable at 48px.",
+        "composition": "Opaque continuous square texture to all edges.",
+        "palette": "Turquoise, blue green, subdued gold sand.",
+        "mechanics": "No creatures, symbols, text, arrows, health, hazard signage or extra props. Preserve the native rule cues."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Exact native identities and rules audited in T5 identity.md",
+      "max_attempts": 1,
+      "scope": "Lake of Nur L2 and FLOODED L3; exact underwater family only",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/t5-20260929/identity.md",
+          "sha256": "1cd0a645ea56a1aa38ed27f8360f6c538e7fa0d4014b461748b3503daf15d7da",
+          "role": "evidence",
+          "note": "Source audit"
+        }
+      ],
+      "asset_id": "underwater-wall",
+      "native_name": "WATER_WALL",
+      "kind": "terrain-floor",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/water.lua",
+          "sha256": "3f791b27b0bef7a11d23224f7edd1d6b578dd257ac1a624c6c23f53c71f86b75",
+          "role": "source",
+          "note": "Native definition",
+          "line": 35,
+          "anchor": "define_as = \"WATER_WALL\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/underwater/subsea_granite_wall1.png",
+          "sha256": "dfd6d7364583a69e37a4c837c7cf7e4f9ff6c86c45baaf5760b59a41c68d3483",
+          "role": "identity",
+          "note": "Native underwater look"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/refined/korpul/floor-a-0-0.png",
+          "sha256": "b96ed0940fb402a3b09e641970b41df59ac1a5cddfd88b324c9e5091a083d999",
+          "role": "style",
+          "note": "Existing board stone texture"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Floor walkable; wall blocked; door preserves native open/close.",
+        "sight": "Floor open; wall and closed door opaque.",
+        "danger": "Underwater air drain remains native; no painted hazard.",
+        "interaction": "Wall dig and door toggles remain native.",
+        "export": "Opaque 128px parity pair with wall masks and door variants."
+      },
+      "prompt_fields": {
+        "subject": "Top down ancient submerged fitted granite wall, dark stacked coral encrusted masonry, visibly solid and impassable, hand painted tabletop map.",
+        "contrast": "Movement and sight blocking, diggable. Much darker than floor at 48px.",
+        "composition": "Opaque masonry continuous to all edges; exporter cuts connected rim.",
+        "palette": "Deep slate blue, cool teal joints, restrained pale coral.",
+        "mechanics": "No creatures, symbols, text, arrows, health, hazard signage or extra props. Preserve the native rule cues."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Exact native identities and rules audited in T5 identity.md",
+      "max_attempts": 1,
+      "scope": "Lake of Nur L2 and FLOODED L3; exact underwater family only",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/t5-20260929/identity.md",
+          "sha256": "1cd0a645ea56a1aa38ed27f8360f6c538e7fa0d4014b461748b3503daf15d7da",
+          "role": "evidence",
+          "note": "Source audit"
+        }
+      ],
+      "asset_id": "underwater-door",
+      "native_name": "WATER_DOOR",
+      "kind": "terrain-floor",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/water.lua",
+          "sha256": "3f791b27b0bef7a11d23224f7edd1d6b578dd257ac1a624c6c23f53c71f86b75",
+          "role": "source",
+          "note": "Native definition",
+          "line": 69,
+          "anchor": "define_as = \"WATER_DOOR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/underwater/subsea_stone_wall_door_closed.png",
+          "sha256": "c037e133020a2660f6be9a1b3274084a7f7b6b42736a064ddf5e56f44f8896cb",
+          "role": "identity",
+          "note": "Native underwater look"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/refined/korpul/floor-a-0-0.png",
+          "sha256": "b96ed0940fb402a3b09e641970b41df59ac1a5cddfd88b324c9e5091a083d999",
+          "role": "style",
+          "note": "Existing board stone texture"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Floor walkable; wall blocked; door preserves native open/close.",
+        "sight": "Floor open; wall and closed door opaque.",
+        "danger": "Underwater air drain remains native; no painted hazard.",
+        "interaction": "Wall dig and door toggles remain native.",
+        "export": "Opaque 128px parity pair with wall masks and door variants."
+      },
+      "prompt_fields": {
+        "subject": "Top down ancient underwater heavy stone door leaf with dark central slab and coral rim, matching the submerged granite wall.",
+        "contrast": "Closed door blocks sight and can open; clear distinct central leaf.",
+        "composition": "Opaque square; door leaf centered with margins for wall jambs.",
+        "palette": "Deep blue grey stone, oxidized teal, muted coral edges.",
+        "mechanics": "No creatures, symbols, text, arrows, health, hazard signage or extra props. Preserve the native rule cues."
+      }
+    }
+  ]
+}

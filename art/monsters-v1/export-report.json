@@ -1,0 +1,515 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "forest-troll",
+      "master": "masters/forest-troll-v1.png",
+      "sha256": "92fc124b820c35b8b88a418cea384ef21638bcfb0be9d6245bcd1362d8db6e5c",
+      "exports": [
+        {
+          "path": "sprites/48/forest-troll.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            185,
+            200,
+            1069,
+            1100
+          ],
+          "export_window": [
+            103.744186,
+            126.744186,
+            1046.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "759a0b94ccb9c1ce8ffeb6db48682db21bcf9c864c53cb00751ce10512bf5faa"
+        },
+        {
+          "path": "sprites/64/forest-troll.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            185,
+            200,
+            1069,
+            1100
+          ],
+          "export_window": [
+            103.744186,
+            126.744186,
+            1046.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ff167b8f05af2a458a5ae829e756465c634c87d8af9014ad3b9679d771511491"
+        },
+        {
+          "path": "sprites/96/forest-troll.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            185,
+            200,
+            1069,
+            1100
+          ],
+          "export_window": [
+            103.744186,
+            126.744186,
+            1046.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a008e3c90384d3f43ea98a798d81a80676ae6d0e867ecb0d593d02ac47dcda40"
+        },
+        {
+          "path": "sprites/128/forest-troll.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            185,
+            200,
+            1069,
+            1100
+          ],
+          "export_window": [
+            103.744186,
+            126.744186,
+            1046.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "474ccc6cc0eafa81aa27acf696a2efca7307bcc55fa7dd55adcb3cbae9e82fb4"
+        },
+        {
+          "path": "sprites/256/forest-troll.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            185,
+            200,
+            1069,
+            1100
+          ],
+          "export_window": [
+            103.744186,
+            126.744186,
+            1046.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c9ca04e515c79ea78cc7d4b5da311ecddd38ff963c899ef6d04cd1b18021761a"
+        }
+      ]
+    },
+    {
+      "id": "wolf",
+      "master": "masters/wolf-v2.png",
+      "sha256": "01ea31cefef4dfb786c8e2bd060c51e8be61a692e68c471dbaf5b51a4e8ec342",
+      "exports": [
+        {
+          "path": "sprites/48/wolf.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            179,
+            198,
+            1075,
+            1105
+          ],
+          "export_window": [
+            99.674419,
+            124.174419,
+            1054.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f8d623a162515bb2bc93212e1481609dcca8d2acc9cf905baaaa3b1df1082b0d"
+        },
+        {
+          "path": "sprites/64/wolf.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            179,
+            198,
+            1075,
+            1105
+          ],
+          "export_window": [
+            99.674419,
+            124.174419,
+            1054.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "67eebcf84374187fc9b7f8cdd6913fcb7ea6ffe418f1db7d0ad4893d93f1d6f5"
+        },
+        {
+          "path": "sprites/96/wolf.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            179,
+            198,
+            1075,
+            1105
+          ],
+          "export_window": [
+            99.674419,
+            124.174419,
+            1054.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9d823f87711bffc639923c12cd11232c45a26a938652a2edf9a60a68bfed1b9f"
+        },
+        {
+          "path": "sprites/128/wolf.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            179,
+            198,
+            1075,
+            1105
+          ],
+          "export_window": [
+            99.674419,
+            124.174419,
+            1054.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "782857cb4784c71367100b69ee3c734423e74f431d032bcdd1a3ed7e893b1da4"
+        },
+        {
+          "path": "sprites/256/wolf.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            179,
+            198,
+            1075,
+            1105
+          ],
+          "export_window": [
+            99.674419,
+            124.174419,
+            1054.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ede6a6a7a0695fc5c3ffbf130d95c02b3cbe7a731527d02831cbef9aa9f4d0ed"
+        }
+      ]
+    },
+    {
+      "id": "brown-bear",
+      "master": "masters/brown-bear-v2.png",
+      "sha256": "63a68f9102fd938818288f4989ff09755e73f9dc88e045bb53e82e6012a51c10",
+      "exports": [
+        {
+          "path": "sprites/48/brown-bear.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            160,
+            171,
+            1089,
+            1103
+          ],
+          "export_window": [
+            82.639535,
+            95.139535,
+            1083.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5525c5310f2bb10149d3ca9f013aca5f3aa9bed267ca493badb92eba9aaab655"
+        },
+        {
+          "path": "sprites/64/brown-bear.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            160,
+            171,
+            1089,
+            1103
+          ],
+          "export_window": [
+            82.639535,
+            95.139535,
+            1083.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "95a82591a21622dd43aae7ee9bb113e4fd77ca34ef491709b02d4839c219774f"
+        },
+        {
+          "path": "sprites/96/brown-bear.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            160,
+            171,
+            1089,
+            1103
+          ],
+          "export_window": [
+            82.639535,
+            95.139535,
+            1083.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "42930f4a2682abb750a5218b912b6afcd80bd120bc2cfee205620ac1a0363a74"
+        },
+        {
+          "path": "sprites/128/brown-bear.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            160,
+            171,
+            1089,
+            1103
+          ],
+          "export_window": [
+            82.639535,
+            95.139535,
+            1083.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e9320eb860cfbb1f1d7c3bbbf98c9cfa8a35514dd3e9752aca064af18cf7cf74"
+        },
+        {
+          "path": "sprites/256/brown-bear.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            160,
+            171,
+            1089,
+            1103
+          ],
+          "export_window": [
+            82.639535,
+            95.139535,
+            1083.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2652d7a81280600f6e7cf1030afdf7ff65765ff5becc758dea033347ea5e57ec"
+        }
+      ]
+    },
+    {
+      "id": "brown-snake",
+      "master": "masters/brown-snake-v1.png",
+      "sha256": "54dd572dbe3114d155664345e9b9e3a6c16fdc6d8fff7487810808e58a06bec6",
+      "exports": [
+        {
+          "path": "sprites/48/brown-snake.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            155,
+            160,
+            1104,
+            1116
+          ],
+          "export_window": [
+            73.686047,
+            82.186047,
+            1111.627907
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2eb0a569d8fb0646c528e13088db58130a2cb38ddb84dea924aa9eed36bff060"
+        },
+        {
+          "path": "sprites/64/brown-snake.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            155,
+            160,
+            1104,
+            1116
+          ],
+          "export_window": [
+            73.686047,
+            82.186047,
+            1111.627907
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c19ea759ac26dc1b996e779a281268e164c269e4b8d423d6d715015486f95017"
+        },
+        {
+          "path": "sprites/96/brown-snake.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            155,
+            160,
+            1104,
+            1116
+          ],
+          "export_window": [
+            73.686047,
+            82.186047,
+            1111.627907
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "593370afa2c256a5b7478e719c6d7fd2823ed8095e345df2033e4d1eb89d1537"
+        },
+        {
+          "path": "sprites/128/brown-snake.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            155,
+            160,
+            1104,
+            1116
+          ],
+          "export_window": [
+            73.686047,
+            82.186047,
+            1111.627907
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f94df9fa12fff8941a3a1b382314810676980eef72af4c321753ca3119ffb258"
+        },
+        {
+          "path": "sprites/256/brown-snake.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            155,
+            160,
+            1104,
+            1116
+          ],
+          "export_window": [
+            73.686047,
+            82.186047,
+            1111.627907
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "775062d368e702077f8f39f9f94e2ba79c171873ccc291e2c2d9ba488ddf2db3"
+        }
+      ]
+    },
+    {
+      "id": "venus-flytrap",
+      "master": "masters/venus-flytrap-v1.png",
+      "sha256": "2a41e18360b3f9971b880a060ea0d77bdb45cc7f3403b4d4363654d9e2732a0e",
+      "exports": [
+        {
+          "path": "sprites/48/venus-flytrap.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            120,
+            116,
+            1134,
+            1127
+          ],
+          "export_window": [
+            37.465116,
+            31.965116,
+            1179.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "12352fe582bb9003d34a1f8cc4c0ca604163e607aeaa1e24d5608ac82d3d1870"
+        },
+        {
+          "path": "sprites/64/venus-flytrap.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            120,
+            116,
+            1134,
+            1127
+          ],
+          "export_window": [
+            37.465116,
+            31.965116,
+            1179.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b74dca843b8a2cea22301bc8a0a2d284457579ad88ecf071c71f41b5f4a0d64e"
+        },
+        {
+          "path": "sprites/96/venus-flytrap.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            120,
+            116,
+            1134,
+            1127
+          ],
+          "export_window": [
+            37.465116,
+            31.965116,
+            1179.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "df850224a3fc322493717e6361063fa249142d3b8e091039d67830974980ea77"
+        },
+        {
+          "path": "sprites/128/venus-flytrap.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            120,
+            116,
+            1134,
+            1127
+          ],
+          "export_window": [
+            37.465116,
+            31.965116,
+            1179.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cbed86869610e30e1f1f5fdb39f58ad94bb9a8a9eb608eb61cf6b5397fd81b6f"
+        },
+        {
+          "path": "sprites/256/venus-flytrap.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            120,
+            116,
+            1134,
+            1127
+          ],
+          "export_window": [
+            37.465116,
+            31.965116,
+            1179.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "67779cb3855e8822eeee827271d5c868988d0256d370d53ab7a7d2589c8bbc8c"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1206 @@
+{
+  "reviewed_runtime": "0.5.2",
+  "reviewed_commit": "c59c21a",
+  "scope": "Base game direct zone imports only; branches are combined; no all.lua expansion, DLC or measured encounters.",
+  "base_zone_definitions": 89,
+  "npc_source_files": 89,
+  "early_zones": [
+    {
+      "zone": "trollmire",
+      "npc_loads": [
+        {
+          "zone": "trollmire",
+          "family": "rodent",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 21,
+          "statement": "load(\"/data/general/npcs/rodent.lua\", rarity(5))"
+        },
+        {
+          "zone": "trollmire",
+          "family": "vermin",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 22,
+          "statement": "load(\"/data/general/npcs/vermin.lua\", rarity(2))"
+        },
+        {
+          "zone": "trollmire",
+          "family": "canine",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 23,
+          "statement": "load(\"/data/general/npcs/canine.lua\", rarity(0))"
+        },
+        {
+          "zone": "trollmire",
+          "family": "troll",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 24,
+          "statement": "load(\"/data/general/npcs/troll.lua\", rarity(0))"
+        },
+        {
+          "zone": "trollmire",
+          "family": "snake",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 25,
+          "statement": "load(\"/data/general/npcs/snake.lua\", rarity(3))"
+        },
+        {
+          "zone": "trollmire",
+          "family": "plant",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 26,
+          "statement": "load(\"/data/general/npcs/plant.lua\", rarity(0))"
+        },
+        {
+          "zone": "trollmire",
+          "family": "swarm",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 27,
+          "statement": "load(\"/data/general/npcs/swarm.lua\", rarity(3))"
+        },
+        {
+          "zone": "trollmire",
+          "family": "bear",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 28,
+          "statement": "load(\"/data/general/npcs/bear.lua\", rarity(2))"
+        },
+        {
+          "zone": "trollmire",
+          "family": "all",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 30,
+          "statement": "load(\"/data/general/npcs/all.lua\", rarity(4, 35))"
+        },
+        {
+          "zone": "trollmire",
+          "family": "vermin",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 32,
+          "statement": "load(\"/data/general/npcs/vermin.lua\", rarity(2))"
+        },
+        {
+          "zone": "trollmire",
+          "family": "troll",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 33,
+          "statement": "load(\"/data/general/npcs/troll.lua\", rarity(0))"
+        },
+        {
+          "zone": "trollmire",
+          "family": "snake",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 34,
+          "statement": "load(\"/data/general/npcs/snake.lua\", rarity(3))"
+        },
+        {
+          "zone": "trollmire",
+          "family": "plant",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 35,
+          "statement": "load(\"/data/general/npcs/plant.lua\", rarity(0))"
+        },
+        {
+          "zone": "trollmire",
+          "family": "swarm",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 36,
+          "statement": "load(\"/data/general/npcs/swarm.lua\", rarity(3))"
+        },
+        {
+          "zone": "trollmire",
+          "family": "bear",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 37,
+          "statement": "load(\"/data/general/npcs/bear.lua\", rarity(5))"
+        },
+        {
+          "zone": "trollmire",
+          "family": "aquatic_critter",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 39,
+          "statement": "load(\"/data/general/npcs/aquatic_critter.lua\", function(e) if e.rarity and e.name and e.name:find(\"squid\") then e.rarity=nil end end)"
+        },
+        {
+          "zone": "trollmire",
+          "family": "all",
+          "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+          "line": 41,
+          "statement": "load(\"/data/general/npcs/all.lua\", rarity(4, 35))"
+        }
+      ],
+      "grid_loads": [
+        {
+          "family": "basic",
+          "source": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "line": 20,
+          "statement": "load(\"/data/general/grids/basic.lua\")"
+        },
+        {
+          "family": "forest",
+          "source": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "line": 21,
+          "statement": "load(\"/data/general/grids/forest.lua\")"
+        },
+        {
+          "family": "autumn_forest",
+          "source": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "line": 22,
+          "statement": "load(\"/data/general/grids/autumn_forest.lua\")"
+        },
+        {
+          "family": "water",
+          "source": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "line": 23,
+          "statement": "load(\"/data/general/grids/water.lua\")"
+        }
+      ]
+    },
+    {
+      "zone": "ruins-kor-pul",
+      "npc_loads": [
+        {
+          "zone": "ruins-kor-pul",
+          "family": "rodent",
+          "source": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "line": 21,
+          "statement": "load(\"/data/general/npcs/rodent.lua\", rarity(0))"
+        },
+        {
+          "zone": "ruins-kor-pul",
+          "family": "vermin",
+          "source": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "line": 22,
+          "statement": "load(\"/data/general/npcs/vermin.lua\", rarity(2))"
+        },
+        {
+          "zone": "ruins-kor-pul",
+          "family": "molds",
+          "source": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "line": 23,
+          "statement": "load(\"/data/general/npcs/molds.lua\", rarity(1))"
+        },
+        {
+          "zone": "ruins-kor-pul",
+          "family": "skeleton",
+          "source": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "line": 24,
+          "statement": "load(\"/data/general/npcs/skeleton.lua\", rarity(0))"
+        },
+        {
+          "zone": "ruins-kor-pul",
+          "family": "snake",
+          "source": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "line": 25,
+          "statement": "load(\"/data/general/npcs/snake.lua\", rarity(2))"
+        },
+        {
+          "zone": "ruins-kor-pul",
+          "family": "all",
+          "source": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "line": 27,
+          "statement": "load(\"/data/general/npcs/all.lua\", rarity(4, 35))"
+        },
+        {
+          "zone": "ruins-kor-pul",
+          "family": "rodent",
+          "source": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "line": 29,
+          "statement": "load(\"/data/general/npcs/rodent.lua\", rarity(0))"
+        },
+        {
+          "zone": "ruins-kor-pul",
+          "family": "vermin",
+          "source": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "line": 30,
+          "statement": "load(\"/data/general/npcs/vermin.lua\", rarity(2))"
+        },
+        {
+          "zone": "ruins-kor-pul",
+          "family": "molds",
+          "source": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "line": 31,
+          "statement": "load(\"/data/general/npcs/molds.lua\", rarity(1))"
+        },
+        {
+          "zone": "ruins-kor-pul",
+          "family": "thieve",
+          "source": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "line": 32,
+          "statement": "load(\"/data/general/npcs/thieve.lua\", rarity(0))"
+        },
+        {
+          "zone": "ruins-kor-pul",
+          "family": "snake",
+          "source": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "line": 33,
+          "statement": "load(\"/data/general/npcs/snake.lua\", rarity(2))"
+        },
+        {
+          "zone": "ruins-kor-pul",
+          "family": "all",
+          "source": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "line": 35,
+          "statement": "load(\"/data/general/npcs/all.lua\", rarity(4, 35))"
+        }
+      ],
+      "grid_loads": [
+        {
+          "family": "basic",
+          "source": "game/modules/tome/data/zones/ruins-kor-pul/grids.lua",
+          "line": 20,
+          "statement": "load(\"/data/general/grids/basic.lua\")"
+        }
+      ]
+    },
+    {
+      "zone": "norgos-lair",
+      "npc_loads": [
+        {
+          "zone": "norgos-lair",
+          "family": "bear",
+          "source": "game/modules/tome/data/zones/norgos-lair/npcs.lua",
+          "line": 23,
+          "statement": "load(\"/data/general/npcs/bear.lua\", rarity(0))"
+        },
+        {
+          "zone": "norgos-lair",
+          "family": "vermin",
+          "source": "game/modules/tome/data/zones/norgos-lair/npcs.lua",
+          "line": 24,
+          "statement": "load(\"/data/general/npcs/vermin.lua\", rarity(3))"
+        },
+        {
+          "zone": "norgos-lair",
+          "family": "canine",
+          "source": "game/modules/tome/data/zones/norgos-lair/npcs.lua",
+          "line": 25,
+          "statement": "load(\"/data/general/npcs/canine.lua\", rarity(1))"
+        },
+        {
+          "zone": "norgos-lair",
+          "family": "snake",
+          "source": "game/modules/tome/data/zones/norgos-lair/npcs.lua",
+          "line": 26,
+          "statement": "load(\"/data/general/npcs/snake.lua\", rarity(0))"
+        },
+        {
+          "zone": "norgos-lair",
+          "family": "plant",
+          "source": "game/modules/tome/data/zones/norgos-lair/npcs.lua",
+          "line": 27,
+          "statement": "load(\"/data/general/npcs/plant.lua\", rarity(0))"
+        },
+        {
+          "zone": "norgos-lair",
+          "family": "all",
+          "source": "game/modules/tome/data/zones/norgos-lair/npcs.lua",
+          "line": 29,
+          "statement": "load(\"/data/general/npcs/all.lua\", rarity(4, 35))"
+        },
+        {
+          "zone": "norgos-lair",
+          "family": "bear",
+          "source": "game/modules/tome/data/zones/norgos-lair/npcs.lua",
+          "line": 31,
+          "statement": "load(\"/data/general/npcs/bear.lua\", rarity(0))"
+        },
+        {
+          "zone": "norgos-lair",
+          "family": "vermin",
+          "source": "game/modules/tome/data/zones/norgos-lair/npcs.lua",
+          "line": 32,
+          "statement": "load(\"/data/general/npcs/vermin.lua\", rarity(3))"
+        },
+        {
+          "zone": "norgos-lair",
+          "family": "canine",
+          "source": "game/modules/tome/data/zones/norgos-lair/npcs.lua",
+          "line": 33,
+          "statement": "load(\"/data/general/npcs/canine.lua\", rarity(1))"
+        },
+        {
+          "zone": "norgos-lair",
+          "family": "snake",
+          "source": "game/modules/tome/data/zones/norgos-lair/npcs.lua",
+          "line": 34,
+          "statement": "load(\"/data/general/npcs/snake.lua\", rarity(0))"
+        },
+        {
+          "zone": "norgos-lair",
+          "family": "shivgoroth",
+          "source": "game/modules/tome/data/zones/norgos-lair/npcs.lua",
+          "line": 35,
+          "statement": "load(\"/data/general/npcs/shivgoroth.lua\", function(e)"
+        },
+        {
+          "zone": "norgos-lair",
+          "family": "all",
+          "source": "game/modules/tome/data/zones/norgos-lair/npcs.lua",
+          "line": 46,
+          "statement": "load(\"/data/general/npcs/all.lua\", rarity(4, 35))"
+        }
+      ],
+      "grid_loads": [
+        {
+          "family": "basic",
+          "source": "game/modules/tome/data/zones/norgos-lair/grids.lua",
+          "line": 20,
+          "statement": "load(\"/data/general/grids/basic.lua\")"
+        },
+        {
+          "family": "mountain",
+          "source": "game/modules/tome/data/zones/norgos-lair/grids.lua",
+          "line": 21,
+          "statement": "load(\"/data/general/grids/mountain.lua\", function(e) if e.image == \"terrain/rocky_ground.png\" then e.image = \"terrain/snowy_grass.png\" end end)"
+        }
+      ]
+    },
+    {
+      "zone": "heart-gloom",
+      "npc_loads": [
+        {
+          "zone": "heart-gloom",
+          "family": "rodent",
+          "source": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "line": 52,
+          "statement": "load(\"/data/general/npcs/rodent.lua\", alter(0))"
+        },
+        {
+          "zone": "heart-gloom",
+          "family": "bear",
+          "source": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "line": 53,
+          "statement": "load(\"/data/general/npcs/bear.lua\", alter(3))"
+        },
+        {
+          "zone": "heart-gloom",
+          "family": "canine",
+          "source": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "line": 54,
+          "statement": "load(\"/data/general/npcs/canine.lua\", alter(1))"
+        },
+        {
+          "zone": "heart-gloom",
+          "family": "plant",
+          "source": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "line": 55,
+          "statement": "load(\"/data/general/npcs/plant.lua\", alter(0))"
+        }
+      ],
+      "grid_loads": [
+        {
+          "family": "basic",
+          "source": "game/modules/tome/data/zones/heart-gloom/grids.lua",
+          "line": 20,
+          "statement": "load(\"/data/general/grids/basic.lua\")"
+        },
+        {
+          "family": "underground_gloomy",
+          "source": "game/modules/tome/data/zones/heart-gloom/grids.lua",
+          "line": 23,
+          "statement": "load(\"/data/general/grids/underground_gloomy.lua\")"
+        },
+        {
+          "family": "underground_dreamy",
+          "source": "game/modules/tome/data/zones/heart-gloom/grids.lua",
+          "line": 25,
+          "statement": "load(\"/data/general/grids/underground_dreamy.lua\")"
+        }
+      ]
+    },
+    {
+      "zone": "scintillating-caves",
+      "npc_loads": [
+        {
+          "zone": "scintillating-caves",
+          "family": "rodent",
+          "source": "game/modules/tome/data/zones/scintillating-caves/npcs.lua",
+          "line": 20,
+          "statement": "load(\"/data/general/npcs/rodent.lua\", rarity(5))"
+        },
+        {
+          "zone": "scintillating-caves",
+          "family": "vermin",
+          "source": "game/modules/tome/data/zones/scintillating-caves/npcs.lua",
+          "line": 21,
+          "statement": "load(\"/data/general/npcs/vermin.lua\", rarity(2))"
+        },
+        {
+          "zone": "scintillating-caves",
+          "family": "snake",
+          "source": "game/modules/tome/data/zones/scintillating-caves/npcs.lua",
+          "line": 22,
+          "statement": "load(\"/data/general/npcs/snake.lua\", rarity(3))"
+        },
+        {
+          "zone": "scintillating-caves",
+          "family": "bear",
+          "source": "game/modules/tome/data/zones/scintillating-caves/npcs.lua",
+          "line": 23,
+          "statement": "load(\"/data/general/npcs/bear.lua\", rarity(2))"
+        },
+        {
+          "zone": "scintillating-caves",
+          "family": "crystal",
+          "source": "game/modules/tome/data/zones/scintillating-caves/npcs.lua",
+          "line": 24,
+          "statement": "load(\"/data/general/npcs/crystal.lua\", rarity(1))"
+        },
+        {
+          "zone": "scintillating-caves",
+          "family": "all",
+          "source": "game/modules/tome/data/zones/scintillating-caves/npcs.lua",
+          "line": 26,
+          "statement": "load(\"/data/general/npcs/all.lua\", rarity(4, 35))"
+        }
+      ],
+      "grid_loads": [
+        {
+          "family": "basic",
+          "source": "game/modules/tome/data/zones/scintillating-caves/grids.lua",
+          "line": 20,
+          "statement": "load(\"/data/general/grids/basic.lua\")"
+        },
+        {
+          "family": "underground",
+          "source": "game/modules/tome/data/zones/scintillating-caves/grids.lua",
+          "line": 21,
+          "statement": "load(\"/data/general/grids/underground.lua\")"
+        },
+        {
+          "family": "water",
+          "source": "game/modules/tome/data/zones/scintillating-caves/grids.lua",
+          "line": 22,
+          "statement": "load(\"/data/general/grids/water.lua\")"
+        }
+      ]
+    },
+    {
+      "zone": "rhaloren-camp",
+      "npc_loads": [
+        {
+          "zone": "rhaloren-camp",
+          "family": "rodent",
+          "source": "game/modules/tome/data/zones/rhaloren-camp/npcs.lua",
+          "line": 20,
+          "statement": "load(\"/data/general/npcs/rodent.lua\", rarity(5))"
+        },
+        {
+          "zone": "rhaloren-camp",
+          "family": "vermin",
+          "source": "game/modules/tome/data/zones/rhaloren-camp/npcs.lua",
+          "line": 21,
+          "statement": "load(\"/data/general/npcs/vermin.lua\", rarity(5))"
+        },
+        {
+          "zone": "rhaloren-camp",
+          "family": "molds",
+          "source": "game/modules/tome/data/zones/rhaloren-camp/npcs.lua",
+          "line": 22,
+          "statement": "load(\"/data/general/npcs/molds.lua\", rarity(5))"
+        },
+        {
+          "zone": "rhaloren-camp",
+          "family": "elven-warrior",
+          "source": "game/modules/tome/data/zones/rhaloren-camp/npcs.lua",
+          "line": 23,
+          "statement": "load(\"/data/general/npcs/elven-warrior.lua\", rarity(0))"
+        },
+        {
+          "zone": "rhaloren-camp",
+          "family": "elven-caster",
+          "source": "game/modules/tome/data/zones/rhaloren-camp/npcs.lua",
+          "line": 24,
+          "statement": "load(\"/data/general/npcs/elven-caster.lua\", rarity(0))"
+        },
+        {
+          "zone": "rhaloren-camp",
+          "family": "all",
+          "source": "game/modules/tome/data/zones/rhaloren-camp/npcs.lua",
+          "line": 26,
+          "statement": "load(\"/data/general/npcs/all.lua\", rarity(4, 35))"
+        }
+      ],
+      "grid_loads": [
+        {
+          "family": "basic",
+          "source": "game/modules/tome/data/zones/rhaloren-camp/grids.lua",
+          "line": 20,
+          "statement": "load(\"/data/general/grids/basic.lua\")"
+        },
+        {
+          "family": "forest",
+          "source": "game/modules/tome/data/zones/rhaloren-camp/grids.lua",
+          "line": 21,
+          "statement": "load(\"/data/general/grids/forest.lua\")"
+        }
+      ]
+    },
+    {
+      "zone": "old-forest",
+      "npc_loads": [
+        {
+          "zone": "old-forest",
+          "family": "bear",
+          "source": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "line": 21,
+          "statement": "load(\"/data/general/npcs/bear.lua\", rarity(1))"
+        },
+        {
+          "zone": "old-forest",
+          "family": "vermin",
+          "source": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "line": 22,
+          "statement": "load(\"/data/general/npcs/vermin.lua\", rarity(3))"
+        },
+        {
+          "zone": "old-forest",
+          "family": "canine",
+          "source": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "line": 23,
+          "statement": "load(\"/data/general/npcs/canine.lua\", rarity(0))"
+        },
+        {
+          "zone": "old-forest",
+          "family": "snake",
+          "source": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "line": 24,
+          "statement": "load(\"/data/general/npcs/snake.lua\", rarity(0))"
+        },
+        {
+          "zone": "old-forest",
+          "family": "swarm",
+          "source": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "line": 25,
+          "statement": "load(\"/data/general/npcs/swarm.lua\", rarity(1))"
+        },
+        {
+          "zone": "old-forest",
+          "family": "plant",
+          "source": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "line": 26,
+          "statement": "load(\"/data/general/npcs/plant.lua\", rarity(0))"
+        },
+        {
+          "zone": "old-forest",
+          "family": "ant",
+          "source": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "line": 27,
+          "statement": "load(\"/data/general/npcs/ant.lua\", rarity(2))"
+        },
+        {
+          "zone": "old-forest",
+          "family": "all",
+          "source": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "line": 29,
+          "statement": "load(\"/data/general/npcs/all.lua\", rarity(4, 35))"
+        },
+        {
+          "zone": "old-forest",
+          "family": "crystal",
+          "source": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "line": 31,
+          "statement": "load(\"/data/general/npcs/crystal.lua\", rarity(0))"
+        },
+        {
+          "zone": "old-forest",
+          "family": "bear",
+          "source": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "line": 32,
+          "statement": "load(\"/data/general/npcs/bear.lua\", rarity(1))"
+        },
+        {
+          "zone": "old-forest",
+          "family": "vermin",
+          "source": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "line": 33,
+          "statement": "load(\"/data/general/npcs/vermin.lua\", rarity(3))"
+        },
+        {
+          "zone": "old-forest",
+          "family": "swarm",
+          "source": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "line": 34,
+          "statement": "load(\"/data/general/npcs/swarm.lua\", rarity(1))"
+        },
+        {
+          "zone": "old-forest",
+          "family": "plant",
+          "source": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "line": 35,
+          "statement": "load(\"/data/general/npcs/plant.lua\", rarity(0))"
+        },
+        {
+          "zone": "old-forest",
+          "family": "ant",
+          "source": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "line": 36,
+          "statement": "load(\"/data/general/npcs/ant.lua\", rarity(2))"
+        },
+        {
+          "zone": "old-forest",
+          "family": "all",
+          "source": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "line": 38,
+          "statement": "load(\"/data/general/npcs/all.lua\", rarity(4, 35))"
+        }
+      ],
+      "grid_loads": [
+        {
+          "family": "basic",
+          "source": "game/modules/tome/data/zones/old-forest/grids.lua",
+          "line": 20,
+          "statement": "load(\"/data/general/grids/basic.lua\")"
+        },
+        {
+          "family": "water",
+          "source": "game/modules/tome/data/zones/old-forest/grids.lua",
+          "line": 21,
+          "statement": "load(\"/data/general/grids/water.lua\")"
+        },
+        {
+          "family": "forest",
+          "source": "game/modules/tome/data/zones/old-forest/grids.lua",
+          "line": 24,
+          "statement": "load(\"/data/general/grids/forest.lua\", function(e)"
+        },
+        {
+          "family": "forest",
+          "source": "game/modules/tome/data/zones/old-forest/grids.lua",
+          "line": 132,
+          "statement": "load(\"/data/general/grids/forest.lua\")"
+        },
+        {
+          "family": "underground",
+          "source": "game/modules/tome/data/zones/old-forest/grids.lua",
+          "line": 219,
+          "statement": "load(\"/data/general/grids/underground.lua\")"
+        }
+      ]
+    },
+    {
+      "zone": "maze",
+      "npc_loads": [
+        {
+          "zone": "maze",
+          "family": "vermin",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 21,
+          "statement": "load(\"/data/general/npcs/vermin.lua\", rarity(5))"
+        },
+        {
+          "zone": "maze",
+          "family": "rodent",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 22,
+          "statement": "load(\"/data/general/npcs/rodent.lua\", rarity(5))"
+        },
+        {
+          "zone": "maze",
+          "family": "canine",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 23,
+          "statement": "load(\"/data/general/npcs/canine.lua\", rarity(6))"
+        },
+        {
+          "zone": "maze",
+          "family": "snake",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 24,
+          "statement": "load(\"/data/general/npcs/snake.lua\", rarity(4))"
+        },
+        {
+          "zone": "maze",
+          "family": "ooze",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 25,
+          "statement": "load(\"/data/general/npcs/ooze.lua\", rarity(3))"
+        },
+        {
+          "zone": "maze",
+          "family": "jelly",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 26,
+          "statement": "load(\"/data/general/npcs/jelly.lua\", rarity(3))"
+        },
+        {
+          "zone": "maze",
+          "family": "ant",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 27,
+          "statement": "load(\"/data/general/npcs/ant.lua\", rarity(4))"
+        },
+        {
+          "zone": "maze",
+          "family": "thieve",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 28,
+          "statement": "load(\"/data/general/npcs/thieve.lua\", rarity(0))"
+        },
+        {
+          "zone": "maze",
+          "family": "minotaur",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 29,
+          "statement": "load(\"/data/general/npcs/minotaur.lua\", rarity(0))"
+        },
+        {
+          "zone": "maze",
+          "family": "all",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 31,
+          "statement": "load(\"/data/general/npcs/all.lua\", rarity(4, 35))"
+        },
+        {
+          "zone": "maze",
+          "family": "canine",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 33,
+          "statement": "load(\"/data/general/npcs/canine.lua\", rarity(6))"
+        },
+        {
+          "zone": "maze",
+          "family": "snake",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 34,
+          "statement": "load(\"/data/general/npcs/snake.lua\", rarity(4))"
+        },
+        {
+          "zone": "maze",
+          "family": "ooze",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 35,
+          "statement": "load(\"/data/general/npcs/ooze.lua\", rarity(3))"
+        },
+        {
+          "zone": "maze",
+          "family": "jelly",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 36,
+          "statement": "load(\"/data/general/npcs/jelly.lua\", rarity(3))"
+        },
+        {
+          "zone": "maze",
+          "family": "thieve",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 37,
+          "statement": "load(\"/data/general/npcs/thieve.lua\", rarity(0))"
+        },
+        {
+          "zone": "maze",
+          "family": "horror-corrupted",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 38,
+          "statement": "load(\"/data/general/npcs/horror-corrupted.lua\", rarity(0))"
+        },
+        {
+          "zone": "maze",
+          "family": "horror_temporal",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 39,
+          "statement": "load(\"/data/general/npcs/horror_temporal.lua\", rarity(1))"
+        },
+        {
+          "zone": "maze",
+          "family": "all",
+          "source": "game/modules/tome/data/zones/maze/npcs.lua",
+          "line": 41,
+          "statement": "load(\"/data/general/npcs/all.lua\", rarity(4, 35))"
+        }
+      ],
+      "grid_loads": [
+        {
+          "family": "basic",
+          "source": "game/modules/tome/data/zones/maze/grids.lua",
+          "line": 20,
+          "statement": "load(\"/data/general/grids/basic.lua\")"
+        }
+      ]
+    },
+    {
+      "zone": "sandworm-lair",
+      "npc_loads": [
+        {
+          "zone": "sandworm-lair",
+          "family": "vermin",
+          "source": "game/modules/tome/data/zones/sandworm-lair/npcs.lua",
+          "line": 21,
+          "statement": "load(\"/data/general/npcs/vermin.lua\", rarity(7))"
+        },
+        {
+          "zone": "sandworm-lair",
+          "family": "ooze",
+          "source": "game/modules/tome/data/zones/sandworm-lair/npcs.lua",
+          "line": 22,
+          "statement": "load(\"/data/general/npcs/ooze.lua\", rarity(5))"
+        },
+        {
+          "zone": "sandworm-lair",
+          "family": "jelly",
+          "source": "game/modules/tome/data/zones/sandworm-lair/npcs.lua",
+          "line": 23,
+          "statement": "load(\"/data/general/npcs/jelly.lua\", rarity(7))"
+        },
+        {
+          "zone": "sandworm-lair",
+          "family": "sandworm",
+          "source": "game/modules/tome/data/zones/sandworm-lair/npcs.lua",
+          "line": 24,
+          "statement": "load(\"/data/general/npcs/sandworm.lua\", rarity(0))"
+        }
+      ],
+      "grid_loads": [
+        {
+          "family": "basic",
+          "source": "game/modules/tome/data/zones/sandworm-lair/grids.lua",
+          "line": 20,
+          "statement": "load(\"/data/general/grids/basic.lua\")"
+        },
+        {
+          "family": "sand",
+          "source": "game/modules/tome/data/zones/sandworm-lair/grids.lua",
+          "line": 21,
+          "statement": "load(\"/data/general/grids/sand.lua\")"
+        }
+      ]
+    },
+    {
+      "zone": "daikara",
+      "npc_loads": [
+        {
+          "zone": "daikara",
+          "family": "xorn",
+          "source": "game/modules/tome/data/zones/daikara/npcs.lua",
+          "line": 20,
+          "statement": "load(\"/data/general/npcs/xorn.lua\", rarity(4))"
+        },
+        {
+          "zone": "daikara",
+          "family": "snow-giant",
+          "source": "game/modules/tome/data/zones/daikara/npcs.lua",
+          "line": 21,
+          "statement": "load(\"/data/general/npcs/snow-giant.lua\", rarity(0))"
+        },
+        {
+          "zone": "daikara",
+          "family": "canine",
+          "source": "game/modules/tome/data/zones/daikara/npcs.lua",
+          "line": 23,
+          "statement": "load(\"/data/general/npcs/canine.lua\", rarity(2))"
+        },
+        {
+          "zone": "daikara",
+          "family": "cold-drake",
+          "source": "game/modules/tome/data/zones/daikara/npcs.lua",
+          "line": 24,
+          "statement": "load(\"/data/general/npcs/cold-drake.lua\", rarity(2))"
+        },
+        {
+          "zone": "daikara",
+          "family": "fire-drake",
+          "source": "game/modules/tome/data/zones/daikara/npcs.lua",
+          "line": 26,
+          "statement": "load(\"/data/general/npcs/fire-drake.lua\", rarity(2))"
+        },
+        {
+          "zone": "daikara",
+          "family": "faeros",
+          "source": "game/modules/tome/data/zones/daikara/npcs.lua",
+          "line": 27,
+          "statement": "load(\"/data/general/npcs/faeros.lua\", rarity(0))"
+        },
+        {
+          "zone": "daikara",
+          "family": "all",
+          "source": "game/modules/tome/data/zones/daikara/npcs.lua",
+          "line": 30,
+          "statement": "load(\"/data/general/npcs/all.lua\", rarity(4, 35))"
+        }
+      ],
+      "grid_loads": [
+        {
+          "family": "basic",
+          "source": "game/modules/tome/data/zones/daikara/grids.lua",
+          "line": 20,
+          "statement": "load(\"/data/general/grids/basic.lua\")"
+        },
+        {
+          "family": "mountain",
+          "source": "game/modules/tome/data/zones/daikara/grids.lua",
+          "line": 21,
+          "statement": "load(\"/data/general/grids/mountain.lua\")"
+        },
+        {
+          "family": "lava",
+          "source": "game/modules/tome/data/zones/daikara/grids.lua",
+          "line": 22,
+          "statement": "load(\"/data/general/grids/lava.lua\", function(e) e.on_stand = nil end)"
+        }
+      ]
+    }
+  ],
+  "terrain": {
+    "refined_png_count": 1682,
+    "current_selector_output_count": 78,
+    "current_selector_outputs": [
+      "bog0-0-0.png",
+      "bog0-1-0.png",
+      "bog1-0-0.png",
+      "bog1-1-0.png",
+      "bog10-0-0.png",
+      "bog10-1-0.png",
+      "bog11-0-0.png",
+      "bog11-1-0.png",
+      "bog12-0-0.png",
+      "bog12-1-0.png",
+      "bog13-0-0.png",
+      "bog13-1-0.png",
+      "bog14-0-0.png",
+      "bog14-1-0.png",
+      "bog15-0-0.png",
+      "bog15-1-0.png",
+      "bog2-0-0.png",
+      "bog2-1-0.png",
+      "bog3-0-0.png",
+      "bog3-1-0.png",
+      "bog4-0-0.png",
+      "bog4-1-0.png",
+      "bog5-0-0.png",
+      "bog5-1-0.png",
+      "bog6-0-0.png",
+      "bog6-1-0.png",
+      "bog7-0-0.png",
+      "bog7-1-0.png",
+      "bog8-0-0.png",
+      "bog8-1-0.png",
+      "bog9-0-0.png",
+      "bog9-1-0.png",
+      "deep0-0-0.png",
+      "deep0-1-0.png",
+      "deep1-0-0.png",
+      "deep1-1-0.png",
+      "deep10-0-0.png",
+      "deep10-1-0.png",
+      "deep11-0-0.png",
+      "deep11-1-0.png",
+      "deep12-0-0.png",
+      "deep12-1-0.png",
+      "deep13-0-0.png",
+      "deep13-1-0.png",
+      "deep14-0-0.png",
+      "deep14-1-0.png",
+      "deep15-0-0.png",
+      "deep15-1-0.png",
+      "deep2-0-0.png",
+      "deep2-1-0.png",
+      "deep3-0-0.png",
+      "deep3-1-0.png",
+      "deep4-0-0.png",
+      "deep4-1-0.png",
+      "deep5-0-0.png",
+      "deep5-1-0.png",
+      "deep6-0-0.png",
+      "deep6-1-0.png",
+      "deep7-0-0.png",
+      "deep7-1-0.png",
+      "deep8-0-0.png",
+      "deep8-1-0.png",
+      "deep9-0-0.png",
+      "deep9-1-0.png",
+      "exit0.png",
+      "exit1.png",
+      "flower0.png",
+      "flower1.png",
+      "grass0.png",
+      "grass1.png",
+      "road0.png",
+      "road1.png",
+      "tree-oak0.png",
+      "tree-oak1.png",
+      "tree-pine0.png",
+      "tree-pine1.png",
+      "tree-willow0.png",
+      "tree-willow1.png"
+    ],
+    "not_selected_by_this_selector": 1604,
+    "not_selected_bytes": 48673076,
+    "selected_bytes": 2416976,
+    "legacy_path_route_count": 1536,
+    "warning": "Static selector audit, not a runtime GPU trace or permission to delete source history."
+  },
+  "source_sha256": {
+    "game/addons/tome-checker-revised/hooks/load.lua": "8a77adf66e17064ef6fc82d18eadb67cbea245d657908a67edd216991812d9ed",
+    "game/addons/tome-checker-revised/overload/mod/class/CheckerTokens.lua": "15f8fb47381f354a8b4bf14cbd538111c23182fa1e9659a994354c71a4f6d91f",
+    "game/addons/tome-checker-revised/superload/mod/class/Game.lua": "0ee7a7bbffc287dae29646a3dfd6270703d104e6a9718a6ae0ff57407611855e",
+    "game/modules/tome/class/Grid.lua": "10f5fad9b1e0d514e324c3c3904bdeb8245efe5f03819454433bbd7ce73226b0",
+    "game/modules/tome/data/general/grids/basic.lua": "f8d3f0c85a131749827cd108303c5c60bdb1644a4bf806e58463e8533e748809",
+    "game/modules/tome/data/general/grids/forest.lua": "ce8d970564e00a1b7bbd2726a0df21d01d064e091ce389ef419355c55a84a0b9",
+    "game/modules/tome/data/general/grids/sand.lua": "d951bdb32b4280058b9db8ce5c37a15b08837aaf216899a580dc3ecff5de3c8e",
+    "game/modules/tome/data/general/grids/water.lua": "3f791b27b0bef7a11d23224f7edd1d6b578dd257ac1a624c6c23f53c71f86b75",
+    "game/modules/tome/data/general/npcs/all.lua": "ee8bf0275d07dd402c99cd54717eb50202cac6ee6273df460f540eb5d938be93",
+    "game/modules/tome/data/general/npcs/ant.lua": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+    "game/modules/tome/data/general/npcs/aquatic_critter.lua": "3df4ea93796566f6da4347a22cd2d2eb3bedc394ca8206289d91a2440a30d354",
+    "game/modules/tome/data/general/npcs/aquatic_demon.lua": "2b7754a1711fe04773986f591a740d3a78a99dc2937675849c5ae5a7484bd750",
+    "game/modules/tome/data/general/npcs/bear.lua": "cc10a3e47f431d040b6cf2ff1a7a9ac3e0e9e82e044fc119a1e6dd5f5d52df63",
+    "game/modules/tome/data/general/npcs/bone-giant.lua": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+    "game/modules/tome/data/general/npcs/canine.lua": "edbbc6bd1d02c92bf53b569e210e26cfb4eb25ecba1b077f90697f390cab5e7a",
+    "game/modules/tome/data/general/npcs/cold-drake.lua": "60153bdad6955f2773d8db30457e717c480cf794e7d0793ff027a994dcb0bff4",
+    "game/modules/tome/data/general/npcs/construct.lua": "61cbeb027f35ccbbfeb5b33fe7a6a46684f630f079a5ad8ff651ef68ae5ae36a",
+    "game/modules/tome/data/general/npcs/crystal.lua": "d6cdbfe8d69dc00a9167ec1c348469f915103835ee7485534f8e0086982decc2",
+    "game/modules/tome/data/general/npcs/elven-caster.lua": "a68bfbfbbe74a47b0c2a95f683439c41035ecf952d53cabb4c7636ee011fd515",
+    "game/modules/tome/data/general/npcs/elven-warrior.lua": "28a4a2cc0c50f66f1e2b74bba82895adb490a9a9f4880eb86b195b545a5ee3a1",
+    "game/modules/tome/data/general/npcs/faeros.lua": "8828674803648a338924a957c0f76b0fbbf43c0259b2c7a412a7f2ddfb9cfb42",
+    "game/modules/tome/data/general/npcs/feline.lua": "dea8cdb4378ddf062570cff9d7d44a78fd0f75e9ad5fbdc3e7d8779cb000e8d9",
+    "game/modules/tome/data/general/npcs/fire-drake.lua": "a19506d0583df6a00a07bb79a78a49eb3e0776b463a53ea9c5c17fdc4c70e203",
+    "game/modules/tome/data/general/npcs/ghost.lua": "c20b2ae1af1d1d99d0128b817a975cbfda791fa821778cee5bcc814600400238",
+    "game/modules/tome/data/general/npcs/ghoul.lua": "b1ec41fab65306b144321ea37ed991405c7c795fca3bdebac932c27ec1e11586",
+    "game/modules/tome/data/general/npcs/gwelgoroth.lua": "d90977254ea9d48b9b95507de15324b793ec68b90e408de3a530df6f82ac26b4",
+    "game/modules/tome/data/general/npcs/horror-corrupted.lua": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+    "game/modules/tome/data/general/npcs/horror-undead.lua": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+    "game/modules/tome/data/general/npcs/horror.lua": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+    "game/modules/tome/data/general/npcs/horror_aquatic.lua": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+    "game/modules/tome/data/general/npcs/horror_temporal.lua": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+    "game/modules/tome/data/general/npcs/jelly.lua": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+    "game/modules/tome/data/general/npcs/lich.lua": "39fa573c3793bc42f429288be32b0f108ace67543482134afe9b21ae6bc1dbfc",
+    "game/modules/tome/data/general/npcs/losgoroth.lua": "f7b700dea211da118df773e2b20539cc34c22715256ad7356560cbe08a832f9e",
+    "game/modules/tome/data/general/npcs/major-demon.lua": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+    "game/modules/tome/data/general/npcs/minor-demon.lua": "80520f8ae1b87b97ea599207de45fdf3703b00ca0e48c100b653dafb735f2050",
+    "game/modules/tome/data/general/npcs/minotaur.lua": "34691f4bede79d93c97cbbef130e56c7c4f8a821f7a64fe53134bcf63aa032c0",
+    "game/modules/tome/data/general/npcs/molds.lua": "0b40d03a904bb0f4a569904a2207a53eb7a40c09b4bd1f410b0d90c2327595ef",
+    "game/modules/tome/data/general/npcs/multihued-drake.lua": "4e38173b9121c9d1b1cc33edf157f5e743d39a720af43ba9fb65aef1ce6f3d1a",
+    "game/modules/tome/data/general/npcs/mummy.lua": "06c0e07e77a753b1ecdbed7efbc7ce457342a53bab952c544a1d4208d5346b2a",
+    "game/modules/tome/data/general/npcs/naga.lua": "082cfb5e3044418b8ee2c6bb8ff4eaa09a32d7c4f1b39493f2b9f7e6696039fd",
+    "game/modules/tome/data/general/npcs/ogre.lua": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+    "game/modules/tome/data/general/npcs/ooze.lua": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+    "game/modules/tome/data/general/npcs/orc-gorbat.lua": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+    "game/modules/tome/data/general/npcs/orc-grushnak.lua": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+    "game/modules/tome/data/general/npcs/orc-rak-shor.lua": "c4875efb25a55eac7f55ca07b7d20f7602722458e70a3dfa6fcbad80207d7192",
+    "game/modules/tome/data/general/npcs/orc-vor.lua": "7ef30e07dd59c5784f06b8faa7e038ca27e4e2754671c3949f416b54450bd458",
+    "game/modules/tome/data/general/npcs/orc.lua": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+    "game/modules/tome/data/general/npcs/plant.lua": "5f6a594f8dd91919aabb24b89c84b047d234cd92863b449349f03c9576b6658a",
+    "game/modules/tome/data/general/npcs/ritch.lua": "c2353543ac61995c0371536ca897ec92fb2a49ce0e226f6f5933e738f272f0ad",
+    "game/modules/tome/data/general/npcs/rodent.lua": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+    "game/modules/tome/data/general/npcs/sandworm.lua": "d3b650d818aa36a5560a366bb100fc2c4a1895b0d64e39930571b7af78d612d2",
+    "game/modules/tome/data/general/npcs/shade.lua": "ff8abc1c258b4cdbc8fe6027caf81862835e47fcdbb71cab9d38e31ee968775a",
+    "game/modules/tome/data/general/npcs/shertul.lua": "97a990a1bd6c228bf309bdbdc80b159badad36e7cb48964c7ec856aa293a53f6",
+    "game/modules/tome/data/general/npcs/shivgoroth.lua": "9543c07c1c22d99f4ace1868e113bc613bc1d76fe8aa22e490de0953568207f5",
+    "game/modules/tome/data/general/npcs/skeleton.lua": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+    "game/modules/tome/data/general/npcs/snake.lua": "2e7035bbff94a277cabc07e7ed59398563123db90c5e029ec284e55f7090a1b1",
+    "game/modules/tome/data/general/npcs/snow-giant.lua": "0d1acc9131e7c4691f3c5213bbf33b8f5c13bb2c1e9de93c53dfd10cac6eb042",
+    "game/modules/tome/data/general/npcs/spider.lua": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+    "game/modules/tome/data/general/npcs/storm-drake.lua": "3b5bb1be5fac8999d6635da9575de8b78e684e439f7b93e7cb95fc051df333db",
+    "game/modules/tome/data/general/npcs/sunwall-town.lua": "474ff89312e91d1898ce23fef62df48e3718fc7a94453ff08b7bd0282fa7e051",
+    "game/modules/tome/data/general/npcs/swarm.lua": "b306bfafdfd376d4cb28f6bcd7c385c52cfc4771a2c7b437aef02d8762265c8a",
+    "game/modules/tome/data/general/npcs/telugoroth.lua": "fcf2030c5402a281b547960dab5baf9e7e5eb2aa3a6c868deec51cb8bd36c263",
+    "game/modules/tome/data/general/npcs/thieve.lua": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+    "game/modules/tome/data/general/npcs/troll.lua": "17a39268830f8e408b329082d3915f2573f05dd3e0d3e298546135d4e290c51f",
+    "game/modules/tome/data/general/npcs/undead-rat.lua": "bd09271a235a6cce25d927105c5805574b19d4a59fc6a3bf71a371586726782e",
+    "game/modules/tome/data/general/npcs/vampire.lua": "a797781c111911f9d7294c763701ce0b000280c7a4ba0b17b18a634816ad769c",
+    "game/modules/tome/data/general/npcs/venom-drake.lua": "7a42f9049d69eed172d9b20e48eaf6beea98a59b341e28ac76f19db07e3c3bbb",
+    "game/modules/tome/data/general/npcs/vermin.lua": "00356bcc7f67dd0171daaad2d5f394550aeb64e2d02099127e93709ff74c3c8e",
+    "game/modules/tome/data/general/npcs/wight.lua": "f322a98363c5f9f2106c7abf3ca0f64cf55a4d8b3e051181da775e20fddb938d",
+    "game/modules/tome/data/general/npcs/wild-drake.lua": "27d7ee2645e16e215330830d5fc20e51036b435f72785e8efb6572c90b7bbba5",
+    "game/modules/tome/data/general/npcs/xorn.lua": "9157ba56ba268a92785c4afa8c26d68d68fa8944837358b19467b4681b49e837",
+    "game/modules/tome/data/general/npcs/yaech.lua": "918f92bdd94df8a9004f7620f44561c30c538888f184185519e3ee6453fe3754",
+    "game/modules/tome/data/general/npcs/ziguranth.lua": "92bd30799ea28f5243a88043275df3f58880da06e8b579f58a14d7ac4f4212e4",
+    "game/modules/tome/data/zones/abashed-expanse/npcs.lua": "94ed2bc4301fba9682131a2dad4b505683d52c307958b8c76de5170e5aa3fe92",
+    "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+    "game/modules/tome/data/zones/ardhungol/npcs.lua": "93033ee5cc7294cd4a86ca1762153b67b0c4d61df92d1391786d54642fa81dc2",
+    "game/modules/tome/data/zones/arena/npcs.lua": "7bb88092c6875ba878a1029934ea1e2e68e1b6a4906033a0324ace85946c0e42",
+    "game/modules/tome/data/zones/arena-unlock/npcs.lua": "7f0f5aaf462fe7e84e9a5a3674f0cf2397af827fa630d4311ae0771f4f1f47de",
+    "game/modules/tome/data/zones/blighted-ruins/npcs.lua": "383d6aa4ca48a2f2b219020522a29eb4c30b9c8e88e18efd88a8f924b56d3a03",
+    "game/modules/tome/data/zones/briagh-lair/npcs.lua": "ef59f452ed465ff85ba3c77bf0c40c32d8dbba33d85ab3dad5fdfe3334dbbe95",
+    "game/modules/tome/data/zones/charred-scar/npcs.lua": "870f0a44be585b992883d7353760e9b362df10daf674e1b042d4edf6ddfdcb87",
+    "game/modules/tome/data/zones/conclave-vault/npcs.lua": "6bfd6d91a4b29284ce05359670593f80e461b4a7cf3a0a02a9e2897531b8307f",
+    "game/modules/tome/data/zones/crypt-kryl-feijan/npcs.lua": "25fe3830a2b9dbbb4f5a90ec092f3e542069bf67a67e6baec3e2c412b087181f",
+    "game/modules/tome/data/zones/daikara/grids.lua": "da18012ce55e60ae3c7b1249e8f69b84746a0fb086ae19bc9dd548f16778c248",
+    "game/modules/tome/data/zones/daikara/npcs.lua": "c4d6d6b6387719554eb81b4eccb6abe0722bd435860d06d56dafcc778e8019ca",
+    "game/modules/tome/data/zones/deep-bellow/npcs.lua": "d85b1f727ac0687aac2381598602a8d8241c133dba1787bf659fe800972e2146",
+    "game/modules/tome/data/zones/demon-plane/npcs.lua": "497b080aea88ee06faa8137cb1c94f64fca3839619a9edf1703f56777c414f21",
+    "game/modules/tome/data/zones/demon-plane-spell/npcs.lua": "abf926aa7e521dc3e1e253df36a7da401fef9926b66534fd730b10a0d81f1d6f",
+    "game/modules/tome/data/zones/dreadfell/npcs.lua": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+    "game/modules/tome/data/zones/dreadfell-ambush/npcs.lua": "f0f4a282c76da22ba82f18c604bfe11c9c4b5d167fe1888cbede1bb3127b8e27",
+    "game/modules/tome/data/zones/dreams/npcs.lua": "61fd503ce58bc7b4b06dd23c92d4bb914b52af072b720961f754d57efcbfa425",
+    "game/modules/tome/data/zones/dreamscape-talent/npcs.lua": "abf926aa7e521dc3e1e253df36a7da401fef9926b66534fd730b10a0d81f1d6f",
+    "game/modules/tome/data/zones/eidolon-plane/npcs.lua": "6934fb7364b27a67591e5b9f9f9293aacc5610c675183cac855922e34f30aa38",
+    "game/modules/tome/data/zones/eruan/npcs.lua": "4499e968c36e77d9d3620f2b1ed96fd34e158c5d27e7724c429040465ab2f8ee",
+    "game/modules/tome/data/zones/flooded-cave/npcs.lua": "e53d55bfbf9b774afb78b851c6ba4fb551f9ce90555d4319fde705900bc530d5",
+    "game/modules/tome/data/zones/gladium/npcs.lua": "e0c0976d3af55132f4fba358eaaaa4aacfcc7b517b751131d8b51eb22572a098",
+    "game/modules/tome/data/zones/golem-graveyard/npcs.lua": "405703c8b9695c982b4ac6982fdada94001f5b2feb7f46e42c406b64b02bc80f",
+    "game/modules/tome/data/zones/gorbat-pride/npcs.lua": "5cdb350a6980797a3af55b4969ff0f8179ca3f1cc2dfa546c8ab8275569ff009",
+    "game/modules/tome/data/zones/grushnak-pride/npcs.lua": "8799da1ba86651e729a0c42e8b381cd8a258450900a47802b7e1edd2195d3ad1",
+    "game/modules/tome/data/zones/halfling-ruins/npcs.lua": "a4e8724a977e6421c5860514589265d9cdca949565429524bea42c400294d0c3",
+    "game/modules/tome/data/zones/heart-gloom/grids.lua": "db23ab7b21dd698f3b3474104b55ad73f25d8b8d0f141a5a27529c0b7fe36dfe",
+    "game/modules/tome/data/zones/heart-gloom/npcs.lua": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+    "game/modules/tome/data/zones/high-peak/npcs.lua": "a92fb0a13938f79b0c2725a6c004f24a557ac139920af5f4790d4b998a448d02",
+    "game/modules/tome/data/zones/illusory-castle/npcs.lua": "06140940e29e9186eb18a4b8504c54de9d91c0eec855342056b4042078584792",
+    "game/modules/tome/data/zones/infinite-dungeon/npcs.lua": "a313c331445484ecbf4bb30cb1c3712b7f4d59551feaa20042325b958a728781",
+    "game/modules/tome/data/zones/keepsake-meadow/npcs.lua": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+    "game/modules/tome/data/zones/lake-nur/npcs.lua": "94cb6fda995f6506afef323a60158b08e8c19c8116400587c71dbf5ce24b2261",
+    "game/modules/tome/data/zones/last-hope-graveyard/npcs.lua": "4454448fe6fd55ed480a9d990d6089632adb2e542cbc32a10e2eadabd59ffd2b",
+    "game/modules/tome/data/zones/mark-spellblaze/npcs.lua": "339951c47a93abdf40cfc24e9f2211e9cbd380e97cffed21f869623fba972043",
+    "game/modules/tome/data/zones/maze/grids.lua": "ab11bffaab73e976921edb68539367c62db7593681fe88148d9842bd83052431",
+    "game/modules/tome/data/zones/maze/npcs.lua": "f07231a5244764f2896978554836c032d56a19d06a56dc7c8528181e5a813c71",
+    "game/modules/tome/data/zones/murgol-lair/npcs.lua": "8e929697d368c99713805c7e25ceaa28675078db8e10c905a0f7435faa8ed2b5",
+    "game/modules/tome/data/zones/norgos-lair/grids.lua": "797063aeae1fc7142c08a4ac3d903ab9492b28f437597752d742161375a45a40",
+    "game/modules/tome/data/zones/norgos-lair/npcs.lua": "a6805cbc98001cf0765498d2f8c39f40bb51390e7e2def5a5f25e3da33d51a73",
+    "game/modules/tome/data/zones/noxious-caldera/npcs.lua": "77995a401f45f1cce22907cf02e926f36523a495e6258004b3c2d72bd9545074",
+    "game/modules/tome/data/zones/old-forest/grids.lua": "583544721e26af45bfc99cf5b0e6a53c3a87f9d4d86ef0736a1844c8ef0b7a53",
+    "game/modules/tome/data/zones/old-forest/npcs.lua": "6d7918b8d3808f8fc74739a990d3b0b6dbc4906668439672f2f783a86baf0121",
+    "game/modules/tome/data/zones/orc-breeding-pit/npcs.lua": "f5b2dc7253ba706d07b7af24055b5b1b6a8575808b272bdae84055432728098c",
+    "game/modules/tome/data/zones/paradox-plane/npcs.lua": "a9d14b63b18e2a46c95c149047816a2747a4ab4ff5c66320ef774dcbe749820b",
+    "game/modules/tome/data/zones/rak-shor-pride/npcs.lua": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+    "game/modules/tome/data/zones/reknor/npcs.lua": "7365934ded58f783908434d3f7f13fc8d370584b66261ca9f7b2d1bb53ae5e50",
+    "game/modules/tome/data/zones/reknor-escape/npcs.lua": "96f161dde6a72cc4771f72d0f48480b7262511298e742763387baa0ccd33e1e1",
+    "game/modules/tome/data/zones/rhaloren-camp/grids.lua": "03c91472134139093d82a30cb5bc054f6f06f0f8cd2422b21849e0ceb34d8ca6",
+    "game/modules/tome/data/zones/rhaloren-camp/npcs.lua": "992fd18d8e3476a19aa35725e4e1d8b297de4b1d5cab7670d1ef68dfd76399c4",
+    "game/modules/tome/data/zones/ring-of-blood/npcs.lua": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+    "game/modules/tome/data/zones/ritch-tunnels/npcs.lua": "52f4539d11c611f1e2a1cff6f8bfb0c16ac77056e71c9bff3556000efd6e7354",
+    "game/modules/tome/data/zones/ruined-dungeon/npcs.lua": "1cd080f70b4e3c7bfcfad546b0240cd8544e25d5cbeee8f9599487e25a010dd3",
+    "game/modules/tome/data/zones/ruins-kor-pul/grids.lua": "2af803358f66e28dd5308768ae9c4e8abb1d1036d9f99eff957451d9ba8c354b",
+    "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua": "ccf6405af2919d0074c4d876ad14a96bd77dee83dcb071178652fd60226844e4",
+    "game/modules/tome/data/zones/sandworm-lair/grids.lua": "bb09cdcd1cf1fec09d3c843e229ed1dca762b39230c13e594213926544d3415b",
+    "game/modules/tome/data/zones/sandworm-lair/npcs.lua": "944fad4800a0c7181abbbf5a61a021223f4803340a0c1b5c7cb74f208daaf418",
+    "game/modules/tome/data/zones/scintillating-caves/grids.lua": "07463356920a0db7998493768d8cf03f9e29cdea02d634ea0e9efe940977147d",
+    "game/modules/tome/data/zones/scintillating-caves/npcs.lua": "ca974c3c694abd74225a9bf0434a1f8d89892b7a2558bdada32dbefdb000b873",
+    "game/modules/tome/data/zones/shadow-crypt/npcs.lua": "d34013f5339f6dcd194bf34c392d7179f252d99506664eabcb1c935f4096e0bd",
+    "game/modules/tome/data/zones/shertul-fortress/npcs.lua": "0c3da0858c7d0a155156dc2dd22d18fadea677566f8977d6afa65fa7518db493",
+    "game/modules/tome/data/zones/shertul-fortress-caldizar/npcs.lua": "d8b31f2c4bab607af88285f3e6272788d82a3fe3bd51e560476f61cba8f570ca",
+    "game/modules/tome/data/zones/slazish-fen/npcs.lua": "59faab1fda3ad11fc2bca557f3152df86cad9dbe1bbce63d69d5c7828b99a4a5",
+    "game/modules/tome/data/zones/slime-tunnels/npcs.lua": "1d6606180ae70a5180f1fb33cebb2bf43c145479ac3ad8900052c6c48bf08d11",
+    "game/modules/tome/data/zones/sludgenest/npcs.lua": "0c974dc966babae5bed4fb28421d9305e0958e5b431555c69ca129557b7c893a",
+    "game/modules/tome/data/zones/south-beach/npcs.lua": "40bcf19894f00528f4e201d2d2e50c768f5eac531ac722711d53cc36aad94936",
+    "game/modules/tome/data/zones/stellar-system-shandral/npcs.lua": "6fb3611bab4f0d132a7720038f58cda1a4c9f5d264236201da0230b29aa6292f",
+    "game/modules/tome/data/zones/tannen-tower/npcs.lua": "38f3800bd60e7d00c9ca3a872184ed228b969de0008e0a67f93d3d9d3874b1e5",
+    "game/modules/tome/data/zones/telmur/npcs.lua": "01906e23f69de269a10830c361dd0feafbb942d2ce926e6d14421d4df164e3ed",
+    "game/modules/tome/data/zones/tempest-peak/npcs.lua": "316e2c39d0a9c5b1cb6d358ecc7fa7dc137e866ae77a165a5966af656722f45c",
+    "game/modules/tome/data/zones/temple-of-creation/npcs.lua": "665e69eb25a1fd1e43f79b69dbc79b87af9a7880a56e7b0c9d5b92db611f376c",
+    "game/modules/tome/data/zones/temporal-reprieve-talent/npcs.lua": "abf926aa7e521dc3e1e253df36a7da401fef9926b66534fd730b10a0d81f1d6f",
+    "game/modules/tome/data/zones/temporal-rift/npcs.lua": "f0f18f389196cc8fa4bf8f22988e9eed21547953297738c49f8bb4823899a993",
+    "game/modules/tome/data/zones/test/npcs.lua": "abf926aa7e521dc3e1e253df36a7da401fef9926b66534fd730b10a0d81f1d6f",
+    "game/modules/tome/data/zones/thieves-tunnels/npcs.lua": "f49a2df26aa12c69e90b3c70ddfb9b28fb6899afc384ca2de42a9f5a5c3a68cf",
+    "game/modules/tome/data/zones/town-angolwen/npcs.lua": "d2855e0fe7a71cea1eccea75df71b1882331366be244393880fd20e7db6f2130",
+    "game/modules/tome/data/zones/town-derth/npcs.lua": "f67f0488dad78fc614dbc5eafaf2139641825a2a937824468b5096767842d704",
+    "game/modules/tome/data/zones/town-elvala/npcs.lua": "4a40fbff2ee1840bb82f7a6c91e55b32b6161baa9a661c381ae454153ada4120",
+    "game/modules/tome/data/zones/town-gates-of-morning/npcs.lua": "c3cb2fc668adf531c204356d9eecf95ae515a06f4c562d8b9ff26ae865a2c1a9",
+    "game/modules/tome/data/zones/town-irkkk/npcs.lua": "d8272c3a72567f872806f3228721ae658ba1775dbbfc0803df80bd4fc5ebdd21",
+    "game/modules/tome/data/zones/town-iron-council/npcs.lua": "9b6118ed3681b6c4146ca768d574d99d14f388883a656500bfd6a505ec59ff80",
+    "game/modules/tome/data/zones/town-last-hope/npcs.lua": "9e5817a77bd7e641e51f440e543a95471eb0bd1ec29aed85e9b4abafeb581240",
+    "game/modules/tome/data/zones/town-lumberjack-village/npcs.lua": "9d22e739f7eaf9ef6ff64ac34b3c44fe7a3fdf89aca3ad414a13af75ddf5bf8a",
+    "game/modules/tome/data/zones/town-point-zero/npcs.lua": "c55eda50b11fec8bb9e4f161f192bcd616c3feac5ea0b72d7bfa8a3d68cf6034",
+    "game/modules/tome/data/zones/town-shatur/npcs.lua": "0f0f5f0ac81f650aa87858c9dac68cf0dcdd00d31c8a78beb57d8dc05ebca302",
+    "game/modules/tome/data/zones/town-zigur/npcs.lua": "2431e511bbbf5fae3abaec0f3f4695143a51b2b3e3374d895645a11c8e5395f9",
+    "game/modules/tome/data/zones/trollmire/grids.lua": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+    "game/modules/tome/data/zones/trollmire/npcs.lua": "c8ec847929ebae259c9b3524121f71008ae553f1b6ec2043b2a169c6303ebe44",
+    "game/modules/tome/data/zones/tutorial/npcs.lua": "90d44ab0977e462dccae41ead9767546ec2d5ab09e9594e4ccc8aa3c05f29cef",
+    "game/modules/tome/data/zones/tutorial-combat-stats/npcs.lua": "70c1cb56038dda36db538dd70b21a87ca7add2cc07ac84579ef6f1e4bf9347cf",
+    "game/modules/tome/data/zones/unhallowed-morass/npcs.lua": "10dac055e54c6f7a92c43c8a278caca4b7d51d0c4b002a165ad5a714bf4fec52",
+    "game/modules/tome/data/zones/unremarkable-cave/npcs.lua": "dcf167549044780831e0c939e5bf5a2fb16d400457cb52ad4f700e6382b0448f",
+    "game/modules/tome/data/zones/valley-moon/npcs.lua": "9666a7b631d072504f5a2f11f2405c3e7eb85782509b8f7236529ccb97bbea9e",
+    "game/modules/tome/data/zones/valley-moon-caverns/npcs.lua": "f7954a9cccd12287f3fe250b0bbdff6e3f9fff7211c6f0d8b945a342338ad83c",
+    "game/modules/tome/data/zones/void/npcs.lua": "6842ba3c1ebb51f98c2f6b465a403ff3a11f03c75338823c9e9d1d0ef5529273",
+    "game/modules/tome/data/zones/vor-armoury/npcs.lua": "5cd0f152fbbd9e9371484fc82be20d10d153da27d91c81541efb4627b0c1e35d",
+    "game/modules/tome/data/zones/vor-pride/npcs.lua": "56bbf54ee15ba9811c60194c5de208dec126310085f98e650da312d2c632b213",
+    "game/modules/tome/data/zones/wilderness/npcs.lua": "31513777f9a094ebe0b4410c1ef2c754c48d13600129eb3b8093a7ba4a39bfba"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-f-kryl-b",
+  "assets": [
+    {
+      "asset_id": "kryl-feijan",
+      "native_name": "Kryl-Feijan",
+      "scope": "crypt-kryl-feijan zone-finale boss; already shipped (monster-batch-e-2, catalog id kryl-feijan) under a reviewer-approved base_drift-only waiver; second, fresh (non-edit) redraw attempt after monster-batch-f-kryl/kryl-feijan-v1 (base_drift -10.37, disc_overflow pass) reused the 4-unit-darker disc instruction and still overshot on the dark side, consistent with this identity's whole history under that instruction",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/crypt-kryl-feijan/npcs.lua",
+          "sha256": "25fe3830a2b9dbbb4f5a90ec092f3e542069bf67a67e6baec3e2c412b087181f",
+          "line": 30,
+          "anchor": "name = \"Kryl-Feijan\", color=colors.VIOLET, unique = true,"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 26,
+          "anchor": "type = \"demon\", subtype = \"major\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_kryl_feijan.png",
+          "sha256": "e87bf6ae8963b6b1af4504e0c3d7ef48a1481b7ecb4cb2f0fd11c22317869ace",
+          "role": "identity",
+          "note": "Native species shape: a roiling black smoke/hair mass with two visible eye glints and clawed reach. Camera/base come from the style reference, not from this native crop."
+        }
+      ],
+      "contrast_dimensions": ["value", "hue"],
+      "prompt_fields": {
+        "subject": "A towering amorphous mass of roiling shadow-smoke shaped like an inverted teardrop, tapering to a point near the base disc; two pale blue-white clawed arms reach forward and outward from within the smoke, fingers spread, with glowing red eyes visible within the upper mass. Same identity as monster-batch-f-kryl's v1 (mid charcoal-violet-grey smoke, not near-black; pale reaching claws; glowing red eyes) -- keep that same lighter body value, it read well.",
+        "contrast": "First and only demon/major identity in the catalog; unchanged from v1. The design direction this round is narrowly about the DISC, not the creature: v1 (art/monster-batch-f/masters/kryl-feijan-v1.png, sha256 ec3cdc83c6ab028b0491a89fd94ca499b033a3cbd82bc943cf292413860b8581) already achieved the lighter mid-tone smoke body this identity needed and passed every check except base_drift (-10.37), and this exact identity has now overshot the dark side of the +-8 tolerance on every attempt across monster-batch-e-2 (-10.97) and monster-batch-f-kryl (-10.37) that used a 4-unit-darker disc instruction -- so this attempt removes the artificial darkening bias entirely and renders the disc at the style reference's own brightness, unmodified.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy well inside the inner four-fifths of disc radius. Render the neutral disc -- including the whole outer-sixth ring band -- at exactly the style reference's own brightness and colour; do NOT apply any additional darkening bias this time (earlier attempts on this same identity, using a '4 units darker' instruction, measured base_drift -10.97 and -10.37, both overshooting past the -8 tolerance edge on the dark side). Match the reference disc as closely and literally as possible: same charcoal-brown body lightness, same bronze-grey bevel lightness, no extra shading. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere.",
+        "palette": "Mid charcoal-violet-grey roiling smoke body (noticeably lighter than near-black, matching monster-batch-f-kryl-v1), pale cold blue-white clawed hands and forearms, bright ember-red glowing eyes as the strongest accent; dry neutral charcoal disc with restrained copper-grey bevel at exactly the style reference's own lightness -- kept visibly darker than the lighter smoke body so the creature's own silhouette edge separates from the disc without relying only on the claws."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name=Kryl-Feijan/type=demon/subtype=major/define_as=KRYL_FEIJAN/unique=true) and native invis.png+add_mos{display_h=2, display_y=-1} display contract unchanged, re-verified against the same source lines again this round. Second redraw attempt after monster-batch-f-kryl's v1 achieved the target body lightness but missed base_drift on the disc; this pack removes the disc-darkening bias rather than repeating it.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-f-20260929/source-contracts.json",
+          "sha256": "b12b3c0cc83fbed3bcbb9331c7cf52917aa40213069c818d0fc1aee1d4595d54"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-f-kryl/kryl-feijan/receipts/attempt-1.json",
+          "sha256": "7b277d26087f8fd8c69411293c1a362b13cc60c62ed2ce7a6db593903ee0d1a2"
+        }
+      ],
+      "refinement": {
+        "supersedes": "kryl-feijan",
+        "previous_batch": "monster-batch-f-kryl",
+        "design_change_reason": "monster-batch-f-kryl's kryl-feijan-v1 (base_drift -10.37) proved the lighter mid-tone smoke body reads well and fixes the original 48px dark-floor readability problem, but reused the batch-D-4/E '4 units darker' disc instruction, which has now overshot the dark side of tolerance on every single attempt made for this specific identity (monster-batch-e-2: -10.97, monster-batch-f-kryl: -10.37). The design direction changes from 'apply the standard calibrated disc darkening' to 'render this specific identity's disc at the reference's own unmodified brightness', because the calibration that works for most subjects has now failed twice in a row for kryl-feijan specifically.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-f-kryl/kryl-feijan/receipts/attempt-1.json",
+            "sha256": "7b277d26087f8fd8c69411293c1a362b13cc60c62ed2ce7a6db593903ee0d1a2"
+          }
+        ]
+      }
+    }
+  ]
+}

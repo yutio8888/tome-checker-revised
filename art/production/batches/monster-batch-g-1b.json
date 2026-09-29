@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-g-1b",
+  "assets": [
+    {
+      "asset_id": "shiaak-venomblade",
+      "native_name": "shiaak venomblade",
+      "scope": "ardhungol random pool (rarity=4, level_range {35,nil}), non-unique native-tall body per CONTRACTS-B5-B7-20260929.md 4.1, contract settled by evidence/monster-live-f-20260929/ runtime probe (Part 2) -- FRESH REGENERATION: call 1 passed the gate (-7.29) but the body was near-black olive (masked luminance 43) and read as a dark blob at 48px on dark floors; fresh regeneration with a lighter sage/moss body",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/ardhungol/npcs.lua",
+          "sha256": "93033ee5cc7294cd4a86ca1762153b67b0c4d61df92d1391786d54642fa81dc2",
+          "line": 107,
+          "anchor": "subtype = \"shiaak\", name = \"shiaak venomblade\", color=colors.GREEN,"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_shiaak_shiaak_venomblade.png",
+          "sha256": "467256137ba8bd8b58dad3794a16e60652111d8b7ca82e2a8720373e79f897a2",
+          "role": "identity",
+          "note": "Native species shape: squat bushy humanoid-spider hybrid, densely covered, dual daggers, no robe."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_xhaiak_xhaiak_arachnomancer.png",
+          "sha256": "d6e87c9f11f162bf65808098d68542ac4560f84149103a790a877b75da4a084c",
+          "role": "identity",
+          "note": "Native species shape: lean spindly humanoid-spider hybrid, long clawed reaching arms, light flowing robe over dark chitin."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A squat, densely built humanoid spiderkin covered head to foot in overlapping black chitinous plates and short bristling dark hairs, hunched low and forward. It dual-wields two curved sinuous daggers held low and ready, one in each clawed hand. LIGHTNESS REQUIREMENT (48px dark-floor readability): the first attempt's body was near-black olive and read as a dark blob at 48px. Redraw the body in a clearly LIGHTER value: dry sage/moss-green plating and bristles in mid-to-light tones, with pale bone-cream thorn and leaf tips along the shoulders and back and a broad light rim on the upper-left facing planes; the mass of the creature must be visibly lighter than the disc, never merging with it. Keep the same squat hunched leaf/thorn-covered silhouette, two curved pale blades and yellow eyes.",
+        "contrast": "Ships alongside xhaiak arachnomancer in the same batch and must read as a clearly different silhouette from both it and Ungole (the round eight-legged true-spider). Shiaak is squat, hunched and bulky, densely plated with no robe and no visible reaching limbs beyond its two held daggers, in contrast to xhaiak's lean spindly upright robed form and Ungole's round low-slung spider body. Silhouette (squat bulky hunch vs. spindly upright reach) and value/hue (deeper mottled near-black plating with a cold green undertone vs. xhaiak's charcoal-blue chitin) are the anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Deep near-black chitinous plates with a faint cold olive-green undertone and darker bristling hair texture along the back and shoulders, dull grey-steel curved dagger blades held low; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's body so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name/type=spiderkin/subtype=shiaak/no define_as/no unique) confirmed directly against game/modules/tome source, resolvers.nice_tile{tall=1} shorthand contract settled by the batch-F runtime probe (evidence/monster-live-f-20260929/README.md Part 2): a.image resolves to invis.png, a.add_mos[1].image resolves to this exact disk filename, display_h=2, display_y=-1, matching the verified native-tall shape. No new fixture launch this round (art+mapping task only); native_tall=true follows the ancient-dragon-turtle/naga-tidewarden precedent. Fresh regeneration handoff: call 1 passed the gate (-7.29) but the body was near-black olive (masked luminance 43) and read as a dark blob at 48px on dark floors; fresh regeneration with a lighter sage/moss body",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-live-f-20260929/README.md",
+          "sha256": "755b28e4aa0447326c077db74c4d6a97359cc7e0f6a3a688afdd071f48925dc8"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-g-1/shiaak-venomblade/imagegen-calls/call-1/call.json",
+          "sha256": "92c14592092b5191c35d4adba6657e3fcc4aab0494a3e012ee438fe8d80dd672"
+        }
+      ]
+    }
+  ]
+}

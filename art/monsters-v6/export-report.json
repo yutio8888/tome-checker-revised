@@ -1,0 +1,413 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "cutpurse",
+      "master": "masters/cutpurse-v1.png",
+      "sha256": "6e23dcdedd777f589ec2aa7072f004987b34d30b5dc6a0207bc434ea7c82f529",
+      "exports": [
+        {
+          "path": "sprites/48/cutpurse.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            123,
+            128,
+            1130,
+            1154
+          ],
+          "export_window": [
+            29.988372,
+            44.488372,
+            1193.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7a3ba37918003490ca97475447aa5c5f8a562e7b7ab5637189aa6911044b265a"
+        },
+        {
+          "path": "sprites/64/cutpurse.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            123,
+            128,
+            1130,
+            1154
+          ],
+          "export_window": [
+            29.988372,
+            44.488372,
+            1193.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3b4a94e5ccb7140ebe8526fecf821d77e4a36550624f2569a882d8d9f53d8d72"
+        },
+        {
+          "path": "sprites/96/cutpurse.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            123,
+            128,
+            1130,
+            1154
+          ],
+          "export_window": [
+            29.988372,
+            44.488372,
+            1193.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ce401e78eaff60851c6381db98272fcd8eb9b63c0b1e61ed2f5da8ac234feaf8"
+        },
+        {
+          "path": "sprites/128/cutpurse.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            123,
+            128,
+            1130,
+            1154
+          ],
+          "export_window": [
+            29.988372,
+            44.488372,
+            1193.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bea7aa68b0e74e2a852344666fdabbbb3b73860ffb1fe309412ecf7ec71a0793"
+        },
+        {
+          "path": "sprites/256/cutpurse.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            123,
+            128,
+            1130,
+            1154
+          ],
+          "export_window": [
+            29.988372,
+            44.488372,
+            1193.023256
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "87419aed26e5d431d2e62554c8871b74e9f4e241d078d502b2c7805aa374518c"
+        }
+      ]
+    },
+    {
+      "id": "rogue",
+      "master": "masters/rogue-v1.png",
+      "sha256": "42e5f6f7d680b538a5e07b9ea8ce0e3a39bd1e48fc35db93f6df182f27effbf4",
+      "exports": [
+        {
+          "path": "sprites/48/rogue.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            122,
+            127,
+            1132,
+            1156
+          ],
+          "export_window": [
+            28.744186,
+            43.244186,
+            1196.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "84285b4a27f1031927bb333f593c1d1dabb5ead79014f19bf97a484c1d801d33"
+        },
+        {
+          "path": "sprites/64/rogue.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            122,
+            127,
+            1132,
+            1156
+          ],
+          "export_window": [
+            28.744186,
+            43.244186,
+            1196.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fad00d711398700270cd5060e936efcb115af1dc5a9e86e00673b06855bc4140"
+        },
+        {
+          "path": "sprites/96/rogue.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            122,
+            127,
+            1132,
+            1156
+          ],
+          "export_window": [
+            28.744186,
+            43.244186,
+            1196.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "711e271e8d6be48fa6b9bfde94336bea79fcb140fdf419938978b170666bf222"
+        },
+        {
+          "path": "sprites/128/rogue.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            122,
+            127,
+            1132,
+            1156
+          ],
+          "export_window": [
+            28.744186,
+            43.244186,
+            1196.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d157c696914c6a28c42e1dcfcde64ee75815b61c76c9021ed90c51eb130d3856"
+        },
+        {
+          "path": "sprites/256/rogue.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            122,
+            127,
+            1132,
+            1156
+          ],
+          "export_window": [
+            28.744186,
+            43.244186,
+            1196.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "afe5cae8e898fdc0410dcbe5bf21b842776f03ae7262569db7507b8bea7dd95b"
+        }
+      ]
+    },
+    {
+      "id": "thief",
+      "master": "masters/thief-v1.png",
+      "sha256": "38c77f6ad12c2886f8dbfaa6d02ec1e049b906872d872b6af45aefd29eaf3968",
+      "exports": [
+        {
+          "path": "sprites/48/thief.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            115,
+            112,
+            1138,
+            1154
+          ],
+          "export_window": [
+            20.686047,
+            27.186047,
+            1211.627907
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a1e053e2234c26a3da77307ce49eb4add0bb6145cda721e3fd79841d0a9d50ec"
+        },
+        {
+          "path": "sprites/64/thief.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            115,
+            112,
+            1138,
+            1154
+          ],
+          "export_window": [
+            20.686047,
+            27.186047,
+            1211.627907
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bf0a1ca85d8a6c6cb8c85b1eabae2ca81632862b7c9e5bbde6679401ef1d6d04"
+        },
+        {
+          "path": "sprites/96/thief.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            115,
+            112,
+            1138,
+            1154
+          ],
+          "export_window": [
+            20.686047,
+            27.186047,
+            1211.627907
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ad617a49fee850b15f9345ae53145bcb6382a560c3dd5ee19a0f1a79300595b5"
+        },
+        {
+          "path": "sprites/128/thief.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            115,
+            112,
+            1138,
+            1154
+          ],
+          "export_window": [
+            20.686047,
+            27.186047,
+            1211.627907
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "85d491efdc3cbabd3788b18a6ca4afeb38b0cf869ae9d58778e9ab928e0399e5"
+        },
+        {
+          "path": "sprites/256/thief.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            115,
+            112,
+            1138,
+            1154
+          ],
+          "export_window": [
+            20.686047,
+            27.186047,
+            1211.627907
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "648ebc30133762eb5b3a363dad8f3c7f1593b01f4900bd132431281b03df275a"
+        }
+      ]
+    },
+    {
+      "id": "bandit",
+      "master": "masters/bandit-v1.png",
+      "sha256": "a571c4618354fd68d89eebf282ac5c8940ad00157fc5a4e330731914dd56d199",
+      "exports": [
+        {
+          "path": "sprites/48/bandit.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            124,
+            128,
+            1130,
+            1152
+          ],
+          "export_window": [
+            31.651163,
+            44.651163,
+            1190.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6dc9484d80d51ad5ee7a5432ca76748832b99ba16b573c3c291e7d61f4f1de53"
+        },
+        {
+          "path": "sprites/64/bandit.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            124,
+            128,
+            1130,
+            1152
+          ],
+          "export_window": [
+            31.651163,
+            44.651163,
+            1190.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c37b47571bd4d91a82546dbe62b6caf2a7a0d6e9f62bf78ae6d1e3a31291a2c0"
+        },
+        {
+          "path": "sprites/96/bandit.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            124,
+            128,
+            1130,
+            1152
+          ],
+          "export_window": [
+            31.651163,
+            44.651163,
+            1190.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8a75fd7e9e0d495dd5674302e13603b1920f3d5128181001d4d13c1606d76cd7"
+        },
+        {
+          "path": "sprites/128/bandit.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            124,
+            128,
+            1130,
+            1152
+          ],
+          "export_window": [
+            31.651163,
+            44.651163,
+            1190.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c070e17287889e479e5cd6771283ffaf97eb2dc25e5c0f6660f5b39dd3043405"
+        },
+        {
+          "path": "sprites/256/bandit.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            124,
+            128,
+            1130,
+            1152
+          ],
+          "export_window": [
+            31.651163,
+            44.651163,
+            1190.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e8eba6f98d2c41c9fa52fa6d9dcee112873f4719ae424f86196919952a9c4fac"
+        }
+      ]
+    }
+  ]
+}

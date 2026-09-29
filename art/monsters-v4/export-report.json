@@ -1,0 +1,821 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "dire-wolf",
+      "master": "masters/dire-wolf-v1.png",
+      "sha256": "90d6160bfe2766e3debfda8785ea8b3f07cbb9196990d17fc5466eb29d9dafc3",
+      "exports": [
+        {
+          "path": "sprites/48/dire-wolf.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            163,
+            170,
+            1095,
+            1112
+          ],
+          "export_window": [
+            81.325581,
+            93.325581,
+            1095.348837
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7130b523c5d7ba169ccd3eafe785989c4b98c2bd2385472a1038f3db401cbafe"
+        },
+        {
+          "path": "sprites/64/dire-wolf.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            163,
+            170,
+            1095,
+            1112
+          ],
+          "export_window": [
+            81.325581,
+            93.325581,
+            1095.348837
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9991023cda03833fffacfa0268b0f3fd9f5456c8a60e10cc99037bea316f4b80"
+        },
+        {
+          "path": "sprites/96/dire-wolf.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            163,
+            170,
+            1095,
+            1112
+          ],
+          "export_window": [
+            81.325581,
+            93.325581,
+            1095.348837
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d74ef6385663088af33c6d64be8be21fa4f3e93d255eacf865b1091115c0cb43"
+        },
+        {
+          "path": "sprites/128/dire-wolf.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            163,
+            170,
+            1095,
+            1112
+          ],
+          "export_window": [
+            81.325581,
+            93.325581,
+            1095.348837
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d1bba94a9cba2a01e47013e398c5ab80537dce0c48a0795aeafcf48632c7910e"
+        },
+        {
+          "path": "sprites/256/dire-wolf.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            163,
+            170,
+            1095,
+            1112
+          ],
+          "export_window": [
+            81.325581,
+            93.325581,
+            1095.348837
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "29e7a9325715ec32c765e79c9138c3bfb42a81e8c5e0245939e844c589940a7f"
+        }
+      ]
+    },
+    {
+      "id": "white-wolf",
+      "master": "masters/white-wolf-v1.png",
+      "sha256": "cf4ac4a1c5a97863bcdc532bf1989677de57b2f3a171e0206dee2f483ea50959",
+      "exports": [
+        {
+          "path": "sprites/48/white-wolf.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            146,
+            156,
+            1107,
+            1122
+          ],
+          "export_window": [
+            64.872093,
+            77.372093,
+            1123.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5353fcf1ece2539c70b41a5436be8860d15244f6c7824764f66e2f2864b8e82c"
+        },
+        {
+          "path": "sprites/64/white-wolf.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            146,
+            156,
+            1107,
+            1122
+          ],
+          "export_window": [
+            64.872093,
+            77.372093,
+            1123.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "efe4e43b7744fb3f98c640665a0b1da94652ddc007bac8dbd1a584335c0653a5"
+        },
+        {
+          "path": "sprites/96/white-wolf.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            146,
+            156,
+            1107,
+            1122
+          ],
+          "export_window": [
+            64.872093,
+            77.372093,
+            1123.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7cf7d5c75db11c5670c0471b16c25a4804e088e0db861baedb0278c599352dc6"
+        },
+        {
+          "path": "sprites/128/white-wolf.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            146,
+            156,
+            1107,
+            1122
+          ],
+          "export_window": [
+            64.872093,
+            77.372093,
+            1123.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "98366ca2384f30bc4f6c36350eae71f131b78e0cf1295a9eb099f575ea01fb5e"
+        },
+        {
+          "path": "sprites/256/white-wolf.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            146,
+            156,
+            1107,
+            1122
+          ],
+          "export_window": [
+            64.872093,
+            77.372093,
+            1123.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b441907b5a019375b181fb9ff3a27bbfbe9d023fc8effd343d422614418e35a9"
+        }
+      ]
+    },
+    {
+      "id": "warg",
+      "master": "masters/warg-v1.png",
+      "sha256": "12aed885f47dc2757f22dcca27b294580dfcf31154c4cd92f9db504b45b218a6",
+      "exports": [
+        {
+          "path": "sprites/48/warg.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            95,
+            88,
+            1159,
+            1158
+          ],
+          "export_window": [
+            4.906977,
+            0.906977,
+            1244.186047
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9ff84e7fb7869de0d14a8fdf45e99165e51644eb5cc201340e1831f4784f6bd4"
+        },
+        {
+          "path": "sprites/64/warg.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            95,
+            88,
+            1159,
+            1158
+          ],
+          "export_window": [
+            4.906977,
+            0.906977,
+            1244.186047
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "14612e64cc541f31ce04ca3ddfb2e4557986e2b0c37190978aa9086b25441b4e"
+        },
+        {
+          "path": "sprites/96/warg.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            95,
+            88,
+            1159,
+            1158
+          ],
+          "export_window": [
+            4.906977,
+            0.906977,
+            1244.186047
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0ae53b8564bacc9e0e42007c2100ea00fa5506093c7c2f49f5d9bdb167d7e542"
+        },
+        {
+          "path": "sprites/128/warg.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            95,
+            88,
+            1159,
+            1158
+          ],
+          "export_window": [
+            4.906977,
+            0.906977,
+            1244.186047
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3891d495c890686880c3f7d119a21dae0af87819dd62356d167375d9a26c1230"
+        },
+        {
+          "path": "sprites/256/warg.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            95,
+            88,
+            1159,
+            1158
+          ],
+          "export_window": [
+            4.906977,
+            0.906977,
+            1244.186047
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bb8a2daeb037e924358d68474a26c4f49cb0ee3daca135809cb724e9298c1245"
+        }
+      ]
+    },
+    {
+      "id": "white-snake",
+      "master": "masters/white-snake-v2.png",
+      "sha256": "0e8e1f819110d47aa40d3f305f3486ebd5859e83dc6f463001a97ead7f090a09",
+      "exports": [
+        {
+          "path": "sprites/48/white-snake.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            101,
+            111,
+            1156,
+            1158
+          ],
+          "export_window": [
+            15.127907,
+            21.127907,
+            1226.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "730f95b69bd713226ef734d2cc70284d90d936a5c7c3ed5b2842e4a9853aa52b"
+        },
+        {
+          "path": "sprites/64/white-snake.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            101,
+            111,
+            1156,
+            1158
+          ],
+          "export_window": [
+            15.127907,
+            21.127907,
+            1226.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b7c8a461412c432d62cfc05601a123389260563353cd97329f73b87e0d046f31"
+        },
+        {
+          "path": "sprites/96/white-snake.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            101,
+            111,
+            1156,
+            1158
+          ],
+          "export_window": [
+            15.127907,
+            21.127907,
+            1226.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3ec8d27c5b723487a2781cbf63cef0170cd594543b7f6d788e3d66c692a99f5b"
+        },
+        {
+          "path": "sprites/128/white-snake.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            101,
+            111,
+            1156,
+            1158
+          ],
+          "export_window": [
+            15.127907,
+            21.127907,
+            1226.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9b48deebe113292a5ea9c8bfb6f07eaf018073d3ea2cd62e18ed70b6108c5e5e"
+        },
+        {
+          "path": "sprites/256/white-snake.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            101,
+            111,
+            1156,
+            1158
+          ],
+          "export_window": [
+            15.127907,
+            21.127907,
+            1226.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8ec11580bd8534e459dae488876187e8ff447d45f63ed63799f4d9c198968bf7"
+        }
+      ]
+    },
+    {
+      "id": "rattlesnake",
+      "master": "masters/rattlesnake-v1.png",
+      "sha256": "4af1fa77c7e4551055d006d758d5b494b96bb63735c175558379570789b34b40",
+      "exports": [
+        {
+          "path": "sprites/48/rattlesnake.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            146,
+            145,
+            1107,
+            1120
+          ],
+          "export_window": [
+            59.639535,
+            65.639535,
+            1133.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8b7d44d447d75c577eb345c5ada16c03849681a8b7679c326b13bdcbd9da4fa1"
+        },
+        {
+          "path": "sprites/64/rattlesnake.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            146,
+            145,
+            1107,
+            1120
+          ],
+          "export_window": [
+            59.639535,
+            65.639535,
+            1133.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "55e48e67dc4ddd26ecb8583b2584933e8347b0f71cae4e6de908ea0c84356778"
+        },
+        {
+          "path": "sprites/96/rattlesnake.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            146,
+            145,
+            1107,
+            1120
+          ],
+          "export_window": [
+            59.639535,
+            65.639535,
+            1133.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c85e6a1cdb89d447a6b242bcc78b8e79b85f9e1b0df8fd9757271c3c4bce3f85"
+        },
+        {
+          "path": "sprites/128/rattlesnake.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            146,
+            145,
+            1107,
+            1120
+          ],
+          "export_window": [
+            59.639535,
+            65.639535,
+            1133.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "23c6c8ea5cc45262b2fdc9d6fdf22f506f078f85529d2d802d70433a0a78ab79"
+        },
+        {
+          "path": "sprites/256/rattlesnake.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            146,
+            145,
+            1107,
+            1120
+          ],
+          "export_window": [
+            59.639535,
+            65.639535,
+            1133.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "08882ca79b32d897849c03f5c753887be999e91e4df5605a437d59d74b96ae83"
+        }
+      ]
+    },
+    {
+      "id": "midge-swarm",
+      "master": "masters/midge-swarm-v3.png",
+      "sha256": "d3e916b8c05322a6b203e0109ee29ef5f36a452f60182319af9ce35e390890e9",
+      "exports": [
+        {
+          "path": "sprites/48/midge-swarm.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            145,
+            143,
+            1109,
+            1113
+          ],
+          "export_window": [
+            63.046512,
+            64.046512,
+            1127.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2d8c4e6bb93277c6e34522f9a32f145ced6ea003d005ca77e3710bd2f985beda"
+        },
+        {
+          "path": "sprites/64/midge-swarm.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            145,
+            143,
+            1109,
+            1113
+          ],
+          "export_window": [
+            63.046512,
+            64.046512,
+            1127.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "030ef25bbf7f87132fe9c2c772b6a252076fc4eccf5decfe60be96f5fa537dc6"
+        },
+        {
+          "path": "sprites/96/midge-swarm.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            145,
+            143,
+            1109,
+            1113
+          ],
+          "export_window": [
+            63.046512,
+            64.046512,
+            1127.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1df2b10bbc453962a863b0e3ed48202cde18f0d917a7984bfbb8f33fb3f9231c"
+        },
+        {
+          "path": "sprites/128/midge-swarm.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            145,
+            143,
+            1109,
+            1113
+          ],
+          "export_window": [
+            63.046512,
+            64.046512,
+            1127.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2376ff1dd46628c9433f817a909fda54a5c5df54c27aed1072253f0b656b842a"
+        },
+        {
+          "path": "sprites/256/midge-swarm.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            145,
+            143,
+            1109,
+            1113
+          ],
+          "export_window": [
+            63.046512,
+            64.046512,
+            1127.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8c9f62bbd65763b69c497e48e3a3f4edf4230511498ef0c1c39832f053edd10a"
+        }
+      ]
+    },
+    {
+      "id": "hornet-swarm",
+      "master": "masters/hornet-swarm-v1.png",
+      "sha256": "528da618d7f67f7f8896a8e8ea72bb42caa0278318cbeef25b188047aea03f2f",
+      "exports": [
+        {
+          "path": "sprites/48/hornet-swarm.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            89,
+            1167,
+            1160
+          ],
+          "export_window": [
+            0.174419,
+            -2.825581,
+            1254.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "95a64cd63065eabe12cdd69c021c1306101805d9b82fb16c10dad53b1a0cab7a"
+        },
+        {
+          "path": "sprites/64/hornet-swarm.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            89,
+            1167,
+            1160
+          ],
+          "export_window": [
+            0.174419,
+            -2.825581,
+            1254.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3c6eed2992652c50192e8a9390492609a36dd5e6e011e18ae4d1f15e1db38267"
+        },
+        {
+          "path": "sprites/96/hornet-swarm.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            89,
+            1167,
+            1160
+          ],
+          "export_window": [
+            0.174419,
+            -2.825581,
+            1254.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5c1c883ff7fbb779adfa71271e84cd950d88e85817daff6483811f16198491d1"
+        },
+        {
+          "path": "sprites/128/hornet-swarm.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            89,
+            1167,
+            1160
+          ],
+          "export_window": [
+            0.174419,
+            -2.825581,
+            1254.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "19f642deae5ba15a2f41f4c89cdb722ff0c87256395b10fc6732768bf6041e42"
+        },
+        {
+          "path": "sprites/256/hornet-swarm.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            89,
+            1167,
+            1160
+          ],
+          "export_window": [
+            0.174419,
+            -2.825581,
+            1254.651163
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9c82907b94d456e5f86427d6509df16a9f50353423dcb6af66dc8a4f4548fe26"
+        }
+      ]
+    },
+    {
+      "id": "white-worm-mass",
+      "master": "masters/white-worm-mass-v1.png",
+      "sha256": "ce957c3fa428731ff049cd16879e5fbc9fd75c723e080abc54fb09ebce88fcca",
+      "exports": [
+        {
+          "path": "sprites/48/white-worm-mass.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            119,
+            122,
+            1135,
+            1130
+          ],
+          "export_window": [
+            36.302326,
+            35.302326,
+            1181.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "209dcd4b613e3633f8ec12da02db9840b3609c19c96476da65ef22304fe9d6e5"
+        },
+        {
+          "path": "sprites/64/white-worm-mass.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            119,
+            122,
+            1135,
+            1130
+          ],
+          "export_window": [
+            36.302326,
+            35.302326,
+            1181.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d695560e23d96b5606e7d971b815c1d5c0f08f23be9970d8f7ca11ad334a4e37"
+        },
+        {
+          "path": "sprites/96/white-worm-mass.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            119,
+            122,
+            1135,
+            1130
+          ],
+          "export_window": [
+            36.302326,
+            35.302326,
+            1181.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "373bea130a03661324bd380a2831e1a51137fe825dc7cdc7953e184c642039ef"
+        },
+        {
+          "path": "sprites/128/white-worm-mass.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            119,
+            122,
+            1135,
+            1130
+          ],
+          "export_window": [
+            36.302326,
+            35.302326,
+            1181.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "55671a39ff9388694837a3a72073a516196d8401dfa0bb807a374b34a442efc8"
+        },
+        {
+          "path": "sprites/256/white-worm-mass.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            119,
+            122,
+            1135,
+            1130
+          ],
+          "export_window": [
+            36.302326,
+            35.302326,
+            1181.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "786e5c607028b40838eb2b72bf45824c52e2ecb637d84128fd75de30f4627ba7"
+        }
+      ]
+    }
+  ]
+}

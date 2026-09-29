@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-n-12",
+  "assets": [
+    {
+      "asset_id": "skeleton-magus",
+      "native_name": "skeleton magus",
+      "scope": "dreadfell, halfling-ruins, collapsed-tower and amon-sul-crypt vault loots (undead/skeleton, default-name image, non-unique, no define_as, no nice_tile); the skeleton warrior/archer/mage siblings are separate shipped names",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 129,
+          "anchor": "name = \"skeleton magus\", color=colors.LIGHT_RED"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_skeleton_skeleton_magus.png",
+          "sha256": "412ea06ec6011ac229ce07ee84f3822975b0066881ca8402cec884a08556bb3d",
+          "role": "identity",
+          "note": "Native shape: a golden-ivory skeleton with both arms raised out to the sides, orange fire burning in each hand, blue ribbon sashes streaming around the ribs and legs."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/skeleton-mage.png",
+          "sha256": "49f2d7cc8f25596469983b3e95fcc4e4eafe39ca3cdccc2c4e722f2ed54edb05",
+          "role": "family",
+          "note": "Shipped skeleton mage (hunched skeleton wrapped in a dark blue-black cloak with a gold-lit skull): the magus is NOT cloaked; it is an open bare-boned figure with both arms raised, a flame in each hand and streaming cobalt ribbons."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A skeleton magus seen from a steep overhead three-quarter angle: a tall thin skeleton of warm ivory and pale gold bone standing upright and clearly open, with no cloak or hood, both arms raised up and out in a wide V, a small bright orange-and-yellow flame burning in each open hand, a faint gold light in the eye sockets, long ribbon sashes of bright cobalt blue with pale-blue edges wrapping the ribcage and streaming to both sides, small tarnished-gold trinkets on the wrists. Arcane, gaunt and complete.",
+        "contrast": "Skeleton family: the shipped skeleton mage is a hunched figure wrapped in a dark cloak, the skeleton warrior is a steel-armoured sword bearer, the archer is a bare skeleton drawing a bow. The magus is the OPEN figure with arms raised in a wide V and a flame in each hand, trailing cobalt-blue ribbons (silhouette: upright V of raised arms, no cloak, two hand flames; hue: ivory-gold bone with cobalt and orange accents; value: light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. Calibration from the previous generations of this exact token: the first drew the hand flames and ribbons past the disc edge, the second was drawn tiny (about half the disc width). This time the figure fills about four fifths of the disc radius around the disc centre: arms raised to shoulder height and angled slightly forward, a flame in each hand held at about the width of the shoulders beyond the body, ribbons of moderate length wrapped around the body, leaving a clear bare charcoal ring of base plate on every side.",
+        "palette": "Light warm ivory and pale-gold bone, bright cobalt-blue ribbons, orange and yellow hand flames; nothing darker than mid tone except the eye sockets and rib gaps; the hand flames must not cast orange light, glow or warm cast onto the disc, which stays neutral charcoal. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=skeleton magus, define_as=None, type=undead/subtype=skeleton, unique=False); details and hashes in evidence/monster-batch-n-20260929/source-contracts.json. base BASE_NPC_SKELETON (undead/skeleton, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives undead_skeleton_skeleton_magus.png (64x64); talents Staff Mastery (passive), Flame, Manathrust (bolts), Arcane Power (sustained, arcane.lua:84: resist/spellpower temporary values plus an arcane_power particle, no display field) - but the leaf has no sustains_at_birth, so nothing is even activated at birth; racial skeleton talents are passive/activated with no body write (Skeleton Reassemble only reads shader particles). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-n-20260929/source-contracts.json",
+          "sha256": "dad625ba87d3d81ab2a542faf25e2a55fafb5093319a6d1269d4019f0cde564b"
+        }
+      ]
+    }
+  ]
+}

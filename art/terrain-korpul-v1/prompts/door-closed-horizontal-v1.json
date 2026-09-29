@@ -1,0 +1,72 @@
+{
+  "asset_id": "door-closed-horizontal-v1",
+  "material": "door-closed-horizontal",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "intent": "reference-guided generation/edit",
+  "prompt": "Use case: stylized-concept. ONE CLOSED DOOR terrain component for one square tabletop dungeon cell. Square PNG ideally 1024x1024 with TRUE transparent alpha everywhere outside masonry and door; no floor, no circular base. Very steep overhead three-quarter camera, north up, geometry aligned to square screen axes, soft fixed upper-left light, matte hand-painted miniature finish matching pale chipped limestone wall reference. HORIZONTAL wall axis runs left-right across the middle of the cell; passage would run north-south. Two compact pale grey limestone jambs on left and right of middle, between them a clearly CLOSED thick oak door leaf spans left-to-right and blocks that passage. The leaf is upright but viewed steeply from above so its thick wood top edge and a modest front face are visible. Warm desaturated brown oak planks, two plain dark iron straps, a small simple ring handle; no lock icon or barred gates. No lintel overhead hiding the opening; cutaway dollhouse construction. Wood leaf MUST join both stone jambs with no traversable central gap. Entire component, including its short south-side thickness and shadows, fits inside x8..92%, y12..88% canvas. Use broad simple masses readable at 48px. Short side faces reveal raised obstacle; do not depict a flat floor hatch. No arch extending upward off cell, no surrounding room or backdrop, no scenic rubble, inscriptions, runes, arrows, numbering, rank/selection marks, faction colors or watermark. This is a closed ordinary doorway, not sealed or magical. One asset, not before/after pair.",
+  "references": [
+    "wall-v1",
+    "native granite_door1.png"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-1fa33a9c-6497-468d-a96d-631edb4d3f73.png",
+  "saved_output_path": "art/terrain-korpul-v1/masters/door-closed-horizontal-v1.png",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "native_alpha_required": true,
+  "selection": "design-candidate-not-runtime-ready",
+  "rejection_reason": null,
+  "processing": "Copy original unchanged; small-size whole-canvas resampling only. No alpha extraction, relighting, recolouring, rotation, or painted geometry.",
+  "sha256": "eb3ceb83624e7ced854fc6eb802772414726c3dfe4268937589748a2fc932872",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      21,
+      1172,
+      1236
+    ],
+    "transparent_pixels": 1053405,
+    "partial_alpha_pixels": 518818,
+    "opaque_pixels": 293,
+    "visible_alpha_bbox_gt8": [
+      92,
+      386,
+      1166,
+      934
+    ],
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "references_resolved": [
+    "masters/wall-v1.png",
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/terrain/granite_door1.png"
+  ],
+  "static_review": {
+    "sheet": "review/design-sheet.png",
+    "actual_sizes": [
+      48,
+      64,
+      96
+    ],
+    "floor_repeat_size": 128,
+    "grayscale": "CSS display only",
+    "runtime_verified": false,
+    "connected_masks_verified": false
+  }
+}

@@ -1,0 +1,1481 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "snow-giant",
+      "master": "masters/snow-giant-v2.png",
+      "sha256": "5f97b1b8ae8210b665cbef75acfc0076439bd4fca59d7fd85777d0e05d183f19",
+      "exports": [
+        {
+          "path": "sprites/48/snow-giant.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1166,
+            1172
+          ],
+          "export_window": [
+            -10.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a658a4f19bc1ecef602d8aa212ecb8e26296d5a8fb4238ba96e02f84002479f7"
+        },
+        {
+          "path": "sprites/64/snow-giant.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1166,
+            1172
+          ],
+          "export_window": [
+            -10.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6f248617a1fc559430c35e5361aa3e53d383718d1c8c64ef5bba044a7a8a7656"
+        },
+        {
+          "path": "sprites/96/snow-giant.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1166,
+            1172
+          ],
+          "export_window": [
+            -10.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3b994e26a56b4c7a79a4f37e8a4f333de58f9f87cbd2d1cd985b3eda1cf9435d"
+        },
+        {
+          "path": "sprites/128/snow-giant.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1166,
+            1172
+          ],
+          "export_window": [
+            -10.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7c8cd34d093bf3a84a6d6eb6ba23600e1b35a034c6095cce310c4cfd6afff2a7"
+        },
+        {
+          "path": "sprites/256/snow-giant.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1166,
+            1172
+          ],
+          "export_window": [
+            -10.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b3a7dd7c26c4538d18b52aab8169651f8a56b195e5e6cc663cb710eeaad90200"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 7.35,
+        "max_sector_intrusion": 7.8,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "snow-giant-thunderer",
+      "master": "masters/snow-giant-thunderer-v1.png",
+      "sha256": "32da38c1d64e637f8283ff573b165c4f5f0b240c772b49fb93118970d8bc7d0f",
+      "exports": [
+        {
+          "path": "sprites/48/snow-giant-thunderer.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            80,
+            67,
+            1167,
+            1182
+          ],
+          "export_window": [
+            -24.755814,
+            -23.755814,
+            1296.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5f53245f215e3082c91086cc0d876772447335649db67cf4951e3a6e0550ae00"
+        },
+        {
+          "path": "sprites/64/snow-giant-thunderer.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            80,
+            67,
+            1167,
+            1182
+          ],
+          "export_window": [
+            -24.755814,
+            -23.755814,
+            1296.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5eae31378ce7768324d23c30cdaa97428776f975c8984303fc5d16b3e987b3c1"
+        },
+        {
+          "path": "sprites/96/snow-giant-thunderer.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            80,
+            67,
+            1167,
+            1182
+          ],
+          "export_window": [
+            -24.755814,
+            -23.755814,
+            1296.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0be9f369ce0b032322f1c4d8b10a2ea9c4eae2fe3e71c7d67c02e2c8731db66f"
+        },
+        {
+          "path": "sprites/128/snow-giant-thunderer.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            80,
+            67,
+            1167,
+            1182
+          ],
+          "export_window": [
+            -24.755814,
+            -23.755814,
+            1296.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3c76bf0d6ff81747f1e4c4cd59c8d31feb0685846e5f306303677b3e8b16ba45"
+        },
+        {
+          "path": "sprites/256/snow-giant-thunderer.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            80,
+            67,
+            1167,
+            1182
+          ],
+          "export_window": [
+            -24.755814,
+            -23.755814,
+            1296.511628
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d3ca6aa72be2accba4f693605fb31a82e1f473c42190d5cf776c453d58f94f97"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -4.29,
+        "max_sector_intrusion": 6.33,
+        "max_opaque_radius": 0.8559,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "snow-giant-boulder-thrower",
+      "master": "masters/snow-giant-boulder-thrower-v2.png",
+      "sha256": "122d930213251ed267d108b90fbfe68e6fc7ec9178ed12e4c7fb9f3b27f22ed3",
+      "exports": [
+        {
+          "path": "sprites/48/snow-giant-boulder-thrower.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            76,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -12.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8bb59fedf68df36be9bda15a683a665efb64d4a0b0c8f5363351b9dab46dda27"
+        },
+        {
+          "path": "sprites/64/snow-giant-boulder-thrower.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            76,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -12.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4aea6522b4190bbb0d995f90c3ed36689a6e71edf793dce1404ce783adc44a99"
+        },
+        {
+          "path": "sprites/96/snow-giant-boulder-thrower.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            76,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -12.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "80285b17f105e5ac416ab45310e05edd4c4e4c94d671eae36dc88f1a4ef78d1a"
+        },
+        {
+          "path": "sprites/128/snow-giant-boulder-thrower.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            76,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -12.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4099f8c2fa8e86731ab67c14e834ea85b6a07c5459491b3d4d6aa627daa8cadf"
+        },
+        {
+          "path": "sprites/256/snow-giant-boulder-thrower.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            76,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -12.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "61f89c2b1058b95758e31e5fb070fb86b32352261f71167b34a27efbf5ebbbd3"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -0.56,
+        "max_sector_intrusion": 5.58,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "snow-giant-chieftain",
+      "master": "masters/snow-giant-chieftain-v1.png",
+      "sha256": "d7645d078bd921311bbd2a3c6a8918292f0fc89c378d24845a6f87ce88728b12",
+      "exports": [
+        {
+          "path": "sprites/48/snow-giant-chieftain.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e8b634c5b2eecbc95fcac9b71ece5b60a308d081721b3760b7564f4118210d5f"
+        },
+        {
+          "path": "sprites/64/snow-giant-chieftain.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3abc25686325a9f7febb392a99f89fd1e41f98b318b9d2f2bbcd7400b4ada78f"
+        },
+        {
+          "path": "sprites/96/snow-giant-chieftain.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ec71309d74be9f9b56a94158e1e2a2eabb9c660b1069223c48e9ae879686046b"
+        },
+        {
+          "path": "sprites/128/snow-giant-chieftain.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6cea6826620090a5c6008a7908d79a5b96571a195a611e58b8caebbe5ee32817"
+        },
+        {
+          "path": "sprites/256/snow-giant-chieftain.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "95fb2233fa68d2972baf9475991cdd3a1b4df95ec8c2e184019cf275e06790e8"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -6.2,
+        "max_sector_intrusion": 11.41,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "minotaur",
+      "master": "masters/minotaur-v3.png",
+      "sha256": "2d20064e0041d734086ba1187c66aaab0f1b16b1ffd47647b914cb51c6ff1ecd",
+      "exports": [
+        {
+          "path": "sprites/48/minotaur.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1169,
+            1173
+          ],
+          "export_window": [
+            -11.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0056a630a5cdded5675efbc03578dcf9589feb87f093702ddadb7c78cc8e0e00"
+        },
+        {
+          "path": "sprites/64/minotaur.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1169,
+            1173
+          ],
+          "export_window": [
+            -11.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8d02a0efab2fcf051fc5af69f45dc4b00f2f16a37e5d22c92f49f58ab66e5c4f"
+        },
+        {
+          "path": "sprites/96/minotaur.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1169,
+            1173
+          ],
+          "export_window": [
+            -11.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7b3d7d768180ec0ebda073c8cb72a03a20177b77ce4254f4b95261c70888b2e1"
+        },
+        {
+          "path": "sprites/128/minotaur.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1169,
+            1173
+          ],
+          "export_window": [
+            -11.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b4b1afef267529f83ac658a759a2e64f0ebcb5e5af8640ffc59f485826365e1d"
+        },
+        {
+          "path": "sprites/256/minotaur.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1169,
+            1173
+          ],
+          "export_window": [
+            -11.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b38151361ed368fd6fe5adde7558a8353fb37db7ffa0184092a303a975cb3c03"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.38,
+        "max_sector_intrusion": 2.57,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "mountain-troll",
+      "master": "masters/mountain-troll-v1.png",
+      "sha256": "a2e085ee7d1cdb130e18ef9dd1c13844d1e6c2541f1c65834ce18a32e84571ab",
+      "exports": [
+        {
+          "path": "sprites/48/mountain-troll.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1168,
+            1173
+          ],
+          "export_window": [
+            -11.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f98a254262dd4f5aee9ab5a1f281507654ca00bb94292a01b83bfb405b3eed44"
+        },
+        {
+          "path": "sprites/64/mountain-troll.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1168,
+            1173
+          ],
+          "export_window": [
+            -11.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "94df96b8cec530918215842bae55aee3c6b96c8c643cbb426b5f1af20ffeb84c"
+        },
+        {
+          "path": "sprites/96/mountain-troll.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1168,
+            1173
+          ],
+          "export_window": [
+            -11.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9081de71a0431facf34e5ef3226754ab0219462897ca96491c6c021b2f59e0ab"
+        },
+        {
+          "path": "sprites/128/mountain-troll.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1168,
+            1173
+          ],
+          "export_window": [
+            -11.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d504478622f30e7cf7bc806e47b91684da5919a0574ec1d0956487852a1c2f16"
+        },
+        {
+          "path": "sprites/256/mountain-troll.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1168,
+            1173
+          ],
+          "export_window": [
+            -11.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b22c2db905742ee0f7a9596b2647639a041df9c86447573c84a81bed6c1e1331"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -5.43,
+        "max_sector_intrusion": 4.91,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "mountain-troll-thunderer",
+      "master": "masters/mountain-troll-thunderer-v1.png",
+      "sha256": "899ec97a14da3878c57de461e2da36d0d9f664b4dbc6f1a6ea0c66052db28492",
+      "exports": [
+        {
+          "path": "sprites/48/mountain-troll-thunderer.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            69,
+            60,
+            1185,
+            1183
+          ],
+          "export_window": [
+            -25.906977,
+            -31.406977,
+            1305.813953
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a2c12c5cbacd3dd124f68f4d05016d28d062ae9ebb8500588b7f1e45fc8836ab"
+        },
+        {
+          "path": "sprites/64/mountain-troll-thunderer.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            69,
+            60,
+            1185,
+            1183
+          ],
+          "export_window": [
+            -25.906977,
+            -31.406977,
+            1305.813953
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2ee648d91c4d80101696d69c66d300df6c8d8d553d11ad2db7011ef5b296663b"
+        },
+        {
+          "path": "sprites/96/mountain-troll-thunderer.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            69,
+            60,
+            1185,
+            1183
+          ],
+          "export_window": [
+            -25.906977,
+            -31.406977,
+            1305.813953
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a7f0c0132dbb0af9f33739f719ee66c4cbb8eac50f2e6db122b2391e6ad5cee7"
+        },
+        {
+          "path": "sprites/128/mountain-troll-thunderer.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            69,
+            60,
+            1185,
+            1183
+          ],
+          "export_window": [
+            -25.906977,
+            -31.406977,
+            1305.813953
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4d1438863f973f288eed97bfd6137adafd71e0682a7c97877e54cea96bb3e2d3"
+        },
+        {
+          "path": "sprites/256/mountain-troll-thunderer.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            69,
+            60,
+            1185,
+            1183
+          ],
+          "export_window": [
+            -25.906977,
+            -31.406977,
+            1305.813953
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6f50ef10bedcdf70fb3670d1454398e36e739787ab4d7ba640d4b8bcf89ed8ee"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -0.46,
+        "max_sector_intrusion": 6.95,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ogre-guard",
+      "master": "masters/ogre-guard-v1.png",
+      "sha256": "bacb1bc1edded76f9f3c7e21e8149299cc2e1963785a442736d96125f8c3c92f",
+      "exports": [
+        {
+          "path": "sprites/48/ogre-guard.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1170,
+            1176
+          ],
+          "export_window": [
+            -12.116279,
+            -14.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f1673d30043ba1c66c20c011928000c63773ebc7af3a164f70f811160256a873"
+        },
+        {
+          "path": "sprites/64/ogre-guard.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1170,
+            1176
+          ],
+          "export_window": [
+            -12.116279,
+            -14.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3b86113c1b66fe0740bae53998b6cc41f55a627035e479eac421724345de3b39"
+        },
+        {
+          "path": "sprites/96/ogre-guard.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1170,
+            1176
+          ],
+          "export_window": [
+            -12.116279,
+            -14.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7f422e3b206c4aa8cd4d66326e020a79cfac8fd3561007f0c0cc16b4387dea14"
+        },
+        {
+          "path": "sprites/128/ogre-guard.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1170,
+            1176
+          ],
+          "export_window": [
+            -12.116279,
+            -14.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7ad41b65d9e1bb90aaf4a6ae104a3d7d3b2decb47332452d34b9d1fdb9c5a189"
+        },
+        {
+          "path": "sprites/256/ogre-guard.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1170,
+            1176
+          ],
+          "export_window": [
+            -12.116279,
+            -14.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "07417cbada2129f16e16c22f704a1663ae17f87640cdcc0c235f5438db744c07"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -7.14,
+        "max_sector_intrusion": 3.16,
+        "max_opaque_radius": 0.8638,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ogre-mauler",
+      "master": "masters/ogre-mauler-v1.png",
+      "sha256": "171e4cf0ceb29b3d4f25de381fcf14f6396421f2b130dacc3a1bc74acb8b8a53",
+      "exports": [
+        {
+          "path": "sprites/48/ogre-mauler.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            73,
+            1170,
+            1173
+          ],
+          "export_window": [
+            -12.034884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "dd9ccc17ba8d1b2dac71f1fd62979725a323eb469492012c000544559df56b3e"
+        },
+        {
+          "path": "sprites/64/ogre-mauler.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            73,
+            1170,
+            1173
+          ],
+          "export_window": [
+            -12.034884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a04a72594227cc05ee92283765863e3749bdbe37beefe1abe7bc827dfe2f4fbc"
+        },
+        {
+          "path": "sprites/96/ogre-mauler.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            73,
+            1170,
+            1173
+          ],
+          "export_window": [
+            -12.034884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a229d4e551c086c07ecdbd7d4b8bff68911f271d522391e923f0333d30f269f0"
+        },
+        {
+          "path": "sprites/128/ogre-mauler.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            73,
+            1170,
+            1173
+          ],
+          "export_window": [
+            -12.034884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "469eaddd8a38fb5f82ce4e118a9bfca962880f4e92fdcc2ce0a8b718c1d75e21"
+        },
+        {
+          "path": "sprites/256/ogre-mauler.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            73,
+            1170,
+            1173
+          ],
+          "export_window": [
+            -12.034884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2cefda28132d836d612e41f3b9ac4324db5843d9be0b596ca2f4ccf82500470e"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -4.56,
+        "max_sector_intrusion": 7.62,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ogre-rune-spinner",
+      "master": "masters/ogre-rune-spinner-v1.png",
+      "sha256": "8b3740544fb38eb54fc3eff8dfaa0c106f4e3125e7d4b9d5a2c5790595b290f2",
+      "exports": [
+        {
+          "path": "sprites/48/ogre-rune-spinner.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1170,
+            1178
+          ],
+          "export_window": [
+            -13.77907,
+            -14.77907,
+            1282.55814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "137aa3cd0f1ecdcaf9da86ac0789db98bedfa45627c0feb0ba7a03ce50140935"
+        },
+        {
+          "path": "sprites/64/ogre-rune-spinner.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1170,
+            1178
+          ],
+          "export_window": [
+            -13.77907,
+            -14.77907,
+            1282.55814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ada742984237b25161c3f69264c4ada41c2fb55c95c7200981a4c2ae45848dde"
+        },
+        {
+          "path": "sprites/96/ogre-rune-spinner.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1170,
+            1178
+          ],
+          "export_window": [
+            -13.77907,
+            -14.77907,
+            1282.55814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5550617d33b27830ce212f0f20f00e76d58e9b22eefd33f29545e3fedd97274a"
+        },
+        {
+          "path": "sprites/128/ogre-rune-spinner.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1170,
+            1178
+          ],
+          "export_window": [
+            -13.77907,
+            -14.77907,
+            1282.55814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6ae3a0ecce67911d0bf80f8c25d0670d74188d9ae3dc962c604a4f49c5c6c286"
+        },
+        {
+          "path": "sprites/256/ogre-rune-spinner.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1170,
+            1178
+          ],
+          "export_window": [
+            -13.77907,
+            -14.77907,
+            1282.55814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cdb2d430944b54748bdd4d10c22f8caee2cfe8304f62ccced89c5f61fc2c2146"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.91,
+        "max_sector_intrusion": 18.22,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ogre-pounder",
+      "master": "masters/ogre-pounder-v1.png",
+      "sha256": "4a6bf34a68613f5811099d011648758414abccc4e3f05955de2fde2c76580101",
+      "exports": [
+        {
+          "path": "sprites/48/ogre-pounder.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -13.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2b44372773d9b7a376e04b2f037d41fbb6b1feea21442a03fe449c28a257b6bf"
+        },
+        {
+          "path": "sprites/64/ogre-pounder.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -13.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e4c4e54466348eaffbb400fa2037a5eb29306b0222e68017380e16497805e87c"
+        },
+        {
+          "path": "sprites/96/ogre-pounder.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -13.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "dd94d3a145c5d3e8cbbf5c278b2fdf347bac226f45110991d5334e87a2795140"
+        },
+        {
+          "path": "sprites/128/ogre-pounder.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -13.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b8eed646a200b15ff95eda15f8555ea16e601973233501a67b86cfa8572f1894"
+        },
+        {
+          "path": "sprites/256/ogre-pounder.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -13.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "431880deaa2917a179bdf31e90a95129af15f1cfaed435bd089c5f350ce1c30e"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.31,
+        "max_sector_intrusion": 11.41,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "healer-astelrid",
+      "master": "masters/healer-astelrid-v1.png",
+      "sha256": "236c1d0d2a169ea9ca6844f4a76465bfce88b754e4266ec9fc970909338199cf",
+      "exports": [
+        {
+          "path": "sprites/48/healer-astelrid.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "04260bb35e62834d09b297d7ee62b5b5dbfb28534950a299a5b94f2ac348aa7c"
+        },
+        {
+          "path": "sprites/64/healer-astelrid.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9c53e1e209cf8e6a19102e976bf1dcaed8a3e53351adf842275ea0c7450bebe7"
+        },
+        {
+          "path": "sprites/96/healer-astelrid.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5cfadeaecb150b0ce504a7d45d6d97a4953e8c853365e74dd7120a5552266a23"
+        },
+        {
+          "path": "sprites/128/healer-astelrid.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "924d99908d3275bdb377f7447f01876ceff545f9896c3b9a4914b637fef9c73d"
+        },
+        {
+          "path": "sprites/256/healer-astelrid.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6e6bb50dd51f1f0db7f4235ba5e1524736790ba3d20429cdcc4b874513d0d068"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -5.22,
+        "max_sector_intrusion": 1.85,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

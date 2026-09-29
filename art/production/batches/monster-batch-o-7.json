@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-o-7",
+  "assets": [
+    {
+      "asset_id": "onilug",
+      "native_name": "onilug",
+      "scope": "valley-moon-caverns, demon-plane (demon/minor, non-unique, no define_as, resolvers.nice_tile{tall=1} shorthand on the leaf, no image=); the {tall=1} shorthand was live-confirmed for xhaiak/shiaak (batch G, evidence/monster-live-f-20260929) and the naga nereid (batch L live, evidence/monster-batch-l-live-20260929): it resolves to invis.png + add_mos{display_h=2, display_y=-1} of the disk-formula PNG",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/minor-demon.lua",
+          "sha256": "80520f8ae1b87b97ea599207de45fdf3703b00ca0e48c100b653dafb735f2050",
+          "line": 92,
+          "anchor": "name = \"onilug\", color=colors.GREY"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/minor-demon.lua",
+          "sha256": "80520f8ae1b87b97ea599207de45fdf3703b00ca0e48c100b653dafb735f2050",
+          "line": 95,
+          "anchor": "resolvers.nice_tile{tall=1}"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_minor_onilug.png",
+          "sha256": "857c2efdded0b39bbb52ba28e4813b6034d99cef8824eaa8e1e69f2ada1e1402",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a gaunt, very tall thin grey leathery humanoid with over-long arms and legs, a small head with glowing red eyes and dark spiky hair or horns."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/water-imp.png",
+          "sha256": "f335cdbc416d1695f3d8b38c203d622680ea6a947b54ee871d7f4a5041c7bb7d",
+          "role": "family",
+          "note": "Shipped water imp (small blue-teal imp): the onilug is the tall thin grey-mauve one, standing upright and holding a staff, nothing like a small imp."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An onilug seen from a steep overhead three-quarter angle: a gaunt but broad-shouldered hunched humanoid demon of bright mid-light warm grey-mauve leathery skin with clear lighter lilac-grey highlight planes, very long arms hanging wide with big spread clawed hands, legs planted wide, a small bald head thrust forward with bright glowing red eyes and a cruel grin, a short thick pale-bone staff topped with a bright violet crystal gripped diagonally across the body, a ragged pale-grey loincloth. No wings, no horns. Sinister, powerful and complete, clearly lit.",
+        "contrast": "Minor demons: the shipped water imp is a small blue-teal imp, and the wretchling an olive-lime squat pouncer. The onilug is the TALL THIN GREY-MAUVE upright staff-bearer with red eyes (silhouette: narrow tall upright figure with a vertical staff; hue: warm grey-mauve with red eyes and a violet crystal; value: mid-light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Calibration from the previous generation of this exact token: it was drawn as a very thin, faint, narrow column with a hair-thin staff, only about a third of the disc wide, unreadable at 48px. This time change the pose to a broad, bold, hunched silhouette: shoulders wide and rolled forward, the head thrust forward, both long arms hanging out and away from the body to each side with big spread clawed hands, one hand gripping a short THICK pale-bone staff held diagonally across the body, and the legs planted wide. The figure is heavy and clearly lit and fills about three quarters of the disc radius around the disc centre in BOTH width and height.",
+        "palette": "Mid-light warm grey-mauve skin with lighter lilac-grey highlight planes, pale-bone staff, violet crystal, bright red eyes; nothing darker than mid grey except the eye sockets and a few rib lines; the crystal and eyes must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=onilug, define_as=None, type=demon/subtype=minor, unique=False); details and hashes in evidence/monster-batch-o-20260929/source-contracts.json. base BASE_NPC_DEMON (demon/minor, no image=); NPC.lua:33 gives the disk-formula PNG demon_minor_onilug.png (64x128 tall) and resolvers.nice_tile{tall=1} expands (resolvers.lua:1375) to invis.png + add_mos{image=that PNG, display_h=2, display_y=-1}, the same shape the live probes recorded for the other {tall=1} identities; talents Curses, Soul Rot, Vimsense, Leech, Drain, Channel Staff (none sustained) and equipment resolvers (staff, rings, amulet); no sustains_at_birth; non-unique so native_tall=true. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-o-20260929/source-contracts.json",
+          "sha256": "d8d01218f85afa424e662a8f08ea1dcfac1dc6aef902034dbb35f6b53f4b494b"
+        }
+      ]
+    }
+  ]
+}

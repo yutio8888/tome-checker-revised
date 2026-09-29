@@ -1,0 +1,9 @@
+Use case: stylized-concept. Deliver ONE square, opaque, full-bleed terrain material master for a tabletop game board: $native_name. Request 1024 x 1024 pixels; preserve actual output resolution.
+
+Subject and material: $subject
+Palette: $palette
+Relationship to adjacent materials: $contrast
+Composition and edge contract: $composition
+Gameplay contract (do not invent additional rules): $mechanics
+
+Flat overhead printed-board surface; restrained matte paint texture and broad low-contrast variations. Match the supplied accepted reference's scale, palette hierarchy and upper-left lighting convention. No creature, disc, freestanding prop, text, symbol, hazard badge, frame, vignette or cast shadow implying an obstacle. Texture must reach all four edges. Grid seams, parity modulation, neighbour masks and rule overlays are assembled by the exporter, not painted as an atlas here. Do not create decorative cracks that resemble an interactive exit. Do not claim a seamless result without a separate tiled preview check. One master only.

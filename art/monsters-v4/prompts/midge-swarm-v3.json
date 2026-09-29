@@ -1,0 +1,111 @@
+{
+  "asset_id": "midge-swarm-v3",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "status": "generated-static-reviewed-with-runtime-supplement",
+  "prompt": "Use case: precise-object-edit\nAsset type: corrected transparent PNG midge-swarm tabletop miniature.\nPrimary request: fix ONLY the insect at the RIGHT-MIDDLE of Image 1, near the 3 o'clock side of the base. Keep every other pixel region as close as possible. Image 1 is the edit target. Image 2 is an earlier version, supporting reference only for that right-middle insect's narrow segmented ABDOMEN.\nThe right-middle insect in Image 1 currently has three leaf-like wings and no clearly readable abdomen. Remove ONLY its extra wing projecting toward LOWER-RIGHT. Restore a slender dark grey-brown segmented abdomen extending diagonally down-right from its round thorax, tapering to a small natural tip, as that same insect's body did in Image 2. Keep its TWO upper wings, one sweeping upper-left and one sweeping upper-right, as the SINGLE ATTACHED WING PAIR. End state for this one insect: one head with two antennae, one round thorax, one long narrow segmented abdomen, six legs, and exactly TWO wings, never three. Both wings attach to the thorax, not to the face or abdomen.\nDo not modify the six other midges: each already has its intended pair of wings. Do not add or remove insects. Preserve all seven positions, the loose open-centre grouping, their slender non-striped dark bodies, smoke-silver wings, and the entire dark grey-brown round base with thin neutral bronze-grey bevel. Preserve the high downward three-quarter camera, matte hand-painted sculpted style, soft upper-left light and internal contact shadows.\nAll insect parts stay inside the base. Preserve real native alpha outside the base; no background or outside shadow. Square image, target 1024x1024 if supported. No text, guide, arrow, circle, UI, faction colour, rank, glow, scenery or watermark.\nThis is a single local anatomy repair on the right-middle insect, not a redesign of the swarm.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v2.png",
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v1.png"
+  ],
+  "reference_roles": [
+    "Edit target; repair only right-middle insect's third wing and missing readable abdomen.",
+    "Supporting anatomy reference; right-middle insect original narrow segmented abdomen, not its incomplete wings."
+  ],
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "saved_output_path": "art/monsters-v4/masters/midge-swarm-v3.png",
+  "generated_at_utc": "2026-09-27T00:58:52.952531+00:00",
+  "batch_group": "B",
+  "supersedes": "midge-swarm-v2",
+  "repair_reason": "Repair round 2: right-middle insect gained a third wing replacing its readable abdomen; remove that extra wing and restore one narrow body.",
+  "parent_authorization": "Parent allowed routine in-identity anatomy/alpha fixes; report tradeoffs if two consecutive repair rounds still fail.",
+  "original_output_path": "~/.codex/generated_images/01a0e03a-d37e-7f70-a65b-cc566c7bb09b/exec-cf9bf26a-b5d8-41f0-b7ae-298947d6e1a8.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Original built-in image_gen output copied byte-for-byte. No creature pixel editing, recolouring, matting, alpha replacement or re-encoding.",
+  "sha256": "d3e916b8c05322a6b203e0109ee29ef5f36a452f60182319af9ce35e390890e9",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      143,
+      141,
+      1111,
+      1223
+    ],
+    "visible_alpha_bbox": [
+      146,
+      144,
+      1108,
+      1112
+    ],
+    "transparent_pixels": 835695,
+    "partial_alpha_pixels": 736054,
+    "opaque_pixels": 767,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "selection": "static-approved-runtime-integration-candidate",
+  "reference_sha256": {
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v2.png": "cee466d4078cba56ae6f9802024ff92a8c5123e542ee8927e62e1866e7db30e8",
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v1.png": "f9be4138ccf7cc2553ff571fbf05c3cf38730830d60eb06a414bb0333831e1ed"
+  },
+  "review": {
+    "observations": [
+      "Seven complete slender midges remain in the open-centre dispersed arrangement. Each now has two visibly attached wing planes.",
+      "Right-middle insect has one clearly restored segmented abdomen; the third lower-right wing is gone.",
+      "Small dark bodies, long legs, many narrow silver wing planes and seven-insect density distinguish the existing three plump striped bees without relying on colour.",
+      "All wings, antennae and legs stay inside the disc; no external scene or tactical UI is painted."
+    ],
+    "selection_reason": "Select v3 after two targeted anatomy repair rounds; preserve v1 and v2 as rejected provenance.",
+    "remaining_limits": [
+      "Screenshots inspected are frozen-AI static family scenes, not continuous combat or blind player testing.",
+      "Complex particles, grayscale runtime, exact identity behaviour and worm multiplication require parent test evidence.",
+      "Native master remains the unchanged 1254 square output.",
+      "48px family readability relies mainly on scattered wing planes and open spacing; fine legs, wing count and dark body details are weak."
+    ]
+  },
+  "static_review": {
+    "reviewed_at_utc": "2026-09-27T01:11:49.347694+00:00",
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "backgrounds": [
+      "flat muted grass green",
+      "flat dark water blue",
+      "neutral CSS grayscale display"
+    ],
+    "method": "Parent mechanically exported native-alpha masters with the existing C tool. Existing CJS Chromium capture displayed native sprite dimensions at device scale 1. Both screenshots viewed at original resolution. No creature pixels changed.",
+    "preview_paths": [
+      "art/monsters-v4/review/second-four-grass.png",
+      "art/monsters-v4/review/second-four-water.png"
+    ],
+    "preview_sha256": {
+      "second-four-grass.png": "b52dc7b6b458d0d043c382ca77ae538dd1e9050bf10ac457879113c23b9e9a98",
+      "second-four-water.png": "8d17fd5f6c797dc7df0f05af2889429c90555c344b3bec79b042593939455e91"
+    },
+    "observation": "Seven-insect open sparse pattern and scattered paired wing planes distinguish the dense bee and hornet groups in 64px grayscale; fine legs and body detail weaken at 48px.",
+    "runtime_screenshot": false
+  },
+  "inspected_runtime_supplement": [
+    "evidence/runtime-v052/screenshots/swarms-1920-64.png",
+    "evidence/runtime-v052/screenshots/swarms-1920-48.png"
+  ]
+}

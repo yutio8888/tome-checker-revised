@@ -1,0 +1,246 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-j-1",
+  "assets": [
+    {
+      "asset_id": "shardskin",
+      "native_name": "Shardskin",
+      "scope": "old-forest guaranteed guardian in the CRYSTALINE layout (giant/crystal, explicit image=)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "sha256": "6d7918b8d3808f8fc74739a990d3b0b6dbc4906668439672f2f783a86baf0121",
+          "line": 43,
+          "anchor": "define_as = \"SHARDSKIN\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "sha256": "6d7918b8d3808f8fc74739a990d3b0b6dbc4906668439672f2f783a86baf0121",
+          "line": 48,
+          "anchor": "image = \"npc/immovable_crystal_golden_crystal.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/immovable_crystal_golden_crystal.png",
+          "sha256": "cc664dda8b82717fa1e3aec083d38982d11576402ea9b7883f199cf4b18c36b2",
+          "role": "identity",
+          "note": "Native shape: one angular mass of golden-yellow faceted crystal shards with a bright glow. The lore says the remains of a huge tree can be seen through the surface."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/white-crystal.png",
+          "sha256": "b96516975f001c057e058e0e8c875022ba92670b302ec6c3f49d6cedeb00510e",
+          "role": "family",
+          "note": "Shipped white crystal (tall pale bouquet of shards): show the crystal finish only; Shardskin is a broad golden mass with a trapped tree, not a slim white bouquet."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A broad, heavy mass of golden-amber faceted crystal shards heaped like a jagged low pyramid: many angular translucent honey-gold facets with pale-yellow highlight planes, and inside the glassy core the petrified remains of a huge gnarled tree are visible -- a thick warm-brown trunk stump with a few twisted root and branch stubs showing through the crystal, with a small malevolent violet glow deep in the core. Two or three larger shards jut up at the back and sides. No face, no limbs.",
+        "contrast": "Crystal tokens: white crystal (tall pale bouquet), red crystal (long blade fan), crimson crystal (two chunky prisms), Spellblaze Crystal (round purple spiky cluster), Spellblaze Simulacrum (person-shaped violet crystal). Shardskin is the only golden-amber crystal, a broad low pyramid mass with a visible brown tree trunk trapped inside (silhouette: wide jagged heap with a trunk in the core; hue: honey gold with brown wood and a violet core glow; value: light gold facets).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Honey-gold and warm amber crystal facets at mid-light value with pale butter-yellow highlight planes, a warm-brown wood trunk inside, a small violet glow in the core; nothing darker than mid tone. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Shardskin, define_as=SHARDSKIN, type=giant/subtype=crystal, unique=True); details and hashes in evidence/monster-batch-j-20260929/source-contracts.json. explicit image= npc/immovable_crystal_golden_crystal.png, standalone entity, no base, no nice_tile/add_mos/shader/anim/moddable_tile/tint; 64x64 single-cell native sprite. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-j-20260929/source-contracts.json",
+          "sha256": "f3b0d7b9e65b2c18c6416b37aae96e1dee28c95e6f4f57ed619039699ef6e83b"
+        }
+      ]
+    },
+    {
+      "asset_id": "the-withering-thing",
+      "native_name": "The Withering Thing",
+      "scope": "heart-gloom guaranteed guardian in the non-purified layout (animal/canine unique, default-name image, purple tint)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+          "line": 59,
+          "anchor": "define_as = \"WITHERING_THING\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+          "line": 61,
+          "anchor": "name = \"The Withering Thing\", tint=colors.PURPLE"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/animal_canine_the_withering_thing.png",
+          "sha256": "ec0d9ca2f827c25c62e8a6e1bb48139879207ede857720b7dc04c778bb9aacfe",
+          "role": "identity",
+          "note": "Native shape: a gaunt, mangy, deformed wolf-like beast with a patchy grey-mauve hide and wormy growths, purple-tinted."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/warg.png",
+          "sha256": "3891d495c890686880c3f7d119a21dae0af87819dd62356d167375d9a26c1230",
+          "role": "family",
+          "note": "Shipped warg (dark broad wolf): the Withering Thing must NOT be a healthy wolf; it is emaciated and covered in worms."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A gaunt, deformed, hunched wolf-like beast seen from a steep overhead angle: patchy mangy grey-mauve hide stretched over a visible ribcage and spine, mismatched over-long forelegs, an oversized lopsided head with a gaping jaw and glowing violet eyes, and a mass of pale pink-cream worms writhing out of its back, flanks and mouth. A dull amber amulet hangs at its chest. Pale bone-coloured patches show through the rotten fur.",
+        "contrast": "Canine tokens: wolf (grey healthy wolf), great wolf (dark heavy), dire wolf (brown), white wolf (pure white), warg (black broad), fox (orange). The Withering Thing is the only diseased, emaciated canine: visible ribs, writhing pale worms and a lopsided head (silhouette: spiky ribs and worm tendrils, hunched), purple-mauve hide with cream worms (hue), mid value.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid-light grey-mauve and dusty violet mangy hide with pale bone patches, cream-pink worms as the brightest planes, glowing violet eyes, dull amber amulet; nothing darker than mid tone. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=The Withering Thing, define_as=WITHERING_THING, type=animal/subtype=canine, unique=True); details and hashes in evidence/monster-batch-j-20260929/source-contracts.json. base BASE_NPC_CANINE (animal/canine, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile on leaf or base; NPC.lua:33 default-image formula gives animal_canine_the_withering_thing.png; Actor tint (native colour modulation) does not change identity or display structure. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-j-20260929/source-contracts.json",
+          "sha256": "f3b0d7b9e65b2c18c6416b37aae96e1dee28c95e6f4f57ed619039699ef6e83b"
+        }
+      ]
+    },
+    {
+      "asset_id": "the-dreaming-one",
+      "native_name": "The Dreaming One",
+      "scope": "heart-gloom guaranteed guardian in the purified layout (horror/eldritch unique, explicit image=, purple tint, never_move)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+          "line": 104,
+          "anchor": "define_as = \"DREAMING_ONE\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+          "line": 109,
+          "anchor": "image = \"npc/seed_of_dreams.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/seed_of_dreams.png",
+          "sha256": "014b076209ad12e45f2cbb7b867404e708bf2fbcbd42b3a36c1efa90d6992303",
+          "role": "identity",
+          "note": "Native shape: a large glossy pale-cyan glass sphere with a pearly lilac-pink swirl core, resting with a soft shadow."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/spellblaze-crystal.png",
+          "sha256": "edf1531bb8ecb360c21fedfefe951b1e50735b6929c0334931d99a88c13d7c89",
+          "role": "family",
+          "note": "Shipped Spellblaze Crystal (round purple spiky cluster): the Dreaming One is a smooth sphere, no spikes."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A single large smooth glossy glass-like sphere resting on the disc, about two thirds of the disc width: pale luminous cyan-aqua glass with a bright white specular highlight at the upper left, and inside it a soft pearly swirl of lilac, pink and white forming a slowly turning eye-like vortex with a dark violet pupil at its centre. A few tiny pale dream-motes drift inside the glass. No face, no limbs, no spikes, no tendrils.",
+        "contrast": "Orb-like or eldritch tokens: Spellblaze Crystal (spiky purple cluster), the abomination (pink flesh spire), the mouth (red maw mass), horned horror. The Dreaming One is the only perfectly smooth sphere: bright pale cyan-aqua glass with a lilac-pink vortex eye (silhouette: clean circle; hue: cyan glass with lilac core; value: light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Light luminous aqua-cyan glass at mid-light value with a pearly lilac-pink and white swirl, a dark violet pupil, bright white specular gloss; the sphere must never be dark. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=The Dreaming One, define_as=DREAMING_ONE, type=horror/subtype=eldritch, unique=True); details and hashes in evidence/monster-batch-j-20260929/source-contracts.json. explicit image= npc/seed_of_dreams.png (a file without a type_subtype prefix), standalone entity, no base, no nice_tile/add_mos/shader/anim/moddable_tile; tint only. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-j-20260929/source-contracts.json",
+          "sha256": "f3b0d7b9e65b2c18c6416b37aae96e1dee28c95e6f4f57ed619039699ef6e83b"
+        }
+      ]
+    },
+    {
+      "asset_id": "weaver-queen",
+      "native_name": "Weaver Queen",
+      "scope": "unhallowed-morass guaranteed guardian (spiderkin/spider unique, nice_tile native-tall)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/unhallowed-morass/npcs.lua",
+          "sha256": "10dac055e54c6f7a92c43c8a278caca4b7d51d0c4b002a165ad5a714bf4fec52",
+          "line": 119,
+          "anchor": "define_as = \"WEAVER_QUEEN\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/unhallowed-morass/npcs.lua",
+          "sha256": "10dac055e54c6f7a92c43c8a278caca4b7d51d0c4b002a165ad5a714bf4fec52",
+          "line": 121,
+          "anchor": "image=\"npc/spiderkin_spider_weaver_queen.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_weaver_queen.png",
+          "sha256": "ff3544de3ce2a17d4946392a430c91519deeb2c061dd6ccf6b59841f5ab49453",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a huge pale frosted-blue furry spider with a cluster of glowing eyes, long jointed blue-grey legs, and flecks of light drifting around it."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/ungole.png",
+          "sha256": "68c78ccd8392b026a7e37f20f1ea0205ebb643fac53d5d2435d1e38e7b2a3489",
+          "role": "family",
+          "note": "Shipped Ungole (black spider with red markings): the Weaver Queen must be a pale, furry, blue-white spider, clearly lighter than Ungole."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A very large pale spider seen from a steep overhead three-quarter angle: a thick fuzzy frost-white abdomen with soft blue-grey fur tufts and small glowing cyan clock-like dots along its back, a rounded furry head with a cluster of large glowing cyan-white eyes, and eight long jointed legs in pale blue-grey with light joints spread symmetrically across the disc. Female queen, imposing and regal, no web scenery.",
+        "contrast": "Spider tokens: Ungole (black spider, red markings), the spinner-type spiders are not yet covered. The Weaver Queen is the pale one: fuzzy frost-white body with cyan eyes and blue-grey legs (value: light body against a charcoal disc; hue: icy white-blue; silhouette: round furry abdomen with a wide eight-leg spread). Never black, never a red-marked spider.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Frost-white and pale blue-grey fur at mid-light to light value, cool cyan glowing eyes and small cyan dots, blue-grey jointed legs with pale joints; nothing darker than mid tone. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Weaver Queen, define_as=WEAVER_QUEEN, type=spiderkin/subtype=spider, unique=True); details and hashes in evidence/monster-batch-j-20260929/source-contracts.json. resolvers.nice_tile{image=\"invis.png\", add_mos={{image=<png>, display_h=2, display_y=-1}}} names the PNG explicitly (no =BASE=TILE= indirection, so the resolve-order issue that keeps {tall=1} shorthand native does not apply); nativeTallImage matches the exact one-body add_mos, unique entry, native-tall path; base BASE_NPC_SPIDER has no image=/shader; native sprite is 64x128. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-j-20260929/source-contracts.json",
+          "sha256": "f3b0d7b9e65b2c18c6416b37aae96e1dee28c95e6f4f57ed619039699ef6e83b"
+        }
+      ]
+    }
+  ]
+}

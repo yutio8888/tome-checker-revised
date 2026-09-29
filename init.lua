@@ -1,0 +1,13 @@
+long_name = 'Forest & Water Board Revision'
+short_name = 'checker-revised'
+for_module = 'tome'
+version = {1,7,6}
+addon_version = {0,6,29}
+weight = 9999
+author = {'Internal visual prototype'}
+description = [[Board-style tokens for verified creature identities, configurable faction and rank colors, radial health and shields. Optional board terrain for Trollmire, Old Forest and Slazish Fens, including Trollmire's flooded layout and Old Forest's crystaline layout, and both Kor'Pul layouts. Independent of HUD style. Internal prototype; offline demonstration tools are packaged separately.]]
+tags = {'ui','tiles'}
+hooks = true
+superload = true
+overload = true
+data = true

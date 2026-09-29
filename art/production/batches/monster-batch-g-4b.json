@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-g-4b",
+  "assets": [
+    {
+      "asset_id": "spellblaze-crystal",
+      "native_name": "Spellblaze Crystal",
+      "scope": "scintillating-caves guardian boss (no rarity field, scripted placement) -- FRESH REGENERATION: call 1 art excellent, base_drift-only -10.45 (disc rendered too dark); retry with no-darkening disc wording",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/scintillating-caves/npcs.lua",
+          "sha256": "ca974c3c694abd74225a9bf0434a1f8d89892b7a2558bdada32dbefdb000b873",
+          "line": 33,
+          "anchor": "name = \"Spellblaze Crystal\", tint=colors.PURPLE, image = \"npc/spellblaze_crystal.png\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spellblaze_crystal.png",
+          "sha256": "af53c90c3f0ec3bd954f879c017452205e93c7d71040439fc9162189cf9907e5",
+          "role": "identity",
+          "note": "Native species shape: jagged radiating violet-purple crystal cluster, sea-urchin silhouette, inner glow."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A jagged cluster of translucent violet-purple crystal shards radiating outward from a dense central core, like a spiky sea-urchin formed of glass, with an inner glow of magical light pulsing through the largest shards.",
+        "contrast": "First immovable/crystal catalog identity, no family collision. Reads immediately as an inorganic radiating crystal cluster rather than any humanoid or animal silhouette already in the catalog -- silhouette (radiating spiky cluster, no limbs, no base body) and hue (saturated violet-purple with an inner magical glow, distinct from any other catalog entry's palette) are the anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Translucent violet-to-deep-purple crystal shards with a pale lavender-white inner glow radiating from the densest core shards, subtle magenta highlight along the sharpest edges; dry neutral charcoal disc with restrained copper-grey bevel, no glow or light spill allowed onto the disc itself -- the magical light stays contained inside the crystal shards."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name=Spellblaze Crystal/type=immovable inherited from BASE_NPC_CRYSTAL/subtype=crystal/define_as=SPELLBLAZE_CRYSTAL/unique=true) and explicit single image=\"npc/spellblaze_crystal.png\" (no nice_tile/add_mos on this entity) re-verified directly against game/modules/tome source (CONTRACTS-B5-B7-20260929.md 3, READY -- single, most convenient). Resolves via the generic actor.image==entry.image \"single\" appearance path. Fresh regeneration handoff: call 1 art excellent, base_drift-only -10.45 (disc rendered too dark); retry with no-darkening disc wording",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-g-4/spellblaze-crystal/imagegen-calls/call-1/call.json",
+          "sha256": "8828d23d9c0363e76d69c6b54821af6f1136d0834a140ca9aae162ecb976da3a"
+        }
+      ]
+    }
+  ]
+}

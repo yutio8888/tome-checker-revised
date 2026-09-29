@@ -1,0 +1,21 @@
+{
+  "asset_id": "hardwall-top-v1",
+  "mode": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. ONE continuous HARD WALL TOP material for deterministic modular dungeon assembly. Square full-bleed opaque PNG straight overhead. Match reference hardwall cool slate-granite medium-grey dense stone and matte painted miniature finish. Two or three enormous tightly fitting angular slabs, far fewer and thinner seams than ordinary seven-block ashlar. Broad calm grey upper planes, subtle short fracture marks and restrained pale drybrush grain. Absolutely NO outer boundary, bevel, dark sidewall, margin, frame, isolated object or shadow; this is only the horizontal continuous top surface covering every pixel to all four edges. Opposite edges visually repeat; no raised silhouette. Preserve fixed soft upper-left light on material grain, muted cool grey clearly darker than warm ordinary limestone, not black. No holes, paths, door, floor props, moss, rubble, symbols, writing, runes, icon or grid. One painted source material, not a variants sheet.",
+  "references": [
+    "masters/hardwall-v1.png"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-a048c35c-748b-4b37-b240-4074997bc58e.png",
+  "selection": "selected-production-component",
+  "processing": "Original preserved byte-for-byte; deterministic terrain compositing may crop/sample painted components without rotation.",
+  "rejection_reason": null,
+  "sha256": "e07628c2de8cd67941ddd137e884629109bea8f5d5162cba3bac59968d404e20",
+  "byte_identical": true,
+  "metrics": {
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB"
+  }
+}

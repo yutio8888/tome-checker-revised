@@ -1,0 +1,78 @@
+{
+  "asset_id": "prox-v2",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "status": "generated-reviewed-candidate",
+  "prompt": "Use case: precise-object-edit. Edit this exact Prox tabletop miniature with ONE localized correction: move the left-side holding arm/hand and its greatmaul INWARD, so the entire large block-shaped hammer head lies inside the round base, with a narrow clear strip of base between the hammer and circle edge. Place the head over the upper-left part of the troll's chest/shoulder area, nearer the face, and angle the haft diagonally down toward the belly center. Change only the weapon placement and the hand/forearm needed to grip it naturally. Preserve the big blunt maul identity and most of its size; never turn it into a tiny hammer. Keep Prox's broad belly, face, full body size, feet, color, chest strap and pose otherwise unchanged. DO NOT shrink the whole creature or enlarge the base. Preserve the same base size, position, thin neutral rim, steep overhead camera, carved hand-painted style, upper-left light and genuine transparent alpha outside the disc. No added objects, red/blue rings, symbols, text, aura or external shadow. The visible silhouette of maul AND body must remain within the circle.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v1.png"
+  ],
+  "reference_roles": [
+    "edit target; adjust weapon and necessary hand pose only, preserve full figure scale and base"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0dd21-b1f1-7472-b28c-5b68d8636421/exec-1fa5d4ce-dd05-43c4-8a46-2ba2b350a854.png",
+  "saved_output_path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+  "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+  "preserved_native_alpha": true,
+  "image_processing": "Copied generated PNG without pixel edits or alpha changes.",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_alpha_bbox": [
+      90,
+      77,
+      1162,
+      1170
+    ],
+    "transparent_pixels": 644206,
+    "partial_alpha_pixels": 927869,
+    "alpha_bbox": [
+      0,
+      19,
+      1169,
+      1200
+    ],
+    "dominant_alpha_values": [
+      [
+        253,
+        770694
+      ],
+      [
+        0,
+        644206
+      ],
+      [
+        252,
+        130416
+      ],
+      [
+        251,
+        5716
+      ],
+      [
+        1,
+        3677
+      ]
+    ]
+  },
+  "review": "Localized correction succeeded: holding arm folds inward and large block maul now sits over left chest within disc. Full body scale, large round belly, neutral base and style preserved. Right hand/foot close to rim but no obvious crossing. Recommend v2 for small-scale audit.",
+  "reviewed_at_utc": "2026-09-26T10:18:42.291616+00:00",
+  "tool_result_keys": [
+    "image_url",
+    "output_hint"
+  ],
+  "selection": "recommended for parent small-scale audit",
+  "parent_asset_id": "prox-v1",
+  "identity_sources": [
+    "game/modules/tome/data/zones/trollmire/npcs.lua:46-75"
+  ]
+}

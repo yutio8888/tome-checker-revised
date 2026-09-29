@@ -1,0 +1,276 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-p-3",
+  "assets": [
+    {
+      "asset_id": "ogre-guard",
+      "native_name": "ogre guard",
+      "scope": "ogre.lua (giant/ogre, non-unique, no define_as, resolvers.nice_tile{tall=1}); crypt-kryl-feijan (ogre[fn] loader) and Arena; rarity 2, rank 2, greatmaul; the Elvala town ogre guards are other names",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ogre.lua",
+          "sha256": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+          "line": 46,
+          "anchor": "name = \"ogre guard\", color=colors.LIGHT_GREY"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ogre.lua",
+          "sha256": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+          "line": 48,
+          "anchor": "resolvers.nice_tile{tall=1}"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ogre_ogre_guard.png",
+          "sha256": "72e897d0b5bc864263286e9839860c135ceaecae3f84a1ab10052d853fbf8694",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a broad tan-skinned bare-chested ogre with dark tied hair, steel shoulder guards, blue trousers, gold-trimmed gauntlets and a big two-handed maul held up."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/cave-troll.png",
+          "sha256": "77d9b1435e549729989353fd90e2a8fa3ed56fd2a48822299363ab229408bfe5",
+          "role": "family",
+          "note": "Shipped cave troll (pale tan crouching troll with a spear) and stone troll: ogres here are human-shaped muscular brutes, not warty trolls, and each of the four ogres has its own clear colour and pose."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An ogre guard seen from a steep overhead three-quarter angle: a huge hunched muscular human-shaped ogre with warm tan skin, a heavy jaw with a small lower tusk, dark hair tied back, a bare broad chest with a steel shoulder plate on one shoulder, bright blue cloth trousers with a rope belt, heavy brown boots, gold-trimmed steel gauntlets, and a big two-handed steel-headed maul held diagonally across the body in both hands. Sturdy, disciplined and complete.",
+        "contrast": "Four ogres share this body: the GUARD is the TAN-skinned soldier in BLUE trousers and a steel shoulder plate carrying a big maul diagonally (silhouette: diagonal maul, one plated shoulder; hue: warm tan skin with bright blue trousers and steel; value: mid-light). The mauler is red-skinned and maul-less, the rune-spinner is orange with glowing runes and fire, the pounder is a blue-skinned unarmed grappler with arms spread.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. This is a huge giant, but on the tabletop disc it is drawn COMPACT: hunched forward with rolled shoulders, bent knees and elbows kept in close, the weapon held short and close to the body, so the whole figure is a broad chunky mass that fills the inner three quarters of the disc yet never reaches the outer sixth ring band. Do not draw a tall standing figure that would run off the disc; the feet and the head both stay well inside the disc.",
+        "palette": "Warm tan skin with lighter peach highlight planes, bright blue trousers, brown boots and belt, steel and gold-trimmed gauntlets; nothing darker than dark brown except the boots and seams; the disc stays neutral charcoal. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ogre guard, define_as=None, type=giant/subtype=ogre, unique=False); details and hashes in evidence/monster-batch-p-20260929/source-contracts.json. base BASE_NPC_OGRE (giant/ogre, no image=); resolvers.racial() only adds levelup talents Ogre Wrath, Grisly Constitution, Scar-Scripted Flesh, Writ Large (races.lua, passives/one activated buff, no display write); resolvers.sustains_at_birth() present: the sustained talents are listed per leaf; leaf talents Sunder Armour, Weapon Combat, Weapons Mastery (activated/passive); no sustained talent besides none, so nothing is activated at birth; resolvers.nice_tile{tall=1} shorthand (resolvers.lua nice_tile: invis.png + add_mos{image=e.image (the NPC.lua:33 default-name PNG), display_h=2, display_y=-1}), the same expansion live-confirmed for xhaiak/shiaak/naga nereid/Kyless (evidence/monster-live-f-20260929, monster-batch-l-live-20260929, monster-batch-j-live-20260929); native sprite 64x128. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-p-20260929/source-contracts.json",
+          "sha256": "3eb4cdb07da21fc9292934f54d928caa0b1dbe86aeff6b6877e103ba4cf2f182"
+        }
+      ]
+    },
+    {
+      "asset_id": "ogre-mauler",
+      "native_name": "ogre mauler",
+      "scope": "ogre.lua (giant/ogre, non-unique, no define_as, resolvers.nice_tile{tall=1}); crypt-kryl-feijan (ogre[fn] loader) and Arena; rarity 2, rank 2, greatmaul; Warshout Berserker",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ogre.lua",
+          "sha256": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+          "line": 87,
+          "anchor": "name = \"ogre mauler\", color=colors.LIGHT_UMBER"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ogre.lua",
+          "sha256": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+          "line": 89,
+          "anchor": "resolvers.nice_tile{tall=1}"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ogre_ogre_mauler.png",
+          "sha256": "c99cd9d4fd476e22cfa115b27ed039e7e17787ce30628d35db9b568a8d975851",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a crouching red-brown muscular ogre with clenched fists, a gold-gauntleted hand raised, wild hair."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/cave-troll.png",
+          "sha256": "77d9b1435e549729989353fd90e2a8fa3ed56fd2a48822299363ab229408bfe5",
+          "role": "family",
+          "note": "Shipped cave troll (pale tan crouching troll with a spear) and stone troll: ogres here are human-shaped muscular brutes, not warty trolls, and each of the four ogres has its own clear colour and pose."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An ogre mauler seen from a steep overhead three-quarter angle: a huge hunched furious muscular human-shaped ogre with brick-red skin and lighter orange highlights, a snarling open mouth with two lower tusks, wild dark red hair, bare chest and back covered in old scars, a ragged brown loincloth, one massive clenched fist thrust forward wearing a gold-plated gauntlet and the other arm hanging low with the fist clenched, no weapon. Enraged, brutal and complete.",
+        "contrast": "Four ogres share this body: the MAULER is the BRICK-RED enraged brute with one GOLD-GAUNTLET FIST thrust forward and no weapon (silhouette: crouched wide with one big fist forward; hue: brick red with gold; value: mid). The guard is tan with blue trousers and a maul, the rune-spinner is orange with runes and fire, the pounder is a blue grappler with arms spread wide.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. This is a huge giant, but on the tabletop disc it is drawn COMPACT: hunched forward with rolled shoulders, bent knees and elbows kept in close, the weapon held short and close to the body, so the whole figure is a broad chunky mass that fills the inner three quarters of the disc yet never reaches the outer sixth ring band. Do not draw a tall standing figure that would run off the disc; the feet and the head both stay well inside the disc.",
+        "palette": "Brick-red skin with lighter orange highlight planes, dark red hair, gold gauntlet, brown loincloth; nothing darker than dark red-brown except the mouth and seams; the disc stays neutral charcoal with no red cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ogre mauler, define_as=None, type=giant/subtype=ogre, unique=False); details and hashes in evidence/monster-batch-p-20260929/source-contracts.json. base BASE_NPC_OGRE (giant/ogre, no image=); resolvers.racial() only adds levelup talents Ogre Wrath, Grisly Constitution, Scar-Scripted Flesh, Writ Large (races.lua, passives/one activated buff, no display write); resolvers.sustains_at_birth() present: the sustained talents are listed per leaf; leaf talents Warshout Berserker, Weapon Combat, Weapons Mastery (activated/passive); no sustained talent, so nothing is activated at birth; resolvers.nice_tile{tall=1} shorthand (resolvers.lua nice_tile: invis.png + add_mos{image=e.image (the NPC.lua:33 default-name PNG), display_h=2, display_y=-1}), the same expansion live-confirmed for xhaiak/shiaak/naga nereid/Kyless (evidence/monster-live-f-20260929, monster-batch-l-live-20260929, monster-batch-j-live-20260929); native sprite 64x128. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-p-20260929/source-contracts.json",
+          "sha256": "3eb4cdb07da21fc9292934f54d928caa0b1dbe86aeff6b6877e103ba4cf2f182"
+        }
+      ]
+    },
+    {
+      "asset_id": "ogre-rune-spinner",
+      "native_name": "ogre rune-spinner",
+      "scope": "ogre.lua (giant/ogre, non-unique, no define_as, resolvers.nice_tile{tall=1}); crypt-kryl-feijan (ogre[fn] loader) and Arena; rarity 2, rank 3, female, staff; the Elvala town leaf of the SAME name (zones/town-elvala/npcs.lua:106, base BASE_NPC_ELVALA_OGRE_TOWN, also {tall=1}, no define_as) resolves to the same name/type/subtype/PNG/tall body and matches this entry (open decision reported)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ogre.lua",
+          "sha256": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+          "line": 125,
+          "anchor": "name = \"ogre rune-spinner\", color=colors.LIGHT_RED"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ogre.lua",
+          "sha256": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+          "line": 128,
+          "anchor": "resolvers.nice_tile{tall=1}"
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-elvala/npcs.lua",
+          "sha256": "4a40fbff2ee1840bb82f7a6c91e55b32b6161baa9a661c381ae454153ada4120",
+          "line": 106,
+          "anchor": "name = \"ogre rune-spinner\", color=colors.LIGHT_UMBER"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ogre_ogre_rune_spinner.png",
+          "sha256": "5a48f7a51594c089e4e776abbd2a5a5f794971b86dadac7acfa9b688786c4647",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a tall female ogre with orange-red skin covered in glowing runes, raising both hands with a swirl of orange flame above her head."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/cave-troll.png",
+          "sha256": "77d9b1435e549729989353fd90e2a8fa3ed56fd2a48822299363ab229408bfe5",
+          "role": "family",
+          "note": "Shipped cave troll (pale tan crouching troll with a spear) and stone troll: ogres here are human-shaped muscular brutes, not warty trolls, and each of the four ogres has its own clear colour and pose."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An ogre rune-spinner seen from a steep overhead three-quarter angle: a huge hunched female ogre with warm orange-red skin covered in glowing gold arcane runes and spiral marks, long swept-back dark hair, a strong jaw with small tusks, a short bright cloth wrap and sash, one hand gripping a short thick runed wooden staff and the other hand raised with a small compact swirl of bright orange fire and a curl of yellow-white lightning above the palm. Arcane, glowing and complete.",
+        "contrast": "Four ogres share this body: the RUNE-SPINNER is the ORANGE female covered in GLOWING GOLD RUNES with a small fire swirl above one raised hand (silhouette: one arm up with a flame curl, a short staff; hue: orange with gold runes and yellow-white fire; value: mid-light). The mauler is brick-red with a gold fist, the guard tan with blue trousers, the pounder blue.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. This is a huge giant, but on the tabletop disc it is drawn COMPACT: hunched forward with rolled shoulders, bent knees and elbows kept in close, the weapon held short and close to the body, so the whole figure is a broad chunky mass that fills the inner three quarters of the disc yet never reaches the outer sixth ring band. Do not draw a tall standing figure that would run off the disc; the feet and the head both stay well inside the disc.",
+        "palette": "Warm orange-red skin with gold runes and lighter highlight planes, dark hair, bright orange fire and yellow-white spark, pale cloth wrap; nothing darker than dark brown except hair and seams; the fire and runes must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ogre rune-spinner, define_as=None, type=giant/subtype=ogre, unique=False); details and hashes in evidence/monster-batch-p-20260929/source-contracts.json. base BASE_NPC_OGRE (giant/ogre, no image=); resolvers.racial() only adds levelup talents Ogre Wrath, Grisly Constitution, Scar-Scripted Flesh, Writ Large (races.lua, passives/one activated buff, no display write); resolvers.sustains_at_birth() present: the sustained talents are listed per leaf; leaf talents Staff Mastery (passive), Lightning, Flame, Earthen Missiles, Barrier (all activated; Barrier is celestial/light.lua, a shield, not a sustain); no sustained talent, so nothing is activated at birth; resolvers.nice_tile{tall=1} shorthand (resolvers.lua nice_tile: invis.png + add_mos{image=e.image (the NPC.lua:33 default-name PNG), display_h=2, display_y=-1}), the same expansion live-confirmed for xhaiak/shiaak/naga nereid/Kyless (evidence/monster-live-f-20260929, monster-batch-l-live-20260929, monster-batch-j-live-20260929); native sprite 64x128. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-p-20260929/source-contracts.json",
+          "sha256": "3eb4cdb07da21fc9292934f54d928caa0b1dbe86aeff6b6877e103ba4cf2f182"
+        }
+      ]
+    },
+    {
+      "asset_id": "ogre-pounder",
+      "native_name": "ogre pounder",
+      "scope": "ogre.lua (giant/ogre, non-unique, no define_as, resolvers.nice_tile{tall=1}); crypt-kryl-feijan (ogre[fn] loader) and Arena; rarity 3, rank 3, unarmed (Double Strike, Uppercut, Clinch, Maim)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ogre.lua",
+          "sha256": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+          "line": 104,
+          "anchor": "name = \"ogre pounder\", color=colors.DARK_UMBER"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ogre.lua",
+          "sha256": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+          "line": 106,
+          "anchor": "resolvers.nice_tile{tall=1}"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ogre_ogre_pounder.png",
+          "sha256": "9050f91fd3d4df0261efef9b0e159d300f2821b60e0d911f3a0276f66ac6e913",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a crouched blue-skinned muscular ogre with both arms spread wide, black shorts, grimacing."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/cave-troll.png",
+          "sha256": "77d9b1435e549729989353fd90e2a8fa3ed56fd2a48822299363ab229408bfe5",
+          "role": "family",
+          "note": "Shipped cave troll (pale tan crouching troll with a spear) and stone troll: ogres here are human-shaped muscular brutes, not warty trolls, and each of the four ogres has its own clear colour and pose."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An ogre pounder seen from a steep overhead three-quarter angle: a huge crouched muscular human-shaped ogre with smooth bright cornflower-blue skin and lighter periwinkle highlights, a grimacing wide mouth with two lower tusks, a shaved head, both massive arms spread WIDE open with big hands ready to crush in a hug, fingerless dark leather grappling gauntlets, black shorts with a rope belt, wide-planted bent legs, no weapon. Grappling, powerful and complete.",
+        "contrast": "Four ogres share this body: the POUNDER is the BLUE-skinned bald grappler crouched with BOTH ARMS SPREAD WIDE (silhouette: wide open arms, low crouch; hue: bright cornflower blue with black shorts; value: mid). The guard is tan with a maul, the mauler brick-red with one gold fist, the rune-spinner orange with fire. The shipped mountain troll thunderer is a warty teal troll with lightning; the pounder is smooth-skinned with no lightning.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. This is a huge giant, but on the tabletop disc it is drawn COMPACT: hunched forward with rolled shoulders, bent knees and elbows kept in close, the weapon held short and close to the body, so the whole figure is a broad chunky mass that fills the inner three quarters of the disc yet never reaches the outer sixth ring band. Do not draw a tall standing figure that would run off the disc; the feet and the head both stay well inside the disc.",
+        "palette": "Bright cornflower-blue skin with lighter periwinkle highlight planes, black shorts, dark brown leather gauntlets, pale bone tusks; nothing darker than black shorts and seams; the disc stays neutral charcoal with no blue cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ogre pounder, define_as=None, type=giant/subtype=ogre, unique=False); details and hashes in evidence/monster-batch-p-20260929/source-contracts.json. base BASE_NPC_OGRE (giant/ogre, no image=); resolvers.racial() only adds levelup talents Ogre Wrath, Grisly Constitution, Scar-Scripted Flesh, Writ Large (races.lua, passives/one activated buff, no display write); resolvers.sustains_at_birth() present: the sustained talents are listed per leaf; leaf talents Double Strike, Uppercut, Empty Hand (passive), Clinch, Maim, Unarmed Mastery (passive), Weapon Combat (passive); no sustained talent, so nothing is activated at birth; resolvers.nice_tile{tall=1} shorthand (resolvers.lua nice_tile: invis.png + add_mos{image=e.image (the NPC.lua:33 default-name PNG), display_h=2, display_y=-1}), the same expansion live-confirmed for xhaiak/shiaak/naga nereid/Kyless (evidence/monster-live-f-20260929, monster-batch-l-live-20260929, monster-batch-j-live-20260929); native sprite 64x128. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-p-20260929/source-contracts.json",
+          "sha256": "3eb4cdb07da21fc9292934f54d928caa0b1dbe86aeff6b6877e103ba4cf2f182"
+        }
+      ]
+    }
+  ]
+}

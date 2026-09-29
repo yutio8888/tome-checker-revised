@@ -1,0 +1,298 @@
+{
+  "schema": 1,
+  "batch_id": "e1-gel-oozes-v1",
+  "assets": [
+    {
+      "asset_id": "black-ooze",
+      "native_name": "black ooze",
+      "scope": "Mobile ooze family (ooze.lua); native occurrence spans the same 7-area pool as the jelly batch per docs/expansion-plan-20260928/PLAN.md; exact identity only, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_OOZE\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 45,
+          "anchor": "clone_on_hit = {min_dam_pct=15, chance=30},"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 106,
+          "anchor": "name = \"black ooze\", color=colors.BLACK,"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v7-c0-sol/masters/green-worm-mass-v1.png",
+          "sha256": "51427c0fc90fcddc9bf9556d1bd8b788d41e1c97038162c8b065451bae249791",
+          "role": "style",
+          "note": "Approved mobile amorphous-subject style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel, and how a low mobile organic mass leans toward one side of the disc to suggest a direction of travel. Do not copy its multiple discrete worm bodies or its colour."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_oozes_black_ooze.png",
+          "sha256": "55fa4a31be50fe8173f74bcb812db0a62227c1760872d7f51fd216c4c389241e",
+          "role": "identity",
+          "note": "Native black ooze colour only. Ignore the native flat blob rendering and its camera; our version is a sculpted three-dimensional mobile fluid."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v4/masters/white-worm-mass-v1.png",
+          "sha256": "ce957c3fa428731ff049cd16879e5fbc9fd75c723e080abc54fb09ebce88fcca",
+          "role": "family",
+          "note": "Existing mapped white worm mass: its cluster of separate discrete grub bodies is already taken. Black ooze must read as one single continuous flowing fluid, never as multiple separate creatures."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One black ooze: a low, glossy, tar-black fluid mass leaning toward the lower-left with one thick blunt pseudopod extended in that direction, its surface pitted with small acid-eaten craters. A broad pale cool-grey rim-light highlight traces the leading edge of the pseudopod and the upper-left flank so the silhouette reads clearly against a dark disc.",
+        "contrast": "The other three oozes in this set are the same low mobile pseudopod body plan and must not be told apart by hue alone. Give black ooze the darkest overall value of the four, held readable only by a broad pale rim-light along its leading edge and pitted acid-crater texture across its glossy surface (silhouette: one thick blunt forward pseudopod with a pitted, uneven flank, distinct from yellow ooze's jagged angular tips, red ooze's rounded drips or blue ooze's faceted ice edges; value: near-black body carried entirely by a baked-in rim-light, not by a brighter faction ring).",
+        "composition": "One entire creature on one disc, steep overhead three-quarter view, its mass leaning toward one lower corner with one or two pseudopods extended in that direction to read as mid-crawl; the trailing edge stays lower and thinner. Every pseudopod stays inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the leading pseudopod out of the upper-right rank corner and the upper-left interaction corner. No second creature, no trail residue outside the disc, no scenery.",
+        "palette": "Near-black tar with a cool dark undertone, small acid-etched pits across the surface, one broad pale silver-grey rim-light along the leading pseudopod and upper flank, deep black trailing shadow. No glow, no acid pool outside the body, no effect, no ground stain."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Sub-agent verified in evidence/e1-art-gate the detached native actor for this identity: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending; main agent must review prompts before any --execute call.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/README.md",
+          "sha256": "0eeb60774d75291b9717b8cf344931e0e8dc55660e6d579ca0a368a0574168bb"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/native-actors.tsv",
+          "sha256": "92f8b81c7e7b8206d81ed6bf256db2fa136011bb9812828806ad0f8854b14fb2"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/sources.json",
+          "sha256": "ac83aa30b5df46143ca738149536bab091b578b3fdcf1a79d26624d8b1bfb33f"
+        }
+      ]
+    },
+    {
+      "asset_id": "yellow-ooze",
+      "native_name": "yellow ooze",
+      "scope": "Mobile ooze family (ooze.lua); native occurrence spans the same 7-area pool as the jelly batch per docs/expansion-plan-20260928/PLAN.md; exact identity only, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_OOZE\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 45,
+          "anchor": "clone_on_hit = {min_dam_pct=15, chance=30},"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 96,
+          "anchor": "name = \"yellow ooze\", color=colors.YELLOW,"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v7-c0-sol/masters/green-worm-mass-v1.png",
+          "sha256": "51427c0fc90fcddc9bf9556d1bd8b788d41e1c97038162c8b065451bae249791",
+          "role": "style",
+          "note": "Approved mobile amorphous-subject style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel, and how a low mobile organic mass leans toward one side of the disc to suggest a direction of travel. Do not copy its multiple discrete worm bodies or its colour."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_oozes_yellow_ooze.png",
+          "sha256": "7f9a613b844d7d5cf1c0b3f25ee0022f650ee138db83699ed84d45f106047274",
+          "role": "identity",
+          "note": "Native yellow ooze colour only. Ignore the native flat blob rendering and its camera; our version is a sculpted three-dimensional mobile fluid."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v4/masters/white-worm-mass-v1.png",
+          "sha256": "ce957c3fa428731ff049cd16879e5fbc9fd75c723e080abc54fb09ebce88fcca",
+          "role": "family",
+          "note": "Existing mapped white worm mass: its cluster of separate discrete grub bodies is already taken. Yellow ooze must read as one single continuous flowing fluid, never as multiple separate creatures."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One yellow ooze: a bright amber-yellow fluid mass leaning toward the lower-right, its leading edge drawn out into two or three sharp, angular, jagged-tipped pseudopods rather than round drips, as if the fluid had frozen mid-crackle. Fine straight internal lines run along the pseudopods suggesting tension, without any spark or glow effect.",
+        "contrast": "The other three oozes in this set are the same low mobile pseudopod body plan and must not be told apart by hue alone. Give yellow ooze the sharpest, most angular silhouette of the four, with jagged crackle-like pseudopod tips instead of round drips (silhouette: angular zigzag leading edge, distinct from black ooze's blunt pitted pseudopod, red ooze's rounded melting drips or blue ooze's faceted ice shards), and the brightest, highest-value body of the set with fine straight internal linework (value: saturated bright amber, not a flat colour field).",
+        "composition": "One entire creature on one disc, steep overhead three-quarter view, its mass leaning toward one lower corner with one or two pseudopods extended in that direction to read as mid-crawl; the trailing edge stays lower and thinner. Every pseudopod stays inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the leading pseudopod out of the upper-right rank corner and the upper-left interaction corner. No second creature, no trail residue outside the disc, no scenery.",
+        "palette": "Saturated amber-yellow with a paler lemon lit plane along the upper surface, fine warm-brown internal streak-lines along the jagged pseudopod tips, deep amber-brown trailing shadow. Electric identity suggested only by natural colour and angular shape: no sparks, no glow, no effect, no ground stain."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Sub-agent verified in evidence/e1-art-gate the detached native actor for this identity: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending; main agent must review prompts before any --execute call.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/README.md",
+          "sha256": "0eeb60774d75291b9717b8cf344931e0e8dc55660e6d579ca0a368a0574168bb"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/native-actors.tsv",
+          "sha256": "92f8b81c7e7b8206d81ed6bf256db2fa136011bb9812828806ad0f8854b14fb2"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/sources.json",
+          "sha256": "ac83aa30b5df46143ca738149536bab091b578b3fdcf1a79d26624d8b1bfb33f"
+        }
+      ]
+    },
+    {
+      "asset_id": "red-ooze",
+      "native_name": "red ooze",
+      "scope": "Mobile ooze family (ooze.lua); native occurrence spans the same 7-area pool as the jelly batch per docs/expansion-plan-20260928/PLAN.md; exact identity only, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_OOZE\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 45,
+          "anchor": "clone_on_hit = {min_dam_pct=15, chance=30},"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 66,
+          "anchor": "name = \"red ooze\", color=colors.RED,"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v7-c0-sol/masters/green-worm-mass-v1.png",
+          "sha256": "51427c0fc90fcddc9bf9556d1bd8b788d41e1c97038162c8b065451bae249791",
+          "role": "style",
+          "note": "Approved mobile amorphous-subject style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel, and how a low mobile organic mass leans toward one side of the disc to suggest a direction of travel. Do not copy its multiple discrete worm bodies or its colour."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_oozes_red_ooze.png",
+          "sha256": "479c328073c9e383730e9998b59f92dd46fdbc13e5fc42de0743817ba119f573",
+          "role": "identity",
+          "note": "Native red ooze colour only. Ignore the native flat blob rendering and its camera; our version is a sculpted three-dimensional mobile fluid."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v4/masters/white-worm-mass-v1.png",
+          "sha256": "ce957c3fa428731ff049cd16879e5fbc9fd75c723e080abc54fb09ebce88fcca",
+          "role": "family",
+          "note": "Existing mapped white worm mass: its cluster of separate discrete grub bodies is already taken. Red ooze must read as one single continuous flowing fluid, never as multiple separate creatures."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One red ooze: a warm red-orange fluid mass leaning toward the lower-left, its leading edge drawn into one or two soft, rounded, wax-like drips that sag downward as if melting. The surface has a soft warm glossy sheen with a gentle gradient from a brighter crown to a deeper red base, without any flame or heat-glow effect.",
+        "contrast": "The other three oozes in this set are the same low mobile pseudopod body plan and must not be told apart by hue alone. Give red ooze the softest, most rounded silhouette of the four, with wax-like sagging drip tips (silhouette: smooth rounded drips, distinct from yellow ooze's sharp angular tips, black ooze's blunt pitted pseudopod or blue ooze's faceted ice shards), and a mid-to-high value warm red-orange body carried by a soft gradient rather than a flat colour field (value: warm mid-bright body with a gentle crown-to-base gradient).",
+        "composition": "One entire creature on one disc, steep overhead three-quarter view, its mass leaning toward one lower corner with one or two pseudopods extended in that direction to read as mid-crawl; the trailing edge stays lower and thinner. Every pseudopod stays inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the leading pseudopod out of the upper-right rank corner and the upper-left interaction corner. No second creature, no trail residue outside the disc, no scenery.",
+        "palette": "Warm red-orange with a brighter coral-orange lit crown and a deeper red-brown trailing shadow, soft glossy sheen along the rounded drips. Fire identity suggested only by natural warm colour: no flame, no heat-glow, no effect, no ground stain."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Sub-agent verified in evidence/e1-art-gate the detached native actor for this identity: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending; main agent must review prompts before any --execute call.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/README.md",
+          "sha256": "0eeb60774d75291b9717b8cf344931e0e8dc55660e6d579ca0a368a0574168bb"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/native-actors.tsv",
+          "sha256": "92f8b81c7e7b8206d81ed6bf256db2fa136011bb9812828806ad0f8854b14fb2"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/sources.json",
+          "sha256": "ac83aa30b5df46143ca738149536bab091b578b3fdcf1a79d26624d8b1bfb33f"
+        }
+      ]
+    },
+    {
+      "asset_id": "blue-ooze",
+      "native_name": "blue ooze",
+      "scope": "Mobile ooze family (ooze.lua); native occurrence spans the same 7-area pool as the jelly batch per docs/expansion-plan-20260928/PLAN.md; exact identity only, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_OOZE\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 45,
+          "anchor": "clone_on_hit = {min_dam_pct=15, chance=30},"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 76,
+          "anchor": "name = \"blue ooze\", color=colors.BLUE,"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v7-c0-sol/masters/green-worm-mass-v1.png",
+          "sha256": "51427c0fc90fcddc9bf9556d1bd8b788d41e1c97038162c8b065451bae249791",
+          "role": "style",
+          "note": "Approved mobile amorphous-subject style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel, and how a low mobile organic mass leans toward one side of the disc to suggest a direction of travel. Do not copy its multiple discrete worm bodies or its colour."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_oozes_blue_ooze.png",
+          "sha256": "ced4be635ef45cbf64a5518c3010bbf89c6cf0814fb4237f451ab3d20dbf4430",
+          "role": "identity",
+          "note": "Native blue ooze colour only. Ignore the native flat blob rendering and its camera; our version is a sculpted three-dimensional mobile fluid."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v4/masters/white-worm-mass-v1.png",
+          "sha256": "ce957c3fa428731ff049cd16879e5fbc9fd75c723e080abc54fb09ebce88fcca",
+          "role": "family",
+          "note": "Existing mapped white worm mass: its cluster of separate discrete grub bodies is already taken. Blue ooze must read as one single continuous flowing fluid, never as multiple separate creatures."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One blue ooze: a pale, semi-translucent cold-blue fluid mass leaning toward the lower-right, its leading edge drawn into a small cluster of hard, regular, multi-faceted ice-shard-like points rather than smooth drips or jagged crackle tips. The overall posture reads slower and more solid than the other three oozes, with sharp but even facet edges instead of a wet, flowing surface.",
+        "contrast": "The other three oozes in this set are the same low mobile pseudopod body plan and must not be told apart by hue alone. Give blue ooze the most rigid, faceted silhouette of the four, with small regular ice-shard points along its leading edge instead of smooth drips (red ooze), jagged crackle tips (yellow ooze) or a blunt pitted pseudopod (black ooze) — the facets should look hard and even, not sharp and chaotic (silhouette: regular faceted shard cluster). Give it a cool, mid-pale translucent value distinct from the other three (value: cool pale blue-white body with visible facet shading, unlike the warm reds/yellows or the near-black body).",
+        "composition": "One entire creature on one disc, steep overhead three-quarter view, its mass leaning toward one lower corner with one or two pseudopods extended in that direction to read as mid-crawl; the trailing edge stays lower and thinner. Every pseudopod stays inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the leading pseudopod out of the upper-right rank corner and the upper-left interaction corner. No second creature, no trail residue outside the disc, no scenery.",
+        "palette": "Pale cold blue with a translucent frosted quality, brighter ice-white highlights along the facet edges, a deeper steel-blue trailing shadow. Cold identity suggested only by natural pale colour and hard faceted shape: no frost mist, no glow, no effect, no ground stain."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Sub-agent verified in evidence/e1-art-gate the detached native actor for this identity: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending; main agent must review prompts before any --execute call.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/README.md",
+          "sha256": "0eeb60774d75291b9717b8cf344931e0e8dc55660e6d579ca0a368a0574168bb"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/native-actors.tsv",
+          "sha256": "92f8b81c7e7b8206d81ed6bf256db2fa136011bb9812828806ad0f8854b14fb2"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/e1-art-gate/sources.json",
+          "sha256": "ac83aa30b5df46143ca738149536bab091b578b3fdcf1a79d26624d8b1bfb33f"
+        }
+      ]
+    }
+  ]
+}

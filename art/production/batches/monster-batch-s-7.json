@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-s-7",
+  "assets": [
+    {
+      "asset_id": "berethh",
+      "native_name": "Berethh",
+      "scope": "keepsake-meadow (zones/keepsake-meadow/npcs.lua:388, unique, define_as BERETHH, humanoid/thalore, rank 4, no base, default-name image); spawned by quests/keepsake.lua:238 makeEntityByName after the caravan quest; single definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 388,
+          "anchor": "define_as=\"BERETHH\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 389,
+          "anchor": "name = \"Berethh\", unique = true"
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 430,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_thalore_berethh.png",
+          "sha256": "f647533761b966c7f26ebda18dc49091865f64efaeb4415dfc7fc04b36c1488c",
+          "role": "identity",
+          "note": "Native shape (64x64): a lean bearded thalore in a dark green-brown tunic and leather holding a bow, wreathed in dark wisps."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/elven-guard.png",
+          "sha256": "2dd2ffdc73e61c95c773876361c0f79f280090f53ff6f41bf34b6f2f18fce287",
+          "role": "family",
+          "note": "Shipped elven guard (green-tunic elf standing upright with a sword and small shield): no Keepsake elf may be a standing green-tunic swordsman."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Berethh seen from a steep overhead three-quarter angle: a lean thalore archer standing SIDEWAYS at FULL DRAW, a long OLIVE-GREY hooded travel cloak with lighter sage highlight planes thrown back over worn tan leather, a long pale braid, a calm expressionless narrow face, a SHORT recurve bow held out forward-left with the arrow nocked and the string drawn to the cheek (the bow no longer than his own body width, its tips well inside the disc), a leather quiver of pale-fletched arrows on his back, a small silver leaf pin at the cloak throat. Composed, aiming and complete.",
+        "contrast": "Keepsake elves: BERETHH is the standing full-draw archer in an OLIVE-GREY hooded cloak with a short bow held out to one side (silhouette: sideways figure with a bow line and a drawn arm, cloak mass behind; hue: olive-grey, sage and tan; value: mid-light). The Companion Warrior is a low lunging russet swordsman with no bow; the Companion Archer is a kneeling gold-and-green archer aiming upward; the shipped elven guard is an upright green-tunic swordsman with a shield.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, staffs, capes and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, cape end or bandage tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere. Calibration from two previous generations of this exact token: the first came out slightly DARKER than the style reference and the second came out clearly LIGHTER than the style reference. This time keep the same standing sideways full-draw thalore archer in the olive-grey hooded cloak with the short recurve bow, and render the WHOLE disc, its outer ring band and the plate under the figure, at EXACTLY the style reference's own lightness, evenly all round: at most a hair lighter than the reference, never darker and never visibly lighter, the same charcoal-brown body and the same bronze-grey bevel as the style reference image, with no cast shadow and no brightening. Copy the reference disc's value and bevel faithfully. Keep the sage-olive cloak with broad pale highlight planes.",
+        "palette": "Olive-grey cloak in a mid-light value with pale sage highlight planes, tan worn leather with lighter buff highlights, pale-blond braid, pale skin, pale wood bow, cream-fletched arrows, silver pin; nothing darker than dark olive-grey except the eyes; the disc stays neutral charcoal with no green cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Berethh, define_as=BERETHH, type=humanoid/subtype=thalore, unique=True, native_tall=False); details and hashes in evidence/monster-batch-s-20260929/source-contracts.json. no base (humanoid/thalore on the leaf, display \"p\", no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip longbow, arrows, light armour, gloves and boots (equipment only, no moddable_tile); talents Weapon Combat, Bow Mastery, Shoot, Pinning Shot, Crippling Shot, Dual Arrows, Disengage; resolvers.sustains_at_birth() has no sustained talent to start (all are activated or passive) and resolvers.inscriptions adds a regeneration infusion; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-s-20260929/source-contracts.json",
+          "sha256": "f6556ef4ac78f044ee83f4d27ed60d1586fa243b923da96651cade0aa5ba49a2"
+        }
+      ]
+    }
+  ]
+}

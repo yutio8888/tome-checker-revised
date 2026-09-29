@@ -1,0 +1,66 @@
+{
+  "asset_id": "wall-v1",
+  "material": "wall",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "intent": "generate",
+  "prompt": "Use case: stylized-concept. Asset: ONE ORDINARY STONE WALL terrain component for a single square tabletop dungeon grid cell, square transparent PNG ideally 1024x1024. True alpha background outside the object, NO floor and NO circular actor base. Orthographic high overhead view nearly straight down, fixed world north up. A solid nearly square waist-high miniature masonry wall mass, 86% canvas width and height, with the broad TOP SURFACE dominant and only short south/east thickness faces visible entirely inside frame. Warm neutral grey worn limestone ashlar: 5 to 7 chunky irregular rectangular blocks, broad mortar seams, slightly chipped stepped silhouette at corners, no holes or passage. Top is solid continuous barrier, not floor paving: chunky bevel and short dark south/east vertical face clearly express raised thickness. Hand-painted matte miniature material, soft fixed upper-left lighting, restrained drybrushed pale grey top edges, darker side faces. Not shiny, not a photo. Keep base geometry aligned to screen axes, no diamond/isometric rotation. Clean alpha outline, no detached debris, vegetation, outside cast shadows or scenery. It is the isolated-cell design (mask 0); edge connection masks will be engineered later, so no fake connector symbols. All stone and internal shadow inside square with safe transparent margin. No door, roof, battlement, tower, stairs, sloping ramps, floor, grid, faction/rank icon, arrow, writing or watermark. Single component only, not tilesheet. Unlike HARD wall, this should read as assembled chipped medium-size masonry blocks, not one sealed smooth dark monolith.",
+  "references": [],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-941342d4-ee99-4f3a-853d-c2d63a7423a3.png",
+  "saved_output_path": "art/terrain-korpul-v1/masters/wall-v1.png",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "native_alpha_required": true,
+  "selection": "design-candidate-not-runtime-ready",
+  "rejection_reason": null,
+  "processing": "Copy original unchanged; small-size whole-canvas resampling only. No alpha extraction, relighting, recolouring, rotation, or painted geometry.",
+  "sha256": "63382a3e42d2f4e1585ee3bd509f10d29a59b18fc3079b12e5a38f21448bee04",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      39,
+      1232,
+      1254
+    ],
+    "transparent_pixels": 469694,
+    "partial_alpha_pixels": 1101804,
+    "opaque_pixels": 1018,
+    "visible_alpha_bbox_gt8": [
+      88,
+      128,
+      1178,
+      1154
+    ],
+    "corner_alpha": [
+      0,
+      0,
+      1,
+      0
+    ]
+  },
+  "references_resolved": [],
+  "static_review": {
+    "sheet": "review/design-sheet.png",
+    "actual_sizes": [
+      48,
+      64,
+      96
+    ],
+    "floor_repeat_size": 128,
+    "grayscale": "CSS display only",
+    "runtime_verified": false,
+    "connected_masks_verified": false
+  }
+}

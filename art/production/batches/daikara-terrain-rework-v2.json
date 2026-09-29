@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "batch_id": "daikara-terrain-rework-v2",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Reviewer rejected first Daikara wall as fragmented shrub-like peaks with visible floor. This new design uses a broad raised rock slab; all 16 neighbor masks will be rebuilt without an edge waiver. The preceding rework call produced the desired solid form but failed A8.1 by 1.08 px on the right; its recorded failure remains in rework-v1/call-1.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/daikara-20260928/identity.md",
+          "sha256": "66779ee7e3b9c9e40d1150900b193b43858cfebe7d0b24b302377ede54370610"
+        }
+      ],
+      "asset_id": "mountain-wall-solid-v3",
+      "native_name": "MOUNTAIN_WALL Daikara diggable mountain",
+      "kind": "terrain-prop",
+      "scope": "Daikara DEFAULT and VOLCANO levels 1\u20134, including VOLCANO L4 Caldera.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/mountain.lua",
+          "sha256": "f29f818ca31d2c360a9d9e53cc12026feed0c2f53bbf6dfe12b81ab03ccd1d6f",
+          "line": 31,
+          "anchor": "define_as = \"MOUNTAIN_WALL\""
+        },
+        {
+          "path": "game/modules/tome/data/general/grids/mountain.lua",
+          "sha256": "f29f818ca31d2c360a9d9e53cc12026feed0c2f53bbf6dfe12b81ab03ccd1d6f",
+          "line": 40,
+          "anchor": "dig = \"ROCKY_GROUND\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/mountain5_1.png",
+          "sha256": "7ca843a2cd118c7e34a2320d7689f2cff0a12c681ade86069272b6eadff76398",
+          "role": "identity",
+          "note": "Native dark rocky mountain wall."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/refined/korpul/wall-15-0.png",
+          "sha256": "24f964903f248954643cbd14527b5bd090aab846647763a3d48ba8a826bffb13",
+          "role": "style",
+          "note": "Accepted KorPul wall reads as a contiguous blocking mass across neighboring cells; use its broad planar visual weight, not its masonry blocks."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Blocks except pass_wall actors.",
+        "sight": "Blocks.",
+        "danger": "None.",
+        "interaction": "Dig changes to ROCKY_GROUND.",
+        "export": "Native-alpha solid central cliff block with at least 3% source margin; exporter builds continuous 16-way rock connections from its material, no waiver."
+      },
+      "prompt_fields": {
+        "subject": "A SINGLE massive raised mountain-rock slab or cliff block, not an arrangement of stones. One broad continuous flat-ish slate top face and one thick, dark, near-vertical front face, with only a few large planar fractures. It is an impassable, sight-blocking rock mass.",
+        "palette": "Muted blue-charcoal and gray-brown basaltic stone, restrained cold light on upper-left top plane; dark but readable side face. No snow.",
+        "contrast": "At 48 pixels it must read as one heavy solid boulder block occupying most of its square cell, clearly unlike snowy trees, separate rocks, shrubs, or floor. No thin upright spikes, foliage, rubble, holes, or floor visible between parts of the block.",
+        "composition": "One nearly square, wide and tall coherent mass in overhead three-quarter tabletop view. Broad upper rim around 15% from image top, bottom rock face around 10% from image bottom. Solid footprint around 85-90% of canvas width and 75-85% height. COMPLETE shape inside canvas with at least 7% genuinely transparent inset on all four sides and transparent corners. No cut-off rock. Exporter will extend the rock material to connected cell edges.",
+        "mechanics": "Diggable MOUNTAIN_WALL; blocks movement and line of sight. No danger symbols, lava, snow, door, or character."
+      }
+    }
+  ]
+}

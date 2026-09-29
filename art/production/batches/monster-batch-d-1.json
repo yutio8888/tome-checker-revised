@@ -1,0 +1,246 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-d-1",
+  "assets": [
+    {
+      "asset_id": "red-jelly",
+      "native_name": "red jelly",
+      "scope": "daikara (general jelly pool); completes the 6-colour jelly family alongside the shipped green/black/white/yellow jelly (E1)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 73,
+          "anchor": "name = \"red jelly\", color=colors.RED, image=\"npc/jelly-red.png\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 27,
+          "anchor": "define_as = \"BASE_NPC_JELLY\","
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9",
+          "line": 7,
+          "anchor": "\"name\": \"red jelly\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-e1-gel/masters/black-jelly-v1.png",
+          "sha256": "7979a2a9bcf3ac409473b28ea18be51904ea628d1e3778cb85ce4e18ff7d11ad",
+          "role": "style",
+          "note": "Approved jelly-family disc, camera, lighting and low-wide stationary mound body plan; copy the disc/camera/lighting/finish and the low-wide mound proportions, not the black colour or sagging tar silhouette."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/jelly-red.png",
+          "sha256": "e4a365480fbec1157ea59e2ae5081a03df7696202155c05f95a20b69a8cf9f07",
+          "role": "identity",
+          "note": "Native identity: a vivid red, multi-lobed clover-shaped blob (four to five rounded lobes forming the crown) with darker maroon seed-like inclusions clustered near the centre and a glossy highlight upper-left."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "value", "hue"],
+      "prompt_fields": {
+        "subject": "One red jelly: a stationary mound whose crown is broken into four or five distinct rounded lobes meeting at the centre, like a clover or a segmented berry, rather than one continuous dome. Several small darker maroon seed-like inclusions are visible clustered near the centre just under the glossy surface, thinning out toward the lobe edges. One broad soft highlight sits across the upper-left lobes consistent with the lighting.",
+        "contrast": "Five other jellies already exist in this family and must not be told apart by hue alone. Give red jelly a distinct multi-lobed clover silhouette (four or five rounded lobes meeting at a shared centre) unlike green jelly's single rippled dome, black jelly's sagging flat tar mound, white jelly's faceted crystalline planes and yellow jelly's small blister bumps; the lobes must be large, clearly separated shapes, not a texture. Value: a saturated warm mid-to-bright red body, distinct from all five siblings' value/hue, with the darker maroon centre inclusions as a second, unique internal-marking cue (unlike green's scattered debris specks, yellow's streak-lines, or white/black's plain surfaces). This is also the sibling that must read apart from blue jelly in the same handoff: red is lobed and warm, blue is a single smooth swirled dome and cool.",
+        "composition": "One entire stationary mound on one disc, steep overhead three-quarter view, centred with no facing direction (this creature never moves). The body sits low and wide, its base spreading unevenly where it meets the disc; every lobe, facet or inclusion stays inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the tallest lobe out of the upper-right rank corner and the upper-left interaction corner. No second creature, no puddle trail, no scenery.",
+        "palette": "Saturated red with a paler warm-pink lit crown on the upper-left lobes, small dark maroon-brown inclusions near the centre, deep brick-red base shadow between the lobes. No glow, no fire effect, no ground stain."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Leaf newEntity carries an explicit image= (npc/jelly-red.png); BASE_NPC_JELLY and the leaf have no add_mos/shader/anim/moddable_tile/add_displays/textures, no define_as, not unique. Static source inspection only, no fixture (evidence/monster-batch-d-20260929). Art-only task; runtime integration and 48/64/96 family review still pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/README.md",
+          "sha256": "e4092a9ce1de4196e045be9f334e5dd3b8f7dbdfc91a25b1b2de63e3d0fa9598"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9"
+        }
+      ]
+    },
+    {
+      "asset_id": "blue-jelly",
+      "native_name": "blue jelly",
+      "scope": "unremarkable-cave (general jelly pool); completes the 6-colour jelly family alongside the shipped green/black/white/yellow jelly (E1) and red jelly in this batch",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 89,
+          "anchor": "name = \"blue jelly\", color=colors.BLUE, image=\"npc/jelly-blue.png\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 27,
+          "anchor": "define_as = \"BASE_NPC_JELLY\","
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9",
+          "line": 22,
+          "anchor": "\"name\": \"blue jelly\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-e1-gel/masters/green-jelly-v1.png",
+          "sha256": "cf512860b9abf513f1d5981362dccfea0e7304d3c1af359aae2d5f45166dcbee",
+          "role": "style",
+          "note": "Approved jelly-family disc, camera, lighting and low-wide stationary mound body plan; copy the disc/camera/lighting/finish and the low-wide mound proportions, not the green colour or rippled-dome silhouette."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/jelly-blue.png",
+          "sha256": "0f6548d0611c1aa6ab5d7bc34c8dec87875c02d9988f431c131284f3c7eb494c",
+          "role": "identity",
+          "note": "Native identity: a deep blue, single rounded lobed blob with a darker navy spiral/swirl pattern visible under the glossy surface near the crown and a bright highlight upper-left."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "value", "hue"],
+      "prompt_fields": {
+        "subject": "One blue jelly: a single smooth rounded dome, its crown slightly off-centre rather than symmetric, with a visible darker navy spiral swirl pattern coiling under the glossy translucent surface near the crown, like a whirlpool seen from above. The edge stays a smooth unbroken curve (no lobes, no facets, no blisters), sagging only slightly into an even ring where it meets the disc. One bright cool highlight sits on the upper-left of the dome with a faint frost-like sparkle at its centre.",
+        "contrast": "Five other jellies already exist in this family and must not be told apart by hue alone. Give blue jelly a smooth single-dome silhouette with an off-centre peak and an internal spiral swirl marking, unlike green jelly's evenly rippled dome, black jelly's sagging flat tar mound, white jelly's faceted crystalline planes, yellow jelly's blister bumps, and unlike red jelly's four-to-five-lobed clover crown in this same handoff. Value/hue: a cool translucent blue body, the coolest hue of the set, kept readable with the navy spiral as an internal marking distinct from green's scattered debris specks, yellow's streak-lines, red's seed-like inclusions, and white/black's plain surfaces.",
+        "composition": "One entire stationary mound on one disc, steep overhead three-quarter view, centred with no facing direction (this creature never moves). The body sits low and wide, its base spreading unevenly where it meets the disc; the dome and its spiral marking stay inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the tallest point of the dome out of the upper-right rank corner and the upper-left interaction corner. No second creature, no puddle trail, no scenery.",
+        "palette": "Translucent sapphire and cobalt blue with a paler icy-blue lit crown, a darker navy spiral swirl under the surface near the crown, deep indigo base shadow. No glow, no frost/ice effect, no ground stain."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Leaf newEntity carries an explicit image= (npc/jelly-blue.png); BASE_NPC_JELLY and the leaf have no add_mos/shader/anim/moddable_tile/add_displays/textures, no define_as, not unique. Static source inspection only, no fixture (evidence/monster-batch-d-20260929). Art-only task; runtime integration and 48/64/96 family review still pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/README.md",
+          "sha256": "e4092a9ce1de4196e045be9f334e5dd3b8f7dbdfc91a25b1b2de63e3d0fa9598"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9"
+        }
+      ]
+    },
+    {
+      "asset_id": "giant-white-ant",
+      "native_name": "giant white ant",
+      "scope": "old-forest, rhaloren-camp, trollmire (flooded); new giant-ant family, first two members in this handoff",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 46,
+          "anchor": "name = \"giant white ant\", color=colors.WHITE, image=\"npc/white_ant.png\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ANT\","
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9",
+          "line": 101,
+          "anchor": "\"name\": \"giant white ant\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Approved ground-critter disc, camera, upper-left lighting and finish; copy only the disc/camera/lighting/finish, not the rat body plan."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/white_ant.png",
+          "sha256": "b22cefc09a9721be1462b0145e33921c27d2e30cd312008d9e48e74315c89196",
+          "role": "identity",
+          "note": "Native identity: a giant ant with smooth, pale ivory-white glossy chitin, a compact rounded segmented body, six legs and standard-sized mandibles; no unusual texture or oversized features."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "value", "hue"],
+      "prompt_fields": {
+        "subject": "One giant white ant seen from a steep overhead three-quarter angle: a compact insect body with a rounded thorax and abdomen, six legs splayed for a stable stance, short antennae and standard-sized mandibles. The chitin is smooth and glossy, pale ivory-white with soft cool-grey shading in the creases between segments so the form reads without going flat white.",
+        "contrast": "This is a new six-member family (white, brown, carpenter, blue, yellow, black ant) sharing one body plan; siblings must not be told apart by hue alone. Give white ant the smoothest, glossiest chitin and the lightest overall value of the set (silhouette: compact standard build, no bristles, no oversized mandibles, distinct from brown ant's hairy fringe and carpenter ant's oversized pincers; value: brightest ivory-white body, distinct from every other sibling's darker value).",
+        "composition": "One complete six-legged ant centred on one circular disc, steep overhead three-quarter view, body angled so the head and two or three legs read clearly; every leg, antenna and mandible stays inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the head and antennae out of the upper-right rank corner and upper-left interaction corner. No second creature, no web, no burrow, no scenery.",
+        "palette": "Pale ivory-white chitin with cool light-grey shading in the body creases and leg joints, a soft warm highlight on the thorax from the upper-left light, dark grey-brown eyes and mandible tips; restrained copper-grey neutral bevel and charcoal disc at the style reference lightness; no colored faction aura."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Leaf newEntity carries an explicit image= (npc/white_ant.png); BASE_NPC_ANT and the leaf have no add_mos/shader/anim/moddable_tile/add_displays/textures, no define_as, not unique. Static source inspection only, no fixture (evidence/monster-batch-d-20260929). Art-only task; runtime integration and 48/64/96 family review still pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/README.md",
+          "sha256": "e4092a9ce1de4196e045be9f334e5dd3b8f7dbdfc91a25b1b2de63e3d0fa9598"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9"
+        }
+      ]
+    },
+    {
+      "asset_id": "giant-brown-ant",
+      "native_name": "giant brown ant",
+      "scope": "scintillating-caves; new giant-ant family member",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 54,
+          "anchor": "name = \"giant brown ant\", color=colors.UMBER, image=\"npc/brown_ant.png\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ANT\","
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9",
+          "line": 116,
+          "anchor": "\"name\": \"giant brown ant\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Approved ground-critter disc, camera, upper-left lighting and finish; copy only the disc/camera/lighting/finish, not the rat body plan."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/brown_ant.png",
+          "sha256": "15a972893a3d041f75aac2fba1b986eaab64b2fdfb342553a9ab0f50c9af9259",
+          "role": "identity",
+          "note": "Native identity: a giant ant with matte reddish-umber chitin covered in fine bristly hairs along the legs and body outline, giving a rougher, hairier silhouette than the smooth-shelled ants."
+        }
+      ],
+      "contrast_dimensions": ["silhouette", "value", "hue"],
+      "prompt_fields": {
+        "subject": "One giant brown ant seen from a steep overhead three-quarter angle: a compact insect body with a rounded thorax and abdomen, six legs splayed for a stable stance, short antennae and standard-sized mandibles. The chitin is matte reddish-umber brown, and fine bristly hairs are visible along the legs, antennae and body outline, breaking the silhouette into a slightly rough, fringed edge rather than a clean smooth curve.",
+        "contrast": "This is a new six-member family (white, brown, carpenter, blue, yellow, black ant) sharing one body plan; siblings must not be told apart by hue alone. Give brown ant a distinctly textured, hair-fringed silhouette and a matte (not glossy) finish, unlike white ant's smooth glossy edge and unlike the other glossy siblings (silhouette: fine bristle fringe along legs/body breaks the outline; value/finish: dull matte warm-umber, mid-dark value, with the fringe as the primary separating cue from every glossy sibling in this family).",
+        "composition": "One complete six-legged ant centred on one circular disc, steep overhead three-quarter view, body angled so the head and two or three legs read clearly; every leg, antenna, bristle and mandible stays inside the disc with the outer sixth of the disc radius left as bare base plate. Keep the head and antennae out of the upper-right rank corner and upper-left interaction corner. No second creature, no web, no burrow, no scenery.",
+        "palette": "Matte reddish-umber brown chitin with darker brown shading in the body creases, fine darker-brown bristle hairs along the legs and outline, a soft warm highlight on the thorax from the upper-left light; restrained copper-grey neutral bevel and charcoal disc at the style reference lightness; no colored faction aura."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Leaf newEntity carries an explicit image= (npc/brown_ant.png); BASE_NPC_ANT and the leaf have no add_mos/shader/anim/moddable_tile/add_displays/textures, no define_as, not unique. Static source inspection only, no fixture (evidence/monster-batch-d-20260929). Art-only task; runtime integration and 48/64/96 family review still pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/README.md",
+          "sha256": "e4092a9ce1de4196e045be9f334e5dd3b8f7dbdfc91a25b1b2de63e3d0fa9598"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-d-20260929/source-contracts.json",
+          "sha256": "81038beb3f474b00b30bcead7289eda567d7255eb72b1492e571e3b0e43fb0d9"
+        }
+      ]
+    }
+  ]
+}

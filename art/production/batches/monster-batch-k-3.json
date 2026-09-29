@@ -1,0 +1,234 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-k-3",
+  "assets": [
+    {
+      "asset_id": "chitinous-spider",
+      "native_name": "chitinous spider",
+      "scope": "ardhungol, dreadfell, daikara (spiderkin/spider, default-name image, non-unique)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 85,
+          "anchor": "name = \"chitinous spider\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_chitinous_spider.png",
+          "sha256": "416c32b2724c0dfd57a05e625cda8b7d00a00d0abb1dcd1673fba7239dabcb4f",
+          "role": "identity",
+          "note": "Native shape: a pale ivory-white spider with a broad ridged shell, small dark eyes and many thin legs."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/weaver-queen.png",
+          "sha256": "39f935a31e7e84f9068461d0288b87c7cbc184483d81dd9b22eae6c678a8ea86",
+          "role": "family",
+          "note": "Shipped Weaver Queen (fuzzy frost-white spider): the chitinous spider is smooth hard armour with dark plate seams, no fur."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A heavily armoured spider seen from a steep overhead three-quarter angle: a broad smooth glossy ivory-bone carapace made of overlapping ridged plates with dark warm-grey seams and a faint pale jade sheen, a blocky armoured head with four small dark eyes and stout mandibles, and eight thick short spiked legs in the same plated ivory with dark joints, planted in a compact wide stance. Solid, tank-like, complete.",
+        "contrast": "Spider tokens: Ungole (black), giant spider (slate-grey, long legs), spitting spider (brown, hairy, venom), Weaver Queen (fuzzy frost-white with blue legs), orb spinner (steel-blue ribbed). The chitinous spider is the armoured ivory tank: smooth hard plates with dark seams and short thick spiked legs (silhouette: broad blocky shell, short spiked legs, no fur; hue: ivory-bone with a faint jade tint; value: light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Light ivory-bone and pale warm-grey armour plates with faint jade sheen, darker warm-grey seams and leg joints, small dark eyes; nothing darker than mid tone except seams and eyes. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=chitinous spider, define_as=None, type=spiderkin/subtype=spider, unique=False); details and hashes in evidence/monster-batch-k-20260929/source-contracts.json. base BASE_NPC_SPIDER (spiderkin/spider, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile on the leaf or its base; no tint; generic actor.image==entry.image single path; NPC.lua:33 gives spiderkin_spider_chitinous_spider.png. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-k-20260929/source-contracts.json",
+          "sha256": "28f50e7a65078712b05e51600724121549410c937ea2a8f0d9084b8158382041"
+        }
+      ]
+    },
+    {
+      "asset_id": "ghoul",
+      "native_name": "ghoul",
+      "scope": "dreadfell, telmur, halfling-ruins, blighted-ruins, last-hope-graveyard, tannen-tower, rak-shor-pride, high-peak (undead/ghoul with define_as GHOUL, default-name image, non-unique). Same-name actors that must stay native: the Master of Flesh player minion (no define_as), Walking Corpse (other name, same PNG), risen corpse (other name)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ghoul.lua",
+          "sha256": "b1ec41fab65306b144321ea37ed991405c7c795fca3bdebac932c27ec1e11586",
+          "line": 50,
+          "anchor": "name = \"ghoul\", color=colors.TAN, define_as = \"GHOUL\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_ghoul_ghoul.png",
+          "sha256": "9f0a8e16304e32bce4b6d21fc4b025cd0dae0fd9240187c3ab93521e9d6f7a20",
+          "role": "identity",
+          "note": "Native shape: a hunched, gaunt brown-skinned humanoid with a sunken skull-like face, long dangling arms and torn flesh."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/skeleton-warrior.png",
+          "sha256": "aae437e2a148b415786470e4806b57ef36db2c63251db799b4cb440730ea4d80",
+          "role": "family",
+          "note": "Shipped skeleton warrior (bone white, armed): the ghoul is rotting flesh, no armour, no weapon, hunched on all bare limbs."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A hunched gaunt ghoul seen from a steep overhead three-quarter angle: emaciated leathery tan-brown skin stretched over visible ribs and spine with grey patches of rot and torn hanging flesh strips, a sunken skull-like head with hollow dark eye sockets and a gaping fanged mouth, very long thin arms ending in long dark claws dragging low on both sides, bent legs, no clothes, no weapon. Feral, decayed and complete.",
+        "contrast": "Undead tokens: skeleton warrior/archer/mage (bone-white with gear), the necromancer, the player ghoul race. The common ghoul is the bare-skinned hunched rotting brute with long claws (silhouette: hunched with long low-hanging arms; hue: sickly tan-brown with grey rot patches; value: mid-light). Never bone-white, never armoured.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Sickly mid-light tan and leather-brown skin lifted with pale dusty-grey rot patches and bone-pale ribs, dark hollow eyes, dark claws; nothing darker than mid tone except the eye sockets. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ghoul, define_as=GHOUL, type=undead/subtype=ghoul, unique=False); details and hashes in evidence/monster-batch-k-20260929/source-contracts.json. base BASE_NPC_GHOUL (undead/ghoul, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile on the leaf or its base; no tint; generic actor.image==entry.image single path; define_as=\"GHOUL\" is on the leaf; NPC.lua:33 gives undead_ghoul_ghoul.png. The player-summoned ghoul (talents/spells/master-of-flesh.lua minions_list.ghoul) has the same name, type and default image but no define_as, so the exact-identity contract rejects it and it stays native; \"risen corpse\" and the Walking Corpse effect minion share the PNG under other names and stay native. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-k-20260929/source-contracts.json",
+          "sha256": "28f50e7a65078712b05e51600724121549410c937ea2a8f0d9084b8158382041"
+        }
+      ]
+    },
+    {
+      "asset_id": "drem",
+      "native_name": "drem",
+      "scope": "deep-bellow, maze, arena, dredge escorts (horror/corrupted, explicit image=npc/horror_corrupted_dremling.png -- the filename swap with dremling -- non-unique, single-cell)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 46,
+          "anchor": "name = \"drem\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 48,
+          "anchor": "image = \"npc/horror_corrupted_dremling.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_dremling.png",
+          "sha256": "bf72ace3b0d583802fe7ed30d758b04e6c27d1407d4d196a6790ae322224adb3",
+          "role": "identity",
+          "note": "Native shape: a small stocky dwarf-like figure in patched brown-grey rags and rusty scrap armour with a pale featureless face, a battered rusty waraxe in one hand and a dented round shield on the other arm."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/dremling.png",
+          "sha256": "ed834025fbc4a036013bbfc8c9c7af87b1126248003022416ca9f7b407f7481d",
+          "role": "family",
+          "note": "Shipped dremling (tall pale stone-grey spiked giant with a hammer): the drem is a small hunched axe-and-shield dwarf-like warrior in rags, not a giant statue."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A small stocky dwarf-like dredge warrior seen from a steep overhead three-quarter angle: a hunched squat body with a large round pale-grey featureless smooth face under a patched brown leather hood-cap, wearing layered patched warm grey-brown rags and rusty scrap plates with tarnished ochre rivets, a battered rusty waraxe with a notched blade held up in the right hand and a dented round wooden shield with an iron rim on the left arm, short bowed legs in worn boots. Battered, ill-kept and complete.",
+        "contrast": "Corrupted horror tokens: dremling (tall pale stone-grey spiked giant with a hammer, native-tall), horned horror, the mouth. The drem is the small hunched axe-and-shield warrior in patched brown-grey rags with a pale blank face and rusty gear (silhouette: compact with a raised axe and a round shield; hue: warm rust-brown and grey; value: mid). Never a tall giant, never spiked stone.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid warm grey-brown patched rags and hood lifted with lighter tan planes, rusty ochre and orange-brown metal, pale-grey smooth face as a value break, iron-grey shield rim; nothing darker than mid tone. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=drem, define_as=None, type=horror/subtype=corrupted, unique=False); details and hashes in evidence/monster-batch-k-20260929/source-contracts.json. base BASE_NPC_CORRUPTED_HORROR (horror/corrupted, no image=); leaf sets explicit image= npc/horror_corrupted_dremling.png (a 64x64 single-cell sprite whose file is named after dremling; dremling in turn resolves to the 64x128 npc/horror_corrupted_drem.png); no nice_tile/add_mos/shader/anim/moddable_tile/tint; single path. Catalog: dremling (native_tall, image horror_corrupted_drem.png) already ships; the two entries differ by name and by image and neither can wear the other (tested). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-k-20260929/source-contracts.json",
+          "sha256": "28f50e7a65078712b05e51600724121549410c937ea2a8f0d9084b8158382041"
+        }
+      ]
+    },
+    {
+      "asset_id": "gigantic-sandworm-tunneler",
+      "native_name": "gigantic sandworm tunneler",
+      "scope": "briagh-lair, sandworm-lair, eruan (vermin/sandworm, non-unique, explicit nice_tile tall body); the scripted sandworm burrower/huge burrower and the gigantic corrosive tunneler / gravity worm are other names and stay native or already-mapped as before",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/sandworm.lua",
+          "sha256": "d3b650d818aa36a5560a366bb100fc2c4a1895b0d64e39930571b7af78d612d2",
+          "line": 88,
+          "anchor": "name = \"gigantic sandworm tunneler\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/sandworm.lua",
+          "sha256": "d3b650d818aa36a5560a366bb100fc2c4a1895b0d64e39930571b7af78d612d2",
+          "line": 89,
+          "anchor": "image=\"npc/vermin_sandworm_gigantic_sandworm_tunneler.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_sandworm_gigantic_sandworm_tunneler.png",
+          "sha256": "6d4522eaebf54625b239bd70061ff4ffd833ea822d0d73221efebf396b37ea11",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a thick tan-brown segmented worm rearing straight up from a crater of earth, its top split open into a four-petal flower-like maw lined in red-brown flesh, with crackling blue lightning arcing around it."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/sandworm-destroyer.png",
+          "sha256": "4210dcd572f66f7bbf1eb9e351970ff2f54f1bf27c2c312acc17760808a835ae",
+          "role": "family",
+          "note": "Shipped sandworm destroyer (closed rust-orange ring with a toothy round mouth): the tunneler is a thicker earth-brown worm reared up with a four-petal split maw, not a coiled ring."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A gigantic thick tunneling sandworm rearing up from the disc, drawn compact: a very thick segmented earth-brown and dusty umber body with fine ring ridges and paler tan underbelly bands coiling once around its own base in a low heap of broken stone and packed earth chunks, the front third reared up toward the viewer with its head split open into a wide four-petalled flower-like maw, each petal lined inside with glossy red-brown flesh and a few blunt pale teeth, a dark throat at the centre. No lightning, no glow.",
+        "contrast": "Sandworm tokens: sandworm (slim orange S-curve), sandworm destroyer (closed rust-orange ring with a round toothy mouth), sandworm burrower (green arches on a sand heap), sandworm queen. The tunneler is the only thick earth-brown worm reared up with a four-petal split maw over a rubble heap (silhouette: thick coil plus reared petal head; hue: umber earth brown, not orange, not green; value: mid).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid earth-brown and dusty umber body lifted with paler tan segment bands and lighter ridge highlights, glossy red-brown maw interior, pale blunt teeth, light grey-tan stone chunks; nothing darker than mid tone except the throat. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=gigantic sandworm tunneler, define_as=None, type=vermin/subtype=sandworm, unique=False); details and hashes in evidence/monster-batch-k-20260929/source-contracts.json. resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/vermin_sandworm_gigantic_sandworm_tunneler.png\", display_h=2, display_y=-1}}} names the PNG explicitly (no =BASE=TILE= indirection and no {tall=1} shorthand), so the resolved tall body is statically pinnable (the batch F xhaiak/shiaak/Kyless obstacle does not apply); native sprite is 64x128; catalog nativeTallImage matches the one-body add_mos; non-unique, so the catalog entry must carry native_tall=true; base BASE_NPC_SANDWORM has no image=/shader; single-cell art path also accepted (nicer tiles off). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-k-20260929/source-contracts.json",
+          "sha256": "28f50e7a65078712b05e51600724121549410c937ea2a8f0d9084b8158382041"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-e-1",
+  "assets": [
+    {
+      "asset_id": "lady-zoisla",
+      "native_name": "Lady Zoisla the Tidebringer",
+      "scope": "slazish-fen zone-finale boss; exact identity only, no rarity field, no live fixture",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/slazish-fen/npcs.lua",
+          "sha256": "59faab1fda3ad11fc2bca557f3152df86cad9dbe1bbce63d69d5c7828b99a4a5",
+          "line": 118,
+          "anchor": "name = \"Lady Zoisla the Tidebringer\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_naga_lady_zoisla_the_tidebringer.png",
+          "sha256": "280e7ff79642e3cfaf7c581ac762f86b7a20175bc4b15d879c6bc362ac34c896",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A regal naga sorceress: humanoid torso rising from a long coiled serpent tail, dark hair falling past bare shoulders, one hand raised holding a barbed trident-spear, the other gripping a carved wooden staff planted against the tail coil. Torso held upright and confident, tail coiled into a stable base rather than sprawled.",
+        "contrast": "This is a new humanoid/naga family with no existing catalog member, so no in-family collision; the design goal is a silhouette no other current humanoid or reptile token shares -- the coiled serpent tail base under an upright human torso is the primary cue, reinforced by twin weapons (trident + staff) raised on either side.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated: prior monster batches measured this exact steep-overhead disc/camera/lighting style rendering on the bright side of the base_drift tolerance by default (batch D's ant redraw averaged +12.2 base_drift on a fresh pass against this same style reference before correction). Render the neutral disc -- including the whole outer-sixth ring band -- about 8 RGB luminance units darker than the style reference's disc appears at first read: a small, deliberate undershoot, not a full shade darker, and not something to eyeball as \"looks about right\". Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Sun-weathered olive-tan skin, deep violet-black hair, warm gold-red serpent scales fading to pale cream on the coil underside, dull iron trident head, aged driftwood staff; dry neutral charcoal disc with restrained copper-grey bevel, no water pooling on the base."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity, type/subtype, define_as, unique flag and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (matches CONTRACTS-B5-B7-20260929.md §2). No live fixture in this assigned task; no discrepancy found so none is required.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-e-20260929/source-contracts.json",
+          "sha256": "92455671765a820311ccffdac736c667beaae5b4bb497924bd674f8ca0cb7fdf"
+        }
+      ]
+    },
+    {
+      "asset_id": "urkis",
+      "native_name": "Urkis, the High Tempest",
+      "scope": "tempest-peak zone-finale boss; exact identity only, no rarity field, no live fixture",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/tempest-peak/npcs.lua",
+          "sha256": "316e2c39d0a9c5b1cb6d358ecc7fa7dc137e866ae77a165a5966af656722f45c",
+          "line": 32,
+          "anchor": "name = \"Urkis, the High Tempest\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_urkis__the_high_tempest.png",
+          "sha256": "1d4c7a8dfd2c923c0b09ff4a31955e48198aededc015d7ba3fc327a6fcd38ab0",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A bearded human storm-mage standing rigidly upright in a heavy fur-collared robe, arms held slightly out from the body, palms open. Crackling forked lightning bolts radiate outward from his whole silhouette in a jagged aura, brightest near the shoulders and head.",
+        "contrast": "Same humanoid/human type as this batch's own Celia; Urkis must read as a commanding, upright male figure wrapped in a bright cyan-white lightning aura that fills the outer silhouette, while Celia stays a quieter dark-robed female silhouette with no aura at all -- the lightning halo is the primary cue and survives grayscale as a bright jagged fringe against a mid-tone robe.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated: prior monster batches measured this exact steep-overhead disc/camera/lighting style rendering on the bright side of the base_drift tolerance by default (batch D's ant redraw averaged +12.2 base_drift on a fresh pass against this same style reference before correction). Render the neutral disc -- including the whole outer-sixth ring band -- about 8 RGB luminance units darker than the style reference's disc appears at first read: a small, deliberate undershoot, not a full shade darker, and not something to eyeball as \"looks about right\". Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Slate-blue robe with pale grey fur collar, warm tan skin, dark greying beard; bright cyan-white jagged lightning fringe radiating from the body; dry neutral charcoal disc with restrained copper-grey bevel, no lightning strikes the disc itself."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity, type/subtype, define_as, unique flag and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (matches CONTRACTS-B5-B7-20260929.md §2). No live fixture in this assigned task; no discrepancy found so none is required.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-e-20260929/source-contracts.json",
+          "sha256": "92455671765a820311ccffdac736c667beaae5b4bb497924bd674f8ca0cb7fdf"
+        }
+      ]
+    },
+    {
+      "asset_id": "golbug",
+      "native_name": "Golbug the Destroyer",
+      "scope": "reknor zone-finale boss; exact identity only, no rarity field, no live fixture",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/reknor/npcs.lua",
+          "sha256": "7365934ded58f783908434d3f7f13fc8d370584b66261ca9f7b2d1bb53ae5e50",
+          "line": 32,
+          "anchor": "name = \"Golbug the Destroyer\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_golbug_the_destroyer.png",
+          "sha256": "4e66207605b6becd948399c8c079fb552ad621f9f2db16ecb505250e8ba5dc25",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A heavily built orc warlord in ornate brass-trimmed plate with large upswept horned pauldrons, gripping a wide two-handed sword held low and angled diagonally across the body as if mid-swing. Stance wide and braced, weight forward.",
+        "contrast": "This batch's other orc, Brotoq the Reaver, shares humanoid/orc; Golbug must read differently by pauldron silhouette (large upswept horn-shaped guards unique to Golbug) and by value (warm brass/gold trim on mid-tone leather-green armor, brighter overall than Brotoq's near-black plate) as well as weapon pose (sword held low and diagonal, not raised).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated: prior monster batches measured this exact steep-overhead disc/camera/lighting style rendering on the bright side of the base_drift tolerance by default (batch D's ant redraw averaged +12.2 base_drift on a fresh pass against this same style reference before correction). Render the neutral disc -- including the whole outer-sixth ring band -- about 8 RGB luminance units darker than the style reference's disc appears at first read: a small, deliberate undershoot, not a full shade darker, and not something to eyeball as \"looks about right\". Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Olive-green orc hide, dark tanned leather straps, warm brass-gold pauldron trim and buckles, dull grey sword blade; dry neutral charcoal disc with restrained copper-grey bevel."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity, type/subtype, define_as, unique flag and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (matches CONTRACTS-B5-B7-20260929.md §2). No live fixture in this assigned task; no discrepancy found so none is required.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-e-20260929/source-contracts.json",
+          "sha256": "92455671765a820311ccffdac736c667beaae5b4bb497924bd674f8ca0cb7fdf"
+        }
+      ]
+    },
+    {
+      "asset_id": "brotoq",
+      "native_name": "Brotoq the Reaver",
+      "scope": "reknor-escape zone-finale boss; exact identity only, no rarity field, no live fixture",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/reknor-escape/npcs.lua",
+          "sha256": "96f161dde6a72cc4771f72d0f48480b7262511298e742763387baa0ccd33e1e1",
+          "line": 41,
+          "anchor": "name = \"Brotoq the Reaver\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_brotoq_the_reaver.png",
+          "sha256": "4365cfa0662b614aef57910196bc931ef48b1c1965735d6d50ddca65683bfbe5",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A lean, aggressive orc raider in near-black segmented plate with a pointed angular helm, gripping a curved sword raised high and forward in a lunging stance, shoulders hunched aggressively toward the viewer.",
+        "contrast": "Shares humanoid/orc with this batch's Golbug; Brotoq must read differently by silhouette (pointed angular helm, no horned pauldrons, lean hunched lunge vs Golbug's wide braced stance) and by value (uniformly dark near-black plate with only thin cold steel highlights, noticeably darker overall than Golbug's brass-warmed armor) plus weapon pose (blade raised high, not held low).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated: prior monster batches measured this exact steep-overhead disc/camera/lighting style rendering on the bright side of the base_drift tolerance by default (batch D's ant redraw averaged +12.2 base_drift on a fresh pass against this same style reference before correction). Render the neutral disc -- including the whole outer-sixth ring band -- about 8 RGB luminance units darker than the style reference's disc appears at first read: a small, deliberate undershoot, not a full shade darker, and not something to eyeball as \"looks about right\". Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Charcoal-black segmented plate, dull steel edge highlights, weathered dark green orc hide at the joints, no brass or gold anywhere; dry neutral charcoal disc with restrained copper-grey bevel, dark plate must not blend into the disc -- keep a visible seam of light between armor and base ring."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity, type/subtype, define_as, unique flag and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (matches CONTRACTS-B5-B7-20260929.md §2). No live fixture in this assigned task; no discrepancy found so none is required.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-e-20260929/source-contracts.json",
+          "sha256": "92455671765a820311ccffdac736c667beaae5b4bb497924bd674f8ca0cb7fdf"
+        }
+      ]
+    }
+  ]
+}

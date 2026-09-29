@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "batch_id": "shared-rodents-pilot-v1",
+  "assets": [
+    {
+      "asset_id": "white-rat-v1",
+      "native_name": "giant white rat",
+      "kind": "creature",
+      "scope": "Shared rodent pool; KorPul DEFAULT/HIDEOUT and rat-nest first, other importing zones later",
+      "gate": "hold",
+      "gate_reason": "Exact native image/add_mos/stealth and runtime identity must be recorded before generation; source declaration alone is insufficient.",
+      "max_attempts": 2,
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 70,
+          "anchor": "name = \"giant white rat\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Use camera, matte finish and physical disc only; do not copy brown rat silhouette."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_rodent_giant_white_rat.png",
+          "sha256": "250b99cf4660c731aaaa3cf978df751978a65e2c084534152563c9c02199ef1a",
+          "role": "identity",
+          "note": "Native species and coat reference, not camera or faction styling."
+        }
+      ],
+      "render_evidence": [],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One large adult rat with a pointed muzzle, small round ears, four feet and one long naked tail. Ivory fur, alert half-upright front body, separated front paws and tail curling to the left.",
+        "contrast": "Existing brown rat is a compact low warm-brown mound. White rat must be light-valued with a tall triangular front silhouette; grey rat medium-valued with a wide low profile and an open tail shape. Do not use coat color alone.",
+        "composition": "One complete animal. Paws, ears and tail stay within the disc; avoid a tail crossing the upper-right UI margin. Make the muzzle and feet readable as broad separate shapes.",
+        "palette": "Muted ivory and warm bone shadows, soft pink-grey ears, clear darker facial features."
+      }
+    },
+    {
+      "asset_id": "grey-rat-v1",
+      "native_name": "giant grey rat",
+      "kind": "creature",
+      "scope": "Shared rodent pool; KorPul DEFAULT/HIDEOUT and rat-nest first, other importing zones later",
+      "gate": "hold",
+      "gate_reason": "Exact native image/add_mos/stealth and runtime identity must be recorded before generation; source declaration alone is insufficient.",
+      "max_attempts": 2,
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 132,
+          "anchor": "name = \"giant grey rat\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Use camera, matte finish and physical disc only; do not copy brown rat silhouette."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_rodent_giant_grey_rat.png",
+          "sha256": "60fde8efbd35224502f5168b3c641c0b0461f17131745eb736f3c99dd4bb0fe6",
+          "role": "identity",
+          "note": "Native species and coat reference, not camera or faction styling."
+        }
+      ],
+      "render_evidence": [],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One large adult rat with a pointed muzzle, small round ears, four feet and one long naked tail. Medium cool-grey fur, long low horizontal torso facing right, front feet apart and a clearly separated tail S-curve.",
+        "contrast": "Existing brown rat is a compact low warm-brown mound. White rat must be light-valued with a tall triangular front silhouette; grey rat medium-valued with a wide low profile and an open tail shape. Do not use coat color alone.",
+        "composition": "One complete animal. Paws, ears and tail stay within the disc; avoid a tail crossing the upper-right UI margin. Make the muzzle and feet readable as broad separate shapes.",
+        "palette": "Medium grey broad facing planes and pale bone-grey edge highlights. Do not lose the back against the dark disc. No green poison cloud."
+      }
+    }
+  ]
+}

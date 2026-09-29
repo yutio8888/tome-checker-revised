@@ -1,0 +1,1604 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "losgoroth",
+      "master": "masters/losgoroth-v1.png",
+      "sha256": "b2f4bfd4cfac0f8a960287c4376f7591b03a886e204c6291f18dae7715f4acb7",
+      "exports": [
+        {
+          "path": "sprites/48/losgoroth.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -11.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2acce40e86ad2115c57e86d58f3639e0bfdbf897f538e4c5bd9e925a48f0c823"
+        },
+        {
+          "path": "sprites/64/losgoroth.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -11.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "54bc2d07026a8e5925ce114d4ce3d56703b24abaaeaad6f73c5b81a17c5f4733"
+        },
+        {
+          "path": "sprites/96/losgoroth.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -11.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "895e2224e74b6c036f7af1f7eedf533db20c0c7e03069a9aafad138097dc16ef"
+        },
+        {
+          "path": "sprites/128/losgoroth.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -11.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "75f4b290db0727ee9e8877e3d0e8a6f047af07a6d65301b26c3b0f2ddc2622d9"
+        },
+        {
+          "path": "sprites/256/losgoroth.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -11.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "56fe2cab325c81acb3d97287ea423a22092ab96536f2bd2b8cdf95842b73c914"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -0.02,
+        "max_sector_intrusion": 1.8,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "manaworm",
+      "master": "masters/manaworm-v1.png",
+      "sha256": "3cb1b7b3b3d6ddab0bc0e0dc87bf8d01290cb69ad9beda9119a957527db1cc2a",
+      "exports": [
+        {
+          "path": "sprites/48/manaworm.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            76,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -11.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b2c461ace6e420152635944820dc248e5a13ca81e6a62019fa4f7b699c090b14"
+        },
+        {
+          "path": "sprites/64/manaworm.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            76,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -11.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9a5f29e257b44ff8ccb3f4450d9d10660aee1bed2019e3e095b3174da53e983f"
+        },
+        {
+          "path": "sprites/96/manaworm.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            76,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -11.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "dac7f0669b81b45639ae71a706f01d5256df00045429387883c7551a433f5e04"
+        },
+        {
+          "path": "sprites/128/manaworm.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            76,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -11.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e107719c4f255a92a9e4c0a2fc08cb5d6833b1b8633d8577063b7e4315abffa6"
+        },
+        {
+          "path": "sprites/256/manaworm.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            76,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -11.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4d13aa944fa3b45441aae4de4fde454746c33baf13d827086794aad8a0cb91df"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.03,
+        "max_sector_intrusion": 2.48,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "telugoroth",
+      "master": "masters/telugoroth-v1.png",
+      "sha256": "1f8d796b6b23f3ca60c9da6b79548a9e3018bd6152c1f44574b85f12ccc559b0",
+      "exports": [
+        {
+          "path": "sprites/48/telugoroth.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1169,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "86aae5afbb5d14009e1ebb68a0ed9fc0d029ff22bf94cae546cf3d3392ab2014"
+        },
+        {
+          "path": "sprites/64/telugoroth.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1169,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1c03cc8010aefa12be4d46f208e3cc62e3fc337d74494ac71d75ecb29fc109d1"
+        },
+        {
+          "path": "sprites/96/telugoroth.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1169,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6451722001ace590f3593fe90a389761d680cee58b9abe78d29eed62e6f3e90f"
+        },
+        {
+          "path": "sprites/128/telugoroth.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1169,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bb5acb338d2853953bb2831809612edd038fd4c2196f82286e91097aacaa3f2c"
+        },
+        {
+          "path": "sprites/256/telugoroth.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1169,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ff5fcb2d7837162bea3136c109fdae087f4b06c1c325bf8156ff4cb0418b4882"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.63,
+        "max_sector_intrusion": 1.11,
+        "max_opaque_radius": 0.8604,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "gwelgoroth",
+      "master": "masters/gwelgoroth-v1.png",
+      "sha256": "383047a85ff5135516c68aa14167258d6019a6fbb627eeeae7a676e43e4005ac",
+      "exports": [
+        {
+          "path": "sprites/48/gwelgoroth.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "96f181e3ef733dd70c554c79abb7e38160df83c444d66c7c815a73ec716d3bcb"
+        },
+        {
+          "path": "sprites/64/gwelgoroth.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d9cd5e6bb84f53fc5016782024a4859f9bc5233bce202e0def47fef51094c223"
+        },
+        {
+          "path": "sprites/96/gwelgoroth.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c61d48c7bf01ed54dae8cb8558ab9a7ab84e5174ac27936a9b98bce1b3a25939"
+        },
+        {
+          "path": "sprites/128/gwelgoroth.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "eaa449f44eb9ccf598a9e2b38c48e1d43b0a2489256d3c7ca2a200c168e11c69"
+        },
+        {
+          "path": "sprites/256/gwelgoroth.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "eac4468190528318ece4b5d39be40c56adcb2162716701752b4d3609e53afb41"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.0,
+        "max_sector_intrusion": 0.89,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "greater-gwelgoroth",
+      "master": "masters/greater-gwelgoroth-v1.png",
+      "sha256": "fa4322207aeb5eb5767d3a22cf6a9ac856fe77f9448c67b0800ebd5e976dc83c",
+      "exports": [
+        {
+          "path": "sprites/48/greater-gwelgoroth.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -10.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d68b2349b7b9234fb6ca3a1193e06cbb4c5edcec1d7176efbf2b32ba0e657fe6"
+        },
+        {
+          "path": "sprites/64/greater-gwelgoroth.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -10.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "49ca6f4b42a5f8d027c16499a3bbdc7bcc83cfb63bcfbd52078f4dac40ac51cd"
+        },
+        {
+          "path": "sprites/96/greater-gwelgoroth.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -10.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7a17a1c5feb0d0e59999587a6ab00ddf55e92a661c081db5b36efb0e4b1e2705"
+        },
+        {
+          "path": "sprites/128/greater-gwelgoroth.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -10.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "059e9c32d71efdddc6063d2926dfa7c6b14e957cc51dc392baf5a59f1b19cfaf"
+        },
+        {
+          "path": "sprites/256/greater-gwelgoroth.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -10.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b320c4ec0339603bc68044e4b46a494324ccfd68b27cbe18a5584cf667a78e33"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.78,
+        "max_sector_intrusion": 18.67,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ultimate-gwelgoroth",
+      "master": "masters/ultimate-gwelgoroth-v1.png",
+      "sha256": "3573da446a9b50286f02831d539b8906a5200b13f888743c7e5120ff0f9fdce4",
+      "exports": [
+        {
+          "path": "sprites/48/ultimate-gwelgoroth.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -9.046512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d3695795e60108179a7a64fa389c351fcfc5d83ac29012ddbc979802730a2b42"
+        },
+        {
+          "path": "sprites/64/ultimate-gwelgoroth.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -9.046512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0493736fed010142a638fd316843a7b2138d2534dca7b589507ee166781b937f"
+        },
+        {
+          "path": "sprites/96/ultimate-gwelgoroth.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -9.046512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3cd051747b02284b4725e665f8c44ff4fffd8e763b06cd5418da64336f75c77a"
+        },
+        {
+          "path": "sprites/128/ultimate-gwelgoroth.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -9.046512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "afc7305e86b30fdaac88f108f60aab44baa6ff000cdc64d6fb47d091647efb3e"
+        },
+        {
+          "path": "sprites/256/ultimate-gwelgoroth.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -9.046512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e300d5443f6e14f758d75584e8a5b239ac7f729fb951d7c799622f48657eea90"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.47,
+        "max_sector_intrusion": 18.66,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "faeros",
+      "master": "masters/faeros-v1.png",
+      "sha256": "a0c15a8c990cb82022b9d511c4d3da88f4ce4d31af8a60616776e4f584d5e5d7",
+      "exports": [
+        {
+          "path": "sprites/48/faeros.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -12.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cad2736656403502b39d09e68866f26c4717d0bbd52776bc4463502bd1668c9e"
+        },
+        {
+          "path": "sprites/64/faeros.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -12.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "985b9e50e379fb7ed56f010e59319e1e6c07d198c6af0aa2601e58c9d43fcd9f"
+        },
+        {
+          "path": "sprites/96/faeros.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -12.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "752d269931c22d15ac282d8c3652bbf9a4e4a6b60ded3ba8cb6aeefecde241f6"
+        },
+        {
+          "path": "sprites/128/faeros.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -12.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c421856859ac103f79a9e09d931e91ca893832beea3228bad57c1a1da9f843b0"
+        },
+        {
+          "path": "sprites/256/faeros.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -12.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a9334f91e91502e6857e53b57180293d63e23586f6efd6049a548553aa2d8104"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.05,
+        "max_sector_intrusion": 3.53,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "greater-faeros",
+      "master": "masters/greater-faeros-v2.png",
+      "sha256": "1a9e321fe86e5776844b8373f5ec753497ea77bcb488fcb0064fb4620686a139",
+      "exports": [
+        {
+          "path": "sprites/48/greater-faeros.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            77,
+            1168,
+            1174
+          ],
+          "export_window": [
+            -11.290698,
+            -12.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2e9b66266847d8b0ae7c68452054c07367d84936fa0d65377c69ebe3511fb0d4"
+        },
+        {
+          "path": "sprites/64/greater-faeros.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            77,
+            1168,
+            1174
+          ],
+          "export_window": [
+            -11.290698,
+            -12.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7a70ac203a59afd5eccbec58d8df87896b96e081505bef54d4130b9f1e9453fa"
+        },
+        {
+          "path": "sprites/96/greater-faeros.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            77,
+            1168,
+            1174
+          ],
+          "export_window": [
+            -11.290698,
+            -12.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "117509497fe40b14e2ac4345ce8a80d6f49f4dc4acdfe0d68cebfb36db1e6ce2"
+        },
+        {
+          "path": "sprites/128/greater-faeros.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            77,
+            1168,
+            1174
+          ],
+          "export_window": [
+            -11.290698,
+            -12.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a9a070918dbf22134ca10578260dc399d13aa0b843edc224f277e30a015ab66b"
+        },
+        {
+          "path": "sprites/256/greater-faeros.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            77,
+            1168,
+            1174
+          ],
+          "export_window": [
+            -11.290698,
+            -12.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e3f5354141dead45e3b43d95913df2f16139652ec353e01d86b3b8f361038a9e"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -5.12,
+        "max_sector_intrusion": 2.14,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "fyrk",
+      "master": "masters/fyrk-v1.png",
+      "sha256": "70abc00132e4d1505f58fefb5eef924e507a6222fc1ea3a3ea319eb4afeb58dd",
+      "exports": [
+        {
+          "path": "sprites/48/fyrk.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            63,
+            1168,
+            1172
+          ],
+          "export_window": [
+            -17.767442,
+            -27.267442,
+            1289.534884
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d50b5bd6e48d544973a4caa4e2cee1524ac9dc72961328d9b16febf79e0cf5c9"
+        },
+        {
+          "path": "sprites/64/fyrk.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            63,
+            1168,
+            1172
+          ],
+          "export_window": [
+            -17.767442,
+            -27.267442,
+            1289.534884
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1db3f72c2b2afcefcf391543306c529b1fdac9fd13d9ae0042c1240eae7bd181"
+        },
+        {
+          "path": "sprites/96/fyrk.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            63,
+            1168,
+            1172
+          ],
+          "export_window": [
+            -17.767442,
+            -27.267442,
+            1289.534884
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2487117c00ec87577ab70364df0863af9d34841d7352663f492ab1ebd8280cf5"
+        },
+        {
+          "path": "sprites/128/fyrk.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            63,
+            1168,
+            1172
+          ],
+          "export_window": [
+            -17.767442,
+            -27.267442,
+            1289.534884
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6dacd202be43cb34c4396fda3e590f5d0b7a5d8dbd33f6d7ad326cfeb857f59b"
+        },
+        {
+          "path": "sprites/256/fyrk.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            63,
+            1168,
+            1172
+          ],
+          "export_window": [
+            -17.767442,
+            -27.267442,
+            1289.534884
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0eef8daeda41a280d371762d9f4788d0cc4cc606fa819666c9d91848bcf8c60c"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -4.6,
+        "max_sector_intrusion": 9.4,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "umber-hulk",
+      "master": "masters/umber-hulk-v1.png",
+      "sha256": "c192b4d295b04f6d589fd923869b7386b2326f5fa54a8e4e390455230bd8aaaf",
+      "exports": [
+        {
+          "path": "sprites/48/umber-hulk.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -12.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f58bccda4d775bcff39eecd2ffc6f1c844eb9c2bde581b65705ad26c79475016"
+        },
+        {
+          "path": "sprites/64/umber-hulk.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -12.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4d465e5e86003fba96fab363b4a309435891b4cc51c557f935b6683bf955b530"
+        },
+        {
+          "path": "sprites/96/umber-hulk.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -12.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1a8298950f22b05ab15b0da859c23628614c81d9a4dd74fb470a62a25efa00ff"
+        },
+        {
+          "path": "sprites/128/umber-hulk.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -12.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bdef0e625a49a184b9993975ca584ec216675e7fbfdf3b1b22ec17f5559bd266"
+        },
+        {
+          "path": "sprites/256/umber-hulk.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -12.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ca6e44d22881ae78daac39695ebaa70cfb2ac894a18daf4971909a8175adb108"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.77,
+        "max_sector_intrusion": 3.77,
+        "max_opaque_radius": 0.8559,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "xorn",
+      "master": "masters/xorn-v1.png",
+      "sha256": "4364aaeb8da57b3b358b085ebfff82982463139fb3ef568ac4935657139ee17a",
+      "exports": [
+        {
+          "path": "sprites/48/xorn.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -13.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e809c018bb83efde8c477c1c8a0ffd99d5ec93eadb42e80e408794624f409fc4"
+        },
+        {
+          "path": "sprites/64/xorn.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -13.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "990ba0cc92b6fda494a5251066d7670ca64688f6d1025185e06234d2f0aeb8c2"
+        },
+        {
+          "path": "sprites/96/xorn.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -13.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b69bf96f5cb43c47624e2f9b9fc8e97ffc9aacde268e2bec088af52ec41ce770"
+        },
+        {
+          "path": "sprites/128/xorn.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -13.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "382fd279a0d075a946f272ceebeed55a2c53f96d3b7ced9c8a2f359f794504ba"
+        },
+        {
+          "path": "sprites/256/xorn.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -13.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5b1ead221132127495998f11f7a74a7cf169505aad26c675cf64345f83f35c7d"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.27,
+        "max_sector_intrusion": 1.57,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "xaren",
+      "master": "masters/xaren-v1.png",
+      "sha256": "a004dffede130a9cc15c99b4df5e2a7395e19f21fabfe4dd425a3139b51bc490",
+      "exports": [
+        {
+          "path": "sprites/48/xaren.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2e6fcc8c87eb33e21f323055c7f1ed1caa70d8c487d4f38a2dc2ebfb54edd980"
+        },
+        {
+          "path": "sprites/64/xaren.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3b1944b36997a418724f6dc9f8bdbb5dd3808b9fed93659abf52636f41810663"
+        },
+        {
+          "path": "sprites/96/xaren.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1322d8b9674e4380c844a45ba765236c36c5666fdfc1f705e25ff96f897551ac"
+        },
+        {
+          "path": "sprites/128/xaren.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6ad86f865da45e14ba7f6bb64474df425f6f00cb5e6a1421f52277b362a04b5c"
+        },
+        {
+          "path": "sprites/256/xaren.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c06d61d71cd0fcd940c27dc655e5fc12002dbe4a372755e83d7327ffa678bcd9"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 3.97,
+        "max_sector_intrusion": 7.86,
+        "max_opaque_radius": 0.8621,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "elven-cultist",
+      "master": "masters/elven-cultist-v1.png",
+      "sha256": "205ab4b909c9082de16961f53777b8558507317c58a71b3a547190d87a0b77b9",
+      "exports": [
+        {
+          "path": "sprites/48/elven-cultist.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -9.627907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c4d4922f58f3bf8630ebec03289967b6ec795ac659920b46fa4ef59c616fbf94"
+        },
+        {
+          "path": "sprites/64/elven-cultist.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -9.627907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8cbd1bcb559e5be1b58216038172e584bd33d0325ef4437e7b48b0794dce4851"
+        },
+        {
+          "path": "sprites/96/elven-cultist.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -9.627907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e5ffe523df7742482781e3816dea770c6a2e8dca88766afca111361f19bbfafd"
+        },
+        {
+          "path": "sprites/128/elven-cultist.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -9.627907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e45dd5361839fbcdc7b0f5929d31ad1c2a60cafb86cec8318441477b1602eb3f"
+        },
+        {
+          "path": "sprites/256/elven-cultist.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -9.627907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1eca10c0e489c2028c30e21017109ddc5aa96ba3e63ea99e09b7c2723fe9a9ef"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 3.65,
+        "max_sector_intrusion": 4.5,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

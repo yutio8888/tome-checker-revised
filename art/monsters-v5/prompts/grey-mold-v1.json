@@ -1,0 +1,69 @@
+{
+  "asset_id": "grey-mold-v1",
+  "intent": "generate",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: stylized-concept. Create one GREY MOLD creature token as a genuinely transparent square PNG, ideally 1024x1024, for a tabletop RPG at 48/64/96px. Reference 1 cave troll defines matte painted carved miniature style, steep overhead camera, soft upper-left light and physical base. Reference 2 is native grey mold identity. Subject: a single low spreading grey fungal colony, an attackable immovable ACTOR, not dungeon floor decoration. Sculpt a coherent irregular cluster of 7 to 9 broad overlapping fleshy fan-shaped lobes, softly folded rounded fluted surfaces with a few coarse gill ridges, darker connected basal growth and deep narrow separations. Smoky medium grey with pale grey broad upper surfaces, charcoal crevices. Low mound with several differing heights, asymmetric scalloped outer silhouette, visibly living soft leathery growth rather than stones, brains, worms, coral spikes or conventional stem mushrooms. Large broad shapes readable when tiny, avoid granular noise. Occupies 72-78% of a nearly circular thin neutral dark grey-brown base, which occupies 86% of square. Fine subdued dark bronze-grey physical rim, faint base texture only. Entire colony remains well inside rim, clear empty perimeter; no tendril or spore outside. Match reference base thickness, orientation and light. Real transparent alpha outside base, no shadows outside. No ground tile, floor texture outside disc, rocks, grass, scenic debris, colored fungus, magic, smoke, particles, face, eyes, mouth, rank/faction/health/shield/status rings, words, numbers, symbols, watermark. Top corners remain available for UI. One colony on one base, no sheet.",
+  "references": [
+    "art/monsters-v3/masters/cave-troll-v3.png",
+    "game/modules/tome/data/gfx/shockbolt/npc/immovable_molds_grey_mold.png"
+  ],
+  "reference_roles": [
+    "style/base reference",
+    "identity or style supporting reference"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-cd834934-af55-4452-ae67-4e15eb8e782d.png",
+  "saved_output_path": "art/monsters-v5/masters/grey-mold-v1.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Byte-for-byte original copy; mechanical C downsampling only in sprites, no artwork editing.",
+  "selection": "static-reviewed-integration-candidate",
+  "review": "Broad grey folded fan lobes and deep seams distinguish an actor colony from floor decoration. Within base.",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "generated_at_utc": "2026-09-27",
+  "sha256": "33ec16b7f1cf6425c03b096262874171746eab885f4847991940756955cb48cd",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      97,
+      45,
+      1230,
+      1254
+    ],
+    "visible_alpha_bbox": [
+      102,
+      89,
+      1154,
+      1160
+    ],
+    "transparent_pixels": 686952,
+    "partial_alpha_pixels": 885095,
+    "opaque_pixels": 469,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "small_size_review": {
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "method": "Existing C exporter, each output actually opened using view_image original",
+    "runtime_verified": false
+  }
+}

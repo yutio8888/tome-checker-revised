@@ -1,0 +1,82 @@
+{
+  "id": "bee-swarm-v1",
+  "created_date": "2026-09-26",
+  "tool": "built-in image_gen.imagegen",
+  "skill": "~/.codex/skills/.system/imagegen/SKILL.md",
+  "use_case": "stylized-concept",
+  "intent": "generate",
+  "prompt": "Use case: stylized-concept.\nAsset type: one transparent PNG monster-swarm miniature for a tactical board game, readable at 64px.\nPrimary request: create a BEE SWARM creature token consisting of exactly THREE clearly readable bee miniatures on ONE round shallow neutral base. This is one collective monster tile.\nInput images: Image 1 is the forest-troll token STYLE reference only: matte hand-painted sculptural material, high overhead oblique camera, neutral gray-brown shallow round base and soft upper-left light. Do not include any troll. Image 2 is the original bee swarm SPRITE IDENTITY reference: gold and black bees with translucent pale wings, no hornet exaggerations.\nSubject: three chunky bees grouped as a compact triangular swarm, one largest bee in the front-middle and two slightly smaller distinct bees behind either side. Each bee has a warm ochre-gold and black striped plump abdomen, compact dark head with short antennae, a furry-looking painted thorax and two broad visible pale gray translucent wing shapes. Make each body sufficiently large and separated that THREE bees can be counted at 64px. Insect legs are short understated shapes, not a tangle. Wings must remain clearly bee-like, not butterfly wings, leaves or propellers.\nStyle: fantasy tabletop carved resin or wood miniature painted by hand, matte broad brush strokes and simplified readable forms with controlled detail. It should fit a set of sculptural monster tokens rather than looking like a scientific insect photo.\nComposition: high overhead oblique camera. One centered nearly circular neutral gray-brown thin base occupying around 86% of the square canvas. Swarm fills the usable disc area but all bees, antennae and wing tips stay strictly within the base silhouette. No bee crossing the rim. Arrange bees very low above the disc, with only discreet shadows INSIDE the base. No visible flight stands, sticks, clear acrylic rods or supports. The rim stays continuous and undecorated.\nLighting: soft upper-left light, short contact shading inside disc only, no glow.\nBackground: genuine transparent PNG alpha completely outside the base, including the corners, no floating dots or fragments around it.\nAvoid: honeycomb, hive, flowers, plants, pollen cloud, scenery, floor, water, extra insects, faction rings, colored rim, red/blue/green status border, text, labels, numbers, insignia and watermark.",
+  "references": [
+    {
+      "path": "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/forest-troll-v1.png",
+      "role": "style only: camera, neutral thin base, matte painted miniature material and lighting"
+    },
+    {
+      "path": "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/bee_swarm.png",
+      "role": "original species identity; inspected with view_image"
+    }
+  ],
+  "source_identity_evidence": "data/general/npcs/swarm.lua:64-65: threatening buzzing swarm; original sprite confirms black/gold bodies and pale wings.",
+  "source_tool_path": "~/.codex/generated_images/01a0dd25-86d8-71f0-8868-f3586117d75e/exec-3f83d78d-30e4-4c11-9341-74a4194a8187.png",
+  "saved_path": "masters/bee-swarm-v1.png",
+  "processing": "Copied original generated PNG byte-for-byte. No cleanup, masking, repaint, recolor or resizing performed by this agent.",
+  "alpha_inspection": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox_by_min_value": {
+      "1": [
+        0,
+        9,
+        1222,
+        1254
+      ],
+      "8": [
+        164,
+        170,
+        1090,
+        1092
+      ],
+      "32": [
+        165,
+        171,
+        1088,
+        1092
+      ],
+      "128": [
+        166,
+        172,
+        1088,
+        1091
+      ],
+      "250": [
+        166,
+        173,
+        1087,
+        1091
+      ]
+    },
+    "fully_transparent_pixels": 894194,
+    "fully_opaque_pixels": 231,
+    "low_alpha_pixels_1_to_7": 9025,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sha256": "d1d42774e1ccb58749594e05c4cc829b99f17a4fcae112ecd2e376e6f28352c3"
+  },
+  "review": {
+    "inspected_with": "view_image on actual saved master",
+    "visual": "Exactly three clearly separated bee forms, readable black/gold striped bodies and pale wings. No flight stands or particles. All visible wings/antennae remain inside the disc.",
+    "transparency": "Real RGBA alpha with zero-alpha corners. Very faint native alpha 1–7 dust occurs beyond the visible disc; recorded and preserved. Alpha>=8 bbox is for sizing inspection only.",
+    "status": "Recommended for parent uniform export and 48/64/96px inspection; not a gameplay-validated asset."
+  }
+}

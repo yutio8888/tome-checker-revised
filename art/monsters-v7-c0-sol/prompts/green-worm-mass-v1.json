@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "asset_id": "green-worm-mass",
+  "tool": "image_gen.imagegen",
+  "original_output_path": "~/.codex/generated_images/01a0e205-35a6-7ed0-9868-ecb9672f8a8f/exec-b67c2892-500f-4fa0-b248-7b02cbacd889.png",
+  "saved_output_path": "art/monsters-v7-c0-sol/masters/green-worm-mass-v1.png",
+  "sha256": "51427c0fc90fcddc9bf9556d1bd8b788d41e1c97038162c8b065451bae249791",
+  "prompt_sha256": "8b26ec921ce0490a851916e44fb28bd8d9ec6be4302a2976dafcbe66cb604982",
+  "full_prompt": "Use case: stylized-concept. Deliver ONE square transparent PNG miniature token for Tales of Maj'Eyal: green worm mass. Request 1024 x 1024 pixels; retain the tool's native resolution and alpha.\n\nIdentity brief: A group of several individually visible small segmented green worms, not one snake or one blob. Six to nine somewhat slender worm bodies radiate outward from a loose central tangle; distinct rounded heads and dark gaps show where bodies separate. A few outer bodies bend into short hooks.\nFamily separation: Existing white worm mass is a compact bright mound of short thick creamy grubs. This green worm mass has an open radial starburst silhouette, longer thinner outer bodies, large dark gaps and darker olive-green overall value. Distinction must survive grayscale and 48px.\nComposition: One low physical group on one disc, viewed from high three-quarter overhead. Every worm fully inside rim, no cut ends at boundary. No worm head in upper-right UI margin. Central bodies retain readable broad segments after reduction; avoid fine noisy hairlike strands.\n\nMatch the designated style reference's steep overhead three-quarter camera, upper-left soft light, matte painted miniature finish and thin charcoal-brown physical disc with a restrained bronze-grey bevel. The disc occupies about 82% of the canvas width. All anatomy and equipment must remain inside it, with a clear margin. Use broad readable value planes and a crisp silhouette at 48/64/96px; dark bodies need a broad pale rim or lighter facing plane, not tiny glowing outlines. Keep identity-defining features out of the upper-right rank area and upper-left interaction-marker area. Native references establish identity; they do not override the style reference's camera or disc. Do not copy another species from a style reference.\n\nPalette/material: Muted moss and olive greens, yellow-green broad lit upper planes, deep olive segment undersides. Acid is suggested by natural green coloration only: no pools, droplets, poison fog, glow or tactical effect.\nTrue transparent alpha outside the disc; no painted checkerboard. Keep the entire disc in frame and transparent corners. This is a static identity illustration. Add no faction ring, health arc, shield, rank, crown, UI marker, number, text, aura, scene or floor outside the disc. No recolor-only substitute for a different species, no montage and no alternate variants in one image. Anatomy must match the identity brief, including intentional missing limbs.\n\nReference roles:\nImage 1: style — Use the approved high three-quarter overhead camera, matte sculpted fur, dark physical disc and muted copper-grey rim; do not copy its body or tail pose.\nImage 2: identity — Native multiple green worms and acid identity; ignore original black background/camera.\nImage 3: family — Existing white worm mass: distinguish by radial longer silhouette and darker value, not hue alone.\n",
+  "references": [
+    {
+      "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+      "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+      "role": "style",
+      "note": "Use the approved high three-quarter overhead camera, matte sculpted fur, dark physical disc and muted copper-grey rim; do not copy its body or tail pose."
+    },
+    {
+      "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_worms_green_worm_mass.png",
+      "sha256": "193afd6822505257661eda5ce6c4a0ab97d61498c725a8e19999025c99db1214",
+      "role": "identity",
+      "note": "Native multiple green worms and acid identity; ignore original black background/camera."
+    },
+    {
+      "path": "game/addons/tome-checker-revised/art/monsters-v4/masters/white-worm-mass-v1.png",
+      "sha256": "ce957c3fa428731ff049cd16879e5fbc9fd75c723e080abc54fb09ebce88fcca",
+      "role": "family",
+      "note": "Existing white worm mass: distinguish by radial longer silhouette and darker value, not hue alone."
+    }
+  ],
+  "attempt": 1,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alpha_bbox": [
+      104,
+      110,
+      1146,
+      1154
+    ]
+  },
+  "preserved_original_bytes": true,
+  "mechanical_check": "pass",
+  "visual_review": "pending",
+  "runtime_review": "pending",
+  "accepted": false
+}

@@ -1,0 +1,234 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-i-5",
+  "assets": [
+    {
+      "asset_id": "crimson-ooze",
+      "native_name": "crimson ooze",
+      "scope": "general vermin/oozes (ooze.lua; rank 2, level 25+, 50% clone_on_hit)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 127,
+          "anchor": "name = \"crimson ooze\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_oozes_crimson_ooze.png",
+          "sha256": "9399facbaec6fa0f4c5f7af35a36b69324916ca141ba0deaa5f0b8ef9d00ca09",
+          "role": "identity",
+          "note": "Native shape: larger deep-red glossy blob with lobes and two detached pieces."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/red-ooze.png",
+          "sha256": "6ef893b8b3abeb365533ca206a89989926a88d4dff17445865a7250cb584284d",
+          "role": "family",
+          "note": "Shipped red ooze (bright orange-red flat branching blob): crimson ooze must be heavier, taller, deeper wine-red and shaped differently."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A large, heavy, deep wine-crimson ooze rearing up into one thick glossy wave-shaped mound with a curling overhanging lip along its front, three fat drips hanging from that lip, and one smaller round bud of the same ooze splitting off beside it, joined to the main mass by a thin strand. Bright rose-pink specular streaks along the wave crest. No eyes, no mouth, no face.",
+        "contrast": "Red-hued siblings: red ooze (bright orange-red flat branching blob), red jelly (round red clover dome with dark seeds), crimson crystal (two chunky prisms), sanguine experiment (smooth dark scarlet clot). A first draft of this token was rejected as a near-black wine blob that merged with red jelly and the sanguine experiment at 48px. This redraw keeps the rearing wave with overhanging lip, hanging drips and split-off bud (silhouette) but in a light translucent raspberry-rose (value/hue) with a broad pale rim on the wave crest; it must never be dark maroon.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Luminous raspberry-rose crimson: the wave face in bright strawberry-rose with pink-white highlights and broad lighter pink planes, deep wine only in thin creases and under the lip; overall clearly mid-light in value (at least as light as a bright red ooze), cool and pink-leaning rather than orange. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=crimson ooze, define_as=None, type=vermin/subtype=oozes, unique=False); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. formula: no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint in the entity or its base; NPC.lua:33 default-image formula gives the file (same path the shipped black/yellow/red/blue ooze resolved to in the E1 fixture run); generic actor.image==entry.image single path. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    },
+    {
+      "asset_id": "kryl-feijan-acolyte",
+      "native_name": "Acolyte of the Sect of Kryl-Feijan",
+      "scope": "crypt-kryl-feijan non-unique humanoid/elf, define_as ACOLYTE (explicit image= reusing the elven corruptor portrait)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/crypt-kryl-feijan/npcs.lua",
+          "sha256": "25fe3830a2b9dbbb4f5a90ec092f3e542069bf67a67e6baec3e2c412b087181f",
+          "line": 121,
+          "anchor": "define_as = \"ACOLYTE\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/crypt-kryl-feijan/npcs.lua",
+          "sha256": "25fe3830a2b9dbbb4f5a90ec092f3e542069bf67a67e6baec3e2c412b087181f",
+          "line": 123,
+          "anchor": "image = \"npc/humanoid_shalore_elven_corruptor.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_shalore_elven_corruptor.png",
+          "sha256": "cc147ada2ea82016b782c555dd02e60ce514dcbf71232e9e8d3be82581439577",
+          "role": "identity",
+          "note": "Native portrait (shared with the elven corruptor): an elf in dark robes. The acolyte must read as a mad cultist, not this pointed-hat staff caster."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/necromancer.png",
+          "sha256": "6807e8a467ab87d4a6b3d87206296c94dc93db38683ae531c4ee7499721ef736",
+          "role": "family",
+          "note": "Shipped Necromancer (bald human in slate-violet robe with staff): the acolyte is an elf with long hair, pointed ears and a dagger, no staff."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A bare-headed elven cultist with long pale silver hair swept back, long pointed ears, wide staring mad eyes and a thin pale face, in a floor-length dusty plum-mauve robe with wide bell sleeves lined in bright crimson and a bright blood-red sigil sash: one hand raised holding a small glowing crimson blood orb, the other hand low holding a curved ritual dagger with a red tip. No hat, no hood, no staff. Compact upright pose.",
+        "contrast": "Nearby humanoids: Necromancer (bald human, slate-violet robe, staff), Harno (hooded blue-grey cloak, two knives), Celia (pale gown and staff), Urkis and Fillarel (elf mage in gold). The elven corruptor keeps native art and wears a pointed hat with a tall staff. A first draft of this token was rejected for a near-black robe at 48px. The acolyte has bare silver hair, long ears, bell sleeves with a red orb and a dagger (silhouette), in a clearly light mauve-plum robe with bright crimson accents (hue/value).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Dusty plum-mauve robe as light as a mid-tone slate-violet (lifted with broad pale mauve fold planes), bright crimson lining and sash, pale skin and silver hair as the value break, glowing crimson orb, pale steel dagger; nothing darker than mid tone, never a black or near-black robe. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Acolyte of the Sect of Kryl-Feijan, define_as=ACOLYTE, type=humanoid/subtype=elf, unique=False); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. explicit image= (npc/humanoid_shalore_elven_corruptor.png, shared natively with the elven corruptor); standalone entry, no nice_tile/add_mos/shader/anim/moddable_tile; the catalog entry is bound to the exact name and define_as ACOLYTE so the corruptor keeps native art. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    },
+    {
+      "asset_id": "zquikzshl",
+      "native_name": "Z'quikzshl the skeletal mold",
+      "scope": "general unique undead/molds (molds.lua; rarity 50; type overridden from immovable; explicit image=)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/molds.lua",
+          "sha256": "0b40d03a904bb0f4a569904a2207a53eb7a40c09b4bd1f410b0d90c2327595ef",
+          "line": 104,
+          "anchor": "name = \"Z'quikzshl the skeletal mold\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/molds.lua",
+          "sha256": "0b40d03a904bb0f4a569904a2207a53eb7a40c09b4bd1f410b0d90c2327595ef",
+          "line": 103,
+          "anchor": "type = \"undead\", subtype = \"molds\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/immovable_molds_skeletal_mold.png",
+          "sha256": "e36b47b98b626ea65f67b6bb20522c72e31b5c408bfc54172ace50140c96632f",
+          "role": "identity",
+          "note": "Native shape: a low pile of pale bones lying on a dark green mould mat."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/boney-experiment.png",
+          "sha256": "664939a15fc7eafcc3fb895a682b5552eda22098d43f9578f005cb3f4191c15b",
+          "role": "family",
+          "note": "Shipped boney experiment (bare ivory spiky bone pile): the mould must read as a green-violet mat over the bones, not a bare bone heap."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A low rounded dome-shaped mound of pale bones almost completely blanketed by a thick, bright, sickly moss-green mould mat with violet patches: only a skull at the front and the curved tops of a few ribs poke through the mould, plus one thigh bone end; a cluster of tall violet spore caps and fuzzy pale-green mould tufts stand on top. The whole mound reads as a fuzzy green mould dome first and a bone pile second, sitting fully inside the disc.",
+        "contrast": "Molds: green mold (cluster of olive bulbs), brown mold (round frilled disc), shining mold (tan coral stalks), grey mold (grey frilled fan); boney experiment (bare tan-ivory bone pile). A first draft of this token was a grey-green low-contrast bone heap that read as the boney experiment at 48px. This redraw is a bright moss-green fuzzy dome with violet caps and only a skull and rib tips showing (silhouette: dome plus tall caps; hue: bright green-violet, unlike the tan bone pile).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Bright moss-green and lime-tinged mould mat, mid-light in value, with violet-lilac patches and violet spore caps, pale sage fuzz on top, ivory skull and rib tips as small accents; nothing darker than mid tone. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Z'quikzshl the skeletal mold, define_as=None, type=undead/subtype=molds, unique=True); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. explicit image= npc/immovable_molds_skeletal_mold.png on the leaf; no nice_tile/add_mos/shader/anim/moddable_tile; type overridden to undead so the four immovable/molds tokens can never match it. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    },
+    {
+      "asset_id": "malevolent-dimensional-jelly",
+      "native_name": "Malevolent Dimensional Jelly",
+      "scope": "general immovable/jelly unique (jelly.lua; rarity 50, level 25+, DARKNESS)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 152,
+          "anchor": "name = \"Malevolent Dimensional Jelly\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/immovable_jelly_malevolent_dimensional_jelly.png",
+          "sha256": "391c4dcd351243e3df141ce201c938b82d98ff06a4d76e0d866c453fb6ecf2d1",
+          "role": "identity",
+          "note": "Native shape: dark glossy puddle with a starry window and curling tendrils at the rim."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/black-jelly.png",
+          "sha256": "d3583d6e349e2714c0c653f87f37e430d356c7fcce4a167c173f210aad1816d2",
+          "role": "family",
+          "note": "Shipped black jelly (black tar mound): this unique must be a lighter violet puddle with a starry opening, not a black mound and not blue jelly's spiral."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A flat glossy amethyst-violet jelly puddle with a wide round opening in its centre like a window into a bright star-filled night sky: inside the opening many tiny white stars and a luminous pale cyan-lilac nebula haze. Three thin curling tendrils lift from the puddle's rim with their tips curled over, and pale lavender highlights run along the whole rim. Slick and eerie, no eyes, no mouth.",
+        "contrast": "Jelly siblings: black jelly (black tar mound), blue jelly (bright blue dome with a dark spiral), green/white/yellow/red jellies (domes) and the ooze tokens. A first draft of this token had a dark indigo rim that read dim against the base at 48px. This redraw is a flat puddle with a central starry window and curled tendrils (silhouette) in a clearly lighter amethyst-lilac with pale rim highlights (value/hue), far lighter than the black jelly and unlike the saturated blue dome. No spiral body, no dome.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Light amethyst and lilac-violet jelly body at mid-light value with pale lavender rim highlights and bright white gloss, bright white star points and a luminous pale cyan-lilac window; the puddle must never be dark indigo or near-black. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Malevolent Dimensional Jelly, define_as=None, type=immovable/subtype=jelly, unique=True); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. formula: unique=true, no define_as, no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint in the entity or BASE_NPC_JELLY (the six other jellies each set an explicit image= on their own leaf; this one does not); NPC.lua:33 formula gives npc/immovable_jelly_malevolent_dimensional_jelly.png; generic actor.image==entry.image single path for a unique entry. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    }
+  ]
+}

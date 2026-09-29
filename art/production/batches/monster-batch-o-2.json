@@ -1,0 +1,168 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-o-2",
+  "assets": [
+    {
+      "asset_id": "slimy-ooze",
+      "native_name": "slimy ooze",
+      "scope": "ooze.lua loader (vermin/oozes, default-name image, non-unique, no define_as, no nice_tile); conclave-vault, ardhungol (rank 2, clone_on_hit, Slime Spit); no define_as",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 151,
+          "anchor": "name = \"slimy ooze\", color=colors.GREEN"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_oozes_slimy_ooze.png",
+          "sha256": "eceb5c919d06b239873ba52357e37e6490d4013934aa5b8ea8e91c9752cfa0e1",
+          "role": "identity",
+          "note": "Native shape: two stringy diagonal streaks of yellow-green slime with ragged fuzzy edges."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/green-ooze.png",
+          "sha256": "27877e4fa08aa9a9b225e42de28abc1d6bef620d0ea0738f1bdd72122df90b7b",
+          "role": "family",
+          "note": "Shipped green ooze (flat bright-green puddle with three round drops): the slimy ooze is NOT a puddle; it is stringy diagonal ropes of lime-yellow slime."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A slimy ooze seen from a steep overhead three-quarter angle: a knot of thick glistening ropes and strands of lime-yellow-green slime, two long diagonal ropes twisting around each other with drooping stringy tendrils and long sticky threads hanging off, small bright yellow highlights and translucent pale-lime sheen, a few flying slime flecks. No eyes, no face. Stringy, sticky and complete.",
+        "contrast": "Ooze family: the shipped green ooze is a flat rounded puddle with round drops, the shipped yellow ooze a flame-shaped splash. The slimy ooze is the STRINGY ROPE-KNOT of lime-yellow slime with drooping threads (silhouette: crossed diagonal ropes with long strings; hue: lime-yellow green; value: light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Bright lime and yellow-green slime with translucent pale-lime sheen and bright yellow highlights, darker olive only in small gaps; the slime must not cast green light or a green cast onto the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=slimy ooze, define_as=None, type=vermin/subtype=oozes, unique=False); details and hashes in evidence/monster-batch-o-20260929/source-contracts.json. base BASE_NPC_OOZE (vermin/oozes, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives vermin_oozes_slimy_ooze.png (64x64); talents: Slime Spit (activated gift, gifts/slime.lua); no sustains_at_birth; clone_on_hit clones keep the same name/image. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-o-20260929/source-contracts.json",
+          "sha256": "d8d01218f85afa424e662a8f08ea1dcfac1dc6aef902034dbb35f6b53f4b494b"
+        }
+      ]
+    },
+    {
+      "asset_id": "poison-ooze",
+      "native_name": "poison ooze",
+      "scope": "ooze.lua loader (vermin/oozes, default-name image, non-unique, no define_as, no nice_tile); conclave-vault, ardhungol (rank 2, clone_on_hit, Poisonous Spores); no define_as",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 165,
+          "anchor": "name = \"poison ooze\", color=colors.LIGHT_GREEN"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_oozes_poison_ooze.png",
+          "sha256": "ae2be716acf47ad12828fa4e79a6398a5f2d24bec67cd3e924b0ea4ce410aed0",
+          "role": "identity",
+          "note": "Native shape: a glossy violet blob with a lumpy top and two detached drops."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/crimson-ooze.png",
+          "sha256": "b54d7a186f8723dc52fb27674aa72164320e181213477f78c6a297f65ca79df3",
+          "role": "family",
+          "note": "Shipped crimson ooze (upright raspberry wave with drips): the poison ooze is a low rounded mound with mushroom-like spore caps growing out of it, not an upright wave."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A poison ooze seen from a steep overhead three-quarter angle: a low rounded glossy mound of bright violet-magenta slime, several small pale-yellow spore puffs and little lilac mushroom-like caps growing out of its top with tiny spore dots drifting off, wet violet highlights on the upper-left, a bubble or two, a couple of small drops at its base. No eyes, no face. Toxic, glossy and complete.",
+        "contrast": "Ooze family: the shipped crimson ooze is an upright dripping wave, the blue ooze a jagged splash, the green ooze a flat puddle. The poison ooze is the ROUND MOUND of bright violet slime studded with little spore caps and drifting yellow spores (silhouette: round mound with several small caps; hue: violet-magenta with pale yellow; value: mid-light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Bright violet-magenta slime with lighter lilac highlight planes and pale-yellow spore puffs; the darkest tone is a mid purple in small creases; no glow or purple cast on the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=poison ooze, define_as=None, type=vermin/subtype=oozes, unique=False); details and hashes in evidence/monster-batch-o-20260929/source-contracts.json. base BASE_NPC_OOZE (vermin/oozes, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives vermin_oozes_poison_ooze.png (64x64); talents: Poisonous Spores (activated gift, gifts/slime.lua); no sustains_at_birth. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-o-20260929/source-contracts.json",
+          "sha256": "d8d01218f85afa424e662a8f08ea1dcfac1dc6aef902034dbb35f6b53f4b494b"
+        }
+      ]
+    },
+    {
+      "asset_id": "brittle-clear-ooze",
+      "native_name": "brittle clear ooze",
+      "scope": "ooze.lua loader (vermin/oozes, default-name image, non-unique, no define_as, no nice_tile); conclave-vault (rank 2, rarity 10, clone_on_hit); no define_as",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 139,
+          "anchor": "name = \"brittle clear ooze\", color=colors.WHITE"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_oozes_brittle_clear_ooze.png",
+          "sha256": "97f41b77b75568e06853c9024b4b687134d9cad97857cabe8197292dd78d2d4f",
+          "role": "identity",
+          "note": "Native shape: a translucent grey-blue blob, flat topped, with faint highlights and two drops."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/white-jelly.png",
+          "sha256": "7b24189c40f9aa69767d34944316d3404e14044e52d4087a49d6594d412b84f5",
+          "role": "family",
+          "note": "Shipped white jelly (opaque white cloud mound): the brittle clear ooze is TRANSLUCENT glass-like ice-blue with sharp cracks, not opaque white."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A brittle clear ooze seen from a steep overhead three-quarter angle: a low faceted lump of translucent glass-like pale ice-blue and pale-cyan jelly with sharp angular cracks running through it, several shattered shard-like fragments broken off around its edge, bright white glints on the upper-left facets and a clear pale-teal see-through look. No eyes, no face. Brittle, crystalline and complete.",
+        "contrast": "Ooze family and white things: the white ooze is a soft opaque milky puddle with round drops and the white jelly an opaque dome. The brittle clear ooze is the ANGULAR CRACKED glass lump with sharp shards (silhouette: faceted with pointed shards, no round drops; hue: pale ice-cyan and teal; value: light).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Pale ice-cyan and teal translucent glass with bright white glints and slightly darker teal crack lines; nothing darker than mid tone; the disc stays neutral charcoal with no cyan cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=brittle clear ooze, define_as=None, type=vermin/subtype=oozes, unique=False); details and hashes in evidence/monster-batch-o-20260929/source-contracts.json. base BASE_NPC_OOZE (vermin/oozes, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives vermin_oozes_brittle_clear_ooze.png (64x64); no talents, no sustains_at_birth. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-o-20260929/source-contracts.json",
+          "sha256": "d8d01218f85afa424e662a8f08ea1dcfac1dc6aef902034dbb35f6b53f4b494b"
+        }
+      ]
+    }
+  ]
+}

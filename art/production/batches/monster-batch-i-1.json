@@ -1,0 +1,222 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-i-1",
+  "assets": [
+    {
+      "asset_id": "green-ooze",
+      "native_name": "green ooze",
+      "scope": "general vermin/oozes (ooze.lua; also placed by vault forest-ruined-building3)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 56,
+          "anchor": "name = \"green ooze\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_oozes_green_ooze.png",
+          "sha256": "f0ee5bd45d5674e0b8596951aebcb012e6bc2a94def1ebc5d58e1fe6f95e0ac1",
+          "role": "identity",
+          "note": "Native shape: low flat glossy bright-green puddle with a raised back and three small detached droplets."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/red-ooze.png",
+          "sha256": "6ef893b8b3abeb365533ca206a89989926a88d4dff17445865a7250cb584284d",
+          "role": "family",
+          "note": "Shipped ooze (red, flat branching blob): show the family finish only; green ooze must NOT reuse this blob outline."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A low, wet, bright lime-green ooze puddle seen from above: one broad flat body with a raised rounded glossy crest along its back, one short blunt forward pseudopod, and exactly three small separate round droplets trailing behind it in a gentle curved row, each droplet carrying a white specular glint. No eyes, no mouth, no face, no spikes.",
+        "contrast": "Shipped siblings: black ooze (dark flat blob), yellow ooze (spiky flame-like), red ooze (bright red branching blob), blue ooze (pale branching amoeba) and green jelly (olive stippled dome). Green ooze must read as none of them: a flat spreading puddle with a raised crest and a curved row of three detached round droplets (silhouette), in a light saturated lime green with strong white gloss, clearly lighter and brighter than green jelly's olive dome (value/hue). No dome, no spikes, no branching arms, no spiral.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Bright lime-green body, light and saturated, with pale yellow-green gloss planes and white specular glints, slightly deeper leaf-green shadows only at the underside. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=green ooze, define_as=None, type=vermin/subtype=oozes, unique=False); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. formula: no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint in the entity or its base; NPC.lua:33 default-image formula gives the file (same path the shipped black/yellow/red/blue ooze resolved to in the E1 fixture run); generic actor.image==entry.image single path. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    },
+    {
+      "asset_id": "crimson-ooze",
+      "native_name": "crimson ooze",
+      "scope": "general vermin/oozes (ooze.lua; rank 2, level 25+, 50% clone_on_hit)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 127,
+          "anchor": "name = \"crimson ooze\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_oozes_crimson_ooze.png",
+          "sha256": "9399facbaec6fa0f4c5f7af35a36b69324916ca141ba0deaa5f0b8ef9d00ca09",
+          "role": "identity",
+          "note": "Native shape: larger deep-red glossy blob with lobes and two detached pieces."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/red-ooze.png",
+          "sha256": "6ef893b8b3abeb365533ca206a89989926a88d4dff17445865a7250cb584284d",
+          "role": "family",
+          "note": "Shipped red ooze (bright orange-red flat branching blob): crimson ooze must be heavier, taller, deeper wine-red and shaped differently."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A large, heavy, deep wine-crimson ooze rearing up into one thick glossy wave-shaped mound with a curling overhanging lip along its front, three fat drips hanging from that lip, and one smaller round bud of the same ooze splitting off beside it, joined to the main mass by a thin strand. Bright rose-pink specular streaks along the wave crest. No eyes, no mouth, no face.",
+        "contrast": "Red-hued siblings: red ooze (bright orange-red flat branching blob), red jelly (round red clover dome with dark seeds), crimson crystal (two chunky prisms), sanguine experiment (smooth scarlet clot). Crimson ooze is taller and heavier than red ooze, deeper and cooler wine-crimson, and shaped as a rearing wave with an overhanging lip, hanging drips and a split-off bud (silhouette); not a flat blob, not a seeded dome, not faceted. Its body must stay a clearly visible mid-value crimson with broad lighter rose planes, never near-black maroon.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Deep wine-crimson body with broad lighter rose-red planes on the wave face and bright pink-white specular streaks; cool crimson rather than orange. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=crimson ooze, define_as=None, type=vermin/subtype=oozes, unique=False); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. formula: no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint in the entity or its base; NPC.lua:33 default-image formula gives the file (same path the shipped black/yellow/red/blue ooze resolved to in the E1 fixture run); generic actor.image==entry.image single path. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    },
+    {
+      "asset_id": "gelatinous-cube",
+      "native_name": "gelatinous cube",
+      "scope": "general vermin/oozes (ooze.lua; rarity 3, level 12+, ACID)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ooze.lua",
+          "sha256": "ef04b41db75c4e564fe3386ffe772f5bc3346fa323de2b6f62bc2f02eaafe8e6",
+          "line": 116,
+          "anchor": "name = \"gelatinous cube\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_oozes_gelatinous_cube.png",
+          "sha256": "84254e4766d017612df54daa8d14326639361fc34a3df1eaca328e65afaf4422",
+          "role": "identity",
+          "note": "Native shape: a translucent yellow-green cube with engulfed items (skull, blade, coins) visible inside."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/yellow-ooze.png",
+          "sha256": "edf8cebbba2ee8bd5ff3a7029c93ac262bd51e134db3022805471dce95bb04d4",
+          "role": "family",
+          "note": "Shipped yellow ooze (spiky amorphous blob): the cube must be a rigid geometric solid, not this blob."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A single translucent lime-yellow gelatinous cube with softly rounded edges, seen from a three-quarter overhead angle so its bright top face and two side faces are all visible; a few engulfed objects hang dimly inside the jelly: a pale skull, a short sword blade and three gold coins. The whole cube sits centred on the disc, well inside the inner four-fifths.",
+        "contrast": "The only rigid, box-shaped body among the ooze and jelly tokens: yellow ooze (spiky flame-like blob), yellow jelly (gold bumpy dome) and all other siblings are amorphous mounds. Hard straight cube edges with a bright translucent top face against darker side faces (silhouette and value); pale yellow-green rather than their golden yellow (hue). No drips, no pseudopods, no face.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Pale translucent lime-yellow jelly, bright top face, mid yellow-green side faces, white glassy edge highlights, dim pale bone skull, grey-blue blade and dull gold coins inside. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=gelatinous cube, define_as=None, type=vermin/subtype=oozes, unique=False); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. formula: no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint in the entity or its base; NPC.lua:33 default-image formula gives the file (same path the shipped black/yellow/red/blue ooze resolved to in the E1 fixture run); generic actor.image==entry.image single path. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    },
+    {
+      "asset_id": "malevolent-dimensional-jelly",
+      "native_name": "Malevolent Dimensional Jelly",
+      "scope": "general immovable/jelly unique (jelly.lua; rarity 50, level 25+, DARKNESS)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/jelly.lua",
+          "sha256": "c7a34e6664120069a9ca1b1623e33efeddd8b6c8c9a349ab5084c285818416f4",
+          "line": 152,
+          "anchor": "name = \"Malevolent Dimensional Jelly\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/immovable_jelly_malevolent_dimensional_jelly.png",
+          "sha256": "391c4dcd351243e3df141ce201c938b82d98ff06a4d76e0d866c453fb6ecf2d1",
+          "role": "identity",
+          "note": "Native shape: dark glossy puddle with a starry window and curling tendrils at the rim."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/black-jelly.png",
+          "sha256": "d3583d6e349e2714c0c653f87f37e430d356c7fcce4a167c173f210aad1816d2",
+          "role": "family",
+          "note": "Shipped black jelly (black tar mound): this unique must be a lighter violet puddle with a starry opening, not a black mound and not blue jelly's spiral."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A flat glossy violet-indigo jelly puddle with a wide round opening in its centre like a window into a star-filled night sky: inside the opening a handful of tiny pale stars and a soft pale cyan-lilac haze. Three thin curling tendrils lift from the puddle's rim with their tips curled over. Slick and eerie, no eyes, no mouth.",
+        "contrast": "Jelly siblings: black jelly (black tar mound), blue jelly (bright blue dome with a dark spiral), green/white/yellow/red jellies (domes) and the ooze tokens. This unique is a flat puddle with a central starry window and curled tendrils (silhouette); medium violet rim with a pale luminous centre (value) separates it from the dark black jelly and the saturated blue dome. No spiral body, no near-black surface, no dome.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Medium violet-indigo body with lighter lilac rim highlights and pale gloss, pale cyan-white star points and a pale lilac glow in the window; the puddle must never be near-black. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Malevolent Dimensional Jelly, define_as=None, type=immovable/subtype=jelly, unique=True); details and hashes in evidence/monster-batch-i-20260929/source-contracts.json. formula: unique=true, no define_as, no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint in the entity or BASE_NPC_JELLY (the six other jellies each set an explicit image= on their own leaf; this one does not); NPC.lua:33 formula gives npc/immovable_jelly_malevolent_dimensional_jelly.png; generic actor.image==entry.image single path for a unique entry. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-i-20260929/source-contracts.json",
+          "sha256": "9ad7d551ed52bd8276b7c9cbb172ed6f9d2182093421ff05276de710b212875f"
+        }
+      ]
+    }
+  ]
+}

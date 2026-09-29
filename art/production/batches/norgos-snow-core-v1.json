@@ -1,0 +1,189 @@
+{
+  "schema": 1,
+  "batch_id": "norgos-snow-core-v1",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Native mountain.lua and Norgos load callback and zone generator reviewed; see pinned identity evidence.",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/norgos-20260928/identity.md",
+          "sha256": "61ad011547bfc395fd92057984bb814b22bb48dbfb32cc7479085c97e7d8b302"
+        }
+      ],
+      "asset_id": "snow-ground",
+      "native_name": "ROCKY_GROUND snowy floor",
+      "kind": "terrain-floor",
+      "scope": "Norgos Lair DEFAULT and INVADED, all three levels; Daikara reuse candidate only, not enabled.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/mountain.lua",
+          "sha256": "f29f818ca31d2c360a9d9e53cc12026feed0c2f53bbf6dfe12b81ab03ccd1d6f",
+          "line": 23,
+          "anchor": "define_as = \"ROCKY_GROUND\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/norgos-lair/grids.lua",
+          "sha256": "797063aeae1fc7142c08a4ac3d903ab9492b28f437597752d742161375a45a40",
+          "line": 21,
+          "anchor": "snowy_grass.png"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-forest-v1/masters-derived/floor-grass.png",
+          "sha256": "f15218b5b3d41d45349dc8492a142cd18d313d533563d7964b367aff702b2cd3",
+          "role": "style",
+          "note": "Accepted overhead matte tabletop floor material scale."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/snowy_grass.png",
+          "sha256": "ded3f860e3b3720b5c4b4ea9e3b454eccd9a2e9c4642f43579dee9026cd9851c",
+          "role": "identity",
+          "note": "Native Norgos snow-rock floor palette and grain."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Passable floor.",
+        "sight": "No sight block.",
+        "danger": "No hazard.",
+        "interaction": "Normal floor and door slot; dig result of snow trees.",
+        "export": "Opaque snow-rock floor, exporter adds seams and parity."
+      },
+      "prompt_fields": {
+        "subject": "Weathered pale gray rock dusted with shallow compacted snow, light granular variation.",
+        "palette": "Muted cool gray, cream white snow, faint blue slate shadow under upper-left light.",
+        "contrast": "Distinct from green grass and solid blocking trees; no drifts tall enough to suggest obstruction.",
+        "composition": "Flat overhead full bleed material, no seams, no separate object or symbols.",
+        "mechanics": "Unobstructed, harmless floor; no movement bonus or hole."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native mountain.lua and Norgos load callback and zone generator reviewed; see pinned identity evidence.",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/norgos-20260928/identity.md",
+          "sha256": "61ad011547bfc395fd92057984bb814b22bb48dbfb32cc7479085c97e7d8b302"
+        }
+      ],
+      "asset_id": "snow-tree-pine",
+      "native_name": "ROCKY_SNOWY_TREE compact snow-laden pine",
+      "kind": "terrain-prop",
+      "scope": "Norgos Lair DEFAULT and INVADED, all three levels; Daikara reuse candidate only, not enabled.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/mountain.lua",
+          "sha256": "f29f818ca31d2c360a9d9e53cc12026feed0c2f53bbf6dfe12b81ab03ccd1d6f",
+          "line": 47,
+          "anchor": "define_as = \"ROCKY_SNOWY_TREE\""
+        },
+        {
+          "path": "game/modules/tome/data/general/grids/mountain.lua",
+          "sha256": "f29f818ca31d2c360a9d9e53cc12026feed0c2f53bbf6dfe12b81ab03ccd1d6f",
+          "line": 40,
+          "anchor": "dig = \"ROCKY_GROUND\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/norgos-lair/zone.lua",
+          "sha256": "80dc4bc1dd9260ad01170e5f6b04ac929ce202b9c141cbd945d29b0837dd00a0",
+          "line": 50,
+          "anchor": "ROCKY_SNOWY_TREE20"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-forest-v1/masters-derived/prop-tree-pine.png",
+          "sha256": "5894eff1c0a5269d255bcb1b30296911a1bd578c4bb21e0198fe898d79cbe7c4",
+          "role": "style",
+          "note": "Accepted complete tree tabletop construction and lighting; actual forest derived master may include base, output must be transparent."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/trees/pine_foliage_winter_01.png",
+          "sha256": "2c70532c71c7d328261db1a981a0efcac07d1499a1bf0d451e0ff1e33860cfc5",
+          "role": "identity",
+          "note": "Native winter foliage identity reference."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Blocks movement except pass_tree=1 actors.",
+        "sight": "Blocks line of sight.",
+        "danger": "No hazard.",
+        "interaction": "Dig changes tree to ROCKY_GROUND.",
+        "export": "Transparent tree over snow-rock floor; distinct variant exported per cell."
+      },
+      "prompt_fields": {
+        "subject": "compact snow-laden pine with sturdy trunk visibly rooted in rock and snow; whole silhouette in frame.",
+        "palette": "Gray-brown bark, matte dark needles or branches capped with pale snow.",
+        "contrast": "Pine is compact conical; elm is broader, branching. Both must read as solid movement and sight blockers at 48px.",
+        "composition": "Centered single complete tree, transparent margin on every edge, roots reach lower quarter.",
+        "mechanics": "Blocks movement and sight, can be dug to floor; no hazard, no fortress wall."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native mountain.lua and Norgos load callback and zone generator reviewed; see pinned identity evidence.",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/norgos-20260928/identity.md",
+          "sha256": "61ad011547bfc395fd92057984bb814b22bb48dbfb32cc7479085c97e7d8b302"
+        }
+      ],
+      "asset_id": "snow-tree-elm",
+      "native_name": "ROCKY_SNOWY_TREE broad branching winter elm",
+      "kind": "terrain-prop",
+      "scope": "Norgos Lair DEFAULT and INVADED, all three levels; Daikara reuse candidate only, not enabled.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/mountain.lua",
+          "sha256": "f29f818ca31d2c360a9d9e53cc12026feed0c2f53bbf6dfe12b81ab03ccd1d6f",
+          "line": 47,
+          "anchor": "define_as = \"ROCKY_SNOWY_TREE\""
+        },
+        {
+          "path": "game/modules/tome/data/general/grids/mountain.lua",
+          "sha256": "f29f818ca31d2c360a9d9e53cc12026feed0c2f53bbf6dfe12b81ab03ccd1d6f",
+          "line": 40,
+          "anchor": "dig = \"ROCKY_GROUND\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/norgos-lair/zone.lua",
+          "sha256": "80dc4bc1dd9260ad01170e5f6b04ac929ce202b9c141cbd945d29b0837dd00a0",
+          "line": 50,
+          "anchor": "ROCKY_SNOWY_TREE20"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-forest-v1/masters-derived/prop-tree-pine.png",
+          "sha256": "5894eff1c0a5269d255bcb1b30296911a1bd578c4bb21e0198fe898d79cbe7c4",
+          "role": "style",
+          "note": "Accepted complete tree tabletop construction and lighting; actual forest derived master may include base, output must be transparent."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/trees/elm_foliage_winter.png",
+          "sha256": "373222db92fad35f2766a7e6870983ce54161b61a222b00fd08c50834561cd62",
+          "role": "identity",
+          "note": "Native winter foliage identity reference."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Blocks movement except pass_tree=1 actors.",
+        "sight": "Blocks line of sight.",
+        "danger": "No hazard.",
+        "interaction": "Dig changes tree to ROCKY_GROUND.",
+        "export": "Transparent tree over snow-rock floor; distinct variant exported per cell."
+      },
+      "prompt_fields": {
+        "subject": "broad branching winter elm with sturdy trunk visibly rooted in rock and snow; whole silhouette in frame.",
+        "palette": "Gray-brown bark, matte dark needles or branches capped with pale snow.",
+        "contrast": "Pine is compact conical; elm is broader, branching. Both must read as solid movement and sight blockers at 48px.",
+        "composition": "Centered single complete tree, transparent margin on every edge, roots reach lower quarter.",
+        "mechanics": "Blocks movement and sight, can be dug to floor; no hazard, no fortress wall."
+      }
+    }
+  ]
+}

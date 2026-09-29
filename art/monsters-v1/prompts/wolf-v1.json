@@ -1,0 +1,54 @@
+{
+  "asset_id": "wolf-v1",
+  "intent": "generate",
+  "mode": "built-in image_gen",
+  "use_case": "stylized-concept",
+  "status": "generated-needs-containment-edit",
+  "prompt": "Use case: stylized-concept.\nAsset type: ONE square transparent PNG gray wolf monster miniature for a tactical tabletop game.\nPrimary request: create a single reusable faction-neutral gray wolf game piece in precisely the same painted miniature family as reference image 2.\nInput images: image 1 shows the original game's wolf and is the species/identity reference ONLY; image 2 is the approved forest troll miniature and is the STYLE, lighting, camera angle, neutral base material and thin base shape reference ONLY. Do NOT give the wolf any troll anatomy, green skin, teeth, clothing or humanoid stance.\nSubject: one complete gray wolf, slender four-legged body with long muzzle, two sharply pointed ears, four identifiable paws, lean shoulders and haunches, one long bushy tail gently curved beside the body inside the base. Head aimed toward the lower-left/front while body recedes upward-right. Slight wary crouch. Keep visible narrow waist and angular pointed features so it cannot read as a bear. Natural dark eyes, black nose, pale gray cheeks/chest/paw tips.\nStyle: hand-painted carved tabletop miniature, matte surfaces, bold simplified planes, small deliberate dry-brush highlights, attractive painterly fur without excessive fine strands. Match the reference troll's natural muted saturation and warm, handcrafted finish.\nComposition: single centered FULL BODY, steep overhead view about 65–70 degrees, see the face and back together. One PLAIN neutral charcoal gray-brown circular thin disc, near circular in projection, with subtle dark rim and no decoration. Disc diameter about 86% of square image width, ample transparent margin on all sides. The creature occupies 80–85% of disc diameter; every paw, ear and the entire tail remain comfortably inside the disc with visible base around them.\nLighting: soft upper-left light, short lower-right contact shadow contained entirely inside the disc. Animal lighter than the dark base; no external shadow.\nBackground: genuinely transparent alpha PNG outside the base, including all corners. No opaque black or white background and no checkerboard pattern.\nReadability: a clear narrow four-legged silhouette and long muzzle at 64px, not a flat portrait coin. Gray color blocks must distinguish it from olive troll and brown bear. No glowing eyes.\nAvoid: colored faction ring of any color, writing, numbers, symbols, UI, rank marks, border around canvas, scenery, pebbles, grass, stone slab, extra wolf, collar, harness, clothes, weapon, fantasy horns, excessive snarl, blood. Keep the same neutral base family as reference image 2.",
+  "references": [
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/canine_w.png",
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/forest-troll-v1.png"
+  ],
+  "reference_roles": [
+    "original wolf species identity only",
+    "approved forest troll miniature for shared material, high overhead angle, base and lighting only"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0dd21-b1f1-7472-b28c-5b68d8636421/exec-548d583a-1329-4ab6-aa03-3ab9845f7372.png",
+  "saved_output_path": "game/addons/tome-checker-revised/art/monsters-v1/masters/wolf-v1.png",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      21,
+      1210,
+      1254
+    ],
+    "visible_alpha_bbox": [
+      178,
+      174,
+      1095,
+      1103
+    ],
+    "transparent_pixels": 909438,
+    "partial_alpha_pixels": 662875
+  },
+  "review": "Gray pointed-ear long-muzzle wolf clear; material and lighting match troll. Upper back slightly protrudes above base edge; targeted containment revision planned.",
+  "sha256": "1c7bc5182718bbd3e9a6cec375fdfccb93b94c1ea0e1a20d4416b15f0abde1e1",
+  "tool": "image_gen.imagegen",
+  "tool_result_keys": [
+    "image_url",
+    "output_hint"
+  ],
+  "preserved_native_alpha": true,
+  "image_processing": "Copied original generated PNG without pixel edits, resizing, background extraction or alpha modification.",
+  "reviewed_at_utc": "2026-09-26T10:02:59.315884+00:00",
+  "selection": "superseded; kept as generation provenance"
+}

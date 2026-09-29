@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "batch_id": "gold-mountain-tw5-v4",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Third rework: v1, v2 and v3 call-1 all produced the desired golden sandstone block but its opaque box ended at x=1230-1235 of 1254 (A8.1 needs 25.1 px), apparently copying the footprint of the Daikara style reference, which itself spans x 31-1227. Their bytes are kept as art/terrain-gold-mountain-v1/masters/gold-mountain-wall-v{1,2,3}-rejected.png. This pack swaps the style reference for the accepted Norgos snow-pine prop (tabletop light and scale only) so the footprint follows the prompt; the design text is unchanged. No waiver.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/terrain-tw5-20260929/identity-gold-mountain.md",
+          "sha256": "240bd1f856b816b18fb1c22006ebd93488caff0f2accd924d55d1e437d5be373"
+        }
+      ],
+      "asset_id": "gold-mountain-wall-v4",
+      "native_name": "GOLDEN_MOUNTAIN Gates of Morning Sunwall mountain",
+      "kind": "terrain-prop",
+      "scope": "Gates of Morning (town-gates-of-morning) only: GOLDEN_MOUNTAIN and GOLDEN_MOUNTAIN_WALL1-6, the mountain ring and southern coast.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/town-gates-of-morning/grids.lua",
+          "sha256": "03a3ca03413fe8267cc1399032d50c4652519415d35babe577182759b64a26fe",
+          "line": 69,
+          "anchor": "define_as = \"GOLDEN_MOUNTAIN\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-gates-of-morning/grids.lua",
+          "sha256": "03a3ca03413fe8267cc1399032d50c4652519415d35babe577182759b64a26fe",
+          "line": 76,
+          "anchor": "block_sense = true"
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-gates-of-morning/grids.lua",
+          "sha256": "03a3ca03413fe8267cc1399032d50c4652519415d35babe577182759b64a26fe",
+          "line": 82,
+          "anchor": "GOLDEN_MOUNTAIN_WALL"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/golden_mountain5_1.png",
+          "sha256": "f60cd8d6b3d6ed4a18408c6d100aec29ac357838a35f27aa68af45f693baafd7",
+          "role": "identity",
+          "note": "Native Sunwall golden mountain: warm golden crumpled rock. Keep its golden-sandstone identity, not its bright value."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-norgos-snow-v1/selected/prop-snow-tree-pine.png",
+          "sha256": "14026cb5553de216033fe3d50d62b589fe0c22b0fbd14c8d59c60c97a7d72c08",
+          "role": "style",
+          "note": "Accepted board prop: tabletop material, soft upper-left light and generous transparent margins round a centred construction. Use only its lighting, finish and margins; the mountain has a completely different shape and palette."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Blocks all movement; no pass_wall or pass_tree exception.",
+        "sight": "Blocks line of sight, sense and ESP.",
+        "danger": "None.",
+        "interaction": "None: not diggable, no door, no transition.",
+        "export": "Native-alpha solid central mountain block with transparent margins; exporter crops its broad top plane and front face into cell-filling 16-way N/E/S/W wall masks and two parities."
+      },
+      "prompt_fields": {
+        "subject": "A SINGLE massive raised block of Sunwall mountain: warm weathered golden sandstone, one broad continuous gently uneven top plateau with horizontal sandstone strata and a few large planar fractures, and one thick near-vertical front cliff face with stacked strata bands. Solid impassable mountain rock, not a pile of stones.",
+        "palette": "Deep burnt-ochre, amber and umber-brown sandstone with thin warm gold highlights along the upper-left ridge edges and sparse faint gold mineral veins. The top plateau is mid-dark amber-brown (not light); the front cliff face is clearly darker dark-umber brown. Overall value noticeably darker than pale plaza stone, grass or beach sand; never bright yellow or lemon.",
+        "contrast": "At 48 pixels it must read as one heavy solid golden-brown rock mass filling most of its square cell, clearly darker and more massive than floor, sand, grass or road. Distinct from grey mountains by its warm sandstone hue. No thin spikes, foliage, rubble, holes, gaps or floor visible between parts of the block.",
+        "composition": "One wide, tall coherent mass in overhead three-quarter tabletop view, placed in the exact CENTRE of a mostly empty transparent canvas. The rock occupies ONLY the middle 70% of the canvas width: its leftmost point about 15% from the left edge and its rightmost point about 15% from the right edge, with fully transparent empty space beside it on both sides. Broad top plateau from about 15% to 55% of the image height, front cliff face below it down to about 85%. Nothing, not a rock tip, crumb or shadow, extends into the outer 12% band on any side. Transparent corners. No cut-off rock. The exporter will extend the rock material to connected cell edges.",
+        "mechanics": "Undiggable Sunwall mountain; blocks movement, line of sight, sense and ESP. No danger symbols, lava, snow, door, stairs, building, banner, sun emblem or character."
+      }
+    }
+  ]
+}

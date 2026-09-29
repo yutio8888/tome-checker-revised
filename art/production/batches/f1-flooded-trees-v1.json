@@ -1,0 +1,257 @@
+{
+  "schema": 1,
+  "batch_id": "f1-flooded-trees-v1",
+  "assets": [
+    {
+      "asset_id": "bog-tree-a",
+      "native_name": "BOGTREE (willow family, bare-foliage sub-variant)",
+      "kind": "terrain-prop",
+      "scope": "Trollmire FLOODED layout wall generator (wall=\"BOGTREE\", zone.lua:57); covers the BOGTREE/BOGTREE1..20 render identity per CONTRACT.md Section 8's bog-tree row. NOT present in the shared level-4 static treasure map (EXPORTER.md Section 5 confirms trollmire-treasure.lua only uses GRASS/GRASS_UP4/STEW/HARDTREE/ROCK_VAULT). This master is the sparser bare-branch style variant; the exporter's per-cell family selector alternates it with bog-tree-b the same way CheckerTerrain.lua:43 alternates tree-oak/pine/willow.",
+      "gate": "ready",
+      "gate_reason": "Native grid identity and full movement/sight/danger/interaction contract verified against grids.lua source in this session (see sources). Export naming (prop-bog-tree, composited over the bog-water floor/bank per CONTRACT Section 8 rule 2) has already been exercised end-to-end by the exporter's F1 placeholder validation recorded in EXPORTER.md Section 4. Gate is ready only so this pack can be inspected with run_imagegen.py status and a non-executing generate dry-run per this task's instructions; no isolated-fixture screenshot was taken and none is claimed. --execute must not run until the main agent has reviewed prompt.txt.",
+      "max_attempts": 2,
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 46,
+          "anchor": "define_as = \"BOGTREE\","
+        },
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 52,
+          "anchor": "can_pass = {pass_tree=1},"
+        },
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 55,
+          "anchor": "dig = \"BOGWATER\","
+        },
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 57,
+          "anchor": "shader = \"water\","
+        },
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 61,
+          "anchor": "{\"small_willow\", {\"shadow\", \"trunk\", \"foliage_bare\"}},"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-forest-v1/masters-derived/prop-tree-willow.png",
+          "sha256": "d1d0a76d072aa3247c104862262a30a6c4630c6b76e4d603aa262a3b4ffc7bb1",
+          "role": "style",
+          "note": "Accepted willow-family camera, matte finish and cutout convention for the tree-willow prop master; match this construction style, not the exact silhouette."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/trees/willow_waterripples.png",
+          "sha256": "78f53ab9ab906e335b6a64f673e0a248df94a2c2604df332f62ee2c4e785564d",
+          "role": "identity",
+          "note": "Native willow-in-water base part; BOGTREE is the only tree identity with a water base, unlike ordinary TREE."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/trees/small_willow_foliage_bare.png",
+          "sha256": "c830397275112a53635cff97601efd78767ca492f6f39471f038606f63d764bc",
+          "role": "identity",
+          "note": "Native bare-foliage willow part used by this specific sub-variant (grids.lua:61)."
+        }
+      ],
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/docs/g0-terrain-contract-20260927/EXPORTER.md",
+          "sha256": "2e18be9fa75d11db778706c2c8703299ab0f62b05c607594282d47bc07b1163f"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/g0-terrain-contract-20260927/CONTRACT.md",
+          "sha256": "a651ebcc475554f04e5d82d261954c53acfc0fd5824b9378c8f4bd9ab0e35d50"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-forest-v1/masters-derived/bank-bog-N.png",
+          "sha256": "6804578bf85e63a1b9e79ebaba8c7456b5d9bf6337a52a9c1a21a8e66aa519f4"
+        }
+      ],
+      "grid_contract": {
+        "movement": "does_block_move=true (grids.lua:53); can_pass={pass_tree=1} (grids.lua:52) exempts only actors whose own can_pass.pass_tree>=1 (Grid.lua:95-100), identical threshold to ordinary TREE (forest.lua:68); not a general passage.",
+        "sight": "block_sight=true (grids.lua:54); no block_sense/block_esp set, so perception and ESP pass through, unlike HARDTREE.",
+        "danger": "None. No air_level/on_stand anywhere in the BOGTREE definition (grids.lua:45-58); it is not a hazard tile.",
+        "interaction": "No door/lever/block-change callback. dig=\"BOGWATER\" (grids.lua:55) converts the tile to bog water when dug, which is itself harmless. shader=\"water\" (grids.lua:57) is display-only and is lost by replace_display (CONTRACT I9); it must be represented by the prop art itself (waterline/ripple treatment), not left for the exporter to add.",
+        "export": "prop-bog-tree family master, transparent alpha; composited by tools/export_forest_terrain.c over the matching bog-water floor+bank mask tile (base is bog water, not grass, per CONTRACT Section 8 rule 2), producing bog-tree<mask>-<parity>-0.png (16 masks x 2 parity = 32 runtime tiles per style variant). The exporter picks between bog-tree-a and bog-tree-b per cell with a deterministic selector, the same mechanism CheckerTerrain.lua:43 already uses for tree-oak/pine/willow."
+      },
+      "prompt_fields": {
+        "subject": "One complete small-to-medium willow tree standing directly in shallow bog water, bare winter-look foliage (thin drooping bare branches, no leaf mass), with the visible trunk continuing down into a few inches of surrounding water and faint ripples or mist at the waterline.",
+        "palette": "Match the accepted willow style anchor's cool grey-green bark and muted bare-branch tone; add a subtly darker wet-bark shade right at the waterline so it reads as standing in water rather than on dry ground.",
+        "contrast": "Distinct from the ordinary broadleaf/pine/cypress tree props: willow is exclusive to this flooded identity, per CONTRACT.md willow no longer belongs to the ordinary TREE family. Distinct from bog-tree-b: this is the sparser bare-branch variant, bog-tree-b is the fuller mossy variant. Must not be confused with hardtree, which is a separate, denser, non-willow silhouette on dry ground.",
+        "composition": "Full tree including trunk and a visible waterline/root base; the opaque bounding box's bottom edge must reach the lower 25% of the canvas (grounded, matching the accepted tree props) so the trunk visibly meets the water instead of floating. The canopy may lean but must stay inside a transparent margin on all four sides.",
+        "mechanics": "Blocks movement and line of sight like an ordinary tree, but only actors whose own pass_tree ability is at least 1 can pass through; can be dug down into bog water. Does NOT block perception or ESP -- do not paint it as dense or heavy as hardtree, that visual weight belongs to a different identity. No hazard: standing in this tile is not the deep-water drowning hazard used elsewhere in Trollmire."
+      }
+    },
+    {
+      "asset_id": "bog-tree-b",
+      "native_name": "BOGTREE (willow family, mossy spring-foliage sub-variant)",
+      "kind": "terrain-prop",
+      "scope": "Same Trollmire FLOODED wall generator identity as bog-tree-a (wall=\"BOGTREE\", zone.lua:57; grids.lua:45-74). This master is the fuller, moss-draped spring-foliage style variant alternated with bog-tree-a by the exporter's per-cell selector.",
+      "gate": "ready",
+      "gate_reason": "Native grid identity and full movement/sight/danger/interaction contract verified against grids.lua source in this session (see sources), identical rule contract to bog-tree-a (same BOGTREE definition; only the foliage/moss sub-variant differs, matching the native loop's own willow/willow_moss/foliage_bare/foliage_spring diversity at grids.lua:60-73). Gate is ready only so this pack can be inspected with run_imagegen.py status and a non-executing generate dry-run per this task's instructions; no isolated-fixture screenshot was taken and none is claimed. --execute must not run until the main agent has reviewed prompt.txt.",
+      "max_attempts": 2,
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 46,
+          "anchor": "define_as = \"BOGTREE\","
+        },
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 52,
+          "anchor": "can_pass = {pass_tree=1},"
+        },
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 55,
+          "anchor": "dig = \"BOGWATER\","
+        },
+        {
+          "path": "game/modules/tome/data/zones/trollmire/grids.lua",
+          "sha256": "49192aa67fbe82429b803d90fe2c2b70b2ae25464b2a0c4e6cc70c58f6d3b1ce",
+          "line": 66,
+          "anchor": "{\"small_willow_moss\", {\"shadow\", \"trunk\", \"foliage_spring\"}},"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-forest-v1/masters-derived/prop-tree-willow.png",
+          "sha256": "d1d0a76d072aa3247c104862262a30a6c4630c6b76e4d603aa262a3b4ffc7bb1",
+          "role": "style",
+          "note": "Accepted willow-family camera, matte finish and cutout convention; match construction style, not exact silhouette."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/trees/willow_moss_foliage_spring.png",
+          "sha256": "71a234cad6902ae12ad1c187d5baf10659d8a2ae0e05b7afafd00c557db23949",
+          "role": "identity",
+          "note": "Native mossy spring-foliage willow part used by this specific sub-variant (grids.lua:66)."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/trees/willow_waterripples.png",
+          "sha256": "78f53ab9ab906e335b6a64f673e0a248df94a2c2604df332f62ee2c4e785564d",
+          "role": "identity",
+          "note": "Native willow-in-water base part shared by all BOGTREE sub-variants."
+        }
+      ],
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/docs/g0-terrain-contract-20260927/EXPORTER.md",
+          "sha256": "2e18be9fa75d11db778706c2c8703299ab0f62b05c607594282d47bc07b1163f"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/g0-terrain-contract-20260927/CONTRACT.md",
+          "sha256": "a651ebcc475554f04e5d82d261954c53acfc0fd5824b9378c8f4bd9ab0e35d50"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-forest-v1/masters-derived/bank-bog-N.png",
+          "sha256": "6804578bf85e63a1b9e79ebaba8c7456b5d9bf6337a52a9c1a21a8e66aa519f4"
+        }
+      ],
+      "grid_contract": {
+        "movement": "does_block_move=true (grids.lua:53); can_pass={pass_tree=1} (grids.lua:52) exempts only actors whose own can_pass.pass_tree>=1, identical to bog-tree-a and to ordinary TREE.",
+        "sight": "block_sight=true (grids.lua:54); no block_sense/block_esp set.",
+        "danger": "None; identical to bog-tree-a.",
+        "interaction": "No callbacks; dig=\"BOGWATER\" (grids.lua:55); shader=\"water\" (grids.lua:57) must be baked into the art per CONTRACT I9, identical to bog-tree-a.",
+        "export": "Same prop-bog-tree family as bog-tree-a; this master supplies the mossy/spring style pick of the exporter's per-cell selector, composited over the same bog-water floor+bank base."
+      },
+      "prompt_fields": {
+        "subject": "One complete small-to-medium moss-draped willow tree standing directly in shallow bog water, fuller spring foliage with soft drooping leaf clusters and visible moss patches on the trunk, with the trunk continuing down into a few inches of surrounding water and faint ripples or mist at the waterline.",
+        "palette": "Match the accepted willow style anchor's cool grey-green bark; add visible olive-green moss patches on the trunk and slightly richer green foliage than bog-tree-a's bare variant, plus the same subtly darker wet-bark waterline treatment.",
+        "contrast": "Distinct from the ordinary broadleaf/pine/cypress tree props for the same reason as bog-tree-a. Distinct from bog-tree-a: this is the fuller, mossier, leafier variant; bog-tree-a is the sparser bare-branch variant. Must not be confused with hardtree.",
+        "composition": "Full tree including trunk and visible waterline/root base; opaque bounding box bottom must reach the lower 25% of the canvas (grounded). Canopy may be fuller and slightly wider than bog-tree-a's but must stay inside a transparent margin on all four sides.",
+        "mechanics": "Identical gameplay contract to bog-tree-a: blocks movement and sight with a pass_tree>=1 exemption, can be dug to bog water, does not block perception or ESP, no hazard. Only the visual style (moss, fuller spring foliage) differs from bog-tree-a."
+      }
+    },
+    {
+      "asset_id": "hardtree",
+      "native_name": "HARDTREE",
+      "kind": "terrain-prop",
+      "scope": "Trollmire lesser vaults honey_glade (maps/vaults/honey_glade.lua:37) and forest-ruined-building1/3, present in BOTH FLOODED and DEFAULT lesser_vaults_list (zone.lua:66 / :194); and the shared level-4 static treasure map (data/maps/zones/trollmire-treasure.lua:27) where it forms roughly 200 of the map's wall tiles (EXPORTER.md Section 5). This grid is not flood-specific -- it is CONTRACT.md Section 9.1's T1 master #4 (non-flooded rule gap) -- and is included in this F1 handoff only because the task explicitly asked to verify its rule contract given its prominence in the Trollmire treasure map that FLOODED runs also reach. Coordinate with any future G0 T1 batch before generating this identity twice.",
+      "gate": "ready",
+      "gate_reason": "Rule contract read directly from forest.lua and confirmed to differ materially from TREE (forest.lua:61-77 vs 79-95, see sources): HARDTREE has no can_pass table at all so pass_tree never applies (Grid.lua:95-100's can_pass branch is skipped entirely when the table is absent), no dig field (cannot be dug to GRASS the way TREE can), and additionally sets block_sense=true/block_esp=true which TREE does not set. A visually distinct prop is therefore warranted, not a skip. Gate is ready only for run_imagegen.py status/dry-run generate per this task's instructions; no isolated-fixture screenshot was taken and none is claimed. --execute must not run until the main agent has reviewed prompt.txt.",
+      "max_attempts": 2,
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/forest.lua",
+          "sha256": "ce8d970564e00a1b7bbd2726a0df21d01d064e091ce389ef419355c55a84a0b9",
+          "line": 80,
+          "anchor": "define_as = \"HARDTREE\","
+        },
+        {
+          "path": "game/modules/tome/data/general/grids/forest.lua",
+          "sha256": "ce8d970564e00a1b7bbd2726a0df21d01d064e091ce389ef419355c55a84a0b9",
+          "line": 88,
+          "anchor": "block_sense = true,"
+        },
+        {
+          "path": "game/modules/tome/data/general/grids/forest.lua",
+          "sha256": "ce8d970564e00a1b7bbd2726a0df21d01d064e091ce389ef419355c55a84a0b9",
+          "line": 89,
+          "anchor": "block_esp = true,"
+        },
+        {
+          "path": "game/modules/tome/data/general/grids/forest.lua",
+          "sha256": "ce8d970564e00a1b7bbd2726a0df21d01d064e091ce389ef419355c55a84a0b9",
+          "line": 68,
+          "anchor": "can_pass = {pass_tree=1},"
+        },
+        {
+          "path": "game/modules/tome/data/general/grids/forest.lua",
+          "sha256": "ce8d970564e00a1b7bbd2726a0df21d01d064e091ce389ef419355c55a84a0b9",
+          "line": 71,
+          "anchor": "dig = \"GRASS\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-forest-v1/masters-derived/prop-tree-oak.png",
+          "sha256": "a4ad56d5189cf4e7e0525456c4b14b85114816411178ea1585197c0b405fb859",
+          "role": "style",
+          "note": "Accepted oak-family camera, matte finish and cutout convention; hardtree must read as visibly denser/heavier than this, not a recolor."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/trees/oak_trunk_01.png",
+          "sha256": "3c9946a788ccffbc85483e2e2d34a83d3ede12b0f96a24642f83243453c5fc9c",
+          "role": "identity",
+          "note": "Native art for TREE and HARDTREE is literally identical (both use the same treesdef, forest.lua:44-59/76/94); this file documents there is no distinct native HARDTREE asset to copy -- CONTRACT.md Section 1.1's finding that has to be resolved by inventing a new, denser silhouette."
+        }
+      ],
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/docs/g0-terrain-contract-20260927/CONTRACT.md",
+          "sha256": "a651ebcc475554f04e5d82d261954c53acfc0fd5824b9378c8f4bd9ab0e35d50"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/g0-terrain-contract-20260927/ACCEPTANCE.md",
+          "sha256": "7916d97ae7ec2f975b5de2ad303ab013f2ad829f629b5130a85da6af2021bf6d"
+        }
+      ],
+      "grid_contract": {
+        "movement": "does_block_move=true (forest.lua:86); NO can_pass table at all (forest.lua:79-92), so Grid.lua:95-100's can_pass branch is skipped entirely and pass_tree (or any other can_pass key) never exempts any actor, unlike TREE's can_pass={pass_tree=1} (forest.lua:68). No dig field, so it cannot be dug down to GRASS the way TREE can (dig=\"GRASS\", forest.lua:71).",
+        "sight": "block_sight=true (forest.lua:87), same as TREE.",
+        "danger": "None.",
+        "interaction": "block_sense=true, block_esp=true (forest.lua:88-89) -- TREE sets neither. This is the only Grid-field difference from TREE beyond can_pass/dig.",
+        "export": "prop-hardtree master, transparent alpha, composited over the plain grass floor tile the same way the ordinary tree props are (subtype=\"grass\", forest.lua:81); single master, no water-mask dependency; reused verbatim wherever HARDTREE appears in either Trollmire layout."
+      },
+      "prompt_fields": {
+        "subject": "One complete, unmistakably ancient and massively thick tree on dry forest ground: a single gnarled, oversized trunk noticeably thicker and more twisted than a normal oak, topped with a dense, heavy dark canopy with no visible gaps of light through the foliage mass.",
+        "palette": "Darker, more saturated bark than the accepted oak style anchor (deep umber-grey rather than light bark) and a denser near-black-green canopy shadow tone, while staying within the same tabletop material family as the accepted oak/pine/cypress props.",
+        "contrast": "Must read as visibly denser and heavier than the ordinary broadleaf, pine and cypress tree props at 48px in grayscale (differ in both silhouette bulk and value). Do not use a willow shape (reserved for bog-tree) and do not add any water element -- HARDTREE stands on dry grass, never on water.",
+        "composition": "Full tree including trunk base; opaque bounding box bottom must reach the lower 25% of the canvas (grounded), planted on implied dry ground. Canopy may be wider or denser than the oak style anchor but must stay inside a transparent margin on all four sides.",
+        "mechanics": "Blocks movement with no exemption for any can_pass value, and blocks line of sight, perception and ESP alike. Cannot be dug. No hazard or damage. Do not paint any exit, door or hazard marking."
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "asset_id": "cave-troll-v3",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "status": "generated-reviewed-candidate",
+  "prompt": "Use case: precise-object-edit. Edit ONLY the upper-right SPEAR TIP and the short wooden shaft directly under it in this exact cave-troll miniature. The metal spear point protrudes outside the circular base at the upper right. Remove that overhanging part by shortening the spear immediately above the rightmost hand. Place a compact broad triangular iron spearhead just above that hand, ending at about 77% of the square canvas width and 38% of its height, fully inside the dark disc and well separated from its rim. Keep the lower long diagonal shaft, both gripping hands, troll body, pale gray-ochre skin, hunched three-quarter pose, head, feet, body scale and ALL other pixels visually unchanged. Do not make the troll smaller and do not enlarge the base. Keep one spear, never a second tip. Preserve the existing painted miniature aesthetic, camera, disc, bevel, lighting and genuine transparent alpha background. No faction colors, gold rarity ring, text, symbols, external shadows, or new objects. The one target is total weapon containment inside the current circular rim.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v3/masters/cave-troll-v3-overhang.png"
+  ],
+  "reference_roles": [
+    "edit target; weapon containment only, retain pale hunched silhouette, body scale and neutral base"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0dd7b-caa5-7ca0-96df-7e69d393c50b/exec-a871b83c-5e93-4c6b-8a4a-ed1de928f563.png",
+  "saved_output_path": "art/monsters-v3/masters/cave-troll-v3.png",
+  "parent_asset_id": "cave-troll-v3-overhang",
+  "preserved_native_alpha": true,
+  "image_processing": "Copied generated PNG without pixel edits or alpha changes.",
+  "review": "Targeted edit succeeded: spear point and lower shaft lie fully inside rim; both feet and full-size figure retained. Pale gray-ochre skin and turned hunched posture distinguish it from the frontal olive forest troll. Pose is a strong three-quarter angle, not a strict side profile. Actual 48/64px game validation remains for parent.",
+  "selection": "recommended for parent small-scale export and runtime review",
+  "design_note": "Pale gray-ochre palette and posture are deliberate identity-design changes, not claims about mandatory native cave troll coloration.",
+  "identity_sources": [
+    "game/modules/tome/data/general/npcs/troll.lua",
+    "art/monsters-v2/masters/cave-troll-v2.png"
+  ],
+  "sha256": "6557e46aabba46f4b5f5841497a95158cb8454e4475b33a8a491f1852542584d",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_alpha_bbox": [
+      158,
+      157,
+      1096,
+      1100
+    ],
+    "transparent_pixels": 873555
+  },
+  "reviewed_at_utc": "2026-09-26T11:36:14.944611+00:00"
+}

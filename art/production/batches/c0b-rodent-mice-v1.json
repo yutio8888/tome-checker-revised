@@ -1,0 +1,207 @@
+{
+  "schema": 1,
+  "batch_id": "c0b-rodent-mice-v1",
+  "assets": [
+    {
+      "asset_id": "giant-white-mouse",
+      "native_name": "giant white mouse",
+      "scope": "Shared rodent pool (rodent.lua); Kor'Pul both layouts and rat-nest room first; exact identity only, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_RODENT\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 44,
+          "anchor": "name = \"giant white mouse\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel at exactly that lightness. Do not copy its species, body plan, pose or tail."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_rodent_giant_white_mouse.png",
+          "sha256": "5a71eddc8bd913fee06aebd3a0ff87b5a4fce31fa8137d969675ddf44d56eae5",
+          "role": "identity",
+          "note": "Native species and coat value only: giant mouse with large round ears. Ignore the native camera, its rat-like four-footed pose and the blue engine effects."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v7-c0-sol/masters/giant-white-rat-v1.png",
+          "sha256": "e52f7f3bee25030329ffc581c6a297a9a3c15aedfec7205ae138e7cb22dcf3ac",
+          "role": "family",
+          "note": "Existing mapped giant white rat. The new mouse shares its ivory coat, so it must differ by upright seated silhouette, oversized round ears and short body; never by coat colour alone."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One giant mouse sitting upright on its haunches, facing down-left. Compact rounded body taller than it is long, short blunt muzzle with fine whiskers, two oversized round disc ears set wide on the head, small forepaws held together at the chest, sturdy hind feet planted on the disc, and one long thin bare tail sweeping out to the right in a shallow open S.",
+        "contrast": "The three giant rats already in the set (brown, white, grey) are all long, low, horizontal four-footed profiles with a pointed muzzle, small ears and a thick bare tail sweeping across the disc. This mouse must NOT be a smaller copy of that. Change at least two dimensions: (1) silhouette — sit upright on the haunches so the body mass is a tall rounded vertical egg rather than a long horizontal bar, and let two oversized round disc-shaped ears break the top of the silhouette with visible open disc between them; (2) value pattern — a bright rounded back plane, two distinctly darker mid-value ear discs and one deep core shadow under the chest and haunches, instead of the rat art's single even body mass. Size alone is not a permitted distinction. The difference must survive grayscale at 48px.",
+        "composition": "One entire animal on one disc, steep overhead three-quarter view. Ears, forepaws, hind feet and the whole tail stay inside the disc with clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. Let the thin tail stay visually separated from the body by a readable gap of dark disc so it does not merge into the torso at 48px. No second animal, no litter, no burrow.",
+        "palette": "Warm ivory and bone-white fur over the back and chest, soft grey-pink bare inner ears and bare tail, faint warm-grey dorsal saddle, dark eyes and nose, and a compact warm-grey contact shadow. No glow, no effect, no ground stain."
+      },
+      "kind": "creature",
+      "gate": "ready",
+      "gate_reason": "Main agent approved the 0.6.8 detached native actor evidence in evidence/c0b-art-gate: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/README.md",
+          "sha256": "a68e8165953229082ca8c18512cb56f43f85c2a025ccf453cf832e81fa569f14"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/native-actors.tsv",
+          "sha256": "35b66e9491cf7cd75f04db24e228bf6c6a0e7a0fa4b27f436e21e4cde877e193"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/sources.json",
+          "sha256": "43071414fc86a870d05f6b52661f57cdbd89c4a25a47b7b2bdcdb8e2faa3ce53"
+        }
+      ]
+    },
+    {
+      "asset_id": "giant-brown-mouse",
+      "native_name": "giant brown mouse",
+      "scope": "Shared rodent pool (rodent.lua); Kor'Pul both layouts and rat-nest room first; exact identity only, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_RODENT\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 57,
+          "anchor": "name = \"giant brown mouse\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v7-c0-sol/masters/giant-white-rat-v1.png",
+          "sha256": "e52f7f3bee25030329ffc581c6a297a9a3c15aedfec7205ae138e7cb22dcf3ac",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel at exactly that lightness. Do not copy its species, body plan, pose or tail."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_rodent_giant_brown_mouse.png",
+          "sha256": "356511e9696e2aee8fe9908744753b49ba6dcc87e699d0675ece0f58c9a8f509",
+          "role": "identity",
+          "note": "Native species and coat value only: giant mouse with large round ears. Ignore the native camera, its rat-like four-footed pose and the blue engine effects."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "family",
+          "note": "Existing mapped giant brown rat. The new mouse shares its warm umber coat, so it must differ by upright seated silhouette, oversized round ears and short body; never by coat colour alone."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One giant mouse sitting up on its haunches but leaning forward and low, nose dipped toward the disc as if sniffing, facing down-right. Rounded compact body, short blunt muzzle, two oversized round disc ears set wide and tipped slightly forward, forepaws reaching down to the base plate, and one long thin bare tail looping out to the left in an open curve.",
+        "contrast": "The three giant rats already in the set (brown, white, grey) are all long, low, horizontal four-footed profiles with a pointed muzzle, small ears and a thick bare tail sweeping across the disc. This mouse must NOT be a smaller copy of that. Change at least two dimensions: (1) silhouette — sit upright on the haunches so the body mass is a tall rounded vertical egg rather than a long horizontal bar, and let two oversized round disc-shaped ears break the top of the silhouette with visible open disc between them; (2) value pattern — a bright rounded back plane, two distinctly darker mid-value ear discs and one deep core shadow under the chest and haunches, instead of the rat art's single even body mass. Size alone is not a permitted distinction. The difference must survive grayscale at 48px.",
+        "composition": "One entire animal on one disc, steep overhead three-quarter view. Ears, forepaws, hind feet and the whole tail stay inside the disc with clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. Let the thin tail stay visually separated from the body by a readable gap of dark disc so it does not merge into the torso at 48px. No second animal, no litter, no burrow.",
+        "palette": "Warm umber and russet-brown fur with a paler tan chest and a broad lighter lit plane across the shoulders, grey-pink bare inner ears and bare tail, dark eyes and nose, compact warm-grey contact shadow. No glow, no effect, no ground stain."
+      },
+      "kind": "creature",
+      "gate": "ready",
+      "gate_reason": "Main agent approved the 0.6.8 detached native actor evidence in evidence/c0b-art-gate: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/README.md",
+          "sha256": "a68e8165953229082ca8c18512cb56f43f85c2a025ccf453cf832e81fa569f14"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/native-actors.tsv",
+          "sha256": "35b66e9491cf7cd75f04db24e228bf6c6a0e7a0fa4b27f436e21e4cde877e193"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/sources.json",
+          "sha256": "43071414fc86a870d05f6b52661f57cdbd89c4a25a47b7b2bdcdb8e2faa3ce53"
+        }
+      ]
+    },
+    {
+      "asset_id": "giant-grey-mouse",
+      "native_name": "giant grey mouse",
+      "scope": "Shared rodent pool (rodent.lua); Kor'Pul both layouts and rat-nest room first; exact identity only, no subtype-wide substitution",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_RODENT\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/rodent.lua",
+          "sha256": "ecb8d6c7ae28507cee0f59f69b5477446e01db4da27e278367bcd314bae0ad11",
+          "line": 121,
+          "anchor": "name = \"giant grey mouse\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+          "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte sculpted miniature finish, thin charcoal-brown physical disc and muted bronze-grey bevel at exactly that lightness. Do not copy its species, body plan, pose or tail."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_rodent_giant_grey_mouse.png",
+          "sha256": "e9330775ee35310b7db8ea570b1654c138952c451113b55cb636ab76f485c867",
+          "role": "identity",
+          "note": "Native species and coat value only: giant mouse with large round ears. Ignore the native camera, its rat-like four-footed pose and the blue engine effects."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v7-c0-sol/masters/giant-grey-rat-v1.png",
+          "sha256": "44770d2eacb4db6822613e3df33abf4ea4eeff3644b14defa963a99f658eb583",
+          "role": "family",
+          "note": "Existing mapped giant grey rat. The new mouse shares its cool slate coat, so it must differ by upright seated silhouette, oversized round ears and short body; never by coat colour alone."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One giant mouse reared high and upright on its haunches, head lifted and turned to the left, one forepaw raised clear of the chest and the other tucked in. Rounded compact body, short blunt muzzle, two oversized round disc ears held erect, and one long thin bare tail trailing straight back to the lower right with a slight kink.",
+        "contrast": "The three giant rats already in the set (brown, white, grey) are all long, low, horizontal four-footed profiles with a pointed muzzle, small ears and a thick bare tail sweeping across the disc. This mouse must NOT be a smaller copy of that. Change at least two dimensions: (1) silhouette — sit upright on the haunches so the body mass is a tall rounded vertical egg rather than a long horizontal bar, and let two oversized round disc-shaped ears break the top of the silhouette with visible open disc between them; (2) value pattern — a bright rounded back plane, two distinctly darker mid-value ear discs and one deep core shadow under the chest and haunches, instead of the rat art's single even body mass. Size alone is not a permitted distinction. The difference must survive grayscale at 48px.",
+        "composition": "One entire animal on one disc, steep overhead three-quarter view. Ears, forepaws, hind feet and the whole tail stay inside the disc with clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. Let the thin tail stay visually separated from the body by a readable gap of dark disc so it does not merge into the torso at 48px. No second animal, no litter, no burrow.",
+        "palette": "Cool slate-grey fur with pale bone-grey lit planes on the back and crown and a warm taupe belly, grey-pink bare inner ears and bare tail, dark eyes and nose, compact cool-grey contact shadow. No green poison cloud, no glow, no effect."
+      },
+      "kind": "creature",
+      "gate": "ready",
+      "gate_reason": "Main agent approved the 0.6.8 detached native actor evidence in evidence/c0b-art-gate: exact single-image identity, every display modifier empty (add_mos/add_displays/shader/anim/textures/shader_auras/replace_display/moddable_tile), no define_as, no unique, current mapping reason no-art. Art generation only; runtime integration, family separation review and in-game validation still pending.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/README.md",
+          "sha256": "a68e8165953229082ca8c18512cb56f43f85c2a025ccf453cf832e81fa569f14"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/native-actors.tsv",
+          "sha256": "35b66e9491cf7cd75f04db24e228bf6c6a0e7a0fa4b27f436e21e4cde877e193"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/c0b-art-gate/sources.json",
+          "sha256": "43071414fc86a870d05f6b52661f57cdbd89c4a25a47b7b2bdcdb8e2faa3ce53"
+        }
+      ]
+    }
+  ]
+}

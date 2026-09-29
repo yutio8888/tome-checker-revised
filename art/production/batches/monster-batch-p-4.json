@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-p-4",
+  "assets": [
+    {
+      "asset_id": "healer-astelrid",
+      "native_name": "Healer Astelrid",
+      "scope": "conclave-vault (boss room, zones/conclave-vault/npcs.lua:140; base BASE_NPC_OGRE, unique, define_as HEALER_ASTELRID, resolvers.nice_tile{tall=1}); single definition, female, rank 4",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/conclave-vault/npcs.lua",
+          "sha256": "6bfd6d91a4b29284ce05359670593f80e461b4a7cf3a0a02a9e2897531b8307f",
+          "line": 140,
+          "anchor": "define_as = \"HEALER_ASTELRID\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/conclave-vault/npcs.lua",
+          "sha256": "6bfd6d91a4b29284ce05359670593f80e461b4a7cf3a0a02a9e2897531b8307f",
+          "line": 142,
+          "anchor": "resolvers.nice_tile{tall=1}"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ogre_healer_astelrid.png",
+          "sha256": "99a577aea21ff091286cec4e527c26c9e05c54edb518469f705eb79cc8b8c724",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a huge female ogre in tattered dark violet healer robes with long dark hair, an officer badge, and a spiked club-staff wrapped with plaster and scalpels."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/cave-troll.png",
+          "sha256": "77d9b1435e549729989353fd90e2a8fa3ed56fd2a48822299363ab229408bfe5",
+          "role": "family",
+          "note": "Shipped cave troll (pale tan crouching troll with a spear) and stone troll: ogres here are human-shaped muscular brutes, not warty trolls, and each of the four ogres has its own clear colour and pose."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Healer Astelrid seen from a steep overhead three-quarter angle: an enormous hunched female ogre with pale grey-pink stitched skin and long dark hair partly tied up, a strong jaw with small tusks, wearing a wide tattered dark violet healer's robe with a lighter lavender collar and sleeves and a bright brass officer's badge on the chest, a white apron smeared with faint stains, her two big hands gripping a thick spiked club that is a healer's staff wrapped in white plaster bandages with a fan of steel scalpels bristling from its head, held diagonally across the body. Clinical, imposing and complete.",
+        "contrast": "Ogres share this body: ASTELRID is the only one in a WIDE VIOLET ROBE with a white apron and a plaster-and-scalpel club (silhouette: broad robe skirt, diagonal bristling club; hue: dark violet and lavender with white bandages and brass; value: mid). The ordinary ogres are bare-chested in tan/red/orange/blue and carry no robe.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. This is a huge giant, but on the tabletop disc it is drawn COMPACT: hunched forward with rolled shoulders, bent knees and elbows kept in close, the weapon held short and close to the body, so the whole figure is a broad chunky mass that fills the inner three quarters of the disc yet never reaches the outer sixth ring band. Do not draw a tall standing figure that would run off the disc; the feet and the head both stay well inside the disc.",
+        "palette": "Pale grey-pink skin, dark violet robe with lavender trim, white bandages and apron, brass badge, steel scalpels; nothing darker than dark violet and dark hair; the disc stays neutral charcoal with no violet cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Healer Astelrid, define_as=HEALER_ASTELRID, type=giant/subtype=ogre, unique=True); details and hashes in evidence/monster-batch-p-20260929/source-contracts.json. base BASE_NPC_OGRE (giant/ogre, no image=); resolvers.racial() only adds levelup talents Ogre Wrath, Grisly Constitution, Scar-Scripted Flesh, Writ Large (races.lua, passives/one activated buff, no display write); resolvers.sustains_at_birth() present: the sustained talents are listed per leaf; talents Heal, Arcane Shield (sustained, spells/aegis.lua), Aegis, Earthquake, Rush, Stunning Blow, Living Lightning (sustained, spells/energy-alchemy.lua); the two sustains start at birth and only add a damage shield, temporary values and particles (no type/subtype/image/add_mos/shader write); unique with define_as, so an ordinary unique native-tall entry like Kyless; resolvers.nice_tile{tall=1} shorthand (resolvers.lua nice_tile: invis.png + add_mos{image=e.image (the NPC.lua:33 default-name PNG), display_h=2, display_y=-1}), the same expansion live-confirmed for xhaiak/shiaak/naga nereid/Kyless (evidence/monster-live-f-20260929, monster-batch-l-live-20260929, monster-batch-j-live-20260929); native sprite 64x128. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-p-20260929/source-contracts.json",
+          "sha256": "3eb4cdb07da21fc9292934f54d928caa0b1dbe86aeff6b6877e103ba4cf2f182"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "schema": 1,
+  "batch_id": "player-tokens-v1-human-elf",
+  "assets": [
+    {
+      "asset_id": "player-human-male",
+      "native_name": "human_male",
+      "scope": "Native player body family (paper-doll), not a class or NPC; identity key descriptor.subrace x descriptor.sex -> moddable_tile per overload/mod/class/CheckerPlayerTokens.lua. Covers birth subraces Higher and Cornac at sex=Male (both share this family and moddable_tile \"human_#sex#\"). Runtime id player-human-male, exported to data/gfx/tokens/player-human-male.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/birth/races/human.lua",
+          "sha256": "4029208be08777e00c53d7f558ac7c2776eefa47e72caae732b7539e9b252886",
+          "line": 149,
+          "anchor": "moddable_tile = \"human_#sex#\""
+        },
+        {
+          "path": "game/modules/tome/data/birth/races/human.lua",
+          "sha256": "4029208be08777e00c53d7f558ac7c2776eefa47e72caae732b7539e9b252886",
+          "line": 181,
+          "anchor": "moddable_tile = \"human_#sex#\""
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/human_male/base_01.png",
+          "sha256": "fee7e9005cfcd08dd3bfa8e3d7098414104d9be17a02dbf88021e7cf34a78abf"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte painted miniature finish, thin charcoal-brown disc and bronze-grey bevel at exactly that lightness. Do not copy its crouching combat pose, bald head, daggers, leather vest or sash; this token is a calm standing figure in plain traveller's clothes with no weapon.",
+          "sha256": "a571c4618354fd68d89eebf282ac5c8940ad00157fc5a4e330731914dd56d199"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/human_male/base_01.png",
+          "sha256": "fee7e9005cfcd08dd3bfa8e3d7098414104d9be17a02dbf88021e7cf34a78abf",
+          "role": "identity",
+          "note": "Native unequipped paper-doll base body (skin-tone option 1 of several cosmetic choices; any option is equally native). Establishes body proportions and base skin/fur/bone value only: a man of average build with rounded, uncovered ears. Ignore its flat front-facing T-pose, flat top light and total nudity; the token uses the style reference's camera, disc and pose instead, and the figure must be dressed per the brief."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One adult human man of unremarkable average build, standing in a calm neutral pose, weight even on both feet, arms relaxed at his sides with open hands. Short practical hair leaving his rounded ears fully visible and uncovered, a plain unweathered face with no beard or at most light stubble. Wears a simple long-sleeved tunic belted at the waist over plain trousers and soft low boots.",
+        "contrast": "Every other body family in this roster is judged against this human baseline: moderate five-to-six-head proportion, rounded ears, no unusual muscle mass or slenderness. Elf must read leaner and longer-limbed with pointed ear tips; dwarf must read shorter, stockier and bearded; halfling must read smaller again with a bigger, rounder head; ogre must read towering and heavily muscled. This figure must not be bald or scarred like the crouching style-reference bandit, and must not carry any of its equipment. Differs from the human_female token in this same set by a broader shoulder line, a straighter waist-to-hip taper and short hair, not only by clothing colour.",
+        "composition": "One entire figure on one disc, steep overhead three-quarter view, facing down-left or down-right. Head, hands and feet stay well inside the disc with a clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. No second figure, no mount, no companion, no ground clutter.",
+        "palette": "Warm mid-tone (tan to light-olive) skin, an undyed or muted earth-toned tunic (oat, sand or weathered brown), darker brown trousers and boots, natural brown or black hair. No bright saturated dye, no metallic sheen, no jewellery."
+      },
+      "kind": "player",
+      "gate": "ready",
+      "gate_reason": "Main agent reviewed the native contract for this body family: overload/mod/class/CheckerPlayerTokens.lua's M.families/M.moddable/M.keys table (independent of the monster catalog, paper-doll aware) names this exact family and the birth subrace(s) that expand to it, and docs/player-token-plan-20260928/PLAN.md records the resolved identity-key, granularity and neutral-appearance decisions this batch follows. Art generation only; the runtime switch, manifest wiring and in-game validation in PLAN.md sections 2-4 are separate, unstarted work.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/overload/mod/class/CheckerPlayerTokens.lua",
+          "sha256": "13cd9726d7c782aa902558478827a9717cf3e6d81a69ec524fe8519e54648c70"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/player-token-plan-20260928/PLAN.md",
+          "sha256": "570c36028f835c3152dd4762ba907885dc16ad0e126be333db153561d311195c"
+        }
+      ]
+    },
+    {
+      "asset_id": "player-human-female",
+      "native_name": "human_female",
+      "scope": "Native player body family (paper-doll), not a class or NPC; identity key descriptor.subrace x descriptor.sex -> moddable_tile per overload/mod/class/CheckerPlayerTokens.lua. Covers birth subraces Higher and Cornac at sex=Female (both share this family and moddable_tile \"human_#sex#\"). Runtime id player-human-female, exported to data/gfx/tokens/player-human-female.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/birth/races/human.lua",
+          "sha256": "4029208be08777e00c53d7f558ac7c2776eefa47e72caae732b7539e9b252886",
+          "line": 149,
+          "anchor": "moddable_tile = \"human_#sex#\""
+        },
+        {
+          "path": "game/modules/tome/data/birth/races/human.lua",
+          "sha256": "4029208be08777e00c53d7f558ac7c2776eefa47e72caae732b7539e9b252886",
+          "line": 181,
+          "anchor": "moddable_tile = \"human_#sex#\""
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/human_female/base_01.png",
+          "sha256": "17b861e6a883781286f77814551991daeac4d728cb489ebe935fb2386efd2e04"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte painted miniature finish, thin charcoal-brown disc and bronze-grey bevel at exactly that lightness. Do not copy its crouching combat pose, bald head, daggers, leather vest or sash; this token is a calm standing figure in plain traveller's clothes with no weapon.",
+          "sha256": "a571c4618354fd68d89eebf282ac5c8940ad00157fc5a4e330731914dd56d199"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/human_female/base_01.png",
+          "sha256": "17b861e6a883781286f77814551991daeac4d728cb489ebe935fb2386efd2e04",
+          "role": "identity",
+          "note": "Native unequipped paper-doll base body (skin-tone option 1 of several cosmetic choices; any option is equally native). Establishes body proportions and base skin/fur/bone value only: a woman of average build with rounded, uncovered ears. Ignore its flat front-facing T-pose, flat top light and total nudity; the token uses the style reference's camera, disc and pose instead, and the figure must be dressed per the brief."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One adult human woman of unremarkable average build, standing in a calm neutral pose, weight even on both feet, arms relaxed at her sides with open hands. Hair worn shoulder-length and tied back, leaving her rounded ears visible, a plain unweathered face. Wears a simple long-sleeved tunic or belted dress over plain trousers or a plain skirt and soft low boots.",
+        "contrast": "Every other body family in this roster is judged against this human baseline: moderate five-to-six-head proportion, rounded ears, no unusual muscle mass or slenderness. Elf must read leaner and longer-limbed with pointed ear tips; dwarf must read shorter, stockier and bearded; halfling must read smaller again with a bigger, rounder head; ogre must read towering and heavily muscled. This figure must not be bald or scarred like the crouching style-reference bandit, and must not carry any of its equipment. Differs from the human_male token in this same set by a narrower shoulder line, a visible waist taper and tied-back longer hair, not only by wearing a dress.",
+        "composition": "One entire figure on one disc, steep overhead three-quarter view, facing down-left or down-right. Head, hands and feet stay well inside the disc with a clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. No second figure, no mount, no companion, no ground clutter.",
+        "palette": "Warm mid-tone (tan to light-olive) skin, an undyed or muted earth-toned tunic or dress (oat, sand or weathered rust), darker brown trousers/boots, natural brown or black hair. No bright saturated dye, no metallic sheen, no jewellery."
+      },
+      "kind": "player",
+      "gate": "ready",
+      "gate_reason": "Main agent reviewed the native contract for this body family: overload/mod/class/CheckerPlayerTokens.lua's M.families/M.moddable/M.keys table (independent of the monster catalog, paper-doll aware) names this exact family and the birth subrace(s) that expand to it, and docs/player-token-plan-20260928/PLAN.md records the resolved identity-key, granularity and neutral-appearance decisions this batch follows. Art generation only; the runtime switch, manifest wiring and in-game validation in PLAN.md sections 2-4 are separate, unstarted work.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/overload/mod/class/CheckerPlayerTokens.lua",
+          "sha256": "13cd9726d7c782aa902558478827a9717cf3e6d81a69ec524fe8519e54648c70"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/player-token-plan-20260928/PLAN.md",
+          "sha256": "570c36028f835c3152dd4762ba907885dc16ad0e126be333db153561d311195c"
+        }
+      ]
+    },
+    {
+      "asset_id": "player-elf-male",
+      "native_name": "elf_male",
+      "scope": "Native player body family (paper-doll), not a class or NPC; identity key descriptor.subrace x descriptor.sex -> moddable_tile per overload/mod/class/CheckerPlayerTokens.lua. Covers birth subraces Shalore and Thalore at sex=Male (both share this family and moddable_tile \"elf_#sex#\"). Runtime id player-elf-male, exported to data/gfx/tokens/player-elf-male.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/birth/races/elf.lua",
+          "sha256": "b93f1c35b91b87e6eadec9401d86c173f7ebd9878d1573035c90edcd224a8748",
+          "line": 118,
+          "anchor": "moddable_tile = \"elf_#sex#\""
+        },
+        {
+          "path": "game/modules/tome/data/birth/races/elf.lua",
+          "sha256": "b93f1c35b91b87e6eadec9401d86c173f7ebd9878d1573035c90edcd224a8748",
+          "line": 156,
+          "anchor": "moddable_tile = \"elf_#sex#\""
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/elf_male/base_01.png",
+          "sha256": "3e1e472e3d74a2154ca891523c44517af2b2c6db96d58e0248047a723c8f23ff"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte painted miniature finish, thin charcoal-brown disc and bronze-grey bevel at exactly that lightness. Do not copy its crouching combat pose, bald head, daggers, leather vest or sash; this token is a calm standing figure in plain traveller's clothes with no weapon.",
+          "sha256": "a571c4618354fd68d89eebf282ac5c8940ad00157fc5a4e330731914dd56d199"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/elf_male/base_01.png",
+          "sha256": "3e1e472e3d74a2154ca891523c44517af2b2c6db96d58e0248047a723c8f23ff",
+          "role": "identity",
+          "note": "Native unequipped paper-doll base body (skin-tone option 1 of several cosmetic choices; any option is equally native). Establishes body proportions and base skin/fur/bone value only: a lean, long-limbed man with clearly pointed ear tips. Ignore its flat front-facing T-pose, flat top light and total nudity; the token uses the style reference's camera, disc and pose instead, and the figure must be dressed per the brief."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One adult elf man, lean and long-limbed, standing in a calm neutral pose, weight even on both feet, arms relaxed at his sides with open hands. Hair swept back or short enough to leave his ears' pointed tips clearly visible above the hairline. Wears a simple long tunic belted at the waist over plain trousers and soft low boots or bare feet.",
+        "contrast": "Must read apart from the human_male token in this set at 48px, in grayscale: (1) silhouette — noticeably leaner through the torso and longer through the limbs than the human's average build, with pointed ear tips breaking the head silhouette, which the human never shows; (2) value — a cooler, paler skin plane against the same disc. Never hide the ear points under hair or a hood. Differs from elf_female by a broader shoulder line and short hair, not only by clothing colour.",
+        "composition": "One entire figure on one disc, steep overhead three-quarter view, facing down-left or down-right. Head, hands and feet stay well inside the disc with a clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. No second figure, no mount, no companion, no ground clutter.",
+        "palette": "Pale, cool-toned (porcelain to light olive-grey) skin, muted cool-toned tunic (slate blue-grey, moss or ash), darker trousers and soft boots, pale blond, silver or dark hair. No bright saturated dye, no metallic sheen, no jewellery."
+      },
+      "kind": "player",
+      "gate": "ready",
+      "gate_reason": "Main agent reviewed the native contract for this body family: overload/mod/class/CheckerPlayerTokens.lua's M.families/M.moddable/M.keys table (independent of the monster catalog, paper-doll aware) names this exact family and the birth subrace(s) that expand to it, and docs/player-token-plan-20260928/PLAN.md records the resolved identity-key, granularity and neutral-appearance decisions this batch follows. Art generation only; the runtime switch, manifest wiring and in-game validation in PLAN.md sections 2-4 are separate, unstarted work.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/overload/mod/class/CheckerPlayerTokens.lua",
+          "sha256": "13cd9726d7c782aa902558478827a9717cf3e6d81a69ec524fe8519e54648c70"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/player-token-plan-20260928/PLAN.md",
+          "sha256": "570c36028f835c3152dd4762ba907885dc16ad0e126be333db153561d311195c"
+        }
+      ]
+    },
+    {
+      "asset_id": "player-elf-female",
+      "native_name": "elf_female",
+      "scope": "Native player body family (paper-doll), not a class or NPC; identity key descriptor.subrace x descriptor.sex -> moddable_tile per overload/mod/class/CheckerPlayerTokens.lua. Covers birth subraces Shalore and Thalore at sex=Female (both share this family and moddable_tile \"elf_#sex#\"). Runtime id player-elf-female, exported to data/gfx/tokens/player-elf-female.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/birth/races/elf.lua",
+          "sha256": "b93f1c35b91b87e6eadec9401d86c173f7ebd9878d1573035c90edcd224a8748",
+          "line": 118,
+          "anchor": "moddable_tile = \"elf_#sex#\""
+        },
+        {
+          "path": "game/modules/tome/data/birth/races/elf.lua",
+          "sha256": "b93f1c35b91b87e6eadec9401d86c173f7ebd9878d1573035c90edcd224a8748",
+          "line": 156,
+          "anchor": "moddable_tile = \"elf_#sex#\""
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/elf_female/base_01.png",
+          "sha256": "1e523a43b96516c3ef8c1d173239af872d3563604422230337922b9d2be9a744"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png",
+          "role": "style",
+          "note": "Approved style anchor: reuse its steep overhead three-quarter camera, matte painted miniature finish, thin charcoal-brown disc and bronze-grey bevel at exactly that lightness. Do not copy its crouching combat pose, bald head, daggers, leather vest or sash; this token is a calm standing figure in plain traveller's clothes with no weapon.",
+          "sha256": "a571c4618354fd68d89eebf282ac5c8940ad00157fc5a4e330731914dd56d199"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/player/elf_female/base_01.png",
+          "sha256": "1e523a43b96516c3ef8c1d173239af872d3563604422230337922b9d2be9a744",
+          "role": "identity",
+          "note": "Native unequipped paper-doll base body (skin-tone option 1 of several cosmetic choices; any option is equally native). Establishes body proportions and base skin/fur/bone value only: a lean, long-limbed woman with clearly pointed ear tips; native cosmetic options add a braid, which this token may keep or omit. Ignore its flat front-facing T-pose, flat top light and total nudity; the token uses the style reference's camera, disc and pose instead, and the figure must be dressed per the brief."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "One adult elf woman, lean and long-limbed, standing in a calm neutral pose, weight even on both feet, arms relaxed at her sides with open hands. Hair worn back or braided so her ears' pointed tips stay clearly visible above the hairline. Wears a simple long tunic or belted dress over plain trousers or a plain skirt and soft low boots or bare feet.",
+        "contrast": "Must read apart from the human_female token in this set at 48px, in grayscale: (1) silhouette — noticeably leaner through the torso and longer through the limbs than the human's average build, with pointed ear tips breaking the head silhouette, which the human never shows; (2) value — a cooler, paler skin plane against the same disc. Never hide the ear points under hair or a hood. Differs from elf_male by a narrower shoulder line and a braid or longer tied hair, not only by wearing a dress.",
+        "composition": "One entire figure on one disc, steep overhead three-quarter view, facing down-left or down-right. Head, hands and feet stay well inside the disc with a clear margin; the outer sixth of the disc radius stays bare base plate. Keep the head out of the upper-right rank corner and the upper-left interaction corner. No second figure, no mount, no companion, no ground clutter.",
+        "palette": "Pale, cool-toned (porcelain to light olive-grey) skin, muted cool-toned tunic or dress (slate blue-grey, moss or dusty lavender), darker trousers/skirt and soft boots, pale blond, silver or dark hair. No bright saturated dye, no metallic sheen, no jewellery."
+      },
+      "kind": "player",
+      "gate": "ready",
+      "gate_reason": "Main agent reviewed the native contract for this body family: overload/mod/class/CheckerPlayerTokens.lua's M.families/M.moddable/M.keys table (independent of the monster catalog, paper-doll aware) names this exact family and the birth subrace(s) that expand to it, and docs/player-token-plan-20260928/PLAN.md records the resolved identity-key, granularity and neutral-appearance decisions this batch follows. Art generation only; the runtime switch, manifest wiring and in-game validation in PLAN.md sections 2-4 are separate, unstarted work.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/overload/mod/class/CheckerPlayerTokens.lua",
+          "sha256": "13cd9726d7c782aa902558478827a9717cf3e6d81a69ec524fe8519e54648c70"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/docs/player-token-plan-20260928/PLAN.md",
+          "sha256": "570c36028f835c3152dd4762ba907885dc16ad0e126be333db153561d311195c"
+        }
+      ]
+    }
+  ]
+}

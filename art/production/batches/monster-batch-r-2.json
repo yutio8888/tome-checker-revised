@@ -1,0 +1,228 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-r-2",
+  "assets": [
+    {
+      "asset_id": "weaver-young",
+      "native_name": "weaver young",
+      "scope": "spider.lua (spiderkin/spider, non-unique, no define_as, rarity 2, rank 1, size 1, base BASE_NPC_SPIDER); ardhungol (pool, E17.6), daikara, dreadfell, other pools; summoned by weaver escorts (spider.lua:312, :359: name=\"weaver young\"); shares its native PNG with the unhallowed-morass \"weaver hatchling\" (explicit image=spiderkin_spider_weaver_young.png), a different name that keeps its own catalog entry",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 245,
+          "anchor": "name = \"weaver young\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/unhallowed-morass/npcs.lua",
+          "sha256": "10dac055e54c6f7a92c43c8a278caca4b7d51d0c4b002a165ad5a714bf4fec52",
+          "line": 42,
+          "anchor": "name = \"weaver hatchling\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_weaver_young.png",
+          "sha256": "607ad607b59a0aac23d41f3160a7eae80149f668c4f8d6a69c994a9323ddbba2",
+          "role": "identity",
+          "note": "Native shape (64x64): a translucent pale blue fuzzy spider with glowing white orbs at the leg tips."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/weaver-hatchling.png",
+          "sha256": "23160095eb8fa4bb5807bc1c908ae6ce6912999749a5206faf5c93502253d01a",
+          "role": "family",
+          "note": "Shipped weaver hatchling (small pale blue-white spider seen flat from above, legs radiating evenly, glowing leg tips): the weaver young shares its native PNG but must not read as this radially spread pale spider."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A weaver young seen from a steep overhead three-quarter angle: a small translucent pale lilac-blue young weaver spider with its legs FOLDED IN and CURLED TIGHT UNDER a big round swollen abdomen like a sitting ball, the abdomen marked with a bold glowing white spiral swirl, a tiny head with four bright pale-blue eyes peeking out at the front, eight short bent legs with bright glowing white tips tucked close, a few thin silver threads of light drawn from the spinnerets and coiled once beside the body. Round, curled, spiral-marked and complete.",
+        "contrast": "Spider family: the weaver YOUNG is a ROUND CURLED BALL with a bold white SPIRAL on the abdomen and legs tucked under (silhouette: one compact round mass, legs almost hidden; hue: pale lilac-blue with white glow; value: light). The shipped weaver hatchling is a small pale blue-white spider with legs radiating evenly; the fate spinner is a large spider with long legs spread wide; the shipped Weaver Queen is a big pure-white radial spider.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, tails, weapons, staffs and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, leg or drip reaches the outer sixth ring band or crosses the disc rim.",
+        "palette": "Pale lilac-blue translucent body with lighter white-blue highlight planes, glowing white spiral and leg tips, pale blue eyes, thin silver threads; nothing darker than mid slate-blue except the eyes; the glow must not tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=weaver young, define_as=None, type=spiderkin/subtype=spider, unique=False); details and hashes in evidence/monster-batch-r-20260929/source-contracts.json. base BASE_NPC_SPIDER (spiderkin/spider, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; talents Spider Web, Lay Web, Spin Fate, Swap (none sustained); no sustains_at_birth and no sustained talent. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-r-20260929/source-contracts.json",
+          "sha256": "588ddd99e3d398bf93163ca804f053510ce1388654ff89c900e866205ae58c92"
+        }
+      ]
+    },
+    {
+      "asset_id": "fate-spinner",
+      "native_name": "fate spinner",
+      "scope": "unhallowed-morass (zones/unhallowed-morass/npcs.lua:88, spiderkin/spider, non-unique, no define_as, rarity 2, rank 2, size 4, base BASE_NPC_SPIDER; zone-private pool E12.8); single definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/unhallowed-morass/npcs.lua",
+          "sha256": "10dac055e54c6f7a92c43c8a278caca4b7d51d0c4b002a165ad5a714bf4fec52",
+          "line": 88,
+          "anchor": "name = \"fate spinner\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_fate_spinner.png",
+          "sha256": "bbca7ab60f5d80fe9f2461f725442126545b5f55f519f2a0c36f458a75aa3530",
+          "role": "identity",
+          "note": "Native shape (64x64): a large pale blue-white spider with long jointed legs spread wide."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/weaver-queen.png",
+          "sha256": "39f935a31e7e84f9068461d0288b87c7cbc184483d81dd9b22eae6c678a8ea86",
+          "role": "family",
+          "note": "Shipped Weaver Queen (large pure-white spider, legs radiating evenly): no fate weaver token may be a big white radial spider."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A fate spinner seen from a steep overhead three-quarter angle: a horse-sized steel-blue spider seen crouched LOW and WIDE, a broad flat cephalothorax with six bright cyan-white eyes in two rows, eight long jointed legs SPREAD WIDE in a zigzag star with pale silver joint highlights but each leg bent back sharply so the whole leg span stays inside the disc, a slender pointed abdomen raised behind and a GLOWING SILVER-VIOLET THREAD LOOP forming a small clock-like ring spun between the two front legs, a few short glowing threads trailing back. Wide, threaded, temporal and complete.",
+        "contrast": "Spider family: the fate SPINNER is a LOW WIDE ZIGZAG-LEGGED STAR with a glowing THREAD RING between the front legs, steel-blue (silhouette: flat star with a small ring in front; hue: steel blue with silver-violet thread; value: mid). The weaver young is a tiny round curled ball with a white spiral; the shipped weaver hatchling is a small pale radial spider; the shipped Weaver Queen is a big pure-white radial spider; the giant spider is black.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, tails, weapons, staffs and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, leg or drip reaches the outer sixth ring band or crosses the disc rim.",
+        "palette": "Steel-blue and slate-blue body with lighter pale-blue highlight planes and silver leg joints, cyan-white eyes, glowing silver-violet thread ring; nothing darker than dark slate-blue except the leg undersides; keep the body mid-value; the thread glow must not tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=fate spinner, define_as=None, type=spiderkin/subtype=spider, unique=False); details and hashes in evidence/monster-batch-r-20260929/source-contracts.json. base BASE_NPC_SPIDER (spiderkin/spider, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; talents Dimensional Step, Warp Mine Toward (activated, no display write); no sustains_at_birth and no sustained talent. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-r-20260929/source-contracts.json",
+          "sha256": "588ddd99e3d398bf93163ca804f053510ce1388654ff89c900e866205ae58c92"
+        }
+      ]
+    },
+    {
+      "asset_id": "giant-green-ant",
+      "native_name": "giant green ant",
+      "scope": "ant.lua (insect/ant, non-unique, no define_as, rarity 1, rank 1, base BASE_NPC_ANT, explicit image=npc/green_ant.png); old-forest, maze, ritch-tunnels and 10 more zones (E13.3 total)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 72,
+          "anchor": "name = \"giant green ant\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/green_ant.png",
+          "sha256": "367e7dd2b8ab16e449160bdb3fee7730b83f3dda6382e1e210d5466b5b6318dd",
+          "role": "identity",
+          "note": "Native shape (64x64): a straight olive-green ant seen from the side with a big round abdomen."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/giant-yellow-ant.png",
+          "sha256": "56ad2d213532fcc1932d52f57d7c4eeb214713308542f5c47d4edc80af949031",
+          "role": "family",
+          "note": "Shipped giant yellow ant (a straight three-segment ant seen from above, legs splayed, antennae forward; the white, brown, blue and black ants use the same pose): the green and red ants must not be this straight recoloured ant."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A giant green ant seen from a steep overhead three-quarter angle: a large glossy moss-green ant with its ABDOMEN CURLED FORWARD AND UP over its back like a scorpion tail, the abdomen tip hanging a big bright lime-green venom drop, the whole body forming a C-shaped crescent, a rounded head with two short curved antennae and small mandibles, six bent legs gripping the ground close to the body, pale yellow-green underbelly and glossy dark-green segment edges. Hunched, curled, venomous and complete.",
+        "contrast": "Ant family: the GREEN ant is a C-SHAPED CRESCENT with the ABDOMEN CURLED OVER THE BACK and a dripping venom drop (silhouette: crescent with a hanging tip; hue: moss green with lime venom; value: mid). The red ant is an upright rearing T with raised front legs. The shipped white, yellow, brown, blue and black ants are one straight recoloured ant, and the carpenter ant is a black ant with huge open mandibles: the green ant must not be a straight ant.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, tails, weapons, staffs and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, leg or drip reaches the outer sixth ring band or crosses the disc rim.",
+        "palette": "Moss-green chitin with lighter lime highlight planes, pale yellow-green underbelly, bright lime venom drop; nothing darker than dark green except the eyes; the venom must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=giant green ant, define_as=None, type=insect/subtype=ant, unique=False); details and hashes in evidence/monster-batch-r-20260929/source-contracts.json. base BASE_NPC_ANT (insect/ant, no image=); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; talent Bite Poison (activated, no display write); no sustains_at_birth and no sustained talent. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-r-20260929/source-contracts.json",
+          "sha256": "588ddd99e3d398bf93163ca804f053510ce1388654ff89c900e866205ae58c92"
+        }
+      ]
+    },
+    {
+      "asset_id": "giant-red-ant",
+      "native_name": "giant red ant",
+      "scope": "ant.lua (insect/ant, non-unique, no define_as, rarity 1, rank 1, base BASE_NPC_ANT, explicit image=npc/red_ant.png); old-forest, maze, ritch-tunnels and 10 more zones (E13.3 total)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 84,
+          "anchor": "name = \"giant red ant\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/red_ant.png",
+          "sha256": "9d5eed4abee6129def3277c8ff43a74bad8d13cae949a5dce6416f5503386eb0",
+          "role": "identity",
+          "note": "Native shape (64x64): a straight deep-red ant seen from the side with a big round abdomen."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/giant-yellow-ant.png",
+          "sha256": "56ad2d213532fcc1932d52f57d7c4eeb214713308542f5c47d4edc80af949031",
+          "role": "family",
+          "note": "Shipped giant yellow ant (a straight three-segment ant seen from above, legs splayed, antennae forward; the white, brown, blue and black ants use the same pose): the green and red ants must not be this straight recoloured ant."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A giant red ant seen from a steep overhead three-quarter angle: a large glossy crimson-red ant REARED UP on its four hind legs in a fierce upright stance, the two front legs raised high in the air with claws spread and the head thrown back showing wide open serrated mandibles, a big round abdomen behind glowing dull orange along its seams like a heated ember, two bent antennae, orange-red segment edges and a paler orange underbelly. Upright, fierce, fiery and complete.",
+        "contrast": "Ant family: the RED ant is an UPRIGHT REARING T with two raised front legs and wide open mandibles (silhouette: vertical body with raised arms; hue: crimson with orange ember seams; value: mid). The green ant is a curled C-shaped crescent with a venom drop. The shipped white, yellow, brown, blue and black ants are one straight recoloured ant, and the carpenter ant is a black ant with huge open mandibles: the red ant must not be a straight ant.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, tails, weapons, staffs and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, leg or drip reaches the outer sixth ring band or crosses the disc rim.",
+        "palette": "Crimson-red chitin with lighter orange-red highlight planes, orange glowing seams, pale orange underbelly; nothing darker than dark crimson except the eyes; the ember glow must not tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=giant red ant, define_as=None, type=insect/subtype=ant, unique=False); details and hashes in evidence/monster-batch-r-20260929/source-contracts.json. base BASE_NPC_ANT (insect/ant, no image=); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; talent Flame Fury (activated, no display write); no sustains_at_birth and no sustained talent. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-r-20260929/source-contracts.json",
+          "sha256": "588ddd99e3d398bf93163ca804f053510ce1388654ff89c900e866205ae58c92"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+window.monsterCatalog = [
+  {
+    "id": "orc-necromancer"
+  },
+  {
+    "id": "rak-shor"
+  },
+  {
+    "id": "warmaster-gnarg"
+  },
+  {
+    "id": "orc-assassin"
+  },
+  {
+    "id": "weaver-young"
+  },
+  {
+    "id": "fate-spinner"
+  },
+  {
+    "id": "giant-green-ant"
+  },
+  {
+    "id": "giant-red-ant"
+  },
+  {
+    "id": "quasit"
+  },
+  {
+    "id": "elven-warrior"
+  },
+  {
+    "id": "corrupted-war-dog"
+  },
+  {
+    "id": "grannor-vor"
+  }
+];

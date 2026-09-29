@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-a-4",
+  "assets": [
+    {
+      "asset_id": "ancient-dragon-turtle",
+      "native_name": "ancient dragon turtle",
+      "scope": "general; exact identity only; live check pending",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/aquatic_critter.lua",
+          "sha256": "3df4ea93796566f6da4347a22cd2d2eb3bedc394ca8206289d91a2440a30d354",
+          "line": 77,
+          "anchor": "ancient dragon turtle"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/dragon-turtle-v1.png",
+          "sha256": "e6e0b9ac315b84bde6b6dfbf342b9aebb5c4d970e54102dcbd301ca67e6d29be",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/aquatic_critter_ancient_dragon_turtle.png",
+          "sha256": "d52095cb3897914c8aeee58a2a9e7e275e3d435b7626f0290298b71a3214746c",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "Ancient dragon turtle, immense thick domed shell with high ridged plates, elongated reptilian neck and blunt beaked dragon head, heavy four flipper-like clawed legs, worn age scars.",
+        "contrast": "Higher more ridged and jagged shell, longer neck and massive paws versus existing smoother younger dragon turtle; light shell edge and muzzle over dark base.",
+        "composition": "One complete creature centered on one circular disc, steep overhead three-quarter view; all limbs, horns, tail and equipment inside inner five-sixths of disc radius, clear outer band.",
+        "palette": "Sea green shell with pale worn ridges, slate green skin, ivory scutes, no water effect."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity and native display contract inspected. No live fixture in this assigned task; live validation remains pending.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-a-20260929/source-contracts.json",
+          "sha256": "81db38a2e4a6fd3ada89165add84694221c3849f329de8ddc9342cc547d219bb"
+        }
+      ]
+    }
+  ]
+}

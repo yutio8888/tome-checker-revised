@@ -1,0 +1,70 @@
+{
+  "asset_id": "bandit-v1",
+  "intent": "generate",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: stylized-concept.\nAsset type: one transparent PNG game creature token, square 1024x1024, painted tabletop miniature legible at 48/64/96 pixels.\nPrimary request: Create BANDIT, a brutish human ruffian who prefers force but remains a light-armored dual-dagger thief. Image 1 supplies ONLY steep overhead camera, matte painted sculpture finish, scale of disc, lighting and neutral base. Replace skeleton with living human. Image 2 is native bandit identity: bald/shaved head, muscular bare chest and arms, dark trousers, weathered rusty-brown waist cloth, two short blades.\nSubject: exactly one stocky adult bandit, CLOSE-SHAVEN BALD HEAD and short dark stubble, very broad heavy shoulders and muscular BARE UPPER ARMS and chest framed by an OPEN SLEEVELESS brown light-leather vest. Medium warm tan skin is the largest bright block, darker than cutpurse linen. Thin diagonal plain leather harness across chest, dark umber trousers, dull rust-brown short ragged sash/waist panels, no bright red. Short heavy boots widely braced in a SQUAT SQUARE stance, both knees outward, body facing diagonally lower-left. BOTH elbows bent and pushed outward to create a broad blocky upper-body silhouette. TWO SHORT broad steel daggers, one in each of TWO hands, held LOW at either side of waist and angled toward lower corners. Blades short but chunky, very clearly daggers rather than swords, cleavers or axes. Square compact head held forward, no hood, no hair mass, no cape.\nComposition: match steep overhead three-quarter camera of image 1, crown, shoulders and upper surfaces visible, full body compactly foreshortened within centered almost circular disc. Dark charcoal-brown thin base with subtle bronze-grey physical rim, diameter 82 percent square. Bandit reads wide and heavy, not tall. Head and each dagger safely within disc; clean dark upper-right outer quadrant for external UI. Leave good dark margin above crown.\nStyle and light: matte hand-painted fantasy miniature, broad readable planes, anatomically coherent exactly two hands and arms and legs, soft light from upper left; medium-light tan skin and dark reddish-umber leather differentiated from pale thin novice or dark cloaked thieves. Restrained texture.\nBackdrop: genuine transparent alpha outside disc including all corners. Preserve generated native alpha.\nAvoid: heavy armor, pauldrons, helmet, axe, club, hammer, sword, shield, large bags, green or bright red clothes, black hood, scene, scenery, ground outside disc, pedestal, blood, magic, smoke, auras, faction ring, health, damage, rarity, rank, level, selection, text, symbols, watermark. Only one finished token.",
+  "references": [
+    "art/monsters-v5/masters/degenerated-skeleton-warrior-v2.png",
+    "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_bandit.png"
+  ],
+  "reference_roles": [
+    "style/camera/disc/light reference",
+    "native identity reference"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e1a4-c0f8-7dd3-a4a3-0986fee6a52e/exec-e5a58f1b-35cd-4ae9-8137-2db5ff38510e.png",
+  "saved_output_path": "art/monsters-v6/masters/bandit-v1.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Byte-for-byte original copy; mechanical C downsampling only for review, no artwork editing.",
+  "selection": "static-reviewed-integration-candidate",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "generated_at_utc": "2026-09-27",
+  "sha256": "a571c4618354fd68d89eebf282ac5c8940ad00157fc5a4e330731914dd56d199",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      119,
+      9,
+      1200,
+      1196
+    ],
+    "visible_alpha_bbox": [
+      124,
+      128,
+      1130,
+      1152
+    ],
+    "transparent_pixels": 759984,
+    "partial_alpha_pixels": 812125,
+    "opaque_pixels": 407,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "review": "秃头裸臂宽肩方形蹲姿、粗短双匕首、轻皮背心，未换重武器。",
+  "small_size_review": {
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "method": "Existing C exporter via build_monster_art.py; all 12 PNGs actually opened using view_image detail=original",
+    "review_result": "pass; see REVIEW.md",
+    "runtime_verified": false
+  }
+}

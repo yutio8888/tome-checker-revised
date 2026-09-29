@@ -1,0 +1,147 @@
+{
+  "id": "venus-flytrap-v1",
+  "created_date": "2026-09-26",
+  "tool": "built-in image_gen.imagegen",
+  "skill": "~/.codex/skills/.system/imagegen/SKILL.md",
+  "use_case": "precise-object-edit",
+  "intent": "edit",
+  "prompt": "Use case: precise-object-edit.\nAsset type: transparent PNG tabletop monster token.\nEdit target: reference image 1, the generated giant Venus flytrap miniature.\nRequired correction ONLY: the giant upper trapping lobe currently projects far above the base outline. Recompose the miniature into a compact crouched rosette so EVERY part of the plant sits VISUALLY INSIDE the circular base silhouette with a continuous clear neutral rim visible all around it, including behind the upper jaw. This is a top-down tactical token occupying exactly one square cell. Tilt the head toward the camera/downward and shorten the stem so the open two-lobed mouth is centered within the disc, not standing above it. The circular base must fully enclose the silhouette of all mouth edges, teeth and leaves in the image plane. Show a near-circular disc viewed from high above, not a narrow low-angle ellipse. Keep the same large open single trap, four broad leaf shapes, olive green body, muted brick-red mouth, ivory marginal spines, hand-painted carved-resin material, soft upper-left light and neutral gray-brown shallow base. Preserve the species identity and painterly miniature quality. Do not add another mouth or extra foliage. No faction rim, text, insignia, labels or scenic decoration.\nFraming: square canvas, one complete token, disc diameter about 86% of canvas width, centered, all plant contours within the disc. No clipping.\nTransparency is essential: all pixels outside the clean circular disc must be genuinely fully transparent, zero alpha, with ordinary antialiasing only at the disc edge. No stray low-alpha dust, particles, shadows, background or haze. Output PNG with alpha.",
+  "references": [
+    {
+      "path": "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/venus-flytrap-v0-overhang.png",
+      "role": "edit target: retain species and material, lower whole creature into circular outline"
+    }
+  ],
+  "source_tool_path": "~/.codex/generated_images/01a0dd25-86d8-71f0-8868-f3586117d75e/exec-b79172a5-02bc-4bf0-9a59-2c0c95dc6a1c.png",
+  "saved_path": "masters/venus-flytrap-v1.png",
+  "processing": "Original generated PNG copied byte-for-byte. No color change, alpha cleanup, resizing or painting performed by this agent.",
+  "alpha_inspection": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox_by_min_value": {
+      "1": [
+        49,
+        57,
+        1200,
+        1238
+      ],
+      "8": [
+        120,
+        116,
+        1134,
+        1127
+      ],
+      "32": [
+        120,
+        116,
+        1134,
+        1126
+      ],
+      "128": [
+        121,
+        116,
+        1133,
+        1126
+      ],
+      "250": [
+        122,
+        117,
+        1132,
+        1125
+      ]
+    },
+    "fully_transparent_pixels": 764358,
+    "fully_opaque_pixels": 465,
+    "low_alpha_pixels_1_to_7": 6500,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sha256": "2a41e18360b3f9971b880a060ea0d77bdb45cc7f3403b4d4363654d9e2732a0e"
+  },
+  "review": {
+    "inspected_with": "view_image",
+    "large_view": "One large clearly split trapping mouth with dark reddish interior, a few broad leaves and short stem. Revision now places all visible plant parts inside the circular neutral base. No flowerpot, flower patch or faction rim.",
+    "transparency": "Real RGBA transparency. A small number of very low-alpha (1–7) pixels extend beyond the visible disc; recorded without cleanup. Use alpha>=8 bbox for size inspection only.",
+    "status": "Candidate for parent normalized export and 48/64/96px review; not yet runtime validated."
+  },
+  "previous_candidate": {
+    "saved_path": "masters/venus-flytrap-v0-overhang.png",
+    "status": "Rejected: upper trapping lobe visually extended above disc perimeter.",
+    "prompt": "Use case: stylized-concept.\nAsset type: single transparent PNG monster miniature for Tales of Maj'Eyal tactical board tiles.\nPrimary request: create exactly ONE GIANT VENUS FLYTRAP tabletop token, matching the craft, camera and base of reference image 1. Do not depict any troll.\nInput images: Image 1 is the established forest-troll token STYLE reference only: painterly carved miniature material, high overhead oblique camera, soft upper-left light, neutral dark gray-brown thin round disc. Image 2 is the original giant Venus flytrap SPECIES IDENTITY reference only: a predatory green plant with a large reddish double-lobed toothed trapping mouth, short stalk and green leaves. Use its creature identity, not its tiny pixel texture.\nSubject: a fantasy monster plant with ONE large immediately readable open two-lobed Venus flytrap trap, with dark muted red interior, olive green outer lips and a small number of thick ivory-colored marginal trap spines. The two hinged trap halves must look botanical, not a human face. This large clamp-like trap is the dominant silhouette, raised on one thick short curved stem. Under it only four or five broad substantial leaves radiate from the root, with simple pointed shapes. Give it a clearly threatening sculptural pose. No additional small mouths, no flowers, no vines scattered around.\nStyle/medium: hand-painted carved fantasy board-game miniature, matte brush-painted wood/resin, simplified readable chunky forms with selective drybrush highlights. A solid playful game piece, not a photoreal potted houseplant, not a bouquet, not a realistic patch of foliage, not a flat graphic icon.\nComposition/framing: square canvas, nearly circular shallow neutral gray-brown base centered and occupying about 86% of canvas width. Match reference 1 high overhead oblique camera so we see down into the open trap and also its sculptural volume. The whole plant occupies 75–88% of the disc, with ALL leaves, jaw spines and stem strictly inside the disc contour. Disc has a thin quiet rim, not a tall pedestal. Keep the leaves as a few big radiating forms so this species reads differently from the round bear or coil snake at 48/64 pixels.\nLighting: soft upper-left highlights, brief lower-right contact shading confined inside the base.\nColor: medium-value olive leaves brighter than the base, dark desaturated red mouth as a species feature, warm ivory tips. No glowing areas and no red status border.\nBackground: genuine transparent alpha outside the disc including all four corners; completely clean transparent perimeter without particles, mist, stray pixels, background surface or cast shadow beyond the base.\nConstraints: exactly one isolated complete token, no cropped contour. No flowerpot. No faction-colored rings, no red/blue/green rim, no numbers, text, labels, rank symbols or watermark. No grass tufts, stones, flowers, scenery, ground plane or environment. Preserve real PNG alpha.",
+    "use_case": "stylized-concept",
+    "references": [
+      {
+        "path": "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/forest-troll-v1.png",
+        "role": "style only: handmade miniature material, camera, neutral base, light"
+      },
+      {
+        "path": "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/immovable_plants_giant_venus_flytrap.png",
+        "role": "species identity: giant predatory green plant with a single reddish trap"
+      }
+    ],
+    "source_tool_path": "~/.codex/generated_images/01a0dd25-86d8-71f0-8868-f3586117d75e/exec-6a824a00-de1c-4025-961b-e3d62aba338e.png",
+    "alpha_inspection": {
+      "mode": "RGBA",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox_by_min_value": {
+        "1": [
+          0,
+          39,
+          1240,
+          1228
+        ],
+        "8": [
+          163,
+          66,
+          1103,
+          1176
+        ],
+        "32": [
+          164,
+          67,
+          1103,
+          1176
+        ],
+        "128": [
+          164,
+          68,
+          1102,
+          1175
+        ],
+        "250": [
+          165,
+          69,
+          1101,
+          1174
+        ]
+      },
+      "fully_transparent_pixels": 823479,
+      "fully_opaque_pixels": 552,
+      "low_alpha_pixels_1_to_7": 8744,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "fb8efd4553f4f6dff21c7686673f48bcb51eeb9b578c03e2ae886b6b119ea223"
+    }
+  }
+}

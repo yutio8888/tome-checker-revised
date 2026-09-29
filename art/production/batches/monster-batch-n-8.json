@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-n-8",
+  "assets": [
+    {
+      "asset_id": "shade-of-telos",
+      "native_name": "The Shade of Telos",
+      "scope": "telmur (undead/ghost, define_as SHADE_OF_TELOS, unique, guardian of zone Ruins of Telmur, default-name image npc/undead_ghost_the_shade_of_telos.png, single definition; allow_infinite_dungeon)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/telmur/npcs.lua",
+          "sha256": "01906e23f69de269a10830c361dd0feafbb942d2ce926e6d14421d4df164e3ed",
+          "line": 29,
+          "anchor": "define_as = \"SHADE_OF_TELOS\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/telmur/npcs.lua",
+          "sha256": "01906e23f69de269a10830c361dd0feafbb942d2ce926e6d14421d4df164e3ed",
+          "line": 32,
+          "anchor": "name = \"The Shade of Telos\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_ghost_the_shade_of_telos.png",
+          "sha256": "9ec8d1f9f24e87c35e25cccdd474da79709cccdb95ecc12fa25f68fd00de8b92",
+          "role": "identity",
+          "note": "Native shape: a large glowing cyan translucent spectre with a jagged crown-like top, wide shoulders and long ragged sleeves and robe fading into trailing wisps."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/the-master.png",
+          "sha256": "5aa75458ec8b3174c34852e212555d71d8ae0090a0077717530aca4e71576834",
+          "role": "family",
+          "note": "Shipped The Master (solid crimson robe, staff): the Shade of Telos is a translucent blue-violet spectral archmage with a pointed crown and a crystalline staff held in both hands."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "The Shade of Telos seen from a steep overhead three-quarter angle: a large tall spectral archmage made of translucent ice-blue and soft violet light, a pointed jagged crown of ice on the head, a stern hollow-eyed face, wide shoulders under long flowing ragged sleeves and robes trailing to wisps at the base, both hands gripping a long crystalline ice-blue staff held upright in front of the body with a bright white-blue crystal at the top, small frost crystals drifting around the shoulders. Regal, ancient and complete, clearly lit.",
+        "contrast": "Wight, ghost and shadow undead built together: the Shade of Telos is the BIG blue-violet robed spectral archmage with a jagged crown and an upright crystalline staff (silhouette: wide shoulders, crown spikes, vertical staff in front of the body; hue: ice blue with soft violet; value: light). The grave wight is a smaller pale teal shroud ghost with reaching arms and no staff, the shadow stalker a low slate-violet smoke figure, and the forest wight a green armoured skeleton.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. Calibration from the previous generation of this exact token: the top of the crown, the staff crystal and the trailing robe wisps reached past the edge of the disc, so the token could not be exported. This time draw the figure markedly more compact: a shorter staff held close in front of the body with its crystal top at about head height, the robe hem wisps kept short around the base; the ENTIRE figure, crown, staff and robe included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side.",
+        "palette": "Light ice-blue and soft violet translucent robes with brighter white-blue crown, staff crystal and face hollows; nothing darker than mid tone except the eye hollows and sleeve folds; no glow or cold light cast onto the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=The Shade of Telos, define_as=SHADE_OF_TELOS, type=undead/subtype=ghost, unique=True); details and hashes in evidence/monster-batch-n-20260929/source-contracts.json. no base (standalone newEntity: type undead/subtype ghost, unique=true, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the entity; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives undead_ghost_the_shade_of_telos.png (64x64); no sustains_at_birth; Uttercold is a sustained talent the entity knows but nothing activates it at birth (its activate only adds temporary values and circular_flames particles chosen with core.shader.active); can_pass pass_wall is movement only; resolvers.inscriptions(4,\"rune\") may give random runes whose use is a timed effect (matcher falls back to native while a shader is set); the Telmur zone.lua has no post-processing of the actor. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-n-20260929/source-contracts.json",
+          "sha256": "dad625ba87d3d81ab2a542faf25e2a55fafb5093319a6d1269d4019f0cde564b"
+        }
+      ]
+    }
+  ]
+}

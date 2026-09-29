@@ -1,0 +1,27 @@
+{
+  "asset_id": "door-leaf-vertical-v2",
+  "mode": "built-in image_gen",
+  "prompt": "Use case: precise-object-edit. Keep this vertical oak door leaf's geometry, exact orientation, upper-left lighting, grain, native transparency and rectangular silhouette. Change ONLY hardware placement: move both dark iron hinge fittings/straps to the SOUTH/bottom end, with their long straps extending upward from bottom. Move the small ring handle to the NORTH/top end. Do not rotate or flip the leaf or lighting. It must now pivot at its bottom end when viewed from above; this is needed for a within-cell open-door swing. Preserve same wood, dull metal, top/east face shading and scale. Single component, no background, jambs, text, symbols or extra object.",
+  "references": [
+    "masters/door-leaf-vertical-v1.png"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-5b6af2c2-ca74-443d-a7a1-5b6fc5aea3d9.png",
+  "selection": "selected-production-component",
+  "processing": "Original preserved byte-for-byte; deterministic terrain compositing may crop/sample painted components without rotation.",
+  "rejection_reason": null,
+  "sha256": "908da24521d0e6f633c2d13e63dec65b28b3fb832fc371ea62b9f4bb9c7e19fb",
+  "byte_identical": true,
+  "metrics": {
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "visible_alpha_bbox_gt8": [
+      516,
+      75,
+      740,
+      1177
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "asset_id": "door-open-vertical-v1",
+  "material": "door-open-vertical",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "intent": "reference-guided generation/edit",
+  "prompt": "Use case: precise-object-edit. Turn this vertical-axis CLOSED doorway into its matching OPEN state. Preserve north stone jamb and south stone jamb exactly in position, size, paint, camera and upper-left lighting. Remove wooden leaf from the NORTH-SOUTH centerline between them and swing it 90 degrees toward the WEST around its hinge at the south-facing inner edge of the NORTH jamb. Open leaf now projects leftwards along the north side of the opening, entirely inside the square. Keep leaf upright with top edge and modest south-facing face, same wood and iron straps, attached by plausible hinge. Wide completely TRANSPARENT EAST-WEST passage through the center between north/south jambs, no wood or crossbar spanning it, no lintel and no floor. Door leaf lies ALONG the north boundary of passage, not flat on ground and not as a bridge. All geometry stays within canvas 8..92%, no outside shadow. Native genuine alpha in center and outside. No duplicate leaf, no extra posts, scenery, words, numbers, symbols, arrows or circle. One open component, consistent matte painted tabletop miniature.",
+  "references": [
+    "door-closed-vertical-v1"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-a095d2de-e83c-432c-9161-b365bf87796c.png",
+  "saved_output_path": "art/terrain-korpul-v1/masters/door-open-vertical-v1.png",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "native_alpha_required": true,
+  "selection": "rejected",
+  "rejection_reason": "Leaf remained vertical through east-west crossing; falsely implied blocked route. Repaired with explicitly horizontal leaf above center band.",
+  "processing": "Copy original unchanged; small-size whole-canvas resampling only. No alpha extraction, relighting, recolouring, rotation, or painted geometry.",
+  "sha256": "cda0fc333330f51af0d743c290b6599806305b4b6149103e6fc368bfa88f18a9",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      59,
+      93,
+      1192,
+      1190
+    ],
+    "transparent_pixels": 1333064,
+    "partial_alpha_pixels": 238927,
+    "opaque_pixels": 525,
+    "visible_alpha_bbox_gt8": [
+      428,
+      99,
+      779,
+      1161
+    ],
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "references_resolved": [
+    "masters/door-closed-vertical-v1.png"
+  ],
+  "static_review": {
+    "sheet": "review/design-sheet.png",
+    "actual_sizes": [
+      48,
+      64,
+      96
+    ],
+    "floor_repeat_size": 128,
+    "grayscale": "CSS display only",
+    "runtime_verified": false,
+    "connected_masks_verified": false
+  }
+}

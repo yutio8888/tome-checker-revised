@@ -1,0 +1,70 @@
+{
+  "asset_id": "rogue-v1",
+  "intent": "generate",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: stylized-concept.\nAsset type: one transparent PNG game creature token, square 1024x1024, painted tabletop miniature readable at 48/64/96 pixels.\nPrimary request: Create ROGUE, an adult human thief promoted above cutpurse, with stealth and deceptive footwork. Image 1 is approved CUTPURSE: match its steep overhead camera, exact dark bronze-grey thin circular disc, light and miniature paint finish, NOT its clothes, pose or identity. Image 2 is native rogue: short blue hood/cowl and light leather, two short knives.\nSubject: one lean but broad-shouldered adult human rogue, angular compact deep desaturated slate-indigo HOOD framing a visible medium-light face, broad SHORT angular shoulder cape reaching only elbows over a medium blue-grey leather jerkin, dark brown belt, fitted dark grey trousers and boots. Exactly two short steel daggers in exactly two hands: one arm extends across lower front to image-left with blade pointing left, other bends beside right hip with blade angled down. Alert balanced pivot, one knee stepping forward, compact rhomboid silhouette with broad shoulder line and visible separated legs. Use stiff angular shoulder folds, NO long trailing cloak. Hood and cape are visibly cool grey-blue with pale matte edge highlights, never featureless black.\nComposition: steep overhead three-quarter view exactly like image 1, see crown and shoulders from above; all body and knives fully inside centered nearly circular dark grey-brown disc with understated thin bronze-grey physical rim, diameter 82 percent canvas. Clear dark disc margin above hood; leave upper-right outer quadrant clean for separate UI. Figure approximately same visual mass and scale as reference human but broader shoulders.\nStyle/light: coherent matte painted miniature sculpt with large readable planes, restrained surface detail, upper-left soft studio light, no realistic ground. Keep short cape's blue-grey top surface brighter than trousers, silhouette breaks at elbows and knees. Anatomically coherent two arms/two hands/two legs. Light armor, no plates.\nBackdrop: actual transparent alpha outside disc and in all corners, preserve generated native alpha.\nAvoid: frontal camera, scenery, plinth, grass, rocks, black assassin costume, large shield, sword, axe, oversized blades, monster, glowing eyes, magic, spell or stealth effects, body transparency, faction rings, UI, health, blood, rank, level, text, symbols or watermark. Only one completed token.",
+  "references": [
+    "art/monsters-v6/masters/cutpurse-v1.png",
+    "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_rogue.png"
+  ],
+  "reference_roles": [
+    "style/camera/disc/light reference",
+    "native identity reference"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e1a4-c0f8-7dd3-a4a3-0986fee6a52e/exec-95c5fde9-25d5-42e7-b475-98b523507dd1.png",
+  "saved_output_path": "art/monsters-v6/masters/rogue-v1.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Byte-for-byte original copy; mechanical C downsampling only for review, no artwork editing.",
+  "selection": "static-reviewed-integration-candidate",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "generated_at_utc": "2026-09-27",
+  "sha256": "42e5f6f7d680b538a5e07b9ea8ce0e3a39bd1e48fc35db93f6df182f27effbf4",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      103,
+      39,
+      1230,
+      1206
+    ],
+    "visible_alpha_bbox": [
+      122,
+      127,
+      1132,
+      1156
+    ],
+    "transparent_pixels": 751969,
+    "partial_alpha_pixels": 820088,
+    "opaque_pixels": 459,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "review": "尖兜帽与角形短披肩，左横右低双刃，灰靛蓝肩面与暗腿分开。",
+  "small_size_review": {
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "method": "Existing C exporter via build_monster_art.py; all 12 PNGs actually opened using view_image detail=original",
+    "review_result": "pass; see REVIEW.md",
+    "runtime_verified": false
+  }
+}

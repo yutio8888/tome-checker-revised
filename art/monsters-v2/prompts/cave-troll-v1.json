@@ -1,0 +1,79 @@
+{
+  "asset_id": "cave-troll-v1",
+  "intent": "generate",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "use_case": "stylized-concept",
+  "status": "generated-needs-weapon-containment-edit",
+  "prompt": "\nUse case: stylized-concept. Asset type: ONE independent square transparent PNG monster miniature for a tabletop tactical game.\nInput roles: image 1 is the ORIGINAL game's character identity and equipment reference only. Image 2 is the approved forest troll miniature STYLE reference only: copy its hand-painted carved material, steep overhead camera, upper-left lighting and plain neutral dark gray-brown disc; do NOT copy its specific face, pose or equipment.\nStyle: hand-painted carved tabletop miniature, broad sculpted planes, tactile matte painted surfaces with restrained dry-brush highlights. More detail in face, hands and identity silhouette than in tiny skin noise.\nComposition: one centered full-body character viewed steeply from above, about 65–70 degrees, seeing face and shoulders/back together. One near-circular thin neutral charcoal-brown disc with subdued narrow rim, the same family as image 2. Character and equipment should fill 80–88% of the disc, large and legible at 64px. Every finger, toe, ear and weapon endpoint stays just inside the circular base, with a narrow unbroken strip of base visible around everything. Pose equipment diagonally within the circle rather than sticking into adjacent tiles. Disc about 86% of canvas width, fully visible, margin on every side.\nLighting: soft upper-left light, short lower-right contact shadow ONLY inside the base, no shadow outside disc. Body visibly lighter than the disc. Natural eyes, no glow.\nBackground: genuine transparent alpha PNG outside the disc. No opaque background, no painted checkerboard, no scenery. One miniature, one disc, no labels, writing, numbers, colored rings, faction colors, UI, rank insignia, selection border, grass, stones, smoke, external shadow or aura. Do not use red or blue accents as status indicators. No gore.\nSubject: a CAVE TROLL using its original muted warm gray-olive skin, giant heavy body, small watchful eyes, broad rounded bald face, thick arms, bare feet and rough dark brown loincloth. It has an alert purposeful expression, neither a forest troll face duplicate nor a horned or armored orc. Its defining equipment is ONE massive wooden SPEAR with a simple pale iron pointed leaf-shaped tip. Have both hands grip the shaft across its body, diagonally from lower-left to upper-right, so the entire spear including butt and metal point fits inside the base with visible margin. The shaft and tip must form a very clear long straight diagonal at 64px. Use a braced crouch with one knee advanced, torso turned slightly, feet apart. Preserve the original cave troll's anatomy and equipment, not a new invented species. No extra weapon or skull belt.",
+  "references": [
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/troll_c.png",
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/forest-troll-v1.png"
+  ],
+  "reference_roles": [
+    "original exact character identity and equipment",
+    "approved forest troll miniature style, overhead angle, material, neutral base and light direction only"
+  ],
+  "identity_sources": [
+    "game/modules/tome/data/general/npcs/troll.lua:75-80"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0dd21-b1f1-7472-b28c-5b68d8636421/exec-2343ec48-a078-436f-a685-edd1c48d4986.png",
+  "saved_output_path": "game/addons/tome-checker-revised/art/monsters-v2/masters/cave-troll-v1.png",
+  "sha256": "5c9bf73f3e819bad86d9ddb34f933bdd46bc62909949061c3a9570f1d98a1764",
+  "preserved_native_alpha": true,
+  "image_processing": "Copied generated PNG without pixel edits or alpha changes.",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_alpha_bbox": [
+      155,
+      149,
+      1217,
+      1106
+    ],
+    "transparent_pixels": 840554,
+    "partial_alpha_pixels": 731617,
+    "alpha_bbox": [
+      0,
+      0,
+      1220,
+      1254
+    ],
+    "dominant_alpha_values": [
+      [
+        0,
+        840554
+      ],
+      [
+        253,
+        568410
+      ],
+      [
+        252,
+        136281
+      ],
+      [
+        251,
+        5873
+      ],
+      [
+        1,
+        3786
+      ]
+    ]
+  },
+  "review": "Species, two-hand braced pose and distinctive diagonal spear successful. Spear head extends substantially outside base and requires one targeted edit: shorten/repose spear only while preserving large figure.",
+  "reviewed_at_utc": "2026-09-26T10:11:08.052404+00:00",
+  "tool_result_keys": [
+    "image_url",
+    "output_hint"
+  ],
+  "selection": "superseded after weapon containment correction; preserved provenance"
+}

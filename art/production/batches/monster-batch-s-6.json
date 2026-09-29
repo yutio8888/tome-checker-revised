@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-s-6",
+  "assets": [
+    {
+      "asset_id": "borfast",
+      "native_name": "Borfast the Broken",
+      "scope": "dreadfell (zones/dreadfell/npcs.lua:210, unique, define_as BORFAST, undead/ghoul, rank 3.5, rarity 50 pool unique, no base, default-name image); single definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 210,
+          "anchor": "define_as = \"BORFAST\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 214,
+          "anchor": "name = \"Borfast the Broken\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_ghoul_borfast_the_broken.png",
+          "sha256": "425372b414ed314063253846a2a0cd89bdff5a4b18d22c9ce6937c3fff4c9efc",
+          "role": "identity",
+          "note": "Native shape (64x64): a stocky bearded dwarf ghoul in silver plate with a round shield and a raised sword."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/ghoul.png",
+          "sha256": "930a37274dfe7a0988e55c0e30e02dd1393acd333949c8acf8943d0650213910",
+          "role": "family",
+          "note": "Shipped ghoul (bare hunched grey-brown ghoul crawling on all fours): Borfast must not be a bare crawling ghoul."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Borfast the Broken seen from a steep overhead three-quarter angle: a SQUAT broad dwarf ghoul standing hunched, sagging PALE GREY-GREEN flesh hanging loosely from the bones, half of the face seared away with a drooping eyeball, a ragged tuft of white-grey beard on the chin, a bare balding head, a scavenged MID-GREY iron plate with a rusted iron CAGE of bars around the chest, a LARGE ROUND IRON-BOSSED SHIELD held forward on the left arm and a spiked flanged mace raised over the right shoulder, heavy boots. Sorrowful, hulking, armoured and complete.",
+        "contrast": "Undead uniques: BORFAST is a SQUAT ARMOURED DWARF with a big ROUND SHIELD forward, a cage chest and a raised mace, grey-green flesh (silhouette: short wide block with a round shield disc in front and a mace head above; hue: pale grey-green flesh with mid steel-grey and rust; value: mid-light). The shipped ghoul and ghoulking are bare crawling ghouls; the Greater Mummy Lord is a tall cream bandaged lord; Kor's Fury is a pale spiral spectre. The sun-paladin also has a round shield: Borfast is grey-green, short and cage-chested, with a ghoul face.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, staffs, capes and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, cape end or bandage tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere. Calibration from the previous generation of this exact token: the design was right, but the base disc came out clearly DARKER than the style reference, especially at the lower left under the big round shield and the boots, and the whole figure was a dark brown-bronze mass. This time keep the same squat hunched armoured dwarf ghoul with the big round shield forward, the rusted cage across the chest and the spiked mace raised over the shoulder, but render the WHOLE disc, its outer ring band and the plate under the figure, at the style reference's own lightness or a hair lighter, evenly all round, with NO cast shadow, dark contact shadow or ambient darkening of the disc from the shield, boots or body. Make the whole figure LIGHT: PALE polished steel-silver plate and a pale silver-grey shield with a bright pale rim and a pale boss, PALE sickly grey-green flesh, bone-white beard tuft, cage bars in mid warm grey rather than dark rust, so the figure is a mid-light to light shape well above the disc value with pale edge highlights on its upper-left side. No brown or bronze main masses.",
+        "palette": "Pale grey-green flesh with lighter sickly highlight planes, mid steel-grey plate and shield with pale highlight planes and rust-brown seams, iron cage bars, white-grey beard tuft, steel mace head; nothing darker than dark slate-grey except the eye socket and seams; keep the plate mid grey rather than black; the disc stays neutral charcoal with no green cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Borfast the Broken, define_as=BORFAST, type=undead/subtype=ghoul, unique=True, native_tall=False); details and hashes in evidence/monster-batch-s-20260929/source-contracts.json. no base (undead/ghoul on the leaf, faction dreadfell, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip mace, shield, BORFAST_CAGE massive armour, head, hands and feet (equipment only, no moddable_tile); talents Shield Pummel, Assault, Rush, Spell Shield, Perfect Strike, Shield Wall, Shield Expertise, Thick Skin, Armour Training, Weapons Mastery, Weapon Combat, Unflinching Resolve, Daunting Presence, Ghoul, Ghoulish Leap, Retch plus Keepsake Phase Door, Willful Strike, Reproach and Mind Sear; no sustains_at_birth and no sustained talent (Shield Wall is a sustained shield stance started only by the AI: temporary values); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-s-20260929/source-contracts.json",
+          "sha256": "f6556ef4ac78f044ee83f4d27ed60d1586fa243b923da96651cade0aa5ba49a2"
+        }
+      ]
+    }
+  ]
+}

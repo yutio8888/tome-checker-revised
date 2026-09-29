@@ -1,0 +1,27 @@
+{
+  "asset_id": "door-leaf-horizontal-v1",
+  "mode": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Create ONE isolated horizontal oak DOOR LEAF component, with no stone jambs, for a top-down tabletop dungeon. Square true-transparent PNG. Matte hand-painted miniature, soft fixed UPPER-LEFT world light. A long thin rectangular upright wooden door viewed from VERY STEEP overhead: screen-space long axis exactly left-right, length about 80% canvas, apparent short dimension only 15% canvas. See its broad worn wood top edge and a very short darker south-facing front strip. Dull warm medium brown oak, thick joined planks, two restrained dark iron hinge fittings near left end and small plain iron ring near right end. No lock or symbols. Ends square, regular coherent geometry, no diagonal tilt, no perspective vanishing. Center component at image center. This is a door barrier standing upright, not a loose flat plank, but high overhead foreshortening makes it narrow. Entire leaf contained with transparent margin, native alpha all around, no outside shadow. Match the wood/iron palette of reference, but REMOVE all masonry, floor and surrounding objects. Single leaf only, no frame, no scene, no text, no diagram. It will be translated and mechanically scaled, never rotated; preserve upper-left highlights and south-side shade.",
+  "references": [
+    "masters/door-closed-horizontal-v1.png"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-7309a490-91f9-4e59-a138-6876578488ac.png",
+  "selection": "selected-production-component",
+  "processing": "Original preserved byte-for-byte; deterministic terrain compositing may crop/sample painted components without rotation.",
+  "rejection_reason": null,
+  "sha256": "0976c76721b595314b322d4f46f4e03020fdc8fe3c359189203dce7c7b350428",
+  "byte_identical": true,
+  "metrics": {
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "visible_alpha_bbox_gt8": [
+      89,
+      517,
+      1166,
+      758
+    ]
+  }
+}

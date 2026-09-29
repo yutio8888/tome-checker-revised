@@ -1,0 +1,86 @@
+{
+  "gloomy-floor": {
+    "source": "masters/gloomy-floor-v1.png",
+    "sha256": "98984bb24e0466a1796fa3e913f9fe78e6e123adddf5c201f391675932cd5836",
+    "gate": {
+      "floor_opaque": {
+        "ok": true,
+        "waived": false
+      }
+    }
+  },
+  "gloomy-creep": {
+    "source": "masters/gloomy-creep-v1.png",
+    "sha256": "4431a3dcf430143b4e81674728deb5e971c2f855bca3ccb52ab62d3fe281db48",
+    "gate": {
+      "floor_opaque": {
+        "ok": true,
+        "waived": false
+      }
+    }
+  },
+  "gloomy-vegetation": {
+    "source": "masters/gloomy-vegetation-v1.png",
+    "sha256": "8e7add096bf097860b31a1f2ba60896b4f1933af792f0e6490eb072213366630",
+    "gate": {
+      "master_native_alpha": {
+        "ok": true,
+        "waived": false
+      },
+      "corner_alpha": {
+        "ok": true,
+        "waived": false
+      },
+      "not_edge_touching": {
+        "ok": true,
+        "waived": true
+      },
+      "grounded_a8": {
+        "ok": true,
+        "waived": false
+      }
+    }
+  },
+  "dreamy-floor": {
+    "source": "masters/dreamy-floor-v1.png",
+    "sha256": "50baf47a45652edc17688bd963655a9b0387c13bdfa84280478bb8a8416558ff",
+    "gate": {
+      "floor_opaque": {
+        "ok": true,
+        "waived": false
+      }
+    }
+  },
+  "dreamy-creep": {
+    "source": "masters/dreamy-creep-v1.png",
+    "sha256": "b7ffddba206f945ff9cb2c0e5291ff8e1ae68485ab4b4717144965126d906ad6",
+    "gate": {
+      "floor_opaque": {
+        "ok": true,
+        "waived": false
+      }
+    }
+  },
+  "dreamy-vegetation": {
+    "source": "masters/dreamy-vegetation-v1.png",
+    "sha256": "ebde73d325d3725214d1084493d4c190c2ff4672eab169e470df26be6bc2182d",
+    "gate": {
+      "master_native_alpha": {
+        "ok": true,
+        "waived": false
+      },
+      "corner_alpha": {
+        "ok": true,
+        "waived": false
+      },
+      "not_edge_touching": {
+        "ok": true,
+        "waived": true
+      },
+      "grounded_a8": {
+        "ok": true,
+        "waived": false
+      }
+    }
+  }
+}

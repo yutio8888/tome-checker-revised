@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "status": "REVIEWED 2026-09-29: shivgoroth and greater-shivgoroth approved (wiring pending); dremling rejected (dark on dark, redraw lighter). See art/monster-batch-f/REVIEW.md.",
+  "scope": "monster-batch-f (CONTRACTS-B5-B7-20260929.md 4.1 NEEDS-CONTRACT-EXTENSION identities); exact-byte base_drift-only waiver requests for the 3 of 6 contract-verified identities whose single generation attempt missed only the base_drift style-gate check. No alpha, geometry, disc_overflow or occupancy waiver requested for any entry -- every other check passed cleanly on the first try for all three.",
+  "assets": [
+    {
+      "id": "dremling",
+      "native_name": "dremling",
+      "call": "art/production/handoffs/monster-batch-f-1/dremling/imagegen-calls/call-1/call.json",
+      "receipt": "art/production/handoffs/monster-batch-f-1/dremling/receipts/attempt-1.json",
+      "master_path": "art/monster-batch-f/masters/dremling-v1.png",
+      "master_sha256": "9441279dc0e9753174b47df62a79bb8feecee60fc2c734d3b3cb46f61926c171",
+      "runtime_128_export_sha256": "ca461b7809cd42072764473023eaecec1ca4ba09b1dad6d61058ae8988b8852c",
+      "base_drift": -8.94,
+      "disc_overflow_max_opaque_radius": 0.8585,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "attempts_used": 1,
+      "reason": "Single call, base_drift-only (magnitude 0.94 over the +-8 tolerance -- the smallest overrun in this batch, essentially at the edge). 48/64/96px reviewed on art/monster-batch-f/review/horror-corrupted-color-48-64-96.png and its grayscale sheet: a hulking obsidian-black humanoid with a jagged spiky ridge crown and hollow blank eye sockets, gripping a waraxe, reads as a clearly different silhouette from the existing horror-corrupted family (Horned Horror's horned minotaur shape, The Mouth's wide red toothed mass, The Abomination's tall pale two-headed spire) at every size, in both color and grayscale. A repair was deliberately not attempted: per this batch's own finding (and monster-batch-e's documented ~5x brighten-repair overshoot), the automatic repair flow would ask for a full ~9-unit disc brighten, which risks flipping this near-miss into a much larger positive overrun for a marginal identity that already reads cleanly; the fresh single-attempt master is presented for a waiver decision rather than a gamble on a repair call."
+    },
+    {
+      "id": "shivgoroth",
+      "native_name": "shivgoroth",
+      "call": "art/production/handoffs/monster-batch-f-1/shivgoroth/imagegen-calls/call-1/call.json",
+      "receipt": "art/production/handoffs/monster-batch-f-1/shivgoroth/receipts/attempt-1.json",
+      "master_path": "art/monster-batch-f/masters/shivgoroth-v1.png",
+      "master_sha256": "fc51512877b621d7350bfc3077783c765f64c2a2133eda66155b3dfdf56e2e4a",
+      "runtime_128_export_sha256": "256b49c0369897fb68cbe9f171a5fc2c25d673f9d1b6a81c3509f027bf49d1ec",
+      "base_drift": -11.23,
+      "disc_overflow_max_opaque_radius": 0.8576,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "attempts_used": 1,
+      "reason": "Single call, base_drift-only (magnitude 3.23 over tolerance). First elemental/ice identity in the catalog; ships alongside greater shivgoroth (also PENDING, same reason) in this same request. 48/64/96px reviewed on art/monster-batch-f/review/elemental-ice-color-48-64-96.png and grayscale sheet: a lean, low, hunched translucent mid-blue ice elemental with a low jagged crest reads clearly at every size and is unmistakable from greater shivgoroth's broad, upright, bright frost-white bulk in the same sheet -- the family separation (shape and value, not only size) holds in both color and grayscale. No repair attempted for the same edit-overshoot-risk reason as dremling above."
+    },
+    {
+      "id": "greater-shivgoroth",
+      "native_name": "greater shivgoroth",
+      "call": "art/production/handoffs/monster-batch-f-1/greater-shivgoroth/imagegen-calls/call-1/call.json",
+      "receipt": "art/production/handoffs/monster-batch-f-1/greater-shivgoroth/receipts/attempt-1.json",
+      "master_path": "art/monster-batch-f/masters/greater-shivgoroth-v1.png",
+      "master_sha256": "a2d993840f4eba66ad308da657ab414d6297e64443d23053aed5312deb1ab985",
+      "runtime_128_export_sha256": "31f51ff3f20eca63ac812089e5ffa15639197b696047c075c93d796864cbf9e5",
+      "base_drift": -9.4,
+      "disc_overflow_max_opaque_radius": 0.8585,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "attempts_used": 1,
+      "reason": "Single call, base_drift-only (magnitude 1.4 over tolerance). Ships alongside shivgoroth (also PENDING, same reason) in this same request. 48/64/96px reviewed: a broad, thick-limbed, fully upright, bright frost-white-plated ice elemental with a tall shard crown reads clearly at every size and is unmistakable from shivgoroth's lean hunched darker form in the same family sheet. No repair attempted for the same edit-overshoot-risk reason as dremling above."
+    }
+  ]
+}

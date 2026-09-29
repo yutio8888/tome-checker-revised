@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-g-4c",
+  "assets": [
+    {
+      "asset_id": "the-master",
+      "native_name": "The Master",
+      "scope": "dreadfell main-line boss (no rarity field, scripted placement) -- FRESH REGENERATION: call 1 passed the gate (-7.81) but robe was near-black (masked luminance 35), weak in grayscale and close to Pale Drake's dark robe; fresh regeneration with a lighter crimson/ivory robe",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 37,
+          "anchor": "type = \"undead\", subtype = \"vampire\", unique = true, image = \"npc/the_master.png\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/the_master.png",
+          "sha256": "cada39649bc0a1928463d173a97e216166d48ff22b8b1532b1ad0f509b81ac32",
+          "role": "identity",
+          "note": "Native species shape: tall vampire lord, dark crimson-and-black robe, high stiff collar, staff."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A tall vampiric lord in flowing dark crimson-and-black robes with a high stiff collar framing a pale gaunt face, standing upright and imperious, gripping a long dark ornate staff planted at his side. LIGHTNESS REQUIREMENT (48px dark-floor and grayscale readability): the first attempt's robe was near-black and read as a dark column in grayscale, close to the Pale Drake's dark robe. Redraw the robe in a clearly LIGHTER mid-value: saturated crimson-red main planes (not near-black), broad ivory-white trim, high collar lining and sash, pale skin, so the figure is visibly lighter than the disc and its grayscale value planes are distinct from a dark violet skeleton archmage. Keep the same upright columnar robed silhouette with the tall high collar, staff with red orb held on the LEFT of the picture.",
+        "contrast": "First undead/vampire catalog identity, no family collision. Distinct from the catalog's other robed humanoid casters (Fillarel's pale cream robe and Pale Drake's violet-black robe, both shipping in the same batch) by its deep crimson-and-black palette and stiff high-collared silhouette -- a commanding vampire-lord read, not a benign caster or a gaunt bone archmage. Silhouette (stiff high collar, imperious upright stance) and hue (deep crimson-black, the only red-black robed figure in the catalog) are the anchors.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Deep black robe with rich blood-crimson panels and a stiff high collar, pale gaunt vampiric skin at the face and hands, a dark iron-black ornate staff with a small dull red gem finial; dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's robe so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name=The Master/type=undead/subtype=vampire/define_as=THE_MASTER/unique=true) and explicit single image=\"npc/the_master.png\" (no nice_tile/add_mos on this entity) re-verified directly against game/modules/tome source (CONTRACTS-B5-B7-20260929.md 3, READY -- single). Resolves via the generic actor.image==entry.image \"single\" appearance path. Fresh regeneration handoff: call 1 passed the gate (-7.81) but robe was near-black (masked luminance 35), weak in grayscale and close to Pale Drake's dark robe; fresh regeneration with a lighter crimson/ivory robe",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-g-4/the-master/imagegen-calls/call-1/call.json",
+          "sha256": "7c15adc7d76959b40ad4c12411636379b4242b4de823670e4509a221d75479f4"
+        }
+      ]
+    }
+  ]
+}

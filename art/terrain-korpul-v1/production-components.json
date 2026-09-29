@@ -1,0 +1,85 @@
+{
+  "mode": "ImageGen source pixels; mechanical fixed rectangle cropping and resampling only",
+  "runtime_sources": [
+    "floor-a-v2",
+    "floor-b-v2",
+    "wall-top-v1",
+    "hardwall-top-v1",
+    "wall-v1",
+    "hardwall-v1",
+    "door-leaf-horizontal-v1",
+    "door-leaf-vertical-v2"
+  ],
+  "edge_crops": {
+    "wall": {
+      "N": [
+        135,
+        132,
+        1100,
+        160
+      ],
+      "E": [
+        1120,
+        190,
+        1170,
+        1030
+      ],
+      "S": [
+        140,
+        1045,
+        1120,
+        1145
+      ],
+      "W": [
+        89,
+        180,
+        128,
+        1010
+      ]
+    },
+    "hardwall": {
+      "N": [
+        140,
+        101,
+        1100,
+        128
+      ],
+      "E": [
+        1130,
+        190,
+        1172,
+        1050
+      ],
+      "S": [
+        140,
+        1035,
+        1110,
+        1147
+      ],
+      "W": [
+        83,
+        190,
+        122,
+        1050
+      ]
+    }
+  },
+  "leaf_crops": {
+    "door-leaf-horizontal-v1": [
+      89,
+      517,
+      1166,
+      758
+    ],
+    "door-leaf-vertical-v2": [
+      516,
+      75,
+      740,
+      1177
+    ]
+  },
+  "rotated": false,
+  "mirrored": false,
+  "source_alpha_preserved": true,
+  "note": "Source crops are explicit fixed components, never statistical background removal. Full originals remain unchanged. Final destinations and connection geometry are in runtime-manifest.json."
+}

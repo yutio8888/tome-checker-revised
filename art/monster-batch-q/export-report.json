@@ -1,0 +1,1481 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "fire-drake-hatchling",
+      "master": "masters/fire-drake-hatchling-v1.png",
+      "sha256": "0f8fdc5e11a5d2d9834645709b0f883dfe4d19dd2a5ef84caa1f94bc01541688",
+      "exports": [
+        {
+          "path": "sprites/48/fire-drake-hatchling.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -11.372093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "247253aa5a1899a2a7ca13e01c321d74939d32f3f5b3fe6b9f00ee9139246602"
+        },
+        {
+          "path": "sprites/64/fire-drake-hatchling.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -11.372093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b6df67aace6a5eacd912b76ed1dc9981759b8cd978ed86730be40d26f85c82e7"
+        },
+        {
+          "path": "sprites/96/fire-drake-hatchling.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -11.372093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0e7b0ba8e5a8d6ebfda16e9c991ef58a25fdef296fe0bb1b2122b0d552b5f9ba"
+        },
+        {
+          "path": "sprites/128/fire-drake-hatchling.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -11.372093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "761dd43514edd915cc47d42bc82be0c159da83e4a1a7d35c55d157b50ba6afc0"
+        },
+        {
+          "path": "sprites/256/fire-drake-hatchling.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -11.372093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6c86c49c678851805ab1a57709cc400cfcef4353c42a7d2ce4aabad45e7161cc"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.87,
+        "max_sector_intrusion": 3.44,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "cold-drake-hatchling",
+      "master": "masters/cold-drake-hatchling-v1.png",
+      "sha256": "062acd855789d4c3e1efbc51e33fc535d6d06a069509c27df3e872f7093a6aa8",
+      "exports": [
+        {
+          "path": "sprites/48/cold-drake-hatchling.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            74,
+            1167,
+            1175
+          ],
+          "export_window": [
+            -14.616279,
+            -15.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7bb20368f9d323bb55bfbc3423f43055f9d5584462724103affae72d23409726"
+        },
+        {
+          "path": "sprites/64/cold-drake-hatchling.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            74,
+            1167,
+            1175
+          ],
+          "export_window": [
+            -14.616279,
+            -15.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6994dda2e8f66cfa50eb9d2fdc807c6f9d44aca521ae1db82c4b096f012c6791"
+        },
+        {
+          "path": "sprites/96/cold-drake-hatchling.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            74,
+            1167,
+            1175
+          ],
+          "export_window": [
+            -14.616279,
+            -15.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7343bc322acf8df43d78ec8aa93337c29e4e27d5c3f6c7ca3718b969ec1c715d"
+        },
+        {
+          "path": "sprites/128/cold-drake-hatchling.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            74,
+            1167,
+            1175
+          ],
+          "export_window": [
+            -14.616279,
+            -15.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8697cb2f84855953dc41f9f1ce1b091e39ca1ba6275fcfb14031709bde40f0d2"
+        },
+        {
+          "path": "sprites/256/cold-drake-hatchling.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            74,
+            1167,
+            1175
+          ],
+          "export_window": [
+            -14.616279,
+            -15.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c518e567f8adb1d3e5c80dc0bce8f0c882dd18fe283341c953e70c48730b9af1"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.37,
+        "max_sector_intrusion": 2.35,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "storm-drake-hatchling",
+      "master": "masters/storm-drake-hatchling-v1.png",
+      "sha256": "20016663cd460704610e78516c3b5704e9a027f08acb01ca2e7453b5e11963d1",
+      "exports": [
+        {
+          "path": "sprites/48/storm-drake-hatchling.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -10.372093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4d2e4d753725f0c46e4d97f0d70ee69cc8fac798e8036d99bcd1cdf9226a8715"
+        },
+        {
+          "path": "sprites/64/storm-drake-hatchling.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -10.372093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fc95466bc0261883d9c23b9fc63edf8f90c95a126a95dcf4b47abcb5f58df28c"
+        },
+        {
+          "path": "sprites/96/storm-drake-hatchling.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -10.372093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ab760ae88d40729067208af5c872f150a36bf7f2045ee7003751d5b76b59b6cb"
+        },
+        {
+          "path": "sprites/128/storm-drake-hatchling.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -10.372093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e61a4b993cda1745c098908242afeecbc353a51d7f0455e0e5641b4a6b3b2da9"
+        },
+        {
+          "path": "sprites/256/storm-drake-hatchling.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -10.372093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "df395d49fac31766f4a31ef18f3fccba5adca2bbe543ae30670389b5542da357"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.31,
+        "max_sector_intrusion": 3.37,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "sand-drake",
+      "master": "masters/sand-drake-v1.png",
+      "sha256": "130738500c66dc14f71a30be9d0dc3ba67b9b536fb9bfb5d9516bfe59163e080",
+      "exports": [
+        {
+          "path": "sprites/48/sand-drake.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -12.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "71d6eccbff4f60bef6b8f2796d6db1e7e6ec7ce0e2d5c1d5f09ef275cc787927"
+        },
+        {
+          "path": "sprites/64/sand-drake.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -12.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "777508432eb5ce0b9e13efea952db979a172395df7b7aba806e5da31156497c8"
+        },
+        {
+          "path": "sprites/96/sand-drake.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -12.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8e01133ab22ea257e455989aeab48f2abcaa132ab02aef06e3fb6a1ce194be8e"
+        },
+        {
+          "path": "sprites/128/sand-drake.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -12.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b5fb48f2167bac47991a62eaad0a0bb3b15c1794ecd6ad77b366ec3204d9b77c"
+        },
+        {
+          "path": "sprites/256/sand-drake.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -12.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d55912317736612790a5e0fb707734cc96523b0f1f8c4285f8cebd90b72da124"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.79,
+        "max_sector_intrusion": 4.39,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "venom-drake-hatchling",
+      "master": "masters/venom-drake-hatchling-v1.png",
+      "sha256": "2bc7a5abbaad608e4dde95546e3ba7ddb70b8519802911e69472de3fc4121d45",
+      "exports": [
+        {
+          "path": "sprites/48/venom-drake-hatchling.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            73,
+            1165,
+            1172
+          ],
+          "export_window": [
+            -12.953488,
+            -16.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "096b872de61879437d8acb8df28f9807040572af03a0e9742e5bdeca88601c1a"
+        },
+        {
+          "path": "sprites/64/venom-drake-hatchling.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            73,
+            1165,
+            1172
+          ],
+          "export_window": [
+            -12.953488,
+            -16.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "516f7d6d4bf60034b39df85ba6a8a6ca7c9c8d69ff0206b0159f6c1466edb9dd"
+        },
+        {
+          "path": "sprites/96/venom-drake-hatchling.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            73,
+            1165,
+            1172
+          ],
+          "export_window": [
+            -12.953488,
+            -16.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "925f53c6043f8a9c8052cee95200097ad03a199f85c4bccce2d96e4daf9fd790"
+        },
+        {
+          "path": "sprites/128/venom-drake-hatchling.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            73,
+            1165,
+            1172
+          ],
+          "export_window": [
+            -12.953488,
+            -16.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "154c250d8ce3ba2993b895779085e3f756bbd01424f32596fa6a8685fd8f389c"
+        },
+        {
+          "path": "sprites/256/venom-drake-hatchling.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            73,
+            1165,
+            1172
+          ],
+          "export_window": [
+            -12.953488,
+            -16.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "335d2a2fa0819796f5d9e39018679601850572ee5ecb9408ebb23c5b3a7d6205"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -6.13,
+        "max_sector_intrusion": 0.64,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "rantha-abomination",
+      "master": "masters/rantha-abomination-v1.png",
+      "sha256": "71ed94e5f766ff2d6719505bb678d7583652d193918b0bc0efe69bf37275e7aa",
+      "exports": [
+        {
+          "path": "sprites/48/rantha-abomination.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            78,
+            68,
+            1172,
+            1175
+          ],
+          "export_window": [
+            -18.604651,
+            -22.104651,
+            1287.209302
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9af047ad668cec25d0eefb038a03853200c3229d8b88041b54c3f5a4c616c0f2"
+        },
+        {
+          "path": "sprites/64/rantha-abomination.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            78,
+            68,
+            1172,
+            1175
+          ],
+          "export_window": [
+            -18.604651,
+            -22.104651,
+            1287.209302
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e8654437af84f1a01697cb5170b09b6588d77998c41968b5124424cfa2283b20"
+        },
+        {
+          "path": "sprites/96/rantha-abomination.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            78,
+            68,
+            1172,
+            1175
+          ],
+          "export_window": [
+            -18.604651,
+            -22.104651,
+            1287.209302
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b96c404b57a901c533c6db40d79652eb99aecccfaaa16e44ac829f3e9ce278d8"
+        },
+        {
+          "path": "sprites/128/rantha-abomination.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            78,
+            68,
+            1172,
+            1175
+          ],
+          "export_window": [
+            -18.604651,
+            -22.104651,
+            1287.209302
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2850c5280a1f59373dce918e545f1e260b301f6e302302acfa1e608a6c01677e"
+        },
+        {
+          "path": "sprites/256/rantha-abomination.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            78,
+            68,
+            1172,
+            1175
+          ],
+          "export_window": [
+            -18.604651,
+            -22.104651,
+            1287.209302
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "009a762772a5ed09e3fd1999d195c39268740ed1338524b330bd74977c17df25"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -6.33,
+        "max_sector_intrusion": 12.74,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "briagh",
+      "master": "masters/briagh-v1.png",
+      "sha256": "9edc1ffc8435c86cf83ec1d1b9fd78f1880ab690bda7ebd3c0916ae4f2477221",
+      "exports": [
+        {
+          "path": "sprites/48/briagh.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -12.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "930df9d2f1399d669498be7c53186e0e2b950f40661d425d51f720699edc5671"
+        },
+        {
+          "path": "sprites/64/briagh.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -12.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e411aeef9dfca3783b1dcebe27ffba95470e29d00395e8b2d8af4c28049959f5"
+        },
+        {
+          "path": "sprites/96/briagh.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -12.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cf86cc35cd98f0e0db44eb823f7ed1dd54a30ce7b4735acfe7c382c074b533ab"
+        },
+        {
+          "path": "sprites/128/briagh.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -12.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "18bfc085dcf7ab610c774a8f4d089cda530eb43c99ed70fc6f305d42a15e6178"
+        },
+        {
+          "path": "sprites/256/briagh.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -12.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "94396e5c569a0af1031941fcc4913def7f6caf82e86d4e75465408f121fc1fb8"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -7.32,
+        "max_sector_intrusion": 4.95,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ukllmswwik",
+      "master": "masters/ukllmswwik-v2.png",
+      "sha256": "fae18e8cfcc4e6aabbcb89b0face4b20600a78bf38be94be5880caacfa103414",
+      "exports": [
+        {
+          "path": "sprites/48/ukllmswwik.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            73,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -14.034884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "42da12cffdaf6754dffeadf96d0a727d5eddd2701c93ace2734c8f88481edc4e"
+        },
+        {
+          "path": "sprites/64/ukllmswwik.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            73,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -14.034884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bb977d6135481f619a90c0951dc6ccc2f9868d5dbc04e85f71ad0242f5b7fe5e"
+        },
+        {
+          "path": "sprites/96/ukllmswwik.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            73,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -14.034884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2deadee1387640dd8687aeaa40daf9ab6fb8da415e2725abff70a999dce83315"
+        },
+        {
+          "path": "sprites/128/ukllmswwik.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            73,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -14.034884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6a9849b4a1b005c5010ad3831f071f3e9d205edc3675ced55dfba7ce8a56616d"
+        },
+        {
+          "path": "sprites/256/ukllmswwik.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            73,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -14.034884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "da599d21010167eba9fe28e527ba6416b67352a53bd6340f1a228f48fe50a594"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -5.91,
+        "max_sector_intrusion": 0.8,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "fire-drake",
+      "master": "masters/fire-drake-v1.png",
+      "sha256": "9b9664a6787bdbb8c87c4949354d9b950c55e03f0785334999d8da11a51f68dd",
+      "exports": [
+        {
+          "path": "sprites/48/fire-drake.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -11.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9e64980c8e0f5061cc78884eb518d130f165de9d82e812eb5460ad2621440fd7"
+        },
+        {
+          "path": "sprites/64/fire-drake.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -11.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "21fb2cb3a75de36614b654b293babdc775e671854df9456132c151631fbfdf69"
+        },
+        {
+          "path": "sprites/96/fire-drake.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -11.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ee712e7f12ebe2e901ab82928532b1d6d4123bdfb511b6a187f98c51b5d4d965"
+        },
+        {
+          "path": "sprites/128/fire-drake.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -11.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "103a0a84b6de41aff1a3d9f03b373af9b06ed9d2e103faee9c2f3993560e11e8"
+        },
+        {
+          "path": "sprites/256/fire-drake.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -11.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c553b20872480ba4fed6c58c4a5e924f2db64bd68bf13b572fa34273107f2b07"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -7.41,
+        "max_sector_intrusion": 10.65,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "storm-drake",
+      "master": "masters/storm-drake-v2.png",
+      "sha256": "c2e4bd12b0a350f5d01a27d8e4f721aab7edada704ef7937abdaccc88f4e9830",
+      "exports": [
+        {
+          "path": "sprites/48/storm-drake.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4d1573b3982b44b6ddbeb3aea92912ab039fcd57dc02734d040663d68316654b"
+        },
+        {
+          "path": "sprites/64/storm-drake.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "27a90b580e838b023745a8fed1ac939f649eb8b63f88e4c139a61840a0e27006"
+        },
+        {
+          "path": "sprites/96/storm-drake.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d2d30d5869b9b205dc2dfcb26bb627bce48cd72ada84fffb82a6b79a8df3f2f9"
+        },
+        {
+          "path": "sprites/128/storm-drake.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "faedab1ab98b5e0bd7ec91ef4975a0c7c35b4002b0b8359f17d3c4d0ca85f438"
+        },
+        {
+          "path": "sprites/256/storm-drake.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "941992c07cce316d73b7befa4e265137aeb5e2bc7d6284ae2199384ec6a3a97a"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.52,
+        "max_sector_intrusion": 4.04,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "cold-drake",
+      "master": "masters/cold-drake-v1.png",
+      "sha256": "f2d5d5a81e54edbf6ea3a30ef80540732d238d2eb21f345e5a0328f264b2083a",
+      "exports": [
+        {
+          "path": "sprites/48/cold-drake.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            77,
+            1170,
+            1171
+          ],
+          "export_window": [
+            -8.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "46d0efec83cb2286217162997d27144e7784b6415929a9b7ff93c941cc03d8b1"
+        },
+        {
+          "path": "sprites/64/cold-drake.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            77,
+            1170,
+            1171
+          ],
+          "export_window": [
+            -8.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d2c2bf8ebe10ee0ffda6d3c25c979967d487ea5bf0159bbe66914cdae1230662"
+        },
+        {
+          "path": "sprites/96/cold-drake.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            77,
+            1170,
+            1171
+          ],
+          "export_window": [
+            -8.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3f3b8c445402e4871675fbe36d803a695a84ba7d4c91d25396787c150da43c10"
+        },
+        {
+          "path": "sprites/128/cold-drake.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            77,
+            1170,
+            1171
+          ],
+          "export_window": [
+            -8.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8ec79a9c1dd3f74720387a6f7924bb139ef808c86d2e7004b6fe0e2d624b161b"
+        },
+        {
+          "path": "sprites/256/cold-drake.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            77,
+            1170,
+            1171
+          ],
+          "export_window": [
+            -8.546512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d16b736c2e2dad2d3422dfc523dcde7163360ed8732d01b3c40aa79250b0ba8a"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.52,
+        "max_sector_intrusion": 6.52,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "venom-drake",
+      "master": "masters/venom-drake-v1.png",
+      "sha256": "1fe6fb6bee2c15e5713a8e63036abf0401b1d85d36266b8bd0a479f57374e655",
+      "exports": [
+        {
+          "path": "sprites/48/venom-drake.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ce037dced29fb8bc47e96ad0c8b8eabe6994c48b4483e13435eeded1c152005b"
+        },
+        {
+          "path": "sprites/64/venom-drake.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e685a795bf792c3d285278775ece1348bdeefac27019cf85238aeebe5968fd36"
+        },
+        {
+          "path": "sprites/96/venom-drake.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "54d98e26579d1cc6ab95ccb1be9716627f3c7a22990b6950e23a97e75aa52f5f"
+        },
+        {
+          "path": "sprites/128/venom-drake.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "664e9ceecb446ace47e5c2543159739b276b27e1719d7a488c8de940c5b729ea"
+        },
+        {
+          "path": "sprites/256/venom-drake.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8f4db01ac9ae7f689b8e4db11a54c6d5270902e48a619dea772d220bca8b5405"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -4.11,
+        "max_sector_intrusion": 6.41,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

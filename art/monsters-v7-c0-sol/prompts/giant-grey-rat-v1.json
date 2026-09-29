@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "asset_id": "giant-grey-rat",
+  "tool": "image_gen.imagegen",
+  "original_output_path": "~/.codex/generated_images/01a0e205-35a6-7ed0-9868-ecb9672f8a8f/exec-f7df2528-02bd-4cb2-86ed-c6152e9175d6.png",
+  "saved_output_path": "art/monsters-v7-c0-sol/masters/giant-grey-rat-v1.png",
+  "sha256": "44770d2eacb4db6822613e3df33abf4ea4eeff3644b14defa963a99f658eb583",
+  "prompt_sha256": "da708cd6b9cd2b0941829069e4cd47a703f9d7089cc9e8465576d958a9383190",
+  "full_prompt": "Use case: stylized-concept. Deliver ONE square transparent PNG miniature token for Tales of Maj'Eyal: giant grey rat. Request 1024 x 1024 pixels; retain the tool's native resolution and alpha.\n\nIdentity brief: One large adult slate-grey rat with long pointed muzzle, rounded ears, four feet and one long bare tail. It runs in a very low, broad, elongated sideward crouch facing right; back and rump are one long horizontal mass, front feet visibly apart. Its open S-shaped tail separates from its body and curves into free dark disc space.\nFamily separation: Existing brown rat is compact warm-brown crouch with a tail arcing close around its back. White rat is tall raised ivory forebody. Grey rat must instead read as a medium-value cool-slate long horizontal profile with an open S tail, differing in silhouette and value from both. No coat-color-only distinction.\nComposition: One complete rat on one disc with all paws, ears and entire tail inside the rim. Head lies away from upper-right UI margin. Leave a visible wedge of disc between tail and torso. Broad pale-facing planes on back and muzzle survive 48px reduction.\n\nMatch the designated style reference's steep overhead three-quarter camera, upper-left soft light, matte painted miniature finish and thin charcoal-brown physical disc with a restrained bronze-grey bevel. The disc occupies about 82% of the canvas width. All anatomy and equipment must remain inside it, with a clear margin. Use broad readable value planes and a crisp silhouette at 48/64/96px; dark bodies need a broad pale rim or lighter facing plane, not tiny glowing outlines. Keep identity-defining features out of the upper-right rank area and upper-left interaction-marker area. Native references establish identity; they do not override the style reference's camera or disc. Do not copy another species from a style reference.\n\nPalette/material: Medium cool slate-grey fur, pale bone-grey broad plane highlights and warm taupe underside, pink-grey bare tail and feet. Dark eyes readable. No green poison cloud, blue ring, particle effect or text.\nTrue transparent alpha outside the disc; no painted checkerboard. Keep the entire disc in frame and transparent corners. This is a static identity illustration. Add no faction ring, health arc, shield, rank, crown, UI marker, number, text, aura, scene or floor outside the disc. No recolor-only substitute for a different species, no montage and no alternate variants in one image. Anatomy must match the identity brief, including intentional missing limbs.\n\nReference roles:\nImage 1: style — Use the approved high three-quarter overhead camera, matte sculpted fur, dark physical disc and muted copper-grey rim; do not copy its body or tail pose.\nImage 2: identity — Native species and slate-grey coat only; ignore blue effects.\n",
+  "references": [
+    {
+      "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/brown-rat-v2.png",
+      "sha256": "b3f6761c135350287d87324ce13d8ed3f2fcf86d5b78904b69491b7cc8533a3f",
+      "role": "style",
+      "note": "Use the approved high three-quarter overhead camera, matte sculpted fur, dark physical disc and muted copper-grey rim; do not copy its body or tail pose."
+    },
+    {
+      "path": "game/modules/tome/data/gfx/shockbolt/npc/vermin_rodent_giant_grey_rat.png",
+      "sha256": "60fde8efbd35224502f5168b3c641c0b0461f17131745eb736f3c99dd4bb0fe6",
+      "role": "identity",
+      "note": "Native species and slate-grey coat only; ignore blue effects."
+    }
+  ],
+  "attempt": 1,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alpha_bbox": [
+      109,
+      107,
+      1232,
+      1200
+    ]
+  },
+  "preserved_original_bytes": true,
+  "mechanical_check": "pass",
+  "visual_review": "pending",
+  "runtime_review": "pending",
+  "accepted": false
+}

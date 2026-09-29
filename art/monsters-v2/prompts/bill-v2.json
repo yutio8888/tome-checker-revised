@@ -1,0 +1,78 @@
+{
+  "asset_id": "bill-v2",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "status": "generated-reviewed-candidate",
+  "prompt": "Use case: precise-object-edit. Make ONE localized correction to this exact Bill the Stone Troll miniature: the upper-right end of his tree-trunk club currently crosses the circular base. Shorten/re-angle only the upper trunk so its cut wooden end moves INWARD and lies above Bill's right hand and in front of his right shoulder, wholly inside the disc with a narrow visible strip of base beyond it. Keep the trunk thick and obviously a bark-covered TREE TRUNK with a pale cut end and branch nub; it must remain large and identifiable. Keep both hands gripping it naturally; adjust the fingers only if needed. Preserve Bill's current body scale, olive skin, face, tusks, wrist wraps, loincloth, legs, pose, and neutral thin base size/position. Do not shrink the entire character or enlarge the base. Keep the hand-painted carved material, steep overhead camera, upper-left lighting and genuine transparent alpha outside the circle. No colored ring, labels, numbers, scenery, extra weapon or outside shadow. Only fix full weapon containment within the existing round base.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v2/masters/bill-v1.png"
+  ],
+  "reference_roles": [
+    "edit target; adjust weapon and necessary hand pose only, preserve full figure scale and base"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0dd21-b1f1-7472-b28c-5b68d8636421/exec-959464d0-ea77-4be7-8250-9b1fe30aecd3.png",
+  "saved_output_path": "game/addons/tome-checker-revised/art/monsters-v2/masters/bill-v2.png",
+  "sha256": "39fbf5f664000a42cf675239d1c2c0f7123675ffa056aa37776508b586ec2af5",
+  "preserved_native_alpha": true,
+  "image_processing": "Copied generated PNG without pixel edits or alpha changes.",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_alpha_bbox": [
+      143,
+      137,
+      1109,
+      1134
+    ],
+    "transparent_pixels": 808282,
+    "partial_alpha_pixels": 763916,
+    "alpha_bbox": [
+      97,
+      21,
+      1111,
+      1218
+    ],
+    "dominant_alpha_values": [
+      [
+        0,
+        808282
+      ],
+      [
+        253,
+        712722
+      ],
+      [
+        252,
+        27117
+      ],
+      [
+        251,
+        3565
+      ],
+      [
+        254,
+        3466
+      ]
+    ]
+  },
+  "review": "Localized weapon edit succeeded: bark-covered trunk and pale cut end now entirely inside the base with visible margin. Bill remains large with olive hide, hunched powerful shoulders and wrist wraps. Trunk somewhat shorter than initial composition but thick and readable; no body shrink. Recommend v2 for small-scale audit.",
+  "reviewed_at_utc": "2026-09-26T10:20:28.996287+00:00",
+  "tool_result_keys": [
+    "image_url",
+    "output_hint"
+  ],
+  "selection": "recommended for parent small-scale audit",
+  "parent_asset_id": "bill-v1",
+  "identity_sources": [
+    "game/modules/tome/data/zones/trollmire/npcs.lua:179-201"
+  ]
+}

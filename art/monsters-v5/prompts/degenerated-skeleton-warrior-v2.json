@@ -1,0 +1,69 @@
+{
+  "asset_id": "degenerated-skeleton-warrior-v2",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: precise-object-edit. Fix composition ONLY of image 1, the one-armed skeleton warrior token. Image 2 is the approved cave troll for overhead camera and neutral disc proportions. Current warrior skull sticks above the disc; this fails game requirements. Recompose with a STEEPER OVERHEAD VIEW and a more compact slightly crouched skeleton, moving skull fully INSIDE the projected circular disc. Skull top must have a clear band of dark disc behind it, at least 10% of disc diameter from far rim. Entire skeleton AND greatsword strictly within disc perimeter. Keep the disc centered, nearly circular, thin, 86% canvas width. Keep correct exactly ONE right arm/ONE hand holding the same long broad steel greatsword low diagonally; keep other arm wholly absent with empty shoulder socket; don't restore it. Preserve bone paint palette, open damaged ribs, tattered brown hip cloth, separated legs, no shield, no extra limbs. Preserve matte painted miniature finish, soft upper-left light, dark grey-brown disc and subtle bronze-grey rim. Make base finish/thickness as understated as image 2. Actual transparent alpha outside base. No other features, no symbols, UI or scenic additions. Square PNG. Required difference is overhead compact composition so no part of the creature protrudes beyond base.",
+  "references": [
+    "art/monsters-v5/masters/degenerated-skeleton-warrior-v1.png",
+    "art/monsters-v3/masters/cave-troll-v3.png"
+  ],
+  "reference_roles": [
+    "edit target",
+    "identity or style supporting reference"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-30278250-04b1-43e0-989a-28de8d49cf84.png",
+  "saved_output_path": "art/monsters-v5/masters/degenerated-skeleton-warrior-v2.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Byte-for-byte original copy; mechanical C downsampling only in sprites, no artwork editing.",
+  "selection": "static-reviewed-integration-candidate",
+  "review": "Head moved within disc with dark margin; exactly one arm and hand, empty opposite socket, greatsword retained.",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "generated_at_utc": "2026-09-27",
+  "sha256": "a41bbd64fccbda3124170edf1fc2f1850842b97a8b84d20c85beaffa1277c683",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      3,
+      1170,
+      1254
+    ],
+    "visible_alpha_bbox": [
+      124,
+      129,
+      1130,
+      1149
+    ],
+    "transparent_pixels": 762852,
+    "partial_alpha_pixels": 809301,
+    "opaque_pixels": 363,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "small_size_review": {
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "method": "Existing C exporter, each output actually opened using view_image original",
+    "runtime_verified": false
+  }
+}

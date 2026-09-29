@@ -1,0 +1,159 @@
+{
+  "schema": 1,
+  "batch_id": "heart-gloom-1",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Native source identities and mechanics verified in evidence/heart-gloom-20260928/identity.md",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/heart-gloom-20260928/identity.md",
+          "sha256": "b43e13c065626c8709c23ab1b919ff1129fcfca5e07f12c27b8049c837c7393a"
+        }
+      ],
+      "asset_id": "gloomy-floor",
+      "native_name": "UNDERGROUND_FLOOR floor",
+      "kind": "terrain-floor",
+      "scope": "heart-gloom gloomy skin L1-L3 only",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/underground_gloomy.lua",
+          "sha256": "6e4e4430272562ac1049064c13c1d77f050b1f19f37e0d24521422bd9a16b57b",
+          "line": 21,
+          "anchor": "define_as = \"UNDERGROUND_FLOOR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/mushrooms/gloomy_underground_floor.png",
+          "sha256": "9e7cbf4c991ac9851f60d07c1883c9cddfde709e4612330825812925211a36e0",
+          "role": "identity",
+          "note": "Native gloomy floor material"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-korpul-v1/masters/floor-a-v2.png",
+          "sha256": "aa50b00c1a936cb30e29e67e7a24a0243f8d936be8c9d413926a2a507aa42d29",
+          "role": "style",
+          "note": "Established board terrain material and scale"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Walkable",
+        "sight": "Open",
+        "danger": "None",
+        "interaction": "None",
+        "export": "Opaque full cell floor tile"
+      },
+      "prompt_fields": {
+        "subject": "Low flat overhead underground earth and stone surface, sickly dark umber and muted olive, scattered tiny mineral and fungal traces. No raised objects.",
+        "contrast": "Distinct at 48px from the other local terrain categories; broad value shapes.",
+        "composition": "Pure overhead full opaque square, even material to all four edges, no perspective or central vignette.",
+        "palette": "Sickly low-key earth, olive and plum",
+        "mechanics": "Flat walkable floor; no implied obstruction or hazard"
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native source identities and mechanics verified in evidence/heart-gloom-20260928/identity.md",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/heart-gloom-20260928/identity.md",
+          "sha256": "b43e13c065626c8709c23ab1b919ff1129fcfca5e07f12c27b8049c837c7393a"
+        }
+      ],
+      "asset_id": "gloomy-creep",
+      "native_name": "UNDERGROUND_CREEP creep",
+      "kind": "terrain-floor",
+      "scope": "heart-gloom gloomy skin L1-L3 only",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/underground_gloomy.lua",
+          "sha256": "6e4e4430272562ac1049064c13c1d77f050b1f19f37e0d24521422bd9a16b57b",
+          "line": 36,
+          "anchor": "define_as = \"UNDERGROUND_CREEP\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/mushrooms/creep_gloomy_mushrooms_main_01.png",
+          "sha256": "4579db33f1b8dba679813db6225942845ce5d8ef414512fd827ac397ec151067",
+          "role": "identity",
+          "note": "Native gloomy creep material"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-korpul-v1/masters/floor-a-v2.png",
+          "sha256": "aa50b00c1a936cb30e29e67e7a24a0243f8d936be8c9d413926a2a507aa42d29",
+          "role": "style",
+          "note": "Established board terrain material and scale"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Walkable",
+        "sight": "Open",
+        "danger": "None",
+        "interaction": "None",
+        "export": "Opaque full cell floor tile"
+      },
+      "prompt_fields": {
+        "subject": "Low carpet of mushroom creep spreading over underground earth, sickly dark olive and bruised violet; organic caps and tendrils lie close to ground.",
+        "contrast": "Distinct at 48px from the other local terrain categories; broad value shapes.",
+        "composition": "Pure overhead full opaque square, even material to all four edges, no perspective or central vignette.",
+        "palette": "Sickly low-key earth, olive and plum",
+        "mechanics": "Flat walkable floor; no implied obstruction or hazard"
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native source identities and mechanics verified in evidence/heart-gloom-20260928/identity.md",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/heart-gloom-20260928/identity.md",
+          "sha256": "b43e13c065626c8709c23ab1b919ff1129fcfca5e07f12c27b8049c837c7393a"
+        }
+      ],
+      "asset_id": "gloomy-vegetation",
+      "native_name": "UNDERGROUND_TREE vegetation",
+      "kind": "terrain-prop",
+      "scope": "heart-gloom gloomy skin L1-L3 only",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/underground_gloomy.lua",
+          "sha256": "6e4e4430272562ac1049064c13c1d77f050b1f19f37e0d24521422bd9a16b57b",
+          "line": 63,
+          "anchor": "define_as = \"UNDERGROUND_TREE\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/mushrooms/gloomy_mushroom_01_trunk.png",
+          "sha256": "596e7551b5aba1b668a0f357afd62fb99e6bc9452e7953a2f5fd706fae0f1f76",
+          "role": "identity",
+          "note": "Native gloomy vegetation material"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-daikara-v1/selected/prop-mountain-wall.png",
+          "sha256": "f01581cb4eb898ecf2cdf628670b334b9ffc307aee2199e7827844592971024a",
+          "role": "style",
+          "note": "Established board terrain material and scale"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Blocks with pass_tree only",
+        "sight": "Blocks",
+        "danger": "None",
+        "interaction": "Dig to UNDERGROUND_FLOOR",
+        "export": "Transparent complete wall prop"
+      },
+      "prompt_fields": {
+        "subject": "Dense raised thick fungal vegetation barrier, clustered stout trunks and large overlapping mushroom caps, dark plum, moss olive, dull cream highlighted caps. A solid opaque wall silhouette with visible height and shadow.",
+        "contrast": "Distinct at 48px from the other local terrain categories; broad value shapes.",
+        "composition": "Centered complete single raised wall object with native transparent RGBA margins, no cropping.",
+        "palette": "Sickly low-key earth, olive and plum",
+        "mechanics": "Solid movement and sight wall; no doorway or hazard"
+      }
+    }
+  ]
+}

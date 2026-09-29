@@ -1,0 +1,258 @@
+{
+  "schema": 1,
+  "batch_id": "bamboo-hut-tw6-v1",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "TW6 Irkkk bamboo-hut family, master 1 of 4: the opaque overhead material for the top of every hut-wall cell (the exporter's cell-filling interior). Identity and rules recorded before generation in identity-bamboo-hut.md. No waiver.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/terrain-tw6-20260929/identity-bamboo-hut.md",
+          "sha256": "abdc2095f1ce1924b292af218b0450508d3e12751e82aea055f61b014fed7cf8"
+        }
+      ],
+      "asset_id": "bamboo-hut-wall-top",
+      "native_name": "BAMBOO_HUT_WALL Irkkk yeek bamboo hut wall top material",
+      "kind": "terrain-floor",
+      "scope": "Irkkk (town-irkkk) only: BAMBOO_HUT_WALL and its singleWall variants BHW_*, the hut walls.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/jungle_hut.lua",
+          "sha256": "c0e105df517e449f93339a5dc6d2f19543a765d862f65e607e79925b9aec4e91",
+          "line": 35,
+          "anchor": "define_as = \"BAMBOO_HUT_WALL\""
+        },
+        {
+          "path": "game/modules/tome/data/general/grids/jungle_hut.lua",
+          "sha256": "c0e105df517e449f93339a5dc6d2f19543a765d862f65e607e79925b9aec4e91",
+          "line": 40,
+          "anchor": "does_block_move = true"
+        },
+        {
+          "path": "game/modules/tome/data/general/grids/jungle_hut.lua",
+          "sha256": "c0e105df517e449f93339a5dc6d2f19543a765d862f65e607e79925b9aec4e91",
+          "line": 60,
+          "anchor": "define_as=\"BHW_V_FULL1\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/bamboo/hut_wall_top_hor_01.png",
+          "sha256": "551fb6980646142625f1daf1844fd5d2d02da854d85569be5e680ab9bc2d3b32",
+          "role": "identity",
+          "note": "Native yeek hut wall top: cut bamboo culm tops bound with green rope. Keep the bamboo-and-lashing identity, much darker and cell-filling."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-gold-mountain-v1/selected/floor-gold-crest.png",
+          "sha256": "3591c8c15bfb314b98ac71566aa9ae46cbb13f1678d4d02de17df4f011b3d19d",
+          "role": "style",
+          "note": "Accepted board wall-top material: edge-to-edge matte paint finish, dark blocking value, scale and upper-left light. Not its rock shapes or golden palette."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Blocks movement (native pass_wall exception unchanged).",
+        "sight": "Blocks line of sight; does not block sense or ESP.",
+        "danger": "None.",
+        "interaction": "Diggable into hut floor by the native dig rule; no door, no transition.",
+        "export": "Deterministic exporter builds 16 N/E/S/W neighbour masks x 2 parities of cell-filling 128px wall tiles; a door counts as a connected wall neighbour."
+      },
+      "prompt_fields": {
+        "subject": "The top of a thick yeek bamboo hut wall seen from straight above: a dense, continuous mat of dark dried palm-frond thatch laid over bundled bamboo culms, with short cut bamboo ends and dark twisted-fibre rope bindings showing through here and there. Irregular, overlapping, slightly shaggy; no single long straight stripe, plank, board, row or tile pattern.",
+        "palette": "Dark weathered umber-brown and smoky olive-brown thatch, deep brown-black gaps between bundles, a few muted dull-tan bamboo ends and sparse desaturated green rope. Overall value mid-dark: clearly darker than green jungle grass and a pale tan hut floor mat; never bright straw yellow, never grass green, never grey stone.",
+        "contrast": "At 48 pixels it must read as a solid dark blocking hut wall, clearly darker and rougher than any walkable floor, distinct from jungle trees by its brown fibrous thatch-and-bamboo texture rather than leafy canopy, and distinct from a wooden floor by having no parallel boards.",
+        "composition": "Edge-to-edge overhead material filling the whole square, even density everywhere, no single dominant feature, no border, horizon, sky, cliff edge or cast shadow.",
+        "mechanics": "Used only as the top of Irkkk bamboo hut wall cells, which block movement and sight. Paint no door, opening, path, stairs, hazard, character or decoration mask."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "TW6 Irkkk bamboo-hut family, master 2 of 4: a native-alpha straight wall section whose front face (vertical lashed bamboo culms) the exporter crops for every hut-wall edge open to the south. The style reference is the Norgos snow-pine prop, whose margins kept TW5's v4 block inside A8.1. No waiver.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/terrain-tw6-20260929/identity-bamboo-hut.md",
+          "sha256": "abdc2095f1ce1924b292af218b0450508d3e12751e82aea055f61b014fed7cf8"
+        }
+      ],
+      "asset_id": "bamboo-hut-wall",
+      "native_name": "BAMBOO_HUT_WALL Irkkk yeek bamboo hut wall",
+      "kind": "terrain-prop",
+      "scope": "Irkkk (town-irkkk) only: BAMBOO_HUT_WALL and its singleWall variants BHW_*, the hut walls.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/jungle_hut.lua",
+          "sha256": "c0e105df517e449f93339a5dc6d2f19543a765d862f65e607e79925b9aec4e91",
+          "line": 35,
+          "anchor": "define_as = \"BAMBOO_HUT_WALL\""
+        },
+        {
+          "path": "game/modules/tome/data/general/grids/jungle_hut.lua",
+          "sha256": "c0e105df517e449f93339a5dc6d2f19543a765d862f65e607e79925b9aec4e91",
+          "line": 40,
+          "anchor": "does_block_move = true"
+        },
+        {
+          "path": "game/modules/tome/data/general/grids/jungle_hut.lua",
+          "sha256": "c0e105df517e449f93339a5dc6d2f19543a765d862f65e607e79925b9aec4e91",
+          "line": 60,
+          "anchor": "define_as=\"BHW_V_FULL1\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/bamboo/hut_wall_full_hor_01.png",
+          "sha256": "f596bbf4c1d4134e015071124d2e7262f33225d10ea064ab2f6c6c4f02751f07",
+          "role": "identity",
+          "note": "Native yeek hut wall face: a row of thick vertical bamboo culms with nodes, bound by a green rope band. Keep this bamboo palisade identity, darker and weathered."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-norgos-snow-v1/selected/prop-snow-tree-pine.png",
+          "sha256": "14026cb5553de216033fe3d50d62b589fe0c22b0fbd14c8d59c60c97a7d72c08",
+          "role": "style",
+          "note": "Accepted board prop: tabletop material, soft upper-left light and generous transparent margins round a centred construction. Use only its lighting, finish and margins; the bamboo piece has a completely different shape and palette."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Blocks movement (native pass_wall exception unchanged).",
+        "sight": "Blocks line of sight; does not block sense or ESP.",
+        "danger": "None.",
+        "interaction": "Diggable into hut floor by the native dig rule; no door, no transition.",
+        "export": "Deterministic exporter builds 16 N/E/S/W neighbour masks x 2 parities of cell-filling 128px wall tiles; a door counts as a connected wall neighbour."
+      },
+      "prompt_fields": {
+        "subject": "A SINGLE short straight section of a yeek bamboo hut wall: a solid palisade of thick vertical bamboo culms standing tightly side by side with visible nodes, bound by two horizontal bands of twisted dark rope, capped along its top by a thick bundle of dried palm-frond thatch. A heavy, continuous wall block, not a fence with gaps.",
+        "palette": "Weathered dark honey-brown and umber bamboo, darker umber shadows between culms, dull olive-green rope bands, dark brown thatch cap. The front face of the culms is mid-dark; nothing bright straw yellow, no pale cream.",
+        "contrast": "At 48 pixels the face must read as vertical bamboo culms of a blocking hut wall, clearly darker than a tan hut floor and green jungle grass, and clearly different from a tree trunk or a wooden plank door.",
+        "composition": "One wide coherent wall section in overhead three-quarter tabletop view, placed in the exact CENTRE of a mostly empty transparent canvas. The wall occupies ONLY the middle 70% of the canvas width: its leftmost point about 15% from the left edge and its rightmost point about 15% from the right edge, with fully transparent empty space on both sides. Thatch-capped top from about 20% to 40% of the image height, the vertical culm face below it down to about 85%. Nothing, not a leaf tip, rope end or shadow, extends into the outer 12% band on any side. Transparent corners. No cut-off wall.",
+        "mechanics": "Irkkk hut wall: blocks movement and sight. No door, window, opening, mask, skin, weapon or other decoration; no character, sign or hazard."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "TW6 Irkkk bamboo-hut family, master 3 of 4: the opaque hut floor under walls, shops (shopkeeper actors stand on it) and cooking pits. Must stay walkable-looking and lighter than the hut walls. No waiver.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/terrain-tw6-20260929/identity-bamboo-hut.md",
+          "sha256": "abdc2095f1ce1924b292af218b0450508d3e12751e82aea055f61b014fed7cf8"
+        }
+      ],
+      "asset_id": "bamboo-hut-floor",
+      "native_name": "BAMBOO_HUT_FLOOR Irkkk yeek bamboo hut floor",
+      "kind": "terrain-floor",
+      "scope": "Irkkk (town-irkkk) only: BAMBOO_HUT_FLOOR (hut interiors, the open-air market square, all six shop cells) and the cooking-pit floor BAMBOO_HUT_COOKING3.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/jungle_hut.lua",
+          "sha256": "c0e105df517e449f93339a5dc6d2f19543a765d862f65e607e79925b9aec4e91",
+          "line": 24,
+          "anchor": "define_as = \"BAMBOO_HUT_FLOOR\""
+        },
+        {
+          "path": "game/modules/tome/data/maps/towns/irkkk.lua",
+          "sha256": "a02642b274c09a7428eed5b52ba6a8a84c38fbad6a9865f267815305e52bb969",
+          "line": 35,
+          "anchor": "\"YEEK_STORE_GEM\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-irkkk/grids.lua",
+          "sha256": "e084e1c028bd6017525c31e833aa338bdff1db4fdf54446492dfa9db5e380275",
+          "line": 25,
+          "anchor": "define_as=\"BAMBOO_HUT_COOKING3\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/bamboo/hut_dirt_floor_01.png",
+          "sha256": "ff62880e72f7b300b4a2dd77700f8b617e2b341f8c8376869500d751337e5ce2",
+          "role": "identity",
+          "note": "Native hut floor: packed earth inside a yeek bamboo hut. Keep the earthen hut-floor identity but much lighter and calmer."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-daikara-v1/selected/floor-bare-rock.png",
+          "sha256": "73d87da52dad7a39195e227d0e4110fa0c183c00c29fc37aa9695c7826d47f40",
+          "role": "style",
+          "note": "Accepted board floor master: flat overhead matte finish, low contrast, scale and upper-left light. Not its grey palette or rock material."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Walkable; no movement rule.",
+        "sight": "Does not block sight.",
+        "danger": "None.",
+        "interaction": "None on the floor itself; shopkeepers are separate actors standing on it and the cooking pit is a native prop drawn over it.",
+        "export": "Opaque full-bleed floor material; the exporter crops 2 checker parities (parity 1 about 12% darker)."
+      },
+      "prompt_fields": {
+        "subject": "The floor inside a yeek jungle hut seen from straight above: smooth packed light earth almost entirely covered by large flat woven mats of split bamboo and dried reed in a simple broad plaited pattern, slightly worn, with a little earth showing at the seams. Calm and even.",
+        "palette": "Warm light tan, sand-beige and soft honey ochre mats with gentle darker weave lines, faint light brown earth. Mid-light overall: clearly lighter than dark brown hut walls, clearly not green grass and not grey stone; no strong dark stripes.",
+        "contrast": "At 48 pixels it must read as a flat, walkable, calm hut floor that game pieces can stand on; low contrast so characters stay readable on it; distinct from green jungle grass by its warm tan colour and from the dark bamboo walls by being much lighter.",
+        "composition": "Edge-to-edge overhead floor material filling the whole square, even density everywhere, no single dominant feature, no border, rug edge, wall, object, fire pit or shadow.",
+        "mechanics": "Walkable hut floor only. Paint no furniture, fire, pot, door, stairs, hazard, character, symbol or text."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "TW6 Irkkk bamboo-hut family, master 4 of 4: a native-alpha standing hut door leaf; the exporter crops its woven face and lays it across the doorway on board hut floor for closed doors and swings it to one side for open doors (horizontal and vertical doors). Standing and grounded so the prop gate's A8.2 applies unchanged. No waiver.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/terrain-tw6-20260929/identity-bamboo-hut.md",
+          "sha256": "abdc2095f1ce1924b292af218b0450508d3e12751e82aea055f61b014fed7cf8"
+        }
+      ],
+      "asset_id": "bamboo-hut-door",
+      "native_name": "BAMBOO_HUT_DOOR Irkkk yeek bamboo hut door",
+      "kind": "terrain-prop",
+      "scope": "Irkkk (town-irkkk) only: BAMBOO_HUT_DOOR_HORIZ, BAMBOO_HUT_DOOR_VERT and their open states BAMBOO_HUT_DOOR_HORIZ_OPEN, BAMBOO_HUT_DOOR_OPEN_VERT (three hut doors).",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/jungle_hut.lua",
+          "sha256": "c0e105df517e449f93339a5dc6d2f19543a765d862f65e607e79925b9aec4e91",
+          "line": 84,
+          "anchor": "define_as = \"BAMBOO_HUT_DOOR\""
+        },
+        {
+          "path": "game/modules/tome/data/general/grids/jungle_hut.lua",
+          "sha256": "c0e105df517e449f93339a5dc6d2f19543a765d862f65e607e79925b9aec4e91",
+          "line": 105,
+          "anchor": "define_as = \"BAMBOO_HUT_DOOR_HORIZ\""
+        },
+        {
+          "path": "game/modules/tome/data/general/grids/jungle_hut.lua",
+          "sha256": "c0e105df517e449f93339a5dc6d2f19543a765d862f65e607e79925b9aec4e91",
+          "line": 107,
+          "anchor": "define_as = \"BAMBOO_HUT_DOOR_VERT\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/bamboo/palm_door_closed_ver_01.png",
+          "sha256": "e92196e917a953d749faa4bb322daa4e91330c27c8d649d8035bcf273d15e8d4",
+          "role": "identity",
+          "note": "Native yeek hut door: a hanging door of dried palm fronds. Keep the woven palm-leaf door identity."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-norgos-snow-v1/selected/prop-snow-tree-pine.png",
+          "sha256": "14026cb5553de216033fe3d50d62b589fe0c22b0fbd14c8d59c60c97a7d72c08",
+          "role": "style",
+          "note": "Accepted board prop: tabletop material, soft upper-left light and generous transparent margins round a centred construction. Use only its lighting, finish and margins; the bamboo piece has a completely different shape and palette."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Closed: passable by opening (native door rule); open: passable.",
+        "sight": "Closed blocks sight; open does not.",
+        "danger": "None.",
+        "interaction": "Native door: opens when walked into; no lock, no transition.",
+        "export": "Native-alpha door leaf; the exporter places it across the doorway (closed) or swung aside (open) on board hut floor, horizontal and vertical, 2 parities."
+      },
+      "prompt_fields": {
+        "subject": "A SINGLE freestanding yeek hut door leaf standing upright on its bottom edge, seen face-on in a slight overhead three-quarter view: a rectangular frame of thin bamboo rails with a dense woven panel of dried green-and-tan palm fronds lashed between them, the frond tips slightly ragged along the bottom edge.",
+        "palette": "Muted olive-green and dried khaki-tan palm fronds, honey-brown bamboo rails, dark rope lashings. Mid value: clearly different in hue from the dark umber bamboo walls and from the pale tan hut floor.",
+        "contrast": "At 48 pixels it must read as a woven palm-leaf door leaf, not as a wall, a log, a plank bridge or a bush.",
+        "composition": "One wide upright door leaf in the exact CENTRE of a mostly empty transparent canvas. The leaf occupies ONLY the middle 60% of the canvas width (its left edge about 20% from the left, its right edge about 20% from the right) and stands from about 25% of the image height down to about 85%, its bottom edge resting on nothing (no floor). Fully transparent empty space all round; nothing, not a frond tip, rope end or shadow, extends into the outer 12% band on any side. Transparent corners. No cut-off leaf, no doorway, no wall, no floor.",
+        "mechanics": "Hut door leaf only; the game supplies doorway, walls and floor. No lock, handle symbol, sign, hazard or character."
+      }
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "asset_id": "great-wolf-v3",
+  "intent": "edit",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "status": "generated-reviewed-candidate",
+  "prompt": "Use case: precise-object-edit\nAsset type: a single transparent PNG monster miniature for a square-grid tabletop RPG, to be read at 48 and 64 pixels.\nPrimary request: redesign only the great wolf pose and fur value pattern in Image 1 so it is strongly distinguishable from the ordinary wolf in Image 2. Image 1 is the edit target and determines the neutral circular base, upper-left lighting, hand-painted miniature finish, high downward camera and centered scale. Image 2 is a contrast reference only: DO NOT repeat that pale grey diagonal side-on wolf. Image 3 is the original game's dark great wolf sprite, used only for species identity.\nSubject and pose: a complete mature charcoal-black GREAT WOLF, seen from a steep overhead three-quarter angle but facing squarely toward the bottom/front of the image, rather than diagonally. It braces on four anatomically coherent paws. Both forelegs are clearly separated left and right; strong wide shoulders, hindquarters and one bushy tail remain plainly visible behind the head. The head is lowered in wary readiness, with a small controlled snarl revealing a little ivory tooth. Long canine muzzle, pointed ears, no bear or lion anatomy. A broad, clearly lighter silver-grey coarse neck ruff and shoulder crest form a readable light chevron behind the dark face, while the back, flanks and forelegs remain dark charcoal. The frontal shoulder-and-paw silhouette and this large-scale light-dark pattern must be recognizable when reduced to 48px.\nProportions: a physically plausible full-body painted miniature, NOT a head portrait or mascot. The skull without the surrounding ruff is at most about one quarter of the inner disc width. Show the full body length and its four legs in perspective; do not inflate the head or shorten the body into a cartoon. Use broad readable sculpted fur planes rather than fine hair noise.\nInvariants: retain the existing dark grey-brown circular base with its thin neutral bronze-grey bevel, same small thickness, same centered position and roughly same disc occupancy in the square. Match the existing high-angle painted carving style, muted matte surfaces and soft upper-left light. All ears, paws, fur tips and tail stay inside the outer base boundary with a thin visible perimeter. Only tiny contact shadow on the base.\nBackdrop: genuinely transparent native alpha outside the base. No black or white background, no painted checkerboard, no external cast shadow.\nConstraints: exactly one wolf and one base; no coloured faction rim, glow, rank markers, selection markings, text, numbers, icons, weapons, collar, armour, scenery, grass, rocks, watermark. Do not redraw any tactical UI.",
+  "references": [
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v2/masters/great-wolf-v1.png",
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/wolf-v2.png",
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/canine_gw.png"
+  ],
+  "reference_roles": [
+    "Edit target; preserve base, material, high camera and light while changing pose and fur value pattern.",
+    "Ordinary wolf contrast reference; avoid this light grey diagonal silhouette.",
+    "Original game great wolf; dark canine identity only."
+  ],
+  "inspected_additional_context": [
+    "evidence/runtime-v040/screenshots/beasts-1920-96.png",
+    "evidence/runtime-v040/screenshots/dense-1366-48.png"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0dd7b-5f20-7d22-8dd0-3de0c20d8894/exec-8c5d2a84-4942-4b21-b5ae-e16b5fbe28c8.png",
+  "saved_output_path": "art/monsters-v3/masters/great-wolf-v3.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Original generated PNG copied byte-for-byte. Review thumbnails use the existing mechanical C exporter; no creature pixels are painted, recoloured or matted.",
+  "generated_at_utc": "2026-09-26T11:34:54.306Z",
+  "selection": "recommended-for-runtime-test",
+  "sha256": "056af1ffe8c4769ff974886175078cbd58fff2baa879e2834f1ec9b90310d9de",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      80,
+      1222,
+      1238
+    ],
+    "visible_alpha_bbox": [
+      147,
+      149,
+      1108,
+      1122
+    ],
+    "transparent_pixels": 835370,
+    "partial_alpha_pixels": 736816,
+    "opaque_pixels": 330,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "review": {
+    "selection_reason": "The front-facing lowered muzzle, separated forepaws and broad pale neck ruff differ materially from the ordinary wolf diagonal silhouette, without losing a complete miniature quadruped. Full disc and body remain visible and contained. One built-in edit call was sufficient.",
+    "observations": [
+      "At 96px the pose, small teeth and neck ruff are clear; head remains part of a full quadruped, not a portrait.",
+      "At 64px the frontal shoulder-and-paw pattern differs visibly from ordinary wolf and the previous great-wolf master.",
+      "At 48px the large frontal light/dark pattern survives; teeth and individual fur texture do not. Species and frontal posture remain visible.",
+      "Coat is dark charcoal with grey highlights rather than uniformly black; contrast comes from pose and the pale ruff as well as value."
+    ],
+    "remaining_limits": [
+      "Same-family distinction has only been inspected in an isolated static side-by-side preview.",
+      "Dense combat, native relation/rank overlays, fog and reduced actor size still require runtime screenshots."
+    ]
+  },
+  "reviewed_at_utc": "2026-09-26T11:36:43.427989+00:00",
+  "static_review": {
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "backgrounds": [
+      "flat muted grass green",
+      "flat deep water blue"
+    ],
+    "original_reference_comparison": true,
+    "preview_path": "/tmp/monster-beast-refinement-review/review.png",
+    "method": "Existing C exporter generates normalized native-alpha thumbnails. Chromium lays out each thumbnail at its actual pixel size. Full-page screenshot inspected at original resolution. Not an in-game screenshot.",
+    "preview_sha256": "bed6e6ad953e0b3eaa6b1a760d17e8ca39722724d3ef5bb6bb9e357af47b549b"
+  },
+  "reference_sha256": {
+    "game/addons/tome-checker-revised/art/monsters-v2/masters/great-wolf-v1.png": "7eed917a14352203f5078ba17337ff1ceeb0c132a9a865ab452e0cb074fdca61",
+    "game/addons/tome-checker-revised/art/monsters-v1/masters/wolf-v2.png": "01ea31cefef4dfb786c8e2bd060c51e8be61a692e68c471dbaf5b51a4e8ec342",
+    "game/modules/tome/data/gfx/shockbolt/npc/canine_gw.png": "94de8314bbb6e1c0ece2b3557a8f514d8e47223d2744ccafe390b90069dc0c09"
+  }
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "id": "stone-troll",
+    "name": "石巨魔",
+    "entity": "stone troll",
+    "group": "giants",
+    "trait": "粗硬的灰黑皮肤与头骨腰带，和森林巨魔区分。",
+    "original": "npc/troll_s.png",
+    "source": "game/modules/tome/data/general/npcs/troll.lua",
+    "source_line": 64,
+    "rank": 2.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "cave-troll",
+    "name": "洞穴巨魔",
+    "entity": "cave troll",
+    "group": "giants",
+    "trait": "低重心、双手持长矛的轮廓，武器也留在格内。",
+    "original": "npc/troll_c.png",
+    "source": "game/modules/tome/data/general/npcs/troll.lua",
+    "source_line": 74,
+    "rank": 2.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "prox",
+    "name": "Prox",
+    "entity": "Prox the Mighty",
+    "group": "giants",
+    "trait": "宽腹巨体和重锤轮廓，独特角色单独制作。",
+    "original": "npc/giant_troll_prox_the_mighty.png",
+    "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+    "source_line": 46,
+    "rank": 4.0,
+    "unique": true,
+    "source_size": [
+      64,
+      128
+    ]
+  },
+  {
+    "id": "bill",
+    "name": "Bill",
+    "entity": "Bill the Stone Troll",
+    "group": "giants",
+    "trait": "树干巨棒与石巨魔的大轮廓，区别于 Prox。",
+    "original": "npc/troll_bill.png",
+    "source": "game/modules/tome/data/zones/trollmire/npcs.lua",
+    "source_line": 179,
+    "rank": 4.0,
+    "unique": true,
+    "source_size": [
+      64,
+      128
+    ]
+  },
+  {
+    "id": "great-wolf",
+    "name": "巨狼",
+    "entity": "great wolf",
+    "group": "beasts",
+    "trait": "较厚的颈肩和竖毛，姿态区别于普通狼。",
+    "original": "npc/canine_gw.png",
+    "source": "game/modules/tome/data/general/npcs/canine.lua",
+    "source_line": 60,
+    "rank": 1.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "fox",
+    "name": "狐狸",
+    "entity": "fox",
+    "group": "beasts",
+    "trait": "尖脸、暖狐色与蓬松大尾，轻巧的四足比例。",
+    "original": "npc/canine_fox.png",
+    "source": "game/modules/tome/data/general/npcs/canine.lua",
+    "source_line": 127,
+    "rank": 1.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "black-bear",
+    "name": "黑熊",
+    "entity": "black bear",
+    "group": "beasts",
+    "trait": "深色宽身与浅色口鼻，保持和底盘的明度差。",
+    "original": "npc/black_bear.png",
+    "source": "game/modules/tome/data/general/npcs/bear.lua",
+    "source_line": 62,
+    "rank": 2.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "brown-rat",
+    "name": "巨型棕鼠",
+    "entity": "giant brown rat",
+    "group": "beasts",
+    "trait": "圆耳、尖鼻、长裸尾，不做成小号犬科。",
+    "original": "npc/vermin_rodent_giant_brown_rat.png",
+    "source": "game/modules/tome/data/general/npcs/rodent.lua",
+    "source_line": 81,
+    "rank": 1.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "king-cobra",
+    "name": "眼镜王蛇",
+    "entity": "king cobra",
+    "group": "shapes",
+    "trait": "展开颈罩与竖起前身，区别于低盘曲棕蛇。",
+    "original": "npc/green-snake.png",
+    "source": "game/modules/tome/data/general/npcs/snake.lua",
+    "source_line": 90,
+    "rank": 2.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "bee-swarm",
+    "name": "蜂群",
+    "entity": "bee swarm",
+    "group": "shapes",
+    "trait": "多只蜂组成一个清楚的群体棋子，保留翼与条纹。",
+    "original": "npc/bee_swarm.png",
+    "source": "game/modules/tome/data/general/npcs/swarm.lua",
+    "source_line": 63,
+    "rank": 1.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "giant-eel",
+    "name": "巨鳗",
+    "entity": "giant eel",
+    "group": "shapes",
+    "trait": "鱼头、长鳍边和流线弯身，区别于蛇类。",
+    "original": "npc/aquatic_critter_giant_eel.png",
+    "source": "game/modules/tome/data/general/npcs/aquatic_critter.lua",
+    "source_line": 44,
+    "rank": 1.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "dragon-turtle",
+    "name": "龙龟",
+    "entity": "dragon turtle",
+    "group": "shapes",
+    "trait": "甲壳、四肢、尾与龙形头构成不同轮廓。",
+    "original": "npc/aquatic_critter_dragon_turtle.png",
+    "source": "game/modules/tome/data/general/npcs/aquatic_critter.lua",
+    "source_line": 66,
+    "rank": 2.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  }
+]

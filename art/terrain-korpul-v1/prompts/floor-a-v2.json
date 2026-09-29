@@ -1,0 +1,45 @@
+{
+  "asset_id": "floor-a-v2",
+  "material": "floor-a",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "intent": "edit",
+  "prompt": "Use case: precise-object-edit. Repair this stone floor texture for visibly seamless repeat. Keep the same muted warm grey limestone, average brightness and matte hand-painted mineral surface. REMOVE all flagstone joints and long cracks that cross any image boundary, and greatly reduce overall seam contrast. Make the full perimeter 15% band a homogeneous finely mottled stone material with no identifiable linear seam, no dark/light band, no vignette. Interior may have two or three very faint short worn fracture traces that fade out well before the edges; no large outlined stones, no closed central shape or symbol. Opposite edges must match visually in color and fine texture for horizontal AND vertical repeat. Flat orthographic full-bleed opaque square PNG. No border, bevel, perspective, shadow, objects, debris, moss, icons, text or transparency. Treat this as quiet printed dungeon floor at 48 pixels, not a close-up dramatic rock photograph. Uniform illumination across the whole surface. One seamless material only.",
+  "references": [
+    "floor-a-v1"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-33a6a735-61a7-42a3-93c0-ee2ae318b44b.png",
+  "saved_output_path": "art/terrain-korpul-v1/masters/floor-a-v2.png",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "native_alpha_required": false,
+  "selection": "design-candidate-not-runtime-ready",
+  "processing": "Original byte copy, mechanical whole-canvas downsampling only.",
+  "sha256": "aa50b00c1a936cb30e29e67e7a24a0243f8d936be8c9d413926a2a507aa42d29",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGB",
+    "size": [
+      1254,
+      1254
+    ],
+    "opaque_pixels": 1572516
+  },
+  "references_resolved": [
+    "masters/floor-a-v1.png"
+  ],
+  "static_review": {
+    "sheet": "review/design-sheet.png",
+    "actual_sizes": [
+      48,
+      64,
+      96
+    ],
+    "floor_repeat_size": 128,
+    "grayscale": "CSS display only",
+    "runtime_verified": false,
+    "connected_masks_verified": false
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-q-4",
+  "assets": [
+    {
+      "asset_id": "rantha-abomination",
+      "native_name": "Rantha the Abomination",
+      "scope": "temporal-rift (zones/temporal-rift/npcs.lua:73, unique, define_as ABOMINATION_RANTHA, dragon/temporal, rank 3.5, guardian generated from zone.lua:147, resolvers.nice_tile with the explicit PNG in add_mos); single definition; Rantha the Worm is a different unique (RANTHA_THE_WORM, own name and PNG, shipped)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/temporal-rift/npcs.lua",
+          "sha256": "f0f18f389196cc8fa4bf8f22988e9eed21547953297738c49f8bb4823899a993",
+          "line": 73,
+          "anchor": "define_as = \"ABOMINATION_RANTHA\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/temporal-rift/npcs.lua",
+          "sha256": "f0f18f389196cc8fa4bf8f22988e9eed21547953297738c49f8bb4823899a993",
+          "line": 77,
+          "anchor": "add_mos = {{image=\"npc/dragon_temporal_rantha_the_abomination.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_temporal_rantha_the_abomination.png",
+          "sha256": "d7ace374cec37fb7d0a977e8003cc459b54820386912a17e4e7aed46ba2c4f7a",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a huge black dragon with raised dark bat wings, grey scaled belly, claws, and a curled tail."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/rantha.png",
+          "sha256": "fbe545dd28909b1fbcfa98e80728e26c8c17ab57656d1e342e2443259244ba44",
+          "role": "family",
+          "note": "Shipped Rantha the Worm (pale silver-blue winged dragon coiled round): the ice element and every cold drake must not read as this pale coiled winged dragon."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Rantha the Abomination seen from a steep overhead three-quarter angle: a hulking corrupted dragon reared up and half-crouched with both tattered wings raised and folded in around its shoulders like a torn cloak, a horned skull-like head with the jaws open and glowing cyan-white eyes, dark slate-violet scaled hide broken by glowing cyan-white temporal fissures and cracks across the chest, back and wing membranes as if the body were splitting along time-rift seams, pale bone-white spurs and claws, torn wing edges dissolving into a few small floating cyan fragments kept close to the body, a heavy tail curled at the base. Corrupted, cracked and complete.",
+        "contrast": "Dragons of the tokens: Rantha the ABOMINATION is the SLATE-VIOLET DRAGON CRACKED BY GLOWING CYAN TIME-FISSURES with torn wings raised round the shoulders (silhouette: hunched bulk with two raised tattered wing peaks; hue: dark slate violet with cyan-white cracks and bone spurs; value: mid-dark with bright cracks). The shipped Rantha the Worm is a smooth PALE SILVER-BLUE coiled dragon with no cracks; the cold drakes are saturated cyan teal.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. This is a dragon on a small tabletop disc, drawn COMPACT and chunky: wings, tail, neck and head are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no wing tip, tail tip, claw, horn, drip or flame reaches the outer sixth ring band or crosses the disc rim. Do not spread the wings wider than about two thirds of the disc diameter.",
+        "palette": "Slate-violet scaled hide with lighter lavender-grey highlight planes, glowing cyan-white fissures, pale bone spurs and claws; nothing darker than dark slate violet except the mouth and wing tears; keep the body mid-dark rather than black; the cracks must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Rantha the Abomination, define_as=ABOMINATION_RANTHA, type=dragon/subtype=temporal, unique=True); details and hashes in evidence/monster-batch-q-20260929/source-contracts.json. no base (dragon/temporal leaf); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/dragon_temporal_rantha_the_abomination.png\", display_h=2, display_y=-1}}} names the PNG explicitly (no {tall=1} shorthand and no =BASE=TILE= indirection), so the resolved tall body is statically pinnable (same form as the batch K gigantic sandworm tunneler and the batch P snow giants); native sprite 64x128; unique with define_as, so an ordinary unique native-tall entry like Walrog and Healer Astelrid; talents Knockback, Ice Storm, Freeze, Ice Claw, Icy Skin, Ice Breath, Haste, Celerity, Time Dilation; resolvers.sustains_at_birth() starts only Icy Skin (temporary max_life/armour/on_melee_hit values; Haste is activated, Celerity and Time Dilation are passives): no type/subtype/image/add_mos write. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-q-20260929/source-contracts.json",
+          "sha256": "9e799436c4f23cd9cbf44235e34ab8068160b55d34bcc8f2127a33aebde15dfa"
+        }
+      ]
+    },
+    {
+      "asset_id": "briagh",
+      "native_name": "Briagh, Great Sand Wyrm",
+      "scope": "briagh-lair (zones/briagh-lair/npcs.lua:25, unique, define_as BRIAGH, dragon/sand, rank 4, guardian of zone.lua:48, resolvers.nice_tile with the explicit PNG in add_mos, summons eight sandworms); single definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/briagh-lair/npcs.lua",
+          "sha256": "ef59f452ed465ff85ba3c77bf0c40c32d8dbba33d85ab3dad5fdfe3334dbbe95",
+          "line": 25,
+          "anchor": "define_as = \"BRIAGH\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/briagh-lair/npcs.lua",
+          "sha256": "ef59f452ed465ff85ba3c77bf0c40c32d8dbba33d85ab3dad5fdfe3334dbbe95",
+          "line": 30,
+          "anchor": "add_mos = {{image=\"npc/dragon_sand_briagh__great_sand_wyrm.png\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/briagh-lair/npcs.lua",
+          "sha256": "ef59f452ed465ff85ba3c77bf0c40c32d8dbba33d85ab3dad5fdfe3334dbbe95",
+          "line": 68,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_sand_briagh__great_sand_wyrm.png",
+          "sha256": "8824294688041f0f1b593bb61e22b51d09e416f850fbf5f37896f03a123f4829",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a golden armoured serpent rearing upright in an S curve with a dragon head and sand streaming down."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/corrupted-sand-wyrm.png",
+          "sha256": "c50ec7b10618784bcba701ec371817bb983131a344876b93129c4b64bdc734c9",
+          "role": "family",
+          "note": "Shipped Corrupted Sand Wyrm (brown horned serpentine dragon in an S coil): the sand-drake and Briagh must not be a brown S-coiled horned serpent."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Briagh, Great Sand Wyrm seen from a steep overhead three-quarter angle: a wingless armoured sand wyrm reared up from a tight spiral of thick coils like a hooded cobra, the front of the body rising in the centre with a broad dragon head bent forward and open jaws, a wide fan-shaped VIOLET-PURPLE frill and crest around the head and neck, glowing violet eyes, bright golden-yellow overlapping armour plates over the whole body with paler cream underplates on the belly, dark amber plate edges, a few grains of sand trickling off the coils kept inside the disc. Towering, golden, regal and complete.",
+        "contrast": "Sand family: BRIAGH is the GOLDEN SERPENT REARED UP FROM A SPIRAL COIL with a big VIOLET FRILL around the head (silhouette: central rising column with a wide fan frill on top, spiral base; hue: golden yellow with violet frill; value: mid-light). The shipped Corrupted Sand Wyrm is a DARK BROWN horned S-coil with no frill; the sandworm destroyer is a smooth ORANGE ring with a toothed round maw; the sand-drake is a pale tan flat wingless lizard.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. This is a dragon on a small tabletop disc, drawn COMPACT and chunky: wings, tail, neck and head are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no wing tip, tail tip, claw, horn, drip or flame reaches the outer sixth ring band or crosses the disc rim. Do not spread the wings wider than about two thirds of the disc diameter.",
+        "palette": "Bright golden-yellow armour plates with lighter yellow highlight planes, cream belly plates, dark amber plate edges, violet-purple frill and eyes; nothing darker than dark amber except the mouth; the disc stays neutral charcoal with no gold cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Briagh, Great Sand Wyrm, define_as=BRIAGH, type=dragon/subtype=sand, unique=True); details and hashes in evidence/monster-batch-q-20260929/source-contracts.json. no base (dragon/sand leaf); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/dragon_sand_briagh__great_sand_wyrm.png\", display_h=2, display_y=-1}}} names the PNG explicitly (no {tall=1} shorthand and no =BASE=TILE= indirection), so the resolved tall body is statically pinnable (same form as the batch K gigantic sandworm tunneler and the batch P snow giants); native sprite 64x128; unique with define_as, so an ordinary unique native-tall entry like Walrog and Healer Astelrid; talents Summon, Sand Breath, Stun, Knockback (activated) plus auto_classes Summoner from level 35 (see runtime_mutation_scan); resolvers.sustains_at_birth() present but none of its own talents is sustained; resolvers.inscriptions(3,...). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-q-20260929/source-contracts.json",
+          "sha256": "9e799436c4f23cd9cbf44235e34ab8068160b55d34bcc8f2127a33aebde15dfa"
+        }
+      ]
+    }
+  ]
+}

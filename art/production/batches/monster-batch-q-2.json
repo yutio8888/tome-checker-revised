@@ -1,0 +1,132 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-q-2",
+  "assets": [
+    {
+      "asset_id": "sand-drake",
+      "native_name": "sand-drake",
+      "scope": "sandworm.lua (dragon/sand, non-unique, no define_as, base BASE_NPC_SANDWORM which is vermin/sandworm but the leaf overrides type and subtype; rank 3); briagh-lair, sandworm-lair",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/sandworm.lua",
+          "sha256": "d3b650d818aa36a5560a366bb100fc2c4a1895b0d64e39930571b7af78d612d2",
+          "line": 70,
+          "anchor": "name = \"sand-drake\", display"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/sandworm.lua",
+          "sha256": "d3b650d818aa36a5560a366bb100fc2c4a1895b0d64e39930571b7af78d612d2",
+          "line": 71,
+          "anchor": "type = \"dragon\", subtype = \"sand\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_sand_sand_drake.png",
+          "sha256": "329773ecb089bf19dffd37b55b502278416d39ba799db586d455e5cbde7fdac1",
+          "role": "identity",
+          "note": "Native shape (64x64): a wingless tan dragon-shaped lizard crawling low, long tail curled up behind."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/corrupted-sand-wyrm.png",
+          "sha256": "c50ec7b10618784bcba701ec371817bb983131a344876b93129c4b64bdc734c9",
+          "role": "family",
+          "note": "Shipped Corrupted Sand Wyrm (brown horned serpentine dragon in an S coil): the sand-drake and Briagh must not be a brown S-coiled horned serpent."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A sand-drake seen from a steep overhead three-quarter angle: a wingless dragon-shaped desert lizard prowling low on four heavy splayed clawed legs, a broad flat crocodile-like head held low with small blunt horns and a wide mouth, a row of low dark brown spines along the back, a thick tail curved round beside the body ending in a blunt tip, pale dusty sand-tan and cream scales with a lighter cream belly and darker brown scale edges, no wings at all, a little sand dust on the claws. Heavy, flat, dry and complete.",
+        "contrast": "Sand family: the sand-drake is a PALE TAN WINGLESS FLAT LIZARD prowling on four legs with a low broad head (silhouette: long flat oval with four splayed legs, no wings; hue: pale dusty sand-tan and cream; value: light). The shipped Corrupted Sand Wyrm is a DARK BROWN horned S-coiled serpent; the shipped sandworms are smooth orange worms. Briagh is a golden serpent rearing upright with a violet frill.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. This is a dragon on a small tabletop disc, drawn COMPACT and chunky: wings, tail, neck and head are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no wing tip, tail tip, claw, horn, drip or flame reaches the outer sixth ring band or crosses the disc rim. Do not spread the wings wider than about two thirds of the disc diameter.",
+        "palette": "Pale dusty sand-tan and cream scales with lighter highlight planes, darker brown scale edges and spines, cream belly, dark eyes; nothing darker than dark brown except the eyes and mouth; the sand dust must not tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=sand-drake, define_as=None, type=dragon/subtype=sand, unique=False); details and hashes in evidence/monster-batch-q-20260929/source-contracts.json. base BASE_NPC_SANDWORM (vermin/sandworm, no image=), the leaf overrides type/subtype to dragon/sand; NPC.lua:33 default-name image (npc/dragon_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; talents Sand Breath, Knockback (activated); resolvers ingredient_on_death only; no sustains_at_birth; the wild-gift TREE sand-drake is a talent category, not an actor. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-q-20260929/source-contracts.json",
+          "sha256": "9e799436c4f23cd9cbf44235e34ab8068160b55d34bcc8f2127a33aebde15dfa"
+        }
+      ]
+    },
+    {
+      "asset_id": "ukllmswwik",
+      "native_name": "Ukllmswwik the Wise",
+      "scope": "flooded-cave (zones/flooded-cave/npcs.lua:25, unique, define_as UKLLMSWWIK, dragon/water, rank 4, faction water-lair, default-name image, no nice_tile); flooded-cave-last map defineTile; single definition; can_talk ukllmswwik",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/flooded-cave/npcs.lua",
+          "sha256": "e53d55bfbf9b774afb78b851c6ba4fb551f9ce90555d4319fde705900bc530d5",
+          "line": 25,
+          "anchor": "define_as = \"UKLLMSWWIK\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/flooded-cave/npcs.lua",
+          "sha256": "e53d55bfbf9b774afb78b851c6ba4fb551f9ce90555d4319fde705900bc530d5",
+          "line": 28,
+          "anchor": "name = \"Ukllmswwik the Wise\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/flooded-cave/npcs.lua",
+          "sha256": "e53d55bfbf9b774afb78b851c6ba4fb551f9ce90555d4319fde705900bc530d5",
+          "line": 77,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_water_ukllmswwik_the_wise.png",
+          "sha256": "d6d9298490449e77cba79c4af3bca1d6b872a3ea8cf02568470554e621344367",
+          "role": "identity",
+          "note": "Native shape (64x64): a blue-grey shark-headed dragon with folded wings and a trident."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/rantha.png",
+          "sha256": "fbe545dd28909b1fbcfa98e80728e26c8c17ab57656d1e342e2443259244ba44",
+          "role": "family",
+          "note": "Shipped Rantha the Worm (pale silver-blue winged dragon coiled round): the ice element and every cold drake must not read as this pale coiled winged dragon."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Ukllmswwik the Wise seen from a steep overhead three-quarter angle: a squat powerful sea-dragon with the head of a shark, a wide toothy mouth with rows of white teeth and small pale eyes, a tall notched dorsal fin along the back, wide finned wings folded like flippers against the flanks, gills on the neck, deep sea-teal and slate blue-grey scales with a cream-white belly and dark blue mottling, four clawed webbed limbs and a heavy finned tail curled round beside him, one clawed hand gripping a golden trident held diagonally across the body with the three tines pointing up-left. Ancient, aquatic and complete.",
+        "contrast": "Dragons of the tokens: Ukllmswwik is the only SHARK-HEADED SEA-TEAL dragon carrying a GOLDEN TRIDENT with a tall dorsal fin (silhouette: fin ridge, shark head, diagonal trident; hue: sea-teal with cream belly and gold; value: mid). The cold drakes are cyan with icicles and no weapon; the shipped Rantha the Worm is a pale silver-blue coiled winged dragon.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. This is a dragon on a small tabletop disc, drawn COMPACT and chunky: wings, tail, neck and head are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no wing tip, tail tip, claw, horn, drip or flame reaches the outer sixth ring band or crosses the disc rim. Do not spread the wings wider than about two thirds of the disc diameter.",
+        "palette": "Deep sea-teal and slate blue-grey scales with lighter aqua highlight planes, cream-white belly, golden trident, white teeth; nothing darker than dark teal-blue except the eyes and mouth interior; the disc stays neutral charcoal with no teal cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Ukllmswwik the Wise, define_as=UKLLMSWWIK, type=dragon/subtype=water, unique=True); details and hashes in evidence/monster-batch-q-20260929/source-contracts.json. no base (dragon/water leaf); unique with define_as UKLLMSWWIK; NPC.lua:33 default-name image (npc/dragon_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip Trident of Tides (equipment, the leaf has no moddable_tile); talents Weapon Combat, Knockback, Ice Storm, Freeze, Ice Claw, Icy Skin, Ice Breath, Lightning Breath, Poison Breath, Draconic Will; resolvers.sustains_at_birth() starts Icy Skin only (temporary max_life/armour/on_melee_hit; Draconic Will is an activated effect with a temporary negative_status_effect_immune): no type/subtype/image/add_mos write. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-q-20260929/source-contracts.json",
+          "sha256": "9e799436c4f23cd9cbf44235e34ab8068160b55d34bcc8f2127a33aebde15dfa"
+        }
+      ]
+    }
+  ]
+}

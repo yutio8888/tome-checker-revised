@@ -1,0 +1,70 @@
+{
+  "asset_id": "cutpurse-v1",
+  "intent": "generate",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: stylized-concept.\nAsset type: one transparent PNG game creature token, square 1024x1024, painted tabletop miniature, readable at 48/64/96 pixels.\nPrimary request: Create CUTPURSE, the lowest novice human thief of Tales of Maj'Eyal. Use image 1 only for camera, painted material, light, disc size and finish; replace the skeleton with a living human. Image 2 is the native cutpurse identity reference: bare head, short dark hair, pale rough shirt, brown light leather, modest short blades.\nSubject: exactly one adult wiry man, bare-headed with short dark tousled hair, pale oatmeal sleeveless rough linen vest over a narrow light-leather jerkin, muted ochre-brown trousers, plain short boots. A small round tan coin purse tied at the left hip. TWO small plain steel daggers, one in each of exactly two hands, held low and spread sideways, clearly distinct from legs. Timid hunched shoulders and a low asymmetric half-crouch with bent knees, narrow torso and wide triangular leg stance. This is the lightest and smallest-built thief, not a heroic fighter. Keep face and neck visible. No hood and no cape.\nComposition: same steep overhead three-quarter camera as image 1, we see the crown, shoulders and boot tops; full figure foreshortened inside centered almost circular disc, never frontal eye level. Disc 82 percent of square width, matching image 1 thin dark charcoal-brown base and subtle physical bronze-grey rim. Head and every blade fully within disc with a clear dark margin to far rim. Figure spans about 65 percent of canvas height. Keep upper-right quadrant of outer disc clear for separate UI, no lifted weapons there.\nStyle and light: matte hand-painted sculpted miniature, broad readable planes, fine restrained paint texture, crisp silhouette, soft upper-left light and subtle grounding shadow only inside disc. Muted pale linen and warm brown palette, medium skin, silver knife highlights. Anatomically coherent two arms, two hands, two legs.\nBackdrop: genuinely transparent alpha outside the disc, clean transparent corners. Preserve native generated alpha.\nAvoid: scene, ground outside disc, grass, rocks, pedestal, ornamental base, black hood, heavy armor, sword, shield, large bag, oversized head, cartoon chibi, faction colors, red or green rings, blood, health bars, rarity, rank, level, text, symbols, selection glow, aura, watermark. Only one finished token.",
+  "references": [
+    "art/monsters-v5/masters/degenerated-skeleton-warrior-v2.png",
+    "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_cutpurse.png"
+  ],
+  "reference_roles": [
+    "style/camera/disc/light reference",
+    "native identity reference"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e1a4-c0f8-7dd3-a4a3-0986fee6a52e/exec-9afa9114-4829-4e11-b36a-511b27991a18.png",
+  "saved_output_path": "art/monsters-v6/masters/cutpurse-v1.png",
+  "preserved_native_alpha": true,
+  "image_processing": "Byte-for-byte original copy; mechanical C downsampling only for review, no artwork editing.",
+  "selection": "static-reviewed-integration-candidate",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "generated_at_utc": "2026-09-27",
+  "sha256": "6e23dcdedd777f589ec2aa7072f004987b34d30b5dc6a0207bc434ea7c82f529",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      39,
+      0,
+      1134,
+      1200
+    ],
+    "visible_alpha_bbox": [
+      123,
+      128,
+      1130,
+      1154
+    ],
+    "transparent_pixels": 758617,
+    "partial_alpha_pixels": 813455,
+    "opaque_pixels": 444,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "review": "浅麻衣裸头、窄身三角腿形、低持双刃，盘内与右上净区通过。",
+  "small_size_review": {
+    "sizes_px": [
+      48,
+      64,
+      96
+    ],
+    "method": "Existing C exporter via build_monster_art.py; all 12 PNGs actually opened using view_image detail=original",
+    "review_result": "pass; see REVIEW.md",
+    "runtime_verified": false
+  }
+}

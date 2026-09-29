@@ -1,0 +1,26 @@
+{
+  "batch": "void-terrain-v1",
+  "selected": [
+    {
+      "asset_id": "space-floating-platform",
+      "master": "masters/space-floating-platform-v1.png",
+      "sha256": "32c8d6ebf1dad2406504c14bf29ee47dd78a7e4e78b2a08ea1d38f02d5222082",
+      "source_call": "art/production/handoffs/void-terrain-v1/space-floating-platform/imagegen-calls/call-1",
+      "visual_review": "accepted at 48/64/96px in REVIEW.md"
+    },
+    {
+      "asset_id": "void-blocked-fracture",
+      "master": "masters/void-blocked-fracture-v1.png",
+      "sha256": "428374c806c59f9c340f1270fe78aa7cf180d4e5826b2f598b10e33fcd105ddf",
+      "source_call": "art/production/handoffs/void-terrain-v1/void-blocked-fracture/imagegen-calls/call-1",
+      "visual_review": "accepted at 48/64/96px in REVIEW.md"
+    },
+    {
+      "asset_id": "void-walkable-platform",
+      "master": "masters/void-walkable-platform-v1.png",
+      "sha256": "56292ff8140efabddf8d0f35f1bb5796cf12cb0734062cf5547bd2d142a5470b",
+      "source_call": "art/production/handoffs/void-terrain-v1/void-walkable-platform/imagegen-calls/call-1",
+      "visual_review": "accepted at 48/64/96px in REVIEW.md"
+    }
+  ]
+}

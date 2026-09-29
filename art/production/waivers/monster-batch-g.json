@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "scope": "monster-batch-g exact-byte base_drift-only waiver for Massok the Dragonslayer; approved by reviewer 2026-09-29 (see art/monster-batch-g/REVIEW.md 'Reviewer decision'). No alpha, geometry, disc_overflow or occupancy waiver: every other check passes.",
+  "assets": [
+    {
+      "id": "massok",
+      "call": "art/production/handoffs/monster-batch-g-3b/massok/imagegen-calls/call-1/call.json",
+      "master_sha256": "dbd11d12db54346651ffece23a8969f7ec6d57bcdfe9d4cd2aad37cf59932e63",
+      "runtime_sha256": "a31830ddd0b689bb434e02dc9a87859af29eb0bc46feff8a1a40ecc36da6aebc",
+      "base_drift": -10.32,
+      "waived_checks": [
+        "base_drift"
+      ],
+      "reason": "Three calls used (the per-asset maximum), so no further attempt was made. Every check except base_drift passes. Masked-body mean luminance 56.2 with a pale bone dragon-skull helm and horns as the dominant value break; on the real gloom and korpul floors at 48px the pale helm and greatsword keep it readable, and silhouette (skull helm, single sword, no shield, no dual weapons) is clearly different from golbug (gold, hammer and shield) and brotoq (dual axes) and from krogar (green, staff, no helm) in art/monster-batch-g/review/orc-color-48-64-96.png. The overrun is 2.32 over the +-8 tolerance, the same range as the batch E and F waivers already approved (-12.21, -15.18, -11.23, -9.40). Reviewer's call: accept (wire under waiver, then add a monster-batch-g.json waiver plus a check_token_style.py trusted-batch entry) or reject. Approved by reviewer 2026-09-29."
+    }
+  ]
+}

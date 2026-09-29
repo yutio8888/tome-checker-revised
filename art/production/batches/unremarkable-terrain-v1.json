@@ -1,0 +1,195 @@
+{
+  "schema": 1,
+  "batch_id": "unremarkable-terrain-v1",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Native source, map seam, rules and 64px native screenshot verified in identity.md.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/unremarkable-20260928/identity.md",
+          "sha256": "ccdb3118b6287c2d48150242f0f278cea813bba15622bd64578f523c3a28eeec"
+        }
+      ],
+      "scope": "unremarkable-cave single static/Roomer composite level only",
+      "asset_id": "cave-floor",
+      "native_name": "CAVEFLOOR floor",
+      "kind": "terrain-floor",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/cave.lua",
+          "sha256": "dbabc36ca919ae93fa4515b065438258a86eec0a4599fdfb40aacc6e3d5caede",
+          "line": 23,
+          "anchor": "define_as = \"CAVEFLOOR\""
+        },
+        {
+          "path": "game/modules/tome/data/maps/zones/unremarkable-cave.lua",
+          "sha256": "63e50d669af3b66ec618e7ee1647fae41162c79f7ceda5b0a38197d1ea13519e",
+          "line": 26,
+          "anchor": "subGenerator{"
+        },
+        {
+          "path": "game/modules/tome/data/zones/unremarkable-cave/zone.lua",
+          "sha256": "1282d9efad366c3473cfce2a5231ece6114aa34adeb85f7243c98991a9205fb7",
+          "line": 24,
+          "anchor": "max_level = 1"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/cave/cave_floor_1_01.png",
+          "sha256": "d20b01194ebe5da0217995c9deaa6cc46e897aa9974b66dc05d5ec570d68b205",
+          "role": "identity",
+          "note": "Native cave material and silhouette"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-sandworm-v1/masters/sand-wall-v1.png",
+          "sha256": "1314fa7b3dca5fa9c82ced2c2c7bf3040b6bb2234d24df71bb0d93a96e76f720",
+          "role": "style",
+          "note": "Reviewed cell-filling tabletop wall language"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Floor and wilderness ladder passable; wall blocks movement, pass_wall=1, digs to CAVEFLOOR.",
+        "sight": "Floor and ladder open; CAVEWALL blocks sight.",
+        "danger": "No native grid hazard; floor rocks/mushrooms are decorative.",
+        "interaction": "Wilderness ladder retains native change_level=1 and change_zone=wilderness; DIG unchanged.",
+        "export": "128px parity pairs, 16 connected N/E/S/W wall masks, one wilderness ladder."
+      },
+      "prompt_fields": {
+        "subject": "Passable rough cave floor, weathered warm ochre and umber stone dust with sparse embedded pebbles and mineral seams, no raised obstacle.",
+        "contrast": "Bright enough in native shader lighting to separate from a dark solid cave wall by at least 30% in the rendered frame; readable at 48/64/96px.",
+        "composition": "Flat overhead opaque seamless square, fully painted to the edges. Calm broad tonal masses; subtle grit only.",
+        "palette": "Warm sienna, ochre, muted earthy gold and charcoal brown.",
+        "mechanics": "Decorative texture only; no movement bonus, path arrows, pits, hazard sign, actor, text or UI."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native source, map seam, rules and 64px native screenshot verified in identity.md.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/unremarkable-20260928/identity.md",
+          "sha256": "ccdb3118b6287c2d48150242f0f278cea813bba15622bd64578f523c3a28eeec"
+        }
+      ],
+      "scope": "unremarkable-cave single static/Roomer composite level only",
+      "asset_id": "cave-wall",
+      "native_name": "CAVEWALL wall",
+      "kind": "terrain-prop",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/cave.lua",
+          "sha256": "dbabc36ca919ae93fa4515b065438258a86eec0a4599fdfb40aacc6e3d5caede",
+          "line": 23,
+          "anchor": "define_as = \"CAVEFLOOR\""
+        },
+        {
+          "path": "game/modules/tome/data/maps/zones/unremarkable-cave.lua",
+          "sha256": "63e50d669af3b66ec618e7ee1647fae41162c79f7ceda5b0a38197d1ea13519e",
+          "line": 26,
+          "anchor": "subGenerator{"
+        },
+        {
+          "path": "game/modules/tome/data/zones/unremarkable-cave/zone.lua",
+          "sha256": "1282d9efad366c3473cfce2a5231ece6114aa34adeb85f7243c98991a9205fb7",
+          "line": 24,
+          "anchor": "max_level = 1"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/cave/cavewall_5_1.png",
+          "sha256": "df8c74fefb4f06ecf017146d68a95c86f955db43b4b74e33c29fc70b1bd845e5",
+          "role": "identity",
+          "note": "Native cave material and silhouette"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-sandworm-v1/masters/sand-wall-v1.png",
+          "sha256": "1314fa7b3dca5fa9c82ced2c2c7bf3040b6bb2234d24df71bb0d93a96e76f720",
+          "role": "style",
+          "note": "Reviewed cell-filling tabletop wall language"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Floor and wilderness ladder passable; wall blocks movement, pass_wall=1, digs to CAVEFLOOR.",
+        "sight": "Floor and ladder open; CAVEWALL blocks sight.",
+        "danger": "No native grid hazard; floor rocks/mushrooms are decorative.",
+        "interaction": "Wilderness ladder retains native change_level=1 and change_zone=wilderness; DIG unchanged.",
+        "export": "128px parity pairs, 16 connected N/E/S/W wall masks, one wilderness ladder."
+      },
+      "prompt_fields": {
+        "subject": "Massive contiguous cave rock, compact ochre-brown stone with broad weathered surfaces, subtle small fissures and subdued mineral mottling. Solid movement- and sight-blocking mass.",
+        "contrast": "Clearly darker than the floor in native shader lighting; cell-filling and readable at 48/64/96px. Interior texture calm, with no repeating cliff stripes.",
+        "composition": "Single near-square wall block with true transparent outer corners, overhead top and a modest front-facing cliff face on the lower edge; no isolated boulders or stalagmites.",
+        "palette": "Dark umber, muted ochre, sienna, a few warm mineral highlights.",
+        "mechanics": "Blocking wall only; no door, route, hazard icon, actor, text or UI."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native source, map seam, rules and 64px native screenshot verified in identity.md.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/unremarkable-20260928/identity.md",
+          "sha256": "ccdb3118b6287c2d48150242f0f278cea813bba15622bd64578f523c3a28eeec"
+        }
+      ],
+      "scope": "unremarkable-cave single static/Roomer composite level only",
+      "asset_id": "cave-ladder",
+      "native_name": "CAVE_LADDER_UP_WILDERNESS exit",
+      "kind": "terrain-prop",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/cave.lua",
+          "sha256": "dbabc36ca919ae93fa4515b065438258a86eec0a4599fdfb40aacc6e3d5caede",
+          "line": 23,
+          "anchor": "define_as = \"CAVEFLOOR\""
+        },
+        {
+          "path": "game/modules/tome/data/maps/zones/unremarkable-cave.lua",
+          "sha256": "63e50d669af3b66ec618e7ee1647fae41162c79f7ceda5b0a38197d1ea13519e",
+          "line": 26,
+          "anchor": "subGenerator{"
+        },
+        {
+          "path": "game/modules/tome/data/zones/unremarkable-cave/zone.lua",
+          "sha256": "1282d9efad366c3473cfce2a5231ece6114aa34adeb85f7243c98991a9205fb7",
+          "line": 24,
+          "anchor": "max_level = 1"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/cave/cave_stairs_up_2_01.png",
+          "sha256": "6722bf7612718feda9c358cd6e96f8980e0d734ab39da4443537d5da8558c339",
+          "role": "identity",
+          "note": "Native cave material and silhouette"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-sandworm-v1/masters/sand-wall-v1.png",
+          "sha256": "1314fa7b3dca5fa9c82ced2c2c7bf3040b6bb2234d24df71bb0d93a96e76f720",
+          "role": "style",
+          "note": "Reviewed cell-filling tabletop wall language"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Floor and wilderness ladder passable; wall blocks movement, pass_wall=1, digs to CAVEFLOOR.",
+        "sight": "Floor and ladder open; CAVEWALL blocks sight.",
+        "danger": "No native grid hazard; floor rocks/mushrooms are decorative.",
+        "interaction": "Wilderness ladder retains native change_level=1 and change_zone=wilderness; DIG unchanged.",
+        "export": "128px parity pairs, 16 connected N/E/S/W wall masks, one wilderness ladder."
+      },
+      "prompt_fields": {
+        "subject": "Sturdy rough cave stairway rising toward daylight, stone rim and shallow carved steps, unmistakable surface exit.",
+        "contrast": "Clearly readable at 48/64/96px on warm cave floor, with a restrained daylight accent.",
+        "composition": "Centered overhead three-quarter tabletop cutout fully within the canvas, true transparent corners and no painted floor.",
+        "palette": "Weathered umber and sandstone, subtle golden daylight near top steps.",
+        "mechanics": "Wilderness exit only; no arrow, words, actor, hazard symbol or UI."
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "degenerated-skeleton-warrior",
+    "name": "退化骷髅战士",
+    "entity": "degenerated skeleton warrior",
+    "group": "undead",
+    "trait": "单臂、偏斜骨架及低持斜向大剑。",
+    "original": "npc/degenerated_skeleton_warrior.png",
+    "source": "game/modules/tome/data/general/npcs/skeleton.lua",
+    "source_line": 59,
+    "rank": 2,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "degenerated-skeleton-archer",
+    "name": "退化骷髅弓手",
+    "entity": "degenerated skeleton archer",
+    "group": "undead",
+    "trait": "侧向弓弧、单手持弓，缺手腕刻槽拉弦。",
+    "original": "npc/undead_skeleton_degenerated_skeleton_archer.png",
+    "source": "game/modules/tome/data/general/npcs/skeleton.lua",
+    "source_line": 69,
+    "rank": 2,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "skeleton-mage",
+    "name": "骷髅法师",
+    "entity": "skeleton mage",
+    "group": "undead",
+    "trait": "暗披布、竖杖与向侧前伸出的施法手。",
+    "original": "npc/skeleton_mage.png",
+    "source": "game/modules/tome/data/general/npcs/skeleton.lua",
+    "source_line": 83,
+    "rank": 2,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "grey-mold",
+    "name": "灰霉菌",
+    "entity": "grey mold",
+    "group": "shapes",
+    "trait": "低矮灰色分叶菌落、清楚暗缝和演员圆底盘。",
+    "original": "npc/immovable_molds_grey_mold.png",
+    "source": "game/modules/tome/data/general/npcs/molds.lua",
+    "source_line": 47,
+    "rank": 1,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  }
+]

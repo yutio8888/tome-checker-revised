@@ -1,0 +1,196 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-c-1",
+  "assets": [
+    {
+      "asset_id": "skeleton-master-archer",
+      "native_name": "skeleton master archer",
+      "scope": "general skeleton pool (Dreadfell, Unremarkable Cave seen live); exact identity only; redesign after batch-B visual rejection",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 176,
+          "anchor": "skeleton master archer"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/player-tokens-v1/masters/skeleton-v1.png",
+          "sha256": "9619804d8a7b92fa15b7ba6d690b8e5ff8f2b0c38bea7cbc9e61ca20b31ecea6",
+          "role": "style",
+          "note": "Approved neutral skeleton disc, camera and upright frontal stance; copy only the disc, camera, lighting and finish, not its rags."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/master_skeleton_archer.png",
+          "sha256": "5e824e9b0019c2f28eda1b49b6d7597ce18ba16e64b4450bfae26fcbbef89077",
+          "role": "identity",
+          "note": "Native identity: skeleton in black armour with gold trim, helmet, armoured kilt and greaves, wide planted stance at full draw."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A skeleton master archer clad in black lacquered plate armour with bright gold trim: a black close helmet with a gold brow band and a short gold crest over the ivory skull face, broad black pauldrons edged in gold, black cuirass, a flared black armoured tasset skirt with gold filigree, black greaves with gold knee cops. Only the skull face, forearms and bone hands show ivory. Wide planted stance, facing the viewer, drawing a large dark recurve bow with gold-capped tips at full draw, arrow nocked; a black quiver with gold bands on the back.",
+        "contrast": "Must read as a DARK armoured figure, not a bone-white skeleton: most of the body area is black plate broken by crisp gold edges, the opposite value of the pale skeleton archer and degenerated archer. Bulky helmet crest, wide pauldrons and flared armoured skirt change the silhouette from a thin bony stick figure to a broad armoured one. Give the black plates a cool light-grey rim light along their upper-left edges and keep gold trim broad so the figure separates from the charcoal disc at 48px.",
+        "composition": "One complete armoured skeleton centered on one circular disc, steep overhead three-quarter view; bow, arrow, quiver and limbs all inside the inner four-fifths of the disc radius; clear bare outer band. No rank marks.",
+        "palette": "Black lacquered steel with warm gold trim, ivory skull and hands, dark wood bow with gold tips; restrained copper-grey neutral bevel and charcoal disc at the style reference lightness; no colored faction aura."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Explicit native image and undead/skeleton type verified in source; natural spawns observed live as native (no-art) in evidence/monster-live-20260929. Art-only task, no fixture.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-b-20260929/source-contracts.json",
+          "sha256": "681892cf2e75c3370200bb66b5af1a2c49aee684d9a855ecfc2c68f2a98af5e9"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-live-20260929/README.md",
+          "sha256": "c819c53ea8e08ab28191b6239b35dd22a027c7a3363f4a31ae5b733adb257b7b"
+        }
+      ]
+    },
+    {
+      "asset_id": "skeleton-archer",
+      "native_name": "skeleton archer",
+      "scope": "general skeleton pool (Dreadfell, Halfling Ruins, Unremarkable Cave seen live); exact identity only",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 115,
+          "anchor": "skeleton archer"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/player-tokens-v1/masters/skeleton-v1.png",
+          "sha256": "9619804d8a7b92fa15b7ba6d690b8e5ff8f2b0c38bea7cbc9e61ca20b31ecea6",
+          "role": "style",
+          "note": "Approved neutral skeleton disc, camera and upright frontal stance; copy only disc, camera, lighting, finish and the upright posture, not its rags."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/skeleton_archer.png",
+          "sha256": "0f097b6d1ef0b167bb13c9137efe158ed7462c7db1bb435d34a7c846043c0080",
+          "role": "identity",
+          "note": "Native identity: clean pale bones, upright symmetric wide A-frame legs, golden recurve bow at full draw with arms straight out."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A clean, intact skeleton archer standing fully upright and facing the viewer, legs straight and spread wide in a symmetric A-frame, spine vertical, drawing a large polished golden-brass recurve bow at full draw with the bow arm locked straight out to one side and the draw elbow raised level on the other, so both arms form one straight horizontal line across the shoulders. Pristine smooth bone-white bones, no rot, no rags beyond a thin belt, small quiver at the hip.",
+        "contrast": "Upright T-and-A silhouette: vertical spine, straight horizontal arm line and wide straight legs, unlike the degenerated skeleton archer's hunched, crouched side-on sneak and unlike the black-armoured master archer. Brightest clean white bone of the family plus a gold bow as the second cue.",
+        "composition": "One complete skeleton centered on one circular disc, steep overhead three-quarter view; bow, arrow and limbs all inside the inner four-fifths of the disc radius; clear bare outer band. No rank marks.",
+        "palette": "Clean near-white bone with soft grey shading, polished gold-brass bow, thin brown leather belt and quiver; restrained copper-grey neutral bevel and charcoal disc at the style reference lightness; no colored faction aura."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Explicit native image and undead/skeleton type verified in source; batch-B token rendered live in three zones (evidence/monster-live-20260929). Art-only task, no fixture.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-b-20260929/source-contracts.json",
+          "sha256": "681892cf2e75c3370200bb66b5af1a2c49aee684d9a855ecfc2c68f2a98af5e9"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-live-20260929/README.md",
+          "sha256": "c819c53ea8e08ab28191b6239b35dd22a027c7a3363f4a31ae5b733adb257b7b"
+        }
+      ],
+      "refinement": {
+        "supersedes": "skeleton-archer",
+        "previous_batch": "monster-batch-b-2",
+        "design_change_reason": "Not a retry of the batch-B brief. That brief used the degenerated skeleton archer master as its style reference and the model copied its crouched side-on striding pose, so the live family lineup showed skeleton archer and degenerated skeleton archer as the same drawing at 48px. The native sprites differ by posture: the skeleton archer stands upright with straight wide A-frame legs and a gold bow, the degenerated archer is hunched and stained. This brief removes the degenerated archer from the references, anchors the upright frontal posture on the approved player skeleton disc, and makes the vertical spine, straight arm line, gold bow and brightest clean bone the required separation.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/evidence/monster-live-20260929/README.md",
+            "sha256": "c819c53ea8e08ab28191b6239b35dd22a027c7a3363f4a31ae5b733adb257b7b"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-b-2/skeleton-archer/receipts/attempt-1.json",
+            "sha256": "eba4f13d9c3db56dcea6dc57f6aec7feea027f852d328ac4b52bda841a192a58"
+          }
+        ]
+      }
+    },
+    {
+      "asset_id": "horned-horror",
+      "native_name": "Horned Horror",
+      "scope": "maze boss (natural guardian, Maze COLLAPSED L4 seen live); native-tall add_mos contract unchanged",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/maze/npcs.lua",
+          "sha256": "f07231a5244764f2896978554836c032d56a19d06a56dc7c8528181e5a813c71",
+          "line": 50,
+          "anchor": "Horned Horror"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v1/masters/brown-bear-v2.png",
+          "sha256": "63a68f9102fd938818288f4989ff09755e73f9dc88e045bb53e82e6012a51c10",
+          "role": "style",
+          "note": "Approved neutral disc at baseline lightness, camera and lighting; do not copy the bear."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_horner_horror.png",
+          "sha256": "86e53e1cf65fe20d2108ee0b89c304a90a0a11b7cc35b3970ca1f4092c8de923",
+          "role": "identity",
+          "note": "Native identity: horned brute with a mass of violet-magenta tentacles rising from its back and cyan lightning crackling around its gauntleted fists (Storm Bringer Gauntlets)."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "The Horned Horror, a minotaur twisted into an eldritch horror: hunched bull-headed brute with two ivory horns, head lowered, NO weapon; a fan of five or six thick violet-magenta tentacles rising and curling up from its back and shoulders into a wide crescent crown behind the head; both arms held low and out from the body ending in big clenched fists in pale steel gauntlets wrapped by tight crackling cyan-white lightning.",
+        "contrast": "Must not read as the Minotaur of the Labyrinth (tan upright bull holding an axe): wide tentacle crescent above the shoulders, weapon-free glowing fists and a hunched lowered head give a different silhouette, and the cool violet-magenta and cyan palette contrasts with the minotaur's warm tan. The figure must be LIGHT enough to read on the dark disc: broad pale lit planes on the shoulders, chest, horns and tentacle undersides, no large near-black areas.",
+        "composition": "One compact complete creature centered on one circular disc, steep overhead three-quarter view; tentacle tips, horns and fists all inside the inner four-fifths of the disc radius; clear bare outer band. The lightning stays tight around the fists and casts no glow onto the disc. No rank marks.",
+        "palette": "Dusky mauve-grey corrupted hide with light ash-lilac highlights, ivory horns, violet-magenta tentacles with pale pink undersides, pale steel gauntlets, small cyan-white lightning; restrained copper-grey neutral bevel and charcoal disc at the style reference lightness; no aura, no light spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity and native-tall display contract inspected; batch-B token resolved live as horned-horror in Maze COLLAPSED L4. Art-only task, no fixture.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-b-20260929/source-contracts.json",
+          "sha256": "681892cf2e75c3370200bb66b5af1a2c49aee684d9a855ecfc2c68f2a98af5e9"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-live-20260929/README.md",
+          "sha256": "c819c53ea8e08ab28191b6239b35dd22a027c7a3363f4a31ae5b733adb257b7b"
+        }
+      ],
+      "refinement": {
+        "supersedes": "horned-horror",
+        "previous_batch": "monster-batch-b-1",
+        "design_change_reason": "Not a retry of the batch-B brief. That brief asked for a dark wine-brown minotaur with exactly two short tentacles kept close over the shoulders, which produced a dark horned bull brute: live review found it too dark on its dark base and, at 48px, the same horned-bull silhouette as the Minotaur of the Labyrinth. The native sprite's identity is a large mass of violet tentacles plus cyan storm lightning on the fists. This brief changes direction to a lighter mauve-grey body, a wide crescent of five or six tentacles as the dominant silhouette, weapon-free lightning fists and a cool palette, and switches the style anchor to a baseline-neutral disc.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/evidence/monster-live-20260929/README.md",
+            "sha256": "c819c53ea8e08ab28191b6239b35dd22a027c7a3363f4a31ae5b733adb257b7b"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-b/REVIEW.md",
+            "sha256": "fcc5b8ca574124bb172d5ee0d3a3e7abd4be25051b8817698d72b5a59ee744aa"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-b-1/horned-horror/imagegen-calls/call-2/call.json",
+            "sha256": "0a042d2cbb142e0e0e4c30f63cd9446ef678a36cb0acd39ff9774b4493e0af57"
+          }
+        ]
+      }
+    }
+  ]
+}

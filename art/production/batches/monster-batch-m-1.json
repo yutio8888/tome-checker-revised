@@ -1,0 +1,168 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-m-1",
+  "assets": [
+    {
+      "asset_id": "losgoroth",
+      "native_name": "losgoroth",
+      "scope": "abashed-expanse (load with rarity(1)), meteor event (loadList of losgoroth.lua) and the general elemental spawn tables (elemental/void, default-name image, non-unique, no define_as). town-point-zero \"monstrous losgoroth\" (define_as MONSTROUS_LOSGOROTH, explicit image= npc/elemental_void_losgoroth.png) is another name and stays native",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/losgoroth.lua",
+          "sha256": "f7b700dea211da118df773e2b20539cc34c22715256ad7356560cbe08a832f9e",
+          "line": 60,
+          "anchor": "name = \"losgoroth\", color=colors.GREY"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_void_losgoroth.png",
+          "sha256": "91ffa32afcf7a0b18c2e72be9cee24e365060631360b5074e26bfddac40559d5",
+          "role": "identity",
+          "note": "Native shape: a violet-magenta squat translucent mass with four long curved tentacles arching out and down around a bright core."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/shivgoroth.png",
+          "sha256": "256b49c0369897fb68cbe9f171a5fc2c25d673f9d1b6a81c3509f027bf49d1ec",
+          "role": "family",
+          "note": "Shipped shivgoroth (crystalline ice elemental, hunched): the losgoroth is a soft translucent violet void creature with arched tentacles, no crystals."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A void elemental seen from a steep overhead three-quarter angle: a squat translucent mass of mid-light orchid-violet and lilac energy with a bright pale-lilac glowing core at the centre, and four thick curling tentacles that arch outward and then downward around the body like the legs of a spider crab, each tapering to a soft point, with fine bright white-violet motes drifting inside the body. Ethereal, alien and complete.",
+        "contrast": "Void and temporal elementals built together: the losgoroth is the violet one with four arched tentacles radiating from a bright core (silhouette: radial curved legs around a round centre; hue: orchid violet; value: mid-light). The manaworm is a single coiled lemon-yellow serpent with pincers, and the telugoroth is a round swirl of gold, teal and violet ribbons; the shipped shivgoroth is a blue-white crystalline giant.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid-light orchid-violet and lilac translucent body with lighter pale-lilac tentacle edges and a bright white-violet core; nothing darker than mid tone; no glow, light cast or spill onto the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=losgoroth, define_as=None, type=elemental/subtype=void, unique=False); details and hashes in evidence/monster-batch-m-20260929/source-contracts.json. base BASE_NPC_LOSGOROTH (elemental/void, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives elemental_void_losgoroth.png; talent Void Blast is not a sustain; no sustains_at_birth; the CORRUPT_LOSGOROTH_FORM timed effect (special-artifacts.lua:100) writes replace_display on whoever drinks it and is never applied at birth. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-m-20260929/source-contracts.json",
+          "sha256": "e1e1ce2bb74930aee311c48add949ac79706f0b7cf006cd96c4a2efee123d992"
+        }
+      ]
+    },
+    {
+      "asset_id": "manaworm",
+      "native_name": "manaworm",
+      "scope": "abashed-expanse and other losgoroth.lua loaders (elemental/void, default-name image, non-unique, no define_as; a mana-draining latch worm)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/losgoroth.lua",
+          "sha256": "f7b700dea211da118df773e2b20539cc34c22715256ad7356560cbe08a832f9e",
+          "line": 73,
+          "anchor": "name = \"manaworm\", color=colors.BLUE"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_void_manaworm.png",
+          "sha256": "694902ed76ecbb032921df2981a91c262745d47675e6da5822fdb50780c8f497",
+          "role": "identity",
+          "note": "Native shape: a glowing lemon-yellow serpentine worm coiled on itself, head raised with two curved pincer mandibles and a curling tail."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/naga-nereid.png",
+          "sha256": "bf5a39fbbe1572a185bf37cdde95b1356ff2e419e7b8f7c4e600385a1108e5fc",
+          "role": "family",
+          "note": "Shipped naga nereid (pale gold-tailed woman): the manaworm is a bare glowing yellow worm with pincers, no human torso."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A manaworm seen from a steep overhead three-quarter angle: a thick glowing lemon-yellow serpentine worm with faint segment bands, coiled in a clear open spiral on itself, the head raised at the centre with two curved pale-gold pincer mandibles and a few short trailing feelers, brighter cream-yellow highlights along the upper-left of the coils, a slender curling tail tip. Alien, hungry and complete.",
+        "contrast": "Void and temporal elementals built together: the manaworm is the single coiled lemon-yellow serpent with pincers (silhouette: open spiral of one thick coil with a raised forked head; hue: lemon yellow; value: light). The losgoroth is a violet mass with four arched tentacles and the telugoroth is a round multicolour swirl.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Bright lemon-yellow body with cream-yellow highlights and pale-gold pincers, faint ochre segment bands; nothing darker than mid tone except the band seams; no glow or light cast onto the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=manaworm, define_as=None, type=elemental/subtype=void, unique=False); details and hashes in evidence/monster-batch-m-20260929/source-contracts.json. base BASE_NPC_LOSGOROTH (elemental/void, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives elemental_void_manaworm.png; no talents, no sustains_at_birth; combat damtype MANAWORM does not touch body fields. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-m-20260929/source-contracts.json",
+          "sha256": "e1e1ce2bb74930aee311c48add949ac79706f0b7cf006cd96c4a2efee123d992"
+        }
+      ]
+    },
+    {
+      "asset_id": "telugoroth",
+      "native_name": "telugoroth",
+      "scope": "temporal-rift and paradox-plane (elemental/temporal, default-name image, non-unique, no define_as, no nice_tile; the greater/ultimate telugoroth have tall nice_tile bodies and stay native)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/telugoroth.lua",
+          "sha256": "fcf2030c5402a281b547960dab5baf9e7e5eb2aa3a6c868deec51cb8bd36c263",
+          "line": 102,
+          "anchor": "name = \"telugoroth\", color=colors.KHAKI"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_temporal_telugoroth.png",
+          "sha256": "277d43f4438899ddfb8b81b1e57996c3860e982d7f9e543427ebcc7cd39a4211",
+          "role": "identity",
+          "note": "Native shape: a round blurred swirl of overlapping translucent ribbons in gold, teal and violet around a paler centre."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/shivgoroth.png",
+          "sha256": "256b49c0369897fb68cbe9f171a5fc2c25d673f9d1b6a81c3509f027bf49d1ec",
+          "role": "family",
+          "note": "Shipped shivgoroth (solid blue crystal giant): the telugoroth has no solid body, only overlapping translucent ribbons."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A temporal elemental seen from a steep overhead three-quarter angle: a roughly round shimmering mass made of many overlapping translucent ribbons of khaki-gold, teal and soft violet swirling in a slow spiral around a bright cream-white core, thin curved time-arcs echoing through the ribbons like several ghost copies of the same shape, soft feathered outer edges, no limbs and no face. Shimmering, unstable and complete.",
+        "contrast": "Void and temporal elementals built together: the telugoroth is the round multicolour ribbon swirl with a pale core (silhouette: compact round spiral, no limbs; hue: gold, teal and violet together; value: mid-light). The losgoroth is a violet tentacled mass and the manaworm a coiled yellow serpent.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Mid-light khaki-gold, teal and soft violet ribbons over a bright cream-white core; nothing darker than mid tone; no glow or light cast onto the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=telugoroth, define_as=None, type=elemental/subtype=temporal, unique=False); details and hashes in evidence/monster-batch-m-20260929/source-contracts.json. base BASE_NPC_TELUGOROTH (elemental/temporal, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives elemental_temporal_telugoroth.png (64x64); the leaf carries only Turn Back the Clock (not a sustain) and no sustains_at_birth; greater/ultimate telugoroth are separate names with tall bodies. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-m-20260929/source-contracts.json",
+          "sha256": "e1e1ce2bb74930aee311c48add949ac79706f0b7cf006cd96c4a2efee123d992"
+        }
+      ]
+    }
+  ]
+}

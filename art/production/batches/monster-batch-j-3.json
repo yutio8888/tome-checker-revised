@@ -1,0 +1,186 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-j-3",
+  "assets": [
+    {
+      "asset_id": "grand-corruptor",
+      "native_name": "Grand Corruptor",
+      "scope": "mark-spellblaze guaranteed guardian on the last-level static map (humanoid/shalore unique, default-name image); town-zigur defines a second, same-named Grand Corruptor (unique=\"Grand Corruptor Zigur\", same define_as, same default image)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/mark-spellblaze/npcs.lua",
+          "sha256": "339951c47a93abdf40cfc24e9f2211e9cbd380e97cffed21f869623fba972043",
+          "line": 30,
+          "anchor": "define_as = \"GRAND_CORRUPTOR\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/mark-spellblaze/npcs.lua",
+          "sha256": "339951c47a93abdf40cfc24e9f2211e9cbd380e97cffed21f869623fba972043",
+          "line": 32,
+          "anchor": "name = \"Grand Corruptor\", color=colors.VIOLET, unique = true"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_shalore_grand_corruptor.png",
+          "sha256": "5cc0c60ac024d8d184dc3b6ae448391036974aaa2b5d7d9513bea38af7cfface",
+          "role": "identity",
+          "note": "Native shape: a pale elf in a horned indigo-black cowl and dark blue robe with a crimson-pink sigil sash, holding a tall dark staff."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/rhaloren-inquisitor.png",
+          "sha256": "4b990a41aad89522796f47e16c9b5c78507aa14e05f5446d280d50fd08541132",
+          "role": "family",
+          "note": "Shipped Rhaloren Inquisitor (armoured elf knight with a sword): the Grand Corruptor is a robed staff caster in a horned cowl, no armour, no sword."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A gaunt pale elven blood-mage: a tall horned cowl with two curved horn tips over a pale narrow face with long pointed ears, a long sapphire-indigo robe with wide sleeves and lighter steel-blue fold planes, a bright crimson-magenta sigil sash and bright crimson trim, pale hands holding a tall dark staff topped with a glowing blood-red orb. Upright imposing stance seen from a steep overhead three-quarter angle.",
+        "contrast": "Robed casters: necromancer (bald human, slate-violet robe), Kryl-Feijan acolyte (bare silver hair, mauve robe), Harno (hooded blue-grey), Fillarel (gold robe), Celia (pale gown), Urkis (blue lightning). Rhaloren Inquisitor is an armoured knight. The Grand Corruptor is the only one in a horned indigo cowl with a crimson sash and a red-orb staff (silhouette: two horn tips and a tall staff; hue: sapphire-indigo plus crimson).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Sapphire-indigo robe lifted with light steel-blue fold planes, bright crimson-magenta sash and trim, pale face and hands as the value break, dark-brown staff with a glowing red orb; the robe must never be near-black. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Grand Corruptor, define_as=GRAND_CORRUPTOR, type=humanoid/subtype=shalore, unique=True); details and hashes in evidence/monster-batch-j-20260929/source-contracts.json. base BASE_NPC_ELVEN_CASTER (humanoid/shalore, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile; NPC.lua:33 gives humanoid_shalore_grand_corruptor.png; Actor tint (native colour modulation) does not change identity or display structure. town-zigur/npcs.lua:28 defines the same name, define_as and image (unique=\"Grand Corruptor Zigur\", rank 3.5): it is the same character design, so the exact entry also serves it (documented, tested). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-j-20260929/source-contracts.json",
+          "sha256": "f3b0d7b9e65b2c18c6416b37aae96e1dee28c95e6f4f57ed619039699ef6e83b"
+        }
+      ]
+    },
+    {
+      "asset_id": "assassin-lord",
+      "native_name": "Assassin Lord",
+      "scope": "thieves-tunnels quest boss on the level-2 static map (humanoid/human unique, default-name image, cant_be_moved)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/thieves-tunnels/npcs.lua",
+          "sha256": "f49a2df26aa12c69e90b3c70ddfb9b28fb6899afc384ca2de42a9f5a5c3a68cf",
+          "line": 24,
+          "anchor": "define_as = \"ASSASSIN_LORD\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/thieves-tunnels/npcs.lua",
+          "sha256": "f49a2df26aa12c69e90b3c70ddfb9b28fb6899afc384ca2de42a9f5a5c3a68cf",
+          "line": 27,
+          "anchor": "name = \"Assassin Lord\", unique = true"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_assassin_lord.png",
+          "sha256": "d435c7adab8658846c5502a7f2d988140d087fdd5ca19ada70e4a3fabedbd86d",
+          "role": "identity",
+          "note": "Native shape: a stocky dark-haired man in a moss-green fur-collared mantle over a patterned tan tabard, yellow sleeves and red trousers, a dagger in each raised hand."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/bandit.png",
+          "sha256": "c070e17287889e479e5cd6771283ffaf97eb2dc25e5c0f6660f5b39dd3043405",
+          "role": "family",
+          "note": "Shipped bandit (bare-chested, two knives low): the Assassin Lord is fully dressed in a green mantle, red trousers and gold sleeves."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A stocky broad-shouldered human assassin in a lunging crouch: dark tousled hair and a hard face, a moss-olive fur-collared mantle over a patterned tan tabard, golden-yellow sleeves, crimson trousers and brown boots, a long dagger in each hand with faint green poison on the blades, one blade raised and one pointing forward. Menacing, compact, complete.",
+        "contrast": "Human dagger fighters: cutpurse (white vest), rogue (dark blue), thief (brown hooded), bandit (bare-chested), Harno (blue-grey hood), Subject Z (stiff upright, cream tunic). The Assassin Lord is the bulky one in an olive fur-collared mantle with crimson trousers and gold sleeves in a lunge (silhouette: wide mantle shoulders, forward lunge; hue: olive, gold and crimson).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Moss-olive mantle with a pale fur collar, tan patterned tabard, golden-yellow sleeves, crimson trousers, brown boots, steel blades with a hint of green poison; nothing darker than mid tone except the hair. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Assassin Lord, define_as=ASSASSIN_LORD, type=humanoid/subtype=human, unique=True); details and hashes in evidence/monster-batch-j-20260929/source-contracts.json. standalone entity (no base), no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint; NPC.lua:33 gives humanoid_human_assassin_lord.png; Actor tint (native colour modulation) does not change identity or display structure. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-j-20260929/source-contracts.json",
+          "sha256": "f3b0d7b9e65b2c18c6416b37aae96e1dee28c95e6f4f57ed619039699ef6e83b"
+        }
+      ]
+    },
+    {
+      "asset_id": "ben-cruthdar-abomination",
+      "native_name": "Ben Cruthdar, the Abomination",
+      "scope": "temporal-rift guaranteed guardian, first entry to level 2 (humanoid/temporal unique, explicit image= reusing the sprite of Ben Cruthdar, the Cursed of town-lumberjack-village)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/temporal-rift/npcs.lua",
+          "sha256": "f0f18f389196cc8fa4bf8f22988e9eed21547953297738c49f8bb4823899a993",
+          "line": 25,
+          "anchor": "define_as = \"BEN_CRUTHDAR_ABOMINATION\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/temporal-rift/npcs.lua",
+          "sha256": "f0f18f389196cc8fa4bf8f22988e9eed21547953297738c49f8bb4823899a993",
+          "line": 27,
+          "anchor": "image = \"npc/humanoid_human_ben_cruthdar__the_cursed.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_ben_cruthdar__the_cursed.png",
+          "sha256": "ac786de0eebd1b55f0a60458c3e8d88f06cde9c46c395563fce510a7388cc99c",
+          "role": "identity",
+          "note": "Native portrait (shared with Ben Cruthdar, the Cursed): a hulking pale bald madman in brown leather rags with a huge two-headed battleaxe."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/krogar.png",
+          "sha256": "efa3e73b8f761fa8e7b80bf45290ed1d35f7f71747d576a66614abe0a3a44d92",
+          "role": "family",
+          "note": "Shipped Krogar (armoured green orc with a club): Ben is a pale human abomination in rags, twisted by temporal energy, with a battleaxe."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A hulking hunched pale human madman twisted by time: bald head, gaunt crazed face with wide pale eyes, bare grey-white skin crossed by thin glowing cyan temporal cracks, ragged brown leather straps and tattered rags, one enormous shoulder and arm, gripping a huge double-bladed steel battleaxe across his body, with a faint translucent cyan afterimage of the axe and arm slightly offset as if phasing out of time. Compact and complete.",
+        "contrast": "Human/orc brutes: bandit (bare-chested, knives), krogar and Massok (green orcs), Norgan (dwarf), Shax and Bill (trolls), the abomination (pink flesh spire). Ben is the only pale bald hunched human with a huge battleaxe and cyan temporal cracks (silhouette: hunched with a big axe across the body; hue: grey-white skin, brown rags, cyan cracks).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Pale grey-white skin as the value break, mid brown leather and rags lifted with lighter tan planes, steel axe blades, thin cyan temporal cracks and a faint cyan afterimage; nothing darker than mid tone. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Ben Cruthdar, the Abomination, define_as=BEN_CRUTHDAR_ABOMINATION, type=humanoid/subtype=temporal, unique=True); details and hashes in evidence/monster-batch-j-20260929/source-contracts.json. explicit image= npc/humanoid_human_ben_cruthdar__the_cursed.png, standalone entity, no nice_tile/add_mos/shader/anim/moddable_tile/tint; the same PNG belongs natively to \"Ben Cruthdar, the Cursed\" (town-lumberjack-village, other name/type), which stays native because the catalog is keyed by exact name and type. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-j-20260929/source-contracts.json",
+          "sha256": "f3b0d7b9e65b2c18c6416b37aae96e1dee28c95e6f4f57ed619039699ef6e83b"
+        }
+      ]
+    }
+  ]
+}

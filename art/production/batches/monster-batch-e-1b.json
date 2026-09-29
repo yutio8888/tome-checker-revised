@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-e-1b",
+  "assets": [
+    {
+      "asset_id": "lady-zoisla",
+      "native_name": "Lady Zoisla the Tidebringer",
+      "scope": "slazish-fen zone-finale boss; exact identity only, no rarity field, no live fixture. Third attempt via a fresh handoff (monster-batch-e-1b) after monster-batch-e-1's 2-call budget was exhausted on disc_overflow + base_drift (see receipts and call.json in art/production/handoffs/monster-batch-e-1/lady-zoisla/).",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/slazish-fen/npcs.lua",
+          "sha256": "59faab1fda3ad11fc2bca557f3152df86cad9dbe1bbce63d69d5c7828b99a4a5",
+          "line": 118,
+          "anchor": "name = \"Lady Zoisla the Tidebringer\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_naga_lady_zoisla_the_tidebringer.png",
+          "sha256": "280e7ff79642e3cfaf7c581ac762f86b7a20175bc4b15d879c6bc362ac34c896",
+          "role": "identity",
+          "note": "Native species shape and anatomy; use tabletop style reference for camera and base."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A regal naga sorceress: humanoid torso rising from a long coiled serpent tail, dark hair falling past bare shoulders, one hand holding a barbed trident-spear, the other gripping a carved wooden staff, both weapons angled inward and held no taller than head height rather than raised skyward. Torso upright and confident, tail coiled into a tight, rounded, stable knot directly beneath her rather than sprawled wide.",
+        "contrast": "This is a new humanoid/naga family with no existing catalog member, so no in-family collision; the design goal is a silhouette no other current humanoid or reptile token shares -- the coiled serpent tail base under an upright human torso is the primary cue, reinforced by twin weapons held close to the body on either side.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Compact-pose correction (measured twice on this exact identity): two earlier passes both bled past the disc edge (max opaque radius 0.969 and 0.947 against a 0.867 limit) because the trident and staff were held fully upright, nearly as tall as the canvas, with tips reaching the very top of the disc, and the coiled tail spread wide left-right near the bottom edge. This pass: hold both the trident and the staff angled inward and no taller than the top of her head plus a small margin -- crossed slightly in front of the body rather than raised straight up -- and coil the tail into a tighter, rounder knot centred under the torso rather than spreading corner to corner. Leave a clearly visible bare disc margin on all four sides, the same width as the style reference's margin around Prox. Base-plate discipline: the first pass measured base_drift -9.23 after an \"8 units darker\" request (close to accurate, slightly over); the second (edit) pass asked to brighten back by 9 units and overshot to +52.61 (a much larger swing than requested, consistent with edit passes over-correcting). This is a fresh generation, not an edit: render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read, a much smaller and more conservative undershoot than earlier attempts. Do not darken the creature itself to compensate. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere.",
+        "palette": "Sun-weathered olive-tan skin, deep violet-black hair, warm gold-red serpent scales fading to pale cream on the coil underside, dull iron trident head, aged driftwood staff; dry neutral charcoal disc with restrained copper-grey bevel, no water pooling on the base."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity, type/subtype, define_as, unique flag and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source (matches CONTRACTS-B5-B7-20260929.md §2 and evidence/monster-batch-e-20260929/source-contracts.json). Third-attempt fresh generation after monster-batch-e-1's 2-call budget was exhausted; not a refinement of a shipped identity (lady-zoisla was never added to the catalog), so no refinement declaration applies.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-e-20260929/source-contracts.json",
+          "sha256": "92455671765a820311ccffdac736c667beaae5b4bb497924bd674f8ca0cb7fdf"
+        }
+      ]
+    }
+  ]
+}

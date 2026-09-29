@@ -1,0 +1,94 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "losgoroth": 109.06,
+    "manaworm": 177.41,
+    "telugoroth": 146.86,
+    "gwelgoroth": 105.56,
+    "greater-gwelgoroth": 115.14,
+    "ultimate-gwelgoroth": 123.89,
+    "faeros": 97.24,
+    "greater-faeros": 126.78,
+    "fyrk": 123.59,
+    "umber-hulk": 70.7,
+    "xorn": 79.52,
+    "xaren": 78.86,
+    "elven-cultist": 92.11,
+    "greater-faeros OLD v1 (superseded: radius 0.874, broad like Fyrk)": 125.93
+  },
+  "floors": {
+    "void (abashed-expanse)": 163.25,
+    "burnt A (charred-scar/mark-spellblaze)": 72.7,
+    "burnt B (charred-scar/mark-spellblaze)": 63.48,
+    "daikara A (daikara/tempest-peak)": 118.73,
+    "daikara B (daikara/tempest-peak)": 106.29,
+    "caldera (noxious-caldera)": 96.54,
+    "korpul stone A (reknor/rhaloren)": 131.79,
+    "korpul stone B (reknor/rhaloren)": 134.11,
+    "grass (rhaloren-camp)": 108.97
+  },
+  "zone_floors": {
+    "losgoroth": {
+      "void (abashed-expanse)": 163.25
+    },
+    "manaworm": {
+      "void (abashed-expanse)": 163.25
+    },
+    "telugoroth": {
+      "void (abashed-expanse)": 163.25
+    },
+    "gwelgoroth": {
+      "burnt A (charred-scar/mark-spellblaze)": 72.7,
+      "burnt B (charred-scar/mark-spellblaze)": 63.48,
+      "daikara A (daikara/tempest-peak)": 118.73,
+      "daikara B (daikara/tempest-peak)": 106.29
+    },
+    "greater-gwelgoroth": {
+      "burnt A (charred-scar/mark-spellblaze)": 72.7,
+      "burnt B (charred-scar/mark-spellblaze)": 63.48,
+      "daikara A (daikara/tempest-peak)": 118.73,
+      "daikara B (daikara/tempest-peak)": 106.29
+    },
+    "ultimate-gwelgoroth": {
+      "burnt A (charred-scar/mark-spellblaze)": 72.7,
+      "burnt B (charred-scar/mark-spellblaze)": 63.48,
+      "daikara A (daikara/tempest-peak)": 118.73,
+      "daikara B (daikara/tempest-peak)": 106.29
+    },
+    "faeros": {
+      "burnt A (charred-scar/mark-spellblaze)": 72.7,
+      "burnt B (charred-scar/mark-spellblaze)": 63.48,
+      "daikara A (daikara/tempest-peak)": 118.73,
+      "daikara B (daikara/tempest-peak)": 106.29,
+      "caldera (noxious-caldera)": 96.54
+    },
+    "greater-faeros": {
+      "burnt A (charred-scar/mark-spellblaze)": 72.7,
+      "burnt B (charred-scar/mark-spellblaze)": 63.48,
+      "caldera (noxious-caldera)": 96.54
+    },
+    "fyrk": {
+      "burnt A (charred-scar/mark-spellblaze)": 72.7,
+      "burnt B (charred-scar/mark-spellblaze)": 63.48
+    },
+    "umber-hulk": {
+      "daikara A (daikara/tempest-peak)": 118.73,
+      "daikara B (daikara/tempest-peak)": 106.29
+    },
+    "xorn": {
+      "daikara A (daikara/tempest-peak)": 118.73,
+      "daikara B (daikara/tempest-peak)": 106.29
+    },
+    "xaren": {
+      "daikara A (daikara/tempest-peak)": 118.73,
+      "daikara B (daikara/tempest-peak)": 106.29
+    },
+    "elven-cultist": {
+      "korpul stone A (reknor/rhaloren)": 131.79,
+      "korpul stone B (reknor/rhaloren)": 134.11,
+      "grass (rhaloren-camp)": 108.97
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

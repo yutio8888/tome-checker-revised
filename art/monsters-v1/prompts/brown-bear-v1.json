@@ -1,0 +1,54 @@
+{
+  "asset_id": "brown-bear-v1",
+  "intent": "generate",
+  "mode": "built-in image_gen",
+  "use_case": "stylized-concept",
+  "status": "generated-needs-containment-edit",
+  "prompt": "Use case: stylized-concept.\nAsset type: ONE square transparent PNG brown bear monster miniature for a tactical tabletop game.\nPrimary request: one complete brown bear game piece using the exact hand-painted carved miniature visual family of the forest troll reference.\nInput images: image 1 is ONLY the original game's brown bear species/identity reference. Image 2 is ONLY the approved neutral forest troll token's style, overhead camera, matte material, plain charcoal-brown base and light direction reference. Do not transfer any troll anatomy, tusks, clothing or humanoid posture to the bear.\nSubject: a heavy, broad-backed brown bear standing on FOUR legs. Rounded short ears, wide thick shoulders, compact hindquarters, short pale tan muzzle with black nose, small natural eyes. Four thick paws with warm ivory claw tips. Head faces the lower-left/front, back extends toward upper-right. Broad dark cocoa-brown fur mass with chestnut dry-brush planes. Body clearly wider and stockier than a wolf; no long canine muzzle and no bushy tail.\nStyle/medium: hand-painted carved tabletop miniature, deliberate simplified solid volumes, tactile matte painterly surfaces and restrained dry-brush highlights. Fur depicted as broad sculpted clumps, not photographic strands. Friendly-to-the-eye collectible artistry without a cartoon smile.\nComposition: high steep overhead angle about 65–70 degrees so back and face visible together, single centered complete creature on one near-circular PLAIN dark gray-brown THIN disc. Disc diameter about 86% of image width, flat dark neutral top, only a subtle narrow rim, same base family as image 2. Bear fits entirely inside disc at about 80% of disc diameter. Leave clear visible base all around every part, including shoulders, rear, ears and paws; do not let body obscure or cross the circular outer edge.\nLighting: soft upper-left light and a short lower-right shadow contained inside the disc. Light tan muzzle and claws help the face/paws read at 64px, but no glowing eyes.\nBackground: genuine transparent alpha PNG outside the disc; transparent corners and margins, no external ground shadow. No black/white painted backdrop and no fake transparency checkerboard.\nConstraints: one bear, one circular base, square canvas, all body parts complete and contained. Creature larger and brighter than the quiet thin base rim. Must look distinctly broad and round-eared at 48–64px.\nAvoid: standing on hind legs, humanoid bear, armor, clothing, weapon, extra bear, faction-colored rings of any kind, red/blue/green bands, text, digits, UI, rank marks, grass, pebbles, flowers, scenery, smoke, halo, canvas border.",
+  "references": [
+    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/brown_bear.png",
+    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/forest-troll-v1.png"
+  ],
+  "reference_roles": [
+    "original brown bear species identity only",
+    "approved forest troll miniature for shared material, high overhead angle, base and lighting only"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0dd21-b1f1-7472-b28c-5b68d8636421/exec-0c604f9a-8822-4d12-b980-2a44e37b7ffb.png",
+  "saved_output_path": "game/addons/tome-checker-revised/art/monsters-v1/masters/brown-bear-v1.png",
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      3,
+      1228,
+      1254
+    ],
+    "visible_alpha_bbox": [
+      158,
+      160,
+      1098,
+      1103
+    ],
+    "transparent_pixels": 870589,
+    "partial_alpha_pixels": 701677
+  },
+  "review": "Strong broad brown silhouette, round ears, tan muzzle; matches troll miniature material. Upper back slightly overlaps projected base rim; targeted containment revision planned.",
+  "sha256": "0b9a70a0a890c300f78e0cba296df09c33c35e892ca2e62e4111244fb951d5a1",
+  "tool": "image_gen.imagegen",
+  "tool_result_keys": [
+    "image_url",
+    "output_hint"
+  ],
+  "preserved_native_alpha": true,
+  "image_processing": "Copied original generated PNG without pixel edits, resizing, background extraction or alpha modification.",
+  "reviewed_at_utc": "2026-09-26T10:02:59.317247+00:00",
+  "selection": "superseded; kept as generation provenance"
+}

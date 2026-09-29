@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-g-2",
+  "assets": [
+    {
+      "asset_id": "dremling",
+      "native_name": "dremling",
+      "scope": "maze/deep-bellow etc. random pool (rarity=1, level_range {3,nil}); non-unique native-tall body; REDRAW after art/monster-batch-f rejection (dark-on-dark, same 48px defect as the superseded Kryl-Feijan)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 82,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/horror_corrupted_drem.png\", display_h=2, display_y=-1}}},"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_drem.png",
+          "sha256": "0b8983be6f0109320997a3d639c24b64ad71648e1da30399a02db3858405a3a0",
+          "role": "identity",
+          "note": "IMPORTANT: this is dremling's actual art file despite the swapped-looking filenames in this family (drem's own file is npc/horror_corrupted_dremling.png). Large hulking near-black humanoid, spiky scabrous ridges, featureless hollow eye sockets, waraxe. REDRAW TARGET: keep this silhouette but move the body far lighter (see contrast field); do not copy this reference's near-black value."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "A hulking, broad-shouldered humanoid warrior covered in jagged spiky scabrous ridges along its back, shoulders and forearms, gripping a battered stone waraxe low and ready. Its face is entirely featureless -- no eyes, nose or mouth, just smooth pale-grey stone-like skin with hollow darker-grey eye sockets where a face would be.",
+        "contrast": "REDRAW after rejection: the previous attempt (art/monster-batch-f/masters/dremling-v1.png) was deep matte obsidian-black and read as an indistinct dark-on-dark blob at 48px against dark dungeon floors, the same defect the superseded Kryl-Feijan v1/-b masters had before their pale-storm-grey v3 redraw fixed it. This attempt changes the design direction from black stone to pale weathered grey stone -- the body's mean luminance must end up clearly and measurably higher than the previous obsidian attempt, not merely 'a bit lighter'; target a body that reads as pale/light-grey at a glance, the same successful direction Kryl-Feijan's third redraw used (pale storm-cloud-grey, +44% mean luminance, verified by masked-body pixel measurement, not just the style gate). Fourth horror/corrupted silhouette in the catalog alongside Horned Horror (horned minotaur), The Mouth (wide red toothed mass) and The Abomination (tall pale spire): dremling keeps its established hulking-humanoid-with-spiky-ridge-crest-and-blank-face silhouette, now distinguished from the other three primarily by its pale weathered-stone value and its ridge crest, not by being the darkest member of the family.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Base-plate discipline, calibrated from monster-batch-d/monster-batch-e on this same style reference: an initial 8-unit-darker disc instruction overshot to base_drift -9 to -15 on several fresh generations, while a follow-up 4-unit-darker instruction landed cleanly inside the +-8 tolerance on a controlled retest (-5.11). Render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read: a small, conservative undershoot, not a full shade darker. Do not darken the creature itself to compensate -- only the disc plate takes this small intentional downward bias. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures.",
+        "palette": "Pale weathered ash-grey to light stone-grey skin (clearly lighter than granite, NOT charcoal, NOT obsidian, NOT near-black) with a faint cool blue undertone on the spiky ridges so the silhouette edge stays legible, small dull grey stone waraxe head, no bright accents anywhere on the body (the hollow eye sockets read as a darker grey void within the pale face, not a glowing highlight); dry neutral charcoal disc with restrained copper-grey bevel that must now read distinctly DARKER than the pale-grey creature body, a reversal from the previous attempt where both were similarly dark."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity (name/type/subtype/no define_as/no unique) and native invis.png+add_mos{display_h=2, display_y=-1} display contract re-verified directly against game/modules/tome source, including the drem/dremling swapped-filename trap (dremling's true art file is npc/horror_corrupted_drem.png). Not currently mapped (art/monster-batch-f rejected the prior draft for readability, not for a style-gate failure), so no refinement block is required. native_tall=true follows the ancient-dragon-turtle precedent. This is a fresh fully-new-direction generation (pale stone, not a brighten-edit of the rejected obsidian master), per this task's explicit 'prefer fresh regeneration over brighten-repair overshoot' instruction.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-f-20260929/source-contracts.json",
+          "sha256": "b12b3c0cc83fbed3bcbb9331c7cf52917aa40213069c818d0fc1aee1d4595d54"
+        }
+      ]
+    }
+  ]
+}

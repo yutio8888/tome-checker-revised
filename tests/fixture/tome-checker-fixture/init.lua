@@ -1,0 +1,13 @@
+long_name = 'Checker Offline Test Fixture'
+short_name = 'checker-fixture'
+for_module = 'tome'
+version = {1,7,6}
+addon_version = {0,1,0}
+weight = 10000
+author = {'Internal visual prototype'}
+description = [[Explicitly installed offline fixture. Deterministic birth, staging and local test commands. Never ship with the token addon.]]
+tags = {'debug','test'}
+hooks = true
+superload = true
+overload = true
+data = true

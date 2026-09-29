@@ -1,0 +1,70 @@
+{
+  "asset_id": "hardwall-v1",
+  "material": "hardwall",
+  "mode": "built-in image_gen",
+  "tool": "image_gen.imagegen",
+  "intent": "reference-guided generation/edit",
+  "prompt": "Use case: stylized-concept. ONE HARD STONE WALL isolated-cell component, transparent square PNG ideally 1024x1024. Use reference ordinary wall only for overhead camera, aligned square footprint, short south/east thickness, fixed soft upper-left light and matte painted miniature finish. Design a clearly DIFFERENT impenetrable hard wall: a single broad sealed dense dark cool slate-granite monolithic mass with two massive tightly interlocked capstone plates, much fewer seams than ordinary ashlar. Straight uninterrupted thick square perimeter and four slightly chamfered solid corners, not chipped stepped brick outline. Deep cool charcoal-grey lower side, medium cool grey broad top with restrained drybrush planes and subtle mineral flecks. Top must remain much brighter than dark sides; not pure black. Solid elevated blocker with no opening, no door, no ladder, no floor-like paved stones. Broad heavy continuous beveled rim integrated into rock, not a frame floating around a hole. Nearly square mass fills 86% canvas with all shadows and geometry strictly inside frame and a small genuine transparent margin. Orthographic steep overhead, north up, no diagonal isometric rotation. No circular actor base, no floor, rubble, iron spikes, locks, chains, magic runes, symbols, text, faction/rank colors, watermark, outside cast shadow. Shape and material both differ from the seven pale chipped mortar blocks in reference: this is a dark dense smooth-edged two-plate mass. Single object, no variants sheet.",
+  "references": [
+    "wall-v1"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-af433bbf-abf0-4b57-b291-9b8ecd5c97aa.png",
+  "saved_output_path": "art/terrain-korpul-v1/masters/hardwall-v1.png",
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "native_alpha_required": true,
+  "selection": "design-candidate-not-runtime-ready",
+  "rejection_reason": null,
+  "processing": "Copy original unchanged; small-size whole-canvas resampling only. No alpha extraction, relighting, recolouring, rotation, or painted geometry.",
+  "sha256": "7f2eeebadaed6a6fe298b9de772498ebe898d8a56887f76cd2b3d9325a29cb94",
+  "byte_identical": true,
+  "metrics": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      0,
+      47,
+      1234,
+      1254
+    ],
+    "transparent_pixels": 416591,
+    "partial_alpha_pixels": 1154559,
+    "opaque_pixels": 1366,
+    "visible_alpha_bbox_gt8": [
+      77,
+      99,
+      1181,
+      1155
+    ],
+    "corner_alpha": [
+      0,
+      0,
+      1,
+      0
+    ]
+  },
+  "references_resolved": [
+    "masters/wall-v1.png"
+  ],
+  "static_review": {
+    "sheet": "review/design-sheet.png",
+    "actual_sizes": [
+      48,
+      64,
+      96
+    ],
+    "floor_repeat_size": 128,
+    "grayscale": "CSS display only",
+    "runtime_verified": false,
+    "connected_masks_verified": false
+  }
+}

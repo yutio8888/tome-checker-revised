@@ -1,0 +1,130 @@
+window.monsterCatalog = [
+  {
+    "id": "dire-wolf",
+    "name": "恐狼",
+    "entity": "dire wolf",
+    "group": "beasts",
+    "trait": "壮硕棕褐长身、横向低伏与暖浅口鼻，区别灰狼斜行和巨狼正面。",
+    "original": "npc/canine_dw.png",
+    "source": "game/modules/tome/data/general/npcs/canine.lua",
+    "source_line": 74,
+    "rank": 1.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "white-wolf",
+    "name": "白狼",
+    "entity": "white wolf",
+    "group": "beasts",
+    "trait": "冷白毛、右向侧转跃进长步，前肢错位，与普通灰狼明度和朝向区分。",
+    "original": "npc/canine_ww.png",
+    "source": "game/modules/tome/data/general/npcs/canine.lua",
+    "source_line": 89,
+    "rank": 1.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "warg",
+    "name": "座狼",
+    "entity": "warg",
+    "group": "beasts",
+    "trait": "黑色弯身、高鬃背、窄长骨色口鼻和分开的长前腿。",
+    "original": "npc/canine_warg.png",
+    "source": "game/modules/tome/data/general/npcs/canine.lua",
+    "source_line": 107,
+    "rank": 1.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "white-snake",
+    "name": "大型白蛇",
+    "entity": "large white snake",
+    "group": "shapes",
+    "trait": "象牙白开放S形，单头、单条连续躯干与渐细单尾，无颈罩或附肢。",
+    "original": "npc/white-snake.png",
+    "source": "game/modules/tome/data/general/npcs/snake.lua",
+    "source_line": 56,
+    "rank": 2.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "rattlesnake",
+    "name": "响尾蛇",
+    "entity": "rattlesnake",
+    "group": "shapes",
+    "trait": "错位叠卷、抬起的三角头与独立分节响尾，区别棕蛇单环。",
+    "original": "npc/firebrick-snake.png",
+    "source": "game/modules/tome/data/general/npcs/snake.lua",
+    "source_line": 78,
+    "rank": 2.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "midge-swarm",
+    "name": "蠓群",
+    "entity": "midge swarm",
+    "group": "shapes",
+    "trait": "七只细身飞虫、每只一对窄翼、开放散布与较多留空，区别三只胖蜂。",
+    "original": "npc/midge_swarm.png",
+    "source": "game/modules/tome/data/general/npcs/swarm.lua",
+    "source_line": 51,
+    "rank": 1.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "hornet-swarm",
+    "name": "胡蜂群",
+    "entity": "hornet swarm",
+    "group": "shapes",
+    "trait": "四只细腰长尖腹胡蜂、成对长翼和错位队形，区别绒毛粗腹蜂群。",
+    "original": "npc/hornet_swarm.png",
+    "source": "game/modules/tome/data/general/npcs/swarm.lua",
+    "source_line": 77,
+    "rank": 1.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  },
+  {
+    "id": "white-worm-mass",
+    "name": "白蠕虫团",
+    "entity": "white worm mass",
+    "group": "shapes",
+    "trait": "多个短胖象牙白分节体构成低矮不规则团块；无翼、无蛇头或单条长S。",
+    "original": "npc/vermin_worms_white_worm_mass.png",
+    "source": "game/modules/tome/data/general/npcs/vermin.lua",
+    "source_line": 46,
+    "rank": 1.0,
+    "unique": false,
+    "source_size": [
+      64,
+      64
+    ]
+  }
+];

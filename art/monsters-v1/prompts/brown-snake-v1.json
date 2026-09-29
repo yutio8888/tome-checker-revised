@@ -1,0 +1,81 @@
+{
+  "id": "brown-snake-v1",
+  "created_date": "2026-09-26",
+  "tool": "built-in image_gen.imagegen",
+  "skill": "~/.codex/skills/.system/imagegen/SKILL.md",
+  "use_case": "stylized-concept",
+  "intent": "generate",
+  "prompt": "Use case: stylized-concept.\nAsset type: single transparent PNG creature miniature for Tales of Maj'Eyal tactical board tiles.\nPrimary request: create exactly ONE LARGE BROWN SNAKE tabletop token, matching the craft, camera and base of reference image 1. Do not depict any troll.\nInput images: Image 1 is the established forest-troll token STYLE reference only: painterly carved miniature material, high overhead oblique camera, soft upper-left light, neutral dark gray-brown thin round disc. Image 2 is the original large brown snake SPECIES IDENTITY reference only: earthy brown snake with a pale belly. Use its species and palette, not its tiny pixel texture.\nSubject: a single thick-bodied soil-brown snake in one clear open coil, leaving a large clearly visible hole inside the coil. One raised head with visible short snout near the front, tail tucked to one side, a subtle pale ochre belly edge. No cobra hood, no limbs, no horns, no second head. Brown body must read as a warm brown mass even at 48 pixels; use broad painted scale suggestions rather than fine noisy scales.\nStyle/medium: high quality hand-painted small carved fantasy board-game piece, matte brush-painted wood/resin, simplified readable sculptural forms and selective drybrush highlights, not a photoreal animal photograph and not a line icon.\nComposition/framing: square canvas, a nearly circular shallow neutral gray-brown base centered and occupying about 86% of canvas width. Match reference 1 camera so face and back are both visible. The coiled snake occupies 75–88% of the disc, and ALL of the snake stays safely inside the disc contour. Disc has a thin quiet rim, not a tall pedestal. Clear snake-shaped silhouette and open central coil must remain legible at 48 and 64px.\nLighting: soft upper-left highlights, brief lower-right contact shading within the base only.\nBackground: genuine transparent alpha outside the disc, including all four corners; no solid color field, no background scenery and no cast shadow outside the disc.\nConstraints: exactly one isolated token, complete object, no cropped contour. No faction-colored ring, no red border, no blue border, no green status rim. No numbers, letters, labels, rank symbols, watermarks, grass, rocks, flowers or scene decoration. Neutral base only. Natural warm brown snake, never green. Preserve real PNG alpha.",
+  "references": [
+    {
+      "path": "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/forest-troll-v1.png",
+      "role": "style only: handmade miniature material, camera, neutral base, light"
+    },
+    {
+      "path": "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/umber-snake.png",
+      "role": "species identity: large brown snake and pale belly"
+    }
+  ],
+  "source_tool_path": "~/.codex/generated_images/01a0dd25-86d8-71f0-8868-f3586117d75e/exec-65d66122-dd33-4ef2-b248-11d7614f8552.png",
+  "saved_path": "masters/brown-snake-v1.png",
+  "processing": "Original generated PNG copied byte-for-byte. No color change, alpha cleanup, resizing or painting performed by this agent.",
+  "alpha_inspection": {
+    "mode": "RGBA",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox_by_min_value": {
+      "1": [
+        0,
+        0,
+        1184,
+        1254
+      ],
+      "8": [
+        155,
+        160,
+        1104,
+        1116
+      ],
+      "32": [
+        155,
+        160,
+        1103,
+        1116
+      ],
+      "128": [
+        156,
+        161,
+        1103,
+        1115
+      ],
+      "250": [
+        157,
+        161,
+        1102,
+        1114
+      ]
+    },
+    "fully_transparent_pixels": 852400,
+    "fully_opaque_pixels": 307,
+    "low_alpha_pixels_1_to_7": 6614,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sha256": "54dd572dbe3114d155664345e9b9e3a6c16fdc6d8fff7487810808e58a06bec6"
+  },
+  "review": {
+    "inspected_with": "view_image",
+    "large_view": "Warm brown body, one head, open coil, no cobra hood, neutral thin base. All visible creature parts remain inside the disc. Style is coherent with the troll sample.",
+    "transparency": "Real RGBA transparency. A small number of very low-alpha (1–7) pixels extend beyond the visible disc; recorded without cleanup. Use alpha>=8 bbox for size inspection only.",
+    "status": "Candidate for parent normalized export and 48/64/96px review; not yet runtime validated."
+  }
+}

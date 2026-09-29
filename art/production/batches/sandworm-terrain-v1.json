@@ -1,0 +1,177 @@
+{
+  "schema": 1,
+  "batch_id": "sandworm-terrain-v1",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Native source and reference appearance verified in sandworm identity evidence.",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/sandworm-20260928/identity.md",
+          "sha256": "7830b44899b807ab9c2540dbee5612f5c763955294b8321bfdf315a968c30f7d"
+        }
+      ],
+      "scope": "sandworm-lair DEFAULT L1-L4 and BIGWORM L1-L2 only",
+      "asset_id": "sand-floor",
+      "native_name": "UNDERGROUND_SAND floor",
+      "kind": "terrain-floor",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/sand.lua",
+          "sha256": "d951bdb32b4280058b9db8ce5c37a15b08837aaf216899a580dc3ecff5de3c8e",
+          "line": 33,
+          "anchor": "define_as = \"UNDERGROUND_SAND\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/sandworm-lair/zone.lua",
+          "sha256": "9a8c0f1171d77cc50431f431be6f25795a82967fee1331ffac79840e583eefb1",
+          "line": 20,
+          "anchor": "local layout ="
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/sand.png",
+          "sha256": "60f0b0a4f4138a029365157b690cdaa592a5a3a0aba6866d5a3c0a9cc05c6e0e",
+          "role": "identity",
+          "note": "Native material/shape"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-daikara-v1/masters/mountain-wall-solid-v3.png",
+          "sha256": "f01581cb4eb898ecf2cdf628670b334b9ffc307aee2199e7827844592971024a",
+          "role": "style",
+          "note": "Established board terrain scale and lighting"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Walkable, sight open, harmless; also used as native door slot.",
+        "sight": "Walkable, sight open, harmless; also used as native door slot.",
+        "danger": "No art-implied hazard; native rules retained.",
+        "interaction": "Walkable, sight open, harmless; also used as native door slot.",
+        "export": "128px parity pair"
+      },
+      "prompt_fields": {
+        "subject": "Flat granular golden ochre underground sand with broad shallow drifts, small grit and subtle wind-swept bands; no stones or raised objects.",
+        "contrast": "Clearly distinct from walkable floor and other sand construction at 48/64/96px.",
+        "composition": "Opaque overhead seamless square, material reaches all four edges.",
+        "palette": "Warm ochre, umber shadow, pale golden highlights; soft upper-left light.",
+        "mechanics": "Walkable, sight open, harmless; also used as native door slot."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native source and reference appearance verified in sandworm identity evidence.",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/sandworm-20260928/identity.md",
+          "sha256": "7830b44899b807ab9c2540dbee5612f5c763955294b8321bfdf315a968c30f7d"
+        }
+      ],
+      "scope": "sandworm-lair DEFAULT L1-L4 and BIGWORM L1-L2 only",
+      "asset_id": "sand-wall",
+      "native_name": "SANDWALL unstable wall",
+      "kind": "terrain-prop",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/sand.lua",
+          "sha256": "d951bdb32b4280058b9db8ce5c37a15b08837aaf216899a580dc3ecff5de3c8e",
+          "line": 43,
+          "anchor": "define_as = \"SANDWALL\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/sandworm-lair/zone.lua",
+          "sha256": "9a8c0f1171d77cc50431f431be6f25795a82967fee1331ffac79840e583eefb1",
+          "line": 20,
+          "anchor": "local layout ="
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-daikara-v1/masters/mountain-wall-solid-v3.png",
+          "sha256": "f01581cb4eb898ecf2cdf628670b334b9ffc307aee2199e7827844592971024a",
+          "role": "identity",
+          "note": "Accepted cell-filling blocking mass style"
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/sand.png",
+          "sha256": "60f0b0a4f4138a029365157b690cdaa592a5a3a0aba6866d5a3c0a9cc05c6e0e",
+          "role": "style",
+          "note": "Established board terrain scale and lighting"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Blocks movement and sight, pass_wall allowed, native digging makes temporary tunnel Object.",
+        "sight": "Blocks movement and sight, pass_wall allowed, native digging makes temporary tunnel Object.",
+        "danger": "No art-implied hazard; native rules retained.",
+        "interaction": "Blocks movement and sight, pass_wall allowed, native digging makes temporary tunnel Object.",
+        "export": "128px parity pair; wall 16 N/E/S/W masks"
+      },
+      "prompt_fields": {
+        "subject": "Solid raised compacted sand mass, broad stratified ochre sediment planes and carved edges, thick cell-filling wall that visibly blocks movement and sight.",
+        "contrast": "Clearly distinct from walkable floor and other sand construction at 48/64/96px.",
+        "composition": "Single complete wall block covering most of square, front face and top visible; transparent beyond silhouette.",
+        "palette": "Warm ochre, umber shadow, pale golden highlights; soft upper-left light.",
+        "mechanics": "Blocks movement and sight, pass_wall allowed, native digging makes temporary tunnel Object."
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native source and reference appearance verified in sandworm identity evidence.",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/sandworm-20260928/identity.md",
+          "sha256": "7830b44899b807ab9c2540dbee5612f5c763955294b8321bfdf315a968c30f7d"
+        }
+      ],
+      "scope": "sandworm-lair DEFAULT L1-L4 and BIGWORM L1-L2 only",
+      "asset_id": "sand-ladder",
+      "native_name": "SAND_LADDER_UP/DOWN/WILDERNESS",
+      "kind": "terrain-prop",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/sand.lua",
+          "sha256": "d951bdb32b4280058b9db8ce5c37a15b08837aaf216899a580dc3ecff5de3c8e",
+          "line": 228,
+          "anchor": "define_as = \"SAND_LADDER_DOWN\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/sandworm-lair/zone.lua",
+          "sha256": "9a8c0f1171d77cc50431f431be6f25795a82967fee1331ffac79840e583eefb1",
+          "line": 20,
+          "anchor": "local layout ="
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/ladder_up.png",
+          "sha256": "4e2c90ef339bdd903db8f874a78cc849db40feb16389165cec85875eccbcd37d",
+          "role": "identity",
+          "note": "Native material/shape"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-daikara-v1/masters/mountain-wall-solid-v3.png",
+          "sha256": "f01581cb4eb898ecf2cdf628670b334b9ffc307aee2199e7827844592971024a",
+          "role": "style",
+          "note": "Established board terrain scale and lighting"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Walkable exit; native direction/destination fields and native object rules unchanged.",
+        "sight": "Walkable exit; native direction/destination fields and native object rules unchanged.",
+        "danger": "No art-implied hazard; native rules retained.",
+        "interaction": "Walkable exit; native direction/destination fields and native object rules unchanged.",
+        "export": "128px parity pair"
+      },
+      "prompt_fields": {
+        "subject": "Sturdy narrow wooden ladder embedded in a low rim of compacted ochre sand, clear rungs and shadowed opening, no arrows or signage.",
+        "contrast": "Clearly distinct from walkable floor and other sand construction at 48/64/96px.",
+        "composition": "Centered complete construction with transparent exterior; fits one grid and leaves room for separately composed floor.",
+        "palette": "Warm ochre, umber shadow, pale golden highlights; soft upper-left light.",
+        "mechanics": "Walkable exit; native direction/destination fields and native object rules unchanged."
+      }
+    }
+  ]
+}

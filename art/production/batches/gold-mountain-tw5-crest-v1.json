@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "batch_id": "gold-mountain-tw5-crest-v1",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Second master of the TW5 golden-mountain family. The accepted block master (gold-mountain-tw5-v4) supplies the south cliff faces, but cropped as the cell-filling interior its stepped plateau ledges repeat as horizontal streaks that read like wooden boards in the 64px connected field and in the live fixture. This opaque overhead material replaces only the interior top; same identity and rules.",
+      "max_attempts": 2,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/terrain-tw5-20260929/identity-gold-mountain.md",
+          "sha256": "240bd1f856b816b18fb1c22006ebd93488caff0f2accd924d55d1e437d5be373"
+        }
+      ],
+      "asset_id": "gold-mountain-crest",
+      "native_name": "GOLDEN_MOUNTAIN Gates of Morning Sunwall mountain crest material",
+      "kind": "terrain-floor",
+      "scope": "Gates of Morning (town-gates-of-morning) only: GOLDEN_MOUNTAIN and GOLDEN_MOUNTAIN_WALL1-6, the mountain ring and southern coast.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/town-gates-of-morning/grids.lua",
+          "sha256": "03a3ca03413fe8267cc1399032d50c4652519415d35babe577182759b64a26fe",
+          "line": 69,
+          "anchor": "define_as = \"GOLDEN_MOUNTAIN\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-gates-of-morning/grids.lua",
+          "sha256": "03a3ca03413fe8267cc1399032d50c4652519415d35babe577182759b64a26fe",
+          "line": 76,
+          "anchor": "block_sense = true"
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-gates-of-morning/grids.lua",
+          "sha256": "03a3ca03413fe8267cc1399032d50c4652519415d35babe577182759b64a26fe",
+          "line": 82,
+          "anchor": "GOLDEN_MOUNTAIN_WALL"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/golden_mountain5_1.png",
+          "sha256": "f60cd8d6b3d6ed4a18408c6d100aec29ac357838a35f27aa68af45f693baafd7",
+          "role": "identity",
+          "note": "Native Sunwall mountain seen from above: crumpled, irregular golden rock. Keep this non-directional crumpled rock character, darker."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-daikara-v1/selected/floor-bare-rock.png",
+          "sha256": "73d87da52dad7a39195e227d0e4110fa0c183c00c29fc37aa9695c7826d47f40",
+          "role": "style",
+          "note": "Accepted board material master: edge-to-edge matte paint finish, scale and upper-left light. Not its grey palette or its flatness."
+        }
+      ],
+      "grid_contract": {
+        "movement": "Blocks all movement; no pass_wall or pass_tree exception.",
+        "sight": "Blocks line of sight, sense and ESP.",
+        "danger": "None.",
+        "interaction": "None: not diggable, no door, no transition.",
+        "export": "Opaque overhead crest material; the exporter crops it as the calm interior of every 16-way wall mask and adds the block master's cliff face only on south edges open to passable ground, plus parity."
+      },
+      "prompt_fields": {
+        "subject": "The solid rock top of the Sunwall mountains seen from straight above: a dense, continuous field of irregular weathered golden sandstone crags, rounded knobs and fractured rock masses separated by narrow deep dark crevices, like the crumpled native mountain texture. Non-directional: no parallel strata, planks, stripes, tiles or rows.",
+        "palette": "Dark amber, burnt ochre and deep umber rock with warm gold highlights only on the upper-left faces of the crags; crevices near dark umber-black. Overall mid-dark: clearly darker than pale plaza stone, green grass and beach sand; never bright yellow, lemon, orange-red or wood brown.",
+        "contrast": "Must read as massive impassable golden rock at 48 pixels, clearly darker and more rugged than any floor; distinct from grey mountains by its warm gold hue and from wood by irregular crag shapes.",
+        "composition": "Edge-to-edge overhead rock material filling the whole square, even density everywhere, no single dominant feature, no border, horizon, sky or cliff edge.",
+        "mechanics": "Used only as the top of the undiggable Sunwall mountain wall cells, which block movement, line of sight, sense and ESP. Paint no path, stairs, door, building, sun emblem, lava or hazard."
+      }
+    }
+  ]
+}

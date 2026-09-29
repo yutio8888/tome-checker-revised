@@ -1,0 +1,9 @@
+Use case: stylized-concept. Deliver ONE transparent PNG terrain construction for a tabletop game board: $native_name. Request square 1024 x 1024; preserve native alpha and actual dimensions.
+
+Subject: $subject
+Palette/material: $palette
+Distinct from these related pieces: $contrast
+Footprint, height and composition: $composition
+Gameplay contract: $mechanics
+
+Match accepted tabletop material, camera and soft upper-left illumination. Show a complete physical construction, including its structural supports where specified; not a detached crown or floating fragment. Return an RGBA PNG whose alpha channel is genuinely transparent outside the construction; do not paint a white, grey or checkerboard backdrop for someone to key out later, and do not return a flat opaque RGB image. No creature disc, square grass tile or baked underlying floor. Shadows must stay within the agreed footprint and preserve the neighbouring cell's actor space. No text, arrows, rarity, faction colors, health or shield rings. Do not add a door, hazard or blocking structure that is absent from the gameplay contract. Exporter supplies grid alignment and any separate rule overlay. One construction only, no contact sheet.

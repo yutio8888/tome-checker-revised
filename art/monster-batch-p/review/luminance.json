@@ -1,0 +1,85 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "snow-giant": 75.45,
+    "snow-giant-thunderer": 106.16,
+    "snow-giant-boulder-thrower": 85.27,
+    "snow-giant-chieftain": 93.29,
+    "minotaur": 79.99,
+    "mountain-troll": 69.22,
+    "mountain-troll-thunderer": 83.39,
+    "ogre-guard": 72.96,
+    "ogre-mauler": 63.61,
+    "ogre-rune-spinner": 88.11,
+    "ogre-pounder": 72.78,
+    "healer-astelrid": 89.49,
+    "snow-giant OLD v1 (rejected by gate: base_drift -8.16)": 67.23,
+    "snow-giant-boulder-thrower OLD v1 (rejected by gate: base_drift -9.04)": 84.03,
+    "minotaur OLD v1 (superseded: near twin of minotaur-maze at 48px)": 73.6,
+    "minotaur OLD v2 (rejected: axe crosses the disc rim, intrusion +38.5)": 79.87
+  },
+  "floors": {
+    "daikara rock (daikara, tempest-peak)": 118.73,
+    "snow ground (daikara snow)": 175.0,
+    "korpul stone A (crypt/vault/reknor stone)": 131.79,
+    "korpul stone B (crypt/vault/reknor stone)": 134.11,
+    "cave rock (ardhungol)": 130.64,
+    "cave mushroom (ardhungol)": 134.28
+  },
+  "zone_floors": {
+    "snow-giant": {
+      "daikara rock (daikara, tempest-peak)": 118.73,
+      "snow ground (daikara snow)": 175.0
+    },
+    "snow-giant-thunderer": {
+      "daikara rock (daikara, tempest-peak)": 118.73,
+      "snow ground (daikara snow)": 175.0
+    },
+    "snow-giant-boulder-thrower": {
+      "daikara rock (daikara, tempest-peak)": 118.73,
+      "snow ground (daikara snow)": 175.0
+    },
+    "snow-giant-chieftain": {
+      "daikara rock (daikara, tempest-peak)": 118.73,
+      "snow ground (daikara snow)": 175.0
+    },
+    "minotaur": {
+      "korpul stone A (crypt/vault/reknor stone)": 131.79,
+      "korpul stone B (crypt/vault/reknor stone)": 134.11,
+      "cave rock (ardhungol)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "mountain-troll": {
+      "korpul stone A (crypt/vault/reknor stone)": 131.79,
+      "korpul stone B (crypt/vault/reknor stone)": 134.11,
+      "cave rock (ardhungol)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "mountain-troll-thunderer": {
+      "korpul stone A (crypt/vault/reknor stone)": 131.79,
+      "korpul stone B (crypt/vault/reknor stone)": 134.11
+    },
+    "ogre-guard": {
+      "korpul stone A (crypt/vault/reknor stone)": 131.79,
+      "korpul stone B (crypt/vault/reknor stone)": 134.11
+    },
+    "ogre-mauler": {
+      "korpul stone A (crypt/vault/reknor stone)": 131.79,
+      "korpul stone B (crypt/vault/reknor stone)": 134.11
+    },
+    "ogre-rune-spinner": {
+      "korpul stone A (crypt/vault/reknor stone)": 131.79,
+      "korpul stone B (crypt/vault/reknor stone)": 134.11
+    },
+    "ogre-pounder": {
+      "korpul stone A (crypt/vault/reknor stone)": 131.79,
+      "korpul stone B (crypt/vault/reknor stone)": 134.11
+    },
+    "healer-astelrid": {
+      "korpul stone A (crypt/vault/reknor stone)": 131.79,
+      "korpul stone B (crypt/vault/reknor stone)": 134.11
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

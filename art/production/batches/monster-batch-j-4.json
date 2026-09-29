@@ -1,0 +1,186 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-j-4",
+  "assets": [
+    {
+      "asset_id": "murgol",
+      "native_name": "Murgol, the Yaech Lord",
+      "scope": "murgol-lair guaranteed guardian in the non-INVASION layout (humanoid/yaech unique, default-name image)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/murgol-lair/npcs.lua",
+          "sha256": "8e929697d368c99713805c7e25ceaa28675078db8e10c905a0f7435faa8ed2b5",
+          "line": 25,
+          "anchor": "define_as = \"MURGOL\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/murgol-lair/npcs.lua",
+          "sha256": "8e929697d368c99713805c7e25ceaa28675078db8e10c905a0f7435faa8ed2b5",
+          "line": 27,
+          "anchor": "name = \"Murgol, the Yaech Lord\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_yaech_murgol__the_yaech_lord.png",
+          "sha256": "04d3cd269a62afe4e2d45f6e3b384a68206278f35f852a98523644c9582a9938",
+          "role": "identity",
+          "note": "Native shape: a small floating fish-headed yaech with a spiny fin crest, red eyes, dark armour and a golden trident, wrapped in a blue psionic glow."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/lady-zoisla.png",
+          "sha256": "e687d2733faf44a22c78e2acd1a46824974c96eca10ddac6b78acd4603298d2b",
+          "role": "family",
+          "note": "Shipped Lady Zoisla (naga with trident): Murgol is a small finned yaech in armour, no serpent tail, no woman."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A small squat fish-like yaech warlord: a big round head with a jagged fin crest of spines, wide staring red eyes, a frog-like wide mouth and gill frills, pale blue-grey scaly skin, wearing lifted slate-blue eel-skin armour plates with pale rims, holding a SHORT golden trident close against his body pointing upward (the trident is no taller than his head), the other hand raised beside his chest with a small pale blue psionic ring of light. Hunched aggressive stance on stubby webbed feet. Compact and complete, small on the disc.",
+        "contrast": "Aquatic humanoids: Lady Zoisla and the naga tidewarden/tidecaller (serpent tails, tall), the merman-like yaech are not otherwise covered. Murgol is small and round-headed with a fin crest and red eyes, standing on legs (silhouette: big head with spines, trident held upright), pale blue-grey skin and slate-blue armour (hue/value), not a naga.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. Calibration from the previous generation of this exact token: it drew the weapon and limbs (and effect rings) reaching past the edge of the disc onto the transparent canvas, so the token could not be exported. This time draw the creature markedly smaller and tighter: the ENTIRE figure, including the tip of every weapon, every raised hand and every swirl, fits inside a circle of about two thirds of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side. Shorten weapons and hold them close to the body, nothing extends toward the disc rim.",
+        "palette": "Pale blue-grey scaly skin, slate-blue armour plates lifted with pale rims, bright red eyes, gold trident, soft pale-blue psionic ring; nothing darker than mid tone. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Murgol, the Yaech Lord, define_as=MURGOL, type=humanoid/subtype=yaech, unique=True); details and hashes in evidence/monster-batch-j-20260929/source-contracts.json. base BASE_NPC_YAECH (humanoid/yaech, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile; NPC.lua:33 gives humanoid_yaech_murgol__the_yaech_lord.png; Actor tint (native colour modulation) does not change identity or display structure. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-j-20260929/source-contracts.json",
+          "sha256": "f3b0d7b9e65b2c18c6416b37aae96e1dee28c95e6f4f57ed619039699ef6e83b"
+        }
+      ]
+    },
+    {
+      "asset_id": "lady-nashva",
+      "native_name": "Lady Nashva the Streambender",
+      "scope": "murgol-lair guaranteed guardian in the INVASION layout (humanoid/naga unique, nice_tile native-tall)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/murgol-lair/npcs.lua",
+          "sha256": "8e929697d368c99713805c7e25ceaa28675078db8e10c905a0f7435faa8ed2b5",
+          "line": 160,
+          "anchor": "define_as = \"NASHVA\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/murgol-lair/npcs.lua",
+          "sha256": "8e929697d368c99713805c7e25ceaa28675078db8e10c905a0f7435faa8ed2b5",
+          "line": 163,
+          "anchor": "image=\"npc/humanoid_naga_lady_nashva_the_streambender.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_naga_lady_nashva_the_streambender.png",
+          "sha256": "7af4eec778a73513b00217584b63ccf3d826fe11edf9ba85f4b4f0e47b86d3e9",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a pale-skinned naga woman with long dark hair and a circlet, a jewelled blue bodice, a dark tail coiled tight, a tall glowing teal trident in one hand and a glowing blue water orb in the other, water swirling around her."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/lady-zoisla.png",
+          "sha256": "e687d2733faf44a22c78e2acd1a46824974c96eca10ddac6b78acd4603298d2b",
+          "role": "family",
+          "note": "Shipped Lady Zoisla (naga with orange-red tail and a gold trident): Nashva must differ by teal-blue water palette, dark-teal tail, water orb and a circlet."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A regal naga woman rearing up from a tightly coiled slate-teal serpent tail with pale blue scale highlights: pale skin, long dark hair, a small silver circlet, a jewelled pale-blue bodice, one hand held near her chest holding a small glowing blue water orb, the other holding a SHORT glowing teal trident close against her side pointing upward (the trident's top is no higher than the top of her head), and a thin flat ring of pale blue water lying on the disc immediately around her coils. Calm, confident stare. Compact upright composition, small on the disc.",
+        "contrast": "Naga tokens: Lady Zoisla (orange-red tail, gold trident, brown hair), naga tidewarden (male, tan tail, shield), naga tidecaller (hooded dark caster). Nashva is the water-blue one: slate-teal tail with pale highlights, teal trident, glowing water orb and circlet (hue: cool teal-blue against Zoisla's warm orange; silhouette: tight coil with orb and trident held up).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. Calibration from the previous generation of this exact token: it drew the weapon and limbs (and effect rings) reaching past the edge of the disc onto the transparent canvas, so the token could not be exported. This time draw the creature markedly smaller and tighter: the ENTIRE figure, including the tip of every weapon, every raised hand and every swirl, fits inside a circle of about two thirds of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side. Shorten weapons and hold them close to the body, nothing extends toward the disc rim.",
+        "palette": "Slate-teal serpent tail lifted with pale aqua highlights, pale skin, dark hair, silver circlet, luminous blue water orb and pale water ring, glowing teal trident; nothing darker than mid tone. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Lady Nashva the Streambender, define_as=NASHVA, type=humanoid/subtype=naga, unique=True); details and hashes in evidence/monster-batch-j-20260929/source-contracts.json. resolvers.nice_tile{image=\"invis.png\", add_mos={{image=<png>, display_h=2, display_y=-1}}} names the PNG explicitly (no =BASE=TILE= indirection, so the resolve-order issue that keeps {tall=1} shorthand native does not apply); nativeTallImage matches the exact one-body add_mos, unique entry, native-tall path; base BASE_NPC_NAGA has no image=/shader; native sprite is 64x128; entity only exists when the zone is invaded. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-j-20260929/source-contracts.json",
+          "sha256": "f3b0d7b9e65b2c18c6416b37aae96e1dee28c95e6f4f57ed619039699ef6e83b"
+        }
+      ]
+    },
+    {
+      "asset_id": "subject-z",
+      "native_name": "Subject Z",
+      "scope": "halfling-ruins guaranteed guardian on the last-level static map (humanoid/human unique, default-name image, never_act until seen)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/halfling-ruins/npcs.lua",
+          "sha256": "a4e8724a977e6421c5860514589265d9cdca949565429524bea42c400294d0c3",
+          "line": 26,
+          "anchor": "define_as=\"SUBJECT_Z\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/halfling-ruins/npcs.lua",
+          "sha256": "a4e8724a977e6421c5860514589265d9cdca949565429524bea42c400294d0c3",
+          "line": 27,
+          "anchor": "name = \"Subject Z\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_subject_z.png",
+          "sha256": "49c23bee091ddfa07dc9430758ef413d50d764c16405362cdb57477324a6bd86",
+          "role": "identity",
+          "note": "Native shape: an ordinary-looking young man with shoulder-length dark hair in a plain white tunic and green trousers, standing upright with both arms flared wide, a long dagger in each hand."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/cutpurse.png",
+          "sha256": "bea7aa68b0e74e2a852344666fdabbbb3b73860ffb1fe309412ecf7ec71a0793",
+          "role": "family",
+          "note": "Shipped cutpurse (white vest, brown trousers, crouched with daggers low): Subject Z stands stiffly upright with arms spread wide and has green trousers and long dark hair."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A gaunt pale human man standing upright and facing the viewer with his arms held out only slightly from his sides, elbows bent, forearms angled upward: shoulder-length straight dark hair, a blank calm face, a plain cream-white linen tunic with a rope belt, moss-green trousers and worn brown boots, a SHORT dagger held point-up in each hand at shoulder height close to the body. Stiff, symmetrical, uncanny and still; the whole figure narrow and compact, small on the disc.",
+        "contrast": "Human dagger fighters: cutpurse (crouched, brown trousers), rogue (blue hooded), thief (brown cloak), bandit (bare-chested), Harno, and the Assassin Lord (bulky mantle, crouched lunge). Subject Z is the only stiff symmetrical upright figure with arms flared wide, cream tunic and moss-green trousers (silhouette: T-shaped standing figure with two raised daggers; hue: cream plus green).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. Calibration from the previous generation of this exact token: it drew the weapon and limbs (and effect rings) reaching past the edge of the disc onto the transparent canvas, so the token could not be exported. This time draw the creature markedly smaller and tighter: the ENTIRE figure, including the tip of every weapon, every raised hand and every swirl, fits inside a circle of about two thirds of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side. Shorten weapons and hold them close to the body, nothing extends toward the disc rim.",
+        "palette": "Cream-white tunic as the brightest plane, moss-green trousers, brown boots and belt, dark hair, pale skin, steel daggers; nothing darker than mid tone except the hair. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Subject Z, define_as=SUBJECT_Z, type=humanoid/subtype=human, unique=True); details and hashes in evidence/monster-batch-j-20260929/source-contracts.json. standalone entity (no base), no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint; NPC.lua:33 gives humanoid_human_subject_z.png; Actor tint (native colour modulation) does not change identity or display structure. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-j-20260929/source-contracts.json",
+          "sha256": "f3b0d7b9e65b2c18c6416b37aae96e1dee28c95e6f4f57ed619039699ef6e83b"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "schema": 1,
+  "batch_id": "heart-gloom-2",
+  "assets": [
+    {
+      "gate": "ready",
+      "gate_reason": "Native source identities and mechanics verified in evidence/heart-gloom-20260928/identity.md",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/heart-gloom-20260928/identity.md",
+          "sha256": "b43e13c065626c8709c23ab1b919ff1129fcfca5e07f12c27b8049c837c7393a"
+        }
+      ],
+      "asset_id": "dreamy-floor",
+      "native_name": "UNDERGROUND_FLOOR floor",
+      "kind": "terrain-floor",
+      "scope": "heart-gloom dreamy skin L1-L3 only",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/underground_dreamy.lua",
+          "sha256": "7234585796d7e12f5cc5a5a9c36acbd4bf77bdc3c82d0ad488adf5d86db8f598",
+          "line": 21,
+          "anchor": "define_as = \"UNDERGROUND_FLOOR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/underground_floor.png",
+          "sha256": "1eb2e3ba9fc971d5cf33f08f37f85c5aec68492cdc2b20a317392609ba12a3ce",
+          "role": "identity",
+          "note": "Native dreamy floor material"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-korpul-v1/masters/floor-a-v2.png",
+          "sha256": "aa50b00c1a936cb30e29e67e7a24a0243f8d936be8c9d413926a2a507aa42d29",
+          "role": "style",
+          "note": "Established board terrain material and scale"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Walkable",
+        "sight": "Open",
+        "danger": "None",
+        "interaction": "None",
+        "export": "Opaque full cell floor tile"
+      },
+      "prompt_fields": {
+        "subject": "Low flat overhead underground earth and stone surface, dreamlike pale teal, lavender and warm pearl, scattered tiny mineral and fungal traces. No raised objects.",
+        "contrast": "Distinct at 48px from the other local terrain categories; broad value shapes.",
+        "composition": "Pure overhead full opaque square, even material to all four edges, no perspective or central vignette.",
+        "palette": "Dreamlike soft aqua, violet and pearl, restrained glow",
+        "mechanics": "Flat walkable floor; no implied obstruction or hazard"
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native source identities and mechanics verified in evidence/heart-gloom-20260928/identity.md",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/heart-gloom-20260928/identity.md",
+          "sha256": "b43e13c065626c8709c23ab1b919ff1129fcfca5e07f12c27b8049c837c7393a"
+        }
+      ],
+      "asset_id": "dreamy-creep",
+      "native_name": "UNDERGROUND_CREEP creep",
+      "kind": "terrain-floor",
+      "scope": "heart-gloom dreamy skin L1-L3 only",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/underground_dreamy.lua",
+          "sha256": "7234585796d7e12f5cc5a5a9c36acbd4bf77bdc3c82d0ad488adf5d86db8f598",
+          "line": 36,
+          "anchor": "define_as = \"UNDERGROUND_CREEP\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/mushrooms/creep_dreamy_mushrooms_main_01.png",
+          "sha256": "d2f209dd7c08955559a417c1e87244e4a938787587e938b856308ce44bea3b29",
+          "role": "identity",
+          "note": "Native dreamy creep material"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-korpul-v1/masters/floor-a-v2.png",
+          "sha256": "aa50b00c1a936cb30e29e67e7a24a0243f8d936be8c9d413926a2a507aa42d29",
+          "role": "style",
+          "note": "Established board terrain material and scale"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Walkable",
+        "sight": "Open",
+        "danger": "None",
+        "interaction": "None",
+        "export": "Opaque full cell floor tile"
+      },
+      "prompt_fields": {
+        "subject": "Low carpet of mushroom creep spreading over underground earth, luminous soft turquoise, lilac and pearly blue; organic caps and tendrils lie close to ground.",
+        "contrast": "Distinct at 48px from the other local terrain categories; broad value shapes.",
+        "composition": "Pure overhead full opaque square, even material to all four edges, no perspective or central vignette.",
+        "palette": "Dreamlike soft aqua, violet and pearl, restrained glow",
+        "mechanics": "Flat walkable floor; no implied obstruction or hazard"
+      }
+    },
+    {
+      "gate": "ready",
+      "gate_reason": "Native source identities and mechanics verified in evidence/heart-gloom-20260928/identity.md",
+      "max_attempts": 1,
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/heart-gloom-20260928/identity.md",
+          "sha256": "b43e13c065626c8709c23ab1b919ff1129fcfca5e07f12c27b8049c837c7393a"
+        }
+      ],
+      "asset_id": "dreamy-vegetation",
+      "native_name": "UNDERGROUND_TREE vegetation",
+      "kind": "terrain-prop",
+      "scope": "heart-gloom dreamy skin L1-L3 only",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/grids/underground_dreamy.lua",
+          "sha256": "7234585796d7e12f5cc5a5a9c36acbd4bf77bdc3c82d0ad488adf5d86db8f598",
+          "line": 66,
+          "anchor": "define_as = \"UNDERGROUND_TREE\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/terrain/mushrooms/dreamy_mushroom_01_trunk.png",
+          "sha256": "9f19987bece675a900a861fc4feecb5dcdb69fcb1ae0090af7c8d09ebaf0f821",
+          "role": "identity",
+          "note": "Native dreamy vegetation material"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/terrain-daikara-v1/selected/prop-mountain-wall.png",
+          "sha256": "f01581cb4eb898ecf2cdf628670b334b9ffc307aee2199e7827844592971024a",
+          "role": "style",
+          "note": "Established board terrain material and scale"
+        }
+      ],
+      "grid_contract": {
+        "movement": "Blocks with pass_tree only",
+        "sight": "Blocks",
+        "danger": "None",
+        "interaction": "Dig to UNDERGROUND_FLOOR",
+        "export": "Transparent complete wall prop"
+      },
+      "prompt_fields": {
+        "subject": "Dense raised thick fungal vegetation barrier, clustered stout trunks and large overlapping mushroom caps, pale aqua, lilac and glowing cream caps. A solid opaque wall silhouette with visible height and shadow.",
+        "contrast": "Distinct at 48px from the other local terrain categories; broad value shapes.",
+        "composition": "Centered complete single raised wall object with native transparent RGBA margins, no cropping.",
+        "palette": "Dreamlike soft aqua, violet and pearl, restrained glow",
+        "mechanics": "Solid movement and sight wall; no doorway or hazard"
+      }
+    }
+  ]
+}

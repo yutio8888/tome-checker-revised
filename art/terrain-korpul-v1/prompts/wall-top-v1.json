@@ -1,0 +1,21 @@
+{
+  "asset_id": "wall-top-v1",
+  "mode": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Production material component for a modular tabletop dungeon wall. Create ONE seamless continuous ORDINARY WALL TOP texture, square full-bleed opaque PNG, straight orthographic overhead. Match the pale warm-grey limestone ashlar of the reference: broad chunky medium-size rectangular stone blocks, irregular mortar joints, lightly chipped edges within joints, matte hand-painted carved miniature. This is only the continuous horizontal top material, NOT an isolated block: absolutely NO outer silhouette, no outside border/bevel, no vertical side faces, no black/transparent margins, no central object, no cast shadow. Stone surface fills every pixel all the way to every edge and must visually repeat without dark frame or gutter. Medium-light bone-grey stone, restrained grain, soft fixed upper-left illumination of individual roughness, large planes readable when reduced to 128/64 pixels. At most 6-8 large stones in view. No floor props, rubble, moss, writing, symbols, grids or watermark. This painted component will be deterministically clipped by connection masks; do not draw the masks. Single source image.",
+  "references": [
+    "masters/wall-v1.png"
+  ],
+  "original_output_path": "~/.codex/generated_images/01a0e0dd-98a8-7c43-96e4-baeeae650798/exec-c5bc24aa-fa0e-4dcd-b34f-b0151c046a0c.png",
+  "selection": "selected-production-component",
+  "processing": "Original preserved byte-for-byte; deterministic terrain compositing may crop/sample painted components without rotation.",
+  "rejection_reason": null,
+  "sha256": "0a3ce0291ea740979b1d1f72ce4718b2aaa24b6b5c36cdfba3fafee6bfc3bf56",
+  "byte_identical": true,
+  "metrics": {
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGB"
+  }
+}

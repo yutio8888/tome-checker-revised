@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-m-6",
+  "assets": [
+    {
+      "asset_id": "greater-faeros",
+      "native_name": "greater faeros",
+      "scope": "charred-scar, noxious-caldera, mark-spellblaze, renegade-pyromancers vault (random_filter by name), infinite-dungeon and other faeros.lua loaders (elemental/fire, default-name image, non-unique, no define_as, no nice_tile)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/faeros.lua",
+          "sha256": "8828674803648a338924a957c0f76b0fbbf43c0259b2c7a412a7f2ddfb9cfb42",
+          "line": 71,
+          "anchor": "name = \"greater faeros\", color=colors.ORANGE"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_fire_greater_faeros.png",
+          "sha256": "d5de074aed3abd210d5cbc7121eab8fad698eb7438d553208edb304d6f3ada93",
+          "role": "identity",
+          "note": "Native shape: a burly flame figure with a tall flame crest and long hanging claws."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-m-3/fyrk/imagegen-calls/call-1/export-128.png",
+          "sha256": "6dacd202be43cb34c4396fda3e590f5d0b7a5d8dbd33f6d7ad326cfeb857f59b",
+          "role": "family",
+          "note": "Fyrk token already made (broad hulking crimson-scarlet flame guardian, heavy shoulders): the greater faeros must NOT resemble it; it is a taller, lighter, more upright golden-orange figure with a single tall plume and a trailing flame mantle."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A greater fire elemental seen from a steep overhead three-quarter angle, drawn compact: an upright, tall-standing humanoid of flame in bright golden-orange and yellow with a white-yellow core, a moderately wide chest, both long arms held forward at mid height with open clawed hands of flame, a single tall narrow plume of flame rising from the head, an incandescent white-yellow face with two dark ember eyes, and a long flowing mantle of flame streaming behind and beside the shoulders. Taller and lighter than a hulking brute. Blazing and complete.",
+        "contrast": "Fire elementals: the plain faeros is a lean X-shaped figure with arms flung wide in bright orange; the greater faeros is the UPRIGHT golden-orange one with arms forward, one tall head plume and a flame mantle (silhouette: single vertical plume, forward claws, trailing mantle; hue: golden-yellow-orange; value: light). Fyrk is a hulking heavy-shouldered crimson-scarlet guardian; do not draw a broad burly body or a crimson tone.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. Calibration from the previous generation of this exact token: it drew flame plumes and the crest reaching past the edge of the disc, so the token could not be exported. This time draw the figure markedly smaller and tighter: the ENTIRE figure, every flame lick included, fits inside a circle of about two thirds of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side.",
+        "palette": "Deep orange and amber flame with a bright yellow-white core and face; nothing darker than mid tone except the two ember eyes; the flame must not cast orange light, glow or warm cast onto the disc, which stays neutral charcoal. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=greater faeros, define_as=None, type=elemental/subtype=fire, unique=False); details and hashes in evidence/monster-batch-m-20260929/source-contracts.json. base BASE_NPC_FAEROS (elemental/fire, no image=); no image=/nice_tile/add_mos/shader/anim/moddable_tile/tint on the leaf or its base; generic actor.image==entry.image single path; NPC.lua:33 default-name image gives elemental_fire_greater_faeros.png (64x64, NOT tall: the tall body belongs to ultimate faeros); Fiery Hands is a sustain started by sustains_at_birth but it only attaches two shader particle emitters (enhancement.lua:69, no type/subtype/image/add_mos/shader write). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-m-20260929/source-contracts.json",
+          "sha256": "e1e1ce2bb74930aee311c48add949ac79706f0b7cf006cd96c4a2efee123d992"
+        }
+      ]
+    }
+  ]
+}

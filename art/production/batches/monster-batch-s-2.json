@@ -1,0 +1,228 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-s-2",
+  "assets": [
+    {
+      "asset_id": "argoniel",
+      "native_name": "Argoniel",
+      "scope": "charred-scar (zones/charred-scar/npcs.lua:218, humanoid/human, define_as ARGONIEL, rank 5, invulnerable static sorcerer, placed by maps/zones/charred-scar.lua:29; explicit nice_tile tall body 64x128) and the identical High Peak final boss (zones/high-peak/npcs.lua:146, same name, define_as, type, image and tall body, outside the 47 surveyed zones); NOT unique in either definition, so the entry carries native_tall=true and binds ARGONIEL",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/charred-scar/npcs.lua",
+          "sha256": "870f0a44be585b992883d7353760e9b362df10daf674e1b042d4edf6ddfdcb87",
+          "line": 219,
+          "anchor": "define_as = \"ARGONIEL\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/charred-scar/npcs.lua",
+          "sha256": "870f0a44be585b992883d7353760e9b362df10daf674e1b042d4edf6ddfdcb87",
+          "line": 221,
+          "anchor": "name = \"Argoniel\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/charred-scar/npcs.lua",
+          "sha256": "870f0a44be585b992883d7353760e9b362df10daf674e1b042d4edf6ddfdcb87",
+          "line": 225,
+          "anchor": "image=\"npc/humanoid_human_argoniel.png\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/charred-scar/npcs.lua",
+          "sha256": "870f0a44be585b992883d7353760e9b362df10daf674e1b042d4edf6ddfdcb87",
+          "line": 264,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/zones/high-peak/npcs.lua",
+          "sha256": "a92fb0a13938f79b0c2725a6c004f24a557ac139920af5f4790d4b998a448d02",
+          "line": 144,
+          "anchor": "define_as = \"ARGONIEL\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_argoniel.png",
+          "sha256": "5ab342fdfb1fc2598350dd6509e0e18db6e25ceef3dfcf17ad1b56a83ea4d482",
+          "role": "identity",
+          "note": "Native shape (64x128 tall body): a woman in a violet hood and long robe holding a glowing sword and a tall staff."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/elven-mage.png",
+          "sha256": "3d099f653967cad13e370dbde07c57fb242f23659e352ba8d28d8f01541cc040",
+          "role": "family",
+          "note": "Shipped elven mage (purple-robed elf standing upright with a vertical staff): no sorcerer token may be a purple robed figure with a vertical staff."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Argoniel seen from a steep overhead three-quarter angle: a female human sorcerer LEANING FORWARD mid-cast, a plum-violet hood up over her head with her pale face and determined mouth visible and a long dark braid swinging, cream-and-plum long robes with gold trim and a gold sash, BOTH HANDS thrust forward together holding one bright glowing AMBER-WHITE FIRE SPHERE at chest height, a short staff with an amber crystal head slung DIAGONALLY across her back (the staff head no higher than her hood), the robe hem flaring round pointed boots. Poised, forward-leaning and complete.",
+        "contrast": "Robed casters: ARGONIEL is a FORWARD-LEANING compact figure with a big bright FIRE SPHERE between both hands and a short staff DIAGONAL across the back, plum and cream (silhouette: leaning mass with a bright sphere out front, no vertical staff line; hue: plum-violet, cream and amber; value: mid-light with a bright sphere). The shipped elven mage is an UPRIGHT purple robed elf with a VERTICAL staff: this must not be an upright purple robe with a vertical staff. Elandar is an upright red-caped figure with two crossed staves; Mindworm is a cross-legged floating psion.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, staffs, capes and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, cape end or bandage tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Plum-violet hood and robe in a mid-light value with lilac highlight planes, cream underdress and gold trim, pale skin, dark braid, bright amber-white fire sphere and amber crystal; nothing darker than dark plum except the eyes; the fire sphere must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Argoniel, define_as=ARGONIEL, type=humanoid/subtype=human, unique=False, native_tall=True); details and hashes in evidence/monster-batch-s-20260929/source-contracts.json. no base (humanoid/human on the leaf); NPC.lua:33 default-name image on the leaf; resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/<type>_<subtype>_<name>.png\", display_h=2, display_y=-1}}} (an explicit tall body, keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique so the catalog entry carries native_tall=true; sorcerers faction, invulnerable; resolvers.equip staff and cloth armour (equipment only); talents Flame, Freeze, Lightning, Manathrust, Inferno, Flameshock, Stone Skin, Strike, Heal, Regeneration, Illuminate, Spellcraft, Arcane Power, Metaflow, Phase Door, Essence of Speed; resolvers.sustains_at_birth() starts the sustained ones (Stone Skin, Illuminate, Spellcraft, Arcane Power and similar: temporary values and particles only); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-s-20260929/source-contracts.json",
+          "sha256": "f6556ef4ac78f044ee83f4d27ed60d1586fa243b923da96651cade0aa5ba49a2"
+        }
+      ]
+    },
+    {
+      "asset_id": "elandar",
+      "native_name": "Elandar",
+      "scope": "charred-scar (zones/charred-scar/npcs.lua:160, humanoid/shalore, define_as ELANDAR, rank 5, invulnerable static sorcerer, placed by maps/zones/charred-scar.lua:28; explicit nice_tile tall body 64x128) and the identical High Peak final boss (zones/high-peak/npcs.lua:56, same name, define_as, type, image and tall body, outside the 47 surveyed zones); NOT unique in either definition, so the entry carries native_tall=true and binds ELANDAR",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/charred-scar/npcs.lua",
+          "sha256": "870f0a44be585b992883d7353760e9b362df10daf674e1b042d4edf6ddfdcb87",
+          "line": 161,
+          "anchor": "define_as = \"ELANDAR\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/charred-scar/npcs.lua",
+          "sha256": "870f0a44be585b992883d7353760e9b362df10daf674e1b042d4edf6ddfdcb87",
+          "line": 163,
+          "anchor": "name = \"Elandar\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/charred-scar/npcs.lua",
+          "sha256": "870f0a44be585b992883d7353760e9b362df10daf674e1b042d4edf6ddfdcb87",
+          "line": 166,
+          "anchor": "image=\"npc/humanoid_shalore_elandar.png\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/charred-scar/npcs.lua",
+          "sha256": "870f0a44be585b992883d7353760e9b362df10daf674e1b042d4edf6ddfdcb87",
+          "line": 205,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/zones/high-peak/npcs.lua",
+          "sha256": "a92fb0a13938f79b0c2725a6c004f24a557ac139920af5f4790d4b998a448d02",
+          "line": 54,
+          "anchor": "define_as = \"ELANDAR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_shalore_elandar.png",
+          "sha256": "563b422a49a4964d7ac5f2ea98b6393b841de02ceb992108e23d8e97a7b7523a",
+          "role": "identity",
+          "note": "Native shape (64x128 tall body): a gaunt elf in a red cloak and dark tunic holding two glowing staves."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/elven-blood-mage.png",
+          "sha256": "0efe8e1f3d17184bec736ad841f1cd8f38ea8b6f3d9019b8e170b9bb1f37dd32",
+          "role": "family",
+          "note": "Shipped elven blood mage (grey-robed elf with blood-red streaks, hands lowered): Elandar must not be a grey robed elf with lowered hands."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Elandar seen from a steep overhead three-quarter angle: a gaunt elegant male shalore sorcerer standing upright, a tall pointed high collar and a spiked silver circlet on long white hair, a deep BRIGHT CRIMSON cloak flaring out behind him in a wide TRIANGULAR FAN, a teal-and-cream tunic with silver clasps beneath, pale skin and a stern narrow face, TWO SHORT STAVES held CROSSED IN AN X in front of his chest, one topped with a glowing pale blue crystal and the other with a glowing green crystal, both staff heads no higher than his shoulders. Severe, upright, crimson and complete.",
+        "contrast": "Robed casters: ELANDAR is an UPRIGHT figure with a wide CRIMSON CLOAK FAN behind and TWO STAVES CROSSED IN AN X on the chest (silhouette: triangular cape fan plus an X of two short lines with glowing tips; hue: bright crimson, teal and cream with blue and green crystals; value: mid with a bright cape). Argoniel is a forward-leaning plum and cream caster holding a fire sphere; the shipped elven mage is a purple robed elf with one vertical staff; the shipped elven blood mage is a grey robed elf with lowered hands.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, staffs, capes and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, cape end or bandage tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Bright saturated crimson cloak in a mid value with pinkish-red highlight planes, teal-and-cream tunic, silver clasps and circlet, white hair, pale skin, pale blue and green crystals; nothing darker than dark red-brown except the eyes; the crystals must not glow onto or tint the disc; keep the cloak a bright crimson rather than maroon or black. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Elandar, define_as=ELANDAR, type=humanoid/subtype=shalore, unique=False, native_tall=True); details and hashes in evidence/monster-batch-s-20260929/source-contracts.json. no base (humanoid/shalore on the leaf); NPC.lua:33 default-name image on the leaf; resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/<type>_<subtype>_<name>.png\", display_h=2, display_y=-1}}} (an explicit tall body, keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique so the catalog entry carries native_tall=true; sorcerers faction, invulnerable; resolvers.equip staff and cloth armour (equipment only); talents Flame, Freeze, Lightning, Manathrust, Inferno, Flameshock, Stone Skin, Strike, Heal, Regeneration, Illuminate, Spellcraft, Arcane Power, Metaflow, Phase Door, Essence of Speed; resolvers.sustains_at_birth() starts the sustained ones (temporary values and particles only); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-s-20260929/source-contracts.json",
+          "sha256": "f6556ef4ac78f044ee83f4d27ed60d1586fa243b923da96651cade0aa5ba49a2"
+        }
+      ]
+    },
+    {
+      "asset_id": "mindworm",
+      "native_name": "Mindworm",
+      "scope": "noxious-caldera (zones/noxious-caldera/npcs.lua:37, unique, define_as MINDWORM, humanoid/thalore, rank 3.5, no base, default-name image); placed by zones/noxious-caldera/zone.lua:110 makeEntityByName; single definition; auto_classes Solipsist from level 25",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/noxious-caldera/npcs.lua",
+          "sha256": "77995a401f45f1cce22907cf02e926f36523a495e6258004b3c2d72bd9545074",
+          "line": 37,
+          "anchor": "define_as = \"MINDWORM\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/noxious-caldera/npcs.lua",
+          "sha256": "77995a401f45f1cce22907cf02e926f36523a495e6258004b3c2d72bd9545074",
+          "line": 40,
+          "anchor": "name = \"Mindworm\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/noxious-caldera/npcs.lua",
+          "sha256": "77995a401f45f1cce22907cf02e926f36523a495e6258004b3c2d72bd9545074",
+          "line": 82,
+          "anchor": "auto_classes={"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_thalore_mindworm.png",
+          "sha256": "1fd0509c90267ad433e1b5bd15799a60ab2281c6765682e96c5fe8c02e18f3e1",
+          "role": "identity",
+          "note": "Native shape (64x64): a thin thalore in dark teal robes with a spiked collar standing with arms at his sides."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/necromancer.png",
+          "sha256": "6807e8a467ab87d4a6b3d87206296c94dc93db38683ae531c4ee7499721ef736",
+          "role": "family",
+          "note": "Shipped necromancer (grey hooded human with a staff): Mindworm must not be a grey hooded standing caster."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Mindworm seen from a steep overhead three-quarter angle: a thin pale thalore psion LEVITATING CROSS-LEGGED a hand above the ground, hands open and resting on his knees, vacant pale eyes staring past the viewer and long pale-blond hair hanging over his shoulders, a SAGE-GREEN and cream hooded robe with a spiked collar of pale leaf-like blades, TWO glowing pale teal crystal mindstars floating close beside his head, one on each side, at about shoulder height. Vacant, still, floating and complete.",
+        "contrast": "Robed casters: MINDWORM is a ROUND CROSS-LEGGED FLOATING figure with two orbiting crystals, sage green and cream (silhouette: one low round mass with a small head and two bright dots beside it; hue: sage green, cream and pale teal; value: mid-light). Argoniel leans forward with a fire sphere; Elandar is an upright red-caped figure with crossed staves; the shipped necromancer is a grey hooded standing caster with a staff.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, staffs, capes and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, staff head, cape end or bandage tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Sage-green robe in a mid-light value with pale celadon highlight planes, cream underrobe and collar blades, pale skin, pale-blond hair, pale teal crystals; nothing darker than dark sage-green except the eyes; the crystals must not glow onto or tint the disc; keep the robe sage green rather than dark teal. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Mindworm, define_as=MINDWORM, type=humanoid/subtype=thalore, unique=True, native_tall=False); details and hashes in evidence/monster-batch-s-20260929/source-contracts.json. no base (humanoid/thalore on the leaf, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip mindstars (PSIONIC_FURY), amulet, rings and light armour (equipment only, no moddable_tile); talents Sleep, Mind Sear, Solipsism, Feedback Loop, Backlash, Forge Shield, Forge Armor, Biofeedback, Resonance Field, Amplification, Conversion, Psychic Lobotomy, Synaptic Static; no sustains_at_birth; auto_classes Solipsist (see runtime_mutation_scan). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-s-20260929/source-contracts.json",
+          "sha256": "f6556ef4ac78f044ee83f4d27ed60d1586fa243b923da96651cade0aa5ba49a2"
+        }
+      ]
+    }
+  ]
+}
