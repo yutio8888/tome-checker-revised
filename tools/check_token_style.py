@@ -296,7 +296,7 @@ def check_asset(token_path: Path | None, master_path: Path | None = None,
     # not inherit the id-only historical policy above, and never excuse alpha,
     # disc geometry or an unrelated finding.
     waiver_dir = Path(__file__).resolve().parents[1] / 'art/production/waivers'
-    for batch in ('monster-batch-a', 'monster-batch-b', 'monster-batch-d', 'monster-batch-e', 'monster-batch-f', 'monster-batch-g', 'monster-batch-h', 'monster-batch-i', 'monster-batch-j', 'monster-batch-k', 'monster-batch-l', 'monster-batch-m', 'monster-batch-n', 'monster-batch-o', 'monster-batch-p', 'monster-batch-q', 'monster-batch-r', 'monster-batch-s', 'monster-batch-t', 'monster-batch-u', 'monster-batch-v', 'monster-batch-w', 'monster-batch-x', 'monster-batch-y'):
+    for batch in ('monster-batch-a', 'monster-batch-b', 'monster-batch-d', 'monster-batch-e', 'monster-batch-f', 'monster-batch-g', 'monster-batch-h', 'monster-batch-i', 'monster-batch-j', 'monster-batch-k', 'monster-batch-l', 'monster-batch-m', 'monster-batch-n', 'monster-batch-o', 'monster-batch-p', 'monster-batch-q', 'monster-batch-r', 'monster-batch-s', 'monster-batch-t', 'monster-batch-u', 'monster-batch-v', 'monster-batch-w', 'monster-batch-x', 'monster-batch-y', 'monster-batch-z', 'monster-batch-aa', 'monster-batch-ab', 'monster-batch-ac'):
         waiver_path = waiver_dir / (batch + '.json')
         if not (blocking and token_metrics is not None and waiver_path.is_file()):
             continue

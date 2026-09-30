@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-z-5",
+  "assets": [
+    {
+      "asset_id": "orb-weaver",
+      "native_name": "orb weaver",
+      "scope": "unhallowed-morass pool and the orb spinner's escort (zones/unhallowed-morass/npcs.lua:73, spiderkin/spider, non-unique, no define_as, rank 1, base BASE_NPC_SPIDER, default-name image); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/unhallowed-morass/npcs.lua",
+          "sha256": "10dac055e54c6f7a92c43c8a278caca4b7d51d0c4b002a165ad5a714bf4fec52",
+          "line": 74,
+          "anchor": "name = \"orb weaver\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/unhallowed-morass/npcs.lua",
+          "sha256": "10dac055e54c6f7a92c43c8a278caca4b7d51d0c4b002a165ad5a714bf4fec52",
+          "line": 82,
+          "anchor": "T_LAY_WEB"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 43,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_SPIDER\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_orb_weaver.png",
+          "sha256": "91ef610a1b50b3460e49fe4ccc9efaef0722a72a3b7d1dbc62815769e174fc83",
+          "role": "identity",
+          "note": "Native shape (64x64): a big frost-blue and white spider with translucent pale legs and a bulky rounded body, seen from the front. Keep the big pale frosty spider, and give it a round orb-web abdomen patterned in concentric silver rings, pale frost-blue and white, long thin banded legs."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-z/refs/spiders.png",
+          "sha256": "41531103c6c0a56368af24832d33495731c597ac97e270b7a0cacb65b6a54c57",
+          "role": "family",
+          "note": "Six shipped spider tokens (small blue-white striped weaver hatchling, blue swirl weaver young, cream-and-gold weaver queen, the deep cobalt weaver patriarch with a white chevron and gold echoes, grey giant spider, brown spitting spider): the orb weaver is a PALE FROST-BLUE and white spider with a big round abdomen patterned in CONCENTRIC silver rings like an orb web, a small head with glinting eyes and eight long thin banded legs splayed wide, with fine white silk strands; not deep cobalt, not chevron-marked, not grey and not a small swirl ball."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orb weaver seen from a steep overhead three-quarter angle: a large spider facing the lower left with a big round BULBOUS ABDOMEN in pale FROST-BLUE and white in a light value, marked with bold CONCENTRIC CIRCULAR RINGS of silver and pale sky-blue like a spun orb web with a bright white centre spot, a smaller pale-blue head-thorax with several glinting pale eyes and small fangs, eight long thin LEGS banded in pale ice-blue and steel-blue and splayed wide (every leg tip inside the disc), a few fine white SILK STRANDS trailing from the spinnerets and curling close to the body, a bright pale rim light along the outline. Pale, ringed, long-legged and complete.",
+        "contrast": "Spiders: the ORB WEAVER is the PALE FROST-BLUE SPIDER with a big round abdomen of concentric silver rings and long thin banded legs (silhouette: a round ringed abdomen behind a small head with eight long thin legs splayed wide; hue: pale frost-blue, white and silver; value: light). The shipped weaver patriarch is a deep cobalt-sapphire spider with a white chevron and golden echoes, the weaver hatchling and young are small blue-white swirl balls, the weaver queen cream and gold, the giant spider grey and the spitting spider brown: this must not be deep blue, not chevron-marked, not a small swirl ball, not cream and not grey.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Pale frost-blue, white and silver in a light value with steel-blue leg bands and a bright rim light, faint white silk; nothing darker than mid steel-blue except the eye pits and thin seams; NO black chitin; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orb weaver, define_as=None, type=spiderkin/subtype=spider, unique=False, native_tall=False); details and hashes in evidence/monster-batch-z-20260930/source-contracts.json. base BASE_NPC_SPIDER (spiderkin/spider, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; the base resolvers.sustains_at_birth() has no sustained talent to start here (Lay Web and Spider Web are activated, Spin Fate is not learned by this leaf); two base infusion inscriptions (an invisibility infusion would apply a shader-based effect only while active, and the matcher rejects it then); no equip, no auto_classes; the orb spinner and Weaver Queen escorts build this same leaf. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-z-20260930/source-contracts.json",
+          "sha256": "0ee69e14bae435695fed2f0346b4e3622faad0626483479b2f22750f6c633596"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "black-mamba": 85.69,
+    "bandit-lord": 76.76,
+    "orb-weaver": 115.93,
+    "elven-elite-warrior": 78.55,
+    "ultimate-telugoroth": 161.42,
+    "greater-teluvorta": 100.16,
+    "runed-bone-giant": 110.12,
+    "void-horror": 107.36,
+    "swarming-horror": 91.13,
+    "ravenous-horror": 102.35,
+    "rogue-sapper": 82.36,
+    "fire-wyrm": 77.29
+  },
+  "floors": {
+    "cave rock (unremarkable-cave, thieves-tunnels)": 130.64,
+    "bog (unhallowed-morass)": 107.35,
+    "grass (lake-nur, maze)": 108.97,
+    "caldera (noxious-caldera)": 96.54,
+    "burnt ground (charred-scar, demon-plane)": 72.7,
+    "gothic stone (crypt-kryl-feijan)": 145.44,
+    "void floor (temporal-rift)": 163.25,
+    "underwater floor (lake-nur)": 129.4,
+    "korpul stone A (bandit-fortress-like)": 131.79,
+    "rak-shor floor (rak-shor-pride)": 163.04
+  },
+  "zone_floors": {
+    "black-mamba": {
+      "cave rock (unremarkable-cave, thieves-tunnels)": 130.64,
+      "grass (lake-nur, maze)": 108.97,
+      "caldera (noxious-caldera)": 96.54
+    },
+    "bandit-lord": {
+      "cave rock (unremarkable-cave, thieves-tunnels)": 130.64,
+      "grass (lake-nur, maze)": 108.97,
+      "korpul stone A (bandit-fortress-like)": 131.79
+    },
+    "rogue-sapper": {
+      "cave rock (unremarkable-cave, thieves-tunnels)": 130.64,
+      "grass (lake-nur, maze)": 108.97,
+      "korpul stone A (bandit-fortress-like)": 131.79
+    },
+    "orb-weaver": {
+      "bog (unhallowed-morass)": 107.35
+    },
+    "elven-elite-warrior": {
+      "gothic stone (crypt-kryl-feijan)": 145.44
+    },
+    "ultimate-telugoroth": {
+      "void floor (temporal-rift)": 163.25
+    },
+    "greater-teluvorta": {
+      "void floor (temporal-rift)": 163.25
+    },
+    "runed-bone-giant": {
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "void-horror": {
+      "void floor (temporal-rift)": 163.25
+    },
+    "swarming-horror": {
+      "underwater floor (lake-nur)": 129.4
+    },
+    "ravenous-horror": {
+      "underwater floor (lake-nur)": 129.4
+    },
+    "fire-wyrm": {
+      "burnt ground (charred-scar, demon-plane)": 72.7
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

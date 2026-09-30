@@ -1,0 +1,324 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-aa-1",
+  "assets": [
+    {
+      "asset_id": "ultimate-faeros",
+      "native_name": "ultimate faeros",
+      "scope": "charred-scar pool (general/npcs/faeros.lua:86, elemental/fire, non-unique, no define_as, rank 3, base BASE_NPC_FAEROS, nice_tile tall body); the renegade-pyromancers vault builds the same leaf by name (its random-boss variant stays native as a non-unique tall boss); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/faeros.lua",
+          "sha256": "8828674803648a338924a957c0f76b0fbbf43c0259b2c7a412a7f2ddfb9cfb42",
+          "line": 87,
+          "anchor": "name = \"ultimate faeros\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/faeros.lua",
+          "sha256": "8828674803648a338924a957c0f76b0fbbf43c0259b2c7a412a7f2ddfb9cfb42",
+          "line": 89,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/faeros.lua",
+          "sha256": "8828674803648a338924a957c0f76b0fbbf43c0259b2c7a412a7f2ddfb9cfb42",
+          "line": 101,
+          "anchor": "T_FIERY_HANDS"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/faeros.lua",
+          "sha256": "8828674803648a338924a957c0f76b0fbbf43c0259b2c7a412a7f2ddfb9cfb42",
+          "line": 105,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/faeros.lua",
+          "sha256": "8828674803648a338924a957c0f76b0fbbf43c0259b2c7a412a7f2ddfb9cfb42",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_FAEROS\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_fire_ultimate_faeros.png",
+          "sha256": "478a5bfd2359859fbb0cdd3e1f537f805a44c9f32ca36c7f5f100a9324c32055",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a tall orange flame spirit with a glowing yellow face, arms hanging and a tapering flame tail instead of legs. Keep the legless tall flame spirit with the glowing face and the tapering flame tail, drawn as ONE compact figure filling the disc, no tall canvas, as a white-hot colossus clearly different from the shipped faeros and greater faeros."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-aa/refs/faeros.png",
+          "sha256": "b914f22978212255fea8a7b5baab077a008c7a895fab726204742dd71f1fac8b",
+          "role": "family",
+          "note": "Two shipped faeros tokens (the faeros: a thin orange-red flame figure with legs and arms flung wide in an X; the greater faeros: a bulkier orange flame giant with legs): the ultimate faeros is a LEGLESS fire spirit, a blazing WHITE-HOT and pale-gold core torso with a fierce bright face, a crown of seven tall flame plumes, two long thick flame arms hanging in front and a heavy tapering flame TAIL that spirals once around the base and curls up like a comma, with only the outer fringe orange; not an orange figure with legs and not an X-shaped pose."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An ultimate faeros seen from a steep overhead three-quarter angle: a colossal LEGLESS FIRE SPIRIT rising from the disc as one compact upright column: a blazing WHITE-HOT and pale-gold core torso with a fierce face with two bright white-gold eyes and a snarling mouth, a tall crown of seven curling flame plumes, two long thick arms of living flame hanging in front of the body ending in crackling molten-gold hands, and instead of legs a heavy tapering TAIL of flame that spirals once around the base and curls up in front like a comma; the outer flame fringe and plume tips are bright ORANGE and vivid red-orange, the flames have crisp readable tongue shapes with lighter inner edges, a ring of small pale-gold embers around the base, a thin bright pale-yellow rim light. Luminous, legless, crowned and complete.",
+        "contrast": "Fire elementals: the ULTIMATE FAEROS is the LEGLESS WHITE-HOT flame colossus with a spiral tail and a seven-plume crown (silhouette: a single upright column with a comma-curled tail and no legs; hue: white-gold core with an orange fringe; value: very bright with red-orange tips). The shipped faeros is a thin orange-red flame figure with legs and arms flung wide in an X, and the greater faeros a bulkier orange flame giant with legs: this must not have legs, must not be an X pose and must not be plain orange.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "White-hot and pale-gold core, bright orange and red-orange flame fringe, pale-gold embers, a thin bright pale-yellow rim; no smoke, no black char, no lava, no dark red body; the fire glow stays on the body and must not tint, light or warm the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ultimate faeros, define_as=None, type=elemental/subtype=fire, unique=False, native_tall=True); details and hashes in evidence/monster-batch-aa-20260930/source-contracts.json. base BASE_NPC_FAEROS (elemental/fire, no image=, no shader, no sustains_at_birth in the base); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/elemental_fire_ultimate_faeros.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the single image is used); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; the leaf calls resolvers.sustains_at_birth() and Fiery Hands is its only sustain (hand particles and temporary values only); on_melee_hit fire damage only; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-aa-20260930/source-contracts.json",
+          "sha256": "675cf3a99eb14c8214abbbcc4be9e636c94f266e91f95c4a7d99ab66ba72d148"
+        }
+      ]
+    },
+    {
+      "asset_id": "ultimate-teluvorta",
+      "native_name": "ultimate teluvorta",
+      "scope": "temporal-rift pool (general/npcs/telugoroth.lua:207, elemental/temporal, non-unique, no define_as, rank 3, base BASE_NPC_TELUGOROTH, nice_tile tall body); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/telugoroth.lua",
+          "sha256": "fcf2030c5402a281b547960dab5baf9e7e5eb2aa3a6c868deec51cb8bd36c263",
+          "line": 208,
+          "anchor": "name = \"ultimate teluvorta\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/telugoroth.lua",
+          "sha256": "fcf2030c5402a281b547960dab5baf9e7e5eb2aa3a6c868deec51cb8bd36c263",
+          "line": 210,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/telugoroth.lua",
+          "sha256": "fcf2030c5402a281b547960dab5baf9e7e5eb2aa3a6c868deec51cb8bd36c263",
+          "line": 226,
+          "anchor": "T_REALITY_SMEARING"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/telugoroth.lua",
+          "sha256": "fcf2030c5402a281b547960dab5baf9e7e5eb2aa3a6c868deec51cb8bd36c263",
+          "line": 232,
+          "anchor": "doTeluvortaSwap()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/telugoroth.lua",
+          "sha256": "fcf2030c5402a281b547960dab5baf9e7e5eb2aa3a6c868deec51cb8bd36c263",
+          "line": 229,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/telugoroth.lua",
+          "sha256": "fcf2030c5402a281b547960dab5baf9e7e5eb2aa3a6c868deec51cb8bd36c263",
+          "line": 65,
+          "anchor": "define_as = \"BASE_NPC_TELUGOROTH\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_temporal_ultimate_teluvorta.png",
+          "sha256": "3c63baa2e9ce84b0e68455b414cb7d1301b2c704791210f607d802e2059259c0",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a tall irregular cloud of blue and violet nebula with pale star flecks and glowing cracks. Keep the tall churning cosmic blue nebula with star flecks and cracks, drawn as ONE compact figure filling the disc, no tall canvas, as a collapsing hourglass-shaped vortex clearly different from the shipped teluvorta tiers."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-aa/refs/teluvorta.png",
+          "sha256": "b5d3a381aa862a83c2772c9740dfc13911e1baa6856aed7574f4165a774bb91d",
+          "role": "family",
+          "note": "Four shipped temporal tokens (the teluvorta: a spiky violet crystal-urchin ball; the greater teluvorta: a dark-violet storm cloud crowned with six ivory horns; the ultimate telugoroth: a gold eight-point starburst; the void horror: a lens-shaped indigo spacetime tear with a silver border): the ultimate teluvorta is a tall collapsing HOURGLASS-SHAPED VORTEX of luminous COBALT-BLUE and bright CYAN nebula sand, two spinning funnels meeting at a blazing white-cyan pinch point, orbited by three broken silver-gold rings and falling glass shards; not violet, not spiky, not horned, not a starburst and not a lens-shaped tear."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An ultimate teluvorta seen from a steep overhead three-quarter angle: a colossal collapsing HOURGLASS-SHAPED VORTEX of time and space standing upright on the disc as one compact figure: two spinning funnels of luminous COBALT-BLUE and bright CYAN nebula sand, one above and one below, meeting at a blazing white-cyan pinch point in the middle, silver star-flecks scattered through the cloud and glowing pale-blue cracks running across it, three broken bright silver-gold RINGS (thin arcs with small tick marks, no numerals or letters) orbiting the vortex at different tilts, a few falling glass-like SILVER shards, a thin bright pale-cyan rim light. Collapsing, blue, ringed and complete.",
+        "contrast": "Temporal elementals: the ULTIMATE TELUVORTA is the COBALT-AND-CYAN HOURGLASS VORTEX with a white-cyan pinch point and orbiting broken rings (silhouette: an upright double funnel pinched in the middle with arcs around it; hue: cobalt blue, cyan and silver; value: mid-light with a bright centre). The shipped teluvorta is a spiky violet crystal ball, the greater teluvorta a dark-violet storm cloud with six ivory horns, the ultimate telugoroth a gold starburst, and the void horror a lens-shaped indigo tear: this must not be violet, spiky, horned, star-shaped or a lens.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Mid-light cobalt blue and bright cyan nebula with silver star-flecks, a white-cyan pinch point, silver-gold rings and a bright rim; nothing darker than mid cobalt except thin cracks; NO black or near-black cloud, no violet body; the glow stays in the vortex and must not tint or light the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ultimate teluvorta, define_as=None, type=elemental/subtype=temporal, unique=False, native_tall=True); details and hashes in evidence/monster-batch-aa-20260930/source-contracts.json. base BASE_NPC_TELUGOROTH (elemental/temporal, no image=, no shader); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/elemental_temporal_ultimate_teluvorta.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the single image is used); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; the leaf calls resolvers.sustains_at_birth() and Reality Smearing is its only sustain (shield particle and temporary values only); on_act may call doTeluvortaSwap (a position swap, no display write); no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-aa-20260930/source-contracts.json",
+          "sha256": "675cf3a99eb14c8214abbbcc4be9e636c94f266e91f95c4a7d99ab66ba72d148"
+        }
+      ]
+    },
+    {
+      "asset_id": "dredge-captain",
+      "native_name": "dredge captain",
+      "scope": "temporal-rift pool (general/npcs/horror_temporal.lua:98, horror/temporal, non-unique, no define_as, rank 3, base BASE_NPC_HORROR_TEMPORAL, default-name image); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_temporal.lua",
+          "sha256": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+          "line": 101,
+          "anchor": "name = \"dredge captain\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_temporal.lua",
+          "sha256": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+          "line": 114,
+          "anchor": "make_escort"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_temporal.lua",
+          "sha256": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+          "line": 122,
+          "anchor": "T_DREDGE_FRENZY"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_temporal.lua",
+          "sha256": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+          "line": 118,
+          "anchor": "resolvers.inscriptions(1, {\"shielding rune\"})"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_temporal.lua",
+          "sha256": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR_TEMPORAL\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_temporal_dredge_captain.png",
+          "sha256": "82b0f0857a18b729aa5a0ebf8bcbf35f309bbd8baba1b6f487e340662a7bd810",
+          "role": "identity",
+          "note": "Native shape (64x64): a thin pink-skinned creature with long spindly arms holding a knife, half of the body wrinkled and old. Keep the gaunt spindly creature with the knife and the split old/young body, drawn as ONE compact hunched figure filling the disc, clearly thinner and more upright than the shipped dredge and dredgling."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-aa/refs/dredges.png",
+          "sha256": "694cf13af635125046377b4f7cdbf5f08d236965b0665eaa6d270843a71f0aaa",
+          "role": "family",
+          "note": "Two shipped dredge tokens (the dredge: a bulky bald pink brute with heavy arms; the dredgling: a small crouching pink creature): the dredge captain is a THIN, gaunt, spindly horror standing hunched with an oversized head, stringy arms reaching almost to the floor and a long curved bright steel dagger in its raised hand, its body split down the middle into a wrinkled aged grey-lavender half and a smooth young pink half; not bulky, not all pink and not crouching on all fours."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A dredge captain seen from a steep overhead three-quarter angle: a THIN, gaunt, spindly horror standing hunched forward on the disc with an oversized bald head, long stringy arms reaching almost to the floor and clawed hands, its raised right hand clutching a long curved bright STEEL DAGGER; the body is split cleanly down the middle: the left half wrinkled, aged, sallow GREY-LAVENDER skin with sagging folds and a milky pale eye, the right half smooth young pale PINK skin with a bright eye; a ragged pale cloth sash across the chest, bony knees and long pale toes; light rim along the whole outline. Gaunt, two-faced, armed and complete.",
+        "contrast": "Temporal horrors: the DREDGE CAPTAIN is the THIN two-toned dagger-wielding hunched horror (silhouette: a tall spindly hunched figure with a raised arm and a long blade; hue: half grey-lavender wrinkled, half pale pink; value: light). The shipped dredge is a bulky bald pink brute and the dredgling a small crouching pink creature, both unarmed: this must not be bulky, not all pink and not crouching on all fours.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Light grey-lavender and pale pink skin, bright steel blade, pale cream sash, a thin bright rim light; nothing darker than mid grey-lavender except eye slits and skin folds; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=dredge captain, define_as=None, type=horror/subtype=temporal, unique=False, native_tall=False); details and hashes in evidence/monster-batch-aa-20260930/source-contracts.json. base BASE_NPC_HORROR_TEMPORAL (horror/temporal, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; make_escort builds three dredge leaves (each wears its own token); resolvers.inscriptions picks a shielding rune and an infusion (random inscription, no display write, an invisibility infusion applies a shader only while active and the matcher then rejects it); Dredge Frenzy and Speed Sap are activated npc talents; the leaf calls resolvers.sustains_at_birth() but none of its talents is sustained; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-aa-20260930/source-contracts.json",
+          "sha256": "675cf3a99eb14c8214abbbcc4be9e636c94f266e91f95c4a7d99ab66ba72d148"
+        }
+      ]
+    },
+    {
+      "asset_id": "dreadmaster",
+      "native_name": "dreadmaster",
+      "scope": "rak-shor-pride, telmur and demon-plane pools plus the greater-crypt and orc-necromancer vaults (general/npcs/ghost.lua:81, undead/ghost, non-unique, no define_as, rank 3, base BASE_NPC_GHOST, explicit image=npc/dreadmaster.png); the Necromancer's Dread talent summons a minion with the same name, type, subtype and image (talents/spells/dreadmaster.lua), which wears the same token",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ghost.lua",
+          "sha256": "c20b2ae1af1d1d99d0128b817a975cbfda791fa821778cee5bcc814600400238",
+          "line": 82,
+          "anchor": "name = \"dreadmaster\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ghost.lua",
+          "sha256": "c20b2ae1af1d1d99d0128b817a975cbfda791fa821778cee5bcc814600400238",
+          "line": 82,
+          "anchor": "image=\"npc/dreadmaster.png\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ghost.lua",
+          "sha256": "c20b2ae1af1d1d99d0128b817a975cbfda791fa821778cee5bcc814600400238",
+          "line": 96,
+          "anchor": "summon = {{type=\"undead\", subtype=\"ghost\", name=\"dread\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ghost.lua",
+          "sha256": "c20b2ae1af1d1d99d0128b817a975cbfda791fa821778cee5bcc814600400238",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_GHOST\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/spells/dreadmaster.lua",
+          "sha256": "115b87f434828dcb22c236b229834b94f3fabf52523af47503a0276937117c80",
+          "line": 80,
+          "anchor": "image=\"npc/dreadmaster.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dreadmaster.png",
+          "sha256": "86bcc8b12bdfba31231de2f7f86d6cee3c3d51db846ae95386d5f0595a25a0d7",
+          "role": "identity",
+          "note": "Native shape (64x64): a near-black hooded blob wraith with a glowing red screaming face and a blue glow around its edges. Keep the hooded shroud with the glowing red screaming face, but render the cloak in mid-light slate-blue and periwinkle with a bright icy rim light and bright red face features, drawn as ONE compact figure filling the disc, clearly a larger cloaked wraith than the shipped dread."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-aa/refs/ghosts.png",
+          "sha256": "03ff6d751dd9636f888680c94ab15a505bfd755f87343b52ece70eab352a91e5",
+          "role": "family",
+          "note": "Three shipped ghostly tokens (the dread: a small slate-violet spiky hairy ball with one red eye; the banshee: a cyan-white wailing woman spirit; the grave wight: a translucent cyan ghost): the dreadmaster is a TOWERING hooded WRAITH, a bell-shaped ragged cloak of pale slate-blue and periwinkle shroud with a tall pointed hood, a glowing RED screaming face inside the hood, long thin pale clawed arms and curling pale-blue mist; not a spiky ball, not a cyan woman and not a plain ghost."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A dreadmaster seen from a steep overhead three-quarter angle: a towering hooded WRAITH standing on the disc, a big bell-shaped ragged cloak of pale SLATE-BLUE and PERIWINKLE shroud with broad bright highlight planes on every upper-left fold, a tall pointed hood whose interior is a mid-indigo hollow, inside it a glowing RED screaming face: two bright red eyes and a long open mouth glowing crimson-orange, two long thin pale-grey clawed arms emerging from the wide sleeves and reaching forward, the ragged torn hem sweeping around the base in pointed tatters with pale blue spectral mist curling off the edges, a thin bright ICY BLUE-WHITE rim light along the whole outline. Hooded, screaming, ragged and complete.",
+        "contrast": "Ghosts: the DREADMASTER is the TOWERING HOODED WRAITH in a pale slate-blue bell-shaped shroud with a glowing red screaming face (silhouette: a bell-shaped cloak with a tall pointed hood and clawed arms out of the sleeves; hue: pale slate-blue and periwinkle with a red face; value: mid-light). The shipped dread is a small slate-violet spiky hairy ball with one red eye, the banshee a cyan woman spirit and the grave wight a translucent cyan ghost: this must not be a spiky ball, a woman or a plain see-through ghost.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Pale slate-blue and periwinkle shroud with bright icy highlights, mid-indigo hood hollow, bright red and crimson-orange face, pale-grey claws, a bright icy rim; nothing darker than mid indigo except thin seams; NO black cloak; the red glow stays in the face and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=dreadmaster, define_as=None, type=undead/subtype=ghost, unique=False, native_tall=False); details and hashes in evidence/monster-batch-aa-20260930/source-contracts.json. base BASE_NPC_GHOST (undead/ghost, no image=, no shader); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; the base and the leaf call resolvers.sustains_at_birth() and Blur Sight is the only sustained talent (particle and temporary values only); Summon calls the dread leaf (own token); the Necromancer Dread talent builds a minion with identical name/type/subtype/image (wears the same token); no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-aa-20260930/source-contracts.json",
+          "sha256": "675cf3a99eb14c8214abbbcc4be9e636c94f266e91f95c4a7d99ab66ba72d148"
+        }
+      ]
+    }
+  ]
+}

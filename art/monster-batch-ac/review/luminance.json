@@ -1,0 +1,89 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "aletta-soultorn": 135.34,
+    "ruin-banshee": 114.91,
+    "filio-flightfond": 78.11,
+    "orc-high-pyromancer": 100.41,
+    "orc-high-cryomancer": 129.93,
+    "glacial-legion": 175.77,
+    "arch-zephyr": 103.31,
+    "rotting-titan": 90.59,
+    "heavy-sentinel": 110.08,
+    "void-spectre": 91.78,
+    "oozing-horror": 130.15,
+    "abyssal-horror": 75.2,
+    "ungolmor": 85.58,
+    "umbral-horror": 90.69,
+    "vampire-lord": 84.56,
+    "degenerated-ogric-mass": 111.35,
+    "ogric-abomination": 90.84
+  },
+  "floors": {
+    "korpul stone A (dreadfell, vor-armoury)": 131.79,
+    "cave rock (ardhungol)": 130.64,
+    "underwater floor (lake-nur)": 129.4,
+    "rak-shor floor (rak-shor-pride)": 163.04,
+    "gothic stone (conclave-vault nearest)": 145.44,
+    "snow ground": 175.0,
+    "grass": 108.97,
+    "caldera": 96.54,
+    "burnt ground": 72.7,
+    "void floor": 163.25
+  },
+  "zone_floors": {
+    "aletta-soultorn": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79
+    },
+    "filio-flightfond": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79
+    },
+    "vampire-lord": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79
+    },
+    "orc-high-pyromancer": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79
+    },
+    "orc-high-cryomancer": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79
+    },
+    "ruin-banshee": {
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "glacial-legion": {
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "arch-zephyr": {
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "rotting-titan": {
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "heavy-sentinel": {
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "void-spectre": {
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "oozing-horror": {
+      "underwater floor (lake-nur)": 129.4
+    },
+    "abyssal-horror": {
+      "underwater floor (lake-nur)": 129.4
+    },
+    "umbral-horror": {
+      "underwater floor (lake-nur)": 129.4
+    },
+    "ungolmor": {
+      "cave rock (ardhungol)": 130.64
+    },
+    "degenerated-ogric-mass": {
+      "gothic stone (conclave-vault nearest)": 145.44
+    },
+    "ogric-abomination": {
+      "gothic stone (conclave-vault nearest)": 145.44
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

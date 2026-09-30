@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ac-11",
+  "assets": [
+    {
+      "asset_id": "oozing-horror",
+      "native_name": "oozing horror",
+      "scope": "lake-nur pool (general/npcs/horror.lua:554, horror/eldritch (subtype override on BASE_NPC_HORROR), non-unique, no define_as, rank 3, default-name image); the only NPC definition of this name; the Corpathus artifact summons a separate 'Vilespawn' minion that reuses the PNG under another name (world-artifacts.lua:3443), which stays native",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 556,
+          "anchor": "name = \"oozing horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 605,
+          "anchor": "T_OOZE_SPIT"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 569,
+          "anchor": "on_move = function(self)"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_oozing_horror.png",
+          "sha256": "cd9162ca321b9df4166ab5b213be767572dd876a7d6125ad4d2e480f0ba2eecc",
+          "role": "identity",
+          "note": "Native shape (64x64): a big lumpy mound of translucent lime-green slime with orange-amber eyes scattered through it. Keep the massive mound of green slime with many drifting orange eyes, drawn as ONE compact figure filling the disc, much heavier and bigger-looking than the small shipped ooze tokens."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/refs/slimes-blobs.png",
+          "sha256": "236a05cd3ea87c22cf319ca9b1566e65a0447117ca419e75276648a21a7b0391",
+          "role": "family",
+          "note": "Six shipped blob tokens (the green ooze, green jelly and poison ooze: small shiny slime blobs; the bloated horror: a pink baby-faced blob; the luminous horror: a yellow glowing humanoid; the necrotic mass: a pink-brown lump): the oozing horror is a MASSIVE amorphous lime-green slime mound, much bigger and heavier than the small ooze tokens, with SEVEN OR EIGHT large drifting orange-amber EYES scattered through the translucent slime, thick dripping slime tendrils and pools of ooze around its base; not a small shiny blob, not pink and not humanoid."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An oozing horror seen from a steep overhead three-quarter angle: a MASSIVE amorphous MOUND of translucent glossy LIME-GREEN slime filling the disc as one compact heap, seven or eight large round glowing ORANGE-AMBER EYES with dark pupils drifting at different depths through the slime, thick ropes of slime drooping over the mound and a few heavy drips and small pools of ooze hugging its base, big shiny white specular highlights on every upper-left bulge and a thin bright yellow-green rim light. Heaping, glossy, many-eyed and complete.",
+        "contrast": "Slimes: the OOZING HORROR is the MASSIVE MOUND OF LIME-GREEN SLIME with seven or eight large orange-amber eyes (silhouette: a big lumpy heap with many round eyes; hue: lime green with orange-amber eyes; value: mid-light and glossy). The shipped green ooze, green jelly and poison ooze are small shiny single blobs, the bloated horror a pink baby-faced blob, the luminous horror a yellow humanoid and the necrotic mass a pink-brown lump: this must not be small, single-eyed, pink or humanoid, and must show many eyes.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. CALIBRATION FROM EARLIER TOKENS OF THIS BATCH (three first generations failed the disc-geometry gate because arms, weapons and effects crossed the disc rim): draw the whole creature clearly SMALLER than feels natural, everything (limbs, weapons, wisps, flames, tentacles, cloth ends, shards and effects) inside a circle of about 0.58 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, arm and effect tight against the body; no cast shadow onto the plate.",
+        "palette": "Bright lime and yellow-green translucent slime, orange-amber eyes with small dark pupils, white specular highlights, a thin bright rim; nothing darker than mid green except the pupils and thin creases; NO dark green or black slime; the slime stays on the mound and must not spill across the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=oozing horror, define_as=None, type=horror/subtype=eldritch, unique=False, native_tall=False); details and hashes in evidence/monster-batch-ac-20260930/source-contracts.json. base BASE_NPC_HORROR (horror, no image=, no shader) with the leaf overriding subtype to eldritch; NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; the leaf has no sustains_at_birth (Resolve, Mana Clash, Ooze Spit, Ooze Roots, Slime Wave and Tentacle Grab are activated or passive); on_move only adds a slime map effect; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ]
+    }
+  ]
+}

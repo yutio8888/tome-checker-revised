@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ac-10",
+  "assets": [
+    {
+      "asset_id": "rotting-titan",
+      "native_name": "Rotting Titan",
+      "scope": "rak-shor-pride boss (zones/rak-shor-pride/npcs.lua:119, undead/ghoul, UNIQUE, define_as ROTTING_TITAN, rank 3.5, base BASE_NPC_GHOUL, resolvers.nice_tile tall body); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 121,
+          "anchor": "name = \"Rotting Titan\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 119,
+          "anchor": "define_as = \"ROTTING_TITAN\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 122,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 185,
+          "anchor": "T_CRYSTALLINE_FOCUS"
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 190,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ghoul.lua",
+          "sha256": "b1ec41fab65306b144321ea37ed991405c7c795fca3bdebac932c27ec1e11586",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_GHOUL\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_ghoul_rotting_titan.png",
+          "sha256": "d625c602cd1ddc63e082f71439acdedda6708462214a7c3cf4fe5868c1c62020",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a colossal pale grey-mauve hulk of flesh and stone with raised boulder fists and small dark eyes. Keep the colossal hulk of flesh fused with stone slabs, boulder-fists on every limb and a small sunken head, drawn as ONE compact figure filling the disc, no tall canvas, in dusky mauve flesh, pale limestone-beige stone and sickly green rot patches."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/refs/ghouls-giants.png",
+          "sha256": "dcfac3556c61bd4b7b2fe0ac76de5d9643d71e6a1934916d64e625d0931357df",
+          "role": "family",
+          "note": "Six shipped bodies (the ghoul, ghast and ghoulking: lean brown hunched ghouls; Borfast: a shield-and-mace dwarf ghoul; the necrotic mass: a pink-brown lump with skulls; the ogre pounder: a blue ogre): the Rotting Titan is a colossal slow HULK assembled from dusky mauve rotting flesh and huge slabs and boulders of pale limestone-beige stone, boulder-fists at the end of every limb, sickly green-yellow rot patches and small glowing green eyes; not a lean ghoul, not a pink lump and not an ogre."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "The Rotting Titan seen from a steep overhead three-quarter angle: a COLOSSAL slow hulk standing on the disc as one compact mass, its body assembled from bulging dusky MAUVE-ROSE rotting flesh fused with huge slabs and boulders of pale LIMESTONE-BEIGE stone, a small sunken head with two glowing green eyes set into the chest-heavy body, a massive BOULDER FIST at the end of EACH of its four limbs (two thick arms raised in front, two stumpy legs), patches of sickly GREEN-YELLOW rot, moss-like fungus and a few exposed pale ribs, cracks in the stone glowing faintly green; broad pale highlight planes on every upper-left stone slab and a thin bright rim light. Rotting, stony, massive and complete.",
+        "contrast": "Ghouls and giants: the ROTTING TITAN is the COLOSSAL HULK OF MAUVE ROTTING FLESH FUSED WITH PALE LIMESTONE SLABS with boulder fists on every limb and sickly green rot (silhouette: a huge broad mass with a tiny head and four heavy boulder-ended limbs; hue: dusky mauve-rose, limestone beige and sickly green-yellow; value: mid-light). The shipped ghoul, ghast and ghoulking are lean brown hunched ghouls, the necrotic mass a pink-brown lump with skulls and the ogres upright tan, red or blue giants: this must not be lean, must not be a pink lump with skulls and must not be an ogre.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas. CALIBRATION FROM EARLIER TOKENS OF THIS BATCH (three first generations failed the disc-geometry gate because arms, weapons and effects crossed the disc rim): draw the whole creature clearly SMALLER than feels natural, everything (limbs, weapons, wisps, flames, tentacles, cloth ends, shards and effects) inside a circle of about 0.58 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, arm and effect tight against the body; no cast shadow onto the plate. DISC CALIBRATION (the previous generation of this exact token came out with the disc plate DARKER than the style reference, shadowed by the huge body): keep the same figure, but draw it a little SMALLER, everything inside a circle of about 0.55 of the disc radius, centred, and render the WHOLE disc, its outer ring band and the plate under and around the figure, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow, ambient occlusion or darkening beneath or beside the figure.",
+        "palette": "Dusky mauve-rose flesh, pale limestone-beige stone slabs, sickly green-yellow rot and faint green glow, pale ribs, a thin bright rim; nothing darker than mid mauve except cracks between slabs and eye sockets; NO black or dark brown mass; the glow stays on the figure and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Rotting Titan, define_as=ROTTING_TITAN, type=undead/subtype=ghoul, unique=True, native_tall=False); details and hashes in evidence/monster-batch-ac-20260930/source-contracts.json. base BASE_NPC_GHOUL (undead/ghoul, no image=, no shader, no sustains_at_birth); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/undead_ghoul_rotting_titan.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; UNIQUE with a define_as binding, so nativeTallImage accepts the tall body through the unique path (like the Hedge-Wizard, Kyless and Walrog) and the entry carries unique=true and define_as but no native_tall flag; define_as-bound entry: the catalog entry carries define_as and the matcher rejects any actor with another (or no) define_as (ROTTING_TITAN); the leaf calls resolvers.sustains_at_birth() and Crystalline Focus and Onslaught are sustained (Crystalline Focus adds native shader-aura bookkeeping the matcher ignores); on_move only shakes the ground and on_added_to_level only sets can_pass; resolvers.equip only the Rotting Maul; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ]
+    }
+  ]
+}

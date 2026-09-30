@@ -1,0 +1,96 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ab-10",
+  "assets": [
+    {
+      "asset_id": "shadowblade",
+      "native_name": "shadowblade",
+      "scope": "thieves-tunnels and maze pools plus the thief-hideout vault and the bandit-fortress map (general/npcs/thieve.lua:162, humanoid/human, non-unique, define_as THIEF_ASSASSIN (repeated from the assassin leaf above it), rank 2, base BASE_NPC_THIEF, default-name image); the arena zone defines a second, unrelated 'shadowblade' (zones/arena/npcs.lua:773, base BASE_NPC_ARENA1, no define_as), which the define_as binding rejects",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 163,
+          "anchor": "name = \"shadowblade\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 162,
+          "anchor": "define_as = \"THIEF_ASSASSIN\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 179,
+          "anchor": "T_SHADOW_COMBAT"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 181,
+          "anchor": "T_INVISIBILITY"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 185,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_THIEF\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/arena/npcs.lua",
+          "sha256": "7bb88092c6875ba878a1029934ea1e2e68e1b6a4906033a0324ace85946c0e42",
+          "line": 773,
+          "anchor": "newEntity{ name = \"shadowblade\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_shadowblade.png",
+          "sha256": "6be8e97d6786f31880549c3f22e22a554723bd7b4b8be65e6ee3ec9ad344d80e",
+          "role": "identity",
+          "note": "Native shape (64x64): a dark-hooded human with two long curved blades caught mid-strike in a dark cloak. Keep the duelling shadow-blade with two long curved swords in a dynamic dual-strike pose, drawn as ONE compact figure filling the disc, in a bright periwinkle cloak and scarf with silver blades and trailing violet shadow crescents, clearly different from the grey single-dagger assassin."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ab/refs/thieves.png",
+          "sha256": "38a238b004996691b62235bd7fa867a89caf86b3bf23b71b91ae2e7a74a11766",
+          "role": "family",
+          "note": "Five shipped thief tokens (the assassin: a grey-cloaked knifeman with a red sash and one dagger; the rogue: a dark-blue hooded runner; the thief: a brown-cloaked sneak; the rogue sapper: a goggled brown trapper; the cutpurse: a small hooded pickpocket): the shadowblade is a SHADOW-MAGE duellist caught mid-leap with TWO LONG CURVED SILVER BLADES crossed in an X in front of him, a pale half-mask, a long flowing PERIWINKLE-blue scarf and cloak streaming behind him and trailing crescent tendrils of dark violet shadow; not grey, not brown, not a single dagger, not crouched and not hooded-and-hunched."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A shadowblade seen from a steep overhead three-quarter angle: a lithe human shadow-duellist caught mid-leap on the disc with TWO LONG CURVED SILVER SCIMITARS crossed in an X in front of the body with bright white edge highlights, a pale bone-white half-mask over the lower face, dark hair, a fitted slate-blue tunic with silver buckles and dark leather bracers, a long flowing PERIWINKLE-blue SCARF and short cloak streaming behind, and three curling CRESCENT tendrils of mid-violet shadow trailing from the cloak hem and the blades (all kept close to the body, no tendril reaching the outer ring); broad pale highlight planes on every upper-left surface and a thin bright rim light. Leaping, twin-bladed, veiled and complete.",
+        "contrast": "Thieves: the SHADOWBLADE is the LEAPING TWIN-SCIMITAR SHADOW-DUELLIST with a half-mask, a periwinkle scarf and cloak and violet shadow crescents (silhouette: a figure with two long crossed curved blades and a streaming scarf; hue: periwinkle, silver and violet; value: mid-light). The shipped assassin is a grey-cloaked knifeman with a red sash and one dagger, the rogue a dark-blue hooded runner, the thief a brown-cloaked sneak and the rogue sapper a goggled brown trapper: this must not be grey, brown or hooded, and must not hold a single dagger.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. READABILITY REFINEMENT (the previous generation of this exact token passed the numeric gates but read as a dark navy-violet blob at 48 pixels): keep the same leaping twin-scimitar shadow-duellist, but lift every value: a BRIGHT pale periwinkle-and-sky-blue scarf and cloak with large near-white highlight planes, a light steel-blue tunic, a bone-white half-mask, light tan leather bracers and boots (no dark brown or black leather), two LARGE bright white-silver scimitars crossed in an X with broad white edge highlights, and only three thin lilac-violet shadow crescents (mid-lilac, never dark violet or black); the figure fills the inner three quarters of the disc as a bright shape on the dark plate; no cast shadow. DISC CALIBRATION (the previous generation of this exact token came out with the disc plate LIGHTER than the style reference): keep the same brightened duellist, but draw the whole figure clearly SMALLER, everything (scarf, blades, crescents) inside a circle of about 0.58 of the disc radius, centred, and render the WHOLE disc, its outer ring band and the plate under and around the figure, at exactly the style reference lightness, evenly all round, never lighter and never darker; the bright cloak must not brighten the plate around it.",
+        "palette": "Periwinkle and slate-blue cloth, bright silver blades, bone-white mask, mid-violet shadow crescents, silver buckles, a thin bright rim; nothing darker than mid slate-blue except hair, eye slits and thin seams; NO black cloak, no black tendrils; the shadow tendrils stay close to the body and must not darken or tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=shadowblade, define_as=THIEF_ASSASSIN, type=humanoid/subtype=human, unique=False, native_tall=False); details and hashes in evidence/monster-batch-ab-20260930/source-contracts.json. base BASE_NPC_THIEF (humanoid/human, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; define_as-bound entry: the catalog entry carries define_as and the matcher rejects any actor with another (or no) define_as (THIEF_ASSASSIN, the same define_as as the assassin leaf; the assassin token is bound to the name assassin and this one to the name shadowblade, and each rejects the other name); resolvers.racial(), resolvers.equip (two daggers, light armour) and resolvers.inscriptions do not write the display; the base and the leaf call resolvers.sustains_at_birth() and Stealth and Shadow Combat are sustained (particles and temporary values only); Shadow Veil, Invisibility and Shadowstep are activated and their effects (shader while active) are rejected by the matcher; color_r/g/b are colour modulation only; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ab-20260930/source-contracts.json",
+          "sha256": "47d8089d6229f1fa36f123bba4527789c3e911cb904308319b4cf51124e48e56"
+        }
+      ]
+    }
+  ]
+}

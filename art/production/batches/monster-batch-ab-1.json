@@ -1,0 +1,318 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ab-1",
+  "assets": [
+    {
+      "asset_id": "entrenched-horror",
+      "native_name": "entrenched horror",
+      "scope": "lake-nur pool (general/npcs/horror_aquatic.lua:62, horror/aquatic, non-unique, no define_as, rank 3, base BASE_NPC_HORROR_AQUATIC, nice_tile tall body); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 63,
+          "anchor": "name = \"entrenched horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 65,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 83,
+          "anchor": "T_EARTHQUAKE"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 76,
+          "anchor": "never_move = 1"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR_AQUATIC\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_aquatic_entrenched_horror.png",
+          "sha256": "a67f785a0fcf9727498fcec0af3543d39ca4779643b7efddf97ab2bf9a3e34e1",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a grey stony pillar of pockmarked rock wrapped by long thin black tentacles that curl in every direction. Keep the massive stony pillar ringed by long thin probing tentacles, drawn as ONE compact figure filling the disc, no tall canvas, in pale limestone with glowing seams and mid-tone teal tentacles instead of near-black."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ab/refs/aquatic-horrors.png",
+          "sha256": "dea7d13060551a36e4b157357d4cb74ba0f79009fb51e26196bbe33f4d3f9cff",
+          "role": "family",
+          "note": "Four shipped horror tokens (the ravenous horror: a fanged deep-sea fish head; the swarming horror: a ring of small silver fish; the bloated horror: a pink baby-faced blob; the necrotic mass: a pink-brown lump): the three aquatic bodies of this batch are none of these: the ENTRENCHED HORROR is a stony pale-limestone PILLAR ringed with a wreath of long curling teal tentacles and glowing seams; the BOILING HORROR is a floating sphere of roiling aquamarine water crowned with white froth and steam, an orange heat-core glimpsed inside; the SWARM HIVE is a titanic pale pearl-grey flesh mound pocked with pink-mouthed orifices from which small silver fish-horrors stream; no fish head, no ring of fish and no pink baby blob."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An entrenched horror seen from a steep overhead three-quarter angle: a massive squat PILLAR of pale weathered limestone-grey and blue-grey rock, encrusted with rounded barnacle-like knobs and stacked stony plates, with glowing pulsing TEAL-CYAN seams running between the plates as if it breathes; from its sides and crown rises a WREATH of eight long thin glossy tentacles in mid TEAL and blue-violet with pale sucker rows, each tentacle curling outward and hooking back toward the body, tips pointing inward; broad pale highlight planes on every upper-left plate and a thin bright rim light. Stony, ringed by tentacles and complete.",
+        "contrast": "Aquatic horrors: the ENTRENCHED HORROR is the STONY LIMESTONE PILLAR wreathed by curling teal tentacles with glowing seams (silhouette: a broad rounded pillar with a ring of hooked tentacles; hue: pale grey-blue stone with teal; value: light stone, mid tentacles). The shipped ravenous horror is a fanged fish head, the swarming horror a ring of small silver fish and the bloated horror a pink baby-faced blob: this must not be a fish, a school of fish or a pink blob.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Pale limestone and blue-grey stone, glowing teal-cyan seams, mid teal and blue-violet tentacles with pale suckers, a thin bright rim; nothing darker than mid teal except thin gaps between plates; NO black tentacles, no black stone; the seam glow stays on the body and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=entrenched horror, define_as=None, type=horror/subtype=aquatic, unique=False, native_tall=True); details and hashes in evidence/monster-batch-ab-20260930/source-contracts.json. base BASE_NPC_HORROR_AQUATIC (horror/aquatic, no image=, no shader, no sustains_at_birth in the base); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/horror_aquatic_entrenched_horror.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the single image is used); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; the leaf has no sustains_at_birth (Dig, Earthen Missiles and Earthquake are activated); the base on_die only logs an air bubble and touches terrain; never_move = 1; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ab-20260930/source-contracts.json",
+          "sha256": "47d8089d6229f1fa36f123bba4527789c3e911cb904308319b4cf51124e48e56"
+        }
+      ]
+    },
+    {
+      "asset_id": "boiling-horror",
+      "native_name": "boiling horror",
+      "scope": "lake-nur pool (general/npcs/horror_aquatic.lua:133, horror/aquatic, non-unique, no define_as, rank 2, base BASE_NPC_HORROR_AQUATIC, nice_tile tall body); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 134,
+          "anchor": "name = \"boiling horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 136,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 155,
+          "anchor": "T_BURNING_WAKE"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 158,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR_AQUATIC\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_aquatic_boiling_horror.png",
+          "sha256": "4ec1b6d27462ac8bef91f459ccb7dbccabaa71326b31850a2e43fadd3c3d606b",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a glowing cyan orb of water crowned with rising white steam and foam. Keep the frothing ball of heated water with steam, drawn as ONE compact figure filling the disc, no tall canvas, as a roiling aquamarine sphere with an orange heat core."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ab/refs/aquatic-horrors.png",
+          "sha256": "dea7d13060551a36e4b157357d4cb74ba0f79009fb51e26196bbe33f4d3f9cff",
+          "role": "family",
+          "note": "Four shipped horror tokens (the ravenous horror: a fanged deep-sea fish head; the swarming horror: a ring of small silver fish; the bloated horror: a pink baby-faced blob; the necrotic mass: a pink-brown lump): the three aquatic bodies of this batch are none of these: the ENTRENCHED HORROR is a stony pale-limestone PILLAR ringed with a wreath of long curling teal tentacles and glowing seams; the BOILING HORROR is a floating sphere of roiling aquamarine water crowned with white froth and steam, an orange heat-core glimpsed inside; the SWARM HIVE is a titanic pale pearl-grey flesh mound pocked with pink-mouthed orifices from which small silver fish-horrors stream; no fish head, no ring of fish and no pink baby blob."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A boiling horror seen from a steep overhead three-quarter angle: a floating SPHERE of roiling bright AQUAMARINE and turquoise water hovering just above the disc as one compact figure, its surface churning with large bursting bubbles and a thick cap of bright WHITE FROTH, a glowing hot ORANGE-GOLD heat core visible through the water in the middle, three small water spouts and curling pale white STEAM plumes rising and drifting off the top (steam stays close to the body), pale specular highlights over the whole upper-left of the sphere and a thin bright cyan-white rim light; no puddle, no spill and no splash reaching the disc. Roiling, frothing, hot and complete.",
+        "contrast": "Aquatic horrors: the BOILING HORROR is the FLOATING SPHERE OF ROILING AQUAMARINE WATER with a white froth cap, steam plumes and an orange heat core (silhouette: a round ball with a frothy top and rising wisps; hue: aquamarine, white and orange; value: light). The shipped ravenous horror is a fanged fish head, the swarming horror a ring of silver fish and the void horror a lens-shaped indigo tear: this must not be a fish, a ring of fish or a lens.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Bright aquamarine and turquoise water, white froth and steam, an orange-gold heat core, a thin bright rim; nothing darker than mid teal except thin bubble seams; the heat glow stays inside the sphere and must not warm or light the disc, which stays neutral charcoal at reference lightness and receives no water. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=boiling horror, define_as=None, type=horror/subtype=aquatic, unique=False, native_tall=True); details and hashes in evidence/monster-batch-ab-20260930/source-contracts.json. base BASE_NPC_HORROR_AQUATIC (horror/aquatic, no image=, no shader, no sustains_at_birth in the base); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/horror_aquatic_boiling_horror.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the single image is used); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; the leaf calls resolvers.sustains_at_birth() and two of its talents are sustained: Thermal Aura (particles and temporary values only) and Burning Wake (talents/spells/wildfire.lua:78 addShaderAura, native shader-aura bookkeeping on add_mos that the matcher already ignores); no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ab-20260930/source-contracts.json",
+          "sha256": "47d8089d6229f1fa36f123bba4527789c3e911cb904308319b4cf51124e48e56"
+        }
+      ]
+    },
+    {
+      "asset_id": "swarm-hive",
+      "native_name": "swarm hive",
+      "scope": "lake-nur pool (general/npcs/horror_aquatic.lua:162, horror/aquatic, non-unique, no define_as, rank 3, base BASE_NPC_HORROR_AQUATIC, nice_tile tall body); the only definition of this name; its Summon builds swarming horror leaves (batch Z token)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 163,
+          "anchor": "name = \"swarm hive\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 165,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 184,
+          "anchor": "T_SUMMON"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 181,
+          "anchor": "summon = {{type=\"horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR_AQUATIC\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_aquatic_swarm_hive.png",
+          "sha256": "882d51b49156d759ea81ed74b12cb88bc6616e3f93187dba33aba5b545b4afa7",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a titanic grey pockmarked mound of flesh. Keep the huge pulsating mound pocked with orifices, drawn as ONE compact figure filling the disc, no tall canvas, in pale pearl-grey flesh with pink mouths and a few small silver fish-horrors bursting out."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ab/refs/aquatic-horrors.png",
+          "sha256": "dea7d13060551a36e4b157357d4cb74ba0f79009fb51e26196bbe33f4d3f9cff",
+          "role": "family",
+          "note": "Four shipped horror tokens (the ravenous horror: a fanged deep-sea fish head; the swarming horror: a ring of small silver fish; the bloated horror: a pink baby-faced blob; the necrotic mass: a pink-brown lump): the three aquatic bodies of this batch are none of these: the ENTRENCHED HORROR is a stony pale-limestone PILLAR ringed with a wreath of long curling teal tentacles and glowing seams; the BOILING HORROR is a floating sphere of roiling aquamarine water crowned with white froth and steam, an orange heat-core glimpsed inside; the SWARM HIVE is a titanic pale pearl-grey flesh mound pocked with pink-mouthed orifices from which small silver fish-horrors stream; no fish head, no ring of fish and no pink baby blob."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A swarm hive seen from a steep overhead three-quarter angle: a titanic rounded MOUND of pale PEARL-GREY and lavender-grey pulsating flesh standing on the disc as one compact figure, pocked all over with round orifices and lumpy blisters, seven of them wide-open PINK mouths with mid-rose lips, and from four of those mouths a few small SILVER fish-like horrors (small bright fish shapes with tiny fins, five to seven in all) burst out and spiral upward around the mound; fine pink veins under the skin, broad pale highlight planes on every upper-left lump and a thin bright rim light. Pocked, pulsing, spawning and complete.",
+        "contrast": "Aquatic horrors: the SWARM HIVE is the PEARL-GREY PULSATING FLESH MOUND pocked with pink mouths that spawn small silver fish (silhouette: a rounded lumpy mound with a few small fish spiralling out; hue: pearl-grey and lavender with pink mouths and silver fish; value: light). The shipped swarming horror is a ring of silver fish, the bloated horror a pink baby-faced blob and the necrotic mass a pink-brown lump with skulls: this must not be a ring of fish, a baby face or a brown lump.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Pale pearl-grey and lavender-grey flesh, pink mouths and veins, small bright silver fish, a thin bright rim; nothing darker than mid rose except the mouth hollows and the seams between lumps; NO black or dark grey mass; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=swarm hive, define_as=None, type=horror/subtype=aquatic, unique=False, native_tall=True); details and hashes in evidence/monster-batch-ab-20260930/source-contracts.json. base BASE_NPC_HORROR_AQUATIC (horror/aquatic, no image=, no shader, no sustains_at_birth in the base); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/horror_aquatic_swarm_hive.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the single image is used); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; the leaf has no sustains_at_birth; Summon (special_rarity hive_swarm_rarity) builds swarming horror leaves that wear their own token; never_move = 1; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ab-20260930/source-contracts.json",
+          "sha256": "47d8089d6229f1fa36f123bba4527789c3e911cb904308319b4cf51124e48e56"
+        }
+      ]
+    },
+    {
+      "asset_id": "ultimate-shivgoroth",
+      "native_name": "ultimate shivgoroth",
+      "scope": "norgos-lair pool (general/npcs/shivgoroth.lua:88, elemental/ice, non-unique, no define_as, rank 3, base BASE_NPC_SHIVGOROTH, nice_tile tall body); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/shivgoroth.lua",
+          "sha256": "9543c07c1c22d99f4ace1868e113bc613bc1d76fe8aa22e490de0953568207f5",
+          "line": 89,
+          "anchor": "name = \"ultimate shivgoroth\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/shivgoroth.lua",
+          "sha256": "9543c07c1c22d99f4ace1868e113bc613bc1d76fe8aa22e490de0953568207f5",
+          "line": 90,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/shivgoroth.lua",
+          "sha256": "9543c07c1c22d99f4ace1868e113bc613bc1d76fe8aa22e490de0953568207f5",
+          "line": 105,
+          "anchor": "T_ICE_STORM"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/shivgoroth.lua",
+          "sha256": "9543c07c1c22d99f4ace1868e113bc613bc1d76fe8aa22e490de0953568207f5",
+          "line": 107,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/shivgoroth.lua",
+          "sha256": "9543c07c1c22d99f4ace1868e113bc613bc1d76fe8aa22e490de0953568207f5",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_SHIVGOROTH\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_ice_ultimate_shivgoroth.png",
+          "sha256": "723a8e8d4935e909341722c0b0c191f0fa7f219eda4144fcb151f6331f0117e0",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): an upright pale-blue faceted ice golem with spiked shoulders and clawed hands. Keep the towering faceted ice colossus, drawn as ONE compact figure filling the disc, no tall canvas, in deeper sapphire with a glowing cyan core, an icicle crown and a ring of orbiting ice shards and snow, clearly different from the white greater shivgoroth."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ab/refs/shivgoroths.png",
+          "sha256": "696a5cd1b917316626449a260dffb78552b47799d4798ae4578954ceb243c3b6",
+          "role": "family",
+          "note": "Two shipped ice-elemental tokens (the shivgoroth: a small crouching light-blue crystal beast; the greater shivgoroth: a white-blue ice giant standing among crystal spikes): the ultimate shivgoroth is a towering upright SAPPHIRE-and-cobalt faceted ice colossus with a glowing bright CYAN core in its chest, a crown of long icicle spikes and a ring of floating ice shards and swirling white snow orbiting it; deeper blue, ringed and crowned, not white and not crouching."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An ultimate shivgoroth seen from a steep overhead three-quarter angle: a towering upright COLOSSUS of faceted deep SAPPHIRE and cobalt ice with bright pale-cyan facet highlights, broad spiked shoulders, heavy clawed fists hanging at its sides, a glowing bright CYAN-WHITE core burning in the middle of its chest, a crown of long ICICLE spikes on its head, and around it a ring of eight floating ice SHARDS and a thin swirl of white snow orbiting at chest height; white frost rime along every upper-left edge and a thin bright icy rim light. Towering, sapphire, crowned and complete.",
+        "contrast": "Ice elementals: the ULTIMATE SHIVGOROTH is the TOWERING SAPPHIRE ICE COLOSSUS with a glowing cyan chest core, an icicle crown and an orbiting ring of ice shards and snow (silhouette: a broad upright figure with a spiked crown and a ring of shards around it; hue: sapphire and cobalt with cyan and white frost; value: mid-light with a bright core). The shipped shivgoroth is a small crouching light-blue crystal beast and the greater shivgoroth a white-blue ice giant among crystal spikes: this must not be crouching, must not be white and must not lack the shard ring and crown.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Deep sapphire and cobalt ice with bright cyan facet highlights, white frost rime, a glowing cyan-white core, pale ice shards and snow, a thin bright rim; nothing darker than mid cobalt except thin facet seams; NO black or navy body; the glow stays on the body and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ultimate shivgoroth, define_as=None, type=elemental/subtype=ice, unique=False, native_tall=True); details and hashes in evidence/monster-batch-ab-20260930/source-contracts.json. base BASE_NPC_SHIVGOROTH (elemental/ice, no image=, no shader, no sustains_at_birth in the base); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/elemental_ice_ultimate_shivgoroth.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the single image is used); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; the leaf calls resolvers.sustains_at_birth() but none of its talents is sustained (Glacial Vapour, Ice Shards, Frozen Ground and Ice Storm are activated); the player-only Shivgoroth Form effect is not applied to npcs; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ab-20260930/source-contracts.json",
+          "sha256": "47d8089d6229f1fa36f123bba4527789c3e911cb904308319b4cf51124e48e56"
+        }
+      ]
+    }
+  ]
+}

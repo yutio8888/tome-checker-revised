@@ -1,0 +1,71 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "entrenched-horror": 105.37,
+    "orc-summoner": 100.73,
+    "greater-mummy": 103.1,
+    "shadowblade": 97.62,
+    "orc-elite-fighter": 87.53,
+    "orc-elite-berserker": 82.67,
+    "boiling-horror": 164.71,
+    "venom-wyrm": 101.73,
+    "alchemist-golem": 95.74,
+    "swarm-hive": 139.84,
+    "forest-troll-hedge-wizard": 77.39,
+    "ultimate-shivgoroth": 109.77
+  },
+  "floors": {
+    "cave rock (unremarkable-cave, thieves-tunnels)": 130.64,
+    "underwater floor (lake-nur)": 129.4,
+    "grass (maze)": 108.97,
+    "caldera (noxious-caldera)": 96.54,
+    "gothic stone (ancient-elven-ruins, golem-graveyard)": 145.44,
+    "snow ground (norgos-lair)": 175.0,
+    "korpul stone A (vor-armoury, reknor)": 131.79,
+    "rak-shor floor (rak-shor-pride)": 163.04,
+    "burnt ground": 72.7,
+    "void floor": 163.25
+  },
+  "zone_floors": {
+    "entrenched-horror": {
+      "underwater floor (lake-nur)": 129.4
+    },
+    "boiling-horror": {
+      "underwater floor (lake-nur)": 129.4
+    },
+    "swarm-hive": {
+      "underwater floor (lake-nur)": 129.4
+    },
+    "orc-summoner": {
+      "cave rock (unremarkable-cave, thieves-tunnels)": 130.64,
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "greater-mummy": {
+      "gothic stone (ancient-elven-ruins, golem-graveyard)": 145.44
+    },
+    "shadowblade": {
+      "cave rock (unremarkable-cave, thieves-tunnels)": 130.64,
+      "grass (maze)": 108.97
+    },
+    "orc-elite-fighter": {
+      "korpul stone A (vor-armoury, reknor)": 131.79
+    },
+    "orc-elite-berserker": {
+      "korpul stone A (vor-armoury, reknor)": 131.79
+    },
+    "venom-wyrm": {
+      "caldera (noxious-caldera)": 96.54
+    },
+    "alchemist-golem": {
+      "gothic stone (ancient-elven-ruins, golem-graveyard)": 145.44
+    },
+    "forest-troll-hedge-wizard": {
+      "korpul stone A (vor-armoury, reknor)": 131.79
+    },
+    "ultimate-shivgoroth": {
+      "snow ground (norgos-lair)": 175.0
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

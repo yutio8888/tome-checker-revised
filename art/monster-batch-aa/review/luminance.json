@@ -1,0 +1,74 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "ultimate-faeros": 155.65,
+    "orc-berserker": 85.08,
+    "dredge-captain": 87.76,
+    "polar-bear": 167.87,
+    "anaconda": 100.84,
+    "ultimate-teluvorta": 101.16,
+    "necrotic-abomination": 92.51,
+    "bone-horror": 106.74,
+    "sanguine-horror": 75.9,
+    "barrow-wight": 101.82,
+    "ogre-warmaster": 97.29,
+    "dreadmaster": 96.62
+  },
+  "floors": {
+    "cave rock (unremarkable-cave, thieves-tunnels)": 130.64,
+    "bog (unhallowed-morass)": 107.35,
+    "grass (lake-nur, maze)": 108.97,
+    "caldera (noxious-caldera)": 96.54,
+    "burnt ground (charred-scar, demon-plane)": 72.7,
+    "gothic stone (crypt-kryl-feijan)": 145.44,
+    "void floor (temporal-rift)": 163.25,
+    "underwater floor (lake-nur)": 129.4,
+    "korpul stone A (bandit-fortress-like)": 131.79,
+    "rak-shor floor (rak-shor-pride)": 163.04
+  },
+  "zone_floors": {
+    "ultimate-faeros": {
+      "burnt ground (charred-scar, demon-plane)": 72.7
+    },
+    "orc-berserker": {
+      "korpul stone A (bandit-fortress-like)": 131.79,
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "dredge-captain": {
+      "void floor (temporal-rift)": 163.25
+    },
+    "polar-bear": {
+      "grass (lake-nur, maze)": 108.97,
+      "caldera (noxious-caldera)": 96.54
+    },
+    "anaconda": {
+      "cave rock (unremarkable-cave, thieves-tunnels)": 130.64,
+      "caldera (noxious-caldera)": 96.54
+    },
+    "ultimate-teluvorta": {
+      "void floor (temporal-rift)": 163.25
+    },
+    "necrotic-abomination": {
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "bone-horror": {
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "sanguine-horror": {
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "barrow-wight": {
+      "cave rock (unremarkable-cave, thieves-tunnels)": 130.64,
+      "gothic stone (crypt-kryl-feijan)": 145.44
+    },
+    "ogre-warmaster": {
+      "gothic stone (crypt-kryl-feijan)": 145.44
+    },
+    "dreadmaster": {
+      "burnt ground (charred-scar, demon-plane)": 72.7,
+      "rak-shor floor (rak-shor-pride)": 163.04
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

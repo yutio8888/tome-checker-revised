@@ -1,5 +1,5 @@
 {
-  "version": "0.6.30",
+  "version": "0.6.31",
   "size": 128,
   "assets": [
     {
@@ -1939,6 +1939,324 @@
       "batch": "monster-batch-y",
       "master_sha256": "1c1daff646b3fd017e6eee0971c67435e27762c135fe8f8d932a99103b96c648",
       "runtime_sha256": "a1db5ec1002927e236addf60b448083e31d2db73b153cca59089dd68e75327d7"
+    },
+    {
+      "id": "black-mamba",
+      "batch": "monster-batch-z",
+      "master_sha256": "4c458197ea1b6f4f0af208b944ae0d1c467b30fec80f69de4a1c994024ce82e0",
+      "runtime_sha256": "bbb28263d3bd0c32c25e23ed4e974d3a11c6da10ccdd004da1ca072ead65369f"
+    },
+    {
+      "id": "bandit-lord",
+      "batch": "monster-batch-z",
+      "master_sha256": "e6b0d5bac47ca61403c7f2077f1888c65c9bbab9d724598dfe6911d53fa61a82",
+      "runtime_sha256": "440b7ae93bcfc9edbb286b739ebe86d61cd9215ee35eae66addb8f199322a1bd"
+    },
+    {
+      "id": "orb-weaver",
+      "batch": "monster-batch-z",
+      "master_sha256": "b2e50f04181b8964b6cfc56590e4902bcdf246ffe30684f08f4bd2f52dac2f55",
+      "runtime_sha256": "275cb1a35741780da4c7c2e969e313bf06592bd4a2f21bfb5da39417460dc792"
+    },
+    {
+      "id": "elven-elite-warrior",
+      "batch": "monster-batch-z",
+      "master_sha256": "b8cbf65ec251aac5a4bb9194a983a1d75a94fd04006f0a64f2ba06b1965d42e4",
+      "runtime_sha256": "c39c0a98b9c16351970e24dc5d938bc06b6f7f11f8bd488691c7b7e3226952a7"
+    },
+    {
+      "id": "ultimate-telugoroth",
+      "batch": "monster-batch-z",
+      "master_sha256": "9490c4ef007e15ddcb3f287da390c491cda950a4a65eafe8dc58c90468fc72ba",
+      "runtime_sha256": "454521b5926fe6949ddbeaf884877b7d068d1661873377aa2765ebac5a49bfe3"
+    },
+    {
+      "id": "greater-teluvorta",
+      "batch": "monster-batch-z",
+      "master_sha256": "cfaa09cfefb3ad9ce9a662d8167e72e72ac57084680620ecdd0887147b7846cf",
+      "runtime_sha256": "6d8a742140ecc4a293ad023c8918e720f7bf59bba6002fa9cbfde1ab1922056a"
+    },
+    {
+      "id": "runed-bone-giant",
+      "batch": "monster-batch-z",
+      "master_sha256": "d2375ed5301758803de23121f86131509cefec2baa765d023e32a3b7b284dd56",
+      "runtime_sha256": "6e69580625b341fd7db7fa0c8d34025911a354f5487eb2ca4f81e9d8273fae0d"
+    },
+    {
+      "id": "void-horror",
+      "batch": "monster-batch-z",
+      "master_sha256": "ffff6e2f96722634bc3bf63f9c5e03681f77bd346610aae5c4b61dd20ed6ae2c",
+      "runtime_sha256": "77302168c19a473c498f8c98f7ba46fa0d00c57683a6840551b15f11f98af89a"
+    },
+    {
+      "id": "swarming-horror",
+      "batch": "monster-batch-z",
+      "master_sha256": "bdd6edce7e3b8686ad8e9f01f24faca80f6a70ffea2177480b081b62356905f9",
+      "runtime_sha256": "a22a0cbca6bf7f18855343b34c6bf040f96bfe3b392013023bbe2be6a27f6b1b"
+    },
+    {
+      "id": "ravenous-horror",
+      "batch": "monster-batch-z",
+      "master_sha256": "385ea4fb953fab958d5309154d18ed5f06c909405988656a61b5c0a1a0f139b7",
+      "runtime_sha256": "873038eeb8ef068b9bbea4735e2ee91200ba1dc069264d6d96a5f7c8f2882008"
+    },
+    {
+      "id": "rogue-sapper",
+      "batch": "monster-batch-z",
+      "master_sha256": "989b5be9343a21b21f662bc6da99950512a9f3428edfec094eaac65072663ecc",
+      "runtime_sha256": "40ea12ddbf23eafb2bc66e9337e9c6131728744e63de344395fe91598c9bb203"
+    },
+    {
+      "id": "fire-wyrm",
+      "batch": "monster-batch-z",
+      "master_sha256": "0834d0c01b2885914fd49a977c3d5ff10ac044627390de0df5391174f4e15449",
+      "runtime_sha256": "a7a4c15e6abae44d4735dfffad4f1b90ef5690d5edb04e5636ca707a952eb0bd"
+    },
+    {
+      "id": "ultimate-faeros",
+      "batch": "monster-batch-aa",
+      "master_sha256": "417a035c9004dc7f1756e966f91fad6f7b94e7a365e8904e3b8a762068ecdb32",
+      "runtime_sha256": "d055a5376dbead27e1a3f3ebc65b3df09768008b9e2371e5e160f68c9e5ec3cf"
+    },
+    {
+      "id": "orc-berserker",
+      "batch": "monster-batch-aa",
+      "master_sha256": "871a25561d0e6fc4599c602f3bb1c19eaa1a3b46820431ca6e06ab26e363a528",
+      "runtime_sha256": "6f95b408584729432f4c3dd5f570c53ee7557a9bd243dbcfbb6b58dd43d21126"
+    },
+    {
+      "id": "dredge-captain",
+      "batch": "monster-batch-aa",
+      "master_sha256": "0ae27182776be6c64ccb58dfd099a6ac1e4d57c418eff17dbe18c9df5575ce5b",
+      "runtime_sha256": "a949cfe2e0e17118e0bed5d5a7b389f59ed1a6dfb68cd142ca0b0ff7c0f126be"
+    },
+    {
+      "id": "polar-bear",
+      "batch": "monster-batch-aa",
+      "master_sha256": "df13d20eed1cad08a554e2523ed68d94f89c379333b16f4ff6245bc232c8e004",
+      "runtime_sha256": "ef8d8402f2f8b3c41f8467d0c330819bb36731610e387843a5c53c60a54213f1"
+    },
+    {
+      "id": "anaconda",
+      "batch": "monster-batch-aa",
+      "master_sha256": "e1277d87d3c4fb0fcf4e57bcc903a1d42db407175a8ce52c2bb565114623aadc",
+      "runtime_sha256": "6a45f8e4b0e15cd4722653b87cae5e93203c1c7211a2ad0ea128b82519e6c484"
+    },
+    {
+      "id": "ultimate-teluvorta",
+      "batch": "monster-batch-aa",
+      "master_sha256": "393e9a4141aea276fd4228422c234bfb7883e4e9415b8178ff2762556a737000",
+      "runtime_sha256": "987c00eb079c46a62556a872b9f46a88beedaa44c58518890de56cbe70131463"
+    },
+    {
+      "id": "necrotic-abomination",
+      "batch": "monster-batch-aa",
+      "master_sha256": "f26551e3d8ec259406b5b4fb4bba0bbe75be0b8b2cafa3f3abab2fd31bf6aa76",
+      "runtime_sha256": "4799c9d08c5dbe303153ace6272f0b0592971b6ebcadd4e31ee61dd5f91612ec"
+    },
+    {
+      "id": "bone-horror",
+      "batch": "monster-batch-aa",
+      "master_sha256": "0571c98c37a137e9822405dc5f4cab6f9e3f4cfb97f42e6a3684960315e02fa3",
+      "runtime_sha256": "008d62673ae99a7b7e336e6531e11af548f23dd9d82bdb12f2463f48ddc2f108"
+    },
+    {
+      "id": "sanguine-horror",
+      "batch": "monster-batch-aa",
+      "master_sha256": "bbaf63acacca3544e7fbcf1c0a1c717c0d39942d228201e97a936fffd1e5b792",
+      "runtime_sha256": "8c62bee35ea6dd0192f89a125e07f0e576f8ef71581985a9ade367e8cbbe272e"
+    },
+    {
+      "id": "barrow-wight",
+      "batch": "monster-batch-aa",
+      "master_sha256": "1723a0b61cd90bdd5c186e9943ebdea678bcf49222a84a2a8722a14d622c09ea",
+      "runtime_sha256": "a2d73a13681afd12e95b3bcb5311fcf3e5e16587f2c82d6a0978ac3ebadb9944"
+    },
+    {
+      "id": "ogre-warmaster",
+      "batch": "monster-batch-aa",
+      "master_sha256": "2826d59a81eba028e1a977c749703bce840411e8b3ffc7d831d21ade7b8c1285",
+      "runtime_sha256": "0119abd63f5d7f20b9df0cee123c45340ac48893eab9e21965e77f342b1509d6"
+    },
+    {
+      "id": "dreadmaster",
+      "batch": "monster-batch-aa",
+      "master_sha256": "89157df8264c04d57971e59de3ee49e71059e8255df0e4c27e57a6423bcc9b9e",
+      "runtime_sha256": "46c0ed39558113fd3306582c1a969b6474f4191a694341667a8c7d660c972f78"
+    },
+    {
+      "id": "entrenched-horror",
+      "batch": "monster-batch-ab",
+      "master_sha256": "877cef58f2a2d65bd48269e9ef7c4595938892e8826b6afda79bf99fbdd426f1",
+      "runtime_sha256": "2a841ba8c3586f67e945e3c08cb23febe5b4fb6ed31349f9ed465d6b1b1b06b5"
+    },
+    {
+      "id": "orc-summoner",
+      "batch": "monster-batch-ab",
+      "master_sha256": "3e1d867a4db1231c4f34fe41b5c6c008a50cc620295321e28fa2423104a12e3f",
+      "runtime_sha256": "2af6cadce96b1b68131fa3ffe234a15061184fd4b12e86c57bc21fc7ae31bacb"
+    },
+    {
+      "id": "greater-mummy",
+      "batch": "monster-batch-ab",
+      "master_sha256": "48aac2e20f8a4a57749086ae6f8551057ba0f93de4e784540a73ff81bb11e580",
+      "runtime_sha256": "61385750dc4920b0b9d7f4570d913a3ad09f431ab77993dbbb5d5bfed0adfc6a"
+    },
+    {
+      "id": "shadowblade",
+      "batch": "monster-batch-ab",
+      "master_sha256": "906356d386473bff5889f47d7fff3ab5b180713b20bee8fd5829bb7cd302bef1",
+      "runtime_sha256": "8ae0488bd85159bd5fbfc1ae21acacd7778196096144d7c6844d86f739add57e"
+    },
+    {
+      "id": "orc-elite-fighter",
+      "batch": "monster-batch-ab",
+      "master_sha256": "ccfb71db8a2104589e98339fb2536df2a9497774a0a93ee5a51c3c07502364ee",
+      "runtime_sha256": "497dab4f3d1879299313fa76c0a4f45a5edaba745c8d9c60a8cdb4006feeb57e"
+    },
+    {
+      "id": "orc-elite-berserker",
+      "batch": "monster-batch-ab",
+      "master_sha256": "3c81a9aa8fff8d4b16deda30fdcced9f983eaa03f963a3b05b38140699231133",
+      "runtime_sha256": "dceddcd0cb023a615d764553918bed981136a6cf53339ebd0caf4a65ad40225d"
+    },
+    {
+      "id": "boiling-horror",
+      "batch": "monster-batch-ab",
+      "master_sha256": "4b50e63bcc1a0c3fa65991fb79a525eb9046b39d7e9219e77ea893bf0e6e85e6",
+      "runtime_sha256": "f41f4d484e9bba2c67afeeb92243aaf5180eab0d1c31a9c17e4a9cdc95669963"
+    },
+    {
+      "id": "venom-wyrm",
+      "batch": "monster-batch-ab",
+      "master_sha256": "3de7dc68ca586d94f5fba76cdee312bb71d30047e5f41dbb234c36f5dcd5eb20",
+      "runtime_sha256": "2ef0aaad90b49c894c5812019c73bc7f8fe0d443c91f2e4f9ec79edc7c3161f4"
+    },
+    {
+      "id": "alchemist-golem",
+      "batch": "monster-batch-ab",
+      "master_sha256": "d936f600cda7d49d839c8d85f90c31712e259a71c1f8a3ab656d848619a05c62",
+      "runtime_sha256": "d8a5b48d8c24b3b19a3c3bdbfab1325acfdf0b944452d7014da13b4ff7e8ef6d"
+    },
+    {
+      "id": "swarm-hive",
+      "batch": "monster-batch-ab",
+      "master_sha256": "321b756284082a08bfba4b3976cfad681029f3e47ebd33bb782b6891206442df",
+      "runtime_sha256": "82eaae9b126bb8d0931ef69a4c5a55354878fab4541a48aa3da408e1d62800f2"
+    },
+    {
+      "id": "forest-troll-hedge-wizard",
+      "batch": "monster-batch-ab",
+      "master_sha256": "1297da7b9e85ff8e52867d7e6c16ac5a9393ff0ccd96b3e1f9df5ddf7a70f356",
+      "runtime_sha256": "c42058ec8746d538c62d0d6a444af546c997805af8572378037a289f422253d4"
+    },
+    {
+      "id": "ultimate-shivgoroth",
+      "batch": "monster-batch-ab",
+      "master_sha256": "bff039f8d5fe258d66f63210526385f95b5a9594c39906ab7e25f4cc0a9d05f4",
+      "runtime_sha256": "174399a5b2eed63bd716db030cf9895f796b0a03cc48b9a45c2a279cd3d879ab"
+    },
+    {
+      "id": "aletta-soultorn",
+      "batch": "monster-batch-ac",
+      "master_sha256": "713450061013ca6a5b1e6eccf45ec3de57b8a7e4fb6d4264960c0c851c2ad09a",
+      "runtime_sha256": "01546a22f7fa72ae338d99e4bf72d3a2c2e1c99207c01db18dc179741ff6f81d"
+    },
+    {
+      "id": "ruin-banshee",
+      "batch": "monster-batch-ac",
+      "master_sha256": "3c5b6140c1f1c1f1feceafe0dc0b9920df0f244ef1cbec06821a19eb3b1b31d1",
+      "runtime_sha256": "0698bd12c8a1251ca2c761b720b95cc54827c6035c8eb6b13883f6f729bb0112"
+    },
+    {
+      "id": "filio-flightfond",
+      "batch": "monster-batch-ac",
+      "master_sha256": "854354088a527e0ca571a99fa24e1a5aebca7680ee8f5f982a5ace842e83f2b3",
+      "runtime_sha256": "3fe8930ae7e6e9010dcce73ec3897e937327621473f0c4e43dd8db8ca97366af"
+    },
+    {
+      "id": "orc-high-pyromancer",
+      "batch": "monster-batch-ac",
+      "master_sha256": "23c51774564649e67db2f6e84c7e0e65026e2be1552edaeead2eeb53b436adf1",
+      "runtime_sha256": "7eb7f23470f8c43448bcc2c3fc4570a51d63652325adfdf7a0f129b8e2642093"
+    },
+    {
+      "id": "orc-high-cryomancer",
+      "batch": "monster-batch-ac",
+      "master_sha256": "6733549a8fdc9dfdbc479559f7a83bdab8f9f8ba120b8691730756012b820e54",
+      "runtime_sha256": "8aab4ff23dc7f337a42c6a55dcd381cc4b28b655fcb9d9a5ec3b191512954e40"
+    },
+    {
+      "id": "glacial-legion",
+      "batch": "monster-batch-ac",
+      "master_sha256": "487cdf3dd370245d8206a9f012a4619f629d123b8fcdb3c08785cb8cf3d129d0",
+      "runtime_sha256": "38b885ba9e9381546d83787002115d2bfe61c2ca2f8ba7fba0d631558be432de"
+    },
+    {
+      "id": "arch-zephyr",
+      "batch": "monster-batch-ac",
+      "master_sha256": "0b18695941ad36e824fce1d7ae2cc2f0296ad2fc66e03098c9ef2562e8891a9c",
+      "runtime_sha256": "d0cc81baaddf3a7387ba08b3795ac885c3e7f553d4aee4ac8290a9f08ba6e48c"
+    },
+    {
+      "id": "rotting-titan",
+      "batch": "monster-batch-ac",
+      "master_sha256": "cf1bdc2cd3bcb3f4f9865dfc340686708f79c0be201090eb891a742299890348",
+      "runtime_sha256": "7544e08d7bd78917a1ada4fa1c1f6e10c20930830668791ed540d628a537eaec"
+    },
+    {
+      "id": "heavy-sentinel",
+      "batch": "monster-batch-ac",
+      "master_sha256": "48c2505e2a05c31b831dae53d1a715515e08fcf136cbaacad2cab35b1e5e3f65",
+      "runtime_sha256": "1bbd1e0314645d6bb3b9dd8959568e310eabcb943c992d00b1d74aa3b5058d7d"
+    },
+    {
+      "id": "void-spectre",
+      "batch": "monster-batch-ac",
+      "master_sha256": "bb5641ec4411236d5ef24f98733cb7ce2d1076bb196c2723324bb5aad7b977de",
+      "runtime_sha256": "ad9ec778aa5a24c4bf3d9143480ce4e6ec3afc81fd95ad2330b9e29afbe8bbc8"
+    },
+    {
+      "id": "oozing-horror",
+      "batch": "monster-batch-ac",
+      "master_sha256": "93335c61fba9a79416b9db3c19e5e6a155c2ebe3152bc075b7dff057bde3b965",
+      "runtime_sha256": "98d8871fde580e8f4f29cc9aff392a59c90555f6f15a258ecfa3858214d5a339"
+    },
+    {
+      "id": "abyssal-horror",
+      "batch": "monster-batch-ac",
+      "master_sha256": "431cf25f1b6c92955e867711bad3ffc98e53a27de58c505f5894a7444bcc2194",
+      "runtime_sha256": "968b99711a73941ba448d7b2aa6612666e7035544655b1bc04867939b224a728"
+    },
+    {
+      "id": "ungolmor",
+      "batch": "monster-batch-ac",
+      "master_sha256": "61e2045ddf49728df8f51161ba588d14feb53844d6cbfc0a0d33c1845b2fb3ec",
+      "runtime_sha256": "0013063b46c6671a7758a2c5a42390a6665db4058fc6310e3b41b24037ac37e4"
+    },
+    {
+      "id": "umbral-horror",
+      "batch": "monster-batch-ac",
+      "master_sha256": "be8f8ab3cb0e5185f6e73df01b349662f230ddea99deaa446d20989884225cf6",
+      "runtime_sha256": "da158941e7e091dc512f6f2f32da91f8e57f4e5b8cb5e776b6400be29888cb39"
+    },
+    {
+      "id": "vampire-lord",
+      "batch": "monster-batch-ac",
+      "master_sha256": "819b9d7d13c0fb12ab3c6d6e8353e7b4333ac5e13ce5f2ba2c0996d85c7f83ab",
+      "runtime_sha256": "2d3020a9bdc08f0e95816213c6e04eff4692350f7b258b81e021116fe7f5fbb8"
+    },
+    {
+      "id": "degenerated-ogric-mass",
+      "batch": "monster-batch-ac",
+      "master_sha256": "5ac5cdf0fb998affc4b97dd3ab06bb0001d3a5e288a192d68cd67d13147c5d09",
+      "runtime_sha256": "028b168e38d27acd70ca2d61843b5c53d47e1bdababa7f1b0585ae311c5d882d"
+    },
+    {
+      "id": "ogric-abomination",
+      "batch": "monster-batch-ac",
+      "master_sha256": "13719a65468ab495846b3213adcd549ed0f8cc39d94fe3b217a46ac9471272e7",
+      "runtime_sha256": "a234c3e9becb3d1b98b3fe202bee8cc7105702c04e9ed2d2ad93c7c80f25dd21"
     }
   ]
 }

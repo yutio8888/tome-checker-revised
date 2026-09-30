@@ -726,6 +726,126 @@ M.catalog = {
 	{id="weaver-patriarch", name="weaver patriarch", image="npc/spiderkin_spider_weaver_patriarch.png", type="spiderkin", subtype="spider"},
 	{id="luminous-horror", name="luminous horror", image="npc/horror_eldritch_luminous_horror.png", type="horror", subtype="eldritch"},
 	{id="necrotic-mass", name="necrotic mass", image="npc/undead_horror_necrotic_mass.png", type="undead", subtype="horror", native_tall=true},
+	-- Batch Z: the twelve identities after batch Y in the survey-2 unscheduled
+	-- list (art/monster-batch-z/SELECTION.md), each re-verified against source
+	-- (evidence/monster-batch-z-20260930/source-contracts.json). All are
+	-- non-unique single-definition leaves matched by exact name, type and
+	-- subtype. Only the rogue sapper binds a define_as (THIEF_SAPPER); it names
+	-- the assassin's PNG through image=, so the sapper and the assassin (define_as
+	-- THIEF_ASSASSIN) are told apart by name and define_as. Six are non-unique
+	-- native_tall bodies whose nice_tile names the tall PNG explicitly (like the
+	-- greater telugoroth): ultimate telugoroth, greater teluvorta, runed bone
+	-- giant, swarming horror, ravenous horror and fire wyrm. The black mamba names
+	-- darkgrey-snake.png with image=. Birth sustains (Stealth, Total Thuggery,
+	-- Reality Smearing, Arcane Power, Energy Decomposition) are temporary values
+	-- only. No identity has an auto_class that can reach Flame of Urh'Rok, so
+	-- there is no urh_rok_form.
+	{id="black-mamba", name="black mamba", image="npc/darkgrey-snake.png", type="animal", subtype="snake"},
+	{id="bandit-lord", name="bandit lord", image="npc/humanoid_human_bandit_lord.png", type="humanoid", subtype="human"},
+	{id="orb-weaver", name="orb weaver", image="npc/spiderkin_spider_orb_weaver.png", type="spiderkin", subtype="spider"},
+	{id="elven-elite-warrior", name="elven elite warrior", image="npc/humanoid_shalore_elven_elite_warrior.png", type="humanoid", subtype="shalore"},
+	{id="ultimate-telugoroth", name="ultimate telugoroth", image="npc/elemental_temporal_ultimate_telugoroth.png", type="elemental", subtype="temporal", native_tall=true},
+	{id="greater-teluvorta", name="greater teluvorta", image="npc/elemental_temporal_greater_teluvorta.png", type="elemental", subtype="temporal", native_tall=true},
+	{id="runed-bone-giant", name="runed bone giant", image="npc/undead_giant_runed_bone_giant.png", type="undead", subtype="giant", native_tall=true},
+	{id="void-horror", name="void horror", image="npc/horror_temporal_void_horror.png", type="horror", subtype="temporal"},
+	{id="swarming-horror", name="swarming horror", image="npc/horror_aquatic_swarming_horror.png", type="horror", subtype="aquatic", native_tall=true},
+	{id="ravenous-horror", name="ravenous horror", image="npc/horror_aquatic_ravenous_horror.png", type="horror", subtype="aquatic", native_tall=true},
+	{id="rogue-sapper", name="rogue sapper", image="npc/humanoid_human_assassin.png", type="humanoid", subtype="human", define_as="THIEF_SAPPER"},
+	{id="fire-wyrm", name="fire wyrm", image="npc/dragon_fire_fire_wyrm.png", type="dragon", subtype="fire", native_tall=true},
+	-- Batch AA: the twelve identities after batch Z in the survey-2 unscheduled
+	-- list (art/monster-batch-aa/SELECTION.md), each re-verified against source
+	-- (evidence/monster-batch-aa-20260930/source-contracts.json). All are
+	-- non-unique single-definition leaves matched by exact name, type and
+	-- subtype, and none binds a define_as. Seven are non-unique native_tall
+	-- bodies: the ultimate faeros, ultimate teluvorta, necrotic abomination, bone
+	-- horror, sanguine horror and barrow wight name their tall PNG explicitly in
+	-- nice_tile (the barrow wight also with image=, like the master vampire), and
+	-- the ogre warmaster uses the nice_tile{tall=1} shorthand like the other
+	-- ogres. The polar bear, anaconda and dreadmaster name their PNG with image=.
+	-- The Necromancer's Dread talent builds a minion with the dreadmaster's exact
+	-- name, type, subtype and image, which wears the same token. Birth sustains
+	-- (Fiery Hands, Berserker, Reality Smearing, Bone Shield, Blood Fury, Blur
+	-- Sight) are particles and temporary values only. No identity has an
+	-- auto_class that can reach Flame of Urh'Rok, so there is no urh_rok_form.
+	{id="ultimate-faeros", name="ultimate faeros", image="npc/elemental_fire_ultimate_faeros.png", type="elemental", subtype="fire", native_tall=true},
+	{id="orc-berserker", name="orc berserker", image="npc/humanoid_orc_orc_berserker.png", type="humanoid", subtype="orc"},
+	{id="dredge-captain", name="dredge captain", image="npc/horror_temporal_dredge_captain.png", type="horror", subtype="temporal"},
+	{id="polar-bear", name="polar bear", image="npc/polar_bear.png", type="animal", subtype="bear"},
+	{id="anaconda", name="anaconda", image="npc/yellow-green-snake.png", type="animal", subtype="snake"},
+	{id="ultimate-teluvorta", name="ultimate teluvorta", image="npc/elemental_temporal_ultimate_teluvorta.png", type="elemental", subtype="temporal", native_tall=true},
+	{id="necrotic-abomination", name="necrotic abomination", image="npc/undead_horror_necrotic_abomination.png", type="undead", subtype="horror", native_tall=true},
+	{id="bone-horror", name="bone horror", image="npc/undead_horror_bone_horror.png", type="undead", subtype="horror", native_tall=true},
+	{id="sanguine-horror", name="sanguine horror", image="npc/undead_horror_sanguine_horror.png", type="undead", subtype="horror", native_tall=true},
+	{id="barrow-wight", name="barrow wight", image="npc/barrow_wight.png", type="undead", subtype="wight", native_tall=true},
+	{id="ogre-warmaster", name="ogre warmaster", image="npc/giant_ogre_ogre_warmaster.png", type="giant", subtype="ogre", native_tall=true},
+	{id="dreadmaster", name="dreadmaster", image="npc/dreadmaster.png", type="undead", subtype="ghost"},
+	-- Batch AB: the twelve identities after batch AA in the survey-2 unscheduled
+	-- list (art/monster-batch-ab/SELECTION.md), each re-verified against source
+	-- (evidence/monster-batch-ab-20260930/source-contracts.json), matched by
+	-- exact name, type and subtype. Four bind a define_as: the shadowblade
+	-- (THIEF_ASSASSIN, which the assassin leaf also uses under another name and
+	-- PNG, and which the arena zone's unrelated define_as-less "shadowblade"
+	-- lacks), the orc elite fighter (ORC_ELITE_FIGHTER), the orc elite berserker
+	-- (ORC_ELITE_BERSERKER) and the greater mummy (GREATER_MUMMY; the greater
+	-- mummy lord is another leaf). Six are tall bodies: the entrenched horror,
+	-- boiling horror, swarm hive and ultimate shivgoroth name their tall PNG
+	-- explicitly in nice_tile and the venom wyrm uses the nice_tile{tall=1}
+	-- shorthand (all non-unique native_tall); the Forest Troll Hedge-Wizard uses
+	-- the same shorthand as a unique, so like Walrog and Kyless it carries
+	-- unique=true and no native_tall flag. The greater mummy names its PNG with
+	-- image=; the rest use the NPC.lua:33 default-name PNG. Birth sustains
+	-- (Thermal Aura, Burning Wake, Psiblades, Shield Wall, Berserker, Juggernaut,
+	-- Stealth, Shadow Combat) are particles, shader-aura bookkeeping the matcher
+	-- ignores, and temporary values only. No identity has an auto_classes that
+	-- can reach Flame of Urh'Rok, so there is no urh_rok_form.
+	{id="entrenched-horror", name="entrenched horror", image="npc/horror_aquatic_entrenched_horror.png", type="horror", subtype="aquatic", native_tall=true},
+	{id="orc-summoner", name="orc summoner", image="npc/humanoid_orc_orc_summoner.png", type="humanoid", subtype="orc"},
+	{id="greater-mummy", name="greater mummy", image="npc/undead_mummy_greater_mummy.png", type="undead", subtype="mummy", define_as="GREATER_MUMMY"},
+	{id="shadowblade", name="shadowblade", image="npc/humanoid_human_shadowblade.png", type="humanoid", subtype="human", define_as="THIEF_ASSASSIN"},
+	{id="orc-elite-fighter", name="orc elite fighter", image="npc/humanoid_orc_orc_elite_fighter.png", type="humanoid", subtype="orc", define_as="ORC_ELITE_FIGHTER"},
+	{id="orc-elite-berserker", name="orc elite berserker", image="npc/humanoid_orc_orc_elite_berserker.png", type="humanoid", subtype="orc", define_as="ORC_ELITE_BERSERKER"},
+	{id="boiling-horror", name="boiling horror", image="npc/horror_aquatic_boiling_horror.png", type="horror", subtype="aquatic", native_tall=true},
+	{id="venom-wyrm", name="venom wyrm", image="npc/dragon_venom_venom_wyrm.png", type="dragon", subtype="venom", native_tall=true},
+	{id="alchemist-golem", name="alchemist golem", image="npc/construct_golem_alchemist_golem.png", type="construct", subtype="golem"},
+	{id="swarm-hive", name="swarm hive", image="npc/horror_aquatic_swarm_hive.png", type="horror", subtype="aquatic", native_tall=true},
+	{id="forest-troll-hedge-wizard", name="Forest Troll Hedge-Wizard", image="npc/giant_troll_forest_troll_hedge_wizard.png", type="giant", subtype="troll", unique=true},
+	{id="ultimate-shivgoroth", name="ultimate shivgoroth", image="npc/elemental_ice_ultimate_shivgoroth.png", type="elemental", subtype="ice", native_tall=true},
+	-- Batch AC (the final batch): the seventeen identities that remain after
+	-- batch AB in the survey-2 unscheduled list, everything except Training
+	-- Dummy (art/monster-batch-ac/SELECTION.md), each re-verified against source
+	-- (evidence/monster-batch-ac-20260930/source-contracts.json), matched by
+	-- exact name, type and subtype. Seven are uniques: Aletta Soultorn (ALETTA)
+	-- and Filio Flightfond (FILIO) are flat 64x64 bodies; Glacial Legion,
+	-- Arch Zephyr, Rotting Titan and Heavy Sentinel are tall bodies bound to
+	-- their define_as; Void Spectre is a tall unique without a define_as. The
+	-- unique tall bodies carry unique=true and no native_tall flag (nativeTallImage
+	-- accepts them through the unique path, like the Hedge-Wizard). Four
+	-- non-unique tall bodies carry native_tall=true (abyssal horror, umbral
+	-- horror, degenerated ogric mass, ogric abomination). The vampire lord names
+	-- its PNG with image=; the rest use the NPC.lua:33 default-name PNG. Birth
+	-- sustains (Gloom, Burning Wake, Crystalline Focus, Golem Reflective Skin,
+	-- Stealth and the rest) are particles, shader-aura bookkeeping the matcher
+	-- ignores, and temporary values only. No identity has an auto_classes that
+	-- can reach Flame of Urh'Rok, so there is no urh_rok_form. The Corpathus
+	-- artifact's Vilespawn minion reuses the oozing horror PNG under another
+	-- name and stays native.
+	{id="aletta-soultorn", name="Aletta Soultorn", image="npc/undead_ghost_aletta_soultorn.png", type="undead", subtype="ghost", define_as="ALETTA", unique=true},
+	{id="ruin-banshee", name="ruin banshee", image="npc/undead_ghost_ruin_banshee.png", type="undead", subtype="ghost"},
+	{id="filio-flightfond", name="Filio Flightfond", image="npc/undead_skeleton_filio_flightfond.png", type="undead", subtype="skeleton", define_as="FILIO", unique=true},
+	{id="orc-high-pyromancer", name="orc high pyromancer", image="npc/humanoid_orc_orc_high_pyromancer.png", type="humanoid", subtype="orc"},
+	{id="orc-high-cryomancer", name="orc high cryomancer", image="npc/humanoid_orc_orc_high_cryomancer.png", type="humanoid", subtype="orc"},
+	{id="glacial-legion", name="Glacial Legion", image="npc/undead_ghost_glacial_legion.png", type="undead", subtype="ghost", define_as="GLACIAL_LEGION", unique=true},
+	{id="arch-zephyr", name="Arch Zephyr", image="npc/undead_vampire_arch_zephyr.png", type="undead", subtype="vampire", define_as="ARCH_ZEPHYR", unique=true},
+	{id="rotting-titan", name="Rotting Titan", image="npc/undead_ghoul_rotting_titan.png", type="undead", subtype="ghoul", define_as="ROTTING_TITAN", unique=true},
+	{id="heavy-sentinel", name="Heavy Sentinel", image="npc/undead_giant_heavy_sentinel.png", type="undead", subtype="giant", define_as="HEAVY_SENTINEL", unique=true},
+	{id="void-spectre", name="Void Spectre", image="npc/undead_wight_void_spectre.png", type="undead", subtype="wight", unique=true},
+	{id="oozing-horror", name="oozing horror", image="npc/horror_eldritch_oozing_horror.png", type="horror", subtype="eldritch"},
+	{id="abyssal-horror", name="abyssal horror", image="npc/horror_aquatic_abyssal_horror.png", type="horror", subtype="aquatic", native_tall=true},
+	{id="ungolmor", name="ungolmor", image="npc/spiderkin_spider_ungolmor.png", type="spiderkin", subtype="spider"},
+	{id="umbral-horror", name="umbral horror", image="npc/horror_eldritch_umbral_horror.png", type="horror", subtype="eldritch", native_tall=true},
+	{id="vampire-lord", name="vampire lord", image="npc/vampire_lord.png", type="undead", subtype="vampire"},
+	{id="degenerated-ogric-mass", name="degenerated ogric mass", image="npc/giant_ogre_degenerated_ogric_mass.png", type="giant", subtype="ogre", native_tall=true},
+	{id="ogric-abomination", name="ogric abomination", image="npc/giant_ogre_ogric_abomination.png", type="giant", subtype="ogre", native_tall=true},
 }
 
 M.by_id = {}

@@ -1,0 +1,318 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-z-1",
+  "assets": [
+    {
+      "asset_id": "black-mamba",
+      "native_name": "black mamba",
+      "scope": "noxious-caldera, unremarkable-cave and lake-nur pools (general/npcs/snake.lua:102, animal/snake, non-unique, no define_as, rank 2, base BASE_NPC_SNAKE, explicit image=npc/darkgrey-snake.png); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/snake.lua",
+          "sha256": "2e7035bbff94a277cabc07e7ed59398563123db90c5e029ec284e55f7090a1b1",
+          "line": 103,
+          "anchor": "name = \"black mamba\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/snake.lua",
+          "sha256": "2e7035bbff94a277cabc07e7ed59398563123db90c5e029ec284e55f7090a1b1",
+          "line": 103,
+          "anchor": "image=\"npc/darkgrey-snake.png\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/snake.lua",
+          "sha256": "2e7035bbff94a277cabc07e7ed59398563123db90c5e029ec284e55f7090a1b1",
+          "line": 111,
+          "anchor": "T_BITE_POISON"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/snake.lua",
+          "sha256": "2e7035bbff94a277cabc07e7ed59398563123db90c5e029ec284e55f7090a1b1",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_SNAKE\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/darkgrey-snake.png",
+          "sha256": "cabc54cd8cb9e5850378700acb3c2c33ee15bc6b4b5574060dafa7655434ff85",
+          "role": "identity",
+          "note": "Native shape (64x64): a glossy near-black indigo snake in a few loops with its head raised in an S-curve, a yellow eye and a flicking red-pink tongue. Keep the sleek raised-head snake with the yellow eye and red tongue, but render the scales in mid-light steel-blue and slate with bright silver-blue highlight bands, a pale silvery belly and a thin bright rim light."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-z/refs/snakes.png",
+          "sha256": "ee9788f250066dd8290b4899494af2600c12032bd71cc0a3e1c0972e571e2bdc",
+          "role": "family",
+          "note": "Five shipped snake tokens (tan-brown patterned coil, olive-green hooded king cobra, cream-white snake, tan diamond-back rattlesnake, coppery-salmon copperhead): the black mamba is a long sleek cool STEEL-BLUE and slate-grey glossy snake with no pattern, no hood and no rattle, a few smooth loops with the front third raised in an S-curve and a pale silvery belly, a yellow eye and a pink-red tongue; not brown, not green, not white, not patterned."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A black mamba seen from a steep overhead three-quarter angle: a long SLEEK snake lying in a few smooth loops on the disc with the front third of its body rearing up in a graceful S-curve, the head raised and turned to the lower left with the jaw slightly open showing a pale pink mouth and two small white fangs and a flicking RED-PINK forked tongue, one bright YELLOW eye, the skin smooth glossy STEEL-BLUE and cool SLATE-GREY in a mid-light value with fine small scales and bright pale silver-blue highlight bands along the upper-left curve of every loop, a pale SILVERY-LAVENDER belly visible along the throat and under the jaw, a thin bright pale rim light along the whole outline. Sleek, glossy, coiled and complete.",
+        "contrast": "Snakes: the BLACK MAMBA is the SLEEK STEEL-BLUE AND SLATE SNAKE, plain and patternless, in smooth loops with the front raised in an S-curve, a yellow eye and a red tongue (silhouette: a few smooth loops with a raised S neck, no hood; hue: cool steel-blue and slate with silver highlights, pink-red tongue, yellow eye; value: mid-light). The shipped large brown snake is a tan-brown coil, the king cobra an olive-green hooded snake, the white snake cream, the rattlesnake a tan patterned diamond-back with a rattle, the copperhead coppery salmon: this must not be brown, green, white, patterned, hooded or rattle-tailed.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Steel-blue and cool slate scales in a mid-light value with bright silver-blue highlight bands, a pale silvery-lavender belly, yellow eye, pink-red tongue and a bright pale rim light; nothing darker than mid slate-blue except the eye pupil; NO black or near-black body anywhere. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=black mamba, define_as=None, type=animal/subtype=snake, unique=False, native_tall=False); details and hashes in evidence/monster-batch-z-20260930/source-contracts.json. base BASE_NPC_SNAKE (animal/snake, no image=, no shader, no sustains_at_birth); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; the same PNG is used by no other leaf (darkgrey-snake.png); the only talent is Bite Poison (activated); ingredient_on_death only names a drop; no equip, no sustains_at_birth, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-z-20260930/source-contracts.json",
+          "sha256": "0ee69e14bae435695fed2f0346b4e3622faad0626483479b2f22750f6c633596"
+        }
+      ]
+    },
+    {
+      "asset_id": "bandit-lord",
+      "native_name": "bandit lord",
+      "scope": "maze pool, thieves-tunnels (rare) and the bandit-fortress zone and vault (general/npcs/thieve.lua:112, humanoid/human, non-unique, no define_as, rank 2, base BASE_NPC_THIEF, default-name image); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 113,
+          "anchor": "name = \"bandit lord\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 135,
+          "anchor": "T_TOTAL_THUGGERY"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 133,
+          "anchor": "T_SUMMON"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 42,
+          "anchor": "resolvers.racial()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 43,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_THIEF\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_bandit_lord.png",
+          "sha256": "3d2aec7fb7299029eac4ceab021411741511d22a6ebc87815772efafb49d2a72",
+          "role": "identity",
+          "note": "Native shape (64x64): a bare-chested, bearded, dark-haired brawny man standing with his arms crossed over his chest, baggy crimson trousers, barefoot. Keep the bare-chested bearded brawny man with crossed arms and crimson trousers, adding a gold sash, gold armbands and a sheathed sabre so that he reads as the gang leader."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-z/refs/thieves.png",
+          "sha256": "adcdde84ea04170abbd7b94c4d0ac5205c9ec36329d9a9094b7935ed1a07b336",
+          "role": "family",
+          "note": "Five shipped human thief tokens (bald brawny bandit with two knives and an orange belt, dark-cloaked thief, blue-hooded rogue with a dagger, blue-grey hooded assassin with a white scarf and twin knives, cutpurse in a tan vest): the bandit lord is a BEARDED, long-haired, bare-chested brawny man with arms crossed, crimson baggy trousers, a gold sash and gold armbands, a sheathed curved sabre at the hip, no drawn knives, not bald and not hooded; the rogue sapper is a crouched goggled trapper in DUN KHAKI and olive-brown cloth with a bandolier of brass spring-traps, a satchel of trap parts and a small spiked steel trap held in one hand, not blue-grey and not white-scarfed."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A bandit lord seen from a steep overhead three-quarter angle: a BROAD brawny bare-chested man standing square and facing the lower left with his ARMS CROSSED over his chest, a full dark-brown BEARD and long dark wind-tossed hair, warm tan skin with light highlight planes on the shoulders, baggy CRIMSON-RED trousers gathered at the ankle, a wide GOLD-YELLOW SASH at the waist with a sheathed curved SABRE hanging at the hip, thick GOLD ARMBANDS on both biceps and a heavy gold chain on the chest, bare feet planted apart, a confident smirk. Brawny, bearded, gold-sashed and complete.",
+        "contrast": "Human thieves: the BANDIT LORD is the BEARDED LONG-HAIRED BARE-CHESTED BRAWNY MAN with arms crossed, crimson trousers and gold sash and armbands (silhouette: a broad standing man with folded arms and a hip sabre, no weapon drawn; hue: warm tan skin, dark brown hair and beard, crimson trousers, gold accents; value: mid-light). The shipped bandit is a bald brawler with two knives and an orange belt, the thief and rogue are hooded and cloaked, the assassin blue-grey hooded, the cutpurse a tan-vested skinny man: this must not be bald, not holding knives, not hooded and not cloaked.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Warm tan skin with light highlight planes, dark brown hair and beard, bright crimson trousers, gold sash, armbands and chain (kept on the man), a steel sabre hilt; nothing darker than deep brown except the eyes and thin seams; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=bandit lord, define_as=None, type=humanoid/subtype=human, unique=False, native_tall=False); details and hashes in evidence/monster-batch-z-20260930/source-contracts.json. base BASE_NPC_THIEF (humanoid/human, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.racial() only adds human levelup talents (Higher Heal, Born into Magic, Highborn's Bloom: passives, no display write) and the base calls resolvers.sustains_at_birth() (Stealth and Total Thuggery are sustains: temporary values only); resolvers.equip daggers and light armour (equipment only, no moddable_tile); the leaf itself has no sustains_at_birth of its own and no auto_classes; Summon calls the bandit, thief and rogue leaves (each wears its own token). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-z-20260930/source-contracts.json",
+          "sha256": "0ee69e14bae435695fed2f0346b4e3622faad0626483479b2f22750f6c633596"
+        }
+      ]
+    },
+    {
+      "asset_id": "rogue-sapper",
+      "native_name": "rogue sapper",
+      "scope": "maze pool, thieves-tunnels (rare), the bandit-fortress zone and the bandit-fortress and thief-hideout vaults (general/npcs/thieve.lua:190, humanoid/human, non-unique, define_as THIEF_SAPPER, rank 2, base BASE_NPC_THIEF, explicit image=npc/humanoid_human_assassin.png); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 191,
+          "anchor": "name = \"rogue sapper\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 192,
+          "anchor": "image = \"npc/humanoid_human_assassin.png\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 190,
+          "anchor": "define_as = \"THIEF_SAPPER\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 206,
+          "anchor": "T_TRAP_MASTERY"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 42,
+          "anchor": "resolvers.racial()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_THIEF\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_assassin.png",
+          "sha256": "4a981932df3ecc27f104e427dac918e69c7a8718c44e7d96e809f60b67c1d6bf",
+          "role": "identity",
+          "note": "Native shape (64x64; the leaf reuses the assassin PNG): a crouching black-clad hooded and masked figure with a curved dagger held low. Keep a crouched hooded, masked, low-slung rogue, but this token must NOT be the shipped assassin: render a goggled trapper in dun khaki and olive-brown cloth with a bandolier of brass spring-traps, a trap satchel and a small spiked steel trap in one hand."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-z/refs/thieves.png",
+          "sha256": "adcdde84ea04170abbd7b94c4d0ac5205c9ec36329d9a9094b7935ed1a07b336",
+          "role": "family",
+          "note": "Five shipped human thief tokens (bald brawny bandit with two knives and an orange belt, dark-cloaked thief, blue-hooded rogue with a dagger, blue-grey hooded assassin with a white scarf and twin knives, cutpurse in a tan vest): the bandit lord is a BEARDED, long-haired, bare-chested brawny man with arms crossed, crimson baggy trousers, a gold sash and gold armbands, a sheathed curved sabre at the hip, no drawn knives, not bald and not hooded; the rogue sapper is a crouched goggled trapper in DUN KHAKI and olive-brown cloth with a bandolier of brass spring-traps, a satchel of trap parts and a small spiked steel trap held in one hand, not blue-grey and not white-scarfed."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A rogue sapper seen from a steep overhead three-quarter angle: a CROUCHED sneaking rogue facing the lower left, a pulled-up hood and face wrap in light DUN KHAKI and OLIVE-BROWN cloth in a mid-light value with pale highlight planes on the upper-left folds, round BRASS-RIMMED GOGGLES with amber lenses pushed on the forehead, a diagonal BANDOLIER across the chest studded with small polished BRASS SPRING-TRAPS and coiled steel wire, a bulging leather SATCHEL of trap parts on the hip with a few protruding spikes, one gloved hand holding a small toothed STEEL BEAR-TRAP up close to the body and the other hand a short curved dagger held low, tan leather boots; no props on the ground. Crouched, goggled, trap-laden and complete.",
+        "contrast": "Human thieves: the ROGUE SAPPER is the CROUCHED GOGGLED TRAPPER in DUN KHAKI AND OLIVE-BROWN cloth with a bandolier of brass spring-traps, a satchel and a steel bear-trap in hand (silhouette: a hunched hooded figure with a bulky satchel and a trap held up; hue: khaki, olive-brown, brass and steel with amber goggles; value: mid-light). The shipped assassin is a blue-grey hooded figure with a white scarf and twin knives, the rogue blue-hooded, the thief dark-cloaked, the bandit a bald brawler: this must not be blue-grey, not white-scarfed, not black and must show the traps.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Dun khaki and olive-brown cloth in a mid-light value with pale highlight planes and a bright rim light, polished brass and steel trap parts, amber goggle lenses; nothing darker than deep olive-brown except thin seams and the eye shadow; NO black cloth or black leather anywhere; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=rogue sapper, define_as=THIEF_SAPPER, type=humanoid/subtype=human, unique=False, native_tall=False); details and hashes in evidence/monster-batch-z-20260930/source-contracts.json. base BASE_NPC_THIEF (humanoid/human, no image=, no shader); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; resolvers.racial() only adds human levelup talents (Higher Heal, Born into Magic, Highborn's Bloom: passives, no display write) and the base calls resolvers.sustains_at_birth() (Stealth and Total Thuggery are sustains: temporary values only); resolvers.equip daggers and light armour (equipment only, no moddable_tile); the leaf binds define_as THIEF_SAPPER and calls resolvers.sustains_at_birth() (Stealth is the only sustain: temporary values only); Trap Mastery, Trap Priming, Dual Strike and Disarm are activated, the rest passive; the explicit image is the assassin's PNG (humanoid_human_assassin.png), which the assassin catalog entry also names, but the two are told apart by name and define_as (THIEF_ASSASSIN vs THIEF_SAPPER). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-z-20260930/source-contracts.json",
+          "sha256": "0ee69e14bae435695fed2f0346b4e3622faad0626483479b2f22750f6c633596"
+        }
+      ]
+    },
+    {
+      "asset_id": "orb-weaver",
+      "native_name": "orb weaver",
+      "scope": "unhallowed-morass pool and the orb spinner's escort (zones/unhallowed-morass/npcs.lua:73, spiderkin/spider, non-unique, no define_as, rank 1, base BASE_NPC_SPIDER, default-name image); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/unhallowed-morass/npcs.lua",
+          "sha256": "10dac055e54c6f7a92c43c8a278caca4b7d51d0c4b002a165ad5a714bf4fec52",
+          "line": 74,
+          "anchor": "name = \"orb weaver\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/unhallowed-morass/npcs.lua",
+          "sha256": "10dac055e54c6f7a92c43c8a278caca4b7d51d0c4b002a165ad5a714bf4fec52",
+          "line": 82,
+          "anchor": "T_LAY_WEB"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 43,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_SPIDER\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_orb_weaver.png",
+          "sha256": "91ef610a1b50b3460e49fe4ccc9efaef0722a72a3b7d1dbc62815769e174fc83",
+          "role": "identity",
+          "note": "Native shape (64x64): a big frost-blue and white spider with translucent pale legs and a bulky rounded body, seen from the front. Keep the big pale frosty spider, and give it a round orb-web abdomen patterned in concentric silver rings, pale frost-blue and white, long thin banded legs."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-z/refs/spiders.png",
+          "sha256": "41531103c6c0a56368af24832d33495731c597ac97e270b7a0cacb65b6a54c57",
+          "role": "family",
+          "note": "Six shipped spider tokens (small blue-white striped weaver hatchling, blue swirl weaver young, cream-and-gold weaver queen, the deep cobalt weaver patriarch with a white chevron and gold echoes, grey giant spider, brown spitting spider): the orb weaver is a PALE FROST-BLUE and white spider with a big round abdomen patterned in CONCENTRIC silver rings like an orb web, a small head with glinting eyes and eight long thin banded legs splayed wide, with fine white silk strands; not deep cobalt, not chevron-marked, not grey and not a small swirl ball."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orb weaver seen from a steep overhead three-quarter angle: a large spider facing the lower left with a big round BULBOUS ABDOMEN in pale FROST-BLUE and white in a light value, marked with bold CONCENTRIC CIRCULAR RINGS of silver and pale sky-blue like a spun orb web with a bright white centre spot, a smaller pale-blue head-thorax with several glinting pale eyes and small fangs, eight long thin LEGS banded in pale ice-blue and steel-blue and splayed wide (every leg tip inside the disc), a few fine white SILK STRANDS trailing from the spinnerets and curling close to the body, a bright pale rim light along the outline. Pale, ringed, long-legged and complete.",
+        "contrast": "Spiders: the ORB WEAVER is the PALE FROST-BLUE SPIDER with a big round abdomen of concentric silver rings and long thin banded legs (silhouette: a round ringed abdomen behind a small head with eight long thin legs splayed wide; hue: pale frost-blue, white and silver; value: light). The shipped weaver patriarch is a deep cobalt-sapphire spider with a white chevron and golden echoes, the weaver hatchling and young are small blue-white swirl balls, the weaver queen cream and gold, the giant spider grey and the spitting spider brown: this must not be deep blue, not chevron-marked, not a small swirl ball, not cream and not grey.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Pale frost-blue, white and silver in a light value with steel-blue leg bands and a bright rim light, faint white silk; nothing darker than mid steel-blue except the eye pits and thin seams; NO black chitin; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orb weaver, define_as=None, type=spiderkin/subtype=spider, unique=False, native_tall=False); details and hashes in evidence/monster-batch-z-20260930/source-contracts.json. base BASE_NPC_SPIDER (spiderkin/spider, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; the base resolvers.sustains_at_birth() has no sustained talent to start here (Lay Web and Spider Web are activated, Spin Fate is not learned by this leaf); two base infusion inscriptions (an invisibility infusion would apply a shader-based effect only while active, and the matcher rejects it then); no equip, no auto_classes; the orb spinner and Weaver Queen escorts build this same leaf. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-z-20260930/source-contracts.json",
+          "sha256": "0ee69e14bae435695fed2f0346b4e3622faad0626483479b2f22750f6c633596"
+        }
+      ]
+    }
+  ]
+}

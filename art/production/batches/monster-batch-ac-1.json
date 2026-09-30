@@ -1,0 +1,324 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ac-1",
+  "assets": [
+    {
+      "asset_id": "aletta-soultorn",
+      "native_name": "Aletta Soultorn",
+      "scope": "dreadfell boss (zones/dreadfell/npcs.lua:282, undead/ghost, UNIQUE, define_as ALETTA, rank 3.5, no base, default-name image); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 286,
+          "anchor": "name = \"Aletta Soultorn\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 282,
+          "anchor": "define_as = \"ALETTA\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 347,
+          "anchor": "T_TYRANT"
+        },
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 351,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 325,
+          "anchor": "resolvers.equip{"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_ghost_aletta_soultorn.png",
+          "sha256": "f64139cb953c1c38e980e05cb93eb058ea8bc98693c9500c9ba7d3a080be71a9",
+          "role": "identity",
+          "note": "Native shape (64x64): a pale cyan-white ghost of a slender woman with long wild hair and tattered robes, mouth open in a shriek, arms flung wide. Keep the slender shrieking ghost-woman with flowing hair and wide arms, drawn as ONE compact figure filling the disc, but in orchid-violet and lilac robes with a silver-and-amethyst diadem, clearly not the cyan banshee."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/refs/ghosts.png",
+          "sha256": "c16c695d181648f5a22dca967c2995ac08e9e9438fa8f3a683354a9cda7f18cb",
+          "role": "family",
+          "note": "Six shipped ghost tokens (the banshee: a flowing pale-CYAN woman-ghost; the dread: a hooded purple-blue shroud with a red core; the dreadmaster: a big blue hooded shroud; Kor's Fury: a teal-cyan robed spirit; the grave wight: a pale cyan drifting ghost; the Shade of Telos: a blue crystalline figure): Aletta Soultorn is a slender ORCHID-VIOLET and lilac ghost-woman with a silver diadem and streaming white hair, shrieking with arms flung wide; the ruin banshee is a hunched clawed screaming spectre of acid-green and ember-orange Fearscape vapour; the Glacial Legion is a huge teardrop of frosted white ice-fog with a deep crimson frozen-blood orb at its heart; none is cyan or teal, none is a hooded shroud and none is a crystalline blue figure."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Aletta Soultorn seen from a steep overhead three-quarter angle: a slender, elegant GHOST-WOMAN floating just above the disc, an enchantingly beautiful higher-elf face twisted in a shriek of despair with wide glowing white-violet eyes and an open mouth, long wild silver-white HAIR streaming out to both sides, a delicate silver DIADEM set with a big amethyst on her brow, both arms flung wide with long thin clawed fingers, and a long tattered ORCHID-VIOLET and pale-lilac ROBE with ragged trailing hems that curl into ribbons of pearly lilac mist below her; broad pale highlight planes on every upper-left fold and a thin bright rim light. Shrieking, crowned, violet and complete. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Ghosts: ALETTA SOULTORN is the SLENDER SHRIEKING VIOLET GHOST-WOMAN with a silver-and-amethyst diadem, streaming white hair and arms flung wide (silhouette: a tall slim figure with two wide arms and streaming hair; hue: orchid-violet, lilac, pearl white and silver; value: light). The shipped banshee is a flowing pale cyan woman-ghost, Kor's Fury a teal spirit, the grave wight a cyan ghost, the dread and dreadmaster hooded blue-purple shrouds: this must not be cyan or teal, must not be hooded and must wear a diadem.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Orchid-violet and pale-lilac robe, pearl-white face and hair, silver diadem with an amethyst, white-violet glowing eyes, pearly lilac mist, a thin bright rim; nothing darker than mid orchid except the mouth and eye hollows; NO black robe, no dark shroud; the glow stays on the figure and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Aletta Soultorn, define_as=ALETTA, type=undead/subtype=ghost, unique=True, native_tall=False); details and hashes in evidence/monster-batch-ac-20260930/source-contracts.json. no base entity (a plain define_as leaf: no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; define_as-bound entry: the catalog entry carries define_as and the matcher rejects any actor with another (or no) define_as (ALETTA); UNIQUE: the catalog entry carries unique=true, so an unknown unique of the same shape is only accepted when it is this exact define_as-bound leaf; resolvers.equip a cloth robe, diadem, amulet and rings (equipment only, no moddable_tile); the leaf calls resolvers.sustains_at_birth() and Gloom is the only sustained talent (temporary values and particles); no auto_classes; pass_wall movement is not a display change. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ]
+    },
+    {
+      "asset_id": "ruin-banshee",
+      "native_name": "ruin banshee",
+      "scope": "rak-shor-pride pool and the greater-crypt vault (general/npcs/ghost.lua:129, undead/ghost, non-unique, no define_as, rank 3, base BASE_NPC_GHOST, default-name image); the only definition of this name; the vault picks it with random_filter name=ruin banshee (the same leaf)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ghost.lua",
+          "sha256": "c20b2ae1af1d1d99d0128b817a975cbfda791fa821778cee5bcc814600400238",
+          "line": 130,
+          "anchor": "name = \"ruin banshee\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ghost.lua",
+          "sha256": "c20b2ae1af1d1d99d0128b817a975cbfda791fa821778cee5bcc814600400238",
+          "line": 149,
+          "anchor": "T_CORRUPTED_NEGATION"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ghost.lua",
+          "sha256": "c20b2ae1af1d1d99d0128b817a975cbfda791fa821778cee5bcc814600400238",
+          "line": 146,
+          "anchor": "T_PHASE_DOOR"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ghost.lua",
+          "sha256": "c20b2ae1af1d1d99d0128b817a975cbfda791fa821778cee5bcc814600400238",
+          "line": 59,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ghost.lua",
+          "sha256": "c20b2ae1af1d1d99d0128b817a975cbfda791fa821778cee5bcc814600400238",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_GHOST\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_ghost_ruin_banshee.png",
+          "sha256": "64ab1be9763f9ba28212005fe184a9ace9c43645d9c1053211bbe9b2915b27fc",
+          "role": "identity",
+          "note": "Native shape (64x64): a hunched, ragged spectre of glowing cyan lines with a gaping screaming face, long clawed arms and a trailing tattered lower body. Keep the hunched, clawed, ragged, screaming spectre, drawn as ONE compact figure filling the disc, but wreathed in acid-green and ember-orange Fearscape vapour instead of cyan, clearly not the graceful cyan banshee."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/refs/ghosts.png",
+          "sha256": "c16c695d181648f5a22dca967c2995ac08e9e9438fa8f3a683354a9cda7f18cb",
+          "role": "family",
+          "note": "Six shipped ghost tokens (the banshee: a flowing pale-CYAN woman-ghost; the dread: a hooded purple-blue shroud with a red core; the dreadmaster: a big blue hooded shroud; Kor's Fury: a teal-cyan robed spirit; the grave wight: a pale cyan drifting ghost; the Shade of Telos: a blue crystalline figure): Aletta Soultorn is a slender ORCHID-VIOLET and lilac ghost-woman with a silver diadem and streaming white hair, shrieking with arms flung wide; the ruin banshee is a hunched clawed screaming spectre of acid-green and ember-orange Fearscape vapour; the Glacial Legion is a huge teardrop of frosted white ice-fog with a deep crimson frozen-blood orb at its heart; none is cyan or teal, none is a hooded shroud and none is a crystalline blue figure."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A ruin banshee seen from a steep overhead three-quarter angle: a hunched, ragged, vengeful SPECTRE hovering over the disc, its body made of tattered sickly ACID-LIME-GREEN ghost-cloth with glowing EMBER-ORANGE cracks running through it like a burning ruin, a gaunt pale-bone-grey skull-like face thrown back with a huge gaping shrieking mouth and two white-hot eyes, long ropy arms ending in curved claws held out in front, wisps of bright blight-green vapour and a few orange sparks curling up from its shoulders and back, its lower body dissolving into ragged tattered strips (all close to the body); broad pale highlight planes on every upper-left surface and a thin bright rim light. Hunched, screaming, burning and complete. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Ghosts: the RUIN BANSHEE is the HUNCHED CLAWED SCREAMING SPECTRE of acid-green ghost-cloth with ember-orange cracks and Fearscape vapour (silhouette: a hunched mass with a big screaming head and two long clawed arms reaching forward; hue: acid lime-green and ember orange with a bone-grey face; value: mid-light). The shipped banshee is a flowing upright pale cyan woman-ghost, the dread a purple hooded shroud and Kor's Fury a teal spirit: this must not be cyan, teal, upright, graceful or hooded.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Acid lime-green cloth, ember-orange cracks and sparks, bone-grey face, white-hot eyes, bright blight-green vapour, a thin bright rim; nothing darker than mid green except the mouth interior and eye rims; NO black or dark green cloth; the glow stays on the figure and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ruin banshee, define_as=None, type=undead/subtype=ghost, unique=False, native_tall=False); details and hashes in evidence/monster-batch-ac-20260930/source-contracts.json. base BASE_NPC_GHOST (undead/ghost, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; the base calls resolvers.sustains_at_birth() but none of the leaf talents is sustained (Phase Door, Silence, Mind Disruption, Corrupted Negation, Corrosive Worm, Poison Storm and the curses are activated or passive); no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ]
+    },
+    {
+      "asset_id": "glacial-legion",
+      "native_name": "Glacial Legion",
+      "scope": "rak-shor-pride boss (zones/rak-shor-pride/npcs.lua:195, undead/ghost, UNIQUE, define_as GLACIAL_LEGION, rank 3.5, base BASE_NPC_GHOST, resolvers.nice_tile tall body); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 197,
+          "anchor": "name = \"Glacial Legion\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 195,
+          "anchor": "define_as = \"GLACIAL_LEGION\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 198,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 245,
+          "anchor": "T_UTTERCOLD"
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 222,
+          "anchor": "on_move = function(self)"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ghost.lua",
+          "sha256": "c20b2ae1af1d1d99d0128b817a975cbfda791fa821778cee5bcc814600400238",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_GHOST\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_ghost_glacial_legion.png",
+          "sha256": "8d51e1384956ccbd4d18ecdab31d2426e72fd7f9ed984910556b38b06c8ff2c9",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a huge pale ice-blue ghost form like a tall teardrop of frosted mist with a glowing red orb of frozen blood at its chest. Keep the tall teardrop of frosted ice-fog around a red frozen-blood orb, drawn as ONE compact figure filling the disc, no tall canvas, in frosted white and pale ice-blue with a deep crimson orb and frost crystals, clearly not the shipped cyan ghosts."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/refs/ghosts.png",
+          "sha256": "c16c695d181648f5a22dca967c2995ac08e9e9438fa8f3a683354a9cda7f18cb",
+          "role": "family",
+          "note": "Six shipped ghost tokens (the banshee: a flowing pale-CYAN woman-ghost; the dread: a hooded purple-blue shroud with a red core; the dreadmaster: a big blue hooded shroud; Kor's Fury: a teal-cyan robed spirit; the grave wight: a pale cyan drifting ghost; the Shade of Telos: a blue crystalline figure): Aletta Soultorn is a slender ORCHID-VIOLET and lilac ghost-woman with a silver diadem and streaming white hair, shrieking with arms flung wide; the ruin banshee is a hunched clawed screaming spectre of acid-green and ember-orange Fearscape vapour; the Glacial Legion is a huge teardrop of frosted white ice-fog with a deep crimson frozen-blood orb at its heart; none is cyan or teal, none is a hooded shroud and none is a crystalline blue figure."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "The Glacial Legion seen from a steep overhead three-quarter angle: a huge rounded TEARDROP of swirling FROSTED WHITE and pale ice-blue fog and ice hovering over the disc as one compact mass, dozens of faint ghostly faces and reaching hands (the fused legion of souls) pressed into its surface, sharp white frost crystals and short icicles sprouting from its shoulders and crown, and at its heart a large glossy deep CRIMSON ORB of FROZEN BLOOD, ringed by ice crystals and glowing softly, the bottom of the teardrop trailing into two small curling pools of white frost; broad pale highlight planes on every upper-left surface and a thin bright rim light. Massed, frozen, red-hearted and complete. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Ghosts: the GLACIAL LEGION is the HUGE TEARDROP OF FROSTED WHITE ICE-FOG packed with ghostly faces around a DEEP CRIMSON FROZEN-BLOOD ORB (silhouette: a big round-topped teardrop with sprouting ice crystals and one strong red centre; hue: frosted white and ice-blue with crimson; value: very light with a saturated red core). The shipped banshee is a slim cyan woman-ghost, the grave wight a cyan drifting ghost, the Shade of Telos a blue crystalline figure and the dread a purple shroud: this must not be a slim humanoid, must not be a crystalline figure and must have the red orb.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Frosted white and pale ice-blue mist and ice, sharp white frost crystals, a deep glossy crimson orb with a pale rim, faint pale ghost faces, a thin bright rim; nothing darker than mid ice-blue except the crimson orb and the faces' hollows; NO black or navy mass; the glow stays on the figure and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Glacial Legion, define_as=GLACIAL_LEGION, type=undead/subtype=ghost, unique=True, native_tall=False); details and hashes in evidence/monster-batch-ac-20260930/source-contracts.json. base BASE_NPC_GHOST (undead/ghost, no image=, no shader); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/undead_ghost_glacial_legion.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; UNIQUE with a define_as binding, so nativeTallImage accepts the tall body through the unique path (like the Hedge-Wizard, Kyless and Walrog) and the entry carries unique=true and define_as but no native_tall flag; define_as-bound entry: the catalog entry carries define_as and the matcher rejects any actor with another (or no) define_as (GLACIAL_LEGION); the leaf has no sustains_at_birth of its own (the base calls it) and Uttercold, Spellcraft and Frost Hands are sustained temporary values and particles; on_move only adds a lasting ice map effect; resolvers.equip only the Glacial Cloak; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ]
+    },
+    {
+      "asset_id": "filio-flightfond",
+      "native_name": "Filio Flightfond",
+      "scope": "dreadfell boss (zones/dreadfell/npcs.lua:358, undead/skeleton, UNIQUE, define_as FILIO, rank 3.5, no base, default-name image); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 362,
+          "anchor": "name = \"Filio Flightfond\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 358,
+          "anchor": "define_as = \"FILIO\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 380,
+          "anchor": "resolvers.auto_equip_filters{"
+        },
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 385,
+          "anchor": "resolvers.equip{"
+        },
+        {
+          "path": "game/modules/tome/data/zones/dreadfell/npcs.lua",
+          "sha256": "62c13c6870b292e66ce61384f5aee536f54f4f673f13fd4943b4b4a99de12fca",
+          "line": 379,
+          "anchor": "body = { INVEN = 10, MAINHAND=1, OFFHAND=1, QUIVER=1  }"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_skeleton_filio_flightfond.png",
+          "sha256": "2bcb7c5098c22a50ab757c3c32428bd251e5f2699eb10e2a2435a7ab455048a4",
+          "role": "identity",
+          "note": "Native shape (64x64): a small furtive cream-bone skeleton in big soft brown boots holding a short dagger and a sling. Keep the short furtive padded-footed skeleton with sling and dagger, drawn as ONE compact figure filling the disc, in bright ivory bone with a plum-violet neckerchief and belt, clearly not a robed caster or an archer."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/refs/skeletons.png",
+          "sha256": "a66a1cde542fb6eb5440e35981123038232c5bd5def0acddad0af8e9563c68b8",
+          "role": "family",
+          "note": "Five shipped skeleton tokens (the skeleton mage: a dark-cloaked caster; the magus: a blue-robed caster with two flames; the master archer: a gold-armoured archer; the skeleton assassin; the degenerated archer): Filio Flightfond is a SHORT, hunched, furtive IVORY-bone skeleton with soft padded brown boots, a plum-violet neckerchief and belt, a leather SLING whirling in one hand and a short steel dagger in the other, in a sneaking crouch; not robed, not armoured and not an archer with a bow."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Filio Flightfond seen from a steep overhead three-quarter angle: a SHORT furtive IVORY-BONE skeleton caught in a sneaking crouch on the disc, a big cunning skull with hollow sockets tilted to one side, soft padded tan-brown leather boots and ankle wraps, a PLUM-VIOLET neckerchief knotted at the throat and a matching sash belt with two bright brass buckles, a leather SLING with a small stone swinging in the left hand and a short bright steel DAGGER in the right hand held low, a small pouch of shot at the hip; broad pale highlight planes on every upper-left bone and a thin bright rim light. Furtive, padded, armed with sling and dagger and complete.",
+        "contrast": "Skeletons: FILIO FLIGHTFOND is the SHORT SNEAKING IVORY SKELETON with soft padded boots, a plum-violet neckerchief and sash, a whirling sling and a short dagger (silhouette: a small crouched figure with a big skull, one arm swinging a sling and one arm low with a dagger; hue: ivory bone, tan-brown boots, plum-violet cloth; value: light). The shipped skeleton mage is a dark-cloaked caster, the magus a blue-robed caster with flames, the master archer a gold-armoured archer with a bow and the skeleton assassin a dark blade-wielder: this must not wear a robe or armour, must not hold a bow and must not be dark.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Bright ivory and cream bone, tan-brown padded boots, plum-violet cloth, brass buckles, steel dagger, a thin bright rim; nothing darker than mid brown except the eye sockets and joint seams; NO black cloak, no dark bones; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Filio Flightfond, define_as=FILIO, type=undead/subtype=skeleton, unique=True, native_tall=False); details and hashes in evidence/monster-batch-ac-20260930/source-contracts.json. no base entity (a plain define_as leaf: no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; define_as-bound entry: the catalog entry carries define_as and the matcher rejects any actor with another (or no) define_as (FILIO); UNIQUE: the catalog entry carries unique=true, so an unknown unique of the same shape is only accepted when it is this exact define_as-bound leaf; resolvers.equip a sling, a dagger and shot (equipment only, no moddable_tile); the leaf defines no talents and has no sustains_at_birth; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-aa-3",
+  "assets": [
+    {
+      "asset_id": "anaconda",
+      "native_name": "anaconda",
+      "scope": "noxious-caldera and unremarkable-cave pools (general/npcs/snake.lua:115, animal/snake, non-unique, no define_as, rank 3, base BASE_NPC_SNAKE, explicit image=npc/yellow-green-snake.png); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/snake.lua",
+          "sha256": "2e7035bbff94a277cabc07e7ed59398563123db90c5e029ec284e55f7090a1b1",
+          "line": 116,
+          "anchor": "name = \"anaconda\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/snake.lua",
+          "sha256": "2e7035bbff94a277cabc07e7ed59398563123db90c5e029ec284e55f7090a1b1",
+          "line": 116,
+          "anchor": "image=\"npc/yellow-green-snake.png\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/snake.lua",
+          "sha256": "2e7035bbff94a277cabc07e7ed59398563123db90c5e029ec284e55f7090a1b1",
+          "line": 126,
+          "anchor": "T_CONSTRICT"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/snake.lua",
+          "sha256": "2e7035bbff94a277cabc07e7ed59398563123db90c5e029ec284e55f7090a1b1",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_SNAKE\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/yellow-green-snake.png",
+          "sha256": "34633ce2aabc5da57354d0a3b66480adf9fcf3abb863cdc01d8308e6577134b9",
+          "role": "identity",
+          "note": "Native shape (64x64): a gigantic golden-yellow snake with dark scale patterns wound into a tall coil. Keep the huge thick yellow-green snake in a heavy coil, drawn as ONE compact stacked spiral filling the disc with a raised broad head, clearly different from the shipped flat brown coil and hooded cobra."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-aa/refs/snakes.png",
+          "sha256": "351f11a72f2ba99bfe99875f661409a23c071cad2571a454de9f96f504eb2bdc",
+          "role": "family",
+          "note": "Four shipped snake tokens (the tan-brown patterned flat coil, the olive-green hooded king cobra, the steel-blue black mamba and the tan diamond-back rattlesnake): the anaconda is a gigantic very THICK snake wound into a tight VERTICAL constricting spiral of three heavy stacked coils like a rope pile, the front rising in a short S to a broad flat wedge-shaped head, bright YELLOW-GREEN and olive scales with two rows of big dark green-brown OVAL RING blotches and a cream-yellow belly; not tan-brown, not hooded, not blue and not a flat coil."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An anaconda seen from a steep overhead three-quarter angle: a gigantic very THICK snake whose body is wound into a tight VERTICAL constricting spiral of three heavy stacked coils like a coiled rope pile on the disc, the front of the body rising from the top coil in a short S-curve to a broad flat WEDGE-SHAPED head turned to the lower left with small dark eyes set on top, the jaw slightly open with a flicking pink forked tongue, bright YELLOW-GREEN and olive scales with TWO ROWS of big dark green-brown OVAL RING blotches along the back, a cream-yellow throat and belly showing between coils, bright pale highlight bands along the upper-left of every coil, a thin bright rim light. Thick, stacked, blotched and complete.",
+        "contrast": "Snakes: the ANACONDA is the GIGANTIC THICK YELLOW-GREEN SNAKE in a tight stacked vertical spiral with ring blotches and a broad flat head (silhouette: a thick rope-pile spiral with a raised wedge head, no hood; hue: bright yellow-green and olive with dark oval rings, cream belly; value: mid-light). The shipped large brown snake is a flat tan-brown coil, the king cobra an olive-green hooded snake, the black mamba a slender steel-blue snake and the rattlesnake a tan diamond-back: this must not be tan, hooded, blue, slender or a flat coil.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Bright yellow-green and olive scales with dark green-brown oval ring blotches, cream-yellow belly, pink tongue, a thin bright rim; nothing darker than dark olive except eye pupils and blotch centres; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=anaconda, define_as=None, type=animal/subtype=snake, unique=False, native_tall=False); details and hashes in evidence/monster-batch-aa-20260930/source-contracts.json. base BASE_NPC_SNAKE (animal/snake, no image=, no shader, no sustains_at_birth); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; the PNG yellow-green-snake.png is used by this leaf only; Constrict is an activated npc talent; no equip, no sustains_at_birth, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-aa-20260930/source-contracts.json",
+          "sha256": "675cf3a99eb14c8214abbbcc4be9e636c94f266e91f95c4a7d99ab66ba72d148"
+        }
+      ]
+    },
+    {
+      "asset_id": "necrotic-abomination",
+      "native_name": "necrotic abomination",
+      "scope": "rak-shor-pride pool (general/npcs/horror-undead.lua:61, undead/horror, non-unique, no define_as, rank 3, base BASE_NPC_HORROR_UNDEAD, nice_tile tall body); the renegade-undead vault and the rak-shor-pride map script build the same leaf by name; the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 62,
+          "anchor": "name = \"necrotic abomination\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 64,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 83,
+          "anchor": "base_list=\"mod.class.NPC:/data/general/npcs/ghoul.lua\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 90,
+          "anchor": "T_SOUL_ROT"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 102,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_HORROR_UNDEAD\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_horror_necrotic_abomination.png",
+          "sha256": "23103054aa9418437d39fe15eec4a2f65beaddbbc335dc791fc4ecb90cd2aa4d",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a dark hunched heap of putrid flesh with chipped bone and a skull, dragging itself forward. Keep the hunched torn-flesh-and-bone hulk, but render the flesh in sickly pale olive-green with bone-white ribs and spikes, drawn as ONE compact figure filling the disc, no tall canvas, clearly different from the shipped necrotic mass and experiments."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-aa/refs/undead-horrors.png",
+          "sha256": "485a27363df898cf2efe46dff54d2a7ab0cd7ff3628333e9a70cbc4e58ea06d9",
+          "role": "family",
+          "note": "Four shipped undead-horror tokens (the necrotic mass: a round pink-brown lump with small skulls; the fleshy experiment: a pink mass with tentacles; the boney experiment: a flat heap of bones; the sanguine experiment: a low glossy red blob dome): the necrotic abomination is a lopsided hunched drag-forward hulk of sickly OLIVE-GREEN rotting flesh torn open to bone-white ribs with a crest of jutting bone spikes and a gaping fanged chest split; the bone horror is a huge ivory RIBCAGE arch standing on six long spidery legs of fused finger bones with skeletal hands reaching up and a warm amber heartbeat glow inside; the sanguine horror is an upright rearing wave-column of crimson blood with a glowing coral-pink heart inside and dripping tendril arms; none may be a lump, a flat heap or a low dome."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A necrotic abomination seen from a steep overhead three-quarter angle: a monstrous lopsided hunched hulk of putrid flesh dragging itself forward across the disc, sickly pale OLIVE-GREEN and grey-green rotting flesh with broad pale highlight planes, torn open at the side to show bone-white RIBS, a CREST of jutting broken bone spikes along the back, a gaping crooked jaw-like split across the chest showing yellow bone fangs, one massive drooping arm of stitched flesh trailing a bone claw and one short arm of bare bone, a few pale skulls embedded in the mass, glistening red viscera seams and a few blood drips spurting from tears (drips stay on the body), a thin bright rim light. Hunched, torn, spiked and complete.",
+        "contrast": "Undead horrors: the NECROTIC ABOMINATION is the LOPSIDED DRAG-FORWARD OLIVE-GREEN HULK torn open to ribs with a bone-spike crest and a fanged chest split (silhouette: an asymmetric hunched hulk with a spiked back crest and one huge drooping arm; hue: sickly olive-green with bone white and red seams; value: mid-light). The shipped necrotic mass is a round pink-brown lump with small skulls, the fleshy experiment a pink tentacled mass, the boney experiment a flat heap of bones and the sanguine experiment a low red blob: this must not be a round lump, pink, a flat heap or a red dome.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Sickly pale olive-green flesh, bone-white ribs, spikes and skulls, small red viscera seams, yellow fangs, a thin bright rim; nothing darker than mid olive except mouth hollows and seams; NO black or dark green mass; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=necrotic abomination, define_as=None, type=undead/subtype=horror, unique=False, native_tall=True); details and hashes in evidence/monster-batch-aa-20260930/source-contracts.json. base BASE_NPC_HORROR_UNDEAD (undead/horror, no image=, no shader, no sustains_at_birth in the base); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/undead_horror_necrotic_abomination.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the single image is used); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; the leaf calls resolvers.sustains_at_birth() but none of its talents is sustained; its Summon (ghoul and skeleton lists) and on_die summon build other exact leaves; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-aa-20260930/source-contracts.json",
+          "sha256": "675cf3a99eb14c8214abbbcc4be9e636c94f266e91f95c4a7d99ab66ba72d148"
+        }
+      ]
+    },
+    {
+      "asset_id": "bone-horror",
+      "native_name": "bone horror",
+      "scope": "rak-shor-pride pool (general/npcs/horror-undead.lua:105, undead/horror, non-unique, no define_as, rank 3, base BASE_NPC_HORROR_UNDEAD, nice_tile tall body); the renegade-undead vault builds the same leaf by name (its random-boss variant stays native as a non-unique tall boss); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 106,
+          "anchor": "name = \"bone horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 108,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 139,
+          "anchor": "T_BONE_SHIELD"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 128,
+          "anchor": "base_list=\"mod.class.NPC:/data/general/npcs/skeleton.lua\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 147,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_HORROR_UNDEAD\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_horror_bone_horror.png",
+          "sha256": "107cf5a8b70876454ec74a31c7e9407e902b83789b56a9ffc6602fa93b0c2603",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a pale ribcage held up on long spidery limbs of fused skeletal hands, with more hands reaching upward. Keep the ribcage arch on spindly finger-bone legs with skeletal hands reaching up, drawn as ONE compact figure filling the disc, no tall canvas, clearly a spidery arch and not a heap."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-aa/refs/undead-horrors.png",
+          "sha256": "485a27363df898cf2efe46dff54d2a7ab0cd7ff3628333e9a70cbc4e58ea06d9",
+          "role": "family",
+          "note": "Four shipped undead-horror tokens (the necrotic mass: a round pink-brown lump with small skulls; the fleshy experiment: a pink mass with tentacles; the boney experiment: a flat heap of bones; the sanguine experiment: a low glossy red blob dome): the necrotic abomination is a lopsided hunched drag-forward hulk of sickly OLIVE-GREEN rotting flesh torn open to bone-white ribs with a crest of jutting bone spikes and a gaping fanged chest split; the bone horror is a huge ivory RIBCAGE arch standing on six long spidery legs of fused finger bones with skeletal hands reaching up and a warm amber heartbeat glow inside; the sanguine horror is an upright rearing wave-column of crimson blood with a glowing coral-pink heart inside and dripping tendril arms; none may be a lump, a flat heap or a low dome."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A bone horror seen from a steep overhead three-quarter angle: a massive pale ivory RIBCAGE standing on the disc as a huge arch, held up on six long spindly leg-like assemblies of fused FINGER BONES and skeletal forearms that bend out and down like a spider's legs, skeletal HANDS with long fingers reaching up and out from the top of the ribcage and a few smaller hands clutching at the air, a dim warm AMBER-yellow glow of a beating heart inside the ribs, bright bone-white and warm ivory with soft grey-beige shadows and bright highlight planes on every upper-left bone, a thin bright rim light; no skull face and no ground pile. Arched, spidery, many-handed and complete.",
+        "contrast": "Undead horrors: the BONE HORROR is the IVORY RIBCAGE ARCH on six spidery finger-bone legs with skeletal hands reaching up and an amber heartbeat glow (silhouette: a tall arch on splayed thin legs with hands above; hue: bright ivory bone with a warm amber core; value: very light). The shipped boney experiment is a flat heap of bones with skulls, the necrotic mass a pink lump and the skeleton tokens are upright humanoids: this must not be a heap, pink or a humanoid skeleton.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Bright bone-white and warm ivory with soft grey-beige shadows, an amber heart glow contained inside the ribs, a thin bright rim; nothing darker than mid grey-beige except thin gaps between bones; the amber glow stays inside the ribs and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=bone horror, define_as=None, type=undead/subtype=horror, unique=False, native_tall=True); details and hashes in evidence/monster-batch-aa-20260930/source-contracts.json. base BASE_NPC_HORROR_UNDEAD (undead/horror, no image=, no shader, no sustains_at_birth in the base); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/undead_horror_bone_horror.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the single image is used); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; the leaf calls resolvers.sustains_at_birth() and Bone Shield is its only sustain (ring particle and temporary values only); its Summon and on_die summon build skeleton leaves (own tokens); no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-aa-20260930/source-contracts.json",
+          "sha256": "675cf3a99eb14c8214abbbcc4be9e636c94f266e91f95c4a7d99ab66ba72d148"
+        }
+      ]
+    },
+    {
+      "asset_id": "sanguine-horror",
+      "native_name": "sanguine horror",
+      "scope": "rak-shor-pride pool (general/npcs/horror-undead.lua:150, undead/horror, non-unique, no define_as, rank 3, base BASE_NPC_HORROR_UNDEAD, nice_tile tall body); the renegade-undead vault and the rak-shor-pride map script build the same leaf by name (its random-boss variant stays native as a non-unique tall boss); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 151,
+          "anchor": "name = \"sanguine horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 153,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 183,
+          "anchor": "T_BLOOD_FURY"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 173,
+          "anchor": "summon = {"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 190,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_HORROR_UNDEAD\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_horror_sanguine_horror.png",
+          "sha256": "73d42cd8a2efaaecbec7c0fd14b499893598220cd1b1e002cac3cbe5f6dba865",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a glossy deep-red pulsing mass of blood. Keep the glossy crimson blood body, but draw it as an upright rearing wave-column with a glowing heart inside and dripping tendrils, as ONE compact figure filling the disc, no tall canvas, clearly not the low red dome of the shipped sanguine experiment."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-aa/refs/undead-horrors.png",
+          "sha256": "485a27363df898cf2efe46dff54d2a7ab0cd7ff3628333e9a70cbc4e58ea06d9",
+          "role": "family",
+          "note": "Four shipped undead-horror tokens (the necrotic mass: a round pink-brown lump with small skulls; the fleshy experiment: a pink mass with tentacles; the boney experiment: a flat heap of bones; the sanguine experiment: a low glossy red blob dome): the necrotic abomination is a lopsided hunched drag-forward hulk of sickly OLIVE-GREEN rotting flesh torn open to bone-white ribs with a crest of jutting bone spikes and a gaping fanged chest split; the bone horror is a huge ivory RIBCAGE arch standing on six long spidery legs of fused finger bones with skeletal hands reaching up and a warm amber heartbeat glow inside; the sanguine horror is an upright rearing wave-column of crimson blood with a glowing coral-pink heart inside and dripping tendril arms; none may be a lump, a flat heap or a low dome."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A sanguine horror seen from a steep overhead three-quarter angle: a towering rippling COLUMN of thick glossy deep CRIMSON blood reared upright on the disc like a wave about to break, a visible translucent beating HEART glowing bright coral-pink in the middle of the column, two thick blood TENDRILS arcing out and down from the sides like arms with dripping tips, concentric ripples travelling up the surface, glossy bright coral-red highlight planes on every upper-left surface and a pale pink rim light along the outline, a few blood droplets falling (all on the body side of the disc), no puddle spreading across the disc. Upright, pulsing, tendril-armed and complete.",
+        "contrast": "Undead horrors: the SANGUINE HORROR is the UPRIGHT REARING CRIMSON WAVE-COLUMN with a glowing coral heart inside and two dripping tendril arms (silhouette: a tall narrowing column with a curling crest and arcing tendrils; hue: crimson with coral and pale-pink highlights; value: mid-light with a bright heart). The shipped sanguine experiment is a low glossy red dome blob, the fleshy experiment a pink tentacled mass and the necrotic mass a pink lump: this must not be a low dome, a lump or pink flesh.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Glossy deep crimson blood with bright coral highlights, a coral-pink glowing heart contained inside the body, a pale pink rim; nothing darker than deep crimson except thin ripple seams; NO dark maroon body; the disc stays neutral charcoal at reference lightness and receives no red spill or puddle. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=sanguine horror, define_as=None, type=undead/subtype=horror, unique=False, native_tall=True); details and hashes in evidence/monster-batch-aa-20260930/source-contracts.json. base BASE_NPC_HORROR_UNDEAD (undead/horror, no image=, no shader, no sustains_at_birth in the base); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/undead_horror_sanguine_horror.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the single image is used); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; the leaf calls resolvers.sustains_at_birth() and Blood Fury is its only sustain (shield particles and temporary values only); its Summon builds undead/blood leaves (own tokens or native); Bloodspring is a talent that only creates terrain; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-aa-20260930/source-contracts.json",
+          "sha256": "675cf3a99eb14c8214abbbcc4be9e636c94f266e91f95c4a7d99ab66ba72d148"
+        }
+      ]
+    }
+  ]
+}

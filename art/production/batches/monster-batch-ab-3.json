@@ -1,0 +1,336 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ab-3",
+  "assets": [
+    {
+      "asset_id": "shadowblade",
+      "native_name": "shadowblade",
+      "scope": "thieves-tunnels and maze pools plus the thief-hideout vault and the bandit-fortress map (general/npcs/thieve.lua:162, humanoid/human, non-unique, define_as THIEF_ASSASSIN (repeated from the assassin leaf above it), rank 2, base BASE_NPC_THIEF, default-name image); the arena zone defines a second, unrelated 'shadowblade' (zones/arena/npcs.lua:773, base BASE_NPC_ARENA1, no define_as), which the define_as binding rejects",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 163,
+          "anchor": "name = \"shadowblade\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 162,
+          "anchor": "define_as = \"THIEF_ASSASSIN\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 179,
+          "anchor": "T_SHADOW_COMBAT"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 181,
+          "anchor": "T_INVISIBILITY"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 185,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_THIEF\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/arena/npcs.lua",
+          "sha256": "7bb88092c6875ba878a1029934ea1e2e68e1b6a4906033a0324ace85946c0e42",
+          "line": 773,
+          "anchor": "newEntity{ name = \"shadowblade\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_shadowblade.png",
+          "sha256": "6be8e97d6786f31880549c3f22e22a554723bd7b4b8be65e6ee3ec9ad344d80e",
+          "role": "identity",
+          "note": "Native shape (64x64): a dark-hooded human with two long curved blades caught mid-strike in a dark cloak. Keep the duelling shadow-blade with two long curved swords in a dynamic dual-strike pose, drawn as ONE compact figure filling the disc, in a bright periwinkle cloak and scarf with silver blades and trailing violet shadow crescents, clearly different from the grey single-dagger assassin."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ab/refs/thieves.png",
+          "sha256": "38a238b004996691b62235bd7fa867a89caf86b3bf23b71b91ae2e7a74a11766",
+          "role": "family",
+          "note": "Five shipped thief tokens (the assassin: a grey-cloaked knifeman with a red sash and one dagger; the rogue: a dark-blue hooded runner; the thief: a brown-cloaked sneak; the rogue sapper: a goggled brown trapper; the cutpurse: a small hooded pickpocket): the shadowblade is a SHADOW-MAGE duellist caught mid-leap with TWO LONG CURVED SILVER BLADES crossed in an X in front of him, a pale half-mask, a long flowing PERIWINKLE-blue scarf and cloak streaming behind him and trailing crescent tendrils of dark violet shadow; not grey, not brown, not a single dagger, not crouched and not hooded-and-hunched."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A shadowblade seen from a steep overhead three-quarter angle: a lithe human shadow-duellist caught mid-leap on the disc with TWO LONG CURVED SILVER SCIMITARS crossed in an X in front of the body with bright white edge highlights, a pale bone-white half-mask over the lower face, dark hair, a fitted slate-blue tunic with silver buckles and dark leather bracers, a long flowing PERIWINKLE-blue SCARF and short cloak streaming behind, and three curling CRESCENT tendrils of mid-violet shadow trailing from the cloak hem and the blades (all kept close to the body, no tendril reaching the outer ring); broad pale highlight planes on every upper-left surface and a thin bright rim light. Leaping, twin-bladed, veiled and complete.",
+        "contrast": "Thieves: the SHADOWBLADE is the LEAPING TWIN-SCIMITAR SHADOW-DUELLIST with a half-mask, a periwinkle scarf and cloak and violet shadow crescents (silhouette: a figure with two long crossed curved blades and a streaming scarf; hue: periwinkle, silver and violet; value: mid-light). The shipped assassin is a grey-cloaked knifeman with a red sash and one dagger, the rogue a dark-blue hooded runner, the thief a brown-cloaked sneak and the rogue sapper a goggled brown trapper: this must not be grey, brown or hooded, and must not hold a single dagger.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Periwinkle and slate-blue cloth, bright silver blades, bone-white mask, mid-violet shadow crescents, silver buckles, a thin bright rim; nothing darker than mid slate-blue except hair, eye slits and thin seams; NO black cloak, no black tendrils; the shadow tendrils stay close to the body and must not darken or tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=shadowblade, define_as=THIEF_ASSASSIN, type=humanoid/subtype=human, unique=False, native_tall=False); details and hashes in evidence/monster-batch-ab-20260930/source-contracts.json. base BASE_NPC_THIEF (humanoid/human, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; define_as-bound entry: the catalog entry carries define_as and the matcher rejects any actor with another (or no) define_as (THIEF_ASSASSIN, the same define_as as the assassin leaf; the assassin token is bound to the name assassin and this one to the name shadowblade, and each rejects the other name); resolvers.racial(), resolvers.equip (two daggers, light armour) and resolvers.inscriptions do not write the display; the base and the leaf call resolvers.sustains_at_birth() and Stealth and Shadow Combat are sustained (particles and temporary values only); Shadow Veil, Invisibility and Shadowstep are activated and their effects (shader while active) are rejected by the matcher; color_r/g/b are colour modulation only; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ab-20260930/source-contracts.json",
+          "sha256": "47d8089d6229f1fa36f123bba4527789c3e911cb904308319b4cf51124e48e56"
+        }
+      ]
+    },
+    {
+      "asset_id": "venom-wyrm",
+      "native_name": "venom wyrm",
+      "scope": "noxious-caldera pool plus the acidic-vault and renegade-wyrmics vaults (general/npcs/venom-drake.lua:84, dragon/venom, non-unique, no define_as, rank 3, base BASE_NPC_VENOM_DRAKE, resolvers.nice_tile{tall=1}); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/venom-drake.lua",
+          "sha256": "7a42f9049d69eed172d9b20e48eaf6beea98a59b341e28ac76f19db07e3c3bbb",
+          "line": 85,
+          "anchor": "name = \"venom wyrm\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/venom-drake.lua",
+          "sha256": "7a42f9049d69eed172d9b20e48eaf6beea98a59b341e28ac76f19db07e3c3bbb",
+          "line": 87,
+          "anchor": "resolvers.nice_tile{tall=1}"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/venom-drake.lua",
+          "sha256": "7a42f9049d69eed172d9b20e48eaf6beea98a59b341e28ac76f19db07e3c3bbb",
+          "line": 111,
+          "anchor": "T_CORROSIVE_BREATH"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/venom-drake.lua",
+          "sha256": "7a42f9049d69eed172d9b20e48eaf6beea98a59b341e28ac76f19db07e3c3bbb",
+          "line": 103,
+          "anchor": "make_escort"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/venom-drake.lua",
+          "sha256": "7a42f9049d69eed172d9b20e48eaf6beea98a59b341e28ac76f19db07e3c3bbb",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_VENOM_DRAKE\""
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_venom_venom_wyrm.png",
+          "sha256": "06a65283e783f4a299175b4151c0e279bab53c592837b532c709e2427c0df1f5",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): an old spiny green wyrm rearing on its haunches with a long S-curved neck, a spiked mane and a tail curling up. Keep the reared S-necked spiny wyrm, drawn as ONE compact figure filling the disc, no tall canvas, in bright lime and acid-yellow green with acid dripping from the jaw, clearly different from the flat-crouching winged venom drake and the coiled fire wyrm."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ab/refs/drakes.png",
+          "sha256": "68a28f6e8f3d3e59c506f10f29c61ed85ba017fcba4484300034c900a9ff2a82",
+          "role": "family",
+          "note": "Four shipped dragon tokens (the venom drake: an olive-green flat-crouching winged drake; the fire wyrm: a red serpentine wyrm coiled in a ring; the fire drake and cold drake: winged four-legged drakes): the venom wyrm is an old poisonous wyrm REARED UP on its haunches with a long swan-like S-CURVED neck, a great spiked frill and mane, a mouth dripping bright acid, a short thick tail curling up behind it and no spread wings; lime and acid-yellow green rather than olive; not crouching flat, not a coiled ring and not winged."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A venom wyrm seen from a steep overhead three-quarter angle: an old powerful poisonous WYRM REARED UP on its haunches on the disc with a long swan-like S-CURVED neck and a horned head turned to the lower right, a great fan of long spiked FRILL and mane spines in bright acid yellow-green, bright LIME-green and acid-yellow scales with darker mid-green scale rows, a pale sallow cream belly, clawed forelegs held up against the chest, a short thick tail curling up behind the haunches, no spread wings, and glowing acid-green DRIPS and strings of caustic saliva falling from the open jaw onto its own chest (drips stay on the body); broad pale highlight planes on every upper-left scale and a thin bright rim light. Reared, spined, dripping and complete.",
+        "contrast": "Dragons: the VENOM WYRM is the REARED S-NECKED SPINY WYRM with a tall frill, acid-dripping jaws and a tail curling up (silhouette: an upright S-curve with a fan of spines; hue: bright lime and acid yellow-green with a cream belly; value: mid-light). The shipped venom drake is an olive-green flat-crouching winged drake, the fire wyrm a red serpent coiled in a ring and the fire and cold drakes winged four-legged drakes: this must not be olive, crouching, winged or ring-coiled.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Bright lime and acid yellow-green scales with mid-green scale rows, cream belly, acid-green drips, pale-yellow claws and horns, a thin bright rim; nothing darker than mid green except eye slits and scale seams; NO dark olive body; the acid glow stays on the body and must not stain or tint the disc, which stays neutral charcoal at reference lightness and receives no puddle. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=venom wyrm, define_as=None, type=dragon/subtype=venom, unique=False, native_tall=True); details and hashes in evidence/monster-batch-ab-20260930/source-contracts.json. base BASE_NPC_VENOM_DRAKE (dragon/venom, no image=, no shader, no sustains_at_birth); resolvers.nice_tile{tall=1} on the leaf (no image= on the leaf or base, so NPC.lua:33 default-name image dragon_venom_venom_wyrm.png is used; the resolver expands to invis.png + one add_mos entry {image=e.image, display_h=2, display_y=-1}, the same live-confirmed shorthand as the ogre guard, mauler and pounder; with nicer_tiles off it is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; the leaf has no sustains_at_birth (Acidic Spray, Corrosive Mist, Corrosive Breath and Dissolve are activated); make_escort builds venom drake leaves (own native art, no token); the renegade-wyrmics random boss stays native as a non-unique tall boss; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ab-20260930/source-contracts.json",
+          "sha256": "47d8089d6229f1fa36f123bba4527789c3e911cb904308319b4cf51124e48e56"
+        }
+      ]
+    },
+    {
+      "asset_id": "alchemist-golem",
+      "native_name": "alchemist golem",
+      "scope": "golem-graveyard pool (general/npcs/construct.lua:93, construct/golem, non-unique, no define_as, rank 3, base BASE_NPC_CONSTRUCT, default-name image); the only NPC definition of this name; the player's own alchemist golem uses the name golem with npc/alchemist_golem.png and a paper doll (golemancy.lua), never this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/construct.lua",
+          "sha256": "61cbeb027f35ccbbfeb5b33fe7a6a46684f630f079a5ad8ff651ef68ae5ae36a",
+          "line": 94,
+          "anchor": "name = \"alchemist golem\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/construct.lua",
+          "sha256": "61cbeb027f35ccbbfeb5b33fe7a6a46684f630f079a5ad8ff651ef68ae5ae36a",
+          "line": 110,
+          "anchor": "T_GOLEM_ARCANE_PULL"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/construct.lua",
+          "sha256": "61cbeb027f35ccbbfeb5b33fe7a6a46684f630f079a5ad8ff651ef68ae5ae36a",
+          "line": 100,
+          "anchor": "resolvers.equip"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/construct.lua",
+          "sha256": "61cbeb027f35ccbbfeb5b33fe7a6a46684f630f079a5ad8ff651ef68ae5ae36a",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_CONSTRUCT\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/construct_golem_alchemist_golem.png",
+          "sha256": "c06df5010cfa1bdc928da315d4ddd1053954b9241e9f67c096c1c291e63bfb22",
+          "role": "identity",
+          "note": "Native shape (64x64): a stone-brown golem with rune markings and a single glowing blue eye ring in its head. Keep the slim standing rune-marked golem with a glowing cyan eye, drawn as ONE compact figure filling the disc, as polished tan sandstone with gold rune inlays, a cyan chest orb and arms hanging, clearly different from the orange hammer golem and the grey rubble golem."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ab/refs/golems.png",
+          "sha256": "b312dffb6ab181d4398a1ba1669454833c7d030afc970b308904997d1e0180e9",
+          "role": "family",
+          "note": "Two shipped golem tokens (the golem: a stocky orange stone golem with cyan runes carrying a big hammer; the broken golem: a cracked grey rubble golem): the alchemist golem is a slimmer, polished, smooth TAN-SANDSTONE golem standing straight with both arms hanging, bright GOLD rune inlays, a single round glowing CYAN eye and a glowing cyan orb set in the chest, no hammer; not orange, not cracked grey, not stocky and not carrying a weapon."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An alchemist golem seen from a steep overhead three-quarter angle: a tall slim humanoid golem of smooth polished light TAN-SANDSTONE blocks standing straight on the disc with both arms hanging and heavy rounded fists, bright GOLD rune lines and inlaid gold bands across the chest, shoulders, arms and legs, a rounded head with a single round glowing CYAN eye, a glowing cyan orb set in the middle of the chest, small brass vents on the shoulders, broad pale highlight planes on every upper-left block and a thin bright rim light; no weapon. Polished, runed, glowing and complete.",
+        "contrast": "Golems: the ALCHEMIST GOLEM is the SLIM POLISHED TAN-SANDSTONE GOLEM with gold rune inlays, one cyan eye and a cyan chest orb, standing with arms hanging (silhouette: a straight upright humanoid of blocks with no weapon; hue: tan sandstone, gold, cyan; value: light). The shipped golem is a stocky orange stone golem with cyan runes carrying a big hammer and the broken golem a cracked grey rubble golem: this must not be orange, cracked grey, stocky or armed.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Light tan sandstone, bright gold rune inlays and bands, brass vents, glowing cyan eye and chest orb, a thin bright rim; nothing darker than mid tan except thin block seams; NO dark brown stone; the cyan glow stays on the body and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=alchemist golem, define_as=None, type=construct/subtype=golem, unique=False, native_tall=False); details and hashes in evidence/monster-batch-ab-20260930/source-contracts.json. base BASE_NPC_CONSTRUCT (construct/golem, no image=, no shader, no sustains_at_birth); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; the leaf has no sustains_at_birth (Golem Knockback, Golem Crush, Golem Beam and Golem Arcane Pull are activated); resolvers.equip a greatmaul (equipment only, no moddable_tile); resolvers.inscriptions picks random runes (no display write); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ab-20260930/source-contracts.json",
+          "sha256": "47d8089d6229f1fa36f123bba4527789c3e911cb904308319b4cf51124e48e56"
+        }
+      ]
+    },
+    {
+      "asset_id": "forest-troll-hedge-wizard",
+      "native_name": "Forest Troll Hedge-Wizard",
+      "scope": "reknor pool (general/npcs/troll.lua:145, giant/troll, UNIQUE, no define_as, rank 3.5, base BASE_NPC_TROLL, resolvers.nice_tile{tall=1}); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/troll.lua",
+          "sha256": "17a39268830f8e408b329082d3915f2573f05dd3e0d3e298546135d4e290c51f",
+          "line": 146,
+          "anchor": "name = \"Forest Troll Hedge-Wizard\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/troll.lua",
+          "sha256": "17a39268830f8e408b329082d3915f2573f05dd3e0d3e298546135d4e290c51f",
+          "line": 145,
+          "anchor": "unique=true"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/troll.lua",
+          "sha256": "17a39268830f8e408b329082d3915f2573f05dd3e0d3e298546135d4e290c51f",
+          "line": 147,
+          "anchor": "resolvers.nice_tile{tall=1}"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/troll.lua",
+          "sha256": "17a39268830f8e408b329082d3915f2573f05dd3e0d3e298546135d4e290c51f",
+          "line": 170,
+          "anchor": "T_MANATHRUST"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/troll.lua",
+          "sha256": "17a39268830f8e408b329082d3915f2573f05dd3e0d3e298546135d4e290c51f",
+          "line": 174,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/troll.lua",
+          "sha256": "17a39268830f8e408b329082d3915f2573f05dd3e0d3e298546135d4e290c51f",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_TROLL\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_troll_forest_troll_hedge_wizard.png",
+          "sha256": "0ed392b6eeca4653cb29050204cd3570a1d602a731c543e2af05c4cd52cda3f1",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a yellow-green troll with a heavy purple patterned tabard, a black buckled shoulder strap and dark wrist bands. Keep the yellow-green troll in the purple ritual tabard with the buckled strap and wrist bands, drawn as ONE compact figure filling the disc, no tall canvas, as a gaunt old hedge-mage with orange flames between his fingers, clearly different from the loin-clothed forest troll."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ab/refs/trolls.png",
+          "sha256": "b52360e54b6890864c624732c6e4637a44082a9d47a742f9dbe7e78063dbccc4",
+          "role": "family",
+          "note": "Four shipped troll tokens (the forest troll: a yellow-green loin-clothed brute; the cave troll: a tan spear-carrying brute; the stone troll: a grey brute; the mountain troll): the Forest Troll Hedge-Wizard is the same yellow-green skin but a gaunt, old, hunched HEDGE-MAGE draped in a heavy plum-purple patterned ritual TABARD with a black buckled shoulder strap and dark wrist bands, thin atrophied arms, wild white eyebrows and a glaring old face, both hands held forward with roaring ORANGE flames between the fingers; not a loincloth brute, not tan, not grey and not carrying a spear."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "The Forest Troll Hedge-Wizard seen from a steep overhead three-quarter angle: a gaunt old hunched yellow-green TROLL with a big warty nose, glaring eyes under wild WHITE eyebrows and a jutting lower jaw, thin atrophied arms, wearing a heavy patterned PLUM-PURPLE ritual TABARD with lighter lilac scale patterns hanging front and back, a black buckled leather shoulder strap and dark leather wrist bands, bare yellow-green legs and big clawed feet, both hands held forward with bright roaring ORANGE-and-yellow FLAMES between the fingers (flames kept small and close to the body); bright pale-yellow-green highlight planes on every upper-left surface and a thin bright rim light. Gaunt, robed, flaming and complete.",
+        "contrast": "Trolls: the FOREST TROLL HEDGE-WIZARD is the GAUNT OLD HUNCHED HEDGE-MAGE troll in a plum-purple patterned tabard with a buckled strap and flames between his fingers (silhouette: a hunched robed figure with forward hands and two small flames; hue: yellow-green skin, plum-purple and lilac tabard, orange flames; value: mid-light). The shipped forest troll is a muscular yellow-green loin-clothed brute, the cave troll a tan spear-carrying brute and the stone troll a grey brute: this must not wear a loincloth, be muscular, carry a spear or be tan or grey.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Bright yellow-green skin, plum-purple and lilac tabard, white eyebrows, dark leather straps, orange-yellow flames, a thin bright rim; nothing darker than mid plum except the strap and wrist bands; NO black or navy tabard; the flames stay in the hands and must not tint or light the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Forest Troll Hedge-Wizard, define_as=None, type=giant/subtype=troll, unique=True, native_tall=False); details and hashes in evidence/monster-batch-ab-20260930/source-contracts.json. base BASE_NPC_TROLL (giant/troll, no image=, no shader); resolvers.nice_tile{tall=1} on the leaf (no image= on the leaf or base, so NPC.lua:33 default-name image giant_troll_forest_troll_hedge_wizard.png is used; the resolver expands to invis.png + one add_mos entry {image=e.image, display_h=2, display_y=-1}, the same live-confirmed shorthand as the ogre guard, mauler and pounder; with nicer_tiles off it is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; UNIQUE, so nativeTallImage accepts the tall body through the unique path (like Kyless and Walrog) and the entry carries unique=true but no native_tall flag; the leaf calls resolvers.sustains_at_birth() but none of its talents is sustained (Shielding, Manathrust and Flame are activated); on_added_to_level only sets inc_damage; the base has no equip beyond drops; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ab-20260930/source-contracts.json",
+          "sha256": "47d8089d6229f1fa36f123bba4527789c3e911cb904308319b4cf51124e48e56"
+        }
+      ]
+    }
+  ]
+}

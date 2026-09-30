@@ -1,0 +1,1481 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "entrenched-horror",
+      "master": "masters/entrenched-horror-v1.png",
+      "sha256": "877cef58f2a2d65bd48269e9ef7c4595938892e8826b6afda79bf99fbdd426f1",
+      "exports": [
+        {
+          "path": "sprites/48/entrenched-horror.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1168,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3fe134aac62685c04ea6e665b763d870d24fd58da341f896dfce988817ae6de1"
+        },
+        {
+          "path": "sprites/64/entrenched-horror.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1168,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "58654a003d677d8f48399598120a3ae8a12522f0d0dc1e480f1aa6986dfa722a"
+        },
+        {
+          "path": "sprites/96/entrenched-horror.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1168,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ebe0654ebb88cd2cede22d2b9568ee184ac287b1f69847af396bb8fc2062662d"
+        },
+        {
+          "path": "sprites/128/entrenched-horror.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1168,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2a841ba8c3586f67e945e3c08cb23febe5b4fb6ed31349f9ed465d6b1b1b06b5"
+        },
+        {
+          "path": "sprites/256/entrenched-horror.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1168,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d99746d83305a9abff44cb7eb4fb8ee3f8bc42e7c3e870b2c72445b91cde0239"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -6.75,
+        "max_sector_intrusion": 6.44,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "orc-summoner",
+      "master": "masters/orc-summoner-v2.png",
+      "sha256": "3e1d867a4db1231c4f34fe41b5c6c008a50cc620295321e28fa2423104a12e3f",
+      "exports": [
+        {
+          "path": "sprites/48/orc-summoner.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            67,
+            1170,
+            1176
+          ],
+          "export_window": [
+            -17.267442,
+            -23.267442,
+            1289.534884
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0c2f362f39498d27de58dc2ca445778b9fef599292fb22eb67de243212fadae2"
+        },
+        {
+          "path": "sprites/64/orc-summoner.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            67,
+            1170,
+            1176
+          ],
+          "export_window": [
+            -17.267442,
+            -23.267442,
+            1289.534884
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2c8d4f0d803d3795da25318a68cb31098343e948c88b2028b8c92f4bdaf38b5d"
+        },
+        {
+          "path": "sprites/96/orc-summoner.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            67,
+            1170,
+            1176
+          ],
+          "export_window": [
+            -17.267442,
+            -23.267442,
+            1289.534884
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9fab932751172cd104609c2c6383a30333ab559929b0d82fdf6e99bba6258b89"
+        },
+        {
+          "path": "sprites/128/orc-summoner.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            67,
+            1170,
+            1176
+          ],
+          "export_window": [
+            -17.267442,
+            -23.267442,
+            1289.534884
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2af6cadce96b1b68131fa3ffe234a15061184fd4b12e86c57bc21fc7ae31bacb"
+        },
+        {
+          "path": "sprites/256/orc-summoner.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            67,
+            1170,
+            1176
+          ],
+          "export_window": [
+            -17.267442,
+            -23.267442,
+            1289.534884
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1cfc061637e052bfe867d95e9b0d9c5f5c2da33e4c7854b74cc839251ebbc2b6"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 2.2,
+        "max_sector_intrusion": 2.82,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "greater-mummy",
+      "master": "masters/greater-mummy-v1.png",
+      "sha256": "48aac2e20f8a4a57749086ae6f8551057ba0f93de4e784540a73ff81bb11e580",
+      "exports": [
+        {
+          "path": "sprites/48/greater-mummy.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4fe4d5839cee53b481390a8f64d94f8edd683b6d8cfe971ecba0748885e14a9e"
+        },
+        {
+          "path": "sprites/64/greater-mummy.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "622c87d8022d892742da7f3849b6465f93cb8617e135c6fe88e9e45b4d9e36a2"
+        },
+        {
+          "path": "sprites/96/greater-mummy.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e99ab5eabffd8f059e5a666b91546bc981e57699bb97dd4750b4cfc99aa114c0"
+        },
+        {
+          "path": "sprites/128/greater-mummy.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "61385750dc4920b0b9d7f4570d913a3ad09f431ab77993dbbb5d5bfed0adfc6a"
+        },
+        {
+          "path": "sprites/256/greater-mummy.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9762dac8b865757d6937167078706bd4140309fb9ac8694cf05589c150edd2bf"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.73,
+        "max_sector_intrusion": 2.14,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "shadowblade",
+      "master": "masters/shadowblade-v2.png",
+      "sha256": "906356d386473bff5889f47d7fff3ab5b180713b20bee8fd5829bb7cd302bef1",
+      "exports": [
+        {
+          "path": "sprites/48/shadowblade.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -12.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1aa15d8d9ee88cec04d58139f98d3d6d4d853cea5df7a117c9d90956b3aad54d"
+        },
+        {
+          "path": "sprites/64/shadowblade.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -12.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "12e6725977fdfdf27e4bd49f9e95ab0cb087ff2d5796a9a2a6964e963f23bccb"
+        },
+        {
+          "path": "sprites/96/shadowblade.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -12.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6b072116a6dc5c547bbc13208dcef91c5aa0098088e3e431bfeed55bcf8603ba"
+        },
+        {
+          "path": "sprites/128/shadowblade.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -12.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8ae0488bd85159bd5fbfc1ae21acacd7778196096144d7c6844d86f739add57e"
+        },
+        {
+          "path": "sprites/256/shadowblade.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -12.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2650d444694b6293a645d5eb64c26f620bbb4b893ac93f4dc4b83d7c8b027a61"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -0.37,
+        "max_sector_intrusion": 1.85,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "orc-elite-fighter",
+      "master": "masters/orc-elite-fighter-v1.png",
+      "sha256": "ccfb71db8a2104589e98339fb2536df2a9497774a0a93ee5a51c3c07502364ee",
+      "exports": [
+        {
+          "path": "sprites/48/orc-elite-fighter.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7930b8286e5eaa6ca544ba923462411ed27aed047ae81938a6963428bf73a1a3"
+        },
+        {
+          "path": "sprites/64/orc-elite-fighter.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f2af88bcf31eb1da7b1046ff7f53f1f61c9f950b455abf7398310723992be8e3"
+        },
+        {
+          "path": "sprites/96/orc-elite-fighter.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "581b846015a9f387b2f6abdb88d2ec100cbc2cb30ebe25fbcf2b97430a763595"
+        },
+        {
+          "path": "sprites/128/orc-elite-fighter.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "497dab4f3d1879299313fa76c0a4f45a5edaba745c8d9c60a8cdb4006feeb57e"
+        },
+        {
+          "path": "sprites/256/orc-elite-fighter.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "260b74885f6f952b6dced1d0e6f7e00ada3a6377ad89d72eefa7baa1e9ba2e5f"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -4.68,
+        "max_sector_intrusion": 15.92,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "orc-elite-berserker",
+      "master": "masters/orc-elite-berserker-v1.png",
+      "sha256": "3c81a9aa8fff8d4b16deda30fdcced9f983eaa03f963a3b05b38140699231133",
+      "exports": [
+        {
+          "path": "sprites/48/orc-elite-berserker.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            60,
+            51,
+            1188,
+            1199
+          ],
+          "export_window": [
+            -43.44186,
+            -42.44186,
+            1334.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fe0a148308dbedac5a64abcbbb92afdf9050db297a8f13931709c5ef04d0f178"
+        },
+        {
+          "path": "sprites/64/orc-elite-berserker.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            60,
+            51,
+            1188,
+            1199
+          ],
+          "export_window": [
+            -43.44186,
+            -42.44186,
+            1334.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6b3fde68517f1e92c79a1fb1e8e7de50697ae6e71d5db6ccfe249ed17da42f1a"
+        },
+        {
+          "path": "sprites/96/orc-elite-berserker.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            60,
+            51,
+            1188,
+            1199
+          ],
+          "export_window": [
+            -43.44186,
+            -42.44186,
+            1334.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a0e63aec681199e8827abbffef034c463e62231e916c97b9df6cdd34b5059bc9"
+        },
+        {
+          "path": "sprites/128/orc-elite-berserker.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            60,
+            51,
+            1188,
+            1199
+          ],
+          "export_window": [
+            -43.44186,
+            -42.44186,
+            1334.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "dceddcd0cb023a615d764553918bed981136a6cf53339ebd0caf4a65ad40225d"
+        },
+        {
+          "path": "sprites/256/orc-elite-berserker.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            60,
+            51,
+            1188,
+            1199
+          ],
+          "export_window": [
+            -43.44186,
+            -42.44186,
+            1334.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "33b7d16b3d4154458a0785abd0b1b004963340fcebbf3455539f24ea97a985d2"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -7.01,
+        "max_sector_intrusion": 7.05,
+        "max_opaque_radius": 0.8559,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "boiling-horror",
+      "master": "masters/boiling-horror-v1.png",
+      "sha256": "4b50e63bcc1a0c3fa65991fb79a525eb9046b39d7e9219e77ea893bf0e6e85e6",
+      "exports": [
+        {
+          "path": "sprites/48/boiling-horror.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -12.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9ac73fde8fe8d0886ea809081ad5d059e7f58b999512233d3183e048a90198c0"
+        },
+        {
+          "path": "sprites/64/boiling-horror.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -12.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ba37c87ddfa9f53572e99ae7a0f6c503eddaa96a281f70fa3be039bb8a9f9713"
+        },
+        {
+          "path": "sprites/96/boiling-horror.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -12.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2226bf82b41b60616f9291223dd0d5baae1e680e2968fcd842a76a3766d7f1ea"
+        },
+        {
+          "path": "sprites/128/boiling-horror.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -12.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f41f4d484e9bba2c67afeeb92243aaf5180eab0d1c31a9c17e4a9cdc95669963"
+        },
+        {
+          "path": "sprites/256/boiling-horror.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -12.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "369af1744333fe09fd04c851ae66151be2f2efa6b7c91c6bfd8e632d53754c8b"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.62,
+        "max_sector_intrusion": 11.41,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "venom-wyrm",
+      "master": "masters/venom-wyrm-v1.png",
+      "sha256": "3de7dc68ca586d94f5fba76cdee312bb71d30047e5f41dbb234c36f5dcd5eb20",
+      "exports": [
+        {
+          "path": "sprites/48/venom-wyrm.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1174
+          ],
+          "export_window": [
+            -14.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "87958e9a48b5598fe960459c2f22005ada0bb305a6634d2bdd249f15d759ad93"
+        },
+        {
+          "path": "sprites/64/venom-wyrm.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1174
+          ],
+          "export_window": [
+            -14.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f26749f27aee794ac9dabd5a39ca41584df7c4ce70615e366723338f107f0e4e"
+        },
+        {
+          "path": "sprites/96/venom-wyrm.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1174
+          ],
+          "export_window": [
+            -14.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cc96ba632fe1c0141d47bb57d7e3bffd96577b1f1f8569ea4146350c18448c5d"
+        },
+        {
+          "path": "sprites/128/venom-wyrm.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1174
+          ],
+          "export_window": [
+            -14.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2ef0aaad90b49c894c5812019c73bc7f8fe0d443c91f2e4f9ec79edc7c3161f4"
+        },
+        {
+          "path": "sprites/256/venom-wyrm.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1174
+          ],
+          "export_window": [
+            -14.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "73761a9427e703e4bb72e2a91806c2655490b22117e2915d3d066de7b0db71be"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.07,
+        "max_sector_intrusion": 4.68,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "alchemist-golem",
+      "master": "masters/alchemist-golem-v1.png",
+      "sha256": "d936f600cda7d49d839c8d85f90c31712e259a71c1f8a3ab656d848619a05c62",
+      "exports": [
+        {
+          "path": "sprites/48/alchemist-golem.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1161,
+            1173
+          ],
+          "export_window": [
+            -13.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1965f8806149aae6e38b5c0999dc8e6883b2b810333e7defd98e60cf6f2016f6"
+        },
+        {
+          "path": "sprites/64/alchemist-golem.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1161,
+            1173
+          ],
+          "export_window": [
+            -13.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6a8dd60056b8aad4fee6bf7bd3ee56ed1c270a70e9225c9089e6df08b8c0295f"
+        },
+        {
+          "path": "sprites/96/alchemist-golem.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1161,
+            1173
+          ],
+          "export_window": [
+            -13.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "36dce7fe8bc6a30afb32ce904c16f24ea1a659b2c78b06ad5f13428dd775eb82"
+        },
+        {
+          "path": "sprites/128/alchemist-golem.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1161,
+            1173
+          ],
+          "export_window": [
+            -13.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d8a5b48d8c24b3b19a3c3bdbfab1325acfdf0b944452d7014da13b4ff7e8ef6d"
+        },
+        {
+          "path": "sprites/256/alchemist-golem.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1161,
+            1173
+          ],
+          "export_window": [
+            -13.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cc0b0b844fa8a24e52bb40de52b8094ed9b36c0600140c40f6374f5774dba7f6"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -4.08,
+        "max_sector_intrusion": 4.07,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "swarm-hive",
+      "master": "masters/swarm-hive-v1.png",
+      "sha256": "321b756284082a08bfba4b3976cfad681029f3e47ebd33bb782b6891206442df",
+      "exports": [
+        {
+          "path": "sprites/48/swarm-hive.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1169,
+            1173
+          ],
+          "export_window": [
+            -10.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5c04297e25139b5527ec036d2328c37d76d8f9494d366e35f1b6822cb2d081fe"
+        },
+        {
+          "path": "sprites/64/swarm-hive.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1169,
+            1173
+          ],
+          "export_window": [
+            -10.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0bb24f3d6a8a6598e7f4177aea79cc4e3e25a3299139a63ef82b06b3813bdeec"
+        },
+        {
+          "path": "sprites/96/swarm-hive.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1169,
+            1173
+          ],
+          "export_window": [
+            -10.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "638e52ed6e9fab8d4257e205de7033f13f596bc8c07e5365a61597f322fcdf6e"
+        },
+        {
+          "path": "sprites/128/swarm-hive.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1169,
+            1173
+          ],
+          "export_window": [
+            -10.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "82eaae9b126bb8d0931ef69a4c5a55354878fab4541a48aa3da408e1d62800f2"
+        },
+        {
+          "path": "sprites/256/swarm-hive.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1169,
+            1173
+          ],
+          "export_window": [
+            -10.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9e0a1beac76cecf6aa3259cdda54c643b5177c3cc212ce7611f2f0695245caf4"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -6.58,
+        "max_sector_intrusion": 3.91,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "forest-troll-hedge-wizard",
+      "master": "masters/forest-troll-hedge-wizard-v1.png",
+      "sha256": "1297da7b9e85ff8e52867d7e6c16ac5a9393ff0ccd96b3e1f9df5ddf7a70f356",
+      "exports": [
+        {
+          "path": "sprites/48/forest-troll-hedge-wizard.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1165,
+            1176
+          ],
+          "export_window": [
+            -15.616279,
+            -14.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "dfe7880c173be472b6c420a8c37ada48495cf40f0d5603618f4c04e3618a6aff"
+        },
+        {
+          "path": "sprites/64/forest-troll-hedge-wizard.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1165,
+            1176
+          ],
+          "export_window": [
+            -15.616279,
+            -14.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ded9100119789faf9a8871732d2e9dfda31e15e52e4a4f746e2e37ee9eece0a1"
+        },
+        {
+          "path": "sprites/96/forest-troll-hedge-wizard.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1165,
+            1176
+          ],
+          "export_window": [
+            -15.616279,
+            -14.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "310852e73ee29173179fbf6bf99f5518eee2b702c277736e5cf2aa17aa0558a7"
+        },
+        {
+          "path": "sprites/128/forest-troll-hedge-wizard.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1165,
+            1176
+          ],
+          "export_window": [
+            -15.616279,
+            -14.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c42058ec8746d538c62d0d6a444af546c997805af8572378037a289f422253d4"
+        },
+        {
+          "path": "sprites/256/forest-troll-hedge-wizard.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1165,
+            1176
+          ],
+          "export_window": [
+            -15.616279,
+            -14.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "79bfe951534ee97e091988e4b7385e10d111ecc6f0d49faf84416d094ce3ec54"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.26,
+        "max_sector_intrusion": 5.81,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ultimate-shivgoroth",
+      "master": "masters/ultimate-shivgoroth-v1.png",
+      "sha256": "bff039f8d5fe258d66f63210526385f95b5a9594c39906ab7e25f4cc0a9d05f4",
+      "exports": [
+        {
+          "path": "sprites/48/ultimate-shivgoroth.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            78,
+            69,
+            1172,
+            1179
+          ],
+          "export_window": [
+            -20.348837,
+            -21.348837,
+            1290.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "665dadac3f3037d49121d6c712a5391e0e0a1235982119beda98f3da837474be"
+        },
+        {
+          "path": "sprites/64/ultimate-shivgoroth.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            78,
+            69,
+            1172,
+            1179
+          ],
+          "export_window": [
+            -20.348837,
+            -21.348837,
+            1290.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "000da60ec4319f033351878aead6907cdff1e12c1ccf1cc4c65452a16120c686"
+        },
+        {
+          "path": "sprites/96/ultimate-shivgoroth.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            78,
+            69,
+            1172,
+            1179
+          ],
+          "export_window": [
+            -20.348837,
+            -21.348837,
+            1290.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d816a9d6cee404f7f63a5b7ce2739d8ffb94ca239a7dbb3afb4f62276d5c15a3"
+        },
+        {
+          "path": "sprites/128/ultimate-shivgoroth.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            78,
+            69,
+            1172,
+            1179
+          ],
+          "export_window": [
+            -20.348837,
+            -21.348837,
+            1290.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "174399a5b2eed63bd716db030cf9895f796b0a03cc48b9a45c2a279cd3d879ab"
+        },
+        {
+          "path": "sprites/256/ultimate-shivgoroth.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            78,
+            69,
+            1172,
+            1179
+          ],
+          "export_window": [
+            -20.348837,
+            -21.348837,
+            1290.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ead7499cbe9787576ab35fa24bd9aca2afeb47251130d7811a07ec57e459524d"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.61,
+        "max_sector_intrusion": 5.73,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

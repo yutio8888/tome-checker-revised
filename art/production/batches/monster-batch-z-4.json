@@ -1,0 +1,150 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-z-4",
+  "assets": [
+    {
+      "asset_id": "swarming-horror",
+      "native_name": "swarming horror",
+      "scope": "lake-nur pool, its own six-strong escort and the swarm hive's summons (general/npcs/horror_aquatic.lua:91, horror/aquatic, non-unique, no define_as, rank 1, base BASE_NPC_HORROR_AQUATIC, nice_tile tall body); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 92,
+          "anchor": "name = \"swarming horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 94,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 106,
+          "anchor": "T_BLINDSIDE"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR_AQUATIC\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_aquatic_swarming_horror.png",
+          "sha256": "7b13e650d09fb7c49d9f051ef6e66d8439aa30c0575f5d47ed2c0dbaef06d6c9",
+          "role": "identity",
+          "note": "Native shape (64x128 canvas): a loose swarm of about seven tiny grey fish-like creatures with pale glowing bellies and eyes drifting together in the lower part of the canvas. Keep the small school of grey fish-like horrors with glowing pale bellies, but render them in mid-light silvery-teal with big pale eyes, drawn as one compact loose ring filling the disc, no tall canvas."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-z/refs/aquatic.png",
+          "sha256": "a9370dabafbf416aa701c59477491957fb9fc726d6730ffcf4e17e62fb2a1c7e",
+          "role": "family",
+          "note": "Five shipped water-creature tokens (violet ink squid, squid, giant eel, electric eel, naga tide huntress): the swarming horror is a loose SCHOOL of eight small silvery-teal fish-like horrors with big pale glowing eyes and needle-toothed mouths swirling in a ring, many small bodies; the ravenous horror is ONE fat fanged slate-blue predator with a huge gaping needle-toothed mouth dripping lime-yellow acid, a cluster of round pale eyes and a huge fan of bone-white spined fins; not a squid, not an eel, not violet."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A swarming horror seen from a steep overhead three-quarter angle: a SCHOOL of EIGHT small fish-like horrors circling together in a loose SPIRAL RING around the centre of the disc, each about one sixth of the disc across with a stubby body in mid-light SILVERY-TEAL and pale steel-blue with bright silver highlight planes, a big round pale glowing yellow-white EYE, a wide mouth of tiny white needle teeth, ragged small fins and a luminous pale-mint BELLY, a few tiny pale bubbles between them (all inside the disc), each body clearly separate with a small gap of bare plate between neighbours. Many small, silvery, needle-toothed and complete.",
+        "contrast": "Aquatic horrors: the SWARMING HORROR is a SCHOOL OF EIGHT SMALL SILVERY-TEAL FISH-LIKE HORRORS with big pale eyes and needle teeth circling in a ring (silhouette: many small separate bodies in a loose spiral ring; hue: silvery teal, steel-blue, mint bellies and pale yellow-white eyes; value: mid-light). Every shipped water token is ONE body (violet ink squid, squid, giant eel, electric eel, naga): this must be many small bodies and must not be one squid, eel or naga; and it differs from the single spined slate-blue ravenous horror of this batch.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole swarm as ONE compact loose ring of bodies filling the inner three quarters of the disc; never a tall canvas.",
+        "palette": "Silvery-teal and pale steel-blue bodies in a mid-light value with bright silver highlight planes and a bright rim light, pale mint bellies, pale yellow-white eyes, white teeth; nothing darker than deep teal except the mouth interiors and thin seams; NO black bodies; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=swarming horror, define_as=None, type=horror/subtype=aquatic, unique=False, native_tall=True); details and hashes in evidence/monster-batch-z-20260930/source-contracts.json. base BASE_NPC_HORROR_AQUATIC (horror/aquatic, no image=, no shader, no sustains_at_birth in the base); NPC.lua:33 default-name image on the leaf; resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/horror_aquatic_swarming_horror.png\", display_h=2, display_y=-1}}} (an explicit tall body, keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true (nativeTallImage accepts the body only for unique or native_tall entries, as for bone giant and eternal bone giant); Blindside is its only talent (activated); the base on_die only adds bubble grids to the terrain; no sustains_at_birth, no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-z-20260930/source-contracts.json",
+          "sha256": "0ee69e14bae435695fed2f0346b4e3622faad0626483479b2f22750f6c633596"
+        }
+      ]
+    },
+    {
+      "asset_id": "ravenous-horror",
+      "native_name": "ravenous horror",
+      "scope": "lake-nur pool (general/npcs/horror_aquatic.lua:114, horror/aquatic, non-unique, no define_as, rank 2, base BASE_NPC_HORROR_AQUATIC, nice_tile tall body); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 115,
+          "anchor": "name = \"ravenous horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 117,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 128,
+          "anchor": "T_BLOOD_GRASP"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR_AQUATIC\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_aquatic_ravenous_horror.png",
+          "sha256": "bc30d60a88b181b4a92e86a5fbae211ba85fbfd8fe01510b14c82d05e1800d24",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a big dark grey-black spined horror with a cluster of round pale eyes, a wide toothy jaw and yellow liquid drooling from its teeth, spiked fins jutting outward. Keep the big spined fanged predator with round pale eyes and yellow drool, but render the body in mid-light slate-blue with bone-white spines and lime-yellow acid, drawn as ONE compact figure filling the disc, no tall canvas."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-z/refs/aquatic.png",
+          "sha256": "a9370dabafbf416aa701c59477491957fb9fc726d6730ffcf4e17e62fb2a1c7e",
+          "role": "family",
+          "note": "Five shipped water-creature tokens (violet ink squid, squid, giant eel, electric eel, naga tide huntress): the swarming horror is a loose SCHOOL of eight small silvery-teal fish-like horrors with big pale glowing eyes and needle-toothed mouths swirling in a ring, many small bodies; the ravenous horror is ONE fat fanged slate-blue predator with a huge gaping needle-toothed mouth dripping lime-yellow acid, a cluster of round pale eyes and a huge fan of bone-white spined fins; not a squid, not an eel, not violet."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A ravenous horror seen from a steep overhead three-quarter angle: ONE fat fanged deep-water predator lunging towards the lower left, a blunt wide head with a huge GAPING MOUTH bristling with rows of long white NEEDLE TEETH, thick glowing LIME-YELLOW ACID drooling from the teeth in a few short strings, a cluster of six round pale glowing EYES above the mouth, a heavy body of SLATE-BLUE and steel-blue in a mid-light value with silver highlight planes and pale scale plates, a huge FAN of sharp BONE-WHITE SPINED FINS jutting outward from the back and sides (every spine tip inside the disc), a short thick tail curled to one side. Fanged, spined, acid-drooling and complete.",
+        "contrast": "Aquatic horrors: the RAVENOUS HORROR is ONE FAT SLATE-BLUE FANGED PREDATOR with a gaping needle-toothed mouth dripping lime-yellow acid, six pale eyes and a huge fan of bone-white spined fins (silhouette: one big body with a wide open jaw and radiating spines; hue: slate-blue, bone-white and lime-yellow; value: mid-light). The shipped violet ink squid, squid, giant eel, electric eel and naga are smooth tentacled or serpentine bodies, and the swarming horror of this batch is a school of small silvery-teal fish: this must not be tentacled, not serpentine, not violet and not a school.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Slate-blue and steel-blue body in a mid-light value with silver highlight planes and a bright rim light, bone-white teeth and spines, pale glowing eyes, lime-yellow acid (the acid stays on the creature and must not tint or light the disc); nothing darker than mid slate except the mouth interior and thin seams; NO black body; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ravenous horror, define_as=None, type=horror/subtype=aquatic, unique=False, native_tall=True); details and hashes in evidence/monster-batch-z-20260930/source-contracts.json. base BASE_NPC_HORROR_AQUATIC (horror/aquatic, no image=, no shader, no sustains_at_birth in the base); NPC.lua:33 default-name image on the leaf; resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/horror_aquatic_ravenous_horror.png\", display_h=2, display_y=-1}}} (an explicit tall body, keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true (nativeTallImage accepts the body only for unique or native_tall entries, as for bone giant and eternal bone giant); Blood Lock, Blood Grasp and Drain are activated; the base on_die only adds bubble grids to the terrain; no sustains_at_birth, no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-z-20260930/source-contracts.json",
+          "sha256": "0ee69e14bae435695fed2f0346b4e3622faad0626483479b2f22750f6c633596"
+        }
+      ]
+    }
+  ]
+}

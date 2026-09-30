@@ -1,0 +1,228 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-z-2",
+  "assets": [
+    {
+      "asset_id": "elven-elite-warrior",
+      "native_name": "elven elite warrior",
+      "scope": "crypt-kryl-feijan pool (general/npcs/elven-warrior.lua:97, humanoid/shalore, non-unique, no define_as, rank 3, base BASE_NPC_ELVEN_WARRIOR, default-name image); the only definition of this name (the plain elven warrior is another leaf with its own token)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/elven-warrior.lua",
+          "sha256": "28a4a2cc0c50f66f1e2b74bba82895adb490a9a9f4880eb86b195b545a5ee3a1",
+          "line": 98,
+          "anchor": "name = \"elven elite warrior\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/elven-warrior.lua",
+          "sha256": "28a4a2cc0c50f66f1e2b74bba82895adb490a9a9f4880eb86b195b545a5ee3a1",
+          "line": 114,
+          "anchor": "T_ASSAULT"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/elven-warrior.lua",
+          "sha256": "28a4a2cc0c50f66f1e2b74bba82895adb490a9a9f4880eb86b195b545a5ee3a1",
+          "line": 44,
+          "anchor": "resolvers.racial()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/elven-warrior.lua",
+          "sha256": "28a4a2cc0c50f66f1e2b74bba82895adb490a9a9f4880eb86b195b545a5ee3a1",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ELVEN_WARRIOR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_shalore_elven_elite_warrior.png",
+          "sha256": "3307a010484ebac44548217ea40c721a05b5a2c93f8d33d9922b8062d7eac607",
+          "role": "identity",
+          "note": "Native shape (64x64): an elf in heavy golden-bronze plate armour with a horned winged helm, a tall oval shield and a long-hafted polearm axe. Keep the elf in heavy bronze-gold plate with a winged crested helm, a big shield and a long-hafted axe, but make him visibly bulkier and more ornate than the shipped elven warrior."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-z/refs/elves.png",
+          "sha256": "3ca1038e0a6c7c1e5671dbe1737605d509ceee603a8f0d435729fa78765cce62",
+          "role": "family",
+          "note": "Four shipped elf tokens (the elven warrior in light white-and-gold plate with a polearm axe and a round shield, the green-clad elven guard with a sword and shield, the pink-robed corruptor, the blue-robed mage): the elven elite warrior is a visibly BULKIER full-heavy-plate elf in deep burnished BRONZE-GOLD with teal-blue enamel trim, a winged crested helm with a white plume, huge upswept pauldron spikes, a huge kite tower shield with a teal sunburst and a big double-bladed waraxe, with a short teal cape; not slim white-and-gold, not green and not robed."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An elven elite warrior seen from a steep overhead three-quarter angle: a tall proud elf in full HEAVY PLATE of deep burnished BRONZE-GOLD with bright polished highlight planes and TEAL-BLUE enamel trim along every edge, a WINGED CRESTED HELM with two long swept-back wing-crests and a white horsehair plume, broad flared PAULDRONS with short upswept spikes, a large KITE TOWER SHIELD in bronze with a teal sunburst held forward on the left arm, a big DOUBLE-BLADED WARAXE with a long haft held raised in the right hand (the blades inside the disc), a short TEAL CAPE flaring behind, fair elven face with a stern look. Gleaming, heavy, crested and complete.",
+        "contrast": "Elves: the ELVEN ELITE WARRIOR is the BULKY FULL-PLATE ELF in deep burnished bronze-gold with teal trim, a winged crested helm with a white plume, upswept pauldron spikes, a tower shield with a teal sunburst, a double-bladed waraxe and a teal cape (silhouette: a broad heavy armoured figure with winged helm crests, spiked shoulders and a big shield in front; hue: deep bronze-gold, teal and white plume; value: mid-light). The shipped elven warrior is a slimmer white-and-gold plated fighter with a polearm axe and a round shield, the elven guard is green-clad, the corruptor and mage robed: this must not be slim, not white-gold, not green and not robed.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Deep burnished bronze-gold plate in a mid-light value with bright polished highlight planes and a bright rim light, teal-blue enamel trim, white plume, teal cape, pale elven skin; nothing darker than deep bronze except thin plate seams and the visor slit; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=elven elite warrior, define_as=None, type=humanoid/subtype=shalore, unique=False, native_tall=False); details and hashes in evidence/monster-batch-z-20260930/source-contracts.json. base BASE_NPC_ELVEN_WARRIOR (humanoid/shalore, no image=, no shader, no moddable_tile); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip waraxe, shield, heavy armour (equipment only, no moddable_tile); Shield Pummel and Assault are activated; resolvers.racial() adds shalore racial levelup talents only (Secrets of the Eternals is sustained but only learnt by level-up: neither the base nor the leaf has sustains_at_birth); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-z-20260930/source-contracts.json",
+          "sha256": "0ee69e14bae435695fed2f0346b4e3622faad0626483479b2f22750f6c633596"
+        }
+      ]
+    },
+    {
+      "asset_id": "fire-wyrm",
+      "native_name": "fire wyrm",
+      "scope": "charred-scar pool, the demon-nest and dragon-loot and sleeping-dragons vaults and the renegade-wyrmics vault (general/npcs/fire-drake.lua:84, dragon/fire, non-unique, no define_as, rank 3, base BASE_NPC_FIRE_DRAKE, nice_tile tall body); the only definition of this name (Varsha the Writhing is another name)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/fire-drake.lua",
+          "sha256": "a19506d0583df6a00a07bb79a78a49eb3e0776b463a53ea9c5c17fdc4c70e203",
+          "line": 85,
+          "anchor": "name = \"fire wyrm\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/fire-drake.lua",
+          "sha256": "a19506d0583df6a00a07bb79a78a49eb3e0776b463a53ea9c5c17fdc4c70e203",
+          "line": 87,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/fire-drake.lua",
+          "sha256": "a19506d0583df6a00a07bb79a78a49eb3e0776b463a53ea9c5c17fdc4c70e203",
+          "line": 112,
+          "anchor": "T_DEVOURING_FLAME"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/fire-drake.lua",
+          "sha256": "a19506d0583df6a00a07bb79a78a49eb3e0776b463a53ea9c5c17fdc4c70e203",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_FIRE_DRAKE\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_fire_fire_wyrm.png",
+          "sha256": "7a70264fcb6d39fe85b56fc5e68cbe0dc0d2d24ae99dc314c922ba3e874a6691",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a large crimson dragon with wings spread up and back with spiky ridges, a coiled body and a red eye. Keep the big crimson horned dragon with a coiled body and jagged wings, drawn as ONE compact figure filling the disc, no tall canvas, as an ancient serpentine wyrm clearly different from the shipped fire drake."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-z/refs/dragons.png",
+          "sha256": "086e410a838666876acef5d8a49403179458fbc737db63f9395efbb54fb77890",
+          "role": "family",
+          "note": "Six shipped drake tokens (the orange fire drake crouched with wings fully spread and a fire cone, its small hatchling, and the cold, sand, venom and storm drakes): the fire wyrm is an ancient, bulkier, deep SCARLET-CRIMSON serpentine dragon coiled in an S with its long neck reared and jaws open showing a glowing gold throat, a crown of long swept-back horns, a spiny back ridge, pale cream belly plates and ragged half-folded wings with bone-ivory spines, and no flame cone; not orange, not a crouching four-legged winged silhouette with a fire cone."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A fire wyrm seen from a steep overhead three-quarter angle: an ancient bulky SERPENTINE dragon whose heavy body is coiled in an S on the disc, its long thick neck REARED and the head turned to the lower left with the jaws open showing a glowing GOLD-ORANGE throat and a pointed tongue of small flame, scales deep SCARLET and CRIMSON in a mid-light value with bright orange-red highlight planes on every upper-left plate, pale CREAM armoured belly plates, a CROWN of long swept-back curved horns in pale bone-ivory, a ridge of jagged spines down the back, huge leathery WINGS half-folded against the back with ragged torn membranes in bright red-orange and bone-ivory finger spines (all wing tips inside the disc), thin glowing ember cracks between the scales, a golden slit eye. Ancient, coiled, horned and complete.",
+        "contrast": "Dragons: the FIRE WYRM is the ANCIENT SERPENTINE DEEP SCARLET DRAGON coiled in an S with a reared neck, open jaws, a horn crown and half-folded ragged wings (silhouette: a coiled body with a tall reared neck and head, folded wings behind; hue: deep scarlet and crimson with cream belly, ivory horns and gold throat; value: mid-light). The shipped fire drake is an orange crouching four-legged drake with wings fully spread and a fire cone, and the other drakes are cold blue, sand, venom green and storm violet: this must not be orange, not a crouched winged silhouette and must not spit a big fire cone.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Deep scarlet and crimson scales in a mid-light value with bright orange-red highlight planes and a bright rim light, cream belly plates, ivory horns and spines, a gold-orange throat glow (the glow stays in the throat and must not tint or light the disc); nothing darker than deep crimson except thin scale seams; NO black or dark maroon body; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=fire wyrm, define_as=None, type=dragon/subtype=fire, unique=False, native_tall=True); details and hashes in evidence/monster-batch-z-20260930/source-contracts.json. base BASE_NPC_FIRE_DRAKE (dragon/fire, no image=, no shader, no sustains_at_birth); NPC.lua:33 default-name image on the leaf; resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/dragon_fire_fire_wyrm.png\", display_h=2, display_y=-1}}} (an explicit tall body, keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true (nativeTallImage accepts the body only for unique or native_tall entries, as for bone giant and eternal bone giant); Bellowing Roar, Wing Buffet, Fire Breath and Devouring Flame are activated; make_escort names fire drakes (their own token); no sustains_at_birth, no equip, no auto_classes; ingredient_on_death only names a drop. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-z-20260930/source-contracts.json",
+          "sha256": "0ee69e14bae435695fed2f0346b4e3622faad0626483479b2f22750f6c633596"
+        }
+      ]
+    },
+    {
+      "asset_id": "runed-bone-giant",
+      "native_name": "runed bone giant",
+      "scope": "rak-shor-pride pool (general/npcs/bone-giant.lua:97, undead/giant, non-unique, no define_as, rank 3, base BASE_NPC_BONE_GIANT, nice_tile tall body); the only definition of this name (Half-Finished Bone Giant is another name)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+          "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+          "line": 98,
+          "anchor": "name = \"runed bone giant\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+          "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+          "line": 100,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+          "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+          "line": 114,
+          "anchor": "T_ARCANE_POWER"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+          "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+          "line": 121,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+          "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_BONE_GIANT\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_runed_bone_giant.png",
+          "sha256": "c17376f3dd43aae746302b2b4bdcbbf88bca26e6a7dbee35b8c62a7b04620d29",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a towering giant assembled from tan bones etched with red runes inside a faint pink-lilac aura, arms hanging. Keep the hulking bone-assembled giant with red runes on its bones, drawn as ONE compact hunched figure filling the disc, no tall canvas, with bright glowing crimson runes and crimson eye pits."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-z/refs/giants.png",
+          "sha256": "69740046773b31d8b15eb3efabc0b50854233037fb107c176ec4fb2b80b0e8e5",
+          "role": "family",
+          "note": "Four shipped giant tokens (plain tan bone giant, golden plated heavy bone giant, pale eternal bone giant with a lilac halo, white-grey metal Atamathon): the runed bone giant is a hunched giant of AGED CREAM-TAN bones whose every big bone plate is carved with bright glowing CRIMSON RUNE glyphs, with glowing crimson eye pits, one arm raised casting with a ring of six floating red glyphs around it and a faint rose aura; not plain tan, not golden, not lilac-haloed and not metal."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A runed bone giant seen from a steep overhead three-quarter angle: a HULKING hunched giant assembled from hundreds of AGED CREAM-TAN and ivory bones (skulls, ribs, thigh bones, vertebrae), big skull head with small horns and two glowing CRIMSON eye pits, broad shoulders, one huge arm RAISED in a casting gesture and the other fist hanging low, every large bone plate on the chest, shoulders and forearms carved with bright glowing CRIMSON-RED RUNE GLYPHS, a ring of six pale red RUNE GLYPHS floating in an arc close around the figure (inside the disc), a faint ROSE-PINK aura hugging the outline, bright cream highlight planes on every upper-left bone. Towering, rune-carved, crimson-lit and complete.",
+        "contrast": "Giants: the RUNED BONE GIANT is the HUNCHED BONE GIANT with glowing CRIMSON RUNES carved on every bone plate, crimson eye pits, one arm raised casting and a ring of floating red glyphs (silhouette: a hulking figure with a raised arm and orbiting glyphs; hue: aged cream-tan bone with bright crimson runes and a rose aura; value: mid-light). The shipped bone giant is plain tan, the heavy bone giant golden and plated, the eternal bone giant pale with a lilac halo and Atamathon white-grey metal: this must not be plain, not golden-plated, not lilac and must show the glowing red runes and the orbiting glyphs.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Aged cream-tan and ivory bone in a mid-light value with bright cream highlight planes and a bright rim light, glowing crimson runes, glyphs and eye pits and a faint rose aura (the glow stays on the giant and the floating glyphs and must not tint or light the disc); nothing darker than mid tan-brown except thin bone seams and the eye pits; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=runed bone giant, define_as=None, type=undead/subtype=giant, unique=False, native_tall=True); details and hashes in evidence/monster-batch-z-20260930/source-contracts.json. base BASE_NPC_BONE_GIANT (undead/giant, no image=, no shader, no sustains_at_birth in the base); NPC.lua:33 default-name image on the leaf; resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/undead_giant_runed_bone_giant.png\", display_h=2, display_y=-1}}} (an explicit tall body, keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true (nativeTallImage accepts the body only for unique or native_tall entries, as for bone giant and eternal bone giant); the leaf calls resolvers.sustains_at_birth() and Arcane Power is its only sustain (temporary values only); Bone Armour, Stun, Skeleton Reassemble, Manathrust, Manaflow, Strike and Earthen Missiles are activated; no equip, no auto_classes; ingredient_on_death only names a drop. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-z-20260930/source-contracts.json",
+          "sha256": "0ee69e14bae435695fed2f0346b4e3622faad0626483479b2f22750f6c633596"
+        }
+      ]
+    }
+  ]
+}

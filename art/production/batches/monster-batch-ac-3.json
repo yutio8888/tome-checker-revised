@@ -1,0 +1,342 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ac-3",
+  "assets": [
+    {
+      "asset_id": "arch-zephyr",
+      "native_name": "Arch Zephyr",
+      "scope": "rak-shor-pride boss (zones/rak-shor-pride/npcs.lua:304, undead/vampire, UNIQUE, define_as ARCH_ZEPHYR, rank 3.5, base BASE_NPC_VAMPIRE, resolvers.nice_tile tall body); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 306,
+          "anchor": "name = \"Arch Zephyr\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 304,
+          "anchor": "define_as=\"ARCH_ZEPHYR\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 307,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 338,
+          "anchor": "T_THUNDERSTORM"
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 329,
+          "anchor": "resolvers.equip"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/vampire.lua",
+          "sha256": "a797781c111911f9d7294c763701ce0b000280c7a4ba0b17b18a634816ad769c",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_VAMPIRE\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_vampire_arch_zephyr.png",
+          "sha256": "3388a4c070f19e5210b411d1886b60ab5291c8c261348877d5a02caaf7d793a8",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a pale old vampire in a dark purple hooded robe with a bow, lightning crawling over his body and the bow. Keep the robed vampire archer with the electric bow and lightning arcs, drawn as ONE compact figure filling the disc, no tall canvas, in gale-grey and storm-blue wind-swept robes with a lightning-wrapped drawn longbow, clearly not the plum-hooded elder vampire."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/refs/vampires.png",
+          "sha256": "3bf3e9da0b680f7aa2a00c8a93ee65c41bfa5d9a62ab040ceee615f10a0d5382",
+          "role": "family",
+          "note": "Five shipped vampire tokens (the lesser vampire: an orange-shirted man; the vampire: a red-caped lunging man; the master vampire: a blue-caped man; the elder vampire: a plum hooded robe with a purple orb; the Master: a crimson-robed red-hooded figure): the vampire lord is a noble in an OCHRE-GOLD long tunic with a gold sash, high collar and a heavy bronze-brown cloak lined with crimson, a rapier raised in one hand; ARCH ZEPHYR is a gale-grey and storm-blue robed ARCHER drawing a lightning-wrapped longbow with billowing wind-swept robes and forked lightning; neither is a red, blue or plum cloak and Arch Zephyr is never a standing caster."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Arch Zephyr seen from a steep overhead three-quarter angle: an ancient pale-faced VAMPIRE ARCHER in a wide braced stance drawing a big LONGBOW with an arrow of white-yellow LIGHTNING nocked, the bow and his outstretched arm wrapped in crackling electric-blue arcs, long tarnished-silver hair and red eyes, wearing billowing WIND-SWEPT robes in light GALE-GREY and STORM-BLUE with a pale silver-white lining, the hem and sleeves streaming sideways in a gale, forked bright yellow-white LIGHTNING bolts arcing over the robes (all close to the body); broad pale highlight planes on every upper-left fold and a thin bright rim light. Wind-swept, drawing, crackling and complete.",
+        "contrast": "Vampires: ARCH ZEPHYR is the WIND-SWEPT VAMPIRE ARCHER drawing a lightning-wrapped longbow in gale-grey and storm-blue robes with forked lightning (silhouette: a braced side-on figure with a big bow arc and streaming robes; hue: gale grey, storm blue, silver and lightning yellow-white with a pale face; value: light). The shipped elder vampire is a plum hooded robe with a purple orb, the master vampire a blue-caped man, the vampire a red-caped man and the Master a crimson-robed figure: this must not be plum, purple, hooded, red or a standing caster, and must be drawing a bow.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas. CALIBRATION FROM EARLIER TOKENS OF THIS BATCH (three first generations failed the disc-geometry gate because arms, weapons and effects crossed the disc rim): draw the whole creature clearly SMALLER than feels natural, everything (limbs, weapons, wisps, flames, tentacles, cloth ends, shards and effects) inside a circle of about 0.58 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, arm and effect tight against the body; no cast shadow onto the plate.",
+        "palette": "Light gale-grey and storm-blue robes, silver-white lining, pale face, silver hair, red eyes, brown longbow, white-yellow and electric-blue lightning, a thin bright rim; nothing darker than mid storm-blue except eye slits and fold seams; NO dark purple or black robe; the lightning glow stays on the figure and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Arch Zephyr, define_as=ARCH_ZEPHYR, type=undead/subtype=vampire, unique=True, native_tall=False); details and hashes in evidence/monster-batch-ac-20260930/source-contracts.json. base BASE_NPC_VAMPIRE (undead/vampire, no image=, no shader); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/undead_vampire_arch_zephyr.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; UNIQUE with a define_as binding, so nativeTallImage accepts the tall body through the unique path (like the Hedge-Wizard, Kyless and Walrog) and the entry carries unique=true and define_as but no native_tall flag; define_as-bound entry: the catalog entry carries define_as and the matcher rejects any actor with another (or no) define_as (ARCH_ZEPHYR); the base calls resolvers.sustains_at_birth() and Blur Sight, Phantasmal Shield, Feather Wind, Thunderstorm, Tempest and Hurricane are sustained (particles and temporary values only); resolvers.equip a longbow and arrows (equipment only, no moddable_tile); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ]
+    },
+    {
+      "asset_id": "rotting-titan",
+      "native_name": "Rotting Titan",
+      "scope": "rak-shor-pride boss (zones/rak-shor-pride/npcs.lua:119, undead/ghoul, UNIQUE, define_as ROTTING_TITAN, rank 3.5, base BASE_NPC_GHOUL, resolvers.nice_tile tall body); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 121,
+          "anchor": "name = \"Rotting Titan\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 119,
+          "anchor": "define_as = \"ROTTING_TITAN\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 122,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 185,
+          "anchor": "T_CRYSTALLINE_FOCUS"
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 190,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ghoul.lua",
+          "sha256": "b1ec41fab65306b144321ea37ed991405c7c795fca3bdebac932c27ec1e11586",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_GHOUL\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_ghoul_rotting_titan.png",
+          "sha256": "d625c602cd1ddc63e082f71439acdedda6708462214a7c3cf4fe5868c1c62020",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a colossal pale grey-mauve hulk of flesh and stone with raised boulder fists and small dark eyes. Keep the colossal hulk of flesh fused with stone slabs, boulder-fists on every limb and a small sunken head, drawn as ONE compact figure filling the disc, no tall canvas, in dusky mauve flesh, pale limestone-beige stone and sickly green rot patches."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/refs/ghouls-giants.png",
+          "sha256": "dcfac3556c61bd4b7b2fe0ac76de5d9643d71e6a1934916d64e625d0931357df",
+          "role": "family",
+          "note": "Six shipped bodies (the ghoul, ghast and ghoulking: lean brown hunched ghouls; Borfast: a shield-and-mace dwarf ghoul; the necrotic mass: a pink-brown lump with skulls; the ogre pounder: a blue ogre): the Rotting Titan is a colossal slow HULK assembled from dusky mauve rotting flesh and huge slabs and boulders of pale limestone-beige stone, boulder-fists at the end of every limb, sickly green-yellow rot patches and small glowing green eyes; not a lean ghoul, not a pink lump and not an ogre."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "The Rotting Titan seen from a steep overhead three-quarter angle: a COLOSSAL slow hulk standing on the disc as one compact mass, its body assembled from bulging dusky MAUVE-ROSE rotting flesh fused with huge slabs and boulders of pale LIMESTONE-BEIGE stone, a small sunken head with two glowing green eyes set into the chest-heavy body, a massive BOULDER FIST at the end of EACH of its four limbs (two thick arms raised in front, two stumpy legs), patches of sickly GREEN-YELLOW rot, moss-like fungus and a few exposed pale ribs, cracks in the stone glowing faintly green; broad pale highlight planes on every upper-left stone slab and a thin bright rim light. Rotting, stony, massive and complete.",
+        "contrast": "Ghouls and giants: the ROTTING TITAN is the COLOSSAL HULK OF MAUVE ROTTING FLESH FUSED WITH PALE LIMESTONE SLABS with boulder fists on every limb and sickly green rot (silhouette: a huge broad mass with a tiny head and four heavy boulder-ended limbs; hue: dusky mauve-rose, limestone beige and sickly green-yellow; value: mid-light). The shipped ghoul, ghast and ghoulking are lean brown hunched ghouls, the necrotic mass a pink-brown lump with skulls and the ogres upright tan, red or blue giants: this must not be lean, must not be a pink lump with skulls and must not be an ogre.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas. CALIBRATION FROM EARLIER TOKENS OF THIS BATCH (three first generations failed the disc-geometry gate because arms, weapons and effects crossed the disc rim): draw the whole creature clearly SMALLER than feels natural, everything (limbs, weapons, wisps, flames, tentacles, cloth ends, shards and effects) inside a circle of about 0.58 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, arm and effect tight against the body; no cast shadow onto the plate.",
+        "palette": "Dusky mauve-rose flesh, pale limestone-beige stone slabs, sickly green-yellow rot and faint green glow, pale ribs, a thin bright rim; nothing darker than mid mauve except cracks between slabs and eye sockets; NO black or dark brown mass; the glow stays on the figure and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Rotting Titan, define_as=ROTTING_TITAN, type=undead/subtype=ghoul, unique=True, native_tall=False); details and hashes in evidence/monster-batch-ac-20260930/source-contracts.json. base BASE_NPC_GHOUL (undead/ghoul, no image=, no shader, no sustains_at_birth); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/undead_ghoul_rotting_titan.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; UNIQUE with a define_as binding, so nativeTallImage accepts the tall body through the unique path (like the Hedge-Wizard, Kyless and Walrog) and the entry carries unique=true and define_as but no native_tall flag; define_as-bound entry: the catalog entry carries define_as and the matcher rejects any actor with another (or no) define_as (ROTTING_TITAN); the leaf calls resolvers.sustains_at_birth() and Crystalline Focus and Onslaught are sustained (Crystalline Focus adds native shader-aura bookkeeping the matcher ignores); on_move only shakes the ground and on_added_to_level only sets can_pass; resolvers.equip only the Rotting Maul; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ]
+    },
+    {
+      "asset_id": "heavy-sentinel",
+      "native_name": "Heavy Sentinel",
+      "scope": "rak-shor-pride boss (zones/rak-shor-pride/npcs.lua:258, undead/giant, UNIQUE, define_as HEAVY_SENTINEL, rank 3.5, base BASE_NPC_BONE_GIANT, resolvers.nice_tile tall body); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 260,
+          "anchor": "name = \"Heavy Sentinel\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 258,
+          "anchor": "define_as = \"HEAVY_SENTINEL\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 262,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 291,
+          "anchor": "T_BURNING_WAKE"
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 298,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+          "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_BONE_GIANT\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_heavy_sentinel.png",
+          "sha256": "3f71fd1e56d927a546bb72d4821b68e1aee4321b4cbe3269b4c937d1bc0818a0",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a towering cream-white bone giant with a fiery orange glow burning in its chest cavity and a skull head. Keep the towering bone giant with a flaming chest furnace, drawn as ONE compact figure filling the disc, no tall canvas, as ash-grey and ivory bones fused with molten-orange seams, a roaring column of fire in the open ribcage and a horned blazing-eyed skull, clearly not a plain tan bone giant."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/refs/bone-giants.png",
+          "sha256": "b7837ddeee7fae3cee718d75d79f788d255d49bab8e0ed732c833086500c6722",
+          "role": "family",
+          "note": "Five shipped bone giant tokens (the bone giant and heavy bone giant: plain tan bone hulks; the runed bone giant: red rune glyphs; the eternal bone giant: pale lavender bones; the half-finished bone giant: a thin unfinished lilac skeleton): the Heavy Sentinel is a bone giant FORGED INTO A FURNACE: ash-grey and ivory bones fused by molten-ORANGE seams into armour plates, a wide-open ribcage furnace roaring with a tall column of white-yellow fire, a horned fused-bone skull with blazing eye sockets and fists dripping embers; not plain tan bones and not a runed giant."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "The Heavy Sentinel seen from a steep overhead three-quarter angle: a towering BONE GIANT forged into a furnace, standing on the disc as one compact mass, its ivory and ash-grey bones FUSED by glowing molten-ORANGE seams into heavy armour plates on the shoulders, arms and legs, a wide-open ribcage in the chest roaring with a tall COLUMN OF WHITE-YELLOW FIRE, a large horned FUSED-BONE SKULL with blazing orange eye sockets, two huge bone fists dripping small embers, small flames licking from the shoulders (flames kept close to the body); broad pale highlight planes on every upper-left bone plate and a thin bright rim light. Forged, blazing, massive and complete.",
+        "contrast": "Bone giants: the HEAVY SENTINEL is the FURNACE BONE GIANT with molten-orange seams fusing ash-grey and ivory armour plates, a roaring flame column in the open ribcage and a horned blazing skull (silhouette: a broad heavy mass with a tall central flame and a horned head; hue: ivory, ash-grey, molten orange and white-yellow fire; value: light with a bright core). The shipped bone giant and heavy bone giant are plain tan bone hulks, the runed bone giant has red glyphs, the eternal bone giant pale lavender bones and the half-finished bone giant a thin lilac skeleton: this must not be plain tan bone, must not have glyphs or lavender and must have the chest furnace fire.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas. CALIBRATION FROM EARLIER TOKENS OF THIS BATCH (three first generations failed the disc-geometry gate because arms, weapons and effects crossed the disc rim): draw the whole creature clearly SMALLER than feels natural, everything (limbs, weapons, wisps, flames, tentacles, cloth ends, shards and effects) inside a circle of about 0.58 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, arm and effect tight against the body; no cast shadow onto the plate.",
+        "palette": "Ivory and ash-grey bone plates, molten-orange seams, white-yellow fire and embers, a thin bright rim; nothing darker than mid ash-grey except gaps between plates and eye rims; NO black bones, no charred black armour; the fire glow stays on the figure and must not tint or light the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Heavy Sentinel, define_as=HEAVY_SENTINEL, type=undead/subtype=giant, unique=True, native_tall=False); details and hashes in evidence/monster-batch-ac-20260930/source-contracts.json. base BASE_NPC_BONE_GIANT (undead/giant, no image=, no shader); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/undead_giant_heavy_sentinel.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; UNIQUE with a define_as binding, so nativeTallImage accepts the tall body through the unique path (like the Hedge-Wizard, Kyless and Walrog) and the entry carries unique=true and define_as but no native_tall flag; define_as-bound entry: the catalog entry carries define_as and the matcher rejects any actor with another (or no) define_as (HEAVY_SENTINEL); the base and the leaf call resolvers.sustains_at_birth() and Arcane Power, Burning Wake (talents/spells/wildfire.lua:78 addShaderAura, native shader-aura bookkeeping the matcher ignores), Wildfire, Arcane Combat, Spellcraft and Fiery Hands are sustained (particles and temporary values); resolvers.equip only the Molten Skin armour; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ]
+    },
+    {
+      "asset_id": "void-spectre",
+      "native_name": "Void Spectre",
+      "scope": "rak-shor-pride boss (zones/rak-shor-pride/npcs.lua:355, undead/wight, UNIQUE, NO define_as, rank 3.5, base BASE_NPC_WIGHT, resolvers.nice_tile tall body); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 357,
+          "anchor": "name = \"Void Spectre\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 357,
+          "anchor": "unique=true"
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 358,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 391,
+          "anchor": "T_PURE_AETHER"
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 394,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/wight.lua",
+          "sha256": "f322a98363c5f9f2106c7abf3ca0f64cf55a4d8b3e051181da775e20fddb938d",
+          "line": 31,
+          "anchor": "define_as = \"BASE_NPC_WIGHT\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_wight_void_spectre.png",
+          "sha256": "5bfa0b1a1e7bf0258271ab9dbc5c1f2e391a695826287b482b6f5137b3ecc0c8",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a tall thin translucent red humanoid of swirling energy streaks with ragged arms. Keep the gaunt humanoid wraith of swirling arcane energy with long ragged arms, drawn as ONE compact figure filling the disc, no tall canvas, in solid rose-red and magenta with a white-hot face slit and an orbiting ring of pale violet arcane runes, clearly not a cyan ghost or an armoured wight."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/refs/wights-spectres.png",
+          "sha256": "d84773a05b083d9ca5c9447802a6ec524322c6339c462277530e501623f3069a",
+          "role": "family",
+          "note": "Five shipped wight and spirit tokens (the forest wight: a green armoured shield-bearer; the grave wight: a pale cyan drifting ghost; the barrow wight: an armoured blue-glowing figure; the Shade of Telos: a blue crystalline figure; the dread: a hooded purple shroud): the Void Spectre is a gaunt hooded humanoid wraith made of swirling ROSE-RED and magenta arcane energy with a white-hot face slit and long trailing ragged sleeves, ringed by an orbiting vortex of pale violet and white arcane runes and sparks; solid and opaque, not cyan, not armoured and not a purple shroud."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "The Void Spectre seen from a steep overhead three-quarter angle: a gaunt hooded HUMANOID WRAITH standing on the disc as one compact figure, its body a SOLID mass of swirling bright ROSE-RED and hot MAGENTA arcane energy streaks with pale-pink highlight planes, a narrow WHITE-HOT slit for a face under the hood, long ragged trailing sleeves ending in thin clawed hands held out at its sides, and a slow VORTEX RING of pale-violet and white ARCANE RUNE GLYPHS and small sparks orbiting it at chest height, tucked inside the disc; broad pale highlight planes on every upper-left surface and a thin bright rim light. Swirling, hooded, arcane and complete. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Wights and spectres: the VOID SPECTRE is the GAUNT HOODED WRAITH OF ROSE-RED AND MAGENTA ARCANE ENERGY with a white-hot face slit, ragged sleeves and an orbiting ring of pale-violet runes (silhouette: a slim hooded figure with two ragged arms and a ring around it; hue: rose-red, magenta, white-hot and pale violet; value: mid-light). The shipped forest wight is a green armoured shield-bearer, the grave wight a pale cyan ghost, the barrow wight an armoured blue-glowing figure, the Shade of Telos a blue crystalline figure and the dread a purple shroud: this must not be cyan, green, blue, armoured, crystalline or a purple shroud.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas. CALIBRATION FROM EARLIER TOKENS OF THIS BATCH (three first generations failed the disc-geometry gate because arms, weapons and effects crossed the disc rim): draw the whole creature clearly SMALLER than feels natural, everything (limbs, weapons, wisps, flames, tentacles, cloth ends, shards and effects) inside a circle of about 0.58 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, arm and effect tight against the body; no cast shadow onto the plate.",
+        "palette": "Bright rose-red and magenta energy streaks, pale-pink highlights, white-hot face slit, pale-violet and white runes and sparks, a thin bright rim; nothing darker than mid rose except the hood hollow; NO black or dark maroon mass; the glow stays on the figure and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Void Spectre, define_as=None, type=undead/subtype=wight, unique=True, native_tall=False); details and hashes in evidence/monster-batch-ac-20260930/source-contracts.json. base BASE_NPC_WIGHT (undead/wight, no image=, no shader); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/undead_wight_void_spectre.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; UNIQUE without a define_as (like the Hedge-Wizard), so nativeTallImage accepts the tall body through the unique path (like the Hedge-Wizard, Kyless and Walrog) and the entry carries unique=true, no define_as and no native_tall flag; the base and the leaf call resolvers.sustains_at_birth() and Arcane Power, Spellcraft, Shielding, Arcane Shield and Pure Aether are sustained (particles and temporary values only; Aether Avatar style effects are timed effects the matcher rejects while active); resolvers.equip only the Aether Ring; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ]
+    }
+  ]
+}

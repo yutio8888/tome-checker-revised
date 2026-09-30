@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ac-6",
+  "assets": [
+    {
+      "asset_id": "orc-high-pyromancer",
+      "native_name": "orc high pyromancer",
+      "scope": "vor-armoury pool and the renegade-pyromancers vault (general/npcs/orc-vor.lua:77, humanoid/orc, non-unique, no define_as, rank 3, base BASE_NPC_ORC_VOR, default-name image); the only definition of this name; the vault builds it with random_filter name=orc high pyromancer and a random_boss 'the Invoker' (the existing flat captureRandomOrigin path)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-vor.lua",
+          "sha256": "7ef30e07dd59c5784f06b8faa7e038ca27e4e2754671c3949f416b54450bd458",
+          "line": 78,
+          "anchor": "name = \"orc high pyromancer\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-vor.lua",
+          "sha256": "7ef30e07dd59c5784f06b8faa7e038ca27e4e2754671c3949f416b54450bd458",
+          "line": 99,
+          "anchor": "T_BURNING_WAKE"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-vor.lua",
+          "sha256": "7ef30e07dd59c5784f06b8faa7e038ca27e4e2754671c3949f416b54450bd458",
+          "line": 97,
+          "anchor": "T_INFERNO"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-vor.lua",
+          "sha256": "7ef30e07dd59c5784f06b8faa7e038ca27e4e2754671c3949f416b54450bd458",
+          "line": 83,
+          "anchor": "resolvers.equip"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-vor.lua",
+          "sha256": "7ef30e07dd59c5784f06b8faa7e038ca27e4e2754671c3949f416b54450bd458",
+          "line": 105,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-vor.lua",
+          "sha256": "7ef30e07dd59c5784f06b8faa7e038ca27e4e2754671c3949f416b54450bd458",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC_VOR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_high_pyromancer.png",
+          "sha256": "241c1e02279eb097b9020632bee45a8d3e3987e3d36500bfce46cb42cad46ee2",
+          "role": "identity",
+          "note": "Native shape (64x64): a green orc in scarlet robes with a red horned pauldron collar, fire in both hands. Keep the robed green fire-orc with flames in both hands, drawn as ONE compact figure filling the disc, as a higher rank: layered scarlet-and-gold ceremonial robes, a tall horned flame-crest mitre, gold flame-pattern pauldrons, both hands blazing and a ring of fire orbiting the waist, clearly more than the shipped plain-robed pyromancer."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/refs/orc-robed-casters.png",
+          "sha256": "0bb6bc1c4713849be57e6eff3f796a6ebaa208bbb4b533ac61ab0fdf129777e8",
+          "role": "family",
+          "note": "Six shipped orc caster tokens (the pyromancer: a plain red-orange robe with one small flame in hand; the cryomancer: a plain blue robe; the corruptor, necromancer, blood mage and the beast-shaman summoner in their own colours): the two HIGH casters are a higher rank, not recolours: the HIGH PYROMANCER stands tall and wide-armed in layered scarlet-and-gold ceremonial robes with a tall horned flame-crest mitre, gold-rimmed flame-pattern pauldrons, BOTH hands blazing and a whole ring of fire orbiting its waist; the HIGH CRYOMANCER is a staff-planted figure in white-and-ice-blue robes with a white fur collar, a tall crystalline ice crown, jagged ice pauldrons, one hand gripping a tall staff topped with a huge snowflake crystal, the other hand holding a frost wand, and a spiral of ice shards; neither may be a plain robe with one small effect."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orc high pyromancer seen from a steep overhead three-quarter angle: a tall broad GREEN-skinned tusked orc standing with both arms bent and both forearms raised close in front of the chest and a roaring ball of bright orange-yellow FIRE blazing in each open hand right beside the shoulders, wearing layered ceremonial SCARLET robes with wide GOLD trim bands, a tall pointed horned FLAME-CREST MITRE in scarlet and gold on his head, GOLD-rimmed crimson pauldrons embossed with flame patterns, a cream sash, and a whole RING OF FIRE (a loop of bright orange-yellow flames) orbiting around his waist at knee height, tucked inside the disc; broad pale highlight planes on every upper-left fold and a thin bright rim light. Robed, crested, blazing and complete.",
+        "contrast": "Orc casters: the ORC HIGH PYROMANCER is the TALL WIDE-ARMED CEREMONIAL FIRE-LORD with a horned flame-crest mitre, gold-trimmed scarlet robes, gold pauldrons, a blazing fireball in EACH hand and a ring of fire orbiting his waist (silhouette: a tall figure with a pointed crest, two wide arms with fire and a flame ring; hue: scarlet, gold, cream and fire orange with green skin; value: bright). The shipped orc pyromancer is a plain red-orange robe with one small flame, the cryomancer a plain blue robe: this must not be a plain robe, must not have a single small flame and must wear the crest mitre and pauldrons.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Calibration from the previous generation of this exact token: the design (tall green orc fire-lord, scarlet-and-gold ceremonial robes, horned flame-crest mitre, gold flame pauldrons, fireballs in both hands, ring of fire at the waist) was right, but the spread arms and the two fireballs reached out across the disc rim. This time keep the same fire-lord, but draw everything clearly SMALLER: the whole figure, mitre, both fireballs and the fire ring inside a circle of about 0.58 of the disc radius, centred, with a wide bare ring of plate on every side; the arms are BENT at the elbows with the forearms raised close in front of the chest and a fireball held in each open hand right beside the shoulders (never spread out to the sides), and the ring of fire hugs the robe hem tightly; no cast shadow onto the plate.",
+        "palette": "Bright scarlet and gold robes, cream sash, green skin, orange-yellow flames, a thin bright rim; nothing darker than mid scarlet except eye slits and fold seams; NO dark maroon robe, no black; the fire glow stays on the figure and its ring and must not tint or light the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc high pyromancer, define_as=None, type=humanoid/subtype=orc, unique=False, native_tall=False); details and hashes in evidence/monster-batch-ac-20260930/source-contracts.json. base BASE_NPC_ORC_VOR (humanoid/orc, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.racial() only adds orc levelup talents; the leaf calls resolvers.sustains_at_birth() and Burning Wake (talents/spells/wildfire.lua:78 addShaderAura, native shader-aura bookkeeping the matcher ignores), Spellcraft and Essence of Speed are sustained (particles and temporary values); resolvers.equip a staff, cloth armour and a wand (equipment only, no moddable_tile); resolvers.inscriptions picks runes (no display write); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ]
+    }
+  ]
+}

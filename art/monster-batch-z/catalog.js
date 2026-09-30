@@ -1,0 +1,38 @@
+window.monsterCatalog = [
+  {
+    "id": "black-mamba"
+  },
+  {
+    "id": "bandit-lord"
+  },
+  {
+    "id": "orb-weaver"
+  },
+  {
+    "id": "elven-elite-warrior"
+  },
+  {
+    "id": "ultimate-telugoroth"
+  },
+  {
+    "id": "greater-teluvorta"
+  },
+  {
+    "id": "runed-bone-giant"
+  },
+  {
+    "id": "void-horror"
+  },
+  {
+    "id": "swarming-horror"
+  },
+  {
+    "id": "ravenous-horror"
+  },
+  {
+    "id": "rogue-sapper"
+  },
+  {
+    "id": "fire-wyrm"
+  }
+];

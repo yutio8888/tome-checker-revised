@@ -1,0 +1,354 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ab-2",
+  "assets": [
+    {
+      "asset_id": "orc-elite-fighter",
+      "native_name": "orc elite fighter",
+      "scope": "vor-armoury pool and the grushnak-pride map scripts / grushnak-armory vault (general/npcs/orc-grushnak.lua:79, humanoid/orc, non-unique, define_as ORC_ELITE_FIGHTER, rank 3, base BASE_NPC_ORC_GRUSHNAK, default-name image); the only definition of this name; the random bosses of grushnak-pride are made from this exact define_as and go through captureRandomOrigin",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 80,
+          "anchor": "name = \"orc elite fighter\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 79,
+          "anchor": "define_as = \"ORC_ELITE_FIGHTER\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 107,
+          "anchor": "T_SHIELD_WALL"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 87,
+          "anchor": "resolvers.equip"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 40,
+          "anchor": "resolvers.racial()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 45,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC_GRUSHNAK\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_elite_fighter.png",
+          "sha256": "38e59482b4fe72e85ab837278f4145cab847a6c78d00b40d66365ba1b07ad08a",
+          "role": "identity",
+          "note": "Native shape (64x64): a huge orc in grey massive plate with a round shield and an axe. Keep the massive-armoured shield-and-axe orc, but as an ELITE bulwark: polished steel plate with royal-blue enamel and gold trim, a closed great-helm with a tall white horsehair crest, a huge rectangular tower shield with a spiked boss planted in front and the axe raised behind it, drawn as ONE compact figure filling the disc, clearly different from the shipped orc fighter."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ab/refs/orc-fighters.png",
+          "sha256": "3ad683dfd5d15ea84ee62d3479c400b31584b3d490fb4a4737aae88961c66bf3",
+          "role": "family",
+          "note": "Four shipped orc tokens (the orc fighter: grey plate, HORNED helm, ROUND red-striped shield and an axe; the orc soldier: dark spiked armour with an axe held low; the orc warrior: a leather-clad green orc with a curved blade; the orc berserker: pale STEEL plate, straight horned helm, crimson cloth, a short-hafted axe at the shoulder): both elite orcs are a different rank of armoured brute: the ELITE FIGHTER is a heavy bulwark in polished steel plate with ROYAL-BLUE enamel and gold trim, a closed great-helm with a tall white horsehair CREST and no horns, a huge RECTANGULAR TOWER SHIELD with a spiked boss planted in front of the body and a war-axe raised behind it; the ELITE BERSERKER is a hunched charging brute in VERMILION-ORANGE lacquered plate with gold rivets, a cream FUR mantle, a skull-crowned helm with two long RAM-CURL horns swept forward, skull-beaded chains and a huge single-crescent two-handed axe swung low behind him; neither may be grey plate, carry a round shield, wear straight horns or copy the steel berserker pose."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orc elite fighter seen from a steep overhead three-quarter angle: a huge hulking orc bulwark in MASSIVE polished pale STEEL plate with ROYAL-BLUE enamel panels and bright GOLD trim, a closed great-helm with a T-shaped visor slit and a tall white HORSEHAIR CREST swept back (no horns), rounded steel pauldrons with gold rims, a green tusked jaw visible under the visor, a huge RECTANGULAR TOWER SHIELD of blue-enamelled steel with a gold border and a spiked gold boss held in front of the body and planted on the ground, and a single-bladed steel WAR-AXE raised behind the shield edge at a diagonal with the head tucked beside the helm; broad pale highlight planes on every upper-left plate and a thin bright rim light. Armoured, crested, shielded and complete.",
+        "contrast": "Orcs: the ORC ELITE FIGHTER is the CRESTED BULWARK behind a huge RECTANGULAR TOWER SHIELD in steel, royal blue and gold with a war-axe raised behind (silhouette: a wide rectangle of shield in front of a helmed figure with a tall crest; hue: bright steel, royal blue, gold, white crest; value: bright). The shipped orc fighter is grey plate with horns and a ROUND red-striped shield, the orc soldier dark spiked armour, the orc warrior leather with a curved blade and the orc berserker steel plate with straight horns and a short axe: this must not have horns, a round shield or grey plate.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Bright polished steel, royal-blue enamel, gold trim and rivets, a white horsehair crest, green skin, a thin bright rim light; nothing darker than mid steel-blue except the visor slit and plate seams; NO black armour; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc elite fighter, define_as=ORC_ELITE_FIGHTER, type=humanoid/subtype=orc, unique=False, native_tall=False); details and hashes in evidence/monster-batch-ab-20260930/source-contracts.json. base BASE_NPC_ORC_GRUSHNAK (humanoid/orc, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; define_as-bound entry: the catalog entry carries define_as and the matcher rejects any actor with another (or no) define_as (ORC_ELITE_FIGHTER); resolvers.racial() only adds orc levelup talents; the base calls resolvers.sustains_at_birth() and Shield Wall is the leaf sustain (rotating-shield particles and temporary values only); resolvers.equip a waraxe, shield and massive armour (equipment only, no moddable_tile); resolvers.inscriptions picks random runes/infusions (no display write); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ab-20260930/source-contracts.json",
+          "sha256": "47d8089d6229f1fa36f123bba4527789c3e911cb904308319b4cf51124e48e56"
+        }
+      ]
+    },
+    {
+      "asset_id": "orc-elite-berserker",
+      "native_name": "orc elite berserker",
+      "scope": "vor-armoury pool and the grushnak-pride map scripts / grushnak-armory vault (general/npcs/orc-grushnak.lua:134, humanoid/orc, non-unique, define_as ORC_ELITE_BERSERKER, rank 3, base BASE_NPC_ORC_GRUSHNAK, default-name image); the only definition of this name; the plain orc berserker is another leaf (own token); the random bosses of grushnak-pride are made from this exact define_as and go through captureRandomOrigin",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 135,
+          "anchor": "name = \"orc elite berserker\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 134,
+          "anchor": "define_as = \"ORC_ELITE_BERSERKER\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 158,
+          "anchor": "T_JUGGERNAUT"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 161,
+          "anchor": "T_BERSERKER"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 142,
+          "anchor": "resolvers.equip"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 45,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC_GRUSHNAK\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_elite_berserker.png",
+          "sha256": "3ca2cf5e4c083bc1b30f78486ee2f21856d9d4c059fe0f7b531b418315749ed8",
+          "role": "identity",
+          "note": "Native shape (64x64): a huge orc in grey massive plate holding a huge axe across the body. Keep the massive-armoured axe orc, but as a hunched CHARGING elite: vermilion-orange lacquered plate with gold rivets, a cream fur mantle, a skull-crowned helm with two long ram-curl horns, skull-beaded chains and a huge single-crescent two-handed axe swung low behind him, drawn as ONE compact figure filling the disc, clearly different from the steel orc berserker."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ab/refs/orc-fighters.png",
+          "sha256": "3ad683dfd5d15ea84ee62d3479c400b31584b3d490fb4a4737aae88961c66bf3",
+          "role": "family",
+          "note": "Four shipped orc tokens (the orc fighter: grey plate, HORNED helm, ROUND red-striped shield and an axe; the orc soldier: dark spiked armour with an axe held low; the orc warrior: a leather-clad green orc with a curved blade; the orc berserker: pale STEEL plate, straight horned helm, crimson cloth, a short-hafted axe at the shoulder): both elite orcs are a different rank of armoured brute: the ELITE FIGHTER is a heavy bulwark in polished steel plate with ROYAL-BLUE enamel and gold trim, a closed great-helm with a tall white horsehair CREST and no horns, a huge RECTANGULAR TOWER SHIELD with a spiked boss planted in front of the body and a war-axe raised behind it; the ELITE BERSERKER is a hunched charging brute in VERMILION-ORANGE lacquered plate with gold rivets, a cream FUR mantle, a skull-crowned helm with two long RAM-CURL horns swept forward, skull-beaded chains and a huge single-crescent two-handed axe swung low behind him; neither may be grey plate, carry a round shield, wear straight horns or copy the steel berserker pose."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orc elite berserker seen from a steep overhead three-quarter angle: a huge hulking orc hunched forward in a CHARGE with a roaring tusked face, wearing MASSIVE plate armour of bright VERMILION-ORANGE lacquer with gold rivets and gold edging, a thick cream-white FUR mantle over the shoulders, a helm crowned with a small skull and two long RAM-CURL horns swept forward and down, a chain of small bone-white skulls slung across the chest, spiked gold-and-orange pauldrons, and a huge single-crescent-bladed two-handed steel BATTLEAXE swung low behind him to one side with the blade tucked inside the disc; no shield; broad pale highlight planes on every upper-left plate and a thin bright rim light. Charging, horned, lacquered and complete.",
+        "contrast": "Orcs: the ORC ELITE BERSERKER is the HUNCHED CHARGING brute in vermilion-orange lacquered plate with a fur mantle, ram-curl horns swept forward, skull chains and a crescent axe swung low behind (silhouette: a forward-leaning mass with curled horns and a trailing axe; hue: vermilion-orange, gold and cream fur; value: bright). The shipped orc berserker is an UPRIGHT pale steel plate orc with straight horns and a short axe at the shoulder, and the shipped orc fighter is grey plate with a shield: this must not be steel, upright, straight-horned, shielded or grey.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Bright vermilion-orange lacquer with gold rivets, cream fur, bone-white skulls, green skin, steel axe blade, a thin bright rim light; nothing darker than mid orange except eye slits and plate seams; NO dark crimson or maroon plate, no black armour; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc elite berserker, define_as=ORC_ELITE_BERSERKER, type=humanoid/subtype=orc, unique=False, native_tall=False); details and hashes in evidence/monster-batch-ab-20260930/source-contracts.json. base BASE_NPC_ORC_GRUSHNAK (humanoid/orc, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; define_as-bound entry: the catalog entry carries define_as and the matcher rejects any actor with another (or no) define_as (ORC_ELITE_BERSERKER); resolvers.racial() only adds orc levelup talents; the base calls resolvers.sustains_at_birth() and Berserker and Juggernaut are the leaf sustains (particles and temporary values only); resolvers.equip a battleaxe and massive armour (equipment only, no moddable_tile); resolvers.inscriptions picks random runes/infusions (no display write); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ab-20260930/source-contracts.json",
+          "sha256": "47d8089d6229f1fa36f123bba4527789c3e911cb904308319b4cf51124e48e56"
+        }
+      ]
+    },
+    {
+      "asset_id": "orc-summoner",
+      "native_name": "orc summoner",
+      "scope": "ardhungol, unremarkable-cave and rak-shor-pride pools (general/npcs/orc-gorbat.lua:53, humanoid/orc, non-unique, no define_as, rank 2, base BASE_NPC_ORC_GORBAT, default-name image); the only definition of this name (the grand summoner is another leaf)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 54,
+          "anchor": "name = \"orc summoner\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 70,
+          "anchor": "T_PSIBLADES"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 71,
+          "anchor": "T_MINOTAUR"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 61,
+          "anchor": "resolvers.equip"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 43,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC_GORBAT\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_summoner.png",
+          "sha256": "06f42983355d940db1bbe593c2ce7dbb6d8ecfe4e205cd90dbe8edbd893e2b45",
+          "role": "identity",
+          "note": "Native shape (64x64): a green orc in a fur mantle and leather kilt holding a long wooden staff, wreathed in a purple glow. Keep the green beast-shaman with the long staff, drawn as ONE compact figure filling the disc, as a savage totem-summoner with an antler-and-tusk headdress and three turquoise spirit wisps coiling from the staff, clearly not a robed orc mage."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ab/refs/orc-casters.png",
+          "sha256": "42c72f753a20499f726fafe1ca0c60593b70eb0a2ae9c283faf54ba545a9de1c",
+          "role": "family",
+          "note": "Five shipped orc caster tokens (the corruptor in a gold-yellow robe with a green glow, the necromancer in a navy hooded robe, the pyromancer in a red-orange robe, the cryomancer in a blue robe, the blood mage in a crimson robe with a red orb): the orc summoner is a SAVAGE BEAST-SHAMAN, a green orc in a tawny spotted hide mantle and leather kilt with NO robe, an ANTLER-and-TUSK headdress, bone bead necklaces, both hands raising a tall wooden TOTEM STAFF topped with a carved beast skull and hanging feathers while three glowing turquoise-jade SPIRIT WISPS coil out of the staff; not a robed mage, not blue, red, navy or gold."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orc summoner seen from a steep overhead three-quarter angle: a stocky GREEN-skinned orc beast-shaman standing on the disc with a tawny spotted HIDE MANTLE over the shoulders, a brown leather kilt and no robe, an ANTLER-and-TUSK headdress, several bone-bead necklaces, painted white stripes on the face and arms, both hands raising a tall wooden TOTEM STAFF topped with a carved pale beast SKULL and hung with red and turquoise feathers, and three glowing turquoise-JADE SPIRIT WISPS in the shapes of a horned head, a spider and a flame coiling out of the staff head around him (all close to the body); broad pale highlight planes on every upper-left surface and a thin bright rim light. Savage, antlered, calling and complete.",
+        "contrast": "Orcs: the ORC SUMMONER is the SAVAGE BEAST-SHAMAN with an antler-and-tusk headdress, a hide mantle and a totem staff with three turquoise spirit wisps (silhouette: a figure with antlers holding a tall staff up, wisps coiling around; hue: green skin, tawny hide, turquoise-jade spirits, white bone; value: mid-light). The shipped orc corruptor, necromancer, pyromancer, cryomancer and blood mage all wear coloured robes: this must not wear a robe and must not be gold, navy, red, blue or crimson.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Green skin, tawny spotted hide, brown leather, bone-white antlers and skull, turquoise-jade spirit wisps, red and turquoise feathers, a thin bright rim light; nothing darker than mid brown except eye slits and seams; NO dark robe, no black leather; the spirit glow stays close to the body and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc summoner, define_as=None, type=humanoid/subtype=orc, unique=False, native_tall=False); details and hashes in evidence/monster-batch-ab-20260930/source-contracts.json. base BASE_NPC_ORC_GORBAT (humanoid/orc, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.racial() only adds orc levelup talents; the base and the leaf call resolvers.sustains_at_birth() and Psiblades is the only sustained talent (talents/gifts/mindstar-mastery.lua:29; it calls updateModdableTile, which for a non-moddable actor only rebuilds shader-aura bookkeeping); resolvers.equip two mindstars and a totem (equipment only); the Minotaur, Ritch Flamespitter and Spider summons build other leaves; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ab-20260930/source-contracts.json",
+          "sha256": "47d8089d6229f1fa36f123bba4527789c3e911cb904308319b4cf51124e48e56"
+        }
+      ]
+    },
+    {
+      "asset_id": "greater-mummy",
+      "native_name": "greater mummy",
+      "scope": "ancient-elven-ruins pool (zones/ancient-elven-ruins/npcs.lua:176, undead/mummy, non-unique, define_as GREATER_MUMMY, rank 3, base BASE_NPC_MUMMY, explicit image=npc/undead_mummy_greater_mummy.png); the only definition of this name (the greater mummy lord GREATER_MUMMY_LORD is another leaf with its own token)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 178,
+          "anchor": "name = \"greater mummy\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 176,
+          "anchor": "define_as = \"GREATER_MUMMY\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 179,
+          "anchor": "image = \"npc/undead_mummy_greater_mummy.png\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 207,
+          "anchor": "T_FREEZE"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 193,
+          "anchor": "resolvers.equip"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/mummy.lua",
+          "sha256": "06c0e07e77a753b1ecdbed7efbc7ce457342a53bab952c544a1d4208d5346b2a",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_MUMMY\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_mummy_greater_mummy.png",
+          "sha256": "8944d879adff528b211edf4b75278ba8fe49f66455dc0c3db2e1272261b87ab0",
+          "role": "identity",
+          "note": "Native shape (64x64): a tall golden-wrapped mummy in a crested headdress with a bloody red left hand and a long weapon. Keep the tall wrapped mummy with the striped headdress, a big blade and one raised glowing hand, drawn as ONE compact figure filling the disc, in clean ivory linen with a blue-and-gold nemes headdress and jewelled collar, clearly not the gold-armoured greater mummy lord."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ab/refs/mummies.png",
+          "sha256": "ec6a699059541eef102802d9e2051859a96a5afaa9afc8c342481932ac03a3a0",
+          "role": "family",
+          "note": "Four shipped mummy tokens (the rotting mummy: a plain tan-bandaged shambler; the ancient elven mummy: a pale bandaged elf; the greater mummy lord: a GOLD-ARMOURED mummy with a crested helm, round shield and short sword; the animated wrappings: an empty coiled bandage S): the greater mummy is a tall gaunt PRESERVED corpse wound in layered clean IVORY linen wrappings, a tall striped blue-and-gold NEMES-style royal headdress, a broad turquoise-and-gold jewelled collar, sunken glowing pale-blue eyes, a huge two-handed bronze GREATSWORD resting over the shoulder and the free hand raised with a pale frost-blue glow; not gold armour, not a shield, not a plain tan shambler and not an elf."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A greater mummy seen from a steep overhead three-quarter angle: a tall gaunt PRESERVED corpse wound in layered clean IVORY and pale sand linen wrappings with loose trailing ends, a tall striped BLUE-and-GOLD NEMES-style royal headdress, a broad TURQUOISE-and-gold jewelled collar, sunken glowing pale-blue eyes in a dark leathery face, a huge two-handed BRONZE GREATSWORD resting blade-up over the right shoulder and the left hand raised open with a cold pale FROST-BLUE glow above the palm; broad pale highlight planes on every upper-left wrapping and a thin bright rim light. Wrapped, crowned, armed and complete.",
+        "contrast": "Mummies: the GREATER MUMMY is the TALL IVORY-WRAPPED PHARAOH with a blue-and-gold nemes headdress, a turquoise collar, a bronze greatsword over the shoulder and a frost-blue glowing palm (silhouette: a tall wrapped figure with a flared headdress and a long blade; hue: ivory linen, blue and gold, turquoise; value: light). The shipped rotting mummy is a plain tan shambler, the ancient elven mummy a pale bandaged elf, the greater mummy lord a GOLD-ARMOURED mummy with a crested helm and round shield and the animated wrappings a coiled empty bandage: this must not be gold armour, carry a shield or be plain tan bandages.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Clean ivory and pale sand linen, blue-and-gold headdress, turquoise-gold collar, bronze blade, pale frost-blue glow, a thin bright rim; nothing darker than mid tan except the eye sockets and the face; NO dark or brown wrappings; the frost glow stays at the palm and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=greater mummy, define_as=GREATER_MUMMY, type=undead/subtype=mummy, unique=False, native_tall=False); details and hashes in evidence/monster-batch-ab-20260930/source-contracts.json. base BASE_NPC_MUMMY (undead/mummy, no image=, no shader, no sustains_at_birth); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; define_as-bound entry: the catalog entry carries define_as and the matcher rejects any actor with another (or no) define_as (GREATER_MUMMY); the PNG undead_mummy_greater_mummy.png is used by this leaf only; resolvers.equip a greatsword, mummy armour and a helm (equipment only, no moddable_tile); the talents (Weapons Mastery, Weapon Combat, Stunning Blow, Crush, Rush, Freeze, Manathrust) are passive or activated, none sustained; no sustains_at_birth; the leaf has no auto_classes (the lord leaf above it does). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ab-20260930/source-contracts.json",
+          "sha256": "47d8089d6229f1fa36f123bba4527789c3e911cb904308319b4cf51124e48e56"
+        }
+      ]
+    }
+  ]
+}

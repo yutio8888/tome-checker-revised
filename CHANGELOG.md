@@ -1,5 +1,12 @@
 # Changes
 
+## 0.6.31 — 2026-09-30
+
+- 怪物 Batch Z–AC（棋子目录 323→**376** 款，共 53 款，无新增地形）：Z（black mamba、强盗首领、球蛛编织者、精英精灵战士、究极泰鲁戈洛斯、强化泰鲁沃塔、符文骨巨人、虚空恐魔、群生恐魔、贪婪恐魔、盗贼工兵、火焰巨龙）、AA（究极法罗、兽人狂战士、挖掘魔首领、北极熊、anaconda、究极泰鲁沃塔、necrotic abomination、bone／sanguine horror、barrow wight、ogre warmaster、dreadmaster）、AB（entrenched／boiling horror、兽人召唤师、巨型木乃伊、暗影之刃、精英兽人斗士／狂战士、猛毒巨龙、敌方炼金傀儡、虫群巢穴、森林巨魔野法师、究极西弗格罗斯）、AC（Aletta Soultorn、ruin banshee、Filio Flightfond、高阶兽人烈焰／冰霜术士、Glacial Legion、Arch Zephyr、Rotting Titan、Heavy Sentinel、Void Spectre、oozing／abyssal／umbral horror、ungolmor、吸血鬼领主、degenerated ogric mass、ogric abomination）。其中多款为 native-tall（高大原生图），只画一枚棋子。
+- 规则：盗贼工兵（rogue sapper，`THIEF_SAPPER`）与刺客（assassin）共用同一张原生图，按名字各自换棋子；暗影之刃（shadowblade）与刺客同为 `THIEF_ASSASSIN`，同样按名字分辨，竞技场里无 `define_as` 的同名版本保持原生；玩家炼金傀儡保持原生（敌方 alchemist golem 叶子戴棋子）；Corpathus 神器召唤的邪恶子嗣（Vilespawn）保持原生；训练用傀儡（Training Dummy）保持原生；随机首领的 fire wyrm 保持原生。召唤物按自身身份显示棋子：强盗首领（bandit／thief／rogue）、Necromancer 的 Dread 天赋（dreadmaster 仆从）、虫群巢穴（swarming horror）、兽人召唤师的野性天赋（minotaur、ritch flamespitter；giant spider 无棋子）、吸血鬼领主（随机亡灵）。
+- 语言：地形设置说明中的“卡·普尔”改为官方“卡·普尔废墟”（简繁）；说明中全部 73 个区域／城镇名已对照 `mod-tome.lua` 核对。
+- 外测指南（新建 `docs/external-test-v0631/`）更新。正式归档、安装冒烟与测试见 [0.6.31 证据](evidence/runtime-v0631/README.md)。
+
 ## 0.6.30 — 2026-09-30
 
 - 怪物 Batch T–Y（棋子目录 251→**323** 款）：T（商队、迷路商人、战犬、Yeek Wayist、Nimisil、Slasul、Draebor、Weirdling Beast、Fortress Shadow、Pumpkin 等剧情组）、U（娜迦、里奇、木乃伊、兽人刺客大师、火焰小鬼等）、V（黑水晶、faerlhing／losselhing、dredge、drem master、兽人三法师等）、W（兽人龙战士、熊、重型骨巨人、蚁、banshee 等）、X（酸蚁／行军蚁、assassin、greater telugoroth、dread 等）、Y（uruivellas、thaurhereg、orc corruptor、temporal stalker、两种傀儡、blade horror、蠕动的裹尸布、grizzly bear、weaver patriarch、luminous horror、necrotic mass；玩家炼金傀儡保持原生）；召唤物与同体形沿用棋子。

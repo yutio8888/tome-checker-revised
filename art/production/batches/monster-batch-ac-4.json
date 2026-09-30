@@ -1,0 +1,330 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ac-4",
+  "assets": [
+    {
+      "asset_id": "oozing-horror",
+      "native_name": "oozing horror",
+      "scope": "lake-nur pool (general/npcs/horror.lua:554, horror/eldritch (subtype override on BASE_NPC_HORROR), non-unique, no define_as, rank 3, default-name image); the only NPC definition of this name; the Corpathus artifact summons a separate 'Vilespawn' minion that reuses the PNG under another name (world-artifacts.lua:3443), which stays native",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 556,
+          "anchor": "name = \"oozing horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 605,
+          "anchor": "T_OOZE_SPIT"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 569,
+          "anchor": "on_move = function(self)"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_oozing_horror.png",
+          "sha256": "cd9162ca321b9df4166ab5b213be767572dd876a7d6125ad4d2e480f0ba2eecc",
+          "role": "identity",
+          "note": "Native shape (64x64): a big lumpy mound of translucent lime-green slime with orange-amber eyes scattered through it. Keep the massive mound of green slime with many drifting orange eyes, drawn as ONE compact figure filling the disc, much heavier and bigger-looking than the small shipped ooze tokens."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/refs/slimes-blobs.png",
+          "sha256": "236a05cd3ea87c22cf319ca9b1566e65a0447117ca419e75276648a21a7b0391",
+          "role": "family",
+          "note": "Six shipped blob tokens (the green ooze, green jelly and poison ooze: small shiny slime blobs; the bloated horror: a pink baby-faced blob; the luminous horror: a yellow glowing humanoid; the necrotic mass: a pink-brown lump): the oozing horror is a MASSIVE amorphous lime-green slime mound, much bigger and heavier than the small ooze tokens, with SEVEN OR EIGHT large drifting orange-amber EYES scattered through the translucent slime, thick dripping slime tendrils and pools of ooze around its base; not a small shiny blob, not pink and not humanoid."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An oozing horror seen from a steep overhead three-quarter angle: a MASSIVE amorphous MOUND of translucent glossy LIME-GREEN slime filling the disc as one compact heap, seven or eight large round glowing ORANGE-AMBER EYES with dark pupils drifting at different depths through the slime, thick ropes of slime drooping over the mound and a few heavy drips and small pools of ooze hugging its base, big shiny white specular highlights on every upper-left bulge and a thin bright yellow-green rim light. Heaping, glossy, many-eyed and complete.",
+        "contrast": "Slimes: the OOZING HORROR is the MASSIVE MOUND OF LIME-GREEN SLIME with seven or eight large orange-amber eyes (silhouette: a big lumpy heap with many round eyes; hue: lime green with orange-amber eyes; value: mid-light and glossy). The shipped green ooze, green jelly and poison ooze are small shiny single blobs, the bloated horror a pink baby-faced blob, the luminous horror a yellow humanoid and the necrotic mass a pink-brown lump: this must not be small, single-eyed, pink or humanoid, and must show many eyes.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. CALIBRATION FROM EARLIER TOKENS OF THIS BATCH (three first generations failed the disc-geometry gate because arms, weapons and effects crossed the disc rim): draw the whole creature clearly SMALLER than feels natural, everything (limbs, weapons, wisps, flames, tentacles, cloth ends, shards and effects) inside a circle of about 0.58 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, arm and effect tight against the body; no cast shadow onto the plate.",
+        "palette": "Bright lime and yellow-green translucent slime, orange-amber eyes with small dark pupils, white specular highlights, a thin bright rim; nothing darker than mid green except the pupils and thin creases; NO dark green or black slime; the slime stays on the mound and must not spill across the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=oozing horror, define_as=None, type=horror/subtype=eldritch, unique=False, native_tall=False); details and hashes in evidence/monster-batch-ac-20260930/source-contracts.json. base BASE_NPC_HORROR (horror, no image=, no shader) with the leaf overriding subtype to eldritch; NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; the leaf has no sustains_at_birth (Resolve, Mana Clash, Ooze Spit, Ooze Roots, Slime Wave and Tentacle Grab are activated or passive); on_move only adds a slime map effect; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ]
+    },
+    {
+      "asset_id": "abyssal-horror",
+      "native_name": "abyssal horror",
+      "scope": "lake-nur pool (general/npcs/horror_aquatic.lua:192, horror/aquatic, non-unique, no define_as, rank 3, base BASE_NPC_HORROR_AQUATIC, nice_tile tall body); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 193,
+          "anchor": "name = \"abyssal horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 195,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 223,
+          "anchor": "T_ABYSSAL_SHROUD"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 227,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR_AQUATIC\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_aquatic_abyssal_horror.png",
+          "sha256": "76c45c6cdf6fefd9a3d50d60f73ede217da23b4c3196b2e2dbd7ec53fef0de27",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a pitch-black heaving mass of long tentacles with a pair of deep red eyes hidden inside. Keep the heaving tentacle mass with glowing red eyes buried in it, drawn as ONE compact figure filling the disc, no tall canvas, in deep indigo-violet and slate-teal with pale lilac sucker rows and a cluster of glowing crimson eyes instead of black."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/refs/dark-horrors.png",
+          "sha256": "d06936bfab846e83ca58be7c25a74b990ebd5bddbeb20ad79ddba3bffac22167",
+          "role": "family",
+          "note": "Six shipped horror tokens (the entrenched horror: a limestone pillar in a teal tentacle wreath; the ravenous horror: a fanged fish head; the horned horror: a purple horned beast; the weirdling beast: a purple-pink tentacled beast; the blade horror; the void horror: an indigo lens): the ABYSSAL HORROR is a heaving MASS OF WRITHING TENTACLES in deep indigo-violet and slate-teal with a cluster of glowing CRIMSON eyes buried at its centre and pale lilac sucker rows catching the light; the UMBRAL HORROR is a lithe jagged shadow-stalker crouched low, made of smoky pearl-grey and dusk-lavender shadow with hooked claws, backswept thorn-spikes and two pale-yellow eyes; neither has a pillar, a fish head or a horned beast body."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An abyssal horror seen from a steep overhead three-quarter angle: a heaving MASS OF WRITHING TENTACLES piled up into one compact dome on the disc, the thick glossy tentacles in deep INDIGO-VIOLET and SLATE-TEAL with broad pale-lilac highlight planes on every upper-left coil, rows of pale LILAC SUCKERS along their undersides, hooked tips curling back inward, and buried in the tangle at the centre a cluster of four to six glowing bright CRIMSON-RED EYES with hot orange-white pupils staring out from the gaps; a thin bright lilac rim light. Heaving, tangled, red-eyed and complete.",
+        "contrast": "Aquatic horrors: the ABYSSAL HORROR is the HEAVING DOME OF WRITHING INDIGO-VIOLET TENTACLES with glowing crimson eyes buried in the centre (silhouette: a round tangled tentacle pile with hooked tips and a few eyes in the middle; hue: indigo-violet and slate-teal with lilac suckers and crimson eyes; value: mid). The shipped entrenched horror is a limestone pillar in a teal tentacle wreath, the ravenous horror a fanged fish head, the weirdling beast a purple-pink tentacled beast and the horned horror a purple horned beast: this must not have a stone pillar, a fish head, a horned beast body or teal-only tentacles, and must be a pure tentacle mass with red eyes.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas. CALIBRATION FROM EARLIER TOKENS OF THIS BATCH (three first generations failed the disc-geometry gate because arms, weapons and effects crossed the disc rim): draw the whole creature clearly SMALLER than feels natural, everything (limbs, weapons, wisps, flames, tentacles, cloth ends, shards and effects) inside a circle of about 0.58 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, arm and effect tight against the body; no cast shadow onto the plate.",
+        "palette": "Deep indigo-violet and slate-teal glossy tentacles, pale lilac suckers and highlights, glowing crimson eyes with orange-white pupils, a thin bright lilac rim; nothing darker than mid indigo except thin gaps between coils; NO black tentacles, no black mass; the eye glow stays on the figure and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=abyssal horror, define_as=None, type=horror/subtype=aquatic, unique=False, native_tall=True); details and hashes in evidence/monster-batch-ac-20260930/source-contracts.json. base BASE_NPC_HORROR_AQUATIC (horror/aquatic, no image=, no shader, no sustains_at_birth in the base); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/horror_aquatic_abyssal_horror.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the single image is used); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; the leaf calls resolvers.sustains_at_birth() but none of its talents is sustained (Dark Torrent, Creeping Darkness, Dark Tendrils, Abyssal Shroud, Tentacle Grab are activated, Dark Vision passive); the base on_die only logs an air bubble and touches terrain; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ]
+    },
+    {
+      "asset_id": "umbral-horror",
+      "native_name": "umbral horror",
+      "scope": "lake-nur pool (general/npcs/horror.lua:613, horror/eldritch (subtype override on BASE_NPC_HORROR), non-unique, no define_as, rank 3, resolvers.nice_tile tall body); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 615,
+          "anchor": "name = \"umbral horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 617,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 644,
+          "anchor": "T_STEALTH"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 651,
+          "anchor": "T_SHADOW_WARRIORS"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 653,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_umbral_horror.png",
+          "sha256": "79d963c5ed886a94817fa04eb4f09b94109a731e8b3b37e10dc121eda38bbde6",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a black jagged crouching shadow-stalker with long thin claws and swept-back spikes. Keep the lithe jagged crouched shadow-stalker with hooked claws and thorn spikes, drawn as ONE compact figure filling the disc, no tall canvas, in smoky pearl-grey and dusk-lavender shadow with a bright lilac rim and two pale-yellow eyes instead of black."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/refs/dark-horrors.png",
+          "sha256": "d06936bfab846e83ca58be7c25a74b990ebd5bddbeb20ad79ddba3bffac22167",
+          "role": "family",
+          "note": "Six shipped horror tokens (the entrenched horror: a limestone pillar in a teal tentacle wreath; the ravenous horror: a fanged fish head; the horned horror: a purple horned beast; the weirdling beast: a purple-pink tentacled beast; the blade horror; the void horror: an indigo lens): the ABYSSAL HORROR is a heaving MASS OF WRITHING TENTACLES in deep indigo-violet and slate-teal with a cluster of glowing CRIMSON eyes buried at its centre and pale lilac sucker rows catching the light; the UMBRAL HORROR is a lithe jagged shadow-stalker crouched low, made of smoky pearl-grey and dusk-lavender shadow with hooked claws, backswept thorn-spikes and two pale-yellow eyes; neither has a pillar, a fish head or a horned beast body."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An umbral horror seen from a steep overhead three-quarter angle: a lithe JAGGED SHADOW-STALKER crouched low on the disc in a wary stalking pose as one compact figure, its body made of smoky PEARL-GREY and DUSK-LAVENDER shadow-stuff with large broad lighter grey-lilac planes on every upper-left surface, long thin HOOKED CLAWS on both hands held forward, a crest of backswept thorn-like SPIKES down its head and spine, a ragged tapering tail, two bright PALE-YELLOW slit EYES, and a few curling wisps of pale violet shadow rising off it (all close to the body); a thin bright lilac-white rim light along the whole outline. Crouched, jagged, smoky and complete. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Eldritch horrors: the UMBRAL HORROR is the LITHE CROUCHED JAGGED SHADOW-STALKER of smoky pearl-grey and dusk-lavender with hooked claws, thorn spikes and two pale-yellow eyes (silhouette: a low spiky crouch with forward claws and a crest; hue: pearl-grey, dusk-lavender and pale yellow; value: mid-light). The shipped horned horror is a purple horned beast, the weirdling beast a purple-pink tentacled beast, the dread a purple hooded shroud and the void horror an indigo lens: this must not be a tentacle mass, must not be horned or hooded, and must not be black.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas. CALIBRATION FROM EARLIER TOKENS OF THIS BATCH (three first generations failed the disc-geometry gate because arms, weapons and effects crossed the disc rim): draw the whole creature clearly SMALLER than feels natural, everything (limbs, weapons, wisps, flames, tentacles, cloth ends, shards and effects) inside a circle of about 0.58 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, arm and effect tight against the body; no cast shadow onto the plate.",
+        "palette": "Smoky pearl-grey and dusk-lavender shadow-stuff, pale grey-lilac highlight planes, pale-yellow eyes, pale violet wisps, a thin bright lilac-white rim; nothing darker than mid dusk-lavender except the eye slits and thin gaps between spikes; NO black body, no black wisps; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=umbral horror, define_as=None, type=horror/subtype=eldritch, unique=False, native_tall=True); details and hashes in evidence/monster-batch-ac-20260930/source-contracts.json. base BASE_NPC_HORROR (horror, no image=, no shader) with the leaf overriding subtype to eldritch; resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/horror_eldritch_umbral_horror.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the single image is used); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; the leaf calls resolvers.sustains_at_birth() and Call Shadows and Stealth are sustained (particles and temporary values only); Shadow Warriors and Focus Shadows build subtype shadow allies, not copies of this body; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ]
+    },
+    {
+      "asset_id": "degenerated-ogric-mass",
+      "native_name": "degenerated ogric mass",
+      "scope": "conclave-vault zone pool (zones/conclave-vault/npcs.lua:61, giant/ogre, non-unique, no define_as, rank 2, base BASE_NPC_OGRE via ogre.lua loaded with switchRarity, resolvers.nice_tile{tall=1}); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/conclave-vault/npcs.lua",
+          "sha256": "6bfd6d91a4b29284ce05359670593f80e461b4a7cf3a0a02a9e2897531b8307f",
+          "line": 62,
+          "anchor": "name = \"degenerated ogric mass\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/conclave-vault/npcs.lua",
+          "sha256": "6bfd6d91a4b29284ce05359670593f80e461b4a7cf3a0a02a9e2897531b8307f",
+          "line": 64,
+          "anchor": "resolvers.nice_tile{tall=1}"
+        },
+        {
+          "path": "game/modules/tome/data/zones/conclave-vault/npcs.lua",
+          "sha256": "6bfd6d91a4b29284ce05359670593f80e461b4a7cf3a0a02a9e2897531b8307f",
+          "line": 75,
+          "anchor": "T_CATALEPSY"
+        },
+        {
+          "path": "game/modules/tome/data/zones/conclave-vault/npcs.lua",
+          "sha256": "6bfd6d91a4b29284ce05359670593f80e461b4a7cf3a0a02a9e2897531b8307f",
+          "line": 24,
+          "anchor": "load(\"/data/general/npcs/ogre.lua\", switchRarity(\"special_rarity\"))"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ogre.lua",
+          "sha256": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+          "line": 33,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ogre.lua",
+          "sha256": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_OGRE\""
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ogre_degenerated_ogric_mass.png",
+          "sha256": "d7c2138ce7b1bafe06042dffc5b8c7a1453f099ce18dcb949b93ca64c2b35a96",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a slumped tree-stump-like heap of warty brown-red deformed flesh with stubby limbs and a twisted lump on top. Keep the slumped heap of deformed flesh with malformed limbs, drawn as ONE compact figure filling the disc, no tall canvas, in ochre-tan flesh with blue-grey bruises, tumours and a half-buried tusked ogre face."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/refs/ogres.png",
+          "sha256": "f01b01112e58a353816b35d0dfae981d6ac6e58984a611e63fcf0fe1b6b77547",
+          "role": "family",
+          "note": "Six shipped ogre and giant tokens (the ogre guard: a tan hammer ogre; the mauler: a red ogre; the pounder: a blue ogre; the warmaster: a plate-armoured ogre; the rune-spinner: an orange caster; the drem master): the OGRIC ABOMINATION is a mottled grey-mauve ogre with one arm replaced by a huge pale STONE golem arm and fist with glowing violet-cyan runes, bolted stone plates on shoulder and chest, a leather loincloth and a great maul; the DEGENERATED OGRIC MASS is not an ogre-shaped fighter at all but a slumped heap of bulging ochre-tan flesh with tumours, several malformed fused limbs and a half-buried tusked ogre face; neither is tan, red, blue or plate-armoured."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A degenerated ogric mass seen from a steep overhead three-quarter angle: a slumped HEAP of bulging OCHRE-TAN and salmon flesh that was once an ogre, piled on the disc as one compact lump, rolls of sagging skin, big round TUMOURS with pale yellow pustules, patches of blue-grey BRUISING, three or four MALFORMED stubby fused limbs with lumpy hands sprouting at odd angles, ropy brown tendons, and a half-buried TUSKED OGRE FACE with one sunken eye and a drooling crooked jaw pushed out of the top of the heap; broad pale highlight planes on every upper-left bulge and a thin bright rim light. Slumped, lumpy, malformed and complete.",
+        "contrast": "Ogres: the DEGENERATED OGRIC MASS is the SLUMPED HEAP OF OCHRE-TAN DEFORMED FLESH with tumours, malformed fused limbs and a half-buried tusked ogre face (silhouette: a low lumpy heap with a face poking out of the top; hue: ochre-tan and salmon with blue-grey bruises; value: mid-light). The shipped ogre guard, mauler, pounder and warmaster are upright tan, red, blue and armoured ogre fighters, the necrotic mass a pink-brown lump with skulls and the bloated horror a pink baby-faced blob: this must not be an upright ogre fighter, must not be pink with skulls and must not have a baby face.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas. CALIBRATION FROM EARLIER TOKENS OF THIS BATCH (three first generations failed the disc-geometry gate because arms, weapons and effects crossed the disc rim): draw the whole creature clearly SMALLER than feels natural, everything (limbs, weapons, wisps, flames, tentacles, cloth ends, shards and effects) inside a circle of about 0.58 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, arm and effect tight against the body; no cast shadow onto the plate.",
+        "palette": "Ochre-tan and salmon flesh, blue-grey bruises, pale yellow pustules, brown tendons, ivory tusks, a thin bright rim; nothing darker than mid tan-brown except the eye socket and skin creases; NO black or dark brown mass; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=degenerated ogric mass, define_as=None, type=giant/subtype=ogre, unique=False, native_tall=True); details and hashes in evidence/monster-batch-ac-20260930/source-contracts.json. base BASE_NPC_OGRE (giant/ogre, no image=, no shader); the base calls resolvers.sustains_at_birth() but none of the leaf talents is sustained (Epidemic, Rotting Disease, Weapon Combat and Catalepsy are activated or passive); resolvers.nice_tile{tall=1} on the leaf (no image= on the leaf or base, so NPC.lua:33 default-name image giant_ogre_degenerated_ogric_mass.png is used; the resolver expands to invis.png + one add_mos entry {image=e.image, display_h=2, display_y=-1}, the same live-confirmed shorthand as the ogre guard, mauler and pounder; with nicer_tiles off it is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; resolvers.equip a greatmaul (equipment only, no moddable_tile); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ]
+    }
+  ]
+}

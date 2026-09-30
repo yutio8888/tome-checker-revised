@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ab-6",
+  "assets": [
+    {
+      "asset_id": "greater-mummy",
+      "native_name": "greater mummy",
+      "scope": "ancient-elven-ruins pool (zones/ancient-elven-ruins/npcs.lua:176, undead/mummy, non-unique, define_as GREATER_MUMMY, rank 3, base BASE_NPC_MUMMY, explicit image=npc/undead_mummy_greater_mummy.png); the only definition of this name (the greater mummy lord GREATER_MUMMY_LORD is another leaf with its own token)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 178,
+          "anchor": "name = \"greater mummy\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 176,
+          "anchor": "define_as = \"GREATER_MUMMY\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 179,
+          "anchor": "image = \"npc/undead_mummy_greater_mummy.png\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 207,
+          "anchor": "T_FREEZE"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 193,
+          "anchor": "resolvers.equip"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/mummy.lua",
+          "sha256": "06c0e07e77a753b1ecdbed7efbc7ce457342a53bab952c544a1d4208d5346b2a",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_MUMMY\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_mummy_greater_mummy.png",
+          "sha256": "8944d879adff528b211edf4b75278ba8fe49f66455dc0c3db2e1272261b87ab0",
+          "role": "identity",
+          "note": "Native shape (64x64): a tall golden-wrapped mummy in a crested headdress with a bloody red left hand and a long weapon. Keep the tall wrapped mummy with the striped headdress, a big blade and one raised glowing hand, drawn as ONE compact figure filling the disc, in clean ivory linen with a blue-and-gold nemes headdress and jewelled collar, clearly not the gold-armoured greater mummy lord."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ab/refs/mummies.png",
+          "sha256": "ec6a699059541eef102802d9e2051859a96a5afaa9afc8c342481932ac03a3a0",
+          "role": "family",
+          "note": "Four shipped mummy tokens (the rotting mummy: a plain tan-bandaged shambler; the ancient elven mummy: a pale bandaged elf; the greater mummy lord: a GOLD-ARMOURED mummy with a crested helm, round shield and short sword; the animated wrappings: an empty coiled bandage S): the greater mummy is a tall gaunt PRESERVED corpse wound in layered clean IVORY linen wrappings, a tall striped blue-and-gold NEMES-style royal headdress, a broad turquoise-and-gold jewelled collar, sunken glowing pale-blue eyes, a huge two-handed bronze GREATSWORD resting over the shoulder and the free hand raised with a pale frost-blue glow; not gold armour, not a shield, not a plain tan shambler and not an elf."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A greater mummy seen from a steep overhead three-quarter angle: a tall gaunt PRESERVED corpse wound in layered clean IVORY and pale sand linen wrappings with loose trailing ends, a tall striped BLUE-and-GOLD NEMES-style royal headdress, a broad TURQUOISE-and-gold jewelled collar, sunken glowing pale-blue eyes in a dark leathery face, a huge two-handed BRONZE GREATSWORD resting blade-up over the right shoulder and the left hand raised open with a cold pale FROST-BLUE glow above the palm; broad pale highlight planes on every upper-left wrapping and a thin bright rim light. Wrapped, crowned, armed and complete.",
+        "contrast": "Mummies: the GREATER MUMMY is the TALL IVORY-WRAPPED PHARAOH with a blue-and-gold nemes headdress, a turquoise collar, a bronze greatsword over the shoulder and a frost-blue glowing palm (silhouette: a tall wrapped figure with a flared headdress and a long blade; hue: ivory linen, blue and gold, turquoise; value: light). The shipped rotting mummy is a plain tan shambler, the ancient elven mummy a pale bandaged elf, the greater mummy lord a GOLD-ARMOURED mummy with a crested helm and round shield and the animated wrappings a coiled empty bandage: this must not be gold armour, carry a shield or be plain tan bandages.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Clean ivory and pale sand linen, blue-and-gold headdress, turquoise-gold collar, bronze blade, pale frost-blue glow, a thin bright rim; nothing darker than mid tan except the eye sockets and the face; NO dark or brown wrappings; the frost glow stays at the palm and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=greater mummy, define_as=GREATER_MUMMY, type=undead/subtype=mummy, unique=False, native_tall=False); details and hashes in evidence/monster-batch-ab-20260930/source-contracts.json. base BASE_NPC_MUMMY (undead/mummy, no image=, no shader, no sustains_at_birth); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; define_as-bound entry: the catalog entry carries define_as and the matcher rejects any actor with another (or no) define_as (GREATER_MUMMY); the PNG undead_mummy_greater_mummy.png is used by this leaf only; resolvers.equip a greatsword, mummy armour and a helm (equipment only, no moddable_tile); the talents (Weapons Mastery, Weapon Combat, Stunning Blow, Crush, Rush, Freeze, Manathrust) are passive or activated, none sustained; no sustains_at_birth; the leaf has no auto_classes (the lord leaf above it does). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ab-20260930/source-contracts.json",
+          "sha256": "47d8089d6229f1fa36f123bba4527789c3e911cb904308319b4cf51124e48e56"
+        }
+      ]
+    }
+  ]
+}

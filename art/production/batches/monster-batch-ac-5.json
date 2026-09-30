@@ -1,0 +1,96 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ac-5",
+  "assets": [
+    {
+      "asset_id": "ogric-abomination",
+      "native_name": "ogric abomination",
+      "scope": "conclave-vault zone pool (zones/conclave-vault/npcs.lua:79, giant/ogre, non-unique, no define_as, rank 3, base BASE_NPC_OGRE via ogre.lua loaded with switchRarity, resolvers.nice_tile{tall=1}); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/conclave-vault/npcs.lua",
+          "sha256": "6bfd6d91a4b29284ce05359670593f80e461b4a7cf3a0a02a9e2897531b8307f",
+          "line": 80,
+          "anchor": "name = \"ogric abomination\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/conclave-vault/npcs.lua",
+          "sha256": "6bfd6d91a4b29284ce05359670593f80e461b4a7cf3a0a02a9e2897531b8307f",
+          "line": 82,
+          "anchor": "resolvers.nice_tile{tall=1}"
+        },
+        {
+          "path": "game/modules/tome/data/zones/conclave-vault/npcs.lua",
+          "sha256": "6bfd6d91a4b29284ce05359670593f80e461b4a7cf3a0a02a9e2897531b8307f",
+          "line": 93,
+          "anchor": "T_GOLEM_REFLECTIVE_SKIN"
+        },
+        {
+          "path": "game/modules/tome/data/zones/conclave-vault/npcs.lua",
+          "sha256": "6bfd6d91a4b29284ce05359670593f80e461b4a7cf3a0a02a9e2897531b8307f",
+          "line": 24,
+          "anchor": "load(\"/data/general/npcs/ogre.lua\", switchRarity(\"special_rarity\"))"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ogre.lua",
+          "sha256": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+          "line": 33,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ogre.lua",
+          "sha256": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_OGRE\""
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ogre_ogric_abomination.png",
+          "sha256": "cfaa1ffb705e2653bb417eb0f9192c924d2371f3370fcac7819629ffd8b55bb7",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a hulking grey-mauve ogre with purple crystals grafted on its body, one arm a lumpy golem arm, swinging a big club overhead. Keep the hulking ogre with grafted stone golem parts and a raised maul, drawn as ONE compact figure filling the disc, no tall canvas, in mottled grey-mauve skin with a huge pale stone golem arm and glowing violet-cyan runes."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/refs/ogres.png",
+          "sha256": "f01b01112e58a353816b35d0dfae981d6ac6e58984a611e63fcf0fe1b6b77547",
+          "role": "family",
+          "note": "Six shipped ogre and giant tokens (the ogre guard: a tan hammer ogre; the mauler: a red ogre; the pounder: a blue ogre; the warmaster: a plate-armoured ogre; the rune-spinner: an orange caster; the drem master): the OGRIC ABOMINATION is a mottled grey-mauve ogre with one arm replaced by a huge pale STONE golem arm and fist with glowing violet-cyan runes, bolted stone plates on shoulder and chest, a leather loincloth and a great maul; the DEGENERATED OGRIC MASS is not an ogre-shaped fighter at all but a slumped heap of bulging ochre-tan flesh with tumours, several malformed fused limbs and a half-buried tusked ogre face; neither is tan, red, blue or plate-armoured."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An ogric abomination seen from a steep overhead three-quarter angle: a hulking OGRE with mottled GREY-MAUVE skin and a heavy brutish tusked face, one arm ordinary and gripping a big brown wooden GREATMAUL raised diagonally over the shoulder, the OTHER ARM replaced by a huge pale limestone STONE GOLEM ARM ending in a boulder fist with glowing VIOLET-CYAN RUNES, more STONE PLATES bolted onto the shoulder and chest with brass rivets, small violet crystals sprouting at the seams where the stone joins the flesh, a tattered brown leather loincloth and heavy bare feet; broad pale highlight planes on every upper-left surface and a thin bright rim light. Grafted, hulking, armed and complete.",
+        "contrast": "Ogres: the OGRIC ABOMINATION is the HULKING GREY-MAUVE OGRE with one huge pale STONE GOLEM ARM with glowing violet-cyan runes, bolted stone plates and a raised greatmaul (silhouette: a broad brute with one oversized stone arm and a diagonal maul; hue: grey-mauve skin, pale limestone stone and violet-cyan glow; value: mid-light). The shipped ogre guard is a tan hammer ogre, the mauler a red ogre, the pounder a blue ogre, the warmaster a plate-armoured ogre and the rune-spinner an orange caster: this must not be tan, red, blue, orange or plate-armoured and must have the stone arm.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas. CALIBRATION FROM EARLIER TOKENS OF THIS BATCH (three first generations failed the disc-geometry gate because arms, weapons and effects crossed the disc rim): draw the whole creature clearly SMALLER than feels natural, everything (limbs, weapons, wisps, flames, tentacles, cloth ends, shards and effects) inside a circle of about 0.58 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, arm and effect tight against the body; no cast shadow onto the plate.",
+        "palette": "Mottled grey-mauve skin, pale limestone stone arm and plates, violet-cyan runes and crystals, brass rivets, brown maul and loincloth, a thin bright rim; nothing darker than mid grey-mauve except eye slits and seams; NO black or dark brown mass; the rune glow stays on the figure and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ogric abomination, define_as=None, type=giant/subtype=ogre, unique=False, native_tall=True); details and hashes in evidence/monster-batch-ac-20260930/source-contracts.json. base BASE_NPC_OGRE (giant/ogre, no image=, no shader); the base calls resolvers.sustains_at_birth() and Golem Reflective Skin is the leaf sustain (talents/spells/golem.lua:325 addShaderAura, native shader-aura bookkeeping on add_mos that the matcher ignores); resolvers.nice_tile{tall=1} on the leaf (no image= on the leaf or base, so NPC.lua:33 default-name image giant_ogre_ogric_abomination.png is used; the resolver expands to invis.png + one add_mos entry {image=e.image, display_h=2, display_y=-1}, the same live-confirmed shorthand as the ogre guard, mauler and pounder; with nicer_tiles off it is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; resolvers.equip a greatmaul (equipment only, no moddable_tile); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ]
+    }
+  ]
+}

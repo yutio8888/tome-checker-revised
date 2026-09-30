@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ab-5",
+  "assets": [
+    {
+      "asset_id": "orc-summoner",
+      "native_name": "orc summoner",
+      "scope": "ardhungol, unremarkable-cave and rak-shor-pride pools (general/npcs/orc-gorbat.lua:53, humanoid/orc, non-unique, no define_as, rank 2, base BASE_NPC_ORC_GORBAT, default-name image); the only definition of this name (the grand summoner is another leaf)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 54,
+          "anchor": "name = \"orc summoner\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 70,
+          "anchor": "T_PSIBLADES"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 71,
+          "anchor": "T_MINOTAUR"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 61,
+          "anchor": "resolvers.equip"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 43,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC_GORBAT\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_summoner.png",
+          "sha256": "06f42983355d940db1bbe593c2ce7dbb6d8ecfe4e205cd90dbe8edbd893e2b45",
+          "role": "identity",
+          "note": "Native shape (64x64): a green orc in a fur mantle and leather kilt holding a long wooden staff, wreathed in a purple glow. Keep the green beast-shaman with the long staff, drawn as ONE compact figure filling the disc, as a savage totem-summoner with an antler-and-tusk headdress and three turquoise spirit wisps coiling from the staff, clearly not a robed orc mage."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ab/refs/orc-casters.png",
+          "sha256": "42c72f753a20499f726fafe1ca0c60593b70eb0a2ae9c283faf54ba545a9de1c",
+          "role": "family",
+          "note": "Five shipped orc caster tokens (the corruptor in a gold-yellow robe with a green glow, the necromancer in a navy hooded robe, the pyromancer in a red-orange robe, the cryomancer in a blue robe, the blood mage in a crimson robe with a red orb): the orc summoner is a SAVAGE BEAST-SHAMAN, a green orc in a tawny spotted hide mantle and leather kilt with NO robe, an ANTLER-and-TUSK headdress, bone bead necklaces, both hands raising a tall wooden TOTEM STAFF topped with a carved beast skull and hanging feathers while three glowing turquoise-jade SPIRIT WISPS coil out of the staff; not a robed mage, not blue, red, navy or gold."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orc summoner seen from a steep overhead three-quarter angle: a stocky GREEN-skinned orc beast-shaman standing on the disc with a tawny spotted HIDE MANTLE over the shoulders, a brown leather kilt and no robe, an ANTLER-and-TUSK headdress, several bone-bead necklaces, painted white stripes on the face and arms, both hands gripping a SHORT wooden TOTEM STAFF close to the chest topped with a carved pale beast SKULL and hung with red and turquoise feathers, and three glowing turquoise-JADE SPIRIT WISPS in the shapes of a horned head, a spider and a flame coiling tight around the staff head and shoulders like smoke (all close to the body); broad pale highlight planes on every upper-left surface and a thin bright rim light. Savage, antlered, calling and complete.",
+        "contrast": "Orcs: the ORC SUMMONER is the SAVAGE BEAST-SHAMAN with an antler-and-tusk headdress, a hide mantle and a totem staff with three turquoise spirit wisps (silhouette: a figure with antlers holding a tall staff up, wisps coiling around; hue: green skin, tawny hide, turquoise-jade spirits, white bone; value: mid-light). The shipped orc corruptor, necromancer, pyromancer, cryomancer and blood mage all wear coloured robes: this must not wear a robe and must not be gold, navy, red, blue or crimson.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Calibration from the previous generation of this exact token: the design (green orc beast-shaman, tawny spotted hide mantle, antler-and-tusk headdress, bone beads, feathered skull-topped totem staff, three turquoise-jade spirit wisps) was right, but the tall staff and two spirit wisps reached out across the disc rim. This time keep the same shaman, but draw everything clearly SMALLER: the whole figure, antlers, staff, feathers and all three wisps inside a circle of about 0.58 of the disc radius, centred, with a wide bare ring of plate on every side; hold a SHORT totem staff (a little taller than his head, staff head tucked beside the antlers and never above them), both hands close to the chest, and let the three small spirit wisps coil tight around the staff head and shoulders like smoke, none farther from the body than an arm's length; no cast shadow onto the plate.",
+        "palette": "Green skin, tawny spotted hide, brown leather, bone-white antlers and skull, turquoise-jade spirit wisps, red and turquoise feathers, a thin bright rim light; nothing darker than mid brown except eye slits and seams; NO dark robe, no black leather; the spirit glow stays close to the body and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc summoner, define_as=None, type=humanoid/subtype=orc, unique=False, native_tall=False); details and hashes in evidence/monster-batch-ab-20260930/source-contracts.json. base BASE_NPC_ORC_GORBAT (humanoid/orc, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.racial() only adds orc levelup talents; the base and the leaf call resolvers.sustains_at_birth() and Psiblades is the only sustained talent (talents/gifts/mindstar-mastery.lua:29; it calls updateModdableTile, which for a non-moddable actor only rebuilds shader-aura bookkeeping); resolvers.equip two mindstars and a totem (equipment only); the Minotaur, Ritch Flamespitter and Spider summons build other leaves; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ab-20260930/source-contracts.json",
+          "sha256": "47d8089d6229f1fa36f123bba4527789c3e911cb904308319b4cf51124e48e56"
+        }
+      ]
+    }
+  ]
+}
