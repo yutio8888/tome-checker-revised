@@ -1,0 +1,1481 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "ritch-flamespitter",
+      "master": "masters/ritch-flamespitter-v1.png",
+      "sha256": "1fb515728bc0ef8c5a69aca643e9320a7f51e1ecbde7bdc415060fb9112c9eda",
+      "exports": [
+        {
+          "path": "sprites/48/ritch-flamespitter.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -12.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9462ce0b4b4229cefd1a6ae6a2ff5794972d3901032ddebee091daf161f52785"
+        },
+        {
+          "path": "sprites/64/ritch-flamespitter.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -12.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "abd5665419cea7f0e1984bf53834867ff6c2fcdd7586189628093c38eaf9c847"
+        },
+        {
+          "path": "sprites/96/ritch-flamespitter.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -12.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5f1b1cbfd5e9d01a2477765c127cd6b18e7ccfd47d563ed7c6d6f789b03f102e"
+        },
+        {
+          "path": "sprites/128/ritch-flamespitter.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -12.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5069af72981b018968b50cbca3574c1e094de4d60fd7acec384d01e40e228ad2"
+        },
+        {
+          "path": "sprites/256/ritch-flamespitter.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -12.953488,
+            -15.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4dc2981b3cb6661dd4c42a3bee551e4299d144136d09a2685e674c3ea2cb3e56"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.57,
+        "max_sector_intrusion": 4.4,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ritch-impaler",
+      "master": "masters/ritch-impaler-v1.png",
+      "sha256": "6c80aa2a6715573c4687d7bf94f91e2fd6aca90d903dc4d7782dd6ab9afb014e",
+      "exports": [
+        {
+          "path": "sprites/48/ritch-impaler.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -10.709302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "03f02dad0f4e1514e969f3ee0ee03d4f07bb08d5d861ce13539cb082069dbe00"
+        },
+        {
+          "path": "sprites/64/ritch-impaler.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -10.709302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "730a78046c801c76353bd77febc0086b035fa953651c72239a0a75a0336be087"
+        },
+        {
+          "path": "sprites/96/ritch-impaler.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -10.709302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b56b343be7bbdc265c4591b4cd7e7bd8d1efa2732d6ed992dd327baafcb2a42b"
+        },
+        {
+          "path": "sprites/128/ritch-impaler.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -10.709302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3e3690f1a621b23059f40557df5490898886859c122cc44b11444431d4c20c89"
+        },
+        {
+          "path": "sprites/256/ritch-impaler.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -10.709302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "90014072bc1379d8e796c7764e25f65eac983b814a2128d9487fde362347eefb"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.39,
+        "max_sector_intrusion": 5.1,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "chitinous-ritch",
+      "master": "masters/chitinous-ritch-v1.png",
+      "sha256": "938fa838ed39ca7b9e67cd484f847e1b37d8787bfdcbdf9f4a3902914b8d2f05",
+      "exports": [
+        {
+          "path": "sprites/48/chitinous-ritch.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            45,
+            40,
+            1209,
+            1207
+          ],
+          "export_window": [
+            -51.488372,
+            -54.988372,
+            1356.976744
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "febeaf6c5927cb9c37ee52652f8afd8f3151eb34697ca642de621b9731742c39"
+        },
+        {
+          "path": "sprites/64/chitinous-ritch.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            45,
+            40,
+            1209,
+            1207
+          ],
+          "export_window": [
+            -51.488372,
+            -54.988372,
+            1356.976744
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "aeab98378d6569995a38be1927848127eae597db668ab05ea11c8f36fffc5ab1"
+        },
+        {
+          "path": "sprites/96/chitinous-ritch.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            45,
+            40,
+            1209,
+            1207
+          ],
+          "export_window": [
+            -51.488372,
+            -54.988372,
+            1356.976744
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f68d6040e2e3cae06f500789473de01ff1603548406f1d9108808745af4d1e89"
+        },
+        {
+          "path": "sprites/128/chitinous-ritch.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            45,
+            40,
+            1209,
+            1207
+          ],
+          "export_window": [
+            -51.488372,
+            -54.988372,
+            1356.976744
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4b2b8de1ee5193dee174984fd4da21521174951c2641c4c883d51d09eaff1220"
+        },
+        {
+          "path": "sprites/256/chitinous-ritch.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            45,
+            40,
+            1209,
+            1207
+          ],
+          "export_window": [
+            -51.488372,
+            -54.988372,
+            1356.976744
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bf449323e40a3beb06639d4f10c8ad159fcee113d6909815b3d848b6db4f0dbb"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.36,
+        "max_sector_intrusion": 8.1,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "naga-tide-huntress",
+      "master": "masters/naga-tide-huntress-v1.png",
+      "sha256": "6569fcd51e421142e218e231195bb01c8f66ae1e3e70c8f8f201f2d8e287906d",
+      "exports": [
+        {
+          "path": "sprites/48/naga-tide-huntress.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -9.046512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4a6853a89c6208616d978b80958b922c1655e0c6ade20571191860fb83de1661"
+        },
+        {
+          "path": "sprites/64/naga-tide-huntress.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -9.046512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7963e8f1142114f19b38a8fa47f0f200d4cc6f45844b0e94921321775cfc617f"
+        },
+        {
+          "path": "sprites/96/naga-tide-huntress.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -9.046512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a31ed7950b2d857530e3784e589a40c20cf7eef4fb5bb763c26835eac5ca36f9"
+        },
+        {
+          "path": "sprites/128/naga-tide-huntress.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -9.046512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "13e39d19ce4de3317cd95790d3a11dce03af8424983e73fe8ee385299ea1c081"
+        },
+        {
+          "path": "sprites/256/naga-tide-huntress.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -9.046512,
+            -12.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d08f4059db9cd1f316ba30e05688f78992122c202c16995185e2c55e34143a57"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.65,
+        "max_sector_intrusion": 2.32,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "naga-psyren",
+      "master": "masters/naga-psyren-v1.png",
+      "sha256": "bade651be3b4c39298971e369bfafa4f1e32522439c6fb78250687be1d2cdf9a",
+      "exports": [
+        {
+          "path": "sprites/48/naga-psyren.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            77,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -11.790698,
+            -12.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b42cbed82d003b4e9ac041e17defec2bb559358f66272390f9075a7e6103a90e"
+        },
+        {
+          "path": "sprites/64/naga-psyren.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            77,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -11.790698,
+            -12.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b93e6dab43fef2d0318098f4a83ba453fd5cfce1f1629befac1d24f4418ef3e7"
+        },
+        {
+          "path": "sprites/96/naga-psyren.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            77,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -11.790698,
+            -12.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a7a79480d73ad8de70eaddbf23fa38761be3263ce961429087541abf2bd7eafc"
+        },
+        {
+          "path": "sprites/128/naga-psyren.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            77,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -11.790698,
+            -12.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9a980c9dc8f08fa0eb1c683551b2273a5e6689861c06624a52e1ff0845fa906d"
+        },
+        {
+          "path": "sprites/256/naga-psyren.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            77,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -11.790698,
+            -12.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "65910dbfd639345d1811e3524d2cf23752f96cbf32fb82231941152dd9ff5bc6"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 3.44,
+        "max_sector_intrusion": 3.13,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ancient-elven-mummy",
+      "master": "masters/ancient-elven-mummy-v1.png",
+      "sha256": "b337c98da404d641885e14e24620c0ad94ff99bc81392eb79b72814755e99425",
+      "exports": [
+        {
+          "path": "sprites/48/ancient-elven-mummy.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1167,
+            1172
+          ],
+          "export_window": [
+            -10.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3d8ed9eec5f72b520775c72decb7c472ce70419b45d58ca43357656fbd789cbd"
+        },
+        {
+          "path": "sprites/64/ancient-elven-mummy.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1167,
+            1172
+          ],
+          "export_window": [
+            -10.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "66e0b840d409c371bd67da50578f6f81bbfa89950f1fa3d0d69ec63a83ef76e7"
+        },
+        {
+          "path": "sprites/96/ancient-elven-mummy.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1167,
+            1172
+          ],
+          "export_window": [
+            -10.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8980adf7f18a7c9b58d55023b32037292b147ee1fdf595500e64c8f9f970da15"
+        },
+        {
+          "path": "sprites/128/ancient-elven-mummy.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1167,
+            1172
+          ],
+          "export_window": [
+            -10.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "432ff9d8e540504982b56a7c72da95a20c3c37dd5a59810b2bd91821672a587a"
+        },
+        {
+          "path": "sprites/256/ancient-elven-mummy.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1167,
+            1172
+          ],
+          "export_window": [
+            -10.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "df07a3875b620a3705fc00302fb28d20660d231924e91e15e782fde8aa6d7279"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.27,
+        "max_sector_intrusion": 4.05,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "orc-master-assassin",
+      "master": "masters/orc-master-assassin-v2.png",
+      "sha256": "bfab5d804e96747649fc67079ed461b383fec859c95292caf26f5d1fc4297630",
+      "exports": [
+        {
+          "path": "sprites/48/orc-master-assassin.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            73,
+            1171,
+            1175
+          ],
+          "export_window": [
+            -13.697674,
+            -16.697674,
+            1281.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "95a34104b59da15aa5f958ef0b85d7f37687281b8254eaaea4f6a1cd221f122d"
+        },
+        {
+          "path": "sprites/64/orc-master-assassin.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            73,
+            1171,
+            1175
+          ],
+          "export_window": [
+            -13.697674,
+            -16.697674,
+            1281.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cf7d7c2966def587b1403542c094f7f9751d7e2dce40c45c1e91ab897adbfd4a"
+        },
+        {
+          "path": "sprites/96/orc-master-assassin.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            73,
+            1171,
+            1175
+          ],
+          "export_window": [
+            -13.697674,
+            -16.697674,
+            1281.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8e80de8f16fa9d1dae4e34c28e4a57e30d6e9bef2c9c224cdaca8f74afb92dd9"
+        },
+        {
+          "path": "sprites/128/orc-master-assassin.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            73,
+            1171,
+            1175
+          ],
+          "export_window": [
+            -13.697674,
+            -16.697674,
+            1281.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "114d6c7e83ff778cab804cf5a891dc832e85d144fae70dabba891b72c524d3ad"
+        },
+        {
+          "path": "sprites/256/orc-master-assassin.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            73,
+            1171,
+            1175
+          ],
+          "export_window": [
+            -13.697674,
+            -16.697674,
+            1281.395349
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6534db79ffa6af5724daa6d3d82a4810741b19680b611894f89c5d3df63d1c2d"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.67,
+        "max_sector_intrusion": 2.14,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "orc-grand-master-assassin",
+      "master": "masters/orc-grand-master-assassin-v1.png",
+      "sha256": "9f6cb528d275674b065124728fe7f3ce1d94835576f721f6a248c4e0dee9c425",
+      "exports": [
+        {
+          "path": "sprites/48/orc-grand-master-assassin.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -12.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "06814df0a07dc859f6709b7beccd2e1588754e6d6f416ff13c78f2ec4bdc93fe"
+        },
+        {
+          "path": "sprites/64/orc-grand-master-assassin.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -12.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "28811b954d8f4138440eccdb7ba0027d0210d74284259084197d29656e54214f"
+        },
+        {
+          "path": "sprites/96/orc-grand-master-assassin.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -12.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b6bc2aa43e288a8103470cc961c82e15ebe53c7d0d481b7d5a6ab42608487162"
+        },
+        {
+          "path": "sprites/128/orc-grand-master-assassin.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -12.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "810012dac6476c71cc45f54eded4cb1747a5a1004abc049d7d04e8b03fabbbcd"
+        },
+        {
+          "path": "sprites/256/orc-grand-master-assassin.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -12.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "58e6034989077f767c6c7ac6c590d8fe2fa4a26e7cc2590ac94d1ff18d948310"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -6.31,
+        "max_sector_intrusion": 7.89,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "fire-imp",
+      "master": "masters/fire-imp-v2.png",
+      "sha256": "b303a57e4308b3984de9274182d926f7bddcf7c6ff976a16224c9608832f535f",
+      "exports": [
+        {
+          "path": "sprites/48/fire-imp.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -12.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5c8df3a31cf4f28b993424b718126179ee3436e81b63450a55b77718dfa9e453"
+        },
+        {
+          "path": "sprites/64/fire-imp.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -12.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b4093c4c3f53630d9926854a08aea2d858732da7b51a385c516f590aaa54532b"
+        },
+        {
+          "path": "sprites/96/fire-imp.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -12.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "98f45f61f0b440dc7a2bb83ed22efe8a2b960e7d958ee0ee54d78954189cd0ed"
+        },
+        {
+          "path": "sprites/128/fire-imp.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -12.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a5674196cf3a36e89c20ee040ab0edd84b12cabd515dca65acf0f15a6ac61eac"
+        },
+        {
+          "path": "sprites/256/fire-imp.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -12.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7a63bbeb88b197c92eefdfc31754f51050e445f636ed9edcee739603d39611cb"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.16,
+        "max_sector_intrusion": 2.51,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "gaeramarth",
+      "master": "masters/gaeramarth-v2.png",
+      "sha256": "c25ab0d9406812f860ea95cfce5279ee08bd156c260c85f8101a6e1d14e8a378",
+      "exports": [
+        {
+          "path": "sprites/48/gaeramarth.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a61e09bae70c190efc839a97d81b0e192f11e388ae185ec5fa2d803ec1b4a8fa"
+        },
+        {
+          "path": "sprites/64/gaeramarth.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "df47149480c6547b6d9d85a56e75273f2d759faf851d4d2a02db5c08808bfb54"
+        },
+        {
+          "path": "sprites/96/gaeramarth.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "03e0b8e5b0c695a8cc1def33ad1351060f3231960598935633922a540c8bef94"
+        },
+        {
+          "path": "sprites/128/gaeramarth.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5b621ed4a1b832d2b58ce0a83f0be28d360ce6520647ec03626424f2f9d123f2"
+        },
+        {
+          "path": "sprites/256/gaeramarth.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5195172706aa9b8af4a2886804a4767623e9ab5869f7ce9f98c179f8e357f4f1"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 3.58,
+        "max_sector_intrusion": 4.69,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ninurlhing",
+      "master": "masters/ninurlhing-v1.png",
+      "sha256": "6b1ce784462a80a03a7a77ee4c9086705d8ead5bed43c9f08c0dce05bd308058",
+      "exports": [
+        {
+          "path": "sprites/48/ninurlhing.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -12.790698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cafb39540b73090c983ed29d6af8bda71e7c643b173673797090d265ef006e21"
+        },
+        {
+          "path": "sprites/64/ninurlhing.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -12.790698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "06d728baf46adab93bf6c8f333f19a01d7f51c3ecd2af831fca6cd2b20ee1b2b"
+        },
+        {
+          "path": "sprites/96/ninurlhing.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -12.790698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3ff0586c08d4bc7a51da0da330f47d5b31689804632ca839cab6ffb961b580b2"
+        },
+        {
+          "path": "sprites/128/ninurlhing.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -12.790698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4d48e39be469c85fca00eb38290d8876266e3870cbcbdfd8fc6641155af74740"
+        },
+        {
+          "path": "sprites/256/ninurlhing.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            74,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -12.790698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "03a27035456505f2e99f7c8067f593993118399b46d4d02943dd7c143c47ad0f"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.64,
+        "max_sector_intrusion": 5.94,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "fate-weaver",
+      "master": "masters/fate-weaver-v1.png",
+      "sha256": "2a02383c34b9a2e948ad382ff83298491f0c3083deab05b1784158b96e23f6c3",
+      "exports": [
+        {
+          "path": "sprites/48/fate-weaver.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            72,
+            1166,
+            1172
+          ],
+          "export_window": [
+            -13.034884,
+            -17.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0d447586fdbb0e5f203ee89299a3dad1c62e807a2f9a01e2eb1ccf585f16bf34"
+        },
+        {
+          "path": "sprites/64/fate-weaver.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            72,
+            1166,
+            1172
+          ],
+          "export_window": [
+            -13.034884,
+            -17.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "91ad9c5fa0de3ac932f37057c9da87319645107f10dfc72af25687497a116cba"
+        },
+        {
+          "path": "sprites/96/fate-weaver.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            72,
+            1166,
+            1172
+          ],
+          "export_window": [
+            -13.034884,
+            -17.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a1141e8417d742e28c52467d28591ac5cf5b73d7a1a3b65d93ad0593f1ee2c94"
+        },
+        {
+          "path": "sprites/128/fate-weaver.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            72,
+            1166,
+            1172
+          ],
+          "export_window": [
+            -13.034884,
+            -17.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "04c078c5a71d93faecad6136ab8e3478bbd1312c53fcb207c893314343b2f7d5"
+        },
+        {
+          "path": "sprites/256/fate-weaver.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            72,
+            1166,
+            1172
+          ],
+          "export_window": [
+            -13.034884,
+            -17.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "26a185a523c401c037737b2c7f6c626a60acc69ebabb2659001d8e02dd02f8be"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -5.87,
+        "max_sector_intrusion": 5.96,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-u-7",
+  "assets": [
+    {
+      "asset_id": "fire-imp",
+      "native_name": "fire imp",
+      "scope": "general npc list (general/npcs/minor-demon.lua:47, demon/minor, non-unique, no define_as, rank 2, base BASE_NPC_DEMON, default-name image); loaded by valley-moon-caverns, demon-plane, crypt-kryl-feijan, ardhungol (via all.lua) and the fearscape-portal event; the antimagic quest (quests/antimagic.lua:90) and the dragon-loot and lava-island vaults name it and build this same leaf; one definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/minor-demon.lua",
+          "sha256": "80520f8ae1b87b97ea599207de45fdf3703b00ca0e48c100b653dafb735f2050",
+          "line": 48,
+          "anchor": "name = \"fire imp\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/minor-demon.lua",
+          "sha256": "80520f8ae1b87b97ea599207de45fdf3703b00ca0e48c100b653dafb735f2050",
+          "line": 61,
+          "anchor": "T_RITCH_FLAMESPITTER_BOLT"
+        },
+        {
+          "path": "game/modules/tome/data/quests/antimagic.lua",
+          "sha256": "a2cffe046b13d74b391f79090bd39503d17f373cd5dbbb3b4686867806e5ebc5",
+          "line": 90,
+          "anchor": "{name=\"fire imp\"}"
+        },
+        {
+          "path": "game/modules/tome/data/maps/vaults/lava_island.lua",
+          "sha256": "2c84ba8241cab0c975fab99d496617e7a060a220b7c80aed0e56f3046099a116",
+          "line": 35,
+          "anchor": "name=\"fire imp\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_minor_fire_imp.png",
+          "sha256": "4c7b1a0a2825162a529394a3cd399d7bf46480838d5cac3872781e8c49866e80",
+          "role": "identity",
+          "note": "Native shape (64x64): a thin rust-brown imp with glowing hands, holding fire. Keep the small fire-throwing imp, but scarlet, winged and with both arms raised."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-u/refs/imps.png",
+          "sha256": "9adf53c71c734c9b6802733256a79893199d5e3778087c6c3dd119bac99122a3",
+          "role": "family",
+          "note": "Four shipped minor-demon tokens (bronze bull-headed quasit with a round shield, teal water imp, yellow-green crouching wretchling, white shaggy draebor crouching with a flame in one hand): the fire imp must not be any of these."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A fire imp seen from a steep overhead three-quarter angle: a small wiry BRIGHT VERMILION-ORANGE imp with a big head, two curved PALE BONE-GREY horns with cream tips, glowing yellow eyes and a toothy grin, small folded leathery batwings in a lighter red-orange on its back, BOTH ARMS RAISED HIGH over its head hurling a compact round BALL OF ORANGE FIRE held between the hands, thin legs in a light hop, and a long thin curled tail whose tip ends in a small flame. Lively, wiry, fire-throwing and complete.",
+        "contrast": "Minor demons: the FIRE IMP is a small SCARLET winged imp with BOTH ARMS RAISED throwing a fire ball overhead (silhouette: a Y-shaped body with raised arms, a round fire ball above and a curled tail with a flame tip; hue: scarlet red, orange fire, charcoal horns, yellow eyes; value: mid-light). The shipped quasit is a bronze bull-headed shield bearer, the water imp is teal, the wretchling is a yellow-green crouching crawler and draebor is a white shaggy crouching imp with one flame hand: this must not be crouching, not white, not teal and not holding a shield.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere. Calibration from the previous generation of this exact token: the design was right, but the deep scarlet skin read as a DARK red mass at 48px, especially in grayscale. This time keep the same wiry imp with both arms raised throwing a fire ball overhead, small folded batwings and a curled tail with a flame tip, but paint the skin a BRIGHT VERMILION-ORANGE (lighter and more orange than before) with broad pale peach-orange highlight planes on every upper-left surface, translucent pale amber-orange batwings, and PALE BONE-GREY horns with cream tips instead of charcoal ones; only the eye slits, the mouth interior and thin seams stay dark. The disc stays exactly at reference lightness, a hair lighter, never darker.",
+        "palette": "Scarlet-red skin in a mid-light value with pale red-orange highlight planes, orange-red batwings, orange fire ball with a pale yellow core, charcoal-grey horns with pale tips, yellow eyes; nothing darker than mid charcoal-grey except thin seams; the fire must stay on the creature and must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=fire imp, define_as=None, type=demon/subtype=minor, unique=False, native_tall=False); details and hashes in evidence/monster-batch-u-20260930/source-contracts.json. base BASE_NPC_DEMON (demon/minor, faction fearscape, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; talents Ritch Flamespitter Bolt, Phase Door (neither sustained);  no resolvers.equip that touches the body; no sustains_at_birth and no auto_classes on the leaf or base. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-u-20260930/source-contracts.json",
+          "sha256": "4f46e3336b48581c8d53801ec1d5c3d5d1d178d2d33ced48e36e0058a6e62f43"
+        }
+      ]
+    }
+  ]
+}

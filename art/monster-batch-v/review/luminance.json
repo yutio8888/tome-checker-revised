@@ -1,0 +1,83 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "black-crystal": 73.54,
+    "faerlhing": 91.88,
+    "losselhing": 145.66,
+    "dredge": 124.53,
+    "drem-master": 94.76,
+    "bloated-horror": 118.4,
+    "orc-pyromancer": 77.2,
+    "orc-cryomancer": 98.82,
+    "orc-blood-mage": 74.37,
+    "dolleg": 70.07,
+    "eternal-bone-giant": 96.07,
+    "yaech-hunter": 87.88,
+    "drem-master OLD v1 (passed gate; replaced: dark steel-grey mail lost the silhouette at 48px)": 74.89
+  },
+  "floors": {
+    "cave rock (ardhungol, valley-moon-caverns)": 130.64,
+    "cave mushroom (ardhungol)": 134.28,
+    "crystal (scintillating-caves)": 104.14,
+    "grass (old-forest, lake-nur)": 108.97,
+    "gloom plain (deep-bellow)": 79.5,
+    "void floor (temporal-rift)": 163.25,
+    "underwater floor (murgol-lair, lake-nur)": 129.4,
+    "burnt ground (demon-plane)": 72.7,
+    "korpul stone A (vor-armoury, telmur)": 131.79,
+    "rak-shor floor (rak-shor-pride)": 163.04
+  },
+  "zone_floors": {
+    "black-crystal": {
+      "crystal (scintillating-caves)": 104.14,
+      "grass (old-forest, lake-nur)": 108.97
+    },
+    "faerlhing": {
+      "cave rock (ardhungol, valley-moon-caverns)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "losselhing": {
+      "cave rock (ardhungol, valley-moon-caverns)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "dredge": {
+      "cave rock (ardhungol, valley-moon-caverns)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "void floor (temporal-rift)": 163.25
+    },
+    "drem-master": {
+      "gloom plain (deep-bellow)": 79.5
+    },
+    "bloated-horror": {
+      "cave rock (ardhungol, valley-moon-caverns)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "grass (old-forest, lake-nur)": 108.97,
+      "underwater floor (murgol-lair, lake-nur)": 129.4
+    },
+    "orc-pyromancer": {
+      "korpul stone A (vor-armoury, telmur)": 131.79,
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "orc-cryomancer": {
+      "korpul stone A (vor-armoury, telmur)": 131.79,
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "orc-blood-mage": {
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "dolleg": {
+      "cave rock (ardhungol, valley-moon-caverns)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "burnt ground (demon-plane)": 72.7
+    },
+    "eternal-bone-giant": {
+      "korpul stone A (vor-armoury, telmur)": 131.79,
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "yaech-hunter": {
+      "underwater floor (murgol-lair, lake-nur)": 129.4
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

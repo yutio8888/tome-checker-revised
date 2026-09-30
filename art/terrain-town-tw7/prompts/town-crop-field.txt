@@ -1,0 +1,13 @@
+Use case: stylized-concept. Deliver ONE square, opaque, full-bleed terrain material master for a tabletop game board: FIELDS1-4 cultivated fields (Zigur, Angolwen). Request 1024 x 1024 pixels; preserve actual output resolution.
+
+Subject and material: A cultivated vegetable plot seen from straight above: light, dry, finely tilled brown earth in straight evenly spaced shallow furrows running left to right, with low young leafy seedlings (small round green leaves, ankle high) along each ridge; flat ground, nothing standing up.
+Palette: Warm light-to-mid brown tilled soil, medium fresh green seedlings, a few ochre dry clods. Mid value overall, about as light as green grass or slightly lighter, never dark; not grey stone; no black shadows between rows.
+Relationship to adjacent materials: At 48 pixels it must read as flat walkable farmland, soft alternating brown and green stripes, clearly different from plain green grass by the stripes and brown soil and from a pale stone road by colour; low contrast so characters stay readable; the crops look short and flat, never like a hedge, bush, fence or wall.
+Composition and edge contract: Edge-to-edge overhead field material filling the whole square; about seven furrows across the square, parallel to the top edge, evenly spaced and reaching all four edges; no field border, fence, path, stone, tool, scarecrow, water or cast shadow.
+Gameplay contract (do not invent additional rules): Walkable cultivated ground only, the same rules as grass. Paint no fence, hedge, tall stalks, trellis, water, hazard, character, symbol or text.
+
+Flat overhead printed-board surface; restrained matte paint texture and broad low-contrast variations. Match the supplied accepted reference's scale, palette hierarchy and upper-left lighting convention. No creature, disc, freestanding prop, text, symbol, hazard badge, frame, vignette or cast shadow implying an obstacle. Texture must reach all four edges. Grid seams, parity modulation, neighbour masks and rule overlays are assembled by the exporter, not painted as an atlas here. Do not create decorative cracks that resemble an interactive exit. Do not claim a seamless result without a separate tiled preview check. One master only.
+
+Reference roles:
+Image 1: identity — Native cultivated field: a vegetable plot of tilled soil with rows of young crops. Keep the tilled-rows-with-seedlings identity but much lighter, flatter and filling the whole square.
+Image 2: style — Accepted board floor master (TW6): flat overhead matte finish, low contrast, scale, upper-left light and the calm printed-board surface. Not its woven material or tan palette.

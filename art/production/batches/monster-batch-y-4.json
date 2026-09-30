@@ -1,0 +1,222 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-y-4",
+  "assets": [
+    {
+      "asset_id": "animated-mummy-wrappings",
+      "native_name": "animated mummy wrappings",
+      "scope": "ancient-elven-ruins zone pool (zones/ancient-elven-ruins/npcs.lua:130, undead/mummy, non-unique, no define_as, rank 1, base BASE_NPC_MUMMY, explicit image=object/mummy_wrappings.png with display '['); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 132,
+          "anchor": "name = \"animated mummy wrappings\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 132,
+          "anchor": "image=\"object/mummy_wrappings.png\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 138,
+          "anchor": "never_move"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/mummy.lua",
+          "sha256": "06c0e07e77a753b1ecdbed7efbc7ce457342a53bab952c544a1d4208d5346b2a",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_MUMMY\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/object/mummy_wrappings.png",
+          "sha256": "4af0989c1780829c5dec063e3e27c978b4ae6f2304aca6f1706fb27951459558",
+          "role": "identity",
+          "note": "Native shape (64x64; the leaf itself names object/mummy_wrappings.png, so the token image is the object PNG, not the default-name npc PNG): an empty S-shaped coil of pale linen mummy wrappings with frayed ends, floating. Keep the empty S-shaped coil of bandages with no body, in bright ivory linen with violet arcane sparks in the hollow."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-y/refs/mummies.png",
+          "sha256": "4fdce2e8547de10d62f7c07ce3371ce9f223aae3320cdb78a0516ce3666dc733",
+          "role": "family",
+          "note": "Four shipped undead tokens (tan rotting mummy, ancient elven mummy, armoured greater mummy lord, ghoul): the animated mummy wrappings is NOT a body at all, only an empty S-shaped coil of pale ivory linen bandages floating with violet arcane sparks in its hollow, no face, no limbs."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An animated mummy wrappings seen from a steep overhead three-quarter angle: an EMPTY floating S-SHAPED COIL of thick aged linen bandages, no body inside, the cloth bright IVORY and CREAM with warm tan grime stains and pale highlight planes in a light value, the two ends flaring and fraying into loose short ribbons, a few loose bandage turns wound round the middle, the hollow inside the coil showing a faint glowing VIOLET-LILAC arcane light with a few small violet and cyan spark motes hovering in it (kept inside the coil), no face, no eyes, no limbs. Floating, coiled, hollow and complete.",
+        "contrast": "Mummies: the ANIMATED MUMMY WRAPPINGS is an EMPTY S-SHAPED COIL OF IVORY LINEN with violet arcane sparks in its hollow, no body (silhouette: a wide S-curve ribbon with frayed ends; hue: ivory and cream with violet and cyan sparks; value: light). The shipped rotting mummy, ancient elven mummy and greater mummy lord are tan humanoid bodies in wrappings: this must not have a body, a head or limbs.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Ivory and cream linen in a light value with warm tan grime and pale highlight planes, faint violet arcane light and violet and cyan spark motes (the light stays inside the coil and must not tint or light the disc); nothing darker than mid tan stains except thin fold seams; NO black anywhere. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=animated mummy wrappings, define_as=None, type=undead/subtype=mummy, unique=False, native_tall=False); details and hashes in evidence/monster-batch-y-20260930/source-contracts.json. base BASE_NPC_MUMMY (undead/mummy, no image=, no shader, no sustains_at_birth); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; the PNG lives under gfx/shockbolt/object/ (image=object/mummy_wrappings.png), never_move, caster talents Manathrust, Freeze, Lightning and Strike (activated); resolvers.equip armour of subtype mummy (inventory only); no sustains_at_birth, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-y-20260930/source-contracts.json",
+          "sha256": "83d35e6f54d8f3e094ee96ef7b509b1f998a338d59f92f3fc4a297670640cd83"
+        }
+      ]
+    },
+    {
+      "asset_id": "grizzly-bear",
+      "native_name": "grizzly bear",
+      "scope": "old-forest and noxious-caldera pools and the honey_glade vault (general/npcs/bear.lua:94, animal/bear, non-unique, no define_as, rank 1, base BASE_NPC_BEAR, explicit image=npc/grizzly_bear.png plus nice_tile tall body); the only definition of this name (the uniques Norgos are other names)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/bear.lua",
+          "sha256": "cc10a3e47f431d040b6cf2ff1a7a9ac3e0e9e82e044fc119a1e6dd5f5d52df63",
+          "line": 95,
+          "anchor": "name = \"grizzly bear\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bear.lua",
+          "sha256": "cc10a3e47f431d040b6cf2ff1a7a9ac3e0e9e82e044fc119a1e6dd5f5d52df63",
+          "line": 95,
+          "anchor": "image = \"npc/grizzly_bear.png\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bear.lua",
+          "sha256": "cc10a3e47f431d040b6cf2ff1a7a9ac3e0e9e82e044fc119a1e6dd5f5d52df63",
+          "line": 96,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bear.lua",
+          "sha256": "cc10a3e47f431d040b6cf2ff1a7a9ac3e0e9e82e044fc119a1e6dd5f5d52df63",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_BEAR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/grizzly_bear.png",
+          "sha256": "2b1ffd53d7f880d87ae1d294ac8c61be4c2719cdbfade308f44be8a54b26aec0",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a big dark-brown bear rearing on its hind legs with both forepaws raised and its mouth open. Keep the huge bear rearing up on its hind legs with raised paws, but render the fur in mid-light honey-blond and tawny gold with frosted silver tips, drawn as ONE compact figure filling the disc, no tall canvas."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-y/refs/bears.png",
+          "sha256": "d53613670c1741fb39f062dc99393bdfff1eedfdfa45666cdb232f206e15756f",
+          "role": "family",
+          "note": "Four shipped bear tokens (brown bear on all fours, black bear, grey cave bear, rust-orange war bear rearing with a spiked collar): the grizzly bear is a big honey-blond and tawny-gold grizzled bear rearing up on its hind legs with frosted silver-tipped fur, a huge shoulder hump and paws raised, no collar or armour, not brown, not black, not grey and not orange."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A grizzly bear seen from a steep overhead three-quarter angle: a huge bear REARING UP on its hind legs facing the lower left, both forepaws raised with long pale claws, the mouth wide open with pale teeth and a pink tongue, thick shaggy fur in HONEY-BLOND and TAWNY GOLD in a mid-light value with FROSTED SILVER-CREAM TIPS on the guard hairs (the grizzled look), a big muscular SHOULDER HUMP, warm umber-brown only on the lower legs and paws (no darker than mid umber), small dark eyes, a bright pale rim light along the whole fur outline, no collar, no armour. Huge, grizzled, rearing and complete.",
+        "contrast": "Bears: the GRIZZLY BEAR is the HONEY-BLOND AND TAWNY-GOLD GRIZZLED BEAR REARING UP with frosted silver fur tips and a shoulder hump (silhouette: an upright bear with raised paws and a hump; hue: honey blond, tawny gold and silver cream with umber paws; value: mid-light). The shipped brown bear is a brown bear on all fours, the black bear black, the cave bear grey and the war bear rust-orange with a spiked collar: this must not be plain brown, black, grey or rust-orange and must not wear a collar.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Honey-blond and tawny-gold fur in a mid-light value with silver-cream frosted tips and pale highlight planes and a bright rim light, umber only on the lower legs, pale claws and teeth (nothing glows onto the disc); nothing darker than mid umber except the eyes and nostrils; NO dark brown or black fur. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=grizzly bear, define_as=None, type=animal/subtype=bear, unique=False, native_tall=True); details and hashes in evidence/monster-batch-y-20260930/source-contracts.json. base BASE_NPC_BEAR (animal/bear, no image=, no shader, no sustains_at_birth); explicit image=npc/grizzly_bear.png on the leaf AND resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/grizzly_bear.png\", display_h=2, display_y=-1}}} (keys image/display_h/display_y only): with nicer_tiles on the actor is image=invis.png plus that one add_mos body (native-tall path), with nicer_tiles off it keeps image=npc/grizzly_bear.png (single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; Stamina Pool, Stun, Knockback and Disarm (activated); no equip, no sustains_at_birth, no auto_classes; heart-gloom renames non-unique bears with a gloomy/deformed/sick prefix, which the existing heartGloomBase path already maps for animal/bear entries. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-y-20260930/source-contracts.json",
+          "sha256": "83d35e6f54d8f3e094ee96ef7b509b1f998a338d59f92f3fc4a297670640cd83"
+        }
+      ]
+    },
+    {
+      "asset_id": "weaver-patriarch",
+      "native_name": "weaver patriarch",
+      "scope": "ardhungol pool and the weaver matriarch's escort (general/npcs/spider.lua:266, spiderkin/spider, non-unique, no define_as, rank 2, base BASE_NPC_SPIDER, default-name image); the only definition of this name (the uniques Ungole and Ninandra are other names)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 267,
+          "anchor": "name = \"weaver patriarch\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 285,
+          "anchor": "T_SPIN_FATE"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 43,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_SPIDER\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_weaver_patriarch.png",
+          "sha256": "7fee3e19c7b9b18a2dd92ea811095b5e329500695881c4d7bc343d19ef931897",
+          "role": "identity",
+          "note": "Native shape (64x64): a big icy-blue armoured spider with white markings on the thorax and glowing white orbs at its leg joints. Keep the large blue spider with white thorax markings and glowing leg-joint orbs, but render it in bright cobalt-sapphire with a bright white chevron and faint golden time-echo outlines."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-y/refs/spiders.png",
+          "sha256": "ff3f0cbceb94b2a08160f00d7bf62bbc3e5eb05596e55267cb543102e4a98eeb",
+          "role": "family",
+          "note": "Six shipped spider tokens (small blue-white striped weaver hatchling, blue swirl weaver young, cream-and-gold weaver queen, fate weaver, grey giant spider, chitinous spider): the weaver patriarch is a large deep cobalt-sapphire spider with a bright white chevron on the thorax and faint golden time-echo outlines trailing its legs, not cream, not grey and not a small swirl ball."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A weaver patriarch seen from a steep overhead three-quarter angle: a LARGE armoured spider facing the lower left, a glossy deep COBALT-SAPPHIRE and bright AZURE-BLUE carapace in a mid-light value with pale ice-blue highlight planes, a bold bright WHITE CHEVRON MARKING on the thorax and white spots on the abdomen, eight strong jointed legs with small glowing white-cyan orbs at the joints (all leg tips inside the disc), curved fangs and several pale-cyan eyes, and faint GOLDEN TIME-ECHO OUTLINES trailing a little behind each leg tip like a shimmer, a bright pale rim light along the carapace. Armoured, shimmering, white-marked and complete.",
+        "contrast": "Spiders: the WEAVER PATRIARCH is the LARGE COBALT-SAPPHIRE SPIDER with a bold white chevron on the thorax, glowing joint orbs and golden time-echo shimmer (silhouette: a large eight-legged spider with a thick thorax; hue: cobalt sapphire and azure with white and gold-shimmer accents; value: mid-light). The shipped weaver hatchling and young are small blue-white swirl ball spiders, the weaver queen cream and gold, the giant spider grey: this must not be a small swirl ball, not cream and gold and not grey.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Deep cobalt-sapphire and azure carapace in a mid-light value with pale ice-blue highlight planes and a bright rim light, bright white chevron and spots, white-cyan joint orbs and faint golden echo lines (the glow stays on the spider and must not tint or light the disc); nothing darker than deep cobalt except thin seams; NO black chitin. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=weaver patriarch, define_as=None, type=spiderkin/subtype=spider, unique=False, native_tall=False); details and hashes in evidence/monster-batch-y-20260930/source-contracts.json. base BASE_NPC_SPIDER (spiderkin/spider, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; the base resolvers.sustains_at_birth() starts Spin Fate (a sustain: temporary values only, no type/subtype/image/add_mos/shader write); two base infusion inscriptions (an invisibility infusion would apply a shader-based effect only while active, and the matcher rejects it then); Spider Web, Lay Web, Swap, Rethread and Static History are activated; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-y-20260930/source-contracts.json",
+          "sha256": "83d35e6f54d8f3e094ee96ef7b509b1f998a338d59f92f3fc4a297670640cd83"
+        }
+      ]
+    }
+  ]
+}

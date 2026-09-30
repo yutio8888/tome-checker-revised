@@ -37,7 +37,7 @@ for _, entry in ipairs(Tokens.catalog) do
 	-- different species. The renderer remains responsible for tactical markers.
 	a.summoner, a.summon_time = {faction="players"}, 7
 	equal(Tokens.identify(a), entry.id, "summoned identity "..entry.id)
-	local own, effect = {}, {image="npc/elemental_temporal_greater_telugoroth.png"}
+	local own, effect = {}, {image="npc/elemental_temporal_ultimate_telugoroth.png"}
 	a.replace_display = own
 	equal(Tokens.identify(a, own), entry.id, "owned display "..entry.id)
 	equal(Tokens.identify(a), nil, "unclaimed display "..entry.id)
@@ -45,7 +45,7 @@ for _, entry in ipairs(Tokens.catalog) do
 	equal(Tokens.identify(a, own), nil, "external transformation "..entry.id)
 	a.replace_display = nil
 	equal(Tokens.identify(a, own), entry.id, "transformation ended "..entry.id)
-	a.image = "npc/elemental_temporal_greater_telugoroth.png"
+	a.image = "npc/elemental_temporal_ultimate_telugoroth.png"
 	equal(Tokens.identify(a), nil, "changed body "..entry.id)
 	a = actor(entry)
 	a.name = "different creature with reused artwork"
@@ -441,8 +441,8 @@ equal(Tokens.identify(necro), nil, "Necromancer requires NECROMANCER")
 -- crystal's native PNG.
 for _, excluded in ipairs({
 	{name="shimmering crystal", type="immovable", subtype="crystal", image="npc/crystal_npc.png"},
-	{name="black crystal", type="immovable", subtype="crystal", image="npc/crystal_black.png"},
-	{name="blue crystal", type="immovable", subtype="crystal", image="npc/crystal_blue.png"},
+	-- (the black crystal was kept native here; batch V maps it.)
+	-- (the blue crystal was kept native here; batch X maps it.)
 	-- (the sand-drake was kept native here; batch Q maps it.)
 	{name="huge sandworm burrower", type="vermin", subtype="sandworm", image="invis.png", add_mos={{image="npc/vermin_sandworm_huge_sandworm_burrower.png", display_h=2, display_y=-1}}},
 	-- (corrosive tunneler and gravity worm were kept native here and in
@@ -624,7 +624,7 @@ for _, excluded in ipairs({
 	{name="Kyless", type="humanoid", subtype="human", image="invis.png", define_as="KYLESS", unique=true, add_mos={{display_h=2, display_y=-1}}},
 	-- (Berethh was kept native here; batch S maps it.)
 	{name="weaver hatchling", type="spiderkin", subtype="spider", image="npc/spiderkin_spider_weaver_hatchling.png"},
-	{name="Yeek Wayist", type="humanoid", subtype="yeek", image="npc/humanoid_yeek_yeek_wayist.png", define_as="YEEK_WAYIST", unique=true},
+	-- (Yeek Wayist was kept native here; batch T maps it.)
 	{name="Grand Corruptor", type="humanoid", subtype="shalore", image="npc/humanoid_shalore_elven_corruptor.png", define_as="GRAND_CORRUPTOR", unique=true},
 	{name="The Shade", type="undead", subtype="ghost", image="npc/undead_ghost_the_shade.png", define_as="SHADE", unique=true},
 	{name="gloomy The Withering Thing", type="animal", subtype="canine", image="npc/animal_canine_the_withering_thing.png", define_as="WITHERING_THING", unique=true},
@@ -856,15 +856,14 @@ for _, excluded in ipairs({
 	-- (the orc necromancer and the elven warrior were kept native here; batch R maps both.)
 	{name="elven guard", type="humanoid", subtype="shalore", image="npc/humanoid_shalore_mean_looking_elven_guard.png"},
 	{name="mean looking elven guard", type="humanoid", subtype="shalore", image="npc/humanoid_shalore_elven_guard.png"},
-	{name="elven corruptor", type="humanoid", subtype="shalore", image="npc/humanoid_shalore_elven_corruptor.png"},
+	-- (the elven corruptor was kept native here; batch X maps it.)
 	{name="elven mage", type="humanoid", subtype="shalore", image="npc/humanoid_shalore_elven_tempest.png"},
 	{name="naga myrmidon", type="humanoid", subtype="naga", image="npc/naga_myrmidon_2.png"},
 	{name="naga myrmidon", type="humanoid", subtype="naga", image="npc/naga_myrmidon_no_armor.png"},
-	{name="naga tide huntress", type="humanoid", subtype="naga", image="npc/naga_tide_huntress.png"},
-	{name="naga psyren", type="humanoid", subtype="naga", image="npc/naga_psyren.png"},
+	-- (the naga tide huntress and psyren were kept native here; batch U maps both.)
 	{name="naga nereid", type="humanoid", subtype="naga", image="invis.png", add_mos={{image="npc/humanoid_naga_naga_tidecaller.png", display_h=2, display_y=-1}}},
 	{name="naga nereid", type="humanoid", subtype="naga", image="npc/humanoid_naga_naga_nereid.png", unique=true},
-	{name="yaech hunter", type="humanoid", subtype="yaech", image="npc/humanoid_yaech_yaech_hunter.png"},
+	-- (the yaech hunter was kept native here; batch V maps it.)
 	{name="yaech diver", type="humanoid", subtype="yaech", image="npc/humanoid_yaech_yaech_hunter.png"},
 	{name="Kyless", type="humanoid", subtype="human", image="invis.png", define_as="KYLESS", unique="Kyless", add_mos={{display_h=2, display_y=-1}}},
 	{name="Kyless", type="humanoid", subtype="human", image="npc/humanoid_human_kyless.png", unique=true},
@@ -877,8 +876,8 @@ end
 -- Batch L kept the elven cultist native; batch M maps it (see the batch M
 -- section), so the Flame of Urh'Rok opt-in is now limited to two entries.
 for _, entry in ipairs(Tokens.catalog) do
-	local opted = entry.id == "grand-corruptor" or entry.id == "elven-cultist" or entry.id == "rak-shor" or entry.id == "kors-fury"
-	equal(entry.urh_rok_form, opted and true or nil, "Flame of Urh'Rok opt-in stays limited to the Grand Corruptor, elven cultist, Rak'shor and Kor's Fury "..entry.id)
+	local opted = entry.id == "grand-corruptor" or entry.id == "elven-cultist" or entry.id == "rak-shor" or entry.id == "kors-fury" or entry.id == "weirdling-beast"
+	equal(entry.urh_rok_form, opted and true or nil, "Flame of Urh'Rok opt-in stays limited to the Grand Corruptor, elven cultist, Rak'shor, Kor's Fury and the Weirdling Beast "..entry.id)
 end
 
 -- Batch M: survey-2 batch 4 (void, temporal, air, fire and xorn elementals)
@@ -1058,7 +1057,7 @@ for _, excluded in ipairs({
 	{name="losgoroth", type="elemental", subtype="void", image="npc/elemental_void_losgoroth.png", define_as="MONSTROUS_LOSGOROTH"},
 	{name="manaworm", type="elemental", subtype="void", image="npc/elemental_void_losgoroth.png"},
 	{name="Spacial Disturbance", type="elemental", subtype="void", image="invis.png", define_as="SPACIAL_DISTURBANCE", unique=true},
-	{name="greater telugoroth", type="elemental", subtype="temporal", image="invis.png", add_mos={{image="npc/elemental_temporal_greater_telugoroth.png", display_h=2, display_y=-1}}},
+	-- (the greater telugoroth was kept native here; batch X maps it as native-tall.)
 	{name="ultimate telugoroth", type="elemental", subtype="temporal", image="invis.png", add_mos={{image="npc/elemental_temporal_ultimate_telugoroth.png", display_h=2, display_y=-1}}},
 	{name="telugoroth", type="elemental", subtype="temporal", image="npc/elemental_temporal_greater_telugoroth.png"},
 	{name="telugoroth", type="elemental", subtype="temporal", image="invis.png", add_mos={{image="npc/elemental_temporal_greater_telugoroth.png", display_h=2, display_y=-1}}},
@@ -1257,8 +1256,8 @@ for _, excluded in ipairs({
 	{name="master vampire", type="undead", subtype="vampire", image="npc/elder_vampire.png"},
 	{name="elder vampire", type="undead", subtype="vampire", image="invis.png", add_mos={{image="npc/master_vampire.png", display_h=2, display_y=-1}}},
 	{name="vampire rat", type="undead", subtype="rodent", image="npc/undead_rodent_vampire_rat.png"},
-	{name="eternal bone giant", type="undead", subtype="giant", image="invis.png", add_mos={{image="npc/undead_giant_eternal_bone_giant.png", display_h=2, display_y=-1}}},
-	{name="heavy bone giant", type="undead", subtype="giant", image="invis.png", add_mos={{image="npc/undead_giant_heavy_bone_giant.png", display_h=2, display_y=-1}}},
+	-- (the eternal bone giant was kept native here; batch V maps it as native-tall.)
+	-- (the heavy bone giant was kept native here; batch W maps it as native-tall.)
 	{name="bone giant", type="undead", subtype="giant", image="invis.png", add_mos={{image="npc/undead_giant_heavy_bone_giant.png", display_h=2, display_y=-1}}},
 	{name="barrow wight", type="undead", subtype="wight", image="invis.png", add_mos={{image="npc/barrow_wight.png", display_h=2, display_y=-1}}},
 	{name="emperor wight", type="undead", subtype="wight", image="invis.png", add_mos={{image="npc/emperor_wight.png", display_h=2, display_y=-1}}},
@@ -1854,10 +1853,10 @@ do
 	equal(Tokens.identify(a), nil, "a dire wolf renamed to the dog without define_as stays native")
 	a = actor(dog)
 	a.name, a.define_as = "war dog", nil
-	equal(Tokens.identify(a), nil, "the keepsake-meadow plain war dog stays native")
+	equal(Tokens.identify(a), nil, "a dire wolf body named war dog without WAR_DOG stays native (batch T maps the real one)")
 	a = actor(dog)
 	a.name = "war dog"
-	equal(Tokens.identify(a), nil, "a plain war dog name with the dog's define_as stays native")
+	equal(Tokens.identify(a), nil, "a war dog name with the corrupted dog's define_as stays native")
 end
 -- Same-family siblings (orcs, spiders, ants, imps, elves, canines, horrors)
 -- cannot borrow each other's file.
@@ -1883,7 +1882,7 @@ end
 for _, excluded in ipairs({
 	{name="orc necromancer", type="humanoid", subtype="orc", image="npc/humanoid_orc_orc_assassin.png"},
 	{name="orc necromancer", type="humanoid", subtype="orc", image="npc/humanoid_orc_orc_necromancer.png", unique=true},
-	{name="orc master assassin", type="humanoid", subtype="orc", image="npc/humanoid_orc_orc_master_assassin.png"},
+	-- (the orc master assassin was kept native here; batch U maps it.)
 	{name="orc assassin", type="humanoid", subtype="orc", image="npc/humanoid_orc_orc_master_assassin.png"},
 	{name="Rak'Shor Cultist", type="humanoid", subtype="orc", image="npc/humanoid_orc_rak_shor_cultist.png", define_as="CULTIST_RAK_SHOR", unique=true},
 	{name="Rak'shor, Grand Necromancer of the Pride", type="humanoid", subtype="orc", image="npc/humanoid_orc_rak_shor__grand_necromancer_of_the_pride.png", unique=true},
@@ -1891,9 +1890,9 @@ for _, excluded in ipairs({
 	{name="Warmaster Gnarg", type="humanoid", subtype="orc", image="npc/humanoid_orc_warmaster_gnarg.png", unique=true},
 	{name="Warmaster Gnarg", type="humanoid", subtype="orc", image="npc/humanoid_orc_orc_soldier.png", define_as="GNARG", unique=true},
 	{name="weaver young", type="spiderkin", subtype="spider", image="npc/spiderkin_spider_weaver_patriarch.png"},
-	{name="fate weaver", type="spiderkin", subtype="spider", image="npc/spiderkin_spider_fate_weaver.png"},
+	-- (the fate weaver was kept native here; batch U maps it.)
 	{name="fate spinner", type="spiderkin", subtype="spider", image="npc/spiderkin_spider_fate_weaver.png"},
-	{name="giant fire ant", type="insect", subtype="ant", image="npc/fire_ant.png"},
+	-- (the giant fire ant was kept native here; batch W maps it.)
 	{name="giant green ant", type="insect", subtype="ant", image="npc/red_ant.png"},
 	{name="giant red ant", type="insect", subtype="ant", image="npc/green_ant.png"},
 	{name="giant green ant", type="insect", subtype="ant", image="npc/green_ant.png", unique=true},
@@ -2527,5 +2526,1079 @@ equal(controlled.replace_display,nil,'native display restored')
 equal(rebuild_calls,2,'removal with an active aura rebuilds the native aura')
 controlled.shader_auras,controlled.updateModdableTile=nil,nil
 environment.config.settings.tome.checker_tokens_enabled=true
+
+-- Batch T: the remaining 12.0-tier story identities (caravan merchant, guard and
+-- porter, Lost Merchant, Nimisil, Slasul, Draebor, war dog, Yeek Wayist, Weirdling
+-- Beast, Fortress Shadow, Pumpkin). Every define_as is bound. Slasul is a UNIQUE
+-- native-tall body (no native_tall flag); the Weirdling Beast opts into
+-- urh_rok_form (Corruptor auto_class); Training Dummy stays native.
+local batch_t = {"caravan-merchant", "caravan-guard", "caravan-porter", "lost-merchant", "war-dog", "yeek-wayist",
+	"nimisil", "slasul", "draebor", "weirdling-beast", "fortress-shadow", "pumpkin"}
+local define_t = {["caravan-merchant"]="CARAVAN_MERCHANT", ["caravan-guard"]="CARAVAN_GUARD", ["caravan-porter"]="CARAVAN_PORTER",
+	["lost-merchant"]="MERCHANT", ["war-dog"]="WAR_DOG", ["yeek-wayist"]="YEEK_WAYIST", nimisil="NIMISIL", slasul="SLASUL",
+	draebor="DRAEBOR", ["weirdling-beast"]="WEIRDLING_BEAST", ["fortress-shadow"]="BUTLER", pumpkin="KITTY"}
+local unique_t = {["yeek-wayist"]=true, nimisil=true, slasul=true, draebor=true, ["weirdling-beast"]=true, pumpkin=true}
+for _, id in ipairs(batch_t) do
+	local entry = Tokens.by_id[id]
+	if entry == nil then error("batch T catalog entry missing: "..id) end
+	equal(entry.define_as, define_t[id], "batch T define_as "..id)
+	equal(entry.unique, unique_t[id] and true or nil, "batch T unique flag "..id)
+	equal(entry.native_tall, nil, "batch T no native_tall flag "..id)
+	equal(entry.urh_rok_form, id == "weirdling-beast" and true or nil, "batch T urh_rok_form flag "..id)
+	equal(Tokens.identify(actor(entry)), id, "batch T exact identity "..id)
+	local a = actor(entry)
+	a.tint_r, a.tint_g, a.tint_b = 0.5, 0.9, 0.3
+	equal(Tokens.identify(a), id, "batch T tint is colour only "..id)
+	a = actor(entry)
+	a.color_r, a.color_g, a.color_b = 0, 0, 185
+	equal(Tokens.identify(a), id, "batch T colour modulation keeps the token "..id)
+	a = actor(entry)
+	a.image = "invis.png"
+	a.add_mos = {{image=entry.image, display_h=2, display_y=-1}}
+	if entry.unique then
+		equal(Tokens.identify(a), id, "batch T unique tall body accepted "..id)
+	else
+		equal(Tokens.identify(a), nil, "batch T non-unique single entry rejects a tall body "..id)
+	end
+	a = actor(entry)
+	a.type = entry.type == "animal" and "humanoid" or "animal"
+	equal(Tokens.identify(a), nil, "batch T type changed "..id)
+	a = actor(entry)
+	a.subtype = "other-subtype"
+	equal(Tokens.identify(a), nil, "batch T subtype changed "..id)
+	a = actor(entry)
+	a.shader = "some_shader"
+	equal(Tokens.identify(a), nil, "batch T shader keeps native art "..id)
+	a = actor(entry)
+	a.moddable_tile = "some_doll"
+	equal(Tokens.identify(a), nil, "batch T paper-doll actor keeps native art "..id)
+	a = actor(entry)
+	a.add_displays = {{image="npc/iceblock.png"}}
+	equal(Tokens.identify(a), nil, "batch T frozen/pinned add_displays keep native art "..id)
+	if not entry.unique then
+		a = actor(entry)
+		a.unique = true
+		equal(Tokens.identify(a), nil, "batch T non-unique entry rejects an unknown unique "..id)
+	end
+	a = actor(entry)
+	a.define_as = "OTHER_"..define_t[id]
+	equal(Tokens.identify(a), nil, "batch T define_as bound "..id)
+	a = actor(entry)
+	a.define_as = nil
+	equal(Tokens.identify(a), nil, "batch T missing define_as "..id)
+	a = actor(entry)
+	a.image = "npc/some_other_image.png"
+	equal(Tokens.identify(a), nil, "batch T other image keeps native art "..id)
+	a = actor(entry)
+	a.__old_type = {entry.type, entry.subtype}
+	a.type, a.subtype = "demon", "major"
+	a.sustain_talents = {T_FLAME_OF_URH_ROK = {}}
+	equal(Tokens.identify(a), entry.urh_rok_form and id or nil, "batch T Flame of Urh'Rok form only for opted-in "..id)
+	a = actor(entry)
+	a.add_mos = {{_isshaderaura=true, image="shockbolt/aura.png"}}
+	equal(Tokens.identify(a), id, "batch T shader aura entry is ignored "..id)
+end
+-- The three caravan people, on distinct explicit PNGs, cannot borrow each other.
+for _, id in ipairs({"caravan-merchant", "caravan-guard", "caravan-porter"}) do
+	for _, other in ipairs({"caravan-merchant", "caravan-guard", "caravan-porter"}) do
+		if id ~= other then
+			local a = actor(Tokens.by_id[id])
+			a.image = Tokens.by_id[other].image
+			equal(Tokens.identify(a), nil, "batch T caravan sibling cannot borrow image "..id.." <- "..other)
+			a = actor(Tokens.by_id[id])
+			a.name, a.define_as = Tokens.by_id[other].name, Tokens.by_id[other].define_as
+			equal(Tokens.identify(a), nil, "batch T caravan body cannot wear another entry "..id.." as "..other)
+		end
+	end
+end
+do
+	-- The war dog shares canine_dw.png with the dire wolf and the corrupted war dog.
+	local war, cdog, wolf = Tokens.by_id["war-dog"], Tokens.by_id["corrupted-war-dog"], Tokens.by_id["dire-wolf"]
+	equal(war.image, cdog.image, "the war dog and the corrupted war dog share one native PNG")
+	equal(war.image, wolf.image, "the war dog and the dire wolf share one native PNG")
+	local a = actor(cdog); a.name = "war dog"
+	equal(Tokens.identify(a), nil, "a corrupted war dog body (its define_as) named war dog stays native")
+	a = actor(wolf); a.name, a.define_as = "war dog", nil
+	equal(Tokens.identify(a), nil, "a dire wolf body renamed war dog without WAR_DOG stays native")
+	a = actor(war); a.name, a.define_as = "dire wolf", nil
+	equal(Tokens.identify(a), "dire-wolf", "a dire wolf body resolves to the dire wolf token")
+	a = actor(war); a.name = "dire wolf"
+	equal(Tokens.identify(a), nil, "a dire wolf name carrying WAR_DOG stays native")
+	a = actor(war); a.name = "corrupted war dog"
+	equal(Tokens.identify(a), nil, "a corrupted war dog name carrying WAR_DOG stays native")
+	a = actor(cdog)
+	equal(Tokens.identify(a), "corrupted-war-dog", "the corrupted war dog keeps its own token")
+end
+do
+	local shadow = Tokens.by_id["fortress-shadow"]
+	equal(shadow.subtype, "Sher'Tul", "the Fortress Shadow subtype is the exact native string")
+	for _, subtype in ipairs({"sher'tul", "Sher Tul", "sher_tul", "SHER'TUL", "Sher'tul", "eldritch"}) do
+		local a = actor(shadow); a.subtype = subtype
+		equal(Tokens.identify(a), nil, "Fortress Shadow subtype "..subtype.." stays native")
+	end
+	local a = actor(Tokens.by_id["weirdling-beast"]); a.subtype = "Sher'Tul"
+	equal(Tokens.identify(a), nil, "the Weirdling Beast cannot become a Sher'Tul body")
+	a = actor(Tokens.by_id["pumpkin"]); a.name = "Lost Kitty"; a.define_as, a.unique = nil, nil
+	equal(Tokens.identify(a), nil, "the Lost Kitty encounter (another name, same PNG) stays native")
+	local slasul = actor(Tokens.by_id["slasul"])
+	slasul.image = "invis.png"
+	slasul.add_mos = {{image="npc/humanoid_naga_slasul.png", display_h=2, display_y=-1}, {image="npc/other.png"}}
+	equal(Tokens.identify(slasul), nil, "Slasul with an extra chained overlay keeps native art")
+	slasul.add_mos = {{image="npc/humanoid_naga_slasul.png", display_h=3, display_y=-1}}
+	equal(Tokens.identify(slasul), nil, "Slasul with an altered tall body keeps native art")
+end
+for _, excluded in ipairs({
+	{name="Training Dummy", type="training", subtype="dummy", image="npc/lure.png", define_as="TRAINING_DUMMY"},
+	{name="Training Dummy", type="training", subtype="dummy", image="npc/lure.png"},
+	{name="Lost Merchant", type="humanoid", subtype="human", image="npc/humanoid_human_lost_merchant.png", define_as="MERCHANT", unique=true, faction="victim"},
+	{name="Yeek Wayist", type="humanoid", subtype="yeek", image="npc/humanoid_yeek_yeek_wayist.png", unique=true},
+	{name="Nimisil", type="spiderkin", subtype="spider", image="npc/spiderkin_spider_nimisil.png", unique=true},
+	{name="shadow claw", type="undead", subtype="shadow", image="npc/humanoid_human_spectator02.png", define_as="SHADOW_CLAW"},
+}) do
+	equal(Tokens.identify(excluded), nil, "batch T look-alike stays native "..excluded.name.." "..tostring(excluded.define_as))
+end
+
+-- Batch U: the twelve identities after the finished 12.0 tier (naga tide
+-- huntress, ancient elven mummy, ritch flamespitter, chitinous ritch, gaeramarth,
+-- ninurlhing, orc master assassin, fire imp, ritch impaler, orc grand master
+-- assassin, naga psyren, fate weaver). All are non-unique 64x64 single images
+-- WITHOUT a define_as (matched by exact name, type and subtype); nothing is
+-- native-tall and none can reach Flame of Urh'Rok, so there is no opt-in.
+local batch_u = {"ritch-flamespitter", "ritch-impaler", "chitinous-ritch", "naga-tide-huntress", "naga-psyren",
+	"ancient-elven-mummy", "orc-master-assassin", "orc-grand-master-assassin", "fire-imp", "gaeramarth", "ninurlhing",
+	"fate-weaver"}
+local names_u = {["ritch-flamespitter"]="ritch flamespitter", ["ritch-impaler"]="ritch impaler", ["chitinous-ritch"]="chitinous ritch",
+	["naga-tide-huntress"]="naga tide huntress", ["naga-psyren"]="naga psyren", ["ancient-elven-mummy"]="ancient elven mummy",
+	["orc-master-assassin"]="orc master assassin", ["orc-grand-master-assassin"]="orc grand master assassin", ["fire-imp"]="fire imp",
+	gaeramarth="gaeramarth", ninurlhing="ninurlhing", ["fate-weaver"]="fate weaver"}
+for _, id in ipairs(batch_u) do
+	local entry = Tokens.by_id[id]
+	if entry == nil then error("batch U catalog entry missing: "..id) end
+	equal(entry.name, names_u[id], "batch U exact name "..id)
+	equal(entry.define_as, nil, "batch U define_as-less "..id)
+	equal(entry.unique, nil, "batch U non-unique "..id)
+	equal(entry.native_tall, nil, "batch U no native_tall flag "..id)
+	equal(entry.urh_rok_form, nil, "batch U no urh_rok_form flag "..id)
+	equal(Tokens.identify(actor(entry)), id, "batch U exact identity "..id)
+	local a = actor(entry)
+	a.tint_r, a.tint_g, a.tint_b = 0.5, 0.9, 0.3
+	equal(Tokens.identify(a), id, "batch U tint is colour only "..id)
+	a = actor(entry)
+	a.color_r, a.color_g, a.color_b = 0, 0, 185
+	equal(Tokens.identify(a), id, "batch U colour modulation keeps the token "..id)
+	a = actor(entry)
+	a.image = "invis.png"
+	a.add_mos = {{image=entry.image, display_h=2, display_y=-1}}
+	equal(Tokens.identify(a), nil, "batch U single entry rejects a tall body "..id)
+	a = actor(entry)
+	a.type = entry.type == "undead" and "humanoid" or "undead"
+	equal(Tokens.identify(a), nil, "batch U type changed "..id)
+	a = actor(entry)
+	a.subtype = "other-subtype"
+	equal(Tokens.identify(a), nil, "batch U subtype changed "..id)
+	a = actor(entry)
+	a.shader = "some_shader"
+	equal(Tokens.identify(a), nil, "batch U shader keeps native art "..id)
+	a = actor(entry)
+	a.moddable_tile = "some_doll"
+	equal(Tokens.identify(a), nil, "batch U paper-doll actor keeps native art "..id)
+	a = actor(entry)
+	a.add_displays = {{image="npc/iceblock.png"}}
+	equal(Tokens.identify(a), nil, "batch U frozen/pinned add_displays keep native art "..id)
+	a = actor(entry)
+	a.unique = true
+	equal(Tokens.identify(a), nil, "batch U non-unique entry rejects an unknown unique "..id)
+	a = actor(entry)
+	a.define_as = "SOME_DEFINE_AS"
+	equal(Tokens.identify(a), nil, "batch U unexpected define_as "..id)
+	a = actor(entry)
+	a.image = "npc/some_other_image.png"
+	equal(Tokens.identify(a), nil, "batch U other image keeps native art "..id)
+	a = actor(entry)
+	a.__old_type = {entry.type, entry.subtype}
+	a.type, a.subtype = "demon", "major"
+	a.sustain_talents = {T_FLAME_OF_URH_ROK = {}}
+	equal(Tokens.identify(a), nil, "batch U Flame of Urh'Rok form is not supported "..id)
+	a = actor(entry)
+	a.add_mos = {{_isshaderaura=true, image="shockbolt/aura.png"}}
+	equal(Tokens.identify(a), id, "batch U shader aura entry is ignored "..id)
+	-- A summon shape (summoner table, summoned AI) never borrows a zone leaf's token
+	-- through a variant: none of these entries has a variants function.
+	a = actor(entry)
+	a.summoner, a.ai, a.wild_gift_summon = {}, "summoned", true
+	equal(Tokens.identify(a), id, "batch U a same-body summon is still the same exact leaf "..id)
+	a.define_as = nil
+	a.name = entry.name.." (wild summon)"
+	equal(Tokens.identify(a), id == "ritch-flamespitter" and id or nil, "batch U the wild-summon rename is covered only for the ritch flamespitter "..id)
+end
+-- Birth sustains are temporary values, callbacks and particles only.
+for id, talents in pairs({
+	["orc-master-assassin"]={"T_STEALTH", "T_APPLY_POISON"},
+	["orc-grand-master-assassin"]={"T_STEALTH", "T_APPLY_POISON"},
+	gaeramarth={"T_STEALTH"},
+	ninurlhing={"T_ACIDIC_SKIN"},
+}) do
+	local a = actor(Tokens.by_id[id])
+	a.sustain_talents = {}
+	for _, tid in ipairs(talents) do a.sustain_talents[tid] = {} end
+	a.__particles = {{}}
+	a.resists = {COLD=50}
+	equal(Tokens.identify(a), id, "batch U birth sustain keeps the body "..id)
+end
+-- The three ritches, two nagas, two orc assassins and three spiders cannot borrow each other.
+for _, group in ipairs({{"ritch-flamespitter", "ritch-impaler", "chitinous-ritch"}, {"naga-tide-huntress", "naga-psyren"},
+	{"orc-master-assassin", "orc-grand-master-assassin"}, {"gaeramarth", "ninurlhing", "fate-weaver"}}) do
+	for _, id in ipairs(group) do
+		for _, other in ipairs(group) do
+			if id ~= other then
+				local a = actor(Tokens.by_id[id])
+				a.image = Tokens.by_id[other].image
+				equal(Tokens.identify(a), nil, "batch U sibling cannot borrow image "..id.." <- "..other)
+				a = actor(Tokens.by_id[id])
+				a.name = Tokens.by_id[other].name
+				equal(Tokens.identify(a), nil, "batch U body cannot wear another sibling's name "..id.." as "..other)
+			end
+		end
+	end
+end
+do
+	-- The Wild Gift Ritch Flamespitter summon (talents/gifts/summon-distance.lua:446) has the same
+	-- name and type but image npc/summoner_ritch.png. It wears the flamespitter token through the
+	-- per-entry image alias, and only when every distinctive constructor field is present.
+	local flame = Tokens.by_id["ritch-flamespitter"]
+	local function summon(f)
+		local m = {name="ritch flamespitter", type="insect", subtype="ritch", image="npc/summoner_ritch.png", summoner={}, ai="summoned",
+			wild_gift_summon=true, summoner_gain_exp=true, is_nature_summon=true, wild_gift_detonate="T_RITCH_FLAMESPITTER", faction="enemies"}
+		if f then f(m) end
+		return m
+	end
+	equal(Tokens.identify(summon()), "ritch-flamespitter", "the Ritch Flamespitter summon wears the flamespitter token")
+	equal(Tokens.identify(summon(function(m) m.name = "ritch flamespitter (wild summon)" end)), "ritch-flamespitter", "the English wild-summon Ritch Flamespitter wears the token")
+	equal(Tokens.identify(summon(function(m) m.ai, m.ai_state = "party_member", {ai_party="summoned"} end)), "ritch-flamespitter", "a party-converted Ritch Flamespitter summon wears the token")
+	equal(Tokens.identify(summon(function(m) m.add_mos = {{_isshaderaura=true, image="shockbolt/aura.png"}} end)), "ritch-flamespitter", "shader aura bookkeeping on the summon is ignored")
+	equal(Tokens.identify(summon(function(m) m.name = "ritch flamespitter (wild summon) (wild summon)" end)), nil, "doubled wild-summon suffix stays native")
+	equal(Tokens.identify(summon(function(m) m.name = "(wild summon) ritch flamespitter" end)), nil, "prefix wild-summon form stays native")
+	-- Negatives: the alias image never works outside that exact constructor.
+	for label, f in pairs({
+		["not a summon (no summoner)"] = function(m) m.summoner = nil end,
+		["summoner not a table"] = function(m) m.summoner = true end,
+		["not summoned AI"] = function(m) m.ai = "tactical" end,
+		["no wild_gift_summon"] = function(m) m.wild_gift_summon = nil end,
+		["no summoner_gain_exp"] = function(m) m.summoner_gain_exp = nil end,
+		["no is_nature_summon"] = function(m) m.is_nature_summon = nil end,
+		["another gift's detonate id"] = function(m) m.wild_gift_detonate = "T_FIRE_DRAKE" end,
+		["missing detonate id"] = function(m) m.wild_gift_detonate = nil end,
+		["unique"] = function(m) m.unique = true end,
+		["define_as"] = function(m) m.define_as = "RITCH_SUMMON" end,
+		["extra add_mos"] = function(m) m.add_mos = {{image="npc/other.png"}} end,
+		["shader"] = function(m) m.shader = "some_shader" end,
+		["moddable_tile"] = function(m) m.moddable_tile = "some_doll" end,
+		["add_displays"] = function(m) m.add_displays = {{image="npc/iceblock.png"}} end,
+		["animation"] = function(m) m.anim = {} end,
+		["subtype changed"] = function(m) m.subtype = "other-subtype" end,
+		["type changed"] = function(m) m.type = "animal" end,
+		["other name"] = function(m) m.name = "ritch impaler" end,
+		["other image"] = function(m) m.image = "npc/summoner_hydra.png" end,
+		["tall body carrying the alias"] = function(m) m.image, m.add_mos = "invis.png", {{image="npc/summoner_ritch.png", display_h=2, display_y=-1}} end,
+	}) do
+		equal(Tokens.identify(summon(f)), nil, "ritch summon alias negative: "..label)
+	end
+	-- A plain (non-summon) actor named ritch flamespitter on the alias PNG is not the zone leaf.
+	equal(Tokens.identify({name="ritch flamespitter", type="insect", subtype="ritch", image="npc/summoner_ritch.png", faction="enemies"}), nil,
+		"the alias PNG on a non-summon actor stays native")
+	-- The alias never lets another entry borrow summoner_ritch.png, and it grants nothing else.
+	for _, id in ipairs({"ritch-impaler", "chitinous-ritch", "ritch-hive-mother", "fire-imp", "naga-psyren"}) do
+		local entry = Tokens.by_id[id]
+		local m = summon(function(m) m.name, m.type, m.subtype = entry.name, entry.type, entry.subtype
+			m.define_as, m.unique = entry.define_as, entry.unique and true or nil end)
+		equal(Tokens.identify(m), nil, "another entry cannot borrow summoner_ritch.png: "..id)
+	end
+	local a = actor(flame)
+	a.image = "npc/summoner_ritch.png"
+	equal(Tokens.identify(a), nil, "a zone-style leaf drawn with the summon PNG (no summon fields) stays native")
+	-- Other summon PNGs of native constructors are not aliased.
+	for _, png in ipairs({"npc/summoner_wardog.png", "npc/summoner_golem.png", "npc/summoner_turtle.png", "npc/summoner_hydra.png"}) do
+		local m = summon(function(m) m.image = png end)
+		equal(Tokens.identify(m), nil, "unrelated summoner PNG is not an alias: "..png)
+	end
+end
+-- Look-alikes stay native (tutorial hairy spider on the ninurlhing PNG, other names on the same PNG).
+for _, excluded in ipairs({
+	{name="hairy spider", type="spiderkin", subtype="spider", image="npc/spiderkin_spider_ninurlhing.png", define_as="TUT_SPIDER_3"},
+	{name="ritch hunter", type="insect", subtype="ritch", image="npc/insect_ritch_ritch_impaler.png"},
+	{name="ritch impaler", type="insect", subtype="ritch", image="npc/insect_ritch_ritch_flamespitter.png"},
+	{name="chitinous spider", type="spiderkin", subtype="spider", image="npc/spiderkin_spider_gaeramarth.png"},
+	{name="naga myrmidon", type="humanoid", subtype="naga", image="npc/naga_psyren.png"},
+	{name="Greater Mummy Lord", type="undead", subtype="mummy", image="npc/undead_mummy_ancient_elven_mummy.png"},
+	{name="rotting mummy", type="undead", subtype="mummy", image="npc/undead_mummy_ancient_elven_mummy.png"},
+	{name="orc assassin", type="humanoid", subtype="orc", image="npc/humanoid_orc_orc_grand_master_assassin.png"},
+	{name="orc master assassin", type="humanoid", subtype="orc", image="npc/humanoid_orc_orc_grand_master_assassin.png"},
+	{name="fire imp", type="demon", subtype="major", image="npc/demon_minor_fire_imp.png"},
+	{name="imp", type="demon", subtype="minor", image="npc/demon_minor_fire_imp.png"},
+}) do
+	equal(Tokens.identify(excluded), nil, "batch U look-alike stays native "..excluded.name.." "..tostring(excluded.define_as))
+end
+
+-- Batch V: the twelve identities after batch U (black crystal, faerlhing,
+-- losselhing, dredge, dolleg, eternal bone giant, drem master, orc pyromancer,
+-- orc cryomancer, bloated horror, yaech hunter, orc blood mage). All are
+-- non-unique and WITHOUT a define_as (exact name, type and subtype). Dolleg and
+-- the eternal bone giant are native-tall (native_tall=true); none can reach
+-- Flame of Urh'Rok, so there is no opt-in.
+local batch_v = {"black-crystal", "faerlhing", "losselhing", "dredge", "dolleg", "eternal-bone-giant", "drem-master",
+	"orc-pyromancer", "orc-cryomancer", "bloated-horror", "yaech-hunter", "orc-blood-mage"}
+local names_v = {["black-crystal"]="black crystal", faerlhing="faerlhing", losselhing="losselhing", dredge="dredge",
+	dolleg="dolleg", ["eternal-bone-giant"]="eternal bone giant", ["drem-master"]="drem master", ["orc-pyromancer"]="orc pyromancer",
+	["orc-cryomancer"]="orc cryomancer", ["bloated-horror"]="bloated horror", ["yaech-hunter"]="yaech hunter", ["orc-blood-mage"]="orc blood mage"}
+local tall_v = {dolleg=true, ["eternal-bone-giant"]=true}
+for _, id in ipairs(batch_v) do
+	local entry = Tokens.by_id[id]
+	if entry == nil then error("batch V catalog entry missing: "..id) end
+	equal(entry.name, names_v[id], "batch V exact name "..id)
+	equal(entry.define_as, nil, "batch V define_as-less "..id)
+	equal(entry.unique, nil, "batch V non-unique "..id)
+	equal(entry.native_tall, tall_v[id] and true or nil, "batch V native_tall flag "..id)
+	equal(entry.urh_rok_form, nil, "batch V no urh_rok_form flag "..id)
+	equal(Tokens.identify(actor(entry)), id, "batch V exact identity "..id)
+	local a = actor(entry)
+	a.tint_r, a.tint_g, a.tint_b = 0, 0, 0
+	equal(Tokens.identify(a), id, "batch V tint is colour only "..id)
+	a = actor(entry)
+	a.color_r, a.color_g, a.color_b = 0, 0, 185
+	equal(Tokens.identify(a), id, "batch V colour modulation keeps the token "..id)
+	a = actor(entry)
+	a.image = "invis.png"
+	a.add_mos = {{image=entry.image, display_h=2, display_y=-1}}
+	equal(Tokens.identify(a), tall_v[id] and id or nil, "batch V tall body accepted only for native_tall entries "..id)
+	if tall_v[id] then
+		a.add_mos = {{image=entry.image, display_h=2, display_y=-1}, {image="npc/other.png"}}
+		equal(Tokens.identify(a), nil, "batch V tall body with a second overlay stays native "..id)
+		a.add_mos = {{image="npc/other.png", display_h=2, display_y=-1}}
+		equal(Tokens.identify(a), nil, "batch V tall body naming another PNG stays native "..id)
+		a.add_mos = {{image=entry.image, display_h=2, display_y=-1, shader="x"}}
+		equal(Tokens.identify(a), nil, "batch V tall body with extra keys stays native "..id)
+		a.add_mos = {{image=entry.image, display_h=3, display_y=-1}}
+		equal(Tokens.identify(a), nil, "batch V tall body with other dimensions stays native "..id)
+		a.add_mos = {{image=entry.image, display_h=2, display_y=-1}, {_isshaderaura=true, image="shockbolt/aura.png"}}
+		equal(Tokens.identify(a), id, "batch V tall body with shader aura bookkeeping "..id)
+	end
+	a = actor(entry)
+	a.type = entry.type == "undead" and "humanoid" or "undead"
+	equal(Tokens.identify(a), nil, "batch V type changed "..id)
+	a = actor(entry)
+	a.subtype = "other-subtype"
+	equal(Tokens.identify(a), nil, "batch V subtype changed "..id)
+	a = actor(entry)
+	a.shader = "some_shader"
+	equal(Tokens.identify(a), nil, "batch V shader keeps native art "..id)
+	a = actor(entry)
+	a.moddable_tile = "some_doll"
+	equal(Tokens.identify(a), nil, "batch V paper-doll actor keeps native art "..id)
+	a = actor(entry)
+	a.anim = {}
+	equal(Tokens.identify(a), nil, "batch V animation keeps native art "..id)
+	a = actor(entry)
+	a.add_displays = {{image="npc/iceblock.png"}}
+	equal(Tokens.identify(a), nil, "batch V frozen/pinned add_displays keep native art "..id)
+	a = actor(entry)
+	a.unique = true
+	equal(Tokens.identify(a), nil, "batch V non-unique entry rejects an unknown unique "..id)
+	a = actor(entry)
+	a.define_as = "SOME_DEFINE_AS"
+	equal(Tokens.identify(a), nil, "batch V unexpected define_as "..id)
+	a = actor(entry)
+	a.image = "npc/some_other_image.png"
+	equal(Tokens.identify(a), nil, "batch V other image keeps native art "..id)
+	a = actor(entry)
+	a.__old_type = {entry.type, entry.subtype}
+	a.type, a.subtype = "demon", "major"
+	a.sustain_talents = {T_FLAME_OF_URH_ROK = {}}
+	-- (the dolleg is itself demon/major, so the shape is just its own body)
+	equal(Tokens.identify(a), id == "dolleg" and "dolleg" or nil, "batch V Flame of Urh'Rok form is not supported "..id)
+	a = actor(entry)
+	a.add_mos = {{_isshaderaura=true, image="shockbolt/aura.png"}}
+	equal(Tokens.identify(a), id, "batch V shader aura entry is ignored "..id)
+	-- No variants or aliases: a summon shape carrying a wild-summon rename or another PNG stays native.
+	a = actor(entry)
+	a.summoner, a.ai, a.wild_gift_summon = {}, "summoned", true
+	equal(Tokens.identify(a), id, "batch V a same-body summon is the same exact leaf "..id)
+	a.name = entry.name.." (wild summon)"
+	equal(Tokens.identify(a), nil, "batch V the wild-summon rename is not covered "..id)
+	a = actor(entry)
+	a.summoner, a.ai, a.summoner_gain_exp, a.wild_gift_summon = {}, "summoned", true, true
+	a.image = "npc/summoner_ritch.png"
+	equal(Tokens.identify(a), nil, "batch V no summon PNG alias "..id)
+end
+-- Birth sustains are temporary values, shields and particles only.
+for id, talents in pairs({
+	faerlhing={"T_PHANTASMAL_SHIELD", "T_DISRUPTION_SHIELD", "T_ARCANE_POWER"},
+	losselhing={"T_ICY_SKIN", "T_FROST_HANDS"},
+	["orc-pyromancer"]={"T_SPELLCRAFT"},
+	["orc-cryomancer"]={"T_SPELLCRAFT"},
+	dolleg={"T_ACIDIC_SKIN"},
+}) do
+	local entry = Tokens.by_id[id]
+	local a = actor(entry)
+	if tall_v[id] then a.image = "invis.png"; a.add_mos = {{image=entry.image, display_h=2, display_y=-1}} end
+	a.sustain_talents = {}
+	for _, tid in ipairs(talents) do a.sustain_talents[tid] = {} end
+	a.__particles = {{}}
+	a.resists = {COLD=50}
+	equal(Tokens.identify(a), id, "batch V birth sustain keeps the body "..id)
+end
+-- Necromancer Assemble minion (talents/spells/master-of-bones.lua:393): same name, body and nice_tile, no
+-- define_as, so it wears the eternal bone giant token by the ordinary key; a Lord of Skulls renames it.
+do
+	local entry = Tokens.by_id["eternal-bone-giant"]
+	local a = actor(entry)
+	a.image, a.add_mos = "invis.png", {{image=entry.image, display_h=2, display_y=-1}}
+	a.faction, a.summoner, a.summon_time = "players", {faction="players"}, 7
+	a.necrotic_minion, a.summoner_gain_exp, a.is_bone_giant = true, true, "e_bone_giant"
+	equal(Tokens.identify(a), "eternal-bone-giant", "batch V Assemble minion is the same body as the eternal bone giant")
+	a.name = "Lord of Skulls (bone giant)"
+	equal(Tokens.identify(a), nil, "batch V Lord of Skulls minion is renamed and stays native")
+	a = actor(entry)
+	-- (the heavy bone giant stayed native here; batch W maps it and tests the Assemble minion.)
+	a = actor(Tokens.by_id["bone-giant"])
+	a.image, a.add_mos = "invis.png", {{image=entry.image, display_h=2, display_y=-1}}
+	equal(Tokens.identify(a), nil, "batch V a bone giant cannot wear the eternal bone giant body")
+	-- A random boss made from a non-unique native-tall body keeps native art (only unique tall bodies qualify).
+	for _, id in ipairs({"dolleg", "eternal-bone-giant"}) do
+		local e = Tokens.by_id[id]
+		local base = actor(e)
+		base.image, base.add_mos = "invis.png", {{image=e.image, display_h=2, display_y=-1}}
+		local capture = Tokens.captureRandomOrigin(base)
+		local boss = actor(e)
+		boss.image, boss.add_mos = "invis.png", {{image=e.image, display_h=2, display_y=-1}}
+		boss.name, boss.define_as, boss.unique, boss.randboss = "Inquisitor Test", "RANDOM_BOSS_V", "Inquisitor Test", true
+		equal(Tokens.recordRandomOrigin(boss, capture, "RANDOM_BOSS_V"), nil, "batch V non-unique tall random boss stays native "..id)
+		equal(Tokens.identify(boss), nil, "batch V non-unique tall random boss identify "..id)
+	end
+end
+-- The three spiders/crystal, three horrors, three orc casters and giant/demon/yaech cannot borrow each other.
+for _, group in ipairs({{"black-crystal", "faerlhing", "losselhing"}, {"dredge", "drem-master", "bloated-horror"},
+	{"orc-pyromancer", "orc-cryomancer", "orc-blood-mage"}, {"dolleg", "eternal-bone-giant", "yaech-hunter"},
+	{"faerlhing", "losselhing", "gaeramarth", "ninurlhing", "fate-weaver"}, {"dredge", "dredgling"}, {"orc-pyromancer", "orc-necromancer", "orc-master-assassin"},
+	{"eternal-bone-giant", "bone-giant", "half-finished-bone-giant"}}) do
+	for _, id in ipairs(group) do
+		for _, other in ipairs(group) do
+			if id ~= other and Tokens.by_id[id] and Tokens.by_id[other] then
+				local a = actor(Tokens.by_id[id])
+				a.image = Tokens.by_id[other].image
+				equal(Tokens.identify(a), nil, "batch V sibling cannot borrow image "..id.." <- "..other)
+				a = actor(Tokens.by_id[id])
+				a.name = Tokens.by_id[other].name
+				equal(Tokens.identify(a), nil, "batch V body cannot wear another sibling's name "..id.." as "..other)
+			end
+		end
+	end
+end
+-- Look-alikes stay native (dreams "lost wife" with subtype bloated horror, other names on the same PNGs).
+for _, excluded in ipairs({
+	{name="lost wife", type="humanoid", subtype="bloated horror", image="invis.png", define_as="WIFE", add_mos={{image="npc/humanoid_orc_orc_mother.png", display_h=2, display_y=-1}}},
+	{name="bloated horror", type="humanoid", subtype="bloated horror", image="npc/horror_eldritch_bloated_horror.png"},
+	{name="dredge captain", type="horror", subtype="temporal", image="npc/horror_temporal_dredge.png"},
+	{name="dredge", type="horror", subtype="temporal", image="npc/horror_temporal_dredge_captain.png"},
+	{name="drem", type="horror", subtype="corrupted", image="npc/horror_corrupted_drem_master.png"},
+	{name="orc high pyromancer", type="humanoid", subtype="orc", image="npc/humanoid_orc_orc_pyromancer.png"},
+	{name="orc high cryomancer", type="humanoid", subtype="orc", image="npc/humanoid_orc_orc_cryomancer.png"},
+	{name="orc corruptor", type="humanoid", subtype="orc", image="npc/humanoid_orc_orc_blood_mage.png"},
+	{name="yaech diver", type="humanoid", subtype="yaech", image="npc/humanoid_yaech_yaech_hunter.png"},
+	{name="yaech mindslayer", type="humanoid", subtype="yaech", image="npc/humanoid_yaech_yaech_hunter.png"},
+	{name="blue crystal", type="immovable", subtype="crystal", image="npc/crystal_black.png"},
+	{name="black crystal", type="immovable", subtype="crystal", image="npc/crystal_blue.png"},
+	{name="dolleg", type="demon", subtype="minor", image="invis.png", add_mos={{image="npc/demon_major_dolleg.png", display_h=2, display_y=-1}}},
+	{name="uruivellas", type="demon", subtype="major", image="invis.png", add_mos={{image="npc/demon_major_dolleg.png", display_h=2, display_y=-1}}},
+	{name="losselhing", type="spiderkin", subtype="spider", image="npc/spiderkin_spider_faerlhing.png"},
+}) do
+	equal(Tokens.identify(excluded), nil, "batch V look-alike stays native "..excluded.name.." "..tostring(excluded.define_as))
+end
+
+-- Batch W: the twelve identities after batch V (fiery/icy orc wyrmic, yaech
+-- mindslayer, heavy bone giant, cave bear, war bear, grannor'vin, rotting
+-- mummy, banshee, giant fire/ice/lightning ant). All are non-unique. The two
+-- orc wyrmics bind their define_as (ORC_FIRE_WYRMIC, ORC_ICE_WYRMIC); the other
+-- ten have none. The heavy bone giant is native-tall (native_tall=true); none
+-- can reach Flame of Urh'Rok, so there is no opt-in.
+local batch_w = {"fiery-orc-wyrmic", "icy-orc-wyrmic", "yaech-mindslayer", "heavy-bone-giant", "cave-bear", "war-bear",
+	"grannor-vin", "rotting-mummy", "banshee", "giant-fire-ant", "giant-ice-ant", "giant-lightning-ant"}
+local names_w = {["fiery-orc-wyrmic"]="fiery orc wyrmic", ["icy-orc-wyrmic"]="icy orc wyrmic", ["yaech-mindslayer"]="yaech mindslayer",
+	["heavy-bone-giant"]="heavy bone giant", ["cave-bear"]="cave bear", ["war-bear"]="war bear", ["grannor-vin"]="grannor'vin",
+	["rotting-mummy"]="rotting mummy", banshee="banshee", ["giant-fire-ant"]="giant fire ant", ["giant-ice-ant"]="giant ice ant",
+	["giant-lightning-ant"]="giant lightning ant"}
+local defines_w = {["fiery-orc-wyrmic"]="ORC_FIRE_WYRMIC", ["icy-orc-wyrmic"]="ORC_ICE_WYRMIC"}
+local tall_w = {["heavy-bone-giant"]=true}
+for _, id in ipairs(batch_w) do
+	local entry = Tokens.by_id[id]
+	if entry == nil then error("batch W catalog entry missing: "..id) end
+	equal(entry.name, names_w[id], "batch W exact name "..id)
+	equal(entry.define_as, defines_w[id], "batch W define_as binding "..id)
+	equal(entry.unique, nil, "batch W non-unique "..id)
+	equal(entry.native_tall, tall_w[id] and true or nil, "batch W native_tall flag "..id)
+	equal(entry.urh_rok_form, nil, "batch W no urh_rok_form flag "..id)
+	equal(Tokens.identify(actor(entry)), id, "batch W exact identity "..id)
+	local a = actor(entry)
+	a.tint_r, a.tint_g, a.tint_b = 0, 0, 0
+	equal(Tokens.identify(a), id, "batch W tint is colour only "..id)
+	a = actor(entry)
+	a.color_r, a.color_g, a.color_b = 0, 0, 185
+	equal(Tokens.identify(a), id, "batch W colour modulation keeps the token "..id)
+	a = actor(entry)
+	a.image = "invis.png"
+	a.add_mos = {{image=entry.image, display_h=2, display_y=-1}}
+	equal(Tokens.identify(a), tall_w[id] and id or nil, "batch W tall body accepted only for native_tall entries "..id)
+	if tall_w[id] then
+		a.add_mos = {{image=entry.image, display_h=2, display_y=-1}, {image="npc/other.png"}}
+		equal(Tokens.identify(a), nil, "batch W tall body with a second overlay stays native "..id)
+		a.add_mos = {{image="npc/other.png", display_h=2, display_y=-1}}
+		equal(Tokens.identify(a), nil, "batch W tall body naming another PNG stays native "..id)
+		a.add_mos = {{image=entry.image, display_h=2, display_y=-1, shader="x"}}
+		equal(Tokens.identify(a), nil, "batch W tall body with extra keys stays native "..id)
+		a.add_mos = {{image=entry.image, display_h=3, display_y=-1}}
+		equal(Tokens.identify(a), nil, "batch W tall body with other dimensions stays native "..id)
+		a.add_mos = {{image=entry.image, display_h=2, display_y=-1}, {_isshaderaura=true, image="shockbolt/aura.png"}}
+		equal(Tokens.identify(a), id, "batch W tall body with shader aura bookkeeping "..id)
+	end
+	a = actor(entry)
+	a.type = entry.type == "undead" and "humanoid" or "undead"
+	equal(Tokens.identify(a), nil, "batch W type changed "..id)
+	a = actor(entry)
+	a.subtype = "other-subtype"
+	equal(Tokens.identify(a), nil, "batch W subtype changed "..id)
+	a = actor(entry)
+	a.shader = "some_shader"
+	equal(Tokens.identify(a), nil, "batch W shader keeps native art "..id)
+	a = actor(entry)
+	a.moddable_tile = "some_doll"
+	equal(Tokens.identify(a), nil, "batch W paper-doll actor keeps native art "..id)
+	a = actor(entry)
+	a.anim = {}
+	equal(Tokens.identify(a), nil, "batch W animation keeps native art "..id)
+	a = actor(entry)
+	a.add_displays = {{image="npc/iceblock.png"}}
+	equal(Tokens.identify(a), nil, "batch W frozen/pinned add_displays keep native art "..id)
+	a = actor(entry)
+	a.unique = true
+	equal(Tokens.identify(a), nil, "batch W non-unique entry rejects an unknown unique "..id)
+	a = actor(entry)
+	a.define_as = "SOME_DEFINE_AS"
+	equal(Tokens.identify(a), nil, "batch W unexpected define_as "..id)
+	if defines_w[id] then
+		a = actor(entry)
+		a.define_as = nil
+		equal(Tokens.identify(a), nil, "batch W bound entry needs its define_as "..id)
+	end
+	a = actor(entry)
+	a.image = "npc/some_other_image.png"
+	equal(Tokens.identify(a), nil, "batch W other image keeps native art "..id)
+	a = actor(entry)
+	a.__old_type = {entry.type, entry.subtype}
+	a.type, a.subtype = "demon", "major"
+	a.sustain_talents = {T_FLAME_OF_URH_ROK = {}}
+	equal(Tokens.identify(a), nil, "batch W Flame of Urh'Rok form is not supported "..id)
+	a = actor(entry)
+	a.add_mos = {{_isshaderaura=true, image="shockbolt/aura.png"}}
+	equal(Tokens.identify(a), id, "batch W shader aura entry is ignored "..id)
+	-- No variants or aliases: a summon shape carrying a wild-summon rename or another PNG stays native.
+	a = actor(entry)
+	a.summoner, a.ai, a.wild_gift_summon = {}, "summoned", true
+	equal(Tokens.identify(a), id, "batch W a same-body summon is the same exact leaf "..id)
+	a.name = entry.name.." (wild summon)"
+	equal(Tokens.identify(a), nil, "batch W the wild-summon rename is not covered "..id)
+	a = actor(entry)
+	a.summoner, a.ai, a.summoner_gain_exp, a.wild_gift_summon = {}, "summoned", true, true
+	a.image = "npc/summoner_ritch.png"
+	equal(Tokens.identify(a), nil, "batch W no summon PNG alias "..id)
+end
+-- Birth sustains are temporary values, shields and particles only.
+for id, talents in pairs({banshee={"T_BLUR_SIGHT"}, ["grannor-vin"]={"T_CALL_SHADOWS"}}) do
+	local entry = Tokens.by_id[id]
+	local a = actor(entry)
+	a.sustain_talents = {}
+	for _, tid in ipairs(talents) do a.sustain_talents[tid] = {} end
+	a.__particles = {{}}
+	a.resists = {COLD=50}
+	equal(Tokens.identify(a), id, "batch W birth sustain keeps the body "..id)
+end
+-- Necromancer Assemble minion (talents/spells/master-of-bones.lua:429): same name, body and nice_tile, no
+-- define_as, so it wears the heavy bone giant token by the ordinary key; a Lord of Skulls renames it.
+do
+	local entry = Tokens.by_id["heavy-bone-giant"]
+	local a = actor(entry)
+	a.image, a.add_mos = "invis.png", {{image=entry.image, display_h=2, display_y=-1}}
+	a.faction, a.summoner, a.summon_time = "players", {faction="players"}, 7
+	a.necrotic_minion, a.summoner_gain_exp, a.is_bone_giant = true, true, "h_bone_giant"
+	equal(Tokens.identify(a), "heavy-bone-giant", "batch W Assemble minion is the same body as the heavy bone giant")
+	a.name = "Lord of Skulls (bone giant)"
+	equal(Tokens.identify(a), nil, "batch W Lord of Skulls minion is renamed and stays native")
+	a = actor(entry)
+	a.name, a.image, a.add_mos = "eternal bone giant", "invis.png", {{image=entry.image, display_h=2, display_y=-1}}
+	equal(Tokens.identify(a), nil, "batch W an eternal bone giant cannot wear the heavy bone giant body")
+	a = actor(Tokens.by_id["eternal-bone-giant"])
+	a.image, a.add_mos = "invis.png", {{image=entry.image, display_h=2, display_y=-1}}
+	equal(Tokens.identify(a), nil, "batch W the eternal bone giant cannot wear the heavy bone giant PNG")
+	a = actor(Tokens.by_id["bone-giant"])
+	a.image, a.add_mos = "invis.png", {{image=entry.image, display_h=2, display_y=-1}}
+	equal(Tokens.identify(a), nil, "batch W a bone giant cannot wear the heavy bone giant body")
+	-- A random boss made from the non-unique native-tall body keeps native art (only unique tall bodies qualify).
+	local base = actor(entry)
+	base.image, base.add_mos = "invis.png", {{image=entry.image, display_h=2, display_y=-1}}
+	local capture = Tokens.captureRandomOrigin(base)
+	local boss = actor(entry)
+	boss.image, boss.add_mos = "invis.png", {{image=entry.image, display_h=2, display_y=-1}}
+	boss.name, boss.define_as, boss.unique, boss.randboss = "Inquisitor Test", "RANDOM_BOSS_W", "Inquisitor Test", true
+	equal(Tokens.recordRandomOrigin(boss, capture, "RANDOM_BOSS_W"), nil, "batch W non-unique tall random boss stays native")
+	equal(Tokens.identify(boss), nil, "batch W non-unique tall random boss identify")
+end
+-- A random boss made from a flat entry (the grushnak-armory 'Warbear') keeps the war bear token.
+do
+	local entry = Tokens.by_id["war-bear"]
+	local capture = Tokens.captureRandomOrigin(actor(entry))
+	local boss = actor(entry)
+	boss.name, boss.define_as, boss.unique, boss.randboss = "Warbear Test", "RANDOM_BOSS_WB", "Warbear Test", true
+	equal(Tokens.recordRandomOrigin(boss, capture, "RANDOM_BOSS_WB"), "war-bear", "batch W flat random boss keeps the war bear token")
+	equal(Tokens.identify(boss), "war-bear", "batch W flat random boss identify")
+end
+-- The wyrmic pair, the bears, the three ants and the giants cannot borrow each other.
+for _, group in ipairs({{"fiery-orc-wyrmic", "icy-orc-wyrmic"}, {"cave-bear", "war-bear", "brown-bear", "black-bear"},
+	{"giant-fire-ant", "giant-ice-ant", "giant-lightning-ant", "giant-red-ant", "giant-blue-ant", "giant-white-ant"},
+	{"heavy-bone-giant", "eternal-bone-giant", "bone-giant", "half-finished-bone-giant"},
+	{"fiery-orc-wyrmic", "orc-warrior", "orc-soldier", "orc-pyromancer"}, {"icy-orc-wyrmic", "orc-cryomancer", "orc-archer"},
+	{"grannor-vin", "grannor-vor"}, {"rotting-mummy", "ancient-elven-mummy"}, {"yaech-mindslayer", "yaech-hunter", "yaech-diver"}}) do
+	for _, id in ipairs(group) do
+		for _, other in ipairs(group) do
+			if id ~= other and Tokens.by_id[id] and Tokens.by_id[other] then
+				local a = actor(Tokens.by_id[id])
+				a.image = Tokens.by_id[other].image
+				equal(Tokens.identify(a), nil, "batch W sibling cannot borrow image "..id.." <- "..other)
+				a = actor(Tokens.by_id[id])
+				a.name = Tokens.by_id[other].name
+				equal(Tokens.identify(a), nil, "batch W body cannot wear another sibling's name "..id.." as "..other)
+			end
+		end
+	end
+end
+-- Look-alikes stay native (other names on the same PNGs, the dropped acid ant, ruin banshee, yeek mindslayer).
+for _, excluded in ipairs({
+	-- (the giant acid ant was kept native here; batch X maps it.)
+	-- (the giant army ant was kept native here; batch X maps it.)
+	{name="giant fire ant", type="insect", subtype="ant", image="npc/ice_ant.png"},
+	{name="giant ice ant", type="insect", subtype="ant", image="npc/lightning_ant.png"},
+	{name="ruin banshee", type="undead", subtype="ghost", image="npc/banshee.png"},
+	{name="banshee", type="undead", subtype="ghost", image="npc/undead_ghost_ruin_banshee.png"},
+	{name="yeek mindslayer", type="humanoid", subtype="yeek", image="npc/humanoid_yaech_yaech_mindslayer.png"},
+	{name="grizzly bear", type="animal", subtype="bear", image="npc/cave_bear.png"},
+	{name="brown bear", type="animal", subtype="bear", image="npc/war_bear.png"},
+	{name="animated mummy wrappings", type="undead", subtype="mummy", image="npc/undead_mummy_rotting_mummy.png"},
+	{name="greater mummy", type="undead", subtype="mummy", image="npc/undead_mummy_rotting_mummy.png"},
+	{name="fiery orc wyrmic", type="humanoid", subtype="orc", image="npc/humanoid_orc_fiery_orc_wyrmic.png"},
+	{name="icy orc wyrmic", type="humanoid", subtype="orc", image="npc/humanoid_orc_icy_orc_wyrmic.png", define_as="ORC_FIRE_WYRMIC"},
+	{name="orc master wyrmic", type="humanoid", subtype="orc", image="npc/humanoid_orc_fiery_orc_wyrmic.png", define_as="ORC_FIRE_WYRMIC"},
+	{name="runed bone giant", type="undead", subtype="giant", image="invis.png", add_mos={{image="npc/undead_giant_heavy_bone_giant.png", display_h=2, display_y=-1}}},
+}) do
+	equal(Tokens.identify(excluded), nil, "batch W look-alike stays native "..excluded.name.." "..tostring(excluded.define_as))
+end
+
+-- Batch X: the twelve identities after batch W (giant acid ant, giant army ant,
+-- yaech psion, blue crystal, devourer, skeleton assassin, assassin, elven
+-- corruptor, orc fighter, greater telugoroth, teluvorta, dread). All are
+-- non-unique. Only the assassin binds a define_as (THIEF_ASSASSIN, repeated by
+-- the shadowblade leaf under another name); the greater telugoroth is
+-- native-tall (native_tall=true); none can reach Flame of Urh'Rok, so there is
+-- no opt-in.
+local batch_x = {"giant-acid-ant", "giant-army-ant", "yaech-psion", "blue-crystal", "devourer", "skeleton-assassin",
+	"assassin", "elven-corruptor", "orc-fighter", "greater-telugoroth", "teluvorta", "dread"}
+local names_x = {["giant-acid-ant"]="giant acid ant", ["giant-army-ant"]="giant army ant", ["yaech-psion"]="yaech psion",
+	["blue-crystal"]="blue crystal", devourer="devourer", ["skeleton-assassin"]="skeleton assassin", assassin="assassin",
+	["elven-corruptor"]="elven corruptor", ["orc-fighter"]="orc fighter", ["greater-telugoroth"]="greater telugoroth",
+	teluvorta="teluvorta", dread="dread"}
+local defines_x = {assassin="THIEF_ASSASSIN"}
+local tall_x = {["greater-telugoroth"]=true}
+for _, id in ipairs(batch_x) do
+	local entry = Tokens.by_id[id]
+	if entry == nil then error("batch X catalog entry missing: "..id) end
+	equal(entry.name, names_x[id], "batch X exact name "..id)
+	equal(entry.define_as, defines_x[id], "batch X define_as binding "..id)
+	equal(entry.unique, nil, "batch X non-unique "..id)
+	equal(entry.native_tall, tall_x[id] and true or nil, "batch X native_tall flag "..id)
+	equal(entry.urh_rok_form, nil, "batch X no urh_rok_form flag "..id)
+	equal(Tokens.identify(actor(entry)), id, "batch X exact identity "..id)
+	local a = actor(entry)
+	a.tint_r, a.tint_g, a.tint_b = 0, 0, 0
+	equal(Tokens.identify(a), id, "batch X tint is colour only "..id)
+	a = actor(entry)
+	a.color_r, a.color_g, a.color_b = 0, 0, 185
+	equal(Tokens.identify(a), id, "batch X colour modulation keeps the token "..id)
+	a = actor(entry)
+	a.image = "invis.png"
+	a.add_mos = {{image=entry.image, display_h=2, display_y=-1}}
+	equal(Tokens.identify(a), tall_x[id] and id or nil, "batch X tall body accepted only for native_tall entries "..id)
+	if tall_x[id] then
+		a.add_mos = {{image=entry.image, display_h=2, display_y=-1}, {image="npc/other.png"}}
+		equal(Tokens.identify(a), nil, "batch X tall body with a second overlay stays native "..id)
+		a.add_mos = {{image="npc/other.png", display_h=2, display_y=-1}}
+		equal(Tokens.identify(a), nil, "batch X tall body naming another PNG stays native "..id)
+		a.add_mos = {{image=entry.image, display_h=2, display_y=-1, shader="x"}}
+		equal(Tokens.identify(a), nil, "batch X tall body with extra keys stays native "..id)
+		a.add_mos = {{image=entry.image, display_h=3, display_y=-1}}
+		equal(Tokens.identify(a), nil, "batch X tall body with other dimensions stays native "..id)
+		a.add_mos = {{image=entry.image, display_h=2, display_y=-1}, {_isshaderaura=true, image="shockbolt/aura.png"}}
+		equal(Tokens.identify(a), id, "batch X tall body with shader aura bookkeeping "..id)
+	end
+	a = actor(entry)
+	a.type = entry.type == "undead" and "humanoid" or "undead"
+	equal(Tokens.identify(a), nil, "batch X type changed "..id)
+	a = actor(entry)
+	a.subtype = "other-subtype"
+	equal(Tokens.identify(a), nil, "batch X subtype changed "..id)
+	a = actor(entry)
+	a.shader = "some_shader"
+	equal(Tokens.identify(a), nil, "batch X shader keeps native art "..id)
+	a = actor(entry)
+	a.moddable_tile = "some_doll"
+	equal(Tokens.identify(a), nil, "batch X paper-doll actor keeps native art "..id)
+	a = actor(entry)
+	a.anim = {}
+	equal(Tokens.identify(a), nil, "batch X animation keeps native art "..id)
+	a = actor(entry)
+	a.add_displays = {{image="npc/iceblock.png"}}
+	equal(Tokens.identify(a), nil, "batch X frozen/pinned add_displays keep native art "..id)
+	a = actor(entry)
+	a.unique = true
+	equal(Tokens.identify(a), nil, "batch X non-unique entry rejects an unknown unique "..id)
+	a = actor(entry)
+	a.define_as = "SOME_DEFINE_AS"
+	equal(Tokens.identify(a), nil, "batch X unexpected define_as "..id)
+	if defines_x[id] then
+		a = actor(entry)
+		a.define_as = nil
+		equal(Tokens.identify(a), nil, "batch X bound entry needs its define_as "..id)
+	end
+	a = actor(entry)
+	a.image = "npc/some_other_image.png"
+	equal(Tokens.identify(a), nil, "batch X other image keeps native art "..id)
+	a = actor(entry)
+	a.__old_type = {entry.type, entry.subtype}
+	a.type, a.subtype = "demon", "major"
+	a.sustain_talents = {T_FLAME_OF_URH_ROK = {}}
+	equal(Tokens.identify(a), nil, "batch X Flame of Urh'Rok form is not supported "..id)
+	a = actor(entry)
+	a.add_mos = {{_isshaderaura=true, image="shockbolt/aura.png"}}
+	equal(Tokens.identify(a), id, "batch X shader aura entry is ignored "..id)
+	-- No variants or aliases: a summon shape carrying a wild-summon rename or another PNG stays native.
+	a = actor(entry)
+	a.summoner, a.ai, a.wild_gift_summon = {}, "summoned", true
+	equal(Tokens.identify(a), id, "batch X a same-body summon is the same exact leaf "..id)
+	a.name = entry.name.." (wild summon)"
+	equal(Tokens.identify(a), nil, "batch X the wild-summon rename is not covered "..id)
+	a = actor(entry)
+	a.summoner, a.ai, a.summoner_gain_exp, a.wild_gift_summon = {}, "summoned", true, true
+	a.image = "npc/summoner_ritch.png"
+	equal(Tokens.identify(a), nil, "batch X no summon PNG alias "..id)
+end
+-- Birth sustains are temporary values, shields and particles only.
+for id, talents in pairs({dread={"T_BLUR_SIGHT"}, ["skeleton-assassin"]={"T_STEALTH", "T_SHADOW_COMBAT"}, assassin={"T_STEALTH"},
+	["elven-corruptor"]={"T_BONE_SHIELD"}}) do
+	local entry = Tokens.by_id[id]
+	local a = actor(entry)
+	a.sustain_talents = {}
+	for _, tid in ipairs(talents) do a.sustain_talents[tid] = {} end
+	a.__particles = {{}}
+	a.resists = {COLD=50}
+	a.stealth = 30
+	equal(Tokens.identify(a), id, "batch X birth sustain keeps the body "..id)
+end
+-- Dread-talent minion (talents/spells/dreadmaster.lua:35), dreadmaster minion and the dreadmaster's summon
+-- (general/npcs/ghost.lua:96): same name, type, subtype and image, no define_as, so they wear the dread token by the
+-- ordinary key; a dreadmaster (other name) stays native even on the dread PNG.
+do
+	local entry = Tokens.by_id["dread"]
+	local a = actor(entry)
+	a.faction, a.summoner, a.summon_time = "players", {faction="players"}, 8
+	a.dread_minion, a.no_boneyard_resurrect, a.exp_worth = "dread", true, 0
+	a.necrotic_minion, a.summoner_gain_exp = true, true
+	equal(Tokens.identify(a), "dread", "batch X Dread-talent minion wears the dread token")
+	a = actor(entry)
+	a.summoner, a.ai, a.exp_worth = {}, "summoned", 0
+	equal(Tokens.identify(a), "dread", "batch X dreadmaster-summoned dread wears the dread token")
+	a.name = "dreadmaster"
+	equal(Tokens.identify(a), nil, "batch X a dreadmaster on the dread PNG stays native")
+	a = actor(entry)
+	a.name, a.image = "dreadmaster", "npc/dreadmaster.png"
+	equal(Tokens.identify(a), nil, "batch X the dreadmaster stays native")
+end
+-- Assassin: the shadowblade repeats define_as THIEF_ASSASSIN under another name and PNG; only the exact name wears the token.
+do
+	local entry = Tokens.by_id["assassin"]
+	local a = actor(entry)
+	a.name, a.image = "shadowblade", "npc/humanoid_human_shadowblade.png"
+	equal(Tokens.identify(a), nil, "batch X the shadowblade sharing THIEF_ASSASSIN stays native")
+	a = actor(entry)
+	a.name = "shadowblade"
+	equal(Tokens.identify(a), nil, "batch X the assassin body cannot wear the shadowblade name")
+	a = actor(entry)
+	a.name = "Assassin Lord"
+	equal(Tokens.identify(a), nil, "batch X the assassin body cannot wear the Assassin Lord name")
+	equal(Tokens.identify(actor(Tokens.by_id["assassin-lord"])), "assassin-lord", "batch X the Assassin Lord keeps its own token")
+end
+-- A random boss made from the non-unique native-tall greater telugoroth keeps native art (only unique tall bodies qualify).
+do
+	local entry = Tokens.by_id["greater-telugoroth"]
+	local base = actor(entry)
+	base.image, base.add_mos = "invis.png", {{image=entry.image, display_h=2, display_y=-1}}
+	local capture = Tokens.captureRandomOrigin(base)
+	local boss = actor(entry)
+	boss.image, boss.add_mos = "invis.png", {{image=entry.image, display_h=2, display_y=-1}}
+	boss.name, boss.define_as, boss.unique, boss.randboss = "Inquisitor Test", "RANDOM_BOSS_X", "Inquisitor Test", true
+	equal(Tokens.recordRandomOrigin(boss, capture, "RANDOM_BOSS_X"), nil, "batch X non-unique tall random boss stays native")
+	equal(Tokens.identify(boss), nil, "batch X non-unique tall random boss identify")
+end
+-- A random boss made from a flat entry keeps that token.
+do
+	local entry = Tokens.by_id["orc-fighter"]
+	local capture = Tokens.captureRandomOrigin(actor(entry))
+	local boss = actor(entry)
+	boss.name, boss.define_as, boss.unique, boss.randboss = "Fighter Test", "RANDOM_BOSS_XF", "Fighter Test", true
+	equal(Tokens.recordRandomOrigin(boss, capture, "RANDOM_BOSS_XF"), "orc-fighter", "batch X flat random boss keeps the orc fighter token")
+	equal(Tokens.identify(boss), "orc-fighter", "batch X flat random boss identify")
+end
+-- The new bodies cannot borrow their siblings' names or images.
+for _, group in ipairs({{"giant-acid-ant", "giant-army-ant", "giant-black-ant", "giant-carpenter-ant", "giant-fire-ant", "giant-green-ant"},
+	{"telugoroth", "greater-telugoroth", "teluvorta"}, {"skeleton-assassin", "skeleton-warrior", "skeleton-magus"},
+	{"assassin", "rogue", "thief", "assassin-lord", "orc-assassin"}, {"orc-fighter", "orc-warrior", "orc-soldier", "orc-archer"},
+	{"blue-crystal", "white-crystal", "red-crystal", "black-crystal", "crimson-crystal"},
+	{"yaech-psion", "yaech-mindslayer", "yaech-hunter", "yaech-diver"}, {"elven-corruptor", "elven-mage", "elven-cultist", "grand-corruptor"},
+	{"dread", "banshee", "shade-of-telos", "kors-fury"}, {"devourer", "bloated-horror", "weirdling-beast"}}) do
+	for _, id in ipairs(group) do
+		for _, other in ipairs(group) do
+			if id ~= other and Tokens.by_id[id] and Tokens.by_id[other] then
+				local a = actor(Tokens.by_id[id])
+				a.image = Tokens.by_id[other].image
+				equal(Tokens.identify(a), nil, "batch X sibling cannot borrow image "..id.." <- "..other)
+				a = actor(Tokens.by_id[id])
+				a.name = Tokens.by_id[other].name
+				equal(Tokens.identify(a), nil, "batch X body cannot wear another sibling's name "..id.." as "..other)
+			end
+		end
+	end
+end
+-- Look-alikes stay native (other names on the same PNGs, neighbours that were not selected).
+for _, excluded in ipairs({
+	{name="giant acid ant", type="insect", subtype="ant", image="npc/black_ant.png"},
+	{name="giant army ant", type="insect", subtype="ant", image="npc/acid_ant.png"},
+	{name="giant black ant", type="insect", subtype="ant", image="npc/acid_ant.png"},
+	{name="ultimate telugoroth", type="elemental", subtype="temporal", image="invis.png", add_mos={{image="npc/elemental_temporal_ultimate_telugoroth.png", display_h=2, display_y=-1}}},
+	{name="greater teluvorta", type="elemental", subtype="temporal", image="invis.png", add_mos={{image="npc/elemental_temporal_greater_teluvorta.png", display_h=2, display_y=-1}}},
+	{name="teluvorta", type="elemental", subtype="temporal", image="npc/elemental_temporal_greater_telugoroth.png"},
+	{name="greater telugoroth", type="elemental", subtype="temporal", image="npc/elemental_temporal_telugoroth.png"},
+	{name="shadowblade", type="humanoid", subtype="human", image="npc/humanoid_human_assassin.png", define_as="THIEF_ASSASSIN"},
+	{name="assassin", type="humanoid", subtype="human", image="npc/humanoid_human_assassin.png"},
+	{name="orc elite fighter", type="humanoid", subtype="orc", image="npc/humanoid_orc_orc_fighter.png", define_as="ORC_ELITE_FIGHTER"},
+	{name="orc fighter", type="humanoid", subtype="orc", image="npc/humanoid_orc_orc_soldier.png"},
+	{name="multi-hued crystal", type="immovable", subtype="crystal", image="npc/crystal_blue.png"},
+	{name="skeleton assassin", type="undead", subtype="skeleton", image="npc/undead_skeleton_skeleton_warrior.png"},
+	{name="elven corruptor", type="humanoid", subtype="elf", image="npc/humanoid_shalore_elven_corruptor.png"},
+	{name="yaech psion", type="humanoid", subtype="yeek", image="npc/humanoid_yaech_yaech_psion.png"},
+	{name="devourer", type="horror", subtype="corrupted", image="npc/horror_eldritch_devourer.png"},
+	-- (uruivellas was not selected here; batch Y maps it as native-tall.)
+}) do
+	equal(Tokens.identify(excluded), nil, "batch X look-alike stays native "..excluded.name.." "..tostring(excluded.define_as))
+end
+
+-- Batch Y: the twelve identities after batch X (uruivellas, thaurhereg, orc
+-- corruptor, temporal stalker, broken golem, golem, blade horror, animated mummy
+-- wrappings, grizzly bear, weaver patriarch, luminous horror, necrotic mass). All
+-- are non-unique. Only the blade horror binds a define_as (BLADEHORROR); six are
+-- native-tall (native_tall=true); none can reach Flame of Urh'Rok, so there is no
+-- opt-in.
+local batch_y = {"uruivellas", "thaurhereg", "orc-corruptor", "temporal-stalker", "broken-golem", "golem", "blade-horror",
+	"animated-mummy-wrappings", "grizzly-bear", "weaver-patriarch", "luminous-horror", "necrotic-mass"}
+local names_y = {uruivellas="uruivellas", thaurhereg="thaurhereg", ["orc-corruptor"]="orc corruptor", ["temporal-stalker"]="temporal stalker",
+	["broken-golem"]="broken golem", golem="golem", ["blade-horror"]="blade horror", ["animated-mummy-wrappings"]="animated mummy wrappings",
+	["grizzly-bear"]="grizzly bear", ["weaver-patriarch"]="weaver patriarch", ["luminous-horror"]="luminous horror", ["necrotic-mass"]="necrotic mass"}
+local defines_y = {["blade-horror"]="BLADEHORROR"}
+local tall_y = {uruivellas=true, thaurhereg=true, ["temporal-stalker"]=true, ["blade-horror"]=true, ["grizzly-bear"]=true, ["necrotic-mass"]=true}
+for _, id in ipairs(batch_y) do
+	local entry = Tokens.by_id[id]
+	if entry == nil then error("batch Y catalog entry missing: "..id) end
+	equal(entry.name, names_y[id], "batch Y exact name "..id)
+	equal(entry.define_as, defines_y[id], "batch Y define_as binding "..id)
+	equal(entry.unique, nil, "batch Y non-unique "..id)
+	equal(entry.native_tall, tall_y[id] and true or nil, "batch Y native_tall flag "..id)
+	equal(entry.urh_rok_form, nil, "batch Y no urh_rok_form flag "..id)
+	equal(Tokens.identify(actor(entry)), id, "batch Y exact identity "..id)
+	local a = actor(entry)
+	a.tint_r, a.tint_g, a.tint_b = 0, 0, 0
+	equal(Tokens.identify(a), id, "batch Y tint is colour only "..id)
+	a = actor(entry)
+	a.color_r, a.color_g, a.color_b = 0, 0, 185
+	equal(Tokens.identify(a), id, "batch Y colour modulation keeps the token "..id)
+	a = actor(entry)
+	a.image = "invis.png"
+	a.add_mos = {{image=entry.image, display_h=2, display_y=-1}}
+	equal(Tokens.identify(a), tall_y[id] and id or nil, "batch Y tall body accepted only for native_tall entries "..id)
+	if tall_y[id] then
+		a.add_mos = {{image=entry.image, display_h=2, display_y=-1}, {image="npc/other.png"}}
+		equal(Tokens.identify(a), nil, "batch Y tall body with a second overlay stays native "..id)
+		a.add_mos = {{image="npc/other.png", display_h=2, display_y=-1}}
+		equal(Tokens.identify(a), nil, "batch Y tall body naming another PNG stays native "..id)
+		a.add_mos = {{image=entry.image, display_h=2, display_y=-1, shader="x"}}
+		equal(Tokens.identify(a), nil, "batch Y tall body with extra keys stays native "..id)
+		a.add_mos = {{image=entry.image, display_h=3, display_y=-1}}
+		equal(Tokens.identify(a), nil, "batch Y tall body with other dimensions stays native "..id)
+		a.add_mos = {{image=entry.image, display_h=2, display_y=-1}, {_isshaderaura=true, image="shockbolt/aura.png"}}
+		equal(Tokens.identify(a), id, "batch Y tall body with shader aura bookkeeping "..id)
+		-- Single image (nicer_tiles off): the flat native image is accepted too.
+		a = actor(entry)
+		a.image, a.add_mos = entry.image, nil
+		equal(Tokens.identify(a), id, "batch Y single native image with nicer_tiles off "..id)
+	end
+	a = actor(entry)
+	a.type = entry.type == "undead" and "humanoid" or "undead"
+	equal(Tokens.identify(a), nil, "batch Y type changed "..id)
+	a = actor(entry)
+	a.subtype = "other-subtype"
+	equal(Tokens.identify(a), nil, "batch Y subtype changed "..id)
+	a = actor(entry)
+	a.shader = "some_shader"
+	equal(Tokens.identify(a), nil, "batch Y shader keeps native art "..id)
+	a = actor(entry)
+	a.moddable_tile = "some_doll"
+	equal(Tokens.identify(a), nil, "batch Y paper-doll actor keeps native art "..id)
+	a = actor(entry)
+	a.anim = {}
+	equal(Tokens.identify(a), nil, "batch Y animation keeps native art "..id)
+	a = actor(entry)
+	a.add_displays = {{image="npc/iceblock.png"}}
+	equal(Tokens.identify(a), nil, "batch Y frozen/pinned add_displays keep native art "..id)
+	a = actor(entry)
+	a.unique = true
+	equal(Tokens.identify(a), nil, "batch Y non-unique entry rejects an unknown unique "..id)
+	a = actor(entry)
+	a.define_as = "SOME_DEFINE_AS"
+	equal(Tokens.identify(a), nil, "batch Y unexpected define_as "..id)
+	if defines_y[id] then
+		a = actor(entry)
+		a.define_as = nil
+		equal(Tokens.identify(a), nil, "batch Y bound entry needs its define_as "..id)
+	end
+	a = actor(entry)
+	a.image = "npc/some_other_image.png"
+	equal(Tokens.identify(a), nil, "batch Y other image keeps native art "..id)
+	a = actor(entry)
+	a.__old_type = {entry.type, entry.subtype}
+	a.type, a.subtype = "demon", "major"
+	a.sustain_talents = {T_FLAME_OF_URH_ROK = {}}
+	-- A demon/major entry already is that body, so the sentinel changes nothing; every other body must stay native.
+	equal(Tokens.identify(a), entry.type == "demon" and id or nil, "batch Y Flame of Urh'Rok form is not supported "..id)
+	a = actor(entry)
+	a.add_mos = {{_isshaderaura=true, image="shockbolt/aura.png"}}
+	equal(Tokens.identify(a), id, "batch Y shader aura entry is ignored "..id)
+	-- No variants or aliases: a summon shape carrying a wild-summon rename or another PNG stays native.
+	a = actor(entry)
+	a.summoner, a.ai, a.wild_gift_summon = {}, "summoned", true
+	equal(Tokens.identify(a), id, "batch Y a same-body summon is the same exact leaf "..id)
+	a.name = entry.name.." (wild summon)"
+	equal(Tokens.identify(a), nil, "batch Y the wild-summon rename is not covered "..id)
+	a = actor(entry)
+	a.summoner, a.ai, a.summoner_gain_exp, a.wild_gift_summon = {}, "summoned", true, true
+	a.image = "npc/summoner_ritch.png"
+	equal(Tokens.identify(a), nil, "batch Y no summon PNG alias "..id)
+end
+-- Birth sustains are temporary values, shields and particles only.
+for id, talents in pairs({thaurhereg={"T_BONE_SHIELD"}, ["orc-corruptor"]={"T_BONE_SHIELD"}, ["temporal-stalker"]={"T_STEALTH"},
+	["blade-horror"]={"T_KINETIC_AURA", "T_KINETIC_SHIELD"}, ["luminous-horror"]={"T_CHANT_OF_FORTITUDE", "T_PROVIDENCE"},
+	["weaver-patriarch"]={"T_SPIN_FATE"}}) do
+	local a = actor(Tokens.by_id[id])
+	a.sustain_talents = {}
+	for _, tid in ipairs(talents) do a.sustain_talents[tid] = {} end
+	a.__particles = {{}}
+	a.resists = {COLD=50}
+	a.stealth = 30
+	equal(Tokens.identify(a), id, "batch Y birth sustain keeps the body "..id)
+end
+-- The player's alchemist golem (talents/spells/golemancy.lua) shares the golem name, type and subtype but uses another
+-- PNG and a paper doll, so it keeps its native display.
+do
+	local a = actor(Tokens.by_id["golem"])
+	a.image, a.moddable_tile = "npc/alchemist_golem.png", "runic_golem"
+	equal(Tokens.identify(a), nil, "batch Y the alchemist golem of the player stays native")
+	a = actor(Tokens.by_id["golem"])
+	a.image = "npc/alchemist_golem.png"
+	equal(Tokens.identify(a), nil, "batch Y an alchemist golem PNG alone is not the golem token")
+	a = actor(Tokens.by_id["golem"])
+	a.moddable_tile = "runic_golem"
+	equal(Tokens.identify(a), nil, "batch Y a paper-doll golem stays native")
+end
+-- heart-gloom renames non-unique bears; the renamed grizzly (a native-tall body) keeps the grizzly token.
+do
+	local a = actor(Tokens.by_id["grizzly-bear"])
+	a.name = "gloomy grizzly bear"
+	equal(Tokens.identify(a), "grizzly-bear", "batch Y a gloomy grizzly bear wears the grizzly token")
+	a.image, a.add_mos = "invis.png", {{image="npc/grizzly_bear.png", display_h=2, display_y=-1}}
+	equal(Tokens.identify(a), "grizzly-bear", "batch Y a gloomy native-tall grizzly wears the grizzly token")
+end
+-- A random boss made from a non-unique native-tall entry keeps native art (only unique tall bodies qualify).
+do
+	local entry = Tokens.by_id["uruivellas"]
+	local base = actor(entry)
+	base.image, base.add_mos = "invis.png", {{image=entry.image, display_h=2, display_y=-1}}
+	local capture = Tokens.captureRandomOrigin(base)
+	local boss = actor(entry)
+	boss.image, boss.add_mos = "invis.png", {{image=entry.image, display_h=2, display_y=-1}}
+	boss.name, boss.define_as, boss.unique, boss.randboss = "Demon Test", "RANDOM_BOSS_Y", "Demon Test", true, true
+	equal(Tokens.recordRandomOrigin(boss, capture, "RANDOM_BOSS_Y"), nil, "batch Y non-unique tall random boss stays native")
+	equal(Tokens.identify(boss), nil, "batch Y non-unique tall random boss identify")
+end
+-- A random boss made from a flat entry keeps that token.
+do
+	local entry = Tokens.by_id["orc-corruptor"]
+	local capture = Tokens.captureRandomOrigin(actor(entry))
+	local boss = actor(entry)
+	boss.name, boss.define_as, boss.unique, boss.randboss = "Corruptor Test", "RANDOM_BOSS_YF", "Corruptor Test", true
+	equal(Tokens.recordRandomOrigin(boss, capture, "RANDOM_BOSS_YF"), "orc-corruptor", "batch Y flat random boss keeps the orc corruptor token")
+	equal(Tokens.identify(boss), "orc-corruptor", "batch Y flat random boss identify")
+end
+-- The new bodies cannot borrow their siblings' names or images.
+for _, group in ipairs({{"uruivellas", "thaurhereg", "dolleg", "kryl-feijan", "minotaur"}, {"broken-golem", "golem", "atamathon"},
+	{"orc-corruptor", "orc-warrior", "orc-blood-mage", "orc-necromancer"}, {"temporal-stalker", "shadow-stalker", "dread"},
+	{"blade-horror", "luminous-horror", "necrotic-mass", "dread"},
+	{"grizzly-bear", "brown-bear", "black-bear", "cave-bear", "war-bear"},
+	{"weaver-patriarch", "weaver-young", "weaver-queen"},
+	{"animated-mummy-wrappings", "rotting-mummy", "ancient-elven-mummy"}}) do
+	for _, id in ipairs(group) do
+		for _, other in ipairs(group) do
+			if id ~= other and Tokens.by_id[id] and Tokens.by_id[other] then
+				local a = actor(Tokens.by_id[id])
+				a.image = Tokens.by_id[other].image
+				equal(Tokens.identify(a), nil, "batch Y sibling cannot borrow image "..id.." <- "..other)
+				a = actor(Tokens.by_id[id])
+				a.name = Tokens.by_id[other].name
+				equal(Tokens.identify(a), nil, "batch Y body cannot wear another sibling's name "..id.." as "..other)
+			end
+		end
+	end
+end
+-- Look-alikes stay native (other names on the same PNGs, neighbours that were not selected).
+for _, excluded in ipairs({
+	{name="Ak'Gishil", type="horror", subtype="eldritch", image="invis.png", unique=true, add_mos={{image="npc/horror_eldritch_blade_horror.png", display_h=2, display_y=-1}}},
+	{name="blade horror", type="horror", subtype="eldritch", image="invis.png", add_mos={{image="npc/horror_eldritch_blade_horror.png", display_h=2, display_y=-1}}},
+	{name="alchemist golem", type="construct", subtype="golem", image="npc/construct_golem_alchemist_golem.png"},
+	{name="golem", type="construct", subtype="golem", image="npc/construct_golem_broken_golem.png"},
+	{name="broken golem", type="construct", subtype="golem", image="npc/construct_golem_golem.png"},
+	{name="weaver matriarch", type="spiderkin", subtype="spider", image="invis.png", add_mos={{image="npc/spiderkin_spider_weaver_matriarch.png", display_h=2, display_y=-1}}},
+	{name="weaver patriarch", type="spiderkin", subtype="spider", image="npc/spiderkin_spider_weaver_young.png"},
+	{name="animated mummy wrappings", type="undead", subtype="mummy", image="npc/undead_mummy_animated_mummy_wrappings.png"},
+	{name="polar bear", type="animal", subtype="bear", image="npc/polar_bear.png"},
+	{name="grizzly bear", type="animal", subtype="bear", image="npc/polar_bear.png"},
+	{name="necrotic abomination", type="undead", subtype="horror", image="invis.png", add_mos={{image="npc/undead_horror_necrotic_abomination.png", display_h=2, display_y=-1}}},
+	{name="necrotic mass", type="undead", subtype="horror", image="invis.png", add_mos={{image="npc/undead_horror_bone_horror.png", display_h=2, display_y=-1}}},
+	{name="uruivellas", type="demon", subtype="major", image="invis.png", add_mos={{image="npc/demon_major_thaurhereg.png", display_h=2, display_y=-1}}},
+	{name="thaurhereg", type="demon", subtype="major", image="invis.png", add_mos={{image="npc/demon_major_uruivellas.png", display_h=2, display_y=-1}}},
+	{name="orc corruptor", type="humanoid", subtype="orc", image="npc/humanoid_orc_orc_blood_mage.png"},
+	{name="luminous horror", type="horror", subtype="corrupted", image="npc/horror_eldritch_luminous_horror.png"},
+}) do
+	equal(Tokens.identify(excluded), nil, "batch Y look-alike stays native "..excluded.name.." "..tostring(excluded.define_as))
+end
 
 print(("token_mapping: %d checks passed; all %d identities and guarded fallbacks verified"):format(checks,#Tokens.catalog))

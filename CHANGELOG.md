@@ -1,5 +1,13 @@
 # Changes
 
+## 0.6.30 — 2026-09-30
+
+- 怪物 Batch T–Y（棋子目录 251→**323** 款）：T（商队、迷路商人、战犬、Yeek Wayist、Nimisil、Slasul、Draebor、Weirdling Beast、Fortress Shadow、Pumpkin 等剧情组）、U（娜迦、里奇、木乃伊、兽人刺客大师、火焰小鬼等）、V（黑水晶、faerlhing／losselhing、dredge、drem master、兽人三法师等）、W（兽人龙战士、熊、重型骨巨人、蚁、banshee 等）、X（酸蚁／行军蚁、assassin、greater telugoroth、dread 等）、Y（uruivellas、thaurhereg、orc corruptor、temporal stalker、两种傀儡、blade horror、蠕动的裹尸布、grizzly bear、weaver patriarch、luminous horror、necrotic mass；玩家炼金傀儡保持原生）；召唤物与同体形沿用棋子。
+- 地形：TW7（城镇石板路、伊格／安格利文耕地、晨曦之门棕榈）、S10a（格鲁希纳克部落、史莱姆通道、淤泥巢穴，新黏液族）、S10b（沃尔部落，新哥特族）、S11（拉杆、拉杆门、沃尔蜡烛）、S12（伤害岩浆地面、沃尔军械库深水）、S13（阿尔德胡格不稳定虫洞、恐惧王座／巅峰深水）、S14（传送门／远行传送门、巅峰法球门与圣所门）、S15（教程 L1、梦境 L1）、S16（天赋位面换层钩子、恶魔空间法术位面、时空避难所）、S17（梦境空间，新云地板族）。设置说明（棋盘地形）列出新增区域，中英文键结构一致。
+- 本版不含：竞技场、无尽地下城；永恒／星系／梦境 L2 保持原生。
+- 地名修正：地形设置说明中 9 个区域中文名改为官方译名（古老树林、斯拉伊什沼泽、罗兰精灵营地、恐惧王座、深渊咆哮、不起眼的洞穴、黑暗地宫、宁静的草地、布莱亚的巢穴），简繁同步。
+- 外测指南（新建 `docs/external-test-v0630/`）更新。正式归档、安装冒烟与测试见 [0.6.30 证据](evidence/runtime-v0630/README.md)。
+
 ## 0.6.29 — 2026-09-29
 
 - 怪物 Batch O–S（棋子目录 191→**251** 款）：O（泥怪、巨型虫、小白兔等 12 款）、P（雪巨人、米诺陶、山岭巨魔、食人魔、孔克雷夫治疗师 12 款）、Q（龙幼仔、成年龙、Rantha、Briagh、Ukllmswwik 12 款）、R（quasit、编织者、兽人系、蚁、战犬、Gnarg、Rak'shor、grannor'vor 12 款）、S（太阳骑士、Charred Scar 精灵、Keepsake 同伴、亡灵唯一怪 12 款）。

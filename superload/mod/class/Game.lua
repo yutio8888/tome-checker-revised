@@ -187,6 +187,21 @@ function _M:onTurn(...)
  return result
 end
 
+-- S16: Fearscape and Temporal Reprieve swap game.zone/game.level inside an
+-- onTickEnd callback (no Game:changeLevel, so the hook in hooks/load.lua never
+-- runs). Display only: after a tick that swapped into or out of one of those
+-- planes (CheckerTerrain.directSwap), apply the current settings once, as the
+-- changeLevel hook does. Any other level change is left to that hook.
+local tick=_M.tick
+function _M:tick(...)
+ local zone,level=self.zone,self.level
+ local result=tick(self,...)
+ if self.level~=level and self.level and require('mod.class.CheckerTerrain').directSwap(zone,self.zone) then
+  self:checkerApplySettings()
+ end
+ return result
+end
+
 function _M:checkerRefreshVisuals()
  if not self.level or not self.level.map then return end
  local m=self.level.map

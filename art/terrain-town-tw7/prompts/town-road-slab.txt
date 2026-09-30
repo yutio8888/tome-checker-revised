@@ -1,0 +1,13 @@
+Use case: stylized-concept. Deliver ONE square, opaque, full-bleed terrain material master for a tabletop game board: GRASS_ROAD_STONE / FLOOR_ROAD_STONE / COBBLESTONE town stone road. Request 1024 x 1024 pixels; preserve actual output resolution.
+
+Subject and material: A town road paved with large flat dressed stone slabs seen from straight above: rectangular and square flagstones of pale warm limestone in an irregular ashlar bond of mixed sizes (about three to five slabs across the square), tight narrow joints with a little packed grit, tops worn smooth. Calm and even.
+Palette: Pale warm grey-beige and light buff stone with faint ochre and cool grey variation between slabs; joints a soft mid brown-grey, never black. Light overall: clearly lighter than green grass and than dark stone building walls; warmer and more clearly slab-jointed than a plain grey stone plaza floor.
+Relationship to adjacent materials: At 48 pixels it must read as a flat, walkable paved road that game pieces stand on: a few large light slab shapes with thin joints; low internal contrast so characters stay readable; distinct from grass by its pale warm stone colour and from walls by being much lighter; no dark cobbles.
+Composition and edge contract: Edge-to-edge overhead paving filling the whole square with even density and a non-directional slab pattern; no kerb, border, centre line, gutter, grass verge, deep crack, hole, step, object or shadow.
+Gameplay contract (do not invent additional rules): Walkable road only. Paint no kerb, wall, step, stairs, grate, drain, puddle, hazard, marking, character, symbol or text.
+
+Flat overhead printed-board surface; restrained matte paint texture and broad low-contrast variations. Match the supplied accepted reference's scale, palette hierarchy and upper-left lighting convention. No creature, disc, freestanding prop, text, symbol, hazard badge, frame, vignette or cast shadow implying an obstacle. Texture must reach all four edges. Grid seams, parity modulation, neighbour masks and rule overlays are assembled by the exporter, not painted as an atlas here. Do not create decorative cracks that resemble an interactive exit. Do not claim a seamless result without a separate tiled preview check. One master only.
+
+Reference roles:
+Image 1: identity — Native town road: an old paved stone road through the town. Keep the laid-stone road identity but make it large pale flat slabs instead of dark cobbles, and fill the whole square.
+Image 2: style — Accepted board floor master (TW6): flat overhead matte finish, low contrast, scale, upper-left light and the calm printed-board surface. Not its woven material or tan palette.

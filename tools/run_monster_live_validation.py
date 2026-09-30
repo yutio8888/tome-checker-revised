@@ -44,6 +44,12 @@ OUT_P = ADDON / 'evidence/monster-batch-p-live-20260929'
 OUT_Q = ADDON / 'evidence/monster-batch-q-live-20260929'
 OUT_R = ADDON / 'evidence/monster-batch-r-live-20260929'
 OUT_S = ADDON / 'evidence/monster-batch-s-live-20260929'
+OUT_T = ADDON / 'evidence/monster-batch-t-live-20260930'
+OUT_BU = ADDON / 'evidence/monster-batch-u-live-20260930'
+OUT_BV = ADDON / 'evidence/monster-batch-v-live-20260930'
+OUT_BW = ADDON / 'evidence/monster-batch-w-live-20260930'
+OUT_BX = ADDON / 'evidence/monster-batch-x-live-20260930'
+OUT_BY = ADDON / 'evidence/monster-batch-y-live-20260930'
 OUT_U = ADDON / 'evidence/token-summons-20260929'
 
 A = ['Wrathroot', 'Snaproot', 'Minotaur of the Labyrinth', 'Sandworm Queen', 'Corrupted Sand Wyrm',
@@ -787,6 +793,109 @@ EXPECT.update({'human sun-paladin': 'human-sun-paladin', 'High Sun-Paladin Rodmo
                'Berethh': 'berethh', 'Companion Warrior': 'companion-warrior', 'Companion Archer': 'companion-archer',
                'Greater Mummy Lord': 'greater-mummy-lord', "Kor's Fury": 'kors-fury', 'Borfast the Broken': 'borfast'})
 
+# Batch T (2026-09-30, HEAD 8ad5f105): caravan trio, Lost Merchant, war dog, Yeek Wayist, Nimisil, Slasul (unique tall,
+# bound by define_as), Draebor, Yiilkgur's Weirdling Beast / Fortress Shadow / Pumpkin. Same-PNG checks: war dog vs dire wolf
+# and corrupted war dog (canine_dw.png); caravan spectator PNGs vs ring-of-blood's spectator and the shadow claws.
+T = ['caravan merchant', 'caravan guard', 'caravan porter', 'Lost Merchant', 'war dog', 'Yeek Wayist', 'Nimisil', 'Slasul',
+     'Draebor, the Imp', 'Weirdling Beast', 'Fortress Shadow', 'Pumpkin, the little kitty']
+NATIVE_T = ['spectator', 'shadow claw']
+PLACE_SRC_T = {'caravan merchant': '/data/zones/keepsake-meadow/npcs.lua', 'caravan guard': '/data/zones/keepsake-meadow/npcs.lua',
+               'caravan porter': '/data/zones/keepsake-meadow/npcs.lua', 'Lost Merchant': '/data/zones/thieves-tunnels/npcs.lua',
+               'war dog': '/data/zones/keepsake-meadow/npcs.lua', 'Yeek Wayist': '/data/zones/halfling-ruins/npcs.lua',
+               'Nimisil': '/data/zones/maze/npcs.lua', 'Slasul': '/data/zones/temple-of-creation/npcs.lua',
+               'Draebor, the Imp': '/data/zones/demon-plane/npcs.lua', 'Weirdling Beast': '/data/zones/shertul-fortress/npcs.lua',
+               'Fortress Shadow': '/data/zones/shertul-fortress/npcs.lua', 'Pumpkin, the little kitty': '/data/zones/shertul-fortress/npcs.lua'}
+PLACE_SRC_L.update(PLACE_SRC_T)
+EXPECT.update({'caravan merchant': 'caravan-merchant', 'caravan guard': 'caravan-guard', 'caravan porter': 'caravan-porter',
+               'Lost Merchant': 'lost-merchant', 'war dog': 'war-dog', 'Yeek Wayist': 'yeek-wayist', 'Nimisil': 'nimisil',
+               'Slasul': 'slasul', 'Draebor, the Imp': 'draebor', 'Weirdling Beast': 'weirdling-beast',
+               'Fortress Shadow': 'fortress-shadow', 'Pumpkin, the little kitty': 'pumpkin'})
+
+# Batch U (2026-09-30, HEAD 90dc1001): ritch trio, naga tide huntress / psyren, ancient elven mummy, orc master / grand master
+# assassin, fire imp, gaeramarth, ninurlhing, fate weaver. Negatives: tutorial "hairy spider" (TUT_SPIDER_3, borrows the
+# ninurlhing PNG) stays native; Ritch Great Hive Mother keeps its own id. Wild Gift Ritch Flamespitter wears ritch-flamespitter.
+BU = ['ritch flamespitter', 'ritch impaler', 'chitinous ritch', 'naga tide huntress', 'naga psyren', 'ancient elven mummy',
+      'orc master assassin', 'orc grand master assassin', 'fire imp', 'gaeramarth', 'ninurlhing', 'fate weaver',
+      'ritch flamespitter (wild summon)', '火焰里奇 (野性召唤)']
+NATIVE_BU = ['hairy spider']
+PLACE_SRC_BU = {'naga tide huntress': '/data/general/npcs/naga.lua', 'naga psyren': '/data/general/npcs/naga.lua',
+                'orc master assassin': '/data/general/npcs/orc.lua', 'orc grand master assassin': '/data/general/npcs/orc.lua',
+                'fire imp': '/data/general/npcs/minor-demon.lua', 'gaeramarth': '/data/general/npcs/spider.lua',
+                'ninurlhing': '/data/general/npcs/spider.lua', 'ritch flamespitter': '/data/zones/ritch-tunnels/npcs.lua',
+                'ritch impaler': '/data/zones/ritch-tunnels/npcs.lua', 'chitinous ritch': '/data/zones/ritch-tunnels/npcs.lua',
+                'ancient elven mummy': '/data/zones/ancient-elven-ruins/npcs.lua', 'fate weaver': '/data/zones/unhallowed-morass/npcs.lua',
+                'Ritch Great Hive Mother': '/data/zones/ritch-tunnels/npcs.lua'}
+PLACE_SRC_L.update(PLACE_SRC_BU)
+EXPECT.update({'ritch flamespitter': 'ritch-flamespitter', 'ritch impaler': 'ritch-impaler', 'chitinous ritch': 'chitinous-ritch',
+               'naga tide huntress': 'naga-tide-huntress', 'naga psyren': 'naga-psyren', 'ancient elven mummy': 'ancient-elven-mummy',
+               'orc master assassin': 'orc-master-assassin', 'orc grand master assassin': 'orc-grand-master-assassin',
+               'fire imp': 'fire-imp', 'gaeramarth': 'gaeramarth', 'ninurlhing': 'ninurlhing', 'fate weaver': 'fate-weaver',
+               'ritch flamespitter (wild summon)': 'ritch-flamespitter', '火焰里奇 (野性召唤)': 'ritch-flamespitter',
+               'Ritch Great Hive Mother': 'ritch-hive-mother'})
+
+# Batch V (2026-09-30, HEAD c5b2888f): black crystal, faerlhing, losselhing, dredge, dolleg and eternal bone giant (native_tall),
+# drem master, orc pyromancer / cryomancer / blood mage, bloated horror, yaech hunter. The Necromancer Assemble minion
+# (e_bone_giant) wears the eternal-bone-giant token. None of these identities know Stealth natively: the stealth step teaches it.
+BV = ['black crystal', 'faerlhing', 'losselhing', 'dredge', 'dolleg', 'eternal bone giant', 'drem master', 'orc pyromancer',
+      'orc cryomancer', 'bloated horror', 'yaech hunter', 'orc blood mage']
+NATIVE_BV = []
+PLACE_SRC_BV = {'black crystal': '/data/general/npcs/crystal.lua', 'faerlhing': '/data/general/npcs/spider.lua',
+                'losselhing': '/data/general/npcs/spider.lua', 'dredge': '/data/general/npcs/horror_temporal.lua',
+                'dolleg': '/data/general/npcs/major-demon.lua', 'eternal bone giant': '/data/general/npcs/bone-giant.lua',
+                'drem master': '/data/general/npcs/horror-corrupted.lua', 'orc pyromancer': '/data/general/npcs/orc-vor.lua',
+                'orc cryomancer': '/data/general/npcs/orc-vor.lua', 'bloated horror': '/data/general/npcs/horror.lua',
+                'yaech hunter': '/data/general/npcs/yaech.lua', 'orc blood mage': '/data/general/npcs/orc-rak-shor.lua'}
+PLACE_SRC_L.update(PLACE_SRC_BV)
+EXPECT.update({n: n.replace(' ', '-') for n in BV})
+
+# Batch W (2026-09-30, HEAD 427cb74e): fiery/icy orc wyrmic (define_as ORC_FIRE_WYRMIC / ORC_ICE_WYRMIC), yaech mindslayer,
+# heavy bone giant (native_tall), cave bear, war bear, grannor'vin, rotting mummy, banshee, giant fire/ice/lightning ant.
+# The Necromancer Assemble minion at talent level 6 is h_bone_giant ("heavy bone giant"); a Lord of Skulls rename stays native.
+BW = ['fiery orc wyrmic', 'icy orc wyrmic', 'yaech mindslayer', 'heavy bone giant', 'cave bear', 'war bear', "grannor'vin",
+      'rotting mummy', 'banshee', 'giant fire ant', 'giant ice ant', 'giant lightning ant']
+NATIVE_BW = []
+PLACE_SRC_BW = {'fiery orc wyrmic': '/data/general/npcs/orc.lua', 'icy orc wyrmic': '/data/general/npcs/orc.lua',
+                'yaech mindslayer': '/data/general/npcs/yaech.lua', 'heavy bone giant': '/data/general/npcs/bone-giant.lua',
+                'cave bear': '/data/general/npcs/bear.lua', 'war bear': '/data/general/npcs/bear.lua',
+                "grannor'vin": '/data/general/npcs/horror-corrupted.lua', 'rotting mummy': '/data/zones/ancient-elven-ruins/npcs.lua',
+                'banshee': '/data/general/npcs/ghost.lua', 'giant fire ant': '/data/general/npcs/ant.lua',
+                'giant ice ant': '/data/general/npcs/ant.lua', 'giant lightning ant': '/data/general/npcs/ant.lua'}
+PLACE_SRC_L.update(PLACE_SRC_BW)
+EXPECT.update({n: n.replace(' ', '-').replace("'", '-') for n in BW})
+
+# Batch X (2026-09-30, HEAD 262a70a6): giant acid/army ant, yaech psion, skeleton assassin, blue crystal, elven corruptor,
+# assassin (define_as THIEF_ASSASSIN; shadowblade shares it and stays native), greater telugoroth (native_tall), teluvorta,
+# dread (also the Dread-talent minion), orc fighter, devourer.
+BX = ['giant acid ant', 'giant army ant', 'yaech psion', 'skeleton assassin', 'blue crystal', 'elven corruptor', 'assassin',
+      'greater telugoroth', 'teluvorta', 'dread', 'orc fighter', 'devourer']
+NATIVE_BX = ['shadowblade']
+PLACE_SRC_BX = {'giant acid ant': '/data/general/npcs/ant.lua', 'giant army ant': '/data/general/npcs/ant.lua',
+                'yaech psion': '/data/general/npcs/yaech.lua', 'skeleton assassin': '/data/general/npcs/skeleton.lua',
+                'blue crystal': '/data/general/npcs/crystal.lua', 'elven corruptor': '/data/general/npcs/elven-caster.lua',
+                'assassin': '/data/general/npcs/thieve.lua', 'greater telugoroth': '/data/general/npcs/telugoroth.lua',
+                'teluvorta': '/data/general/npcs/telugoroth.lua', 'dread': '/data/general/npcs/ghost.lua',
+                'orc fighter': '/data/general/npcs/orc-grushnak.lua', 'devourer': '/data/general/npcs/horror.lua',
+                'shadowblade': '/data/general/npcs/thieve.lua'}
+PLACE_SRC_L.update(PLACE_SRC_BX)
+EXPECT.update({n: n.replace(' ', '-') for n in BX})
+
+# Batch Y (2026-09-30, HEAD 9c8d9bfb): uruivellas, thaurhereg, orc corruptor, temporal stalker, broken golem, golem, blade horror
+# (define_as BLADEHORROR), animated mummy wrappings, grizzly bear, weaver patriarch, luminous horror, necrotic mass.
+# Six are native_tall (uruivellas, thaurhereg, temporal stalker, blade horror, grizzly bear, necrotic mass). The alchemist's player
+# golem (same name/type/subtype as `golem`, own image + moddable_tile) must stay native.
+BY = ['uruivellas', 'thaurhereg', 'orc corruptor', 'temporal stalker', 'broken golem', 'golem', 'blade horror',
+      'animated mummy wrappings', 'grizzly bear', 'weaver patriarch', 'luminous horror', 'necrotic mass']
+NATIVE_BY = []
+PLACE_SRC_BY = {'uruivellas': '/data/general/npcs/major-demon.lua', 'thaurhereg': '/data/general/npcs/major-demon.lua',
+                'orc corruptor': '/data/general/npcs/orc-rak-shor.lua', 'temporal stalker': '/data/general/npcs/horror_temporal.lua',
+                'broken golem': '/data/general/npcs/construct.lua', 'golem': '/data/general/npcs/construct.lua',
+                'blade horror': '/data/general/npcs/horror.lua', 'animated mummy wrappings': '/data/zones/ancient-elven-ruins/npcs.lua',
+                'grizzly bear': '/data/general/npcs/bear.lua', 'weaver patriarch': '/data/general/npcs/spider.lua',
+                'luminous horror': '/data/general/npcs/horror.lua', 'necrotic mass': '/data/general/npcs/horror-undead.lua'}
+PLACE_SRC_L.update(PLACE_SRC_BY)
+EXPECT.update({n: n.replace(' ', '-') for n in BY})
+EXPECT['alchemist golem'] = 'alchemist-golem'
+
 SCENES_M = [
     ('abashed-expanse-L1', 'abashed-expanse', 1, {}, [
         ('natural_or_place', 'losgoroth', (48, 64, 96)),
@@ -1207,6 +1316,30 @@ def summon_lua(kind, name, wild, dx, dy):
                 f"local x,y=spot({dx},{dy});assert(x,'no free grid');"
                 "p:callTalent('T_CALL_OF_THE_MAUSOLEUM','summonGhoul',{{x=x,y=y}},t.minions_list.ghoul);"
                 "return fin(newest(function(a) return a.ghoul_minion=='ghoul' end),'ghoul')")
+    elif kind == 'assemble':
+        body = ("learn('T_CALL_OF_THE_CRYPT');local tc=p:getTalentFromId('T_CALL_OF_THE_CRYPT');local nsk=0;local nss=getfenv(tc.action).necroSetupSummon or necroSetupSummon;"
+                "for _,o in ipairs({{-3,1},{-3,3},{-1,3}}) do local x,y=spot(o[1],o[2]);assert(x,'no free grid');"
+                "local s=nss(p,tc.minions_list.skel_warrior,x,y,0,nil,true);s.never_act=true;nsk=nsk+1 end;"
+                f"if not p:knowTalent('T_ASSEMBLE') then p:learnTalent('T_ASSEMBLE',true,{6 if name == 'heavy bone giant' else 3}) end;"
+                "local tl=p:getTalentLevel('T_ASSEMBLE');local ok,err=pcall(p.forceUseTalent,p,'T_ASSEMBLE',FT);assert(ok,tostring(err));"
+                "local m=newest(function(a) return a.is_bone_giant end);local r=fin(m,'assemble');"
+                "r.talent_level=tl;r.skeletons_made=nsk;r.is_bone_giant=m.is_bone_giant;r.necrotic_minion=m.necrotic_minion;r.type=m.type;r.subtype=m.subtype;"
+                "r.define_as_field=m.define_as or false;r.name_repr=string.format('%q',tostring(m.name));r.name_type=type(m.name);"
+                "local Tk=require 'mod.class.CheckerTokens';local ent;for _,e in ipairs(Tk.catalog) do if e.name==m.name then ent=e.id end end;r.catalog_name_match=ent or false;"
+                "r.level=m.level;r.uid=m.uid;return r")
+    elif kind == 'alchemist_golem':
+        # The real Refit Golem path (golemancy.lua invoke_golem: makeAlchemistGolem, renamed "golem (servant of <hero>)"), then the
+        # same body renamed to the bare "golem" so only the image/moddable_tile guard can keep it native.
+        body = ("local t=p:getTalentFromId('T_REFIT_GOLEM');p.alchemy_golem=nil;t.invoke_golem(p,t);local m=p.alchemy_golem;assert(m and m.x,'no golem');"
+                "local r=fin(m,'alchemist-golem');r.is_alchemist_golem=m.is_alchemist_golem or false;r.moddable_tile=m.moddable_tile or false;"
+                "r.image=m.image;r.name_real=m.name;r.type=m.type;r.subtype=m.subtype;r.summoner=(m.summoner==p);"
+                "m.name='golem';pcall(function() game:checkerRefreshActor(m,'display') end);mb.refresh();mb.focus(m.x,m.y);"
+                "local q=mb.row(m);r.plain=q;r.plain_name=m.name;return r")
+    elif kind == 'dread':
+        body = ("learn('T_DREAD');local ok,err=pcall(p.forceUseTalent,p,'T_DREAD',FT);assert(ok,tostring(err));"
+                "local m=newest(function(a) return a.dread_minion end);local r=fin(m,'dread');"
+                "r.dread_minion=m.dread_minion;r.necrotic_minion=m.necrotic_minion or false;r.type=m.type;r.subtype=m.subtype;"
+                "r.summoner=(m.summoner==p);r.talent_level=p:getTalentLevel('T_DREAD');r.define_as_field=m.define_as or false;return r")
     elif kind == 'worm':
         body = ("p:callTalent('T_WORM_ROT','spawn_carrion_worm',p);"
                 "return fin(newest(function(a) return a.carrion_worm end),'worm')")
@@ -1259,6 +1392,225 @@ SCENES_U = [
     ('ruins-kor-pul-L1', 'ruins-kor-pul', 1, {}, [
         ('natural_or_place', "Kor's Fury", (48, 64, 96)),
         ('urhrok', "Kor's Fury"), ('toggle', "Kor's Fury")]),
+]
+
+def _tt(n):
+    return [('natural_or_place', n, (48, 64, 96)), ('toggle', n), ('toggle_again', n)]
+
+
+SCENES_T = [
+    ('keepsake-meadow-L1', 'keepsake-meadow', 1, {}, [
+        ('natural_or_place', 'caravan merchant', (48, 64, 96)), ('natural_or_place', 'caravan guard', (48, 64, 96)),
+        ('natural_or_place', 'caravan porter', (48, 64, 96)), ('natural_or_place', 'war dog', (48, 64, 96)),
+        ('natural_or_place', 'corrupted war dog', (48, 64, 96)), ('natural_or_place', 'dire wolf', (48, 64, 96)),
+        ('toggle', 'war dog'), ('toggle_again', 'war dog'), ('toggle', 'caravan merchant'), ('toggle_again', 'caravan merchant'),
+        ('toggle', 'caravan guard'), ('toggle_again', 'caravan guard'), ('toggle', 'caravan porter'), ('toggle_again', 'caravan porter'),
+        ('toggle', 'corrupted war dog'), ('toggle', 'dire wolf'),
+        ('native', 'spectator', '/data/zones/ring-of-blood/npcs.lua'),
+        ('native', 'shadow claw', '/data/zones/keepsake-meadow/npcs.lua')]),
+    ('thieves-tunnels-L2', 'thieves-tunnels', 2, {}, _tt('Lost Merchant')),
+    ('halfling-ruins-L4', 'halfling-ruins', 4, {}, _tt('Yeek Wayist')),
+    ('maze-L1', 'maze', 1, {}, _tt('Nimisil')),
+    ('temple-of-creation-L3', 'temple-of-creation', 3, {}, _tt('Slasul')),
+    ('demon-plane-L1', 'demon-plane', 1, {}, _tt('Draebor, the Imp')),
+    ('shertul-fortress-L1', 'shertul-fortress', 1, {}, [
+        ('natural_or_place', 'Weirdling Beast', (48, 64, 96)), ('natural_or_place', 'Fortress Shadow', (48, 64, 96)),
+        ('natural_or_place', 'Pumpkin, the little kitty', (48, 64, 96)),
+        ('toggle', 'Weirdling Beast'), ('toggle_again', 'Weirdling Beast'),
+        ('toggle', 'Fortress Shadow'), ('toggle_again', 'Fortress Shadow'),
+        ('toggle', 'Pumpkin, the little kitty'), ('toggle_again', 'Pumpkin, the little kitty'),
+        ('urhrok', 'Weirdling Beast'),
+        ('forcesus', 'Weirdling Beast', 'T_INVISIBILITY')]),
+    # Run only with MLV_LOCALE=zh_hans (--only shertul-fortress-zh-L1): native entity names stay English, only display strings translate.
+    ('shertul-fortress-zh-L1', 'shertul-fortress', 1, {}, [
+        ('natural_or_place', 'Weirdling Beast', (48, 64)), ('toggle', 'Weirdling Beast'), ('toggle_again', 'Weirdling Beast'),
+        ('natural_or_place', 'Fortress Shadow', (64,)), ('natural_or_place', 'Pumpkin, the little kitty', (64,)),
+        ('natural_or_place', 'Slasul', (64,))]),
+    ('mark-lineup-L1', 'mark-spellblaze', 1, {}, [
+        ('lineup', 'batch-t',
+         [('Slasul', '/data/zones/temple-of-creation/npcs.lua'), ('caravan porter', '/data/zones/keepsake-meadow/npcs.lua'),
+          ('Lost Merchant', '/data/zones/thieves-tunnels/npcs.lua'), ('war dog', '/data/zones/keepsake-meadow/npcs.lua'),
+          ('Fortress Shadow', '/data/zones/shertul-fortress/npcs.lua'), ('Yeek Wayist', '/data/zones/halfling-ruins/npcs.lua')],
+         [(0, 1), (-3, 3), (-1, 3), (1, 3), (3, 3), (0, 5)])]),
+]
+
+GIFT_TALENTS['ritch'] = 'T_RITCH_FLAMESPITTER'
+
+
+def _bu(n):
+    return [('natural_or_place', n, (48, 64, 96)), ('toggle', n), ('toggle_again', n)]
+
+
+SCENES_BU = [
+    ('ritch-tunnels-L3', 'ritch-tunnels', 3, {}, [
+        ('natural_or_place', 'ritch flamespitter', (48, 64, 96)), ('natural_or_place', 'ritch impaler', (48, 64, 96)),
+        ('natural_or_place', 'chitinous ritch', (48, 64, 96)), ('natural_or_place', 'Ritch Great Hive Mother', (48, 64, 96)),
+        ('toggle', 'ritch flamespitter'), ('toggle_again', 'ritch flamespitter'),
+        ('toggle', 'ritch impaler'), ('toggle_again', 'ritch impaler'),
+        ('toggle', 'chitinous ritch'), ('toggle_again', 'chitinous ritch'),
+        ('toggle', 'Ritch Great Hive Mother')]),
+    ('temple-of-creation-L2', 'temple-of-creation', 2, {}, [
+        ('natural_or_place', 'naga tide huntress', (48, 64, 96)), ('natural_or_place', 'naga psyren', (48, 64, 96)),
+        ('toggle', 'naga tide huntress'), ('toggle_again', 'naga tide huntress'),
+        ('toggle', 'naga psyren'), ('toggle_again', 'naga psyren')]),
+    ('ancient-elven-ruins-L3', 'ancient-elven-ruins', 3, {}, _bu('ancient elven mummy')),
+    ('reknor-L2', 'reknor', 2, {}, [
+        ('natural_or_place', 'orc master assassin', (48, 64, 96)), ('natural_or_place', 'orc grand master assassin', (48, 64, 96)),
+        ('toggle', 'orc master assassin'), ('toggle_again', 'orc master assassin'),
+        ('toggle', 'orc grand master assassin'), ('toggle_again', 'orc grand master assassin'),
+        ('sustain', 'orc master assassin', '-birth'), ('sustain', 'orc grand master assassin', '-birth'),
+        ('stealth', 'orc master assassin'), ('stealth', 'orc grand master assassin')]),
+    ('demon-plane-L1', 'demon-plane', 1, {}, _bu('fire imp')),
+    ('ardhungol-L3', 'ardhungol', 3, {}, [
+        ('natural_or_place', 'gaeramarth', (48, 64, 96)), ('natural_or_place', 'ninurlhing', (48, 64, 96)),
+        ('toggle', 'gaeramarth'), ('toggle_again', 'gaeramarth'), ('toggle', 'ninurlhing'), ('toggle_again', 'ninurlhing'),
+        ('sustain', 'gaeramarth', '-birth'), ('sustain', 'ninurlhing', '-birth'), ('stealth', 'gaeramarth'),
+        ('native', 'hairy spider', '/data/zones/tutorial-combat-stats/npcs.lua', 'TUT_SPIDER_3')]),
+    ('unhallowed-morass-L3', 'unhallowed-morass', 3, {}, _bu('fate weaver')),
+    ('summons-ritch-L1', 'trollmire', 1, {}, [
+        ('summon', 'ritch', 'ritch flamespitter', False, (2, 1), 'ritch-flamespitter'), ('toggle', 'ritch flamespitter'),
+        ('summon', 'ritch', 'ritch flamespitter (wild summon)', True, (-2, 1), 'ritch-flamespitter'),
+        ('toggle', 'ritch flamespitter (wild summon)')]),
+    # Run only with MLV_LOCALE=zh_hans (--only summons-ritch-zh-L1).
+    ('summons-ritch-zh-L1', 'trollmire', 1, {}, [
+        ('summon', 'ritch', '火焰里奇 (野性召唤)', True, (-2, 1), 'ritch-flamespitter'), ('toggle', '火焰里奇 (野性召唤)')]),
+    ('mark-lineup-L1', 'mark-spellblaze', 1, {}, [
+        ('midstart',),
+        # 1) as born: Stealth is a birth sustain, so the three stealthed ones are invisible to the hero (honest behaviour)
+        ('lineup', 'batch-u-stealthed',
+         [('orc master assassin', '/data/general/npcs/orc.lua'), ('orc grand master assassin', '/data/general/npcs/orc.lua'),
+          ('ritch impaler', '/data/zones/ritch-tunnels/npcs.lua'), ('fire imp', '/data/general/npcs/minor-demon.lua'),
+          ('gaeramarth', '/data/general/npcs/spider.lua'), ('naga psyren', '/data/general/npcs/naga.lua')],
+         [(-4, -2), (0, -3), (4, -2), (-4, 2), (0, 3), (4, 2)]),
+        # 2) Stealth dropped so all six are readable
+        ('lineup', 'batch-u',
+         [('orc master assassin', '/data/general/npcs/orc.lua'), ('orc grand master assassin', '/data/general/npcs/orc.lua'),
+          ('ritch impaler', '/data/zones/ritch-tunnels/npcs.lua'), ('fire imp', '/data/general/npcs/minor-demon.lua'),
+          ('gaeramarth', '/data/general/npcs/spider.lua'), ('naga psyren', '/data/general/npcs/naga.lua')],
+         [(-4, -2), (0, -3), (4, -2), (-4, 2), (0, 3), (4, 2)], 'reveal')]),
+]
+
+LINEUP_BV = [(n, PLACE_SRC_BV[n]) for n in BV]
+LINEUP_BV_POS = [(-8, -4), (-3, -4), (3, -4), (8, -4), (-8, 0), (-3, 0), (3, 0), (8, 0), (-8, 4), (-3, 4), (3, 4), (8, 4)]
+
+SCENES_BV = [
+    ('scintillating-caves-L2', 'scintillating-caves', 2, {}, _bu('black crystal')),
+    ('ardhungol-L3', 'ardhungol', 3, {}, [
+        ('natural_or_place', 'faerlhing', (48, 64, 96)), ('natural_or_place', 'losselhing', (48, 64, 96)),
+        ('toggle', 'faerlhing'), ('toggle_again', 'faerlhing'), ('toggle', 'losselhing'), ('toggle_again', 'losselhing')]),
+    ('temporal-rift-L1', 'temporal-rift', 1, {}, _bu('dredge')),
+    ('demon-plane-L1', 'demon-plane', 1, {}, _bu('dolleg')),
+    ('vor-armoury-L1', 'vor-armoury', 1, {}, [
+        ('natural_or_place', 'eternal bone giant', (48, 64, 96)), ('natural_or_place', 'orc pyromancer', (48, 64, 96)),
+        ('natural_or_place', 'orc cryomancer', (48, 64, 96)),
+        ('toggle', 'eternal bone giant'), ('toggle_again', 'eternal bone giant'),
+        ('toggle', 'orc pyromancer'), ('toggle_again', 'orc pyromancer'),
+        ('toggle', 'orc cryomancer'), ('toggle_again', 'orc cryomancer'),
+        ('stealth', 'orc pyromancer', 'teach')]),
+    ('deep-bellow-L2', 'deep-bellow', 2, {}, _bu('drem master')),
+    ('lake-nur-L2', 'lake-nur', 2, {}, _bu('bloated horror')),
+    ('south-beach-L1', 'south-beach', 1, {}, [
+        ('natural_or_place', 'yaech hunter', (48, 64, 96)), ('toggle', 'yaech hunter'), ('toggle_again', 'yaech hunter'),
+        ('stealth', 'yaech hunter', 'teach')]),
+    ('rak-shor-pride-L1', 'rak-shor-pride', 1, {}, _bu('orc blood mage')),
+    ('assemble-L1', 'trollmire', 1, {}, [
+        ('summon', 'assemble', 'eternal bone giant', False, (3, 0), 'eternal-bone-giant'), ('toggle', 'eternal bone giant'),
+        ('toggle_again', 'eternal bone giant')]),
+    # Run only with MLV_LOCALE=zh_hans (--only assemble-zh-L1 mark-lineup-zh-L1).
+    ('assemble-zh-L1', 'trollmire', 1, {}, [
+        ('summon', 'assemble', 'eternal bone giant', False, (3, 0), 'eternal-bone-giant'), ('toggle', 'eternal bone giant')]),
+    ('mark-lineup-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-v', LINEUP_BV, LINEUP_BV_POS)]),
+    ('mark-lineup-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-v-zh', LINEUP_BV, LINEUP_BV_POS)]),
+]
+
+LINEUP_BW = [(n, PLACE_SRC_BW[n]) for n in BW]
+
+SCENES_BW = [
+    ('gorbat-pride-L2', 'gorbat-pride', 2, {}, [
+        ('natural_or_place', 'fiery orc wyrmic', (48, 64, 96)), ('natural_or_place', 'icy orc wyrmic', (48, 64, 96)),
+        ('toggle', 'fiery orc wyrmic'), ('toggle_again', 'fiery orc wyrmic'),
+        ('toggle', 'icy orc wyrmic'), ('toggle_again', 'icy orc wyrmic')]),
+    ('murgol-lair-L2', 'murgol-lair', 2, {}, [
+        ('natural_or_place', 'yaech mindslayer', (48, 64, 96)), ('toggle', 'yaech mindslayer'), ('toggle_again', 'yaech mindslayer'),
+        ('stealth', 'yaech mindslayer', 'teach')]),
+    ('vor-armoury-L2', 'vor-armoury', 2, {}, [
+        ('natural_or_place', 'heavy bone giant', (48, 64, 96)),
+        ('toggle', 'heavy bone giant'), ('toggle_again', 'heavy bone giant')]),
+    ('trollmire-L2-bears', 'trollmire', 2, {}, [
+        ('natural_or_place', 'cave bear', (48, 64, 96)), ('natural_or_place', 'war bear', (48, 64, 96)),
+        ('toggle', 'cave bear'), ('toggle_again', 'cave bear'), ('toggle', 'war bear'), ('toggle_again', 'war bear')]),
+    ('deep-bellow-L2', 'deep-bellow', 2, {}, _bu("grannor'vin")),
+    ('ancient-elven-ruins-L1', 'ancient-elven-ruins', 1, {}, _bu('rotting mummy')),
+    ('telmur-L2', 'telmur', 2, {}, [
+        ('natural_or_place', 'banshee', (48, 64, 96)), ('toggle', 'banshee'), ('toggle_again', 'banshee'),
+        ('stealth', 'banshee', 'teach')]),
+    ('old-forest-L4-ants', 'old-forest', 4, {'crystaline': False}, [
+        ('natural_or_place', 'giant fire ant', (48, 64, 96)), ('natural_or_place', 'giant ice ant', (48, 64, 96)),
+        ('natural_or_place', 'giant lightning ant', (48, 64, 96)),
+        ('toggle', 'giant fire ant'), ('toggle_again', 'giant fire ant'), ('toggle', 'giant ice ant'), ('toggle_again', 'giant ice ant'),
+        ('toggle', 'giant lightning ant'), ('toggle_again', 'giant lightning ant'), ('stealth', 'giant ice ant', 'teach')]),
+    ('assemble-L1', 'trollmire', 1, {}, [
+        ('summon', 'assemble', 'heavy bone giant', False, (3, 0), 'heavy-bone-giant'), ('toggle', 'heavy bone giant'),
+        ('toggle_again', 'heavy bone giant'), ('lordskulls', 'Lord of Skulls (bone giant)')]),
+    # Run only with MLV_LOCALE=zh_hans (--only assemble-zh-L1 mark-lineup-zh-L1).
+    ('assemble-zh-L1', 'trollmire', 1, {}, [
+        ('summon', 'assemble', 'heavy bone giant', False, (3, 0), 'heavy-bone-giant'), ('toggle', 'heavy bone giant')]),
+    ('mark-lineup-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-w', LINEUP_BW, LINEUP_BV_POS)]),
+    ('mark-lineup-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-w-zh', LINEUP_BW, LINEUP_BV_POS)]),
+]
+
+LINEUP_BX = [(n, PLACE_SRC_BX[n]) for n in BX]
+
+SCENES_BX = [
+    ('old-forest-L4-ants', 'old-forest', 4, {'crystaline': False}, [
+        ('natural_or_place', 'giant acid ant', (48, 64, 96)), ('natural_or_place', 'giant army ant', (48, 64, 96)),
+        ('toggle', 'giant acid ant'), ('toggle_again', 'giant acid ant'), ('toggle', 'giant army ant'), ('toggle_again', 'giant army ant')]),
+    ('murgol-lair-L2', 'murgol-lair', 2, {}, _bu('yaech psion')),
+    ('dreadfell-L2', 'dreadfell', 2, {}, [
+        ('natural_or_place', 'skeleton assassin', (48, 64, 96)), ('reveal', 'skeleton assassin', (48, 64, 96)), ('toggle', 'skeleton assassin'), ('toggle_again', 'skeleton assassin'),
+        ('natural_or_place', 'dread', (48, 64, 96)), ('toggle', 'dread'), ('toggle_again', 'dread')]),
+    ('abashed-expanse-L1', 'abashed-expanse', 1, {}, _bu('blue crystal')),
+    ('crypt-kryl-feijan-L1', 'crypt-kryl-feijan', 1, {}, _bu('elven corruptor')),
+    ('thieves-tunnels-L1', 'thieves-tunnels', 1, {}, [
+        ('natural_or_place', 'assassin', (48, 64, 96)), ('reveal', 'assassin', (48, 64, 96)), ('toggle', 'assassin'), ('toggle_again', 'assassin'),
+        ('stealth', 'assassin'), ('native', 'shadowblade', '/data/general/npcs/thieve.lua', None, 'shot')]),
+    ('temporal-rift-L1', 'temporal-rift', 1, {}, [
+        ('natural_or_place', 'greater telugoroth', (48, 64, 96)), ('natural_or_place', 'teluvorta', (48, 64, 96)),
+        ('toggle', 'greater telugoroth'), ('toggle_again', 'greater telugoroth'), ('toggle', 'teluvorta'), ('toggle_again', 'teluvorta')]),
+    ('grushnak-pride-L1', 'grushnak-pride', 1, {}, _bu('orc fighter')),
+    ('lake-nur-L1', 'lake-nur', 1, {}, _bu('devourer')),
+    ('dread-summon-L1', 'trollmire', 1, {}, [
+        ('summon', 'dread', 'dread', False, (3, 0), 'dread'), ('toggle', 'dread'), ('toggle_again', 'dread')]),
+    # Run only with MLV_LOCALE=zh_hans (--only dread-summon-zh-L1 mark-lineup-zh-L1).
+    ('dread-summon-zh-L1', 'trollmire', 1, {}, [
+        ('summon', 'dread', 'dread', False, (3, 0), 'dread'), ('toggle', 'dread')]),
+    ('mark-lineup-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-x', LINEUP_BX, LINEUP_BV_POS, 'reveal')]),
+    ('mark-lineup-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-x-zh', LINEUP_BX, LINEUP_BV_POS, 'reveal')]),
+]
+
+LINEUP_BY = [(n, PLACE_SRC_BY[n]) for n in BY]
+
+SCENES_BY = [
+    ('rak-shor-pride-L1', 'rak-shor-pride', 1, {}, [
+        ('natural_or_place', 'orc corruptor', (48, 64, 96)), ('natural_or_place', 'uruivellas', (48, 64, 96)),
+        ('natural_or_place', 'thaurhereg', (48, 64, 96)),
+        ('toggle', 'orc corruptor'), ('toggle_again', 'orc corruptor'), ('toggle', 'uruivellas'), ('toggle_again', 'uruivellas'),
+        ('toggle', 'thaurhereg'), ('toggle_again', 'thaurhereg')]),
+    ('temporal-rift-L1', 'temporal-rift', 1, {}, _bu('temporal stalker')),
+    ('golem-graveyard-L1', 'golem-graveyard', 1, {}, [
+        ('natural_or_place', 'broken golem', (48, 64, 96)), ('natural_or_place', 'golem', (48, 64, 96)),
+        ('toggle', 'broken golem'), ('toggle_again', 'broken golem'), ('toggle', 'golem'), ('toggle_again', 'golem')]),
+    ('abashed-expanse-L1', 'abashed-expanse', 1, {}, [
+        ('natural_or_place', 'blade horror', (48, 64, 96)), ('natural_or_place', 'luminous horror', (48, 64, 96)),
+        ('toggle', 'blade horror'), ('toggle_again', 'blade horror'), ('toggle', 'luminous horror'), ('toggle_again', 'luminous horror')]),
+    ('ancient-elven-ruins-L1', 'ancient-elven-ruins', 1, {}, _bu('animated mummy wrappings')),
+    ('trollmire-L2-bear', 'trollmire', 2, {}, _bu('grizzly bear')),
+    ('deep-bellow-L1', 'deep-bellow', 1, {}, _bu('weaver patriarch')),
+    ('dreadfell-L2', 'dreadfell', 2, {}, _bu('necrotic mass')),
+    ('alchemist-golem-L1', 'trollmire', 1, {}, [('summon', 'alchemist_golem', 'alchemist golem', False, (3, 0), None)]),
+    # Run only with MLV_LOCALE=zh_hans (--only mark-lineup-zh-L1).
+    ('mark-lineup-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-y', LINEUP_BY, LINEUP_BV_POS, 'reveal')]),
+    ('mark-lineup-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-y-zh', LINEUP_BY, LINEUP_BV_POS, 'reveal')]),
 ]
 
 REACH_FALLBACK = True  # batch N: natural actor in a closed vault -> place from the native list, flagged natural_unreachable
@@ -1383,7 +1735,7 @@ def run_scene(scene, bridge):
     record = {'label': label, 'zone': zone, 'level': level, 'opts': opts, 'steps': []}
     bridge.lua("assert(config.settings.cheat and config.settings.disable_all_connectivity and not profile.auth);"
                "assert(core.shader.active(4));ms.setup()")
-    names = '{' + ','.join(f'[{json.dumps(n, ensure_ascii=False)}]=true' for n in A + B + C + D + E + F + G + H + NATIVE + NATIVE_D + NATIVE_F + NATIVE_H + I + NATIVE_I + OOZES_SHIPPED + J + NATIVE_J + K + NATIVE_K + ['Grand Corruptor'] + L + NATIVE_L + M + NATIVE_M + N + NATIVE_N + O + NATIVE_O + P + NATIVE_P + Q + NATIVE_Q + R + NATIVE_R + S + NATIVE_S + U + ['ghoul', 'gigantic sandworm tunneler']) + '}'
+    names = '{' + ','.join(f'[{json.dumps(n, ensure_ascii=False)}]=true' for n in A + B + C + D + E + F + G + H + NATIVE + NATIVE_D + NATIVE_F + NATIVE_H + I + NATIVE_I + OOZES_SHIPPED + J + NATIVE_J + K + NATIVE_K + ['Grand Corruptor'] + L + NATIVE_L + M + NATIVE_M + N + NATIVE_N + O + NATIVE_O + P + NATIVE_P + Q + NATIVE_Q + R + NATIVE_R + S + NATIVE_S + T + NATIVE_T + BU + NATIVE_BU + BV + NATIVE_BV + BW + NATIVE_BW + BX + NATIVE_BX + BY + NATIVE_BY + U + ['ghoul', 'gigantic sandworm tunneler']) + '}'
     record['enter'] = bridge.lua(f"return ms.enter({json.dumps(zone, ensure_ascii=False)},{level},{lua_opts(opts)})")
     record['census_targets'] = bridge.lua(f"return mb.find({names})")
     census = bridge.lua('return ms.actorCensus()')
@@ -1421,10 +1773,21 @@ def run_scene(scene, bridge):
             if kind == 'native':
                 src = json.dumps(step[2]) if len(step) > 2 and step[2] else 'nil'
                 entry['source'] = step[2] if len(step) > 2 and step[2] else 'zone npc_list'
-                das = json.dumps(step[3]) if len(step) > 3 else 'nil'
+                das = json.dumps(step[3]) if len(step) > 3 and step[3] else 'nil'
                 entry['row'] = bridge.lua(f"return mb.place({json.dumps(step[1], ensure_ascii=False)},{src},2,-1,{das})")
                 entry['native_ok'] = not entry['row']['rendered_token'] and not entry['row']['display_image']
                 assert entry['native_ok'], entry['row']
+                if len(step) > 4 and step[4] == 'shot':
+                    # Negative evidence picture: drop any birth Stealth so the native body is drawn, then capture 64.
+                    q = json.dumps(step[1], ensure_ascii=False)
+                    entry['native_view'] = bridge.lua(
+                        f"local a=mb.byName({q});local was=a:isTalentActive('T_STEALTH') and true or false;"
+                        "if was then pcall(function() a:forceUseTalent('T_STEALTH',{ignore_energy=true,ignore_cd=true,no_talent_fail=true,silent=true}) end) end;"
+                        "pcall(function() game.player:resetCanSeeCache();a:resetCanSeeCacheOf() end);mb.refresh();mb.focus(a.x,a.y);"
+                        "local r=mb.row(a);r.was_stealthed=was;r.player_can_see=game.player:canSee(a) and true or false;return r")
+                    pn = bridge.shot(f'native-{step[1].replace(" ", "-")}-{label}')
+                    entry['shots'] = [{'file': rel(pn), 'sha256': digest(pn), 'crop': rel(crop(pn, entry['native_view']['screen'], f'native-{step[1].replace(" ", "-")}-{label}-crop', 3))}]
+                    assert not entry['native_view']['rendered_token'], entry['native_view']
             elif kind in ('natural', 'place'):
                 actor, tiles = step[1], step[2]
                 if kind == 'natural':
@@ -1591,9 +1954,21 @@ def run_scene(scene, bridge):
                 row = entry['summon']
                 entry['expected'] = expected or False
                 entry['ok'] = (row['identify'] == (expected or False) and row['rendered_token'] == (expected or False))
+                if sk == 'alchemist_golem':
+                    entry['ok'] = entry['ok'] and row['plain']['identify'] == False and row['plain']['rendered_token'] == False
                 tag = sname.replace(' ', '-').replace('(', '').replace(')', '') if sname.isascii() else f'{sk}-localized'
                 ps = bridge.shot(f'summon-{tag}-{label}')
                 entry['shots'] = [{'file': rel(ps), 'sha256': digest(ps), 'crop': rel(crop(ps, row['screen'], f'summon-{tag}-{label}-crop', 3))}]
+            elif kind == 'lordskulls':
+                # Negative: Lord of Skulls renames the minion ("Lord of Skulls (bone giant)"); it must fall back to native.
+                entry['lord'] = bridge.lua(
+                    "local m;for _,a in pairs(game.level.entities) do if a.is_bone_giant and a.x then m=a end end;assert(m,'no bone giant');"
+                    "local before=m.name;m:setEffect(m.EFF_LORD_OF_SKULLS,1,{life=10,talents=1});mb.refresh();mb.focus(m.x,m.y);"
+                    "local r=mb.row(m);r.name_before=before;r.name_after=m.name;r.lord_of_skulls=m.lord_of_skulls or false;r.is_bone_giant=m.is_bone_giant;return r")
+                pl = bridge.shot(f'lord-of-skulls-{label}')
+                row = entry['lord']
+                entry['ok'] = (row['identify'] == False and row['rendered_token'] == False and bool(row.get('lord_of_skulls')))
+                entry['shots'] = [{'file': rel(pl), 'sha256': digest(pl), 'crop': rel(crop(pl, row['screen'], f'lord-of-skulls-{label}-crop', 3))}]
             elif kind == 'vaultpaladin':
                 entry['row'] = bridge.lua(
                     "local cap;local env=setmetatable({defineTile=function(c,f,o,a) if c=='S' then cap=a end end},"
@@ -1646,18 +2021,20 @@ def run_scene(scene, bridge):
                       "r.token_state=a._checker_token and a._checker_token.id or false;"
                       "local cnt=0;for _,e in pairs(game.level.entities) do if e~=game.player and e.x and e._checker_token and not game.player:canSee(e) then cnt=cnt+1 end end;"
                       "r.hidden_actors_with_token_state=cnt;return r") % q
+                if len(step) > 2 and step[2] == 'teach':
+                    entry['taught'] = bridge.lua(f"local a=mb.byName({q});local had=a:knowTalent('T_STEALTH') and true or false;if not had then a:learnTalent('T_STEALTH',true,3) end;return {{had_natively=had,now=a:knowTalent('T_STEALTH') and true or false}}")
                 entry['before'] = bridge.lua(SS)
                 entry['use'] = bridge.lua(f"local a=mb.byName({q});local was=a:isTalentActive('T_STEALTH') and true or false;local ok,err=true,'nil';if not was then ok,err=pcall(function() a:forceUseTalent('T_STEALTH',{{ignore_energy=true,ignore_cd=true,no_talent_fail=true,silent=true}}) end) end;return {{ok=ok,err=tostring(err),known=a:knowTalent('T_STEALTH') and true or false,active_at_birth=was}}")
                 entry['stealthed'] = bridge.lua(SS)
-                p1 = bridge.shot(f'stealth-active-{label}')
+                p1 = bridge.shot(f'stealth-active-{label}-{EXPECT.get(step[1], "x")}')
                 bridge.lua(f"local a=mb.byName({q});a._checker_live_stealth_boost=a:addTemporaryValue('stealth',1000);mb.refresh()")
                 entry['hidden'] = bridge.lua(SS)
-                p2 = bridge.shot(f'stealth-hidden-{label}')
+                p2 = bridge.shot(f'stealth-hidden-{label}-{EXPECT.get(step[1], "x")}')
                 bridge.lua(f"local a=mb.byName({q});if a._checker_live_stealth_boost then a:removeTemporaryValue('stealth',a._checker_live_stealth_boost);a._checker_live_stealth_boost=nil end;pcall(function() a:forceUseTalent('T_STEALTH',{{ignore_energy=true,ignore_cd=true,no_talent_fail=true,silent=true}}) end);mb.refresh()")
                 entry['revealed'] = bridge.lua(SS)
-                p3 = bridge.shot(f'stealth-revealed-{label}')
+                p3 = bridge.shot(f'stealth-revealed-{label}-{EXPECT.get(step[1], "x")}')
                 sc = entry['stealthed']['screen']
-                entry['shots'] = [{'file': rel(p), 'sha256': digest(p), 'crop': rel(crop(p, sc, f'stealth-{n}-{label}-crop', 3))}
+                entry['shots'] = [{'file': rel(p), 'sha256': digest(p), 'crop': rel(crop(p, sc, f'stealth-{n}-{label}-{EXPECT.get(step[1], "x")}-crop', 3))}
                                   for n, p in (('active', p1), ('hidden', p2), ('revealed', p3))]
             elif kind == 'urhrok':
                 # Rak'shor: force Flame of Urh'Rok (teach it if the fixture-level actor lacks it), record the
@@ -1847,6 +2224,15 @@ def run_scene(scene, bridge):
                 entry['row'] = row
                 entry['shots'] = [{'file': rel(p), 'sha256': digest(p), 'crop': rel(crop(p, row['screen'], f'{kind}-{label}-crop'))}]
                 bridge.lua(f"local a=mb.byName({q});a.faction=a._checker_live_faction;a._checker_live_faction=nil;mb.refresh()")
+            elif kind == 'reveal':
+                # Natively stealthy body (skeleton assassin) placed unseen: drop Stealth, then capture 48/64/96 (rows record can_see).
+                q = json.dumps(step[1], ensure_ascii=False)
+                entry['revealed'] = bridge.lua(
+                    f"local a=mb.byName({q});local was=a:isTalentActive('T_STEALTH') and true or false;"
+                    "if was then pcall(function() a:forceUseTalent('T_STEALTH',{ignore_energy=true,ignore_cd=true,no_talent_fail=true,silent=true}) end) end;"
+                    "pcall(function() game.player:resetCanSeeCache();a:resetCanSeeCacheOf() end);mb.refresh();"
+                    "return {was_stealthed=was,now_stealthed=a:isTalentActive('T_STEALTH') and true or false,can_see=game.player:canSee(a) and true or false}")
+                capture(bridge, f"{EXPECT.get(step[1]) or step[1].replace(' ', '-')}-revealed-{label}", step[1], step[2], entry)
             elif kind == 'hide':
                 q = json.dumps(step[1], ensure_ascii=False)
                 row = bridge.lua(f"mb.invisible({q});local a=mb.byName({q});mb.focus(a.x,a.y);return mb.row(a)")
@@ -1890,6 +2276,17 @@ def run_scene(scene, bridge):
                 if row['found']:
                     p = bridge.shot(f'unseen-out-of-fov-{label}')
                     entry['shots'] = [{'file': rel(p), 'sha256': digest(p), 'crop': rel(crop(p, row['row']['screen'], f'unseen-out-of-fov-{label}-crop', 3))}]
+            elif kind == 'midstart':
+                # Lineup only: move the hero to the free, visible cell nearest the map centre with the most free
+                # neighbours (away from the edge), light the surroundings, then let the lineup spread around it.
+                entry['start'] = bridge.lua(
+                    "local Map=require 'engine.Map';local m=game.level.map;local p=game.player;local best,bs;"
+                    "local function free(x,y) return x>=1 and y>=1 and x<m.w-1 and y<m.h-1 and not m(x,y,Map.ACTOR) and not m:checkEntity(x,y,Map.TERRAIN,'block_move',p) and not m:checkEntity(x,y,Map.TERRAIN,'change_level') end;"
+                    "for x=8,m.w-9 do for y=6,m.h-7 do if free(x,y) then local n=0;for dx=-6,6 do for dy=-4,4 do if free(x+dx,y+dy) then n=n+1 end end end;"
+                    "local sc=n*100-((x-m.w/2)^2+(y-m.h/2)^2)*0.01;if not bs or sc>bs then best,bs=(x..','..y),sc;p._checker_mid={x,y,n} end end end end;"
+                    "local x,y=p._checker_mid[1],p._checker_mid[2];p:move(x,y,true);"
+                    "for dx=-9,9 do for dy=-6,6 do local a,b=x+dx,y+dy;if a>=0 and b>=0 and a<m.w and b<m.h then pcall(function() m.lites(a,b,true);m.remembers(a,b,true) end) end end end;"
+                    "mb.refresh();mb.focus(x,y);return {x=x,y=y,free_cells_in_view=p._checker_mid[3],map_w=m.w,map_h=m.h}")
             elif kind == 'lineup':
                 # ('lineup',) keeps the original skeleton-family default (batch
                 # A/B/C); ('lineup', prefix, names) picks the file prefix and
@@ -1905,6 +2302,14 @@ def run_scene(scene, bridge):
                         name, srcpath = name
                         src = json.dumps(srcpath) if srcpath else 'nil'
                     rows.append(bridge.lua(f"return mb.place({json.dumps(name, ensure_ascii=False)},{src},{dx},{dy})"))
+                if len(step) > 4 and step[4] == 'reveal':
+                    # Birth sustains (Stealth) hide the placed assassins/spider from the hero; drop Stealth so the row is readable.
+                    entry['revealed'] = bridge.lua(
+                        "local out={};for _,a in pairs(game.level.entities) do if a~=game.player and a._checker_live_placed and a:isTalentActive('T_STEALTH') then "
+                        "pcall(function() a:forceUseTalent('T_STEALTH',{ignore_energy=true,ignore_cd=true,no_talent_fail=true,silent=true}) end);"
+                        "out[#out+1]={a.name,a:isTalentActive('T_STEALTH') and true or false} end end;"
+                        "pcall(function() game.player:resetCanSeeCache() end);mb.refresh();mb.focus(game.player.x,game.player.y);return out")
+                    entry['rows_after'] = bridge.lua("local o={};for _,r in ipairs(mb.find()) do if r.placed then o[#o+1]={r.name,r.identify,r.rendered_token,r.can_see,r.x,r.y} end end;return o")
                 entry['rows'] = rows
                 entry['shots'] = []
                 for t in (48, 64, 96):
@@ -1953,7 +2358,7 @@ def wait_fixture_free():
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--only', nargs='*')
-    parser.add_argument('--batch', choices=('ab', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 'summons', 'summons-zh'), default='ab')
+    parser.add_argument('--batch', choices=('ab', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'summons', 'summons-zh'), default='ab')
     args = parser.parse_args()
     global OUT, SHOTS, CROPS
     scenes = SCENES
@@ -2007,6 +2412,24 @@ def main():
         SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
     if args.batch == 's':
         OUT, scenes = OUT_S, SCENES_S
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 't':
+        OUT, scenes = OUT_T, SCENES_T
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 'u':
+        OUT, scenes = OUT_BU, SCENES_BU
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 'v':
+        OUT, scenes = OUT_BV, SCENES_BV
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 'w':
+        OUT, scenes = OUT_BW, SCENES_BW
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 'x':
+        OUT, scenes = OUT_BX, SCENES_BX
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 'y':
+        OUT, scenes = OUT_BY, SCENES_BY
         SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
     if args.batch == 'summons-zh':
         OUT, scenes = OUT_U, SCENES_ZH

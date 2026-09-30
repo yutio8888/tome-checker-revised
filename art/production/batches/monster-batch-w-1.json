@@ -1,0 +1,300 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-w-1",
+  "assets": [
+    {
+      "asset_id": "fiery-orc-wyrmic",
+      "native_name": "fiery orc wyrmic",
+      "scope": "reknor (reknor-last static map tile 'f' = define_as ORC_FIRE_WYRMIC), rak-shor-pride and vor-armoury pools and the orc-hatred and orc-armoury vaults (general/npcs/orc.lua:114, humanoid/orc, non-unique, define_as ORC_FIRE_WYRMIC, rank 3, base BASE_NPC_ORC, default-name image); single definition; the vaults build this same leaf by name (random_filter), so their actors carry the same define_as",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 115,
+          "anchor": "name = \"fiery orc wyrmic\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 114,
+          "anchor": "define_as = \"ORC_FIRE_WYRMIC\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 139,
+          "anchor": "T_FIRE_BREATH"
+        },
+        {
+          "path": "game/modules/tome/data/maps/zones/reknor-last.lua",
+          "sha256": "c660b2dfed835890dfd6e6dc51d2fd56a838777f4eba75d4384d006987f374ba",
+          "line": 33,
+          "anchor": "ORC_FIRE_WYRMIC"
+        },
+        {
+          "path": "game/modules/tome/data/maps/vaults/auto/greater/orc-hatred.lua",
+          "sha256": "62118b421d5045102119d64d54c929eef32be6ad359f5c39559655cff66340cd",
+          "line": 77,
+          "anchor": "name = \"fiery orc wyrmic\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_fiery_orc_wyrmic.png",
+          "sha256": "af76ae9795535cbb924cc15db1e823c0830c1d80b32b267804235091cdb46470",
+          "role": "identity",
+          "note": "Native shape (64x64): an olive-green orc in orange-gold dragon-scale armour with a curved blade. Keep the dragon-scale armour and the olive orc; make the armour bright crimson-orange with wing-fin pauldrons and a diagonal battleaxe."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-w/refs/orcs.png",
+          "sha256": "527072f80858b15e355c9d5e033a5105b501fb5faba40cb6c82b185b5fb8e8b7",
+          "role": "family",
+          "note": "Nine shipped orc tokens (olive orc warrior with a scimitar, spiked dark orc soldier with an axe, orc archer, hooded assassin, hooded necromancer, master assassin, and the robed pyromancer, cryomancer and blood mage): the two wyrmics are armoured dragon-scale axe fighters, bare olive-green faces under horned helms, not robed casters, not hooded and not carrying a scimitar or a bow."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A fiery orc wyrmic seen from a steep overhead three-quarter angle: a broad, powerful OLIVE-GREEN orc with small tusks and a snarling roar, wearing BRIGHT CRIMSON-ORANGE DRAGON-SCALE armour (overlapping scale plates with pale gold edges and bright orange-yellow highlight planes), a pair of red drake-wing-fin pauldrons flaring from the shoulders, a horned pale-bone-and-gold helm, a wide belt with a small red totem charm; the RIGHT ARM raises a broad battleaxe DIAGONALLY UP AND OUTWARD over the shoulder toward the upper right (bright steel axe head with an orange fire glint, the haft short and the axe head well inside the disc), the LEFT HAND open in front of the hip with a small tongue of flame, feet planted wide. Fiery, scaled, diagonal-axe and complete.",
+        "contrast": "Orc wyrmics: the FIERY orc wyrmic is the CRIMSON-ORANGE SCALED ONE with a diagonal raised axe and a flame in the open hand (silhouette: an upright wide-stanced figure with one long diagonal line to the upper right; hue: crimson-orange scale armour with gold edges over olive skin; value: mid-light). The shipped orc warrior is an olive fighter with a scimitar, the soldier a dark spiked axeman, the archer holds a bow and the casters are robed: this must not be robed, hooded, dark-plated or holding a scimitar or bow. Its twin, the icy orc wyrmic, is pale blue-white scaled, crouched low with a horizontal axe.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Olive-green skin, crimson-orange scale armour in a mid-light value with pale orange-yellow highlight planes and gold edging, pale bone-and-gold helm, bright steel axe head with a bright rim, a small orange flame (the flame stays on the hand and must not glow onto or warm the disc); nothing darker than dark red-brown except the eye slits and thin seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=fiery orc wyrmic, define_as=ORC_FIRE_WYRMIC, type=humanoid/subtype=orc, unique=False, native_tall=False); details and hashes in evidence/monster-batch-w-20260930/source-contracts.json. base BASE_NPC_ORC (humanoid/orc, faction orc-pride, no image=, no shader, no sustains_at_birth); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip fills inventory slots only (no moddable_tile, so no display change) (battleaxe, totem charm); resolvers.racial() adds only levelup talent tables; resolvers.inscriptions(1, infusion); talents Weapons Mastery (passive), Bellowing Roar, Wing Buffet, Fire Breath (activated); make_escort of orc soldiers only; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-w-20260930/source-contracts.json",
+          "sha256": "96ca69784bec3c15699f4022058d68cede257f2a212a917ee75ff352a93458e3"
+        }
+      ]
+    },
+    {
+      "asset_id": "icy-orc-wyrmic",
+      "native_name": "icy orc wyrmic",
+      "scope": "reknor (reknor-last static map tile 'i' = define_as ORC_ICE_WYRMIC), rak-shor-pride and vor-armoury pools and the orc-hatred and orc-armoury vaults (general/npcs/orc.lua:144, humanoid/orc, non-unique, define_as ORC_ICE_WYRMIC, rank 3, base BASE_NPC_ORC, default-name image); single definition; the vaults build this same leaf by name (random_filter), so their actors carry the same define_as",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 145,
+          "anchor": "name = \"icy orc wyrmic\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 145,
+          "anchor": "ORC_ICE_WYRMIC"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 169,
+          "anchor": "T_ICE_BREATH"
+        },
+        {
+          "path": "game/modules/tome/data/maps/zones/reknor-last.lua",
+          "sha256": "c660b2dfed835890dfd6e6dc51d2fd56a838777f4eba75d4384d006987f374ba",
+          "line": 34,
+          "anchor": "ORC_ICE_WYRMIC"
+        },
+        {
+          "path": "game/modules/tome/data/maps/vaults/auto/greater/orc-hatred.lua",
+          "sha256": "62118b421d5045102119d64d54c929eef32be6ad359f5c39559655cff66340cd",
+          "line": 76,
+          "anchor": "name = \"icy orc wyrmic\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_icy_orc_wyrmic.png",
+          "sha256": "f623a762f55ec88a9f15b8663bdc43dd054c5a781b235f526f7a3897cf32b2a0",
+          "role": "identity",
+          "note": "Native shape (64x64): an olive-green orc in teal-blue dragon-scale armour with a curved blade. Keep the dragon-scale armour and the olive orc; make the armour pale ice-blue and white with ice-crystal pauldrons and a low horizontal battleaxe."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-w/refs/orcs.png",
+          "sha256": "527072f80858b15e355c9d5e033a5105b501fb5faba40cb6c82b185b5fb8e8b7",
+          "role": "family",
+          "note": "Nine shipped orc tokens (olive orc warrior with a scimitar, spiked dark orc soldier with an axe, orc archer, hooded assassin, hooded necromancer, master assassin, and the robed pyromancer, cryomancer and blood mage): the two wyrmics are armoured dragon-scale axe fighters, bare olive-green faces under horned helms, not robed casters, not hooded and not carrying a scimitar or a bow."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An icy orc wyrmic seen from a steep overhead three-quarter angle: a broad OLIVE-GREEN orc (a slightly grey-green cast) with small tusks and a hard glare, wearing PALE ICE-BLUE and WHITE DRAGON-SCALE armour with bright frost-white edges and pale cyan highlight planes, a pair of jagged ICE-CRYSTAL pauldrons (three short pale-cyan ice spikes on each shoulder, the spikes short), a pale horned white-bone helm with a small frost crest, a small pale-blue totem charm on the belt; crouched in a wide LOW STANCE leaning to the left with BOTH HANDS holding a battleaxe HORIZONTALLY across the hips (the axe head at the left, bright pale steel rimed with white frost, the whole axe well inside the disc), a small puff of pale frost breath at the mouth. Frosty, scaled, low-and-horizontal and complete.",
+        "contrast": "Orc wyrmics: the ICY orc wyrmic is the PALE BLUE-WHITE SCALED ONE crouched low with a horizontal two-handed axe and ice-crystal pauldrons (silhouette: a wide low crouch with one horizontal line and small spiky shoulders; hue: ice-blue and white scale armour over grey-green olive skin; value: light). The shipped orc warrior is an olive fighter with a scimitar, the soldier a dark spiked axeman, the archer holds a bow and the casters are robed: this must not be robed, hooded, dark-plated or holding a scimitar or bow, and must not be the orange-red upright twin with a raised diagonal axe (the fiery orc wyrmic).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Grey-green olive skin, pale ice-blue and white scale armour in a light value with bright white edging and pale cyan highlight planes, pale bone helm, pale steel axe head with white frost and a bright rim, cyan ice crystals (the frost stays on the creature and must not brighten, whiten or tint the disc); nothing darker than mid blue-grey except the eye slits and thin seams; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=icy orc wyrmic, define_as=ORC_ICE_WYRMIC, type=humanoid/subtype=orc, unique=False, native_tall=False); details and hashes in evidence/monster-batch-w-20260930/source-contracts.json. base BASE_NPC_ORC (humanoid/orc, faction orc-pride, no image=, no shader, no sustains_at_birth); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip fills inventory slots only (no moddable_tile, so no display change) (battleaxe, totem charm); resolvers.racial() adds only levelup talent tables; resolvers.inscriptions(1, infusion); talents Weapons Mastery (passive), Ice Claw, Ice Breath (activated), Icy Skin (sustained, never started at birth: the leaf has no sustains_at_birth); make_escort of orc soldiers only; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-w-20260930/source-contracts.json",
+          "sha256": "96ca69784bec3c15699f4022058d68cede257f2a212a917ee75ff352a93458e3"
+        }
+      ]
+    },
+    {
+      "asset_id": "yaech-mindslayer",
+      "native_name": "yaech mindslayer",
+      "scope": "murgol-lair pool (general/npcs/yaech.lua:79, humanoid/yaech, non-unique, no define_as, rank 2, base BASE_NPC_YAECH, default-name image); single definition; the south-beach zone only draws yaech from the humanoid/yaech pool, so a yaech mindslayer there is this same leaf",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/yaech.lua",
+          "sha256": "918f92bdd94df8a9004f7620f44561c30c538888f184185519e3ee6453fe3754",
+          "line": 80,
+          "anchor": "name = \"yaech mindslayer\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/yaech.lua",
+          "sha256": "918f92bdd94df8a9004f7620f44561c30c538888f184185519e3ee6453fe3754",
+          "line": 92,
+          "anchor": "T_KINETIC_SHIELD"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/yaech.lua",
+          "sha256": "918f92bdd94df8a9004f7620f44561c30c538888f184185519e3ee6453fe3754",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_YAECH\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_yaech_yaech_mindslayer.png",
+          "sha256": "8d14e8129f10bc2fdaac3ec74a1886b2b110a474a8badbe7fb40fca64359490c",
+          "role": "identity",
+          "note": "Native shape (64x64): a pale blue-white fluffy yeek-like swimmer holding a curved blade, with bubbles. Keep the small fluffy yaech psion with bubbles, but seafoam-teal fur, floating cross-legged, no blade."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-w/refs/yeeks.png",
+          "sha256": "49c3efc7ff33c287bc3f4d052aa99d30da1af414c3cec0b0b101c0ed8d697a96",
+          "role": "family",
+          "note": "Three shipped yeek-kin tokens (pale blue fluffy yaech diver swimming with bubbles, white yeek wayist with a dagger, umber-brown yaech hunter thrusting a trident): the yaech mindslayer is seafoam-teal, floating cross-legged with a lightning ball and a kinetic shield ring, not blue-white, not umber and not thrusting a weapon."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A yaech mindslayer seen from a steep overhead three-quarter angle: a small fluffy yeek-like aquatic psion with SEAFOAM-TEAL and PALE-MINT fur in a mid-light value, a cream face and belly, two large glowing PALE-YELLOW eyes with a calm stare, a small pale coral circlet, FLOATING a little above the floor in a cross-legged pose with both hands raised in front of the chest, a small crackling ball of bright YELLOW-WHITE LIGHTNING between the palms, a thin translucent pale-cyan circular KINETIC SHIELD RING hugging the front of the body (the ring no wider than the body), a small pale-steel trident floating tilted behind one shoulder (short, well inside the disc), a few tiny bubbles. Calm, psionic, round and complete.",
+        "contrast": "Yeeks: the YAECH MINDSLAYER is the SEAFOAM-TEAL FLOATING PSION with a lightning ball and a shield ring (silhouette: a compact round seated figure inside a circular ring with a small spark between the hands; hue: seafoam teal and mint fur, cream belly, yellow-white lightning, pale cyan ring; value: mid-light). The shipped yaech diver is a pale blue-white swimmer, the yeek wayist a white yeek with a dagger and the yaech hunter an umber-brown lunger with a trident: this must not be blue-white, white or umber and must not lunge or thrust a weapon.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Seafoam-teal and pale mint fur in a mid-light value with pale highlight planes, a cream face and belly, pale-yellow eyes, yellow-white lightning ball with a bright core, a pale-cyan translucent ring, pale-steel trident with a bright highlight edge, tiny pale bubbles (the lightning and ring stay on the creature and must not brighten, warm or tint the disc); nothing darker than dark teal-grey except the pupils and thin seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=yaech mindslayer, define_as=None, type=humanoid/subtype=yaech, unique=False, native_tall=False); details and hashes in evidence/monster-batch-w-20260930/source-contracts.json. base BASE_NPC_YAECH (humanoid/yaech, can_breath water, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip fills inventory slots only (no moddable_tile, so no display change) (trident); talents Kinetic Aura, Charged Aura, Kinetic Shield, Exotic Weapons Mastery; none is started at birth (no sustains_at_birth on the leaf or base) and their effects are temporary values; no auto_classes on the leaf or base (only the Murgol-lair bosses have Mindslayer auto_classes). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-w-20260930/source-contracts.json",
+          "sha256": "96ca69784bec3c15699f4022058d68cede257f2a212a917ee75ff352a93458e3"
+        }
+      ]
+    },
+    {
+      "asset_id": "heavy-bone-giant",
+      "native_name": "heavy bone giant",
+      "scope": "rak-shor-pride, telmur and vor-armoury pools (general/npcs/bone-giant.lua:85, undead/giant, non-unique, no define_as, rank 2, base BASE_NPC_BONE_GIANT, explicit nice_tile tall body); the necromancer's Assemble talent (talents/spells/master-of-bones.lua:429, minions_list.h_bone_giant) builds the same-named minion with type undead, subtype giant, the same nice_tile body and no define_as, so it wears the same token by the ordinary name key (see summons_and_same_body_copies)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+          "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+          "line": 86,
+          "anchor": "name = \"heavy bone giant\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+          "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+          "line": 88,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/talents/spells/master-of-bones.lua",
+          "sha256": "4318c0328da28c7a7767bf96027d8ccc449ab120b17558d8af699a6a6a05d170",
+          "line": 429,
+          "anchor": "name = \"heavy bone giant\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/spells/master-of-bones.lua",
+          "sha256": "4318c0328da28c7a7767bf96027d8ccc449ab120b17558d8af699a6a6a05d170",
+          "line": 426,
+          "anchor": "is_bone_giant = \"h_bone_giant\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_heavy_bone_giant.png",
+          "sha256": "54cf4ac5c97fdcfcd06c337f1451599f1f55f4eba4875592993a448be1cacf2c",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a tall pale-tan bone golem built from twiggy bones with a lilac outline aura. Keep the bone-built golem, but draw it as ONE compact squat broad figure filling the disc, honey-amber, no tall canvas."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-w/refs/bone-giants.png",
+          "sha256": "07ff62cfef9aa9f0799892505cf569dce0d91832d47199bb8cab17ba28eaa9e8",
+          "role": "family",
+          "note": "Four shipped giant tokens (tan bone giant, muscular and symmetric with both arms hanging; purple half-finished bone giant, a thin skeleton; ivory eternal bone giant with skulls and one huge arm raised overhead; snow giant): the heavy bone giant is a squat, broad, honey-amber ossuary golem hugging a bundle of long thigh bones with both arms, not arms-down symmetric, not thin, not skull-studded and not raising one arm."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A heavy bone giant seen from a steep overhead three-quarter angle: a massively broad, squat, hunched ossuary golem built from hundreds of AMBER-TAN and HONEY-BROWN bones with pale cream highlight planes, a huge barrel chest of stacked ribcages, huge armoured shoulders of layered pelvis and shoulder-blade plates, a small skull head with two dull amber glowing eyes sunk between the shoulders, BOTH ARMS wrapped around a big BUNDLE OF SIX LONG THIGH-BONES clutched against the chest like a load of javelins to throw (the bone ends short and inside the disc), short thick leg-pillars, a very faint warm-ochre unholy haze close to the outline. Wide, heavy, round and complete.",
+        "contrast": "Giants: the HEAVY BONE GIANT is the SQUAT HONEY-AMBER ONE hugging a bundle of long bones (silhouette: a very wide low round mass with a bone bundle across the chest and no raised arm; hue: honey-amber and amber-tan bone with cream highlights; value: mid-light). The shipped bone giant is a tan, muscular, symmetric figure with both arms hanging, the half-finished bone giant a thin purple skeleton and the eternal bone giant an ivory skull-studded figure with one huge arm raised overhead: this must not have arms hanging, must not be thin, must not be ivory-white or skull-studded and must not raise an arm.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Honey-amber and amber-tan bone in a mid-light value with pale cream highlight planes and warm brown shadows, dull amber eye glow, a very faint warm-ochre haze (the haze stays thin, on the creature, and must not brighten or tint the disc); nothing darker than mid warm brown except the eye sockets and thin seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=heavy bone giant, define_as=None, type=undead/subtype=giant, unique=False, native_tall=True); details and hashes in evidence/monster-batch-w-20260930/source-contracts.json. base BASE_NPC_BONE_GIANT (undead/giant, no image=, no shader, no sustains_at_birth); NPC.lua:33 default-name image on the leaf; resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/undead_giant_heavy_bone_giant.png\", display_h=2, display_y=-1}}} (an explicit tall body, keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true (nativeTallImage accepts the body only for unique or native_tall entries, as for bone giant and eternal bone giant); talents Bone Armour, Throw Bones, Stun (all activated); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-w-20260930/source-contracts.json",
+          "sha256": "96ca69784bec3c15699f4022058d68cede257f2a212a917ee75ff352a93458e3"
+        }
+      ]
+    }
+  ]
+}

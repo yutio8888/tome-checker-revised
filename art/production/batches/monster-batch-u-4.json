@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-u-4",
+  "assets": [
+    {
+      "asset_id": "gaeramarth",
+      "native_name": "gaeramarth",
+      "scope": "general npc list (general/npcs/spider.lua:101, spiderkin/spider, non-unique, no define_as, rank 2, base BASE_NPC_SPIDER, default-name image); loaded by ardhungol (zones/ardhungol/npcs.lua:20), all.lua and several vaults; one definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 102,
+          "anchor": "name = \"gaeramarth\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 120,
+          "anchor": "T_STEALTH"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ardhungol/npcs.lua",
+          "sha256": "93033ee5cc7294cd4a86ca1762153b67b0c4d61df92d1391786d54642fa81dc2",
+          "line": 20,
+          "anchor": "load(\"/data/general/npcs/spider.lua\", rarity(0))"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_gaeramarth.png",
+          "sha256": "fed44fee932d4f82cc54350431619f75f100cc13896510c91b5df4cf0ae6988a",
+          "role": "identity",
+          "note": "Native shape (64x64): a grey and black striped spider with a rounded abdomen and long legs. Keep the pale-ash coloured spider but rear the front legs up."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-u/refs/spiders.png",
+          "sha256": "3b56f8ff0117557f37c46b68a17316becbfb4b75e02b2925cbfece137eb55634",
+          "role": "family",
+          "note": "Six shipped spider tokens (dark grey giant spider, brown spitting spider with green spit, steel-blue fate spinner with a silk ring, white swirl weaver young, cream chitinous spider, silver gem-crowned nimisil): the three new spiders must not be a plain grey, brown, blue, white-cream or silver spider and must not repeat their poses."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A gaeramarth seen from a steep overhead three-quarter angle: a large spider in pale ASH-GREY and BONE-WHITE with a rounded abdomen carrying an IVORY SKULL-LIKE marking outlined in charcoal grey, a broad cream head with a cluster of small glossy dark eyes and two curved ivory fangs, its TWO LONG FRONT LEGS REARED HIGH in the air in a threatening rush pose while the six other legs stay tucked close and bent around the body (the raised legs pulled well inside the disc), fine pale hairs. Threatening, pale, reared and complete.",
+        "contrast": "Spiders: the GAERAMARTH is a PALE ASH and BONE-WHITE spider with an ivory skull marking and its TWO FRONT LEGS REARED UP (silhouette: a compact body with a raised pair of front legs forming a V above the head; hue: ash-grey, bone-white and ivory; value: light). The shipped giant spider is a dark grey flat spider, the spitting spider is brown, the fate spinner is steel-blue with a silk ring, the weaver young a white swirl ball, the chitinous spider cream with radial legs, nimisil a silver gem-crowned spider: this must not be flat with all legs radial and must not be dark grey.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Pale ash-grey and bone-white in a light value with bright highlight planes and soft blue-grey shadows, ivory skull marking with charcoal-grey outline, cream fangs; nothing darker than mid charcoal-grey except the eyes; the disc stays neutral charcoal and must not be brightened by the pale body. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=gaeramarth, define_as=None, type=spiderkin/subtype=spider, unique=False, native_tall=False); details and hashes in evidence/monster-batch-u-20260930/source-contracts.json. base BASE_NPC_SPIDER (spiderkin/spider, no image=; the base has resolvers.sustains_at_birth()); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; talents Rush, Spider Web, Lay Web, Stealth (sustained), Stun; resolvers.sustains_at_birth() starts Stealth (temporary values only, no type/subtype/image/add_mos write); resolvers.inscriptions(2, infusion); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-u-20260930/source-contracts.json",
+          "sha256": "4f46e3336b48581c8d53801ec1d5c3d5d1d178d2d33ced48e36e0058a6e62f43"
+        }
+      ]
+    },
+    {
+      "asset_id": "ninurlhing",
+      "native_name": "ninurlhing",
+      "scope": "general npc list (general/npcs/spider.lua:127, spiderkin/spider, non-unique, no define_as, rank 2, base BASE_NPC_SPIDER, default-name image); loaded by ardhungol, all.lua and several vaults; the tutorial zone reuses its PNG for a differently named actor (zones/tutorial-combat-stats/npcs.lua:444, 'hairy spider', TUT_SPIDER_3) which stays native by name; one definition of the name ninurlhing",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 128,
+          "anchor": "name = \"ninurlhing\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 144,
+          "anchor": "T_ACIDIC_SKIN"
+        },
+        {
+          "path": "game/modules/tome/data/zones/tutorial-combat-stats/npcs.lua",
+          "sha256": "70c1cb56038dda36db538dd70b21a87ca7add2cc07ac84579ef6f1e4bf9347cf",
+          "line": 444,
+          "anchor": "image=\"npc/spiderkin_spider_ninurlhing.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_ninurlhing.png",
+          "sha256": "ff6281a7b11f4736856a5388916df1dbb0fa180c9a344bf760598264375f44c3",
+          "role": "identity",
+          "note": "Native shape (64x64): a sickly cream-green spider with a round pink-striped abdomen. Keep the sickly acidic look and add drips and a little vapour."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-u/refs/spiders.png",
+          "sha256": "3b56f8ff0117557f37c46b68a17316becbfb4b75e02b2925cbfece137eb55634",
+          "role": "family",
+          "note": "Six shipped spider tokens (dark grey giant spider, brown spitting spider with green spit, steel-blue fate spinner with a silk ring, white swirl weaver young, cream chitinous spider, silver gem-crowned nimisil): the three new spiders must not be a plain grey, brown, blue, white-cream or silver spider and must not repeat their poses."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A ninurlhing seen from a steep overhead three-quarter angle: a squat spider with a hugely swollen, glossy, half-translucent SICKLY LIME-GREEN and BUTTER-YELLOW abdomen with pink-orange stripes and small CORRODED HOLES weeping bright green acid drops that drip down its sides, a pale yellow-green head with two glowing green eyes and short fangs, EIGHT SHORT STOUT LEGS in pale olive-cream splayed wide to the sides like a crab, and a small puff of pale green VAPOUR rising from the back of the abdomen (compact, no bigger than the head). Bloated, acidic, dripping and complete.",
+        "contrast": "Spiders: the NINURLHING is a SQUAT BLOATED spider with a huge glossy lime-green and yellow abdomen, dripping acid and short legs splayed wide (silhouette: one big round bloated abdomen on a wide low crab-like splay, with small drips and a vapour puff; hue: lime green, butter yellow and pink-orange stripes; value: light). The shipped spitting spider is a brown long-legged spider spitting green liquid, the giant spider is dark grey, the chitinous spider is a cream armoured spider: this must not be brown, not long-legged and not a spitter.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Lime-green and butter-yellow abdomen in a light value with bright highlight planes and a translucent glow, pink-orange stripes, bright acid-green drops, pale olive-cream legs; nothing darker than mid olive-green except the eyes and thin seams; the acid glow must stay on the creature and must not tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ninurlhing, define_as=None, type=spiderkin/subtype=spider, unique=False, native_tall=False); details and hashes in evidence/monster-batch-u-20260930/source-contracts.json. base BASE_NPC_SPIDER (spiderkin/spider, sustains_at_birth in the base); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; talents Rush, Spider Web, Lay Web, Acidic Skin (sustained), Corrosive Vapour, Crawl Acid, Stun; resolvers.sustains_at_birth() starts Acidic Skin (temporary values and a damage callback only, no type/subtype/image/add_mos write); resolvers.inscriptions(2, infusion); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-u-20260930/source-contracts.json",
+          "sha256": "4f46e3336b48581c8d53801ec1d5c3d5d1d178d2d33ced48e36e0058a6e62f43"
+        }
+      ]
+    },
+    {
+      "asset_id": "fate-weaver",
+      "native_name": "fate weaver",
+      "scope": "unhallowed-morass (zones/unhallowed-morass/npcs.lua:102, spiderkin/spider, non-unique, no define_as, rank 2, base BASE_NPC_SPIDER as redefined in the zone file (no sustains_at_birth), default-name image); the only definition of this name; general/npcs/spider.lua only has a comment 'Fate Weavers; temporal spiders' (spider.lua:239)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/unhallowed-morass/npcs.lua",
+          "sha256": "10dac055e54c6f7a92c43c8a278caca4b7d51d0c4b002a165ad5a714bf4fec52",
+          "line": 103,
+          "anchor": "name = \"fate weaver\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/unhallowed-morass/npcs.lua",
+          "sha256": "10dac055e54c6f7a92c43c8a278caca4b7d51d0c4b002a165ad5a714bf4fec52",
+          "line": 114,
+          "anchor": "T_FATEWEAVER"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 239,
+          "anchor": "Fate Weavers; temporal spiders"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_fate_weaver.png",
+          "sha256": "b2fcfc40149cf8d306520dbe3587d4a2cca1811f72bc21f44c8f1718394acb9f",
+          "role": "identity",
+          "note": "Native shape (64x64): a large white-lavender hairy spider. Keep the white-lavender fuzzy spider and add a golden clock marking and thread."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-u/refs/spiders.png",
+          "sha256": "3b56f8ff0117557f37c46b68a17316becbfb4b75e02b2925cbfece137eb55634",
+          "role": "family",
+          "note": "Six shipped spider tokens (dark grey giant spider, brown spitting spider with green spit, steel-blue fate spinner with a silk ring, white swirl weaver young, cream chitinous spider, silver gem-crowned nimisil): the three new spiders must not be a plain grey, brown, blue, white-cream or silver spider and must not repeat their poses."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A fate weaver seen from a steep overhead three-quarter angle: a large fluffy spider with a thick coat of CREAM-WHITE and pale LAVENDER-VIOLET fur, a round abdomen carrying a bright GOLDEN CLOCK-FACE marking with a small hourglass in its centre, a lavender head with several small glowing pale-violet eyes, its two front legs held forward in front of the head weaving a compact CAT'S-CRADLE loop of glowing GOLDEN THREAD between them (the loop no wider than the head), the other six fluffy legs folded neatly around the body in a tight ring. Calm, fluffy, golden-threaded and complete.",
+        "contrast": "Spiders: the FATE WEAVER is a FLUFFY CREAM-WHITE and LAVENDER spider with a GOLDEN CLOCK-FACE on its abdomen and a small golden thread cat's-cradle held between its front legs (silhouette: a round fluffy body with a small forward loop; hue: cream-white, lavender and gold; value: light). The shipped fate spinner is a steel-blue spider with long serrated legs and a large silk ring at the side, weaver young is a white-blue swirl ball: this must not be steel blue, not serrated long-legged and must carry the gold clock face.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Cream-white and lavender fur in a light value with bright highlight planes and soft violet-grey shadows, bright gold clock-face and thread, pale violet eyes; nothing darker than mid violet-grey except the eyes; the disc stays neutral charcoal and must not be brightened by the pale fur, the gold thread must not glow onto the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=fate weaver, define_as=None, type=spiderkin/subtype=spider, unique=False, native_tall=False); details and hashes in evidence/monster-batch-u-20260930/source-contracts.json. base BASE_NPC_SPIDER as redefined in the zone file (spiderkin/spider, no image=, no sustains_at_birth); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; talents Spin Fate (passive), Webs of Fate, Fateweaver (passive), Rethread (activated, no sustained talent);  no resolvers.equip that touches the body; no sustains_at_birth and no auto_classes on the leaf or base. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-u-20260930/source-contracts.json",
+          "sha256": "4f46e3336b48581c8d53801ec1d5c3d5d1d178d2d33ced48e36e0058a6e62f43"
+        }
+      ]
+    }
+  ]
+}

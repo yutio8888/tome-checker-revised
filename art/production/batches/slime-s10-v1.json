@@ -1,0 +1,114 @@
+{
+ "schema": 1,
+ "batch_id": "slime-s10-v1",
+ "assets": [
+  {
+   "gate": "ready",
+   "gate_reason": "S10a slime family floor: SLIME_FLOOR (Slime Tunnels, Sludgenest) and Grushnak mushroom creep are native bright-green tiles with no board picture. One opaque light slime-floor master; rules unchanged (harmless walkable floor). No waiver.",
+   "max_attempts": 2,
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/terrain-s10a-20260930/identity-s10a.md",
+     "sha256": "7e5c15298dd086ec9da2d81c6f653319046e05ab44f8deda10c5134ccca9e005"
+    }
+   ],
+   "asset_id": "slime-floor",
+   "native_name": "SLIME_FLOOR / UNDERGROUND_CREEP slime floor",
+   "kind": "terrain-floor",
+   "scope": "Slime Tunnels and Sludgenest SLIME_FLOOR1-5 (and their stairs base); Grushnak Pride UNDERGROUND_CREEP1-5 (as a creep layer over the board stone floor).",
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/grids/slime.lua",
+     "sha256": "8b9dde0134fc228d8038ab9aa3b8af521eda9d3ba3d23ea0c5155a50c9a4b8f3",
+     "line": 24,
+     "anchor": "define_as = \"SLIME_FLOOR\""
+    },
+    {
+     "path": "game/modules/tome/data/general/grids/underground_slimy.lua",
+     "sha256": "586776a149adc01fc644fc44c59556a3d58e30d6d288c399c6e9c9e4ef8bc084",
+     "line": 36,
+     "anchor": "define_as = \"UNDERGROUND_CREEP\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/terrain/slime/slime_floor_01.png",
+     "sha256": "fc1f63eadfab4d3db42181d1c63834ba4646dc0ac6da21f4879735793b83e329",
+     "role": "identity",
+     "note": "Native slime floor: cave ground glazed with green slime. Keep the slime-glazed-ground identity but make it much paler, muted and calm; not bright green."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-cave-v1/masters/cave-floor-v1.png",
+     "sha256": "84892e66c5e53f48fae9ca1d06eafe07e7e9ddd3bcea2f70f64de3ffcf593cf6",
+     "role": "style",
+     "note": "Accepted board cave floor master: flat overhead matte finish, scale of grit, low contrast, upper-left light and the calm printed-board surface. Not its ochre palette."
+    }
+   ],
+   "grid_contract": {
+    "movement": "Walkable; no movement rule, no speed bonus or penalty.",
+    "sight": "Does not block sight.",
+    "danger": "None: no on_stand, no damage; must not look like acid, water or a pool.",
+    "interaction": "None. Sludgenest may turn an adjacent slime wall into this floor (zone on_turn); the display follows via the existing re-tile repair.",
+    "export": "Opaque full-bleed floor material; the exporter crops 2 checker parities (parity 1 about 12% darker) and composites it with neighbour edge masks over the board stone floor for Grushnak creep."
+   },
+   "prompt_fields": {
+    "subject": "Walkable slime-slicked cave floor seen from straight above: packed pale grey-green stone dust and dried mud glazed by a thin translucent film of old slime, with a few faint glossy smears and tiny flattened droplets; completely flat, calm and even.",
+    "palette": "Pale sage and light olive-grey with a soft yellow-green glaze and a few cooler grey-green patches. Light overall: clearly lighter than a dark slime wall and than dark stone brick; muted, never neon or saturated lime; no black.",
+    "contrast": "At 48 pixels it must read as flat walkable ground that game pieces stand on: pale and low contrast so characters stay readable; clearly different from a dark glossy slime wall by being much lighter and matte; it must NOT read as a pool, acid, water, hole or hazard: no bubbles, ripples, deep puddles or glowing spots.",
+    "composition": "Edge-to-edge overhead floor material filling the whole square with even density and a non-directional pattern; no border, crack line, step, rock, mushroom, object or shadow.",
+    "mechanics": "Walkable floor only; harmless (no damage, no slow). Paint no pool, bubble, drip hole, hazard, stairs, character, symbol or text."
+   }
+  },
+  {
+   "gate": "ready",
+   "gate_reason": "S10a slime family wall: SLIME_WALL (Slime Tunnels, Sludgenest) is a native bright-green wall with no board picture. One opaque dark slime-wall top material; the exporter builds the N/E/S/W masks and the south face. Rules unchanged. No waiver.",
+   "max_attempts": 2,
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/terrain-s10a-20260930/identity-s10a.md",
+     "sha256": "7e5c15298dd086ec9da2d81c6f653319046e05ab44f8deda10c5134ccca9e005"
+    }
+   ],
+   "asset_id": "slime-wall",
+   "native_name": "SLIME_WALL slime wall",
+   "kind": "terrain-floor",
+   "scope": "Slime Tunnels and Sludgenest SLIME_WALL1-5 (NicerTiles slime_wall layers dropped); nowhere else.",
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/grids/slime.lua",
+     "sha256": "8b9dde0134fc228d8038ab9aa3b8af521eda9d3ba3d23ea0c5155a50c9a4b8f3",
+     "line": 34,
+     "anchor": "define_as = \"SLIME_WALL\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/terrain/slime/slime_wall_V2_8_01.png",
+     "sha256": "74383ab9b2055e36273eef7091ef8c97fc3b8d8a87b2c49ed94cd07d4c4d7b16",
+     "role": "identity",
+     "note": "Native slime wall: a wall of thick translucent green slime. Keep the congealed-slime identity but as a dark, heavy, matte-to-glossy mass seen from above; not bright green, not translucent."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-gold-mountain-v1/selected/floor-gold-crest.png",
+     "sha256": "3591c8c15bfb314b98ac71566aa9ae46cbb13f1678d4d02de17df4f011b3d19d",
+     "role": "style",
+     "note": "Accepted board wall-top material (TW5 mountain crest): an opaque overhead material of a solid blocking mass, its broad forms, scale and upper-left light. Not its sandstone material or gold palette."
+    }
+   ],
+   "grid_contract": {
+    "movement": "Blocks movement (pass_wall creatures may pass).",
+    "sight": "Blocks sight.",
+    "danger": "None.",
+    "interaction": "Diggable into slime floor; Sludgenest may turn it into slime floor with a monster (zone on_turn).",
+    "export": "Opaque full-bleed wall-top material; the exporter crops fixed windows per neighbour mask, darkens it into a blocking mass, adds rims/sides and a darker south face toward open ground, 2 parities."
+   },
+   "prompt_fields": {
+    "subject": "The top surface of a solid wall of congealed slime seen from straight above: one continuous heavy mass of thick dark green ooze in broad rounded folds and lumps over buried rock, a slightly wet sheen on the rounded lumps; solid and impassable, filling the square.",
+    "palette": "Deep bottle green, dark olive and blackish moss green, with small muted yellow-green wet highlights catching upper-left light. Dark overall: clearly much darker than a pale slime-glazed floor or a light stone floor; never neon, never translucent.",
+    "contrast": "At 48 pixels it must read as a dark solid blocking mass filling its cell, clearly darker and heavier than any floor; distinct from grey stone brick and brown mushroom thickets by its dark glossy green ooze; broad rounded forms, no small scattered blobs that look like separate objects, no holes showing floor.",
+    "composition": "Edge-to-edge overhead material filling the whole square with even density and broad rounded forms; no border, gap, visible floor, cliff face, drip line, object or cast shadow.",
+    "mechanics": "Blocking wall top only. Paint no door, opening, pool, stairs, hazard, character, symbol or text."
+   }
+  }
+ ]
+}

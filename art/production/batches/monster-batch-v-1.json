@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-v-1",
+  "assets": [
+    {
+      "asset_id": "black-crystal",
+      "native_name": "black crystal",
+      "scope": "old-forest and scintillating-caves crystal pools (general/npcs/crystal.lua:119, immovable/crystal, non-unique, no define_as, rank 2, base BASE_NPC_CRYSTAL, explicit image=npc/crystal_black.png overriding the base's crystal_npc.png); the only definition of this name; no vault, event or talent builds another actor with this name (the Arena file only bases its own golden crystal on BASE_NPC_CRYSTAL)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/crystal.lua",
+          "sha256": "d6cdbfe8d69dc00a9167ec1c348469f915103835ee7485534f8e0086982decc2",
+          "line": 120,
+          "anchor": "name = \"black crystal\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/crystal.lua",
+          "sha256": "d6cdbfe8d69dc00a9167ec1c348469f915103835ee7485534f8e0086982decc2",
+          "line": 126,
+          "anchor": "T_BLIGHT_BOLT"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/crystal.lua",
+          "sha256": "d6cdbfe8d69dc00a9167ec1c348469f915103835ee7485534f8e0086982decc2",
+          "line": 120,
+          "anchor": "image = \"npc/crystal_black.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/crystal_black.png",
+          "sha256": "ec84b524a36f22b8fb26790998ac156910818330c31c9c072a2e8a20f72eaeb7",
+          "role": "identity",
+          "note": "Native shape (64x64): a spiky cluster of black crystal shards drawn as thin dark outlines. Keep the idea of a shard cluster, but as a solid glossy gunmetal-grey formation."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-v/refs/crystals.png",
+          "sha256": "6355ceb3c62ff18a672c8d201dba41d07447b6c9328b2b650d1bf88f04d1bb4e",
+          "role": "family",
+          "note": "Four shipped crystal tokens (white clear vertical prism cluster, red wide fan of thin shards, crimson single big faceted ruby, spellblaze violet spiked ball): the black crystal must not be white or clear, not a thin-shard fan, not a single gem and not a spiked ball."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A black crystal seen from a steep overhead three-quarter angle: a formation of thick hexagonal SMOKY-QUARTZ crystal columns in a GUNMETAL-GREY and GRAPHITE-BLUE mid tone, ONE large main column leaning up and to the right at about thirty degrees with a faceted pointed top, TWO shorter columns beside it (one leaning left, one nearly upright), and a scatter of small crystal shards and pale grey stone rubble at their foot. Every upper-left crystal face carries a bright SILVER-WHITE polished highlight plane and thin cold VIOLET edge-light lines; the shaded faces are mid slate-grey, never black; tiny pale glints at the tips. Solid, glossy, heavy and complete; no eyes, no face.",
+        "contrast": "Crystals: the BLACK crystal is a cluster of three thick faceted gunmetal-grey columns with silver highlights and a violet rim (silhouette: three chunky leaning columns, one big, on a rubble foot; hue: gunmetal grey with violet edge light; value: mid with bright highlights). The shipped white crystal is a tall clear-white vertical prism bunch, red crystal a wide red fan of thin shards, crimson crystal one big faceted ruby and spellblaze crystal a violet spiked ball: this must not be white or clear, not a fan of thin shards, not one single gem and not a spiked ball; and it must not read as a near-black mass.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Gunmetal grey in a mid value with slate-blue shaded facets, silver-white polished highlight planes, thin violet edge light, pale grey stone rubble; nothing darker than dark slate except hairline crack seams; the disc stays neutral charcoal at reference lightness and no crystal glow or reflection lights or darkens the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=black crystal, define_as=None, type=immovable/subtype=crystal, unique=False, native_tall=False); details and hashes in evidence/monster-batch-v-20260930/source-contracts.json. base BASE_NPC_CRYSTAL (immovable/crystal, image=npc/crystal_npc.png overridden by the leaf, never_move, lite 2, no shader/nice_tile/add_mos); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; the leaf also sets tint=colors.BLACK (Entity.lua:129 turns it into tint_r/g/b, which tints only the native MO; the token is its own Entity); talents Blight Bolt (activated) and the base Phase Door; no sustains_at_birth and no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-v-20260930/source-contracts.json",
+          "sha256": "2bf61831a3d4e67d3152ac5925673d689b454868c4e2e454b95959fa833143ed"
+        }
+      ]
+    },
+    {
+      "asset_id": "faerlhing",
+      "native_name": "faerlhing",
+      "scope": "ardhungol spider pool (general/npcs/spider.lua:153, spiderkin/spider, non-unique, no define_as, rank 3, base BASE_NPC_SPIDER, default-name image); single definition; no vault, event or talent builds another actor with this name (Ungole's lair only draws it from the spiderkin pool)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 153,
+          "anchor": "name = \"faerlhing\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 172,
+          "anchor": "T_PHANTASMAL_SHIELD"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 43,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_faerlhing.png",
+          "sha256": "c76b45b8a2d6ab6777f5493cae41bde07880c18f85998582badb0019759bfdce",
+          "role": "identity",
+          "note": "Native shape (64x64): a purple spider with pink stripes and lilac legs. Keep the arcane purple identity but make it a glowing amethyst spirit spider with a rune on its back."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-v/refs/spiders.png",
+          "sha256": "844792683942d8fd972bccb08fb5036b67df0f08822358fd958a2fd9a592ac5a",
+          "role": "family",
+          "note": "Nine shipped spider tokens (dark grey giant spider, brown spitting spider, steel-blue fate spinner with a silk ring, white swirl weaver young, cream chitinous spider, silver gem-crowned nimisil, ash-and-bone rearing gaeramarth, bloated lime ninurlhing, cream-and-lavender fluffy fate weaver): the two new spiders must not repeat any of their colours or poses."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A faerlhing seen from a steep overhead three-quarter angle: an elegant arcane spirit spider with a glossy, slightly translucent AMETHYST-PURPLE and MAGENTA body in a mid-light value, a round abdomen carrying a bright glowing TEAL-WHITE RUNE RING with a small sigil in its centre, a head with four small glowing teal-white eyes, and EIGHT SLENDER LONG LEGS in lilac-purple with pale pink joints ARCHING HIGH UP and inward like the bars of a rounded cage over the body (the leg tips coming down close to the body), the two front legs cradling a small compact glowing TEAL-WHITE MANA ORB in front of the head (the orb no bigger than the head). Elegant, arcane, cage-like and complete.",
+        "contrast": "Spiders: the FAERLHING is the CAGE-LEGGED ARCANE one, a deep amethyst-magenta spider whose long legs arch up and in like a rounded cage around a glowing teal mana orb, with a glowing rune on its abdomen (silhouette: a dome of arched thin legs with an orb in front; hue: amethyst purple, magenta and teal-white glow; value: mid-light). The shipped fate weaver is a cream-white and lavender fluffy spider, the fate spinner is steel blue, nimisil is silver with a gem crown, weaver young is a white-blue ball and gaeramarth is ash and bone: this must not be cream, not blue, not silver, not fluffy and not reared up. The other new spider is an icy pale-cyan frost spider with a crest of ice spikes (losselhing).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Amethyst purple and magenta in a mid-light value with pale pink-lilac highlight planes, lilac legs with pale pink joints, teal-white glowing rune ring and mana orb (the glow stays on the creature and must not tint or brighten the disc); nothing darker than deep violet except the eyes and thin seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=faerlhing, define_as=None, type=spiderkin/subtype=spider, unique=False, native_tall=False); details and hashes in evidence/monster-batch-v-20260930/source-contracts.json. base BASE_NPC_SPIDER (spiderkin/spider, sustains_at_birth in the base); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; talents Spider Web, Lay Web, Phase Door, Manathrust, Manaflow (activated), Phantasmal Shield, Disruption Shield, Arcane Power (sustained); resolvers.sustains_at_birth() starts the three sustained ones (temporary values, shield values and particles only, no type/subtype/image/add_mos write); resolvers.inscriptions(2, infusion); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-v-20260930/source-contracts.json",
+          "sha256": "2bf61831a3d4e67d3152ac5925673d689b454868c4e2e454b95959fa833143ed"
+        }
+      ]
+    },
+    {
+      "asset_id": "losselhing",
+      "native_name": "losselhing",
+      "scope": "ardhungol spider pool (general/npcs/spider.lua:211, spiderkin/spider, non-unique, no define_as, rank 3, base BASE_NPC_SPIDER, default-name image); single definition; no vault, event or talent builds another actor with this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 211,
+          "anchor": "name = \"losselhing\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 231,
+          "anchor": "T_ICY_SKIN"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 43,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_losselhing.png",
+          "sha256": "fe7401277929f698e86b69888ae24b63e5e7d347208b34fc75e63223a16a3bcb",
+          "role": "identity",
+          "note": "Native shape (64x64): an icy pale-blue striped spider with light-blue legs. Keep the frost-blue colour idea but make it a squat frost spider with a crest of ice crystals on its back."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-v/refs/spiders.png",
+          "sha256": "844792683942d8fd972bccb08fb5036b67df0f08822358fd958a2fd9a592ac5a",
+          "role": "family",
+          "note": "Nine shipped spider tokens (dark grey giant spider, brown spitting spider, steel-blue fate spinner with a silk ring, white swirl weaver young, cream chitinous spider, silver gem-crowned nimisil, ash-and-bone rearing gaeramarth, bloated lime ninurlhing, cream-and-lavender fluffy fate weaver): the two new spiders must not repeat any of their colours or poses."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A losselhing (snow-star spider) seen from a steep overhead three-quarter angle: a squat, wide, low frost spider with a thick coat of shaggy WHITE FROST FUR over an ICY AQUAMARINE and PALE CYAN body, two big glowing pale-blue eyes and small ice-white fangs, SHORT STOUT frost-crusted legs in pale cyan with white rime spread wide, and on its back a CREST OF SIX SHARP ICE CRYSTALS fanning out like a snowflake star behind the head (the crystals pale cyan with bright white edges, the crest kept inside the disc), small icicles hanging from the leg joints. Squat, frosty, spiky-crested and complete.",
+        "contrast": "Spiders: the LOSSELHING is the SQUAT FROSTY one with a fan of ice crystals on its back (silhouette: a wide low body with a spiky snowflake-star crest; hue: icy aquamarine, pale cyan and white frost; value: light). The shipped chitinous spider is a cream radial spider, weaver young a white-blue ball, fate spinner a steel-blue long-legged spider with a silk ring, giant spider dark grey: this must not be a radial long-legged spider, not a smooth ball and not cream or steel blue. The other new spider is a deep amethyst cage-legged arcane spider with a glowing rune (faerlhing).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Icy aquamarine and pale cyan in a light value with white frost fur and bright white highlight planes, cyan ice crystals with bright white edges, pale blue eyes; nothing darker than mid teal-blue except the eyes and thin seams; the disc stays neutral charcoal at reference lightness and must not be brightened by the pale frost or tinted blue. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=losselhing, define_as=None, type=spiderkin/subtype=spider, unique=False, native_tall=False); details and hashes in evidence/monster-batch-v-20260930/source-contracts.json. base BASE_NPC_SPIDER (spiderkin/spider, sustains_at_birth in the base); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; talents Rush, Spider Web, Lay Web, Freeze, Tidal Wave, Ice Storm (activated), Icy Skin, Frost Hands (sustained); resolvers.sustains_at_birth() starts the two sustained ones (temporary values and damage callbacks only, no type/subtype/image/add_mos write); resolvers.inscriptions(2, infusion); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-v-20260930/source-contracts.json",
+          "sha256": "2bf61831a3d4e67d3152ac5925673d689b454868c4e2e454b95959fa833143ed"
+        }
+      ]
+    }
+  ]
+}

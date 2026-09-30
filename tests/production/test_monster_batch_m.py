@@ -124,7 +124,7 @@ class MonsterBatchMCatalogTests(unittest.TestCase):
         self.assertNotIn('demon', self.line('elven-cultist'))
         # Only the Grand Corruptor and the cultist opt into Flame of Urh'Rok.
         opted = [l for l in self.source.splitlines() if 'urh_rok_form=true' in l and '{id=' in l]
-        self.assertEqual(len(opted), 4)  # grand corruptor, elven cultist, Rak'shor, Kor's Fury (2026-09-29)
+        self.assertEqual(len(opted), 5)  # grand corruptor, elven cultist, Rak'shor, Kor's Fury, Weirdling Beast (batch T)
 
     def test_contract_evidence_pins_source_and_native_sprite(self):
         import hashlib

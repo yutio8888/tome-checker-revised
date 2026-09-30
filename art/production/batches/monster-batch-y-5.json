@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-y-5",
+  "assets": [
+    {
+      "asset_id": "uruivellas",
+      "native_name": "uruivellas",
+      "scope": "valley-moon-caverns and demon-plane pools (general/npcs/major-demon.lua:95, demon/major, non-unique, no define_as, rank 3, base BASE_NPC_MAJOR_DEMON, nice_tile tall body; also the lava_island vault 'U' tile by name); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 96,
+          "anchor": "name = \"uruivellas\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 97,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 124,
+          "anchor": "T_FIRE_STORM"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_MAJOR_DEMON\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_uruivellas.png",
+          "sha256": "7ca0bc7381214e52b01ab03f8c0700e2c96ac07595285f1739c22eeaeab25923",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a hulking dark-brown bull-headed demon with horns all over its body inside a fierce orange fire aura. Keep the hulking bull-headed horned demon wrapped in a tight flame aura, but render the body in mid-light ash-grey and pale clay with glowing lava seams and bright ivory horns, drawn as ONE compact figure filling the disc, no tall canvas."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-y/refs/demons.png",
+          "sha256": "94fc1d2656265398f30186f3caff0bfc67b2b76927ab74a7c1687658421e0521",
+          "role": "family",
+          "note": "Four shipped tokens (the orange-red spiky thorn demon dolleg, the grey smoke-cloud Kryl-Feijan, the tan-and-cream bull-headed minotaur with a labrys, the small orange fire imp): uruivellas is a hulking ash-grey and pale-clay bull-headed demon with ivory horns all over and a tight flame aura, not tan and cream, not orange-red thorny and not small; thaurhereg is a lanky PALE ROSE-PINK demon covered in flowing bright crimson blood rivulets with a crown of horns, not solid orange-red and not grey smoke."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An uruivellas seen from a steep overhead three-quarter angle: a HULKING bull-headed demon standing square and facing the lower left, a broad muscular body in pale ASH-GREY and light CLAY-TAN skin in a mid-light value with cream highlight planes and thin glowing molten-orange seams between the muscles, a massive bull skull-like head with two huge curved BRIGHT IVORY horns and rows of short ivory horn spikes along the shoulders, spine and forearms, blazing white-yellow eyes, a thick tight mantle of BRIGHT ORANGE and YELLOW FLAMES wrapping the whole body outline like a burning aura (the flames hug the body and every flame tip stays inside the disc), heavy clenched fists at its sides. Hot, horned, powerful and complete.",
+        "contrast": "Major demons: URUIVELLAS is the HULKING ASH-GREY BULL DEMON in a tight flame aura with ivory horns everywhere (silhouette: a broad square horned brute with flames hugging the body; hue: ash grey and pale clay with orange-yellow flames and ivory; value: mid-light with bright flame accents). The shipped minotaur is a tan-and-cream bull warrior with a labrys and no flames, dolleg an orange-red thorny demon, Kryl-Feijan a grey smoke cloud and the fire imp a small orange imp: this must not be tan and cream, not thorny orange-red, not smoke and not small.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Pale ash-grey and clay-tan skin in a mid-light value with cream highlight planes, thin molten-orange seams, bright ivory horns, orange and yellow flames with a white-yellow core (the fire stays on the demon and must not glow onto, tint or warm the disc); nothing darker than mid ash-brown except thin seams; NO dark brown or black body anywhere. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=uruivellas, define_as=None, type=demon/subtype=major, unique=False, native_tall=True); details and hashes in evidence/monster-batch-y-20260930/source-contracts.json. base BASE_NPC_MAJOR_DEMON (demon/major, no image=, no shader, no sustains_at_birth in the base); NPC.lua:33 default-name image on the leaf; resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/demon_major_uruivellas.png\", display_h=2, display_y=-1}}} (an explicit tall body, keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true (nativeTallImage accepts the body only for unique or native_tall entries, as for bone giant and eternal bone giant); resolvers.equip battleaxe (inventory only, no moddable_tile); talents Disarm, Rush, Battle Call, weapon talents and Fire Storm (all activated); no sustains_at_birth on the leaf, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-y-20260930/source-contracts.json",
+          "sha256": "83d35e6f54d8f3e094ee96ef7b509b1f998a338d59f92f3fc4a297670640cd83"
+        }
+      ]
+    }
+  ]
+}

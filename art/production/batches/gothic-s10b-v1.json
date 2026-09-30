@@ -1,0 +1,234 @@
+{
+ "schema": 1,
+ "batch_id": "gothic-s10b-v1",
+ "assets": [
+  {
+   "gate": "ready",
+   "gate_reason": "S10b gothic family floor: GOTHIC_FLOOR (Vor Pride halls) is a native dark marble tile with no board picture. One opaque light gothic-floor master; rules unchanged (harmless walkable floor). No waiver.",
+   "max_attempts": 2,
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/terrain-s10b-20260930/identity-s10b.md",
+     "sha256": "8cdb3a2df334d78526bdbd06889e66240db7177f022bf586060db6b0dfd46fab"
+    }
+   ],
+   "asset_id": "gothic-floor",
+   "native_name": "GOTHIC_FLOOR gothic hall floor",
+   "kind": "terrain-floor",
+   "scope": "Vor Pride L1-3 GOTHIC_FLOOR (and the base of its board doors, flat exits and book cells); nowhere else.",
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/grids/gothic.lua",
+     "sha256": "19fcbb2d3b69e0ee2d2bf882078fcf6f19e4b01e95f97998a0f5a027295cf4e8",
+     "line": 146,
+     "anchor": "define_as = \"GOTHIC_FLOOR\""
+    },
+    {
+     "path": "game/modules/tome/data/zones/vor-pride/grids.lua",
+     "sha256": "b9990ebf1ca7daadaddbc7c7f9cb2b4dd6ad8f4fa93279a6851937b15ce871fb",
+     "line": 21,
+     "anchor": "load(\"/data/general/grids/gothic.lua\", function(e)"
+    }
+   ],
+   "references": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/terrain/gothic_walls/marble_floor.png",
+     "sha256": "5f909fa5b25c2c7508aff7802c78b7bea9465ebe93a567f68aca3cd3fc995f15",
+     "role": "identity",
+     "note": "Native gothic hall floor: laid stone flags of a dark orc-pride keep. Keep the laid-flagstone hall identity but make it pale and calm; not this dark grey value."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-korpul-v1/masters/floor-a-v2.png",
+     "sha256": "aa50b00c1a936cb30e29e67e7a24a0243f8d936be8c9d413926a2a507aa42d29",
+     "role": "style",
+     "note": "Accepted board stone floor master: flat overhead matte finish, light value, low contrast and upper-left light. Not its warm sandstone palette and not its unjointed surface."
+    }
+   ],
+   "grid_contract": {
+    "movement": "Walkable; no movement rule, no speed bonus or penalty.",
+    "sight": "Does not block sight.",
+    "danger": "None: no on_stand, no damage; must not look like a pit, water or a hazard.",
+    "interaction": "None. Walls may be dug into this floor; the display follows via the existing re-tile repair.",
+    "export": "Opaque full-bleed floor material; the exporter crops 2 checker parities (parity 1 about 12% darker) and uses it under the board doors, exits and books."
+   },
+   "prompt_fields": {
+    "subject": "Walkable floor of a gothic stone hall seen from straight above: large square flagstones of pale cool grey limestone laid in a straight grid with thin dark joints, a faint worn polish and a few very soft grey-violet mineral veins; completely flat, calm and even.",
+    "palette": "Pale ash grey and light cool grey with a faint lavender-slate tint and a few slightly darker grey flags; light overall: clearly lighter than a dark slate wall; cooler and greyer than warm sandstone; muted, no black areas.",
+    "contrast": "At 48 pixels it must read as flat walkable ground that game pieces stand on: pale and low contrast so characters stay readable; the thin joints stay subtle (no bold grid that competes with the board grid); it must NOT read as a pit, water, rubble or a hazard.",
+    "composition": "Edge-to-edge overhead floor material filling the whole square; about three to four flagstones across, even density, non-directional; no border, step, crack line, object, rune, symbol or shadow.",
+    "mechanics": "Walkable floor only; harmless. Paint no pit, stairs, door, carpet, blood, character, symbol or text."
+   }
+  },
+  {
+   "gate": "ready",
+   "gate_reason": "S10b gothic family wall top: GOTHIC_WALL (and its wall3d variants and pillars) is a native dark spiked granite wall with no board picture. One opaque dark wall-top material; the exporter builds the N/E/S/W masks. Rules unchanged. No waiver.",
+   "max_attempts": 2,
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/terrain-s10b-20260930/identity-s10b.md",
+     "sha256": "8cdb3a2df334d78526bdbd06889e66240db7177f022bf586060db6b0dfd46fab"
+    }
+   ],
+   "asset_id": "gothic-wall-top",
+   "native_name": "GOTHIC_WALL gothic granite wall",
+   "kind": "terrain-floor",
+   "scope": "Vor Pride L1-3 GOTHIC_WALL, GOTHIC_WALL1-5, _NORTH1-5, _PILLAR_81-5, _NORTH_SOUTH, _SOUTH, _SOUTH1-17, _SMALL_PILLAR, _PILLAR_2/4/6 (native wall3d layers dropped); nowhere else.",
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/grids/gothic.lua",
+     "sha256": "19fcbb2d3b69e0ee2d2bf882078fcf6f19e4b01e95f97998a0f5a027295cf4e8",
+     "line": 157,
+     "anchor": "define_as = \"GOTHIC_WALL\""
+    },
+    {
+     "path": "game/modules/tome/data/general/grids/gothic.lua",
+     "sha256": "19fcbb2d3b69e0ee2d2bf882078fcf6f19e4b01e95f97998a0f5a027295cf4e8",
+     "line": 171,
+     "anchor": "define_as = \"GOTHIC_WALL\"..i"
+    }
+   ],
+   "references": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/terrain/gothic_walls/granite_wall1_1.png",
+     "sha256": "1f3d5e4bb959b9061cf92fda2115f54ed55d41358d0c62e35ae88b4336393b02",
+     "role": "identity",
+     "note": "Native gothic granite wall: dark cut granite blocks. Keep the dark dressed-stone gothic identity as the top of a thick wall seen from above."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-gold-mountain-v1/selected/floor-gold-crest.png",
+     "sha256": "3591c8c15bfb314b98ac71566aa9ae46cbb13f1678d4d02de17df4f011b3d19d",
+     "role": "style",
+     "note": "Accepted board wall-top material (TW5 mountain crest): an opaque overhead material of a solid blocking mass, its broad forms, scale and upper-left light. Not its natural rock or gold palette."
+    }
+   ],
+   "grid_contract": {
+    "movement": "Blocks movement (pass_wall creatures may pass).",
+    "sight": "Blocks sight.",
+    "danger": "None.",
+    "interaction": "Diggable into gothic floor.",
+    "export": "Opaque full-bleed wall-top material; the exporter crops fixed windows per neighbour mask, adds rims/sides and the separate gothic wall face on south edges toward open ground, 2 parities."
+   },
+   "prompt_fields": {
+    "subject": "The top of a thick gothic keep wall seen from straight above: dark dressed slate-grey stone coping blocks, heavy and square-cut, laid in a tight running bond with thin black joints and a few black wrought-iron clamps and rivets set into the stone; solid and impassable, filling the square.",
+    "palette": "Charcoal slate, dark blue-grey and near-black granite with small cool grey highlights catching upper-left light and dull black iron; dark overall: clearly much darker than a pale stone floor; not brown, not green, not warm.",
+    "contrast": "At 48 pixels it must read as a dark solid blocking mass filling its cell, clearly darker and heavier than any floor; distinct from pale Kor'Pul brick and brown rock by its dark cool slate masonry and iron; broad even forms, no holes showing floor, no small scattered objects.",
+    "composition": "Edge-to-edge overhead material filling the whole square with even density; stone courses run straight across; no border, gap, visible floor, cliff face, battlement silhouette, object or cast shadow.",
+    "mechanics": "Blocking wall top only. Paint no door, opening, window, stairs, hazard, character, symbol or text."
+   }
+  },
+  {
+   "gate": "ready",
+   "gate_reason": "S10b gothic family wall face: the south face of GOTHIC_WALL toward open ground (native granite_wall2 with iron spikes) needs a board face so the gothic wall reads as a standing wall. One native-alpha wall section; the exporter uses its face band on open south edges only. Rules unchanged. No waiver.",
+   "max_attempts": 2,
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/terrain-s10b-20260930/identity-s10b.md",
+     "sha256": "8cdb3a2df334d78526bdbd06889e66240db7177f022bf586060db6b0dfd46fab"
+    }
+   ],
+   "asset_id": "gothic-wall-face",
+   "native_name": "GOTHIC_WALL_SOUTH gothic wall face",
+   "kind": "terrain-prop",
+   "scope": "Vor Pride gothic wall tiles whose south neighbour is not wall/door (the face band); nowhere else.",
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/grids/gothic.lua",
+     "sha256": "19fcbb2d3b69e0ee2d2bf882078fcf6f19e4b01e95f97998a0f5a027295cf4e8",
+     "line": 176,
+     "anchor": "define_as = \"GOTHIC_WALL_SOUTH\""
+    },
+    {
+     "path": "game/modules/tome/data/general/grids/gothic.lua",
+     "sha256": "19fcbb2d3b69e0ee2d2bf882078fcf6f19e4b01e95f97998a0f5a027295cf4e8",
+     "line": 177,
+     "anchor": "define_as = \"GOTHIC_WALL_SOUTH\"..i"
+    }
+   ],
+   "references": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/terrain/gothic_walls/granite_wall2.png",
+     "sha256": "37ee3eab657bfda5739cb27455a699866ddeedce2ab746fcab97c8c6859aad46",
+     "role": "identity",
+     "note": "Native gothic wall face: dark granite blocks crowned by black iron spikes. Keep the dark masonry with a row of iron spikes and the gothic character."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-bamboo-hut-v1/selected/prop-bamboo-hut-wall.png",
+     "sha256": "b1b12099a645ea6c409b98cad6c99f801717fa406a13e67902e51f1f8df66b0f",
+     "role": "style",
+     "note": "Accepted board wall-section prop: one straight free-standing section seen slightly from above and front, native transparency, margins and grounded base. Not its bamboo material."
+    }
+   ],
+   "grid_contract": {
+    "movement": "Blocks movement (it is the face of the same wall).",
+    "sight": "Blocks sight.",
+    "danger": "None.",
+    "interaction": "None.",
+    "export": "Native-alpha prop; the exporter crops its masonry face band into a 40 px south cliff on wall tiles facing open ground."
+   },
+   "prompt_fields": {
+    "subject": "One straight free-standing section of a dark gothic keep wall seen from the front and slightly above: dark dressed slate-grey stone blocks in even courses, a row of shallow pointed lancet-arch blind niches along the face, and a crest of short black wrought-iron spikes along the top edge; a solid wall section, wider than tall.",
+    "palette": "Charcoal slate, dark blue-grey granite and near-black iron, small cool grey highlights from upper-left light; dark overall, no warm brown, no green.",
+    "contrast": "At 48 pixels, compressed into a thin band, it must read as the dark vertical face of a blocking wall: darker than the floor it stands on, with the pointed niches and spikes as the gothic identity; no bright windows or openings.",
+    "composition": "Single horizontal wall section centred, filling most of the width, straight top and bottom edges, the base sitting on an implied ground line; transparent background around it; no floor, ground patch, shadow on the background, door, gate, tower or banner.",
+    "mechanics": "Wall face only. Paint no door, window, opening, stairs, hazard, character, symbol or text. Return a native RGBA PNG with real transparency; no white, grey, black or checkerboard background."
+   }
+  },
+  {
+   "gate": "ready",
+   "gate_reason": "S10b gothic family door: GOTHIC_DOOR / _HORIZ / _VERT and their open twins are native gothic double doors with no board picture. One native-alpha door leaf; the exporter lays it across the doorway (closed) or against the jamb (open) over the gothic floor. Rules unchanged. No waiver.",
+   "max_attempts": 2,
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/terrain-s10b-20260930/identity-s10b.md",
+     "sha256": "8cdb3a2df334d78526bdbd06889e66240db7177f022bf586060db6b0dfd46fab"
+    }
+   ],
+   "asset_id": "gothic-door",
+   "native_name": "GOTHIC_DOOR gothic door",
+   "kind": "terrain-prop",
+   "scope": "Vor Pride GOTHIC_DOOR, _HORIZ, _VERT, _OPEN, _HORIZ_OPEN, _OPEN_VERT; nowhere else (sealed/lever doors stay native).",
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/grids/gothic.lua",
+     "sha256": "19fcbb2d3b69e0ee2d2bf882078fcf6f19e4b01e95f97998a0f5a027295cf4e8",
+     "line": 218,
+     "anchor": "define_as = \"GOTHIC_DOOR\""
+    },
+    {
+     "path": "game/modules/tome/data/general/grids/gothic.lua",
+     "sha256": "19fcbb2d3b69e0ee2d2bf882078fcf6f19e4b01e95f97998a0f5a027295cf4e8",
+     "line": 231,
+     "anchor": "define_as = \"GOTHIC_DOOR_OPEN\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/terrain/gothic_walls/granite_door1.png",
+     "sha256": "17314681f325aefe233243b29b916def29cc17f5e3f769f5bfc0dfa973070918",
+     "role": "identity",
+     "note": "Native gothic door: a brown wooden double door set in dark spiked granite. Keep a heavy iron-bound wooden door leaf as the identity."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-bamboo-hut-v1/selected/prop-bamboo-hut-door.png",
+     "sha256": "58bc313167397b0e81babe3b5b89962a91e63c5495c6335a4254925129f62876",
+     "role": "style",
+     "note": "Accepted board door-leaf prop: one flat door leaf seen from the front, native transparency, margins and upright framing. Not its bamboo material."
+    }
+   ],
+   "grid_contract": {
+    "movement": "A closed door is entered by moving into it (it opens); an open door is walkable.",
+    "sight": "Closed blocks sight; open does not.",
+    "danger": "None.",
+    "interaction": "Opens and closes (native door rule); no lock, no prompt.",
+    "export": "Native-alpha prop; the exporter crops the leaf into a band across the doorway between two dark jamb posts (closed) or its edge against the west/north jamb (open), over the gothic floor, 2 orientations x 2 parities."
+   },
+   "prompt_fields": {
+    "subject": "One heavy gothic door leaf seen straight from the front: vertical weathered oak planks in a mid honey-brown, bound by two broad black wrought-iron strap hinges with pointed fleur ends and a row of iron studs, a small iron ring handle; a plain rectangular leaf (no arch on top), upright.",
+    "palette": "Mid honey-brown and warm grey-brown oak with black iron; the wood clearly lighter than a dark slate wall and darker than a pale stone floor.",
+    "contrast": "At 48 pixels, laid as a narrow band across a doorway, it must read as a wooden door between dark stone walls: warm wood against cool slate, iron straps visible as dark bands; never as a wall block or a bridge.",
+    "composition": "Single rectangular door leaf centred, upright, filling most of the height, with transparent margins; no frame, wall, floor, arch, shadow on the background or second leaf.",
+    "mechanics": "Door leaf only. Paint no padlock, seal, rune, keyhole glow, stairs, character, symbol or text. Return a native RGBA PNG with real transparency; no white, grey, black or checkerboard background."
+   }
+  }
+ ]
+}

@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-w-4",
+  "assets": [
+    {
+      "asset_id": "giant-fire-ant",
+      "native_name": "giant fire ant",
+      "scope": "ardhungol, dreadfell, reknor, ruined-dungeon, old-forest and four more zones' ant pools (general/npcs/ant.lua:131, insect/ant, non-unique, no define_as, rank 1, base BASE_NPC_ANT, explicit image=npc/fire_ant.png); the only definition of this name; no vault, event or talent builds another actor with this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 132,
+          "anchor": "name = \"giant fire ant\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 140,
+          "anchor": "T_FLAME_FURY"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ANT\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/fire_ant.png",
+          "sha256": "a887d35031e6cd29ca0f72432a40252de40b30cb8de1152c7b13a33dfdbe119d",
+          "role": "identity",
+          "note": "Native shape (64x64): a dark red ant with a burning abdomen, flames on the back. Keep the burning ant, but make the carapace glowing burnt-orange and draw a tall flame plume from the abdomen."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-w/refs/ants.png",
+          "sha256": "b18ed8a778ca51fa7e31608160259c878e6e1b6141d123f198f332f671491952",
+          "role": "family",
+          "note": "Eight shipped ant tokens (plain white, golden yellow, brown, cobalt blue, black carpenter ant with big mandibles, black ant, lime scorpion-like green ant, deep red ant with red legs): the three elemental ants must not be plain recolours of these; each needs its own elemental silhouette feature (flame plume, ice-crystal spike crest, lightning arcs)."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A giant fire ant seen from a steep overhead three-quarter angle: a large ant angled diagonally with its head towards the upper left, a glossy BURNT-ORANGE and VERMILION carapace glowing from within like hot metal in a light-mid value, seams glowing bright YELLOW-ORANGE, a plume of bright ORANGE-YELLOW FLAMES with a white-yellow core rising from the swollen abdomen (a compact flame plume no taller than the body), small licking flames along the legs, mandibles open with a small fireball forming, antennae with ember tips curled in close, legs tucked in. Blazing, compact, plume-topped and complete.",
+        "contrast": "Ants: the GIANT FIRE ANT is the BURNT-ORANGE GLOWING ONE with a flame plume on the abdomen and a fireball at the mandibles (silhouette: a compact diagonal ant with a tall flame plume over the rear; hue: burnt-orange and vermilion with yellow-orange glowing seams and orange-yellow flames; value: light-mid). The shipped red ant is a dark red ant with long red legs and antennae spread flat, the yellow ant golden, the brown ant brown and the black ants black: this must not be dark red or black and must not be a flat spread ant without a flame plume. The other new ants are a crystalline pale-cyan ice ant with a spike crest and a lavender lightning ant with arcs.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Burnt-orange and vermilion carapace in a light-mid value with bright yellow-orange glowing seams and pale orange highlight planes, orange-yellow flames with a white-yellow core (the flames stay on the ant and must not glow onto or warm the disc); nothing darker than dark red-brown except the eye dots and thin seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=giant fire ant, define_as=None, type=insect/subtype=ant, unique=False, native_tall=False); details and hashes in evidence/monster-batch-w-20260930/source-contracts.json. base BASE_NPC_ANT (insect/ant, no image=, no shader, no sustains_at_birth); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; melee_project fire, talents Ritch Flamespitter Bolt and Flame Fury (activated); no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-w-20260930/source-contracts.json",
+          "sha256": "96ca69784bec3c15699f4022058d68cede257f2a212a917ee75ff352a93458e3"
+        }
+      ]
+    },
+    {
+      "asset_id": "giant-ice-ant",
+      "native_name": "giant ice ant",
+      "scope": "ardhungol, dreadfell, reknor, ruined-dungeon, old-forest and four more zones' ant pools (general/npcs/ant.lua:147, insect/ant, non-unique, no define_as, rank 1, base BASE_NPC_ANT, explicit image=npc/ice_ant.png); the only definition of this name; no vault, event or talent builds another actor with this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 148,
+          "anchor": "name = \"giant ice ant\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 159,
+          "anchor": "T_ICY_SKIN"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ANT\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/ice_ant.png",
+          "sha256": "1e58075dad4b931013f45dd652f5fdb3e5ac6d96a7d08945a08a910dddeb0065",
+          "role": "identity",
+          "note": "Native shape (64x64): a translucent pale white-blue ant. Keep the icy frosted ant, but make the carapace crystalline pale cyan with a crest of jagged ice spikes on its back."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-w/refs/ants.png",
+          "sha256": "b18ed8a778ca51fa7e31608160259c878e6e1b6141d123f198f332f671491952",
+          "role": "family",
+          "note": "Eight shipped ant tokens (plain white, golden yellow, brown, cobalt blue, black carpenter ant with big mandibles, black ant, lime scorpion-like green ant, deep red ant with red legs): the three elemental ants must not be plain recolours of these; each needs its own elemental silhouette feature (flame plume, ice-crystal spike crest, lightning arcs)."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A giant ice ant seen from a steep overhead three-quarter angle: a large ant angled diagonally with its head towards the lower right, a translucent crystalline PALE-CYAN and ICE-BLUE carapace with white frost in a light value, a CREST OF FIVE SHORT JAGGED ICE-CRYSTAL SPIKES along its back and abdomen (each spike pale cyan with bright white edges, all short and inside the disc), frost-rimed mandibles, thick white rime on the leg joints, a few tiny snow crystals drifting close to the body, antennae curled in close, legs tucked in. Frosty, crystalline, spiky-backed and complete.",
+        "contrast": "Ants: the GIANT ICE ANT is the CRYSTALLINE PALE-CYAN ONE with a crest of ice spikes along its back (silhouette: a compact diagonal ant with a jagged spiky spine; hue: pale cyan and ice-blue with white frost; value: light). The shipped white ant is a plain smooth white slender ant, the blue ant a glossy cobalt-blue one and the yellow and red ants golden and deep red: this must not be a smooth plain white ant, not cobalt blue and not spineless. The other new ants are a burnt-orange fire ant with a flame plume and a lavender lightning ant with arcs.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Pale cyan and ice-blue crystalline carapace in a light value with bright white frost and highlight planes, cyan spikes with bright white edges, white rime (the frost stays on the ant and must not whiten, brighten or tint the disc); nothing darker than mid blue-grey except the eye dots and thin seams; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=giant ice ant, define_as=None, type=insect/subtype=ant, unique=False, native_tall=False); details and hashes in evidence/monster-batch-w-20260930/source-contracts.json. base BASE_NPC_ANT (insect/ant, no image=, no shader, no sustains_at_birth); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; melee_project ice, ingredient_on_death FROST_ANT_STINGER, talents Water Bolt (activated) and Icy Skin (sustained, never started at birth: no sustains_at_birth on the leaf or base); no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-w-20260930/source-contracts.json",
+          "sha256": "96ca69784bec3c15699f4022058d68cede257f2a212a917ee75ff352a93458e3"
+        }
+      ]
+    },
+    {
+      "asset_id": "giant-lightning-ant",
+      "native_name": "giant lightning ant",
+      "scope": "ardhungol, dreadfell, reknor, ruined-dungeon, old-forest and four more zones' ant pools (general/npcs/ant.lua:164, insect/ant, non-unique, no define_as, rank 1, base BASE_NPC_ANT, explicit image=npc/lightning_ant.png); the only definition of this name; no vault, event or talent builds another actor with this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 165,
+          "anchor": "name = \"giant lightning ant\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 173,
+          "anchor": "T_CALL_LIGHTNING"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ANT\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/lightning_ant.png",
+          "sha256": "bada2ab1c06a2aa1ef6307a85eb6e2df0bc226c49de457d0cefe110993b10fc4",
+          "role": "identity",
+          "note": "Native shape (64x64): a blue ant with white lightning sparks arcing over its body. Keep the crackling ant, but a pale lavender carapace with a glowing abdomen and a small crackling arc halo."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-w/refs/ants.png",
+          "sha256": "b18ed8a778ca51fa7e31608160259c878e6e1b6141d123f198f332f671491952",
+          "role": "family",
+          "note": "Eight shipped ant tokens (plain white, golden yellow, brown, cobalt blue, black carpenter ant with big mandibles, black ant, lime scorpion-like green ant, deep red ant with red legs): the three elemental ants must not be plain recolours of these; each needs its own elemental silhouette feature (flame plume, ice-crystal spike crest, lightning arcs)."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A giant lightning ant seen from a steep overhead three-quarter angle: a large ant angled diagonally with its head towards the upper right, a glossy PALE-LAVENDER and STEEL-VIOLET carapace with bright white highlight planes in a light-mid value, the swollen abdomen glowing with a bright WHITE-YELLOW core, JAGGED BRIGHT YELLOW-WHITE LIGHTNING ARCS jumping between the two antennae and around the abdomen in a small crackling halo (thin bolts, all kept close to the body and inside the disc), legs tensed and tucked in. Electric, compact, arc-haloed and complete.",
+        "contrast": "Ants: the GIANT LIGHTNING ANT is the PALE-LAVENDER ONE crowned with jagged yellow-white lightning arcs and a glowing abdomen (silhouette: a compact diagonal ant with a zigzag arc halo; hue: pale lavender and steel violet with yellow-white lightning; value: light-mid). The shipped blue ant is a glossy cobalt-blue ant, the yellow ant golden and the white ant plain white: this must not be cobalt blue, golden or plain white and must not lack the arcs. The other new ants are a burnt-orange fire ant with a flame plume and a crystalline pale-cyan ice ant with a spike crest.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Pale lavender and steel-violet carapace in a light-mid value with bright white highlight planes, a white-yellow abdomen core, thin bright yellow-white lightning arcs (the arcs stay on the ant and must not brighten, tint or light the disc); nothing darker than dark violet-grey except the eye dots and thin seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=giant lightning ant, define_as=None, type=insect/subtype=ant, unique=False, native_tall=False); details and hashes in evidence/monster-batch-w-20260930/source-contracts.json. base BASE_NPC_ANT (insect/ant, no image=, no shader, no sustains_at_birth); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; melee_project lightning, talents Lightning Speed and Call Lightning (activated); no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-w-20260930/source-contracts.json",
+          "sha256": "96ca69784bec3c15699f4022058d68cede257f2a212a917ee75ff352a93458e3"
+        }
+      ]
+    }
+  ]
+}

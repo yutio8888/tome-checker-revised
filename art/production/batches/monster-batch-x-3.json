@@ -1,0 +1,294 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-x-3",
+  "assets": [
+    {
+      "asset_id": "skeleton-assassin",
+      "native_name": "skeleton assassin",
+      "scope": "dreadfell, telmur, rak-shor-pride and two more zones' skeleton pools (general/npcs/skeleton.lua:194, undead/skeleton, non-unique, no define_as, rank 3, base BASE_NPC_SKELETON, default-name image); the only definition of this name; no vault, event or talent builds another actor with this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 194,
+          "anchor": "name = \"skeleton assassin\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 215,
+          "anchor": "T_SHADOWSTEP"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 218,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_SKELETON\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_skeleton_skeleton_assassin.png",
+          "sha256": "58ec90b23816e879ecce3c403b61a74cdd08a1e2354ff51a0d6eb26ee9dff208",
+          "role": "identity",
+          "note": "Native shape (64x64): a charred-black skeleton with a dark hood, orange-red eye glints, a bandolier and a dagger in the raised hand. Keep the hooded lean skeleton with glowing eyes and a dagger, but render the bones as mid-light ash-grey with bone-cream highlights and a slate-blue cowl."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-x/refs/skeletons.png",
+          "sha256": "de7b0a41c8a85e629b5e084336a729441c549b7172415a6f6df4f3e037a43240",
+          "role": "family",
+          "note": "Six shipped skeleton tokens (armoured sword skeleton, magus with flames, armoured shield skeleton, archer, degenerated warrior, master archer): the skeleton assassin is a lean charred ash-grey skeleton with a slate-blue cowl and two pale daggers, crouched low and stealthy, not armoured, not carrying a sword, shield or bow and not flaming."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A skeleton assassin seen from a steep overhead three-quarter angle: a LEAN CHARRED skeleton crouched low and stalking, the bones a mid-light ASH-GREY and smoky brown with bright BONE-CREAM highlight planes on the skull, ribs and joints, a tattered SLATE-BLUE COWL and shoulder wrap in a mid value with frayed strips, a thin bandolier, TWO PALE STEEL DAGGERS held low in reverse grip (bright steel blades with bright edges, both blades short and inside the disc), small hot ORANGE-RED eye glints in the hood shadow, knees bent, leaning forward towards the upper left. Stealthy, angular, bone-and-cloth and complete.",
+        "contrast": "Skeletons: the SKELETON ASSASSIN is the LEAN CROUCHED ASH-GREY ONE with a slate-blue cowl and two reverse-grip daggers (silhouette: a low leaning angular figure with two short blades; hue: ash grey and bone cream with slate blue and orange-red eye glints; value: mid-light). The shipped skeleton warrior and armoured warrior are armoured and upright with sword and shield, the magus is flaming and the archers hold bows: this must not be armoured, upright, flaming or carrying a sword, shield or bow. The other new hooded dagger figure is a human assassin in dove-grey cloth.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Ash-grey and smoky-brown bones in a mid-light value with bone-cream highlight planes and a bright pale rim light, slate-blue cloth in a mid value with lighter edge strips, bright steel blades, small orange-red eye glints (nothing glows onto the disc); nothing darker than dark slate-grey except the eye sockets and thin seams; NO black cloth or black bone anywhere. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=skeleton assassin, define_as=None, type=undead/subtype=skeleton, unique=False, native_tall=False); details and hashes in evidence/monster-batch-x-20260930/source-contracts.json. base BASE_NPC_SKELETON (undead/skeleton, no image=, no shader, no sustains_at_birth in the base); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip fills inventory slots only (no moddable_tile, so no display change) (two daggers, light armour); resolvers.racial() adds only levelup talent tables; resolvers.inscriptions(1, rune); the leaf calls resolvers.sustains_at_birth(), starting the sustained talents Stealth and Shadow Combat (temporary values only, no type/subtype/image/add_mos write; Tempo is passive); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-x-20260930/source-contracts.json",
+          "sha256": "d3dd5bbd03d3fe045b05a6c6bb6d5c1259c16277838feee21714f1457e7dc3cc"
+        }
+      ]
+    },
+    {
+      "asset_id": "assassin",
+      "native_name": "assassin",
+      "scope": "maze, thieves-tunnels and ardhungol pools, the bandit-fortress zone and vaults and the thief-hideout vault (general/npcs/thieve.lua:139, humanoid/human, non-unique, define_as THIEF_ASSASSIN (shared verbatim with the later 'shadowblade' leaf, which is another name and stays native), rank 2, base BASE_NPC_THIEF, default-name image); the bandit-fortress zone and vaults build this same leaf by name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 139,
+          "anchor": "define_as = \"THIEF_ASSASSIN\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 140,
+          "anchor": "name = \"assassin\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 153,
+          "anchor": "T_LETHALITY"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/thieve.lua",
+          "sha256": "8393018abde8c44ae92e002665ce0dfccddab30a3263e64f2cff61b6a159fcff",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_THIEF\""
+        },
+        {
+          "path": "game/modules/tome/data/maps/zones/bandit-fortress.lua",
+          "sha256": "c2fd205349a1dab7bd5d251e6a01d3c7021e99a5b37fbadf0664026b78a6d7e4",
+          "line": 44,
+          "anchor": "\"assassin\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_assassin.png",
+          "sha256": "4a981932df3ecc27f104e427dac918e69c7a8718c44e7d96e809f60b67c1d6bf",
+          "role": "identity",
+          "note": "Native shape (64x64): a human in dark grey-black close-fitting clothes with a hood and face mask, a scarf-like collar and a dagger in the raised hand. Keep the masked hooded knife-fighter in close clothes, but dove-grey and slate cloth with a wine-red sash and a pale steel dagger."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-x/refs/thieves.png",
+          "sha256": "a68f0fc64a24684116e070ffe6229abde89ef8202fdb2c103991c1c759678f7f",
+          "role": "family",
+          "note": "Shipped thief tokens (hooded blue rogue, brown-cloaked thief, bare-chested bandit, the red-black Assassin Lord, the olive orc assassin): the assassin is a masked human in dove-grey and slate close-fitting clothes with a wine-red sash, lunging with one long dagger, not blue, not brown, not bare-chested and not red-black."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An assassin seen from a steep overhead three-quarter angle: a lean masked human in close-fitting DOVE-GREY and SLATE-BLUE cloth in a mid-light value with pale highlight planes, a hood and face mask leaving only a narrow eye slit with pale eyes, a WINE-RED SASH at the waist with a short tail, dark-brown leather straps and bracers, LUNGING FORWARD towards the upper right on a bent front leg with the RIGHT ARM stretched out ahead holding ONE LONG PALE-STEEL DAGGER (bright edge, the blade inside the disc) and the left hand low behind holding a second short dagger. Swift, lean, masked and complete.",
+        "contrast": "Thieves: the ASSASSIN is the DOVE-GREY MASKED LUNGER with a wine-red sash and one long dagger stretched forward (silhouette: a lean diagonal lunge with one long blade to the upper right; hue: dove grey and slate blue with wine red and pale steel; value: mid-light). The shipped rogue is a hooded blue crouching figure, the thief a brown cloak, the bandit bare-chested, the Assassin Lord red-black and the orc assassin an olive orc: this must not be blue, brown, bare-chested, red-black or an orc. The skeleton assassin of this batch is a crouched bone figure with two daggers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Dove-grey and slate-blue cloth in a mid-light value with pale highlight planes and a bright rim light, wine-red sash, brown leather, bright pale-steel blades with bright edges (nothing glows onto the disc); nothing darker than dark slate-grey except the eye slit and thin seams; NO black cloth anywhere. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=assassin, define_as=THIEF_ASSASSIN, type=humanoid/subtype=human, unique=False, native_tall=False); details and hashes in evidence/monster-batch-x-20260930/source-contracts.json. base BASE_NPC_THIEF (humanoid/human, no image=, no shader, no sustains_at_birth in the base); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip fills inventory slots only (no moddable_tile, so no display change) (two daggers, light armour); resolvers.racial() adds only levelup talent tables; the leaf calls resolvers.sustains_at_birth(), starting Stealth (temporary values only, no display write); talents Stealth, Dual Weapon Mastery, Tempo, Dual Strike, Coup de Grace, Lethality, Disarm; no auto_classes (the Assassin Lord in thieves-tunnels is another name). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-x-20260930/source-contracts.json",
+          "sha256": "d3dd5bbd03d3fe045b05a6c6bb6d5c1259c16277838feee21714f1457e7dc3cc"
+        }
+      ]
+    },
+    {
+      "asset_id": "elven-corruptor",
+      "native_name": "elven corruptor",
+      "scope": "crypt-kryl-feijan and mark-spellblaze pools (general/npcs/elven-caster.lua:144, humanoid/shalore, non-unique, no define_as, rank 3, base BASE_NPC_ELVEN_CASTER, default-name image); the only definition of this name (the Grand Corruptor and the Rhaloren Inquisitor are other names with their own tokens)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/elven-caster.lua",
+          "sha256": "a68bfbfbbe74a47b0c2a95f683439c41035ecf952d53cabb4c7636ee011fd515",
+          "line": 144,
+          "anchor": "name = \"elven corruptor\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/elven-caster.lua",
+          "sha256": "a68bfbfbbe74a47b0c2a95f683439c41035ecf952d53cabb4c7636ee011fd515",
+          "line": 160,
+          "anchor": "T_BONE_SHIELD"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/elven-caster.lua",
+          "sha256": "a68bfbfbbe74a47b0c2a95f683439c41035ecf952d53cabb4c7636ee011fd515",
+          "line": 167,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/elven-caster.lua",
+          "sha256": "a68bfbfbbe74a47b0c2a95f683439c41035ecf952d53cabb4c7636ee011fd515",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ELVEN_CASTER\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_shalore_elven_corruptor.png",
+          "sha256": "cc147ada2ea82016b782c555dd02e60ce514dcbf71232e9e8d3be82581439577",
+          "role": "identity",
+          "note": "Native shape (64x64): a pale elf in dark dusky robes with a tall pointed hood and a long staff, a small orchid trim on the sleeves. Keep the robed pale elf with a tall staff, but render the robes orchid-magenta and plum in a mid-light value with bone-white trim, bone shards orbiting."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-x/refs/elves.png",
+          "sha256": "2ccec26f1963ea8e6970830f20f16339a39e1b1fe5aada012afa3ab68d2d7104",
+          "role": "family",
+          "note": "Six shipped shalore tokens (purple-robed elven mage with a staff, green-cloaked cultist, grey-red blood mage, hooded red-black Grand Corruptor, guard, warrior): the elven corruptor is a pale silver-haired elf in orchid-magenta and plum robes with bone-white trim, a bone-topped staff and three bone shards orbiting, not purple-blue, not green and not red-black hooded."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An elven corruptor seen from a steep overhead three-quarter angle: a slender pale SHALORE elf with silver-white hair, pointed ears and a gaunt calm face, wearing long ORCHID-MAGENTA and PLUM robes in a mid-light value with pale pink highlight planes and BONE-WHITE trim, ribs-like bone clasps across the chest and a bone-and-brass collar, holding a BONE-TOPPED STAFF in the right hand angled up and outward (the staff head a small bone skull-crescent, the staff short enough to stay inside the disc), the left hand open at the hip dripping a few dark-red drops, THREE small pale BONE SHARDS orbiting the body at shoulder height. Corrupt, elegant, robed and complete.",
+        "contrast": "Elves: the ELVEN CORRUPTOR is the ORCHID-MAGENTA ROBED ONE with bone trim, a bone-topped staff and three orbiting bone shards (silhouette: a slim robed figure with a diagonal staff and three small shards around it; hue: orchid magenta and plum with bone white and silver hair; value: mid-light). The shipped elven mage wears blue-purple robes, the cultist green, the blood mage grey and dark red, the Grand Corruptor a red-black hood, and the guard and warrior wear armour: this must not be blue-purple, green, red-black or armoured and must not be hooded in black.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Orchid-magenta and plum robes in a mid-light value with pale pink highlight planes and a bright rim light, bone-white trim and shards, silver-white hair, pale skin, dark-red drops (nothing glows onto the disc); nothing darker than dark plum except the eyes and thin seams; NO black cloth anywhere. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=elven corruptor, define_as=None, type=humanoid/subtype=shalore, unique=False, native_tall=False); details and hashes in evidence/monster-batch-x-20260930/source-contracts.json. base BASE_NPC_ELVEN_CASTER (humanoid/shalore, faction rhalore, no image=, no shader, no sustains_at_birth in the base); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip fills inventory slots only (no moddable_tile, so no display change) (staff, cloth armour, charm); resolvers.racial() adds only levelup talent tables; resolvers.inscriptions(1, rune); the leaf calls resolvers.sustains_at_birth(), starting Bone Shield (a shield particle and temporary values only, no type/subtype/image/add_mos write); talents Staff Mastery, Blood Spray, Drain, Soul Rot, Blood Grasp, Bone Spear; NO auto_classes on this leaf (only the Grand Corruptor and Rhaloren Inquisitor leaves carry Corruptor auto_classes). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-x-20260930/source-contracts.json",
+          "sha256": "d3dd5bbd03d3fe045b05a6c6bb6d5c1259c16277838feee21714f1457e7dc3cc"
+        }
+      ]
+    },
+    {
+      "asset_id": "orc-fighter",
+      "native_name": "orc fighter",
+      "scope": "vor-armoury, ardhungol, unremarkable-cave and one more zone's pools (general/npcs/orc-grushnak.lua:55, humanoid/orc, non-unique, no define_as, rank 2, base BASE_NPC_ORC_GRUSHNAK, default-name image); the only definition of this name (the orc elite fighter is another name)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 55,
+          "anchor": "name = \"orc fighter\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 74,
+          "anchor": "T_OVERPOWER"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC_GRUSHNAK\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_fighter.png",
+          "sha256": "79c48047f4788e3e492cf8a45b9f8b852862c2d1e81dd1b3075dc2ea611d0eba",
+          "role": "identity",
+          "note": "Native shape (64x64): an olive-green orc in heavy dark plate armour, holding a sword raised behind and a weapon across the body. Keep the heavily armoured tusked orc, but render the plate as mid-light gunmetal steel with a big shield held out front."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-x/refs/orcs.png",
+          "sha256": "e11757dfd47893ca7e02fecc03a793df35295ed7a25bc50853247390b5cc0b34",
+          "role": "family",
+          "note": "Six shipped orc tokens (olive orc warrior with a scimitar, spiked dark orc soldier with an axe, archer, hooded assassin, crimson-scaled fiery wyrmic with a hand axe, ice-scaled icy wyrmic): the orc fighter is a heavy bulwark, an olive-brown tusked orc buried in massive gunmetal plate behind a big shield held out front with a waraxe low behind it, not scaled, not spiked, not hooded and not robed."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orc fighter seen from a steep overhead three-quarter angle: a stocky OLIVE-BROWN tusked orc buried in MASSIVE GUNMETAL-STEEL PLATE armour in a mid-light value with bright pale steel highlight planes and dull brass rivets, a horned open steel helm with a scowling face, a big convex KITE-SHAPED STEEL SHIELD held out in front of the body in the left arm (the shield with a bold khaki-and-rust painted chevron, no text), a broad WARAXE held low behind the shield in the right hand with its bright head at the lower right, a khaki tabard over the plate, feet planted wide. Bulwark, planted and complete.",
+        "contrast": "Orcs: the ORC FIGHTER is the GUNMETAL-PLATED BULWARK behind a big shield with a waraxe low behind it (silhouette: a wide blocky mass dominated by a big front shield; hue: gunmetal steel, khaki tabard, olive-brown skin; value: mid-light). The shipped orc warrior is an olive scimitar fighter without armour, the soldier a spiked dark axeman, the archer holds a bow, the assassin is hooded and the two wyrmics are red and pale blue scaled: this must not be unarmoured, spiked, hooded, robed or scaled and must not swing a weapon overhead.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Olive-brown skin, gunmetal-steel plate in a mid-light value with bright pale steel highlight planes and a bright rim light, dull brass rivets, khaki and rust paint, bright steel axe head with a bright edge (nothing glows onto the disc); nothing darker than dark gunmetal except the eye slits and thin seams; NO black armour anywhere. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc fighter, define_as=None, type=humanoid/subtype=orc, unique=False, native_tall=False); details and hashes in evidence/monster-batch-x-20260930/source-contracts.json. base BASE_NPC_ORC_GRUSHNAK (humanoid/orc, faction orc-pride, no image=, no shader, no sustains_at_birth); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip fills inventory slots only (no moddable_tile, so no display change) (waraxe, shield, massive armour); resolvers.racial() adds only levelup talent tables; talents Armour Training, Weapon Combat, Weapons Mastery, Rush, Shield Pummel, Overpower, Disarm (none is sustained at birth: no sustains_at_birth on the leaf or base); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-x-20260930/source-contracts.json",
+          "sha256": "d3dd5bbd03d3fe045b05a6c6bb6d5c1259c16277838feee21714f1457e7dc3cc"
+        }
+      ]
+    }
+  ]
+}

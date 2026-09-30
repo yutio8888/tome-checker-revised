@@ -1,0 +1,228 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-t-4",
+  "assets": [
+    {
+      "asset_id": "weirdling-beast",
+      "native_name": "Weirdling Beast",
+      "scope": "shertul-fortress (zones/shertul-fortress/npcs.lua:24, horror/eldritch, unique, define_as WEIRDLING_BEAST, rank 3.5, base BASE_NPC_HORROR, default-name image); placed by the static tmx maps/zones/shertul-fortress.tmx (spawn#actor object id WEIRDLING_BEAST); single definition; auto_classes Anorithil, Doomed, Corruptor and Archmage from level 22",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/shertul-fortress/npcs.lua",
+          "sha256": "0c3da0858c7d0a155156dc2dd22d18fadea677566f8977d6afa65fa7518db493",
+          "line": 24,
+          "anchor": "define_as=\"WEIRDLING_BEAST\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/shertul-fortress/npcs.lua",
+          "sha256": "0c3da0858c7d0a155156dc2dd22d18fadea677566f8977d6afa65fa7518db493",
+          "line": 25,
+          "anchor": "name = \"Weirdling Beast\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/shertul-fortress/npcs.lua",
+          "sha256": "0c3da0858c7d0a155156dc2dd22d18fadea677566f8977d6afa65fa7518db493",
+          "line": 78,
+          "anchor": "auto_classes={"
+        },
+        {
+          "path": "game/modules/tome/data/zones/shertul-fortress/npcs.lua",
+          "sha256": "0c3da0858c7d0a155156dc2dd22d18fadea677566f8977d6afa65fa7518db493",
+          "line": 85,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/maps/zones/shertul-fortress.tmx",
+          "sha256": "6dc79b6e66b120012ac8350178c3213beb0b553cb64c3b58f0c4f63c722020cf",
+          "line": 155,
+          "anchor": "<property name=\"id\" value=\"WEIRDLING_BEAST\"/>"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_weirdling_beast.png",
+          "sha256": "ccc6dbd506fc546694a2ff7494717765fa920d27fc573b7aa30a3c6a36b45f76",
+          "role": "identity",
+          "note": "Native shape (64x64): a headless brown octopus-like body with four thick tentacle limbs and eye-like warts."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-t/refs/horrors.png",
+          "sha256": "36ef58b6e67bca4bf5b929df8b29d2f1491f248f27bcd176adfad88452bdb75e",
+          "role": "family",
+          "note": "Four shipped horror/ghost tokens (red tentacle mass the-mouth, horned-horror with a pink tentacle crown, upright ice-blue shade of telos, blue swirl the-dreaming-one): the Weirdling Beast and the Fortress Shadow must not look like any of these or like each other."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "The Weirdling Beast seen from a steep overhead three-quarter angle: a HEADLESS, roughly humanoid mass of pale FLESH-PINK and tan skin, a wide squat torso with a smooth rounded shoulder-mass and NO head at all, covered in dozens of round wart-like blisters some of which burst with yellow-green pus, FOUR thick TENTACLES serving as limbs (two as arms curled up and out, two as splayed legs) arranged in an X around the torso, the tentacle undersides lined with round cream suckers, a few larger glowing pale-yellow warts. Putrid, lumpy, headless and complete.",
+        "contrast": "Horrors of the fortress: the WEIRDLING BEAST is a SOLID, HEADLESS, WARTY flesh-pink torso with FOUR TENTACLE LIMBS in an X (silhouette: a round lumpy body with four curled arms and legs radiating like an octopus seen from above, no head; hue: flesh pink, tan and sickly yellow-green; value: mid-light). The shipped the-mouth is a red tentacle mass, horned-horror has a pink tentacle crown on a bull, shade-of-telos is an upright ice-blue ghost, the-dreaming-one a blue swirl; the Fortress Shadow of this same set is a translucent aqua bell with hanging tendrils: this must be solid, warm-coloured and headless.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Pale flesh-pink and tan skin in a mid-light value with bright pale highlight planes on the upper-left of the torso and tentacles, sickly yellow-green wart tips, cream suckers, a little warm brown in the creases; nothing darker than dark tan-brown except seams; keep the flesh pink-tan rather than brown or maroon; the disc stays neutral charcoal with no pink cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Weirdling Beast, define_as=WEIRDLING_BEAST, type=horror/subtype=eldritch, unique=True, native_tall=False); details and hashes in evidence/monster-batch-t-20260930/source-contracts.json. base BASE_NPC_HORROR (horror/eldritch, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip staff and light armour (equipment only, no moddable_tile); talents Staff Mastery, Acid Blood, Bone Grab, Bone Shield (sustained), Mind Sear, Telekinetic Blast, Gloom (sustained), Soul Rot, Corrupted Negation, Time Prison, Starfall, Manathrust, Freeze plus inscriptions; resolvers.sustains_at_birth() starts the sustained ones (temporary values and particles only, no type/subtype/image/add_mos write); auto_classes Anorithil, Doomed, Corruptor, Archmage from level 22: the Corruptor tree corruption/shadowflame contains Flame of Urh'Rok (see runtime_mutation_scan; the entry opts into urh_rok_form). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-t-20260930/source-contracts.json",
+          "sha256": "683dc4abbd177436803d6c58e8a73813c814b99615ff7fc26a3a5b9753fc5e54"
+        }
+      ]
+    },
+    {
+      "asset_id": "fortress-shadow",
+      "native_name": "Fortress Shadow",
+      "scope": "shertul-fortress (zones/shertul-fortress/npcs.lua:128, horror/Sher'Tul, non-unique, define_as BUTLER, rank 3, base BASE_NPC_HORROR, faction neutral, invulnerable, never_move, default-name image whose subtype part is the lowercased, non-alphanumeric-to-underscore form of \"Sher'Tul\"); created by quests/shertul-fortress.lua:88 spawn_butler via makeEntityByName(\"BUTLER\"); single definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/shertul-fortress/npcs.lua",
+          "sha256": "0c3da0858c7d0a155156dc2dd22d18fadea677566f8977d6afa65fa7518db493",
+          "line": 128,
+          "anchor": "define_as=\"BUTLER\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/shertul-fortress/npcs.lua",
+          "sha256": "0c3da0858c7d0a155156dc2dd22d18fadea677566f8977d6afa65fa7518db493",
+          "line": 129,
+          "anchor": "subtype = \"Sher'Tul\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/shertul-fortress/npcs.lua",
+          "sha256": "0c3da0858c7d0a155156dc2dd22d18fadea677566f8977d6afa65fa7518db493",
+          "line": 130,
+          "anchor": "name = \"Fortress Shadow\""
+        },
+        {
+          "path": "game/modules/tome/data/quests/shertul-fortress.lua",
+          "sha256": "7b03deeb84b6c9918256ae7ee530914cc9428dfc78a0d60c3659300aaf414d40",
+          "line": 88,
+          "anchor": "makeEntityByName(game.level, \"actor\", \"BUTLER\")"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_sher_tul_fortress_shadow.png",
+          "sha256": "48ed9c0ab7f75c4318509991071a3f690402b141067aacc9aae0937c62db2075",
+          "role": "identity",
+          "note": "Native shape (64x64): a translucent turquoise outline of a headless tentacled shadow."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-t/refs/horrors.png",
+          "sha256": "36ef58b6e67bca4bf5b929df8b29d2f1491f248f27bcd176adfad88452bdb75e",
+          "role": "family",
+          "note": "Four shipped horror/ghost tokens (red tentacle mass the-mouth, horned-horror with a pink tentacle crown, upright ice-blue shade of telos, blue swirl the-dreaming-one): the Weirdling Beast and the Fortress Shadow must not look like any of these or like each other."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "The Fortress Shadow seen from a steep overhead three-quarter angle: a hovering SEMI-TRANSLUCENT but mostly opaque PALE AQUAMARINE-WHITE smoky glass-like creature shaped like a JELLYFISH: a domed hood-like bell on top with darker teal edges and a faint glowing white ring of Sher'Tul rune marks across the dome, and EIGHT long wavy tendrils trailing outward around it in a radial ring, no face, no eyes, a soft pale inner glow at the centre of the dome, a few tiny drifting motes. Ghostly, floating, luminous and complete.",
+        "contrast": "Horrors of the fortress: the FORTRESS SHADOW is a floating PALE AQUA DOME with EIGHT TENDRILS radiating in a ring and a rune circle on the dome (silhouette: a round bell with a wavy radial fringe, jellyfish-like; hue: pale aquamarine and white with teal edges; value: light). The shipped shade-of-telos is an upright humanoid ice-blue ghost, the-dreaming-one a round blue swirl, the-mouth a red tentacle mass, horned-horror a pink bull; the Weirdling Beast of this same set is a solid warty flesh-pink headless body: this must be pale aqua, translucent-looking, with no humanoid outline.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Pale aquamarine-white in a light value with bright white highlight planes on the upper-left of the dome, darker teal edges and tendril tips in a mid value, a soft pale inner glow; nothing darker than mid teal; keep it luminous and pale rather than dark teal; the glow must stay inside the creature and must not spill onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Fortress Shadow, define_as=BUTLER, type=horror/subtype=Sher'Tul, unique=False, native_tall=False); details and hashes in evidence/monster-batch-t-20260930/source-contracts.json. base BASE_NPC_HORROR (horror/eldritch, overridden to subtype \"Sher'Tul\" by the leaf, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; the subtype string is \"Sher'Tul\" exactly (capital S and T, apostrophe): NPC.lua:33 lowercases it and turns the apostrophe into an underscore, giving horror_sher_tul_fortress_shadow.png; no talents, no equipment, no sustains_at_birth and no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-t-20260930/source-contracts.json",
+          "sha256": "683dc4abbd177436803d6c58e8a73813c814b99615ff7fc26a3a5b9753fc5e54"
+        }
+      ]
+    },
+    {
+      "asset_id": "pumpkin",
+      "native_name": "Pumpkin, the little kitty",
+      "scope": "shertul-fortress (zones/shertul-fortress/npcs.lua:176, animal/feline, unique, define_as KITTY, base BASE_NPC_CAT, explicit image=npc/sage_kitty.png, invulnerable, never_anger, the leaf sets an empty defineDisplayCallback); created by zones/shertul-fortress/zone.lua:94 makeEntityByName(\"KITTY\"); single definition (the Lost Kitty encounter of general/encounters/maj-eyal.lua:106 is another name and stays native)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/shertul-fortress/npcs.lua",
+          "sha256": "0c3da0858c7d0a155156dc2dd22d18fadea677566f8977d6afa65fa7518db493",
+          "line": 176,
+          "anchor": "define_as = \"KITTY\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/shertul-fortress/npcs.lua",
+          "sha256": "0c3da0858c7d0a155156dc2dd22d18fadea677566f8977d6afa65fa7518db493",
+          "line": 177,
+          "anchor": "name = \"Pumpkin, the little kitty\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/shertul-fortress/npcs.lua",
+          "sha256": "0c3da0858c7d0a155156dc2dd22d18fadea677566f8977d6afa65fa7518db493",
+          "line": 178,
+          "anchor": "image=\"npc/sage_kitty.png\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/shertul-fortress/npcs.lua",
+          "sha256": "0c3da0858c7d0a155156dc2dd22d18fadea677566f8977d6afa65fa7518db493",
+          "line": 189,
+          "anchor": "defineDisplayCallback = function() end"
+        },
+        {
+          "path": "game/modules/tome/data/zones/shertul-fortress/zone.lua",
+          "sha256": "e44b59f5f22fa0e04210c3e2f24559fdf2955d6cbea3f06a91cf905737efb5b6",
+          "line": 94,
+          "anchor": "makeEntityByName(game.level, \"actor\", \"KITTY\", true)"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/sage_kitty.png",
+          "sha256": "8b405d0e1d998811ff47ea5202ecd8d5befa5c35b95ae5d2802759f23bfe9849",
+          "role": "identity",
+          "note": "Native shape (64x64): a small orange tabby cat walking in profile with its tail raised."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Pumpkin, the little kitty seen from a steep overhead three-quarter angle: a plump small ORANGE TABBY cat SITTING upright and compact with its tail wrapped round its front paws, its round head turned UP toward the viewer with big bright GREEN eyes, a pink nose and white whiskers, a clear white STAR-SHAPED BLAZE on the chest, white front paws, darker orange tiger stripes on the back and cheeks, ears pricked. Drawn LARGE within the inner three quarters of the disc so the little cat still reads at small size. Cute, round, orange and complete.",
+        "contrast": "Small animals: PUMPKIN is a round SITTING ORANGE cat with a white star on the chest, drawn large (silhouette: a round upright mass with two pointed ears and a curled tail around the paws; hue: warm orange with white and green eyes; value: mid-light). It is not a canine: no long muzzle, no wolf ears, no side-on standing pose, so it cannot be confused with the shipped dogs or wolves; the war dog is a big sandy front-facing dog.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Warm orange fur in a mid-light value with pale peach highlight planes on the upper-left and deeper orange stripes, white chest star and paws, bright green eyes, pink nose; nothing darker than dark orange-brown except the pupils; the disc stays neutral charcoal with no orange cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Pumpkin, the little kitty, define_as=KITTY, type=animal/subtype=feline, unique=True, native_tall=False); details and hashes in evidence/monster-batch-t-20260930/source-contracts.json. base BASE_NPC_CAT (animal/feline, resolvers.sustains_at_birth() with no sustained talents on the leaf); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; the leaf overrides defineDisplayCallback with an empty function (native life/rank frames are not drawn for it; the token overlay is a separate layer, not live-tested here); no talents, no equipment and no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-t-20260930/source-contracts.json",
+          "sha256": "683dc4abbd177436803d6c58e8a73813c814b99615ff7fc26a3a5b9753fc5e54"
+        }
+      ]
+    }
+  ]
+}

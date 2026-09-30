@@ -1,0 +1,1481 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "fiery-orc-wyrmic",
+      "master": "masters/fiery-orc-wyrmic-v1.png",
+      "sha256": "7640e0c96af909f01677b73b58ea279b92409005f5f9d8c96c9303124db91550",
+      "exports": [
+        {
+          "path": "sprites/48/fiery-orc-wyrmic.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -12.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3e50e08061942a54112d6744218c640cb60e9b3799314ae2ec4e8aee7a06fe4b"
+        },
+        {
+          "path": "sprites/64/fiery-orc-wyrmic.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -12.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ef3bcbc03c6e4060ddafede7234945702221505d0f1adad3938a991e71541bc7"
+        },
+        {
+          "path": "sprites/96/fiery-orc-wyrmic.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -12.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f5af607b5cea3e202b618d3933d366c58e91a0542996b4d890950c857c38aef1"
+        },
+        {
+          "path": "sprites/128/fiery-orc-wyrmic.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -12.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7eadd79bbc2786cc443591ed096ffb8b3652cc0f197aae0734f1759ca0c77ca3"
+        },
+        {
+          "path": "sprites/256/fiery-orc-wyrmic.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -12.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5ad2750136dd2618260cc082160a3cf27cc2b2b4768f4c842a774cd1cc811c48"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.71,
+        "max_sector_intrusion": 4.3,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "icy-orc-wyrmic",
+      "master": "masters/icy-orc-wyrmic-v1.png",
+      "sha256": "357ef1e57e88c41e29d893c9f1ae1cdeb5e7873030df655cd210010e153797d9",
+      "exports": [
+        {
+          "path": "sprites/48/icy-orc-wyrmic.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -13.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "532c33366ce6c2daa32cd42e90dadb878f610269d26cced75178f07ace59ab12"
+        },
+        {
+          "path": "sprites/64/icy-orc-wyrmic.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -13.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0adfc0f23739a251c1593267d37776b553fa6587ddaf0b1235987a2d921da035"
+        },
+        {
+          "path": "sprites/96/icy-orc-wyrmic.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -13.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3af471bd10ee55dc709b86caaae5d17a74ad5b9898ae49c743af8f6a8f92ccb6"
+        },
+        {
+          "path": "sprites/128/icy-orc-wyrmic.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -13.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9dd94e1442975f80117dcc9e465f334d83c7c029d39b2de2ff3996865512c711"
+        },
+        {
+          "path": "sprites/256/icy-orc-wyrmic.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -13.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "22b1cc9506b7c82b9b4c7b8b5dbbb67217f83d10c7f20d893814b02d341552ba"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -5.85,
+        "max_sector_intrusion": 7.42,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "yaech-mindslayer",
+      "master": "masters/yaech-mindslayer-v1.png",
+      "sha256": "abe916bfc9f1c489007386704c10945441ca86397d62a143b1d9da6e0af4eac5",
+      "exports": [
+        {
+          "path": "sprites/48/yaech-mindslayer.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1162,
+            1173
+          ],
+          "export_window": [
+            -13.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ab519039e196a785451e29853dc90369c2e4da33e685d973d0fc8ae32585ed8f"
+        },
+        {
+          "path": "sprites/64/yaech-mindslayer.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1162,
+            1173
+          ],
+          "export_window": [
+            -13.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5e14466906238badeacc74604850b5ac6816b8eeff30454c0b446560d07724b4"
+        },
+        {
+          "path": "sprites/96/yaech-mindslayer.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1162,
+            1173
+          ],
+          "export_window": [
+            -13.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3e9a15123e70f95cdfedc26e4b9bdb9b0622ca9410b31c84ba903ff72ddab2cb"
+        },
+        {
+          "path": "sprites/128/yaech-mindslayer.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1162,
+            1173
+          ],
+          "export_window": [
+            -13.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5f70d895b6384c8fe2b92770947086d2a575fbfc124a9011c980bc827eea7658"
+        },
+        {
+          "path": "sprites/256/yaech-mindslayer.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1162,
+            1173
+          ],
+          "export_window": [
+            -13.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1e93d00c5928f9a2af4e52f5ba0f59da53cfc285f079374e3b3fb897847b2152"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.63,
+        "max_sector_intrusion": 4.08,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "heavy-bone-giant",
+      "master": "masters/heavy-bone-giant-v1.png",
+      "sha256": "0307609d3f6950e03da85f901735a492c8c329b4703442920d4e66760a234886",
+      "exports": [
+        {
+          "path": "sprites/48/heavy-bone-giant.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            30,
+            20,
+            1222,
+            1223
+          ],
+          "export_window": [
+            -73.418605,
+            -77.918605,
+            1398.837209
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e325cf78df38d71dd4855ebcc0c69076a91d7b121dc4f881e3f21999e913745d"
+        },
+        {
+          "path": "sprites/64/heavy-bone-giant.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            30,
+            20,
+            1222,
+            1223
+          ],
+          "export_window": [
+            -73.418605,
+            -77.918605,
+            1398.837209
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e986957230c17491704eab9b36dd277b1f587b9dde7696a792e6f307d5928f16"
+        },
+        {
+          "path": "sprites/96/heavy-bone-giant.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            30,
+            20,
+            1222,
+            1223
+          ],
+          "export_window": [
+            -73.418605,
+            -77.918605,
+            1398.837209
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c7d133a1c91c56df05e890c0b04d3481dd85a0ff83907a56c1e829d11edd8703"
+        },
+        {
+          "path": "sprites/128/heavy-bone-giant.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            30,
+            20,
+            1222,
+            1223
+          ],
+          "export_window": [
+            -73.418605,
+            -77.918605,
+            1398.837209
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9a4243d76d509d6836d2addda957d7651c079ea1f6e8cf25ff19bf70b14d16b2"
+        },
+        {
+          "path": "sprites/256/heavy-bone-giant.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            30,
+            20,
+            1222,
+            1223
+          ],
+          "export_window": [
+            -73.418605,
+            -77.918605,
+            1398.837209
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "904760a2c199d4d0d36eb35c9035c75bdfceeb3dd16521be7dfcacf5e43f8ac5"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -7.04,
+        "max_sector_intrusion": 4.32,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "cave-bear",
+      "master": "masters/cave-bear-v1.png",
+      "sha256": "e48f4f6d40076f34d6152e85e4db3cf1cd476e34a3de46563dfbbe49bb597c5d",
+      "exports": [
+        {
+          "path": "sprites/48/cave-bear.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -8.465116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c28a39014c4f0dcd9e17d1460b40fec1d64cc10f8c2ab30729104a0c6f423265"
+        },
+        {
+          "path": "sprites/64/cave-bear.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -8.465116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1b95b37e10379429e208acb510ffceb1f8ec8e4043049a3aad1ba8c31b269ef5"
+        },
+        {
+          "path": "sprites/96/cave-bear.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -8.465116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e1afd6e60746bba360cff929fb72f5d2211c06b212f75baf349d1821ec2533b6"
+        },
+        {
+          "path": "sprites/128/cave-bear.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -8.465116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2e01c9cafce9ee6ee137a651d6a3393bff1fdaded48a3405684323ee1cde7841"
+        },
+        {
+          "path": "sprites/256/cave-bear.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -8.465116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d982584e7b36e6463510c63cbeb57113e04c5d3e00ae3488cc1f20fd529ffdb4"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 2.21,
+        "max_sector_intrusion": 4.95,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "war-bear",
+      "master": "masters/war-bear-v1.png",
+      "sha256": "0933f91d08a7546823236d04b9b3abe1d26d40607b5b4a9a33ac62f3f8ce9a57",
+      "exports": [
+        {
+          "path": "sprites/48/war-bear.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ebfcdef82cccf9da33f770c0132ce7dda35ccb053a832069b87acd077a3b149e"
+        },
+        {
+          "path": "sprites/64/war-bear.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "51ecd567600ef6c69bb7b044a9bf6a02d5a593445c9ce6a9fe9908392eaf2935"
+        },
+        {
+          "path": "sprites/96/war-bear.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ba7647c51aa45eb5772e4b9b2a7b8b7751ad84b72122b019eef32d7880a0648e"
+        },
+        {
+          "path": "sprites/128/war-bear.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c3f5b7b8a38912af2e94146b1bf91debeb0e64896d44b0837e4b641cd2b009c1"
+        },
+        {
+          "path": "sprites/256/war-bear.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.872093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ec0eb32b44225bb1d94b804618f130059ff5ca63d22e4064ddafd01ec8aa97fb"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 3.37,
+        "max_sector_intrusion": 2.3,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "grannor-vin",
+      "master": "masters/grannor-vin-v1.png",
+      "sha256": "5f33c6338a505c1f42e6dd749383f005c1c5c4165e7b410750fa4b87bcc285ad",
+      "exports": [
+        {
+          "path": "sprites/48/grannor-vin.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            74,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -15.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d7e2681131ce9a6e407dc9bc88c88dcd9f9dcb29af61f88e93e604e69dbf9b87"
+        },
+        {
+          "path": "sprites/64/grannor-vin.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            74,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -15.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "53b14cdb2386956bf9599b0ff28437caefc446d4d2067f1ead1f34b8e3d3e525"
+        },
+        {
+          "path": "sprites/96/grannor-vin.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            74,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -15.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "140a7ebe2e4699524b58d7526d33e4450c566c7b754f31a0a122a8d1609ac59f"
+        },
+        {
+          "path": "sprites/128/grannor-vin.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            74,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -15.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "69ee28b036c25382276b94ac8f7fa9a4f6fd70b3888ac7d45f8f80e8f88e2890"
+        },
+        {
+          "path": "sprites/256/grannor-vin.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            74,
+            1165,
+            1174
+          ],
+          "export_window": [
+            -15.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "99d95c9e411754c6e154531ccd46f315c4d76ca344767d9c75bc0eb252779477"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.78,
+        "max_sector_intrusion": 3.56,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "rotting-mummy",
+      "master": "masters/rotting-mummy-v1.png",
+      "sha256": "7c54c9519f5113b5bf328f77a212e6570aef278b71874b5e540b85824505bac5",
+      "exports": [
+        {
+          "path": "sprites/48/rotting-mummy.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            73,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -12.372093,
+            -16.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a2a864f80336a6068bd13d53aac7383f0679d8b4bfbea59817cbead2e7bd48d6"
+        },
+        {
+          "path": "sprites/64/rotting-mummy.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            73,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -12.372093,
+            -16.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9a384ff81d00665359545ceb49398b6eb30698b763ec5d15c2704e93523ab88d"
+        },
+        {
+          "path": "sprites/96/rotting-mummy.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            73,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -12.372093,
+            -16.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "db2093735b48a38756090c3f4eda72410dcc4f3f21f361eee712dffd140f27b0"
+        },
+        {
+          "path": "sprites/128/rotting-mummy.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            73,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -12.372093,
+            -16.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "92bdf7b6b2ea129b29d0893e521d4f2533ecf505b023c77c6f0913440f33451a"
+        },
+        {
+          "path": "sprites/256/rotting-mummy.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            73,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -12.372093,
+            -16.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "143338271c4facaa3e75ae4714176b58da57677fc2b9f0e2da3c87a5c8dcd553"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -6.15,
+        "max_sector_intrusion": 3.64,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "banshee",
+      "master": "masters/banshee-v1.png",
+      "sha256": "a7ab015180d92c0cc444aa85f9512edb8058178b66c9a08a9a2b3ec1b18b35e5",
+      "exports": [
+        {
+          "path": "sprites/48/banshee.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1162,
+            1170
+          ],
+          "export_window": [
+            -11.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8b156d2b13da48dae7e2bad4b62551a0ad5aadb9dc877b25ef01deafd90edaea"
+        },
+        {
+          "path": "sprites/64/banshee.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1162,
+            1170
+          ],
+          "export_window": [
+            -11.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9dcdd16dfcd9ffb7e92098a08f966b4a4974b2302fc7fc941e9c21a5767e522c"
+        },
+        {
+          "path": "sprites/96/banshee.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1162,
+            1170
+          ],
+          "export_window": [
+            -11.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fd6ca35ab2d5d11c0bb1e30e84664ade92d1dd5a3078a0e475dc5b7c1d077c70"
+        },
+        {
+          "path": "sprites/128/banshee.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1162,
+            1170
+          ],
+          "export_window": [
+            -11.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7b32950c3cbeb089f636b5da8a17af1d1a3d75e1ff337613dbbe29ce515db0ef"
+        },
+        {
+          "path": "sprites/256/banshee.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1162,
+            1170
+          ],
+          "export_window": [
+            -11.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2b163a912bf127b65bc9d5ecb529c08eb13f7d5a4e8ac05e6387654e346827c8"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.37,
+        "max_sector_intrusion": 10.99,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "giant-fire-ant",
+      "master": "masters/giant-fire-ant-v1.png",
+      "sha256": "3517056e1ccc6fba7974a1710599c51029b1ef2142cb53425d5e944765e9c042",
+      "exports": [
+        {
+          "path": "sprites/48/giant-fire-ant.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            67,
+            1170,
+            1177
+          ],
+          "export_window": [
+            -18.848837,
+            -23.348837,
+            1290.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "24405c6f78ce1b597c975dfca4ea17e4032ecdd66ccfbfd66f98a58f5fcf3044"
+        },
+        {
+          "path": "sprites/64/giant-fire-ant.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            67,
+            1170,
+            1177
+          ],
+          "export_window": [
+            -18.848837,
+            -23.348837,
+            1290.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "352cbe50b401a16efb332590b7f28e9285a118339299c630746a85b25f90ce72"
+        },
+        {
+          "path": "sprites/96/giant-fire-ant.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            67,
+            1170,
+            1177
+          ],
+          "export_window": [
+            -18.848837,
+            -23.348837,
+            1290.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b565ab52b7c85cf9c4e600e0d3355a098e4ca3f0d7608261786733ea7fa1f359"
+        },
+        {
+          "path": "sprites/128/giant-fire-ant.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            67,
+            1170,
+            1177
+          ],
+          "export_window": [
+            -18.848837,
+            -23.348837,
+            1290.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f20aac3313dd56cf1067033497c96b13911b6316335a6eeef50520ff29f64661"
+        },
+        {
+          "path": "sprites/256/giant-fire-ant.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            67,
+            1170,
+            1177
+          ],
+          "export_window": [
+            -18.848837,
+            -23.348837,
+            1290.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "29f983148ad6875fbee66aaff517028eafe30b67dd38e5b0c36c344a62071703"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 4.51,
+        "max_sector_intrusion": 4.11,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "giant-ice-ant",
+      "master": "masters/giant-ice-ant-v1.png",
+      "sha256": "27b6f808a703b29ce5435e75cbb63f7485f69c3e9a7963aa12287a2f93cf5e08",
+      "exports": [
+        {
+          "path": "sprites/48/giant-ice-ant.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -8.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9ba5d7b434915e14aaa42374a5c715967de2c780f4eec8034ce0580036f1ab0f"
+        },
+        {
+          "path": "sprites/64/giant-ice-ant.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -8.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "147ffe1fa56122b9e5346aa7219b32b3a96231dc976071dffd517b0169791bbe"
+        },
+        {
+          "path": "sprites/96/giant-ice-ant.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -8.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bb0f89a5f36339a7dbee96dd32598724efff7f8eec0715a975c2d229af587376"
+        },
+        {
+          "path": "sprites/128/giant-ice-ant.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -8.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "73eebf241986080c3d144e79073dad83275ffbd806257ba558cee020399e6953"
+        },
+        {
+          "path": "sprites/256/giant-ice-ant.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -8.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b7b5262a5b03310b298b4b302057bd435b291dc6daace189221d3e1a8774b452"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 2.06,
+        "max_sector_intrusion": 4.72,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "giant-lightning-ant",
+      "master": "masters/giant-lightning-ant-v1.png",
+      "sha256": "09e54adbff4901ab23746445a26c11ce5fa4586f923ed4c7dab10885de33421c",
+      "exports": [
+        {
+          "path": "sprites/48/giant-lightning-ant.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1170,
+            1171
+          ],
+          "export_window": [
+            -9.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "79d2e25f4e104d38f3a5abd175f011e75a568f88e1b0219440cdd6a389612f56"
+        },
+        {
+          "path": "sprites/64/giant-lightning-ant.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1170,
+            1171
+          ],
+          "export_window": [
+            -9.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7a49409bbee54ec4c41d98f0adfb78b956d3d17f4880b6328fa3b4092384794c"
+        },
+        {
+          "path": "sprites/96/giant-lightning-ant.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1170,
+            1171
+          ],
+          "export_window": [
+            -9.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0c63ce4ede3eca30c29ae958b44e6ecb706bcf5259a5a0c6436691e405c098da"
+        },
+        {
+          "path": "sprites/128/giant-lightning-ant.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1170,
+            1171
+          ],
+          "export_window": [
+            -9.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4a5bc7c2a38f055f3b44d19e6cffa4b8822455e5c3aa2312820e1d23b4c7cf6f"
+        },
+        {
+          "path": "sprites/256/giant-lightning-ant.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1170,
+            1171
+          ],
+          "export_window": [
+            -9.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "179080f6d2504cc35ee6c2b419ee7f343e52510313865d535dfa512515c7efa2"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.14,
+        "max_sector_intrusion": 19.75,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

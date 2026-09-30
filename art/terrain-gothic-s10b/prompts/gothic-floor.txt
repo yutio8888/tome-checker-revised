@@ -1,0 +1,13 @@
+Use case: stylized-concept. Deliver ONE square, opaque, full-bleed terrain material master for a tabletop game board: GOTHIC_FLOOR gothic hall floor. Request 1024 x 1024 pixels; preserve actual output resolution.
+
+Subject and material: Walkable floor of a gothic stone hall seen from straight above: large square flagstones of pale cool grey limestone laid in a straight grid with thin dark joints, a faint worn polish and a few very soft grey-violet mineral veins; completely flat, calm and even.
+Palette: Pale ash grey and light cool grey with a faint lavender-slate tint and a few slightly darker grey flags; light overall: clearly lighter than a dark slate wall; cooler and greyer than warm sandstone; muted, no black areas.
+Relationship to adjacent materials: At 48 pixels it must read as flat walkable ground that game pieces stand on: pale and low contrast so characters stay readable; the thin joints stay subtle (no bold grid that competes with the board grid); it must NOT read as a pit, water, rubble or a hazard.
+Composition and edge contract: Edge-to-edge overhead floor material filling the whole square; about three to four flagstones across, even density, non-directional; no border, step, crack line, object, rune, symbol or shadow.
+Gameplay contract (do not invent additional rules): Walkable floor only; harmless. Paint no pit, stairs, door, carpet, blood, character, symbol or text.
+
+Flat overhead printed-board surface; restrained matte paint texture and broad low-contrast variations. Match the supplied accepted reference's scale, palette hierarchy and upper-left lighting convention. No creature, disc, freestanding prop, text, symbol, hazard badge, frame, vignette or cast shadow implying an obstacle. Texture must reach all four edges. Grid seams, parity modulation, neighbour masks and rule overlays are assembled by the exporter, not painted as an atlas here. Do not create decorative cracks that resemble an interactive exit. Do not claim a seamless result without a separate tiled preview check. One master only.
+
+Reference roles:
+Image 1: identity — Native gothic hall floor: laid stone flags of a dark orc-pride keep. Keep the laid-flagstone hall identity but make it pale and calm; not this dark grey value.
+Image 2: style — Accepted board stone floor master: flat overhead matte finish, light value, low contrast and upper-left light. Not its warm sandstone palette and not its unjointed surface.

@@ -1,0 +1,88 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "giant-acid-ant": 79.75,
+    "giant-army-ant": 77.81,
+    "yaech-psion": 126.18,
+    "blue-crystal": 91.61,
+    "devourer": 89.14,
+    "skeleton-assassin": 86.72,
+    "assassin": 80.0,
+    "elven-corruptor": 84.69,
+    "orc-fighter": 80.06,
+    "greater-telugoroth": 132.19,
+    "teluvorta": 128.37,
+    "dread": 80.42,
+    "skeleton-assassin OLD v1 (superseded: thin dark figure lost its silhouette at 48px)": 62.67,
+    "assassin OLD v1 (superseded: thin dark figure lost its silhouette at 48px)": 62.66
+  },
+  "floors": {
+    "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+    "cave mushroom (ardhungol)": 134.28,
+    "crystal (scintillating-caves)": 104.14,
+    "grass (old-forest, lake-nur)": 108.97,
+    "gloom plain (deep-bellow)": 79.5,
+    "void floor (temporal-rift)": 163.25,
+    "underwater floor (murgol-lair, lake-nur)": 129.4,
+    "burnt ground (demon-plane)": 72.7,
+    "korpul stone A (vor-armoury, telmur)": 131.79,
+    "rak-shor floor (rak-shor-pride)": 163.04
+  },
+  "zone_floors": {
+    "giant-acid-ant": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "grass (old-forest, lake-nur)": 108.97,
+      "korpul stone A (vor-armoury, telmur)": 131.79
+    },
+    "giant-army-ant": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "grass (old-forest, lake-nur)": 108.97,
+      "korpul stone A (vor-armoury, telmur)": 131.79
+    },
+    "yaech-psion": {
+      "underwater floor (murgol-lair, lake-nur)": 129.4
+    },
+    "blue-crystal": {
+      "crystal (scintillating-caves)": 104.14,
+      "grass (old-forest, lake-nur)": 108.97
+    },
+    "devourer": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "underwater floor (murgol-lair, lake-nur)": 129.4
+    },
+    "skeleton-assassin": {
+      "korpul stone A (vor-armoury, telmur)": 131.79,
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "assassin": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "korpul stone A (vor-armoury, telmur)": 131.79
+    },
+    "elven-corruptor": {
+      "burnt ground (demon-plane)": 72.7,
+      "korpul stone A (vor-armoury, telmur)": 131.79
+    },
+    "orc-fighter": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "korpul stone A (vor-armoury, telmur)": 131.79
+    },
+    "greater-telugoroth": {
+      "void floor (temporal-rift)": 163.25
+    },
+    "teluvorta": {
+      "void floor (temporal-rift)": 163.25
+    },
+    "dread": {
+      "burnt ground (demon-plane)": 72.7,
+      "korpul stone A (vor-armoury, telmur)": 131.79,
+      "rak-shor floor (rak-shor-pride)": 163.04
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

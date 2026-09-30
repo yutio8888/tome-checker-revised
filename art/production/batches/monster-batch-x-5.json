@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-x-5",
+  "assets": [
+    {
+      "asset_id": "elven-corruptor",
+      "native_name": "elven corruptor",
+      "scope": "crypt-kryl-feijan and mark-spellblaze pools (general/npcs/elven-caster.lua:144, humanoid/shalore, non-unique, no define_as, rank 3, base BASE_NPC_ELVEN_CASTER, default-name image); the only definition of this name (the Grand Corruptor and the Rhaloren Inquisitor are other names with their own tokens)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/elven-caster.lua",
+          "sha256": "a68bfbfbbe74a47b0c2a95f683439c41035ecf952d53cabb4c7636ee011fd515",
+          "line": 144,
+          "anchor": "name = \"elven corruptor\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/elven-caster.lua",
+          "sha256": "a68bfbfbbe74a47b0c2a95f683439c41035ecf952d53cabb4c7636ee011fd515",
+          "line": 160,
+          "anchor": "T_BONE_SHIELD"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/elven-caster.lua",
+          "sha256": "a68bfbfbbe74a47b0c2a95f683439c41035ecf952d53cabb4c7636ee011fd515",
+          "line": 167,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/elven-caster.lua",
+          "sha256": "a68bfbfbbe74a47b0c2a95f683439c41035ecf952d53cabb4c7636ee011fd515",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ELVEN_CASTER\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_shalore_elven_corruptor.png",
+          "sha256": "cc147ada2ea82016b782c555dd02e60ce514dcbf71232e9e8d3be82581439577",
+          "role": "identity",
+          "note": "Native shape (64x64): a pale elf in dark dusky robes with a tall pointed hood and a long staff, a small orchid trim on the sleeves. Keep the robed pale elf with a tall staff, but render the robes orchid-magenta and plum in a mid-light value with bone-white trim, bone shards orbiting."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-x/refs/elves.png",
+          "sha256": "2ccec26f1963ea8e6970830f20f16339a39e1b1fe5aada012afa3ab68d2d7104",
+          "role": "family",
+          "note": "Six shipped shalore tokens (purple-robed elven mage with a staff, green-cloaked cultist, grey-red blood mage, hooded red-black Grand Corruptor, guard, warrior): the elven corruptor is a pale silver-haired elf in orchid-magenta and plum robes with bone-white trim, a bone-topped staff and three bone shards orbiting, not purple-blue, not green and not red-black hooded."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An elven corruptor seen from a steep overhead three-quarter angle: a slender pale SHALORE elf with silver-white hair, pointed ears and a gaunt calm face, wearing long ORCHID-MAGENTA and PLUM robes in a mid-light value with pale pink highlight planes and BONE-WHITE trim, ribs-like bone clasps across the chest and a bone-and-brass collar, holding a SHORT BONE-TOPPED STAFF close to the body in the right hand (the staff head a small bone skull-crescent, the staff no taller than the shoulder), the left hand open at the hip dripping a few dark-red drops, THREE tiny pale BONE SHARDS hugging the body just outside the shoulders. Corrupt, elegant, robed and complete.",
+        "contrast": "Elves: the ELVEN CORRUPTOR is the ORCHID-MAGENTA ROBED ONE with bone trim, a bone-topped staff and three orbiting bone shards (silhouette: a slim robed figure with a diagonal staff and three small shards around it; hue: orchid magenta and plum with bone white and silver hair; value: mid-light). The shipped elven mage wears blue-purple robes, the cultist green, the blood mage grey and dark red, the Grand Corruptor a red-black hood, and the guard and warrior wear armour: this must not be blue-purple, green, red-black or armoured and must not be hooded in black.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Calibration from the previous generation of this exact token: the design, the orchid-magenta and plum robes and the silver-haired elf were right, but the tall staff and the orbiting bone shards stuck OUT across the disc rim. This time keep the same elf, robes and colours, but hold a SHORT bone-topped staff (no longer than the elf's shoulder height, held close to the body, its head well below the elf's head height) and draw the three bone shards tiny and hugging the body just outside the shoulders. Put the figure exactly in the centre of the disc with the WHOLE figure, staff and shards included, inside a circle of about two thirds of the disc radius and a wide bare ring of plate on every side, nothing touching or crossing the disc rim. Render the WHOLE disc, its outer ring band and the plate under the figure, at reference lightness, a hair lighter, never darker, evenly all round, with NO cast shadow and no ambient darkening of the disc.",
+        "palette": "Orchid-magenta and plum robes in a mid-light value with pale pink highlight planes and a bright rim light, bone-white trim and shards, silver-white hair, pale skin, dark-red drops (nothing glows onto the disc); nothing darker than dark plum except the eyes and thin seams; NO black cloth anywhere. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=elven corruptor, define_as=None, type=humanoid/subtype=shalore, unique=False, native_tall=False); details and hashes in evidence/monster-batch-x-20260930/source-contracts.json. base BASE_NPC_ELVEN_CASTER (humanoid/shalore, faction rhalore, no image=, no shader, no sustains_at_birth in the base); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip fills inventory slots only (no moddable_tile, so no display change) (staff, cloth armour, charm); resolvers.racial() adds only levelup talent tables; resolvers.inscriptions(1, rune); the leaf calls resolvers.sustains_at_birth(), starting Bone Shield (a shield particle and temporary values only, no type/subtype/image/add_mos write); talents Staff Mastery, Blood Spray, Drain, Soul Rot, Blood Grasp, Bone Spear; NO auto_classes on this leaf (only the Grand Corruptor and Rhaloren Inquisitor leaves carry Corruptor auto_classes). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-x-20260930/source-contracts.json",
+          "sha256": "d3dd5bbd03d3fe045b05a6c6bb6d5c1259c16277838feee21714f1457e7dc3cc"
+        }
+      ]
+    }
+  ]
+}

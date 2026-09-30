@@ -1,0 +1,132 @@
+{
+ "schema": 1,
+ "batch_id": "town-tw7-v1",
+ "assets": [
+  {
+   "gate": "ready",
+   "gate_reason": "TW7 town stone roads: the existing exact road identities (GRASS_ROAD_STONE, FLOOR_ROAD_STONE, Shatur COBBLESTONE) currently draw the brown forest dirt-road tile in towns. One opaque stone-slab road floor master; rules unchanged (walkable floor). No waiver.",
+   "max_attempts": 2,
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/terrain-tw7-20260930/identity-tw7.md",
+     "sha256": "a4fa5a3b45952fb5157565d8fc49bc817a3eb084be2796a4addf7fdca0b30953"
+    }
+   ],
+   "asset_id": "town-road-slab",
+   "native_name": "GRASS_ROAD_STONE / FLOOR_ROAD_STONE / COBBLESTONE town stone road",
+   "kind": "terrain-floor",
+   "scope": "Static towns only (townKind): Derth, Last Hope, Zigur, Angolwen and Gates of Morning roads, Shatur lake bridge. Other zones keep the forest road tile.",
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/grids/forest.lua",
+     "sha256": "ce8d970564e00a1b7bbd2726a0df21d01d064e091ce389ef419355c55a84a0b9",
+     "line": 129,
+     "anchor": "define_as = \"GRASS_ROAD_STONE\""
+    },
+    {
+     "path": "game/modules/tome/data/zones/town-last-hope/grids.lua",
+     "sha256": "1d5750016c0871e8e10843bfd597883d24c22afd86b1f76fed1629685878c2d9",
+     "line": 25,
+     "anchor": "define_as = \"FLOOR_ROAD_STONE\""
+    },
+    {
+     "path": "game/modules/tome/data/zones/town-shatur/grids.lua",
+     "sha256": "2e2d700c3872c2490bd416d38576551ebf4cf3071f4b6d1db00bc90f8f0f26c9",
+     "line": 31,
+     "anchor": "define_as = \"COBBLESTONE\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/terrain/road_oldstone/road_horizontal_a_01.png",
+     "sha256": "c82c527d664392836ebcc7319501e574cb25dde0fb3c1e02f16091995ae18789",
+     "role": "identity",
+     "note": "Native town road: an old paved stone road through the town. Keep the laid-stone road identity but make it large pale flat slabs instead of dark cobbles, and fill the whole square."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-bamboo-hut-v1/selected/floor-bamboo-hut-floor.png",
+     "sha256": "e3bf199cdde5b590da778446cf4a99e2ad9ca584a35878b3557ab5ea1c26fc75",
+     "role": "style",
+     "note": "Accepted board floor master (TW6): flat overhead matte finish, low contrast, scale, upper-left light and the calm printed-board surface. Not its woven material or tan palette."
+    }
+   ],
+   "grid_contract": {
+    "movement": "Walkable; no movement rule, no speed bonus.",
+    "sight": "Does not block sight.",
+    "danger": "None.",
+    "interaction": "None; shops are trap-layer doors on building walls, never on the road.",
+    "export": "Opaque full-bleed floor material; the exporter crops 2 checker parities (parity 1 about 12% darker)."
+   },
+   "prompt_fields": {
+    "subject": "A town road paved with large flat dressed stone slabs seen from straight above: rectangular and square flagstones of pale warm limestone in an irregular ashlar bond of mixed sizes (about three to five slabs across the square), tight narrow joints with a little packed grit, tops worn smooth. Calm and even.",
+    "palette": "Pale warm grey-beige and light buff stone with faint ochre and cool grey variation between slabs; joints a soft mid brown-grey, never black. Light overall: clearly lighter than green grass and than dark stone building walls; warmer and more clearly slab-jointed than a plain grey stone plaza floor.",
+    "contrast": "At 48 pixels it must read as a flat, walkable paved road that game pieces stand on: a few large light slab shapes with thin joints; low internal contrast so characters stay readable; distinct from grass by its pale warm stone colour and from walls by being much lighter; no dark cobbles.",
+    "composition": "Edge-to-edge overhead paving filling the whole square with even density and a non-directional slab pattern; no kerb, border, centre line, gutter, grass verge, deep crack, hole, step, object or shadow.",
+    "mechanics": "Walkable road only. Paint no kerb, wall, step, stairs, grate, drain, puddle, hazard, marking, character, symbol or text."
+   }
+  },
+  {
+   "gate": "ready",
+   "gate_reason": "TW7 crop fields: FIELDS1-4 in Zigur and Angolwen are native today; their rules are exactly plain grass. One opaque crop-field floor master that must read as walkable ground. No waiver.",
+   "max_attempts": 2,
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/terrain-tw7-20260930/identity-tw7.md",
+     "sha256": "a4fa5a3b45952fb5157565d8fc49bc817a3eb084be2796a4addf7fdca0b30953"
+    }
+   ],
+   "asset_id": "town-crop-field",
+   "native_name": "FIELDS1-4 cultivated fields (Zigur, Angolwen)",
+   "kind": "terrain-floor",
+   "scope": "Zigur (town-zigur) and Angolwen (town-angolwen) FIELDS1-4 only; the un-tiled FIELDS and every other zone stay as they are.",
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/town-zigur/grids.lua",
+     "sha256": "8e3f9f66eebb05dcd4caef8337e3e9a3d22bd3b1974277ef75f76b4bf4d0c621",
+     "line": 45,
+     "anchor": "define_as = \"FIELDS\""
+    },
+    {
+     "path": "game/modules/tome/data/zones/town-angolwen/grids.lua",
+     "sha256": "bd7269e5bfa4ad2200a48b5102056b169f7747d4a10b5ac8635d9ce37009611e",
+     "line": 25,
+     "anchor": "define_as = \"FIELDS\""
+    },
+    {
+     "path": "game/modules/tome/data/general/grids/forest.lua",
+     "sha256": "ce8d970564e00a1b7bbd2726a0df21d01d064e091ce389ef419355c55a84a0b9",
+     "line": 24,
+     "anchor": "define_as = \"GRASS\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/terrain/cultivation02.png",
+     "sha256": "c83682769ccfc19354bbbd1fae566c6292ba9353dd65a0bec68eb80d8516f494",
+     "role": "identity",
+     "note": "Native cultivated field: a vegetable plot of tilled soil with rows of young crops. Keep the tilled-rows-with-seedlings identity but much lighter, flatter and filling the whole square."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-bamboo-hut-v1/selected/floor-bamboo-hut-floor.png",
+     "sha256": "e3bf199cdde5b590da778446cf4a99e2ad9ca584a35878b3557ab5ea1c26fc75",
+     "role": "style",
+     "note": "Accepted board floor master (TW6): flat overhead matte finish, low contrast, scale, upper-left light and the calm printed-board surface. Not its woven material or tan palette."
+    }
+   ],
+   "grid_contract": {
+    "movement": "Walkable; exactly the rules of plain grass (no movement rule, no speed bonus or penalty).",
+    "sight": "Does not block sight.",
+    "danger": "None.",
+    "interaction": "None.",
+    "export": "Opaque full-bleed floor material; the exporter crops 2 checker parities (parity 1 about 12% darker)."
+   },
+   "prompt_fields": {
+    "subject": "A cultivated vegetable plot seen from straight above: light, dry, finely tilled brown earth in straight evenly spaced shallow furrows running left to right, with low young leafy seedlings (small round green leaves, ankle high) along each ridge; flat ground, nothing standing up.",
+    "palette": "Warm light-to-mid brown tilled soil, medium fresh green seedlings, a few ochre dry clods. Mid value overall, about as light as green grass or slightly lighter, never dark; not grey stone; no black shadows between rows.",
+    "contrast": "At 48 pixels it must read as flat walkable farmland, soft alternating brown and green stripes, clearly different from plain green grass by the stripes and brown soil and from a pale stone road by colour; low contrast so characters stay readable; the crops look short and flat, never like a hedge, bush, fence or wall.",
+    "composition": "Edge-to-edge overhead field material filling the whole square; about seven furrows across the square, parallel to the top edge, evenly spaced and reaching all four edges; no field border, fence, path, stone, tool, scarecrow, water or cast shadow.",
+    "mechanics": "Walkable cultivated ground only, the same rules as grass. Paint no fence, hedge, tall stalks, trellis, water, hazard, character, symbol or text."
+   }
+  }
+ ]
+}

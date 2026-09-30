@@ -1,0 +1,69 @@
+{
+ "schema": 1,
+ "batch_id": "terrain-hazard-s12-v1",
+ "assets": [
+  {
+   "gate": "ready",
+   "gate_reason": "S12/T19: damaging LAVA_FLOOR (lava.lua on_stand fire damage) in Vor Armoury L2 and lava greater vaults of High Peak / Dreadfell has no board picture. One opaque hazard-crust master; rules unchanged (walkable, burns who stands on it). No waiver.",
+   "max_attempts": 2,
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/terrain-s12-20260930/identity-s12.md",
+     "sha256": "cd8d46b47d31c5a1f34c8a5f105c1c2e54f6efe03d8e9b9161c4e04322196477"
+    }
+   ],
+   "asset_id": "hazard-lava-floor",
+   "native_name": "LAVA_FLOOR damaging lava floor",
+   "kind": "terrain-floor",
+   "scope": "Damaging lava.lua LAVA_FLOOR / LAVA_FLOOR1-16 in Vor Armoury L2 and the lava greater vaults of High Peak and Dreadfell; not the harmless zone-local lava floor, not blocking molten lava.",
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/grids/lava.lua",
+     "sha256": "9b844dc3bc7fe9247bee7e2529119714124505227088fac73788e5b75352e0d0",
+     "line": 25,
+     "anchor": "define_as = \"LAVA_FLOOR\""
+    },
+    {
+     "path": "game/modules/tome/data/general/grids/lava.lua",
+     "sha256": "9b844dc3bc7fe9247bee7e2529119714124505227088fac73788e5b75352e0d0",
+     "line": 33,
+     "anchor": "on_stand = function(self, x, y, who)"
+    },
+    {
+     "path": "game/modules/tome/data/maps/zones/vor-armoury-last.lua",
+     "sha256": "ff0ff5d75907370de7ade3cd833ca8377f468862da6f23f425ecb9c3e3c5d3c4",
+     "line": 29,
+     "anchor": "defineTile(\"%\", \"LAVA_FLOOR\")"
+    }
+   ],
+   "references": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/terrain/lava/lava_floor9.png",
+     "sha256": "44d66d997072887eda8f22ed1e335c975e8e4e8c749d20642188ec7ddef607b5",
+     "role": "identity",
+     "note": "Native damaging lava floor: dark cooled crust with scattered glowing molten spots. Keep the hot-crust identity; make the glow organised into clear seams between flat crust plates."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-korpul-v1/masters/floor-a-v2.png",
+     "sha256": "aa50b00c1a936cb30e29e67e7a24a0243f8d936be8c9d413926a2a507aa42d29",
+     "role": "style",
+     "note": "Accepted board stone floor master: flat overhead matte finish, upper-left light, texture scale. Not its sandstone palette or its light value; the hazard floor is much darker with glowing seams."
+    }
+   ],
+   "grid_contract": {
+    "movement": "Walkable; no movement rule, no speed bonus or penalty.",
+    "sight": "Does not block sight.",
+    "danger": "Hazard: every turn an actor stands on it, it takes fire damage (lava.lua:33 on_stand). It is NOT an obstacle (it does not block movement) and NOT safe floor.",
+    "interaction": "None.",
+    "export": "Opaque full-bleed material; the exporter crops 2 checker parities, adds a flush glowing seam only where a neighbour is not hazard lava (16 masks), no raised rim."
+   },
+   "prompt_fields": {
+    "subject": "Walkable but dangerous volcanic ground seen from straight above: flat, fitted plates of dark cooled basalt crust like a cracked pavement, separated by thin glowing molten seams of orange and yellow-orange, with a few tiny hot ember specks on the plates; everything is at one flat floor level.",
+    "palette": "Crust plates in charcoal, dark umber and warm dark grey (not pure black, with a faint warm sheen); seams saturated orange grading to yellow-orange at their hottest centres, with a narrow deep-red glow bleeding onto the plate edges. Overall mid-dark: clearly darker than a pale stone floor, but with bright seams.",
+    "contrast": "At 48 pixels it must read as hot ground you could step onto but that will burn you: the crust plates dominate (roughly four to five plates across the square), the glowing seams are thin and continuous (about one fifth of the area), so it does NOT read as a molten lava lake, a pit or a wall, and not as a harmless dark rock floor either.",
+    "composition": "Edge-to-edge overhead floor material filling the whole square; irregular polygonal plates of even size, non-directional, seams reaching all four edges; no border, rim, step, lip, pool, object, rune, symbol or cast shadow.",
+    "mechanics": "Walkable hazard floor: burns whoever stands on it. Paint no pit, lake, raised rim, wall, stairs, character, warning sign, symbol or text."
+   }
+  }
+ ]
+}

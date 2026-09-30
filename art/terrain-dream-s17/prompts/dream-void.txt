@@ -1,0 +1,13 @@
+Use case: stylized-concept. Deliver ONE square, opaque, full-bleed terrain material master for a tabletop game board: OUTERSPACE dreamscape void. Request 1024 x 1024 pixels; preserve actual output resolution.
+
+Subject and material: The empty abyss of a dream seen from straight above, far below a floating cloud floor: deep, soft indigo-violet haze with a few very faint, blurred, distant cloud wisps drifting far down in the depth; calm, quiet, empty space with nothing to stand on.
+Palette: Deep indigo, dark violet and blue-black, with the faint distant wisps only slightly lighter dusky lavender; overall very dark (roughly a fifth of the brightness of the pale cloud floor), low saturation, no bright spots.
+Relationship to adjacent materials: At 48 pixels it must read as empty, impassable depth: a dark, quiet, almost uniform field that the pale cloud floor clearly stands out against, so it does NOT read as floor, water, lava, poison, a starfield, a portal, a vortex or a wall.
+Composition and edge contract: Edge-to-edge overhead material filling the whole square; soft, non-directional haze with the faint wisps spread evenly, reaching all four edges; no border, rim, cloud edge, platform, object, star, planet, swirl, rune, symbol or glow.
+Gameplay contract (do not invent additional rules): Impassable empty void, harmless. Paint no floor, bridge, stairs, portal, character, warning sign, symbol or text.
+
+Flat overhead printed-board surface; restrained matte paint texture and broad low-contrast variations. Match the supplied accepted reference's scale, palette hierarchy and upper-left lighting convention. No creature, disc, freestanding prop, text, symbol, hazard badge, frame, vignette or cast shadow implying an obstacle. Texture must reach all four edges. Grid seams, parity modulation, neighbour masks and rule overlays are assembled by the exporter, not painted as an atlas here. Do not create decorative cracks that resemble an interactive exit. Do not claim a seamless result without a separate tiled preview check. One master only.
+
+Reference roles:
+Image 1: family — The accepted dream cloud floor that borders this void. Match its soft painted cloud handling and cool lavender hue family; the void must be far darker and emptier so the cloud floor reads as the only walkable ground.
+Image 2: style — Accepted board impassable-void master: flat overhead matte finish, deep indigo value range and texture scale. Not its fractured crystal shards or cyan cracks; the dream void is smooth, soft haze.

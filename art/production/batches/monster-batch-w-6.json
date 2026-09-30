@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-w-6",
+  "assets": [
+    {
+      "asset_id": "fiery-orc-wyrmic",
+      "native_name": "fiery orc wyrmic",
+      "scope": "reknor (reknor-last static map tile 'f' = define_as ORC_FIRE_WYRMIC), rak-shor-pride and vor-armoury pools and the orc-hatred and orc-armoury vaults (general/npcs/orc.lua:114, humanoid/orc, non-unique, define_as ORC_FIRE_WYRMIC, rank 3, base BASE_NPC_ORC, default-name image); single definition; the vaults build this same leaf by name (random_filter), so their actors carry the same define_as",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 115,
+          "anchor": "name = \"fiery orc wyrmic\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 114,
+          "anchor": "define_as = \"ORC_FIRE_WYRMIC\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 139,
+          "anchor": "T_FIRE_BREATH"
+        },
+        {
+          "path": "game/modules/tome/data/maps/zones/reknor-last.lua",
+          "sha256": "c660b2dfed835890dfd6e6dc51d2fd56a838777f4eba75d4384d006987f374ba",
+          "line": 33,
+          "anchor": "ORC_FIRE_WYRMIC"
+        },
+        {
+          "path": "game/modules/tome/data/maps/vaults/auto/greater/orc-hatred.lua",
+          "sha256": "62118b421d5045102119d64d54c929eef32be6ad359f5c39559655cff66340cd",
+          "line": 77,
+          "anchor": "name = \"fiery orc wyrmic\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_fiery_orc_wyrmic.png",
+          "sha256": "af76ae9795535cbb924cc15db1e823c0830c1d80b32b267804235091cdb46470",
+          "role": "identity",
+          "note": "Native shape (64x64): an olive-green orc in orange-gold dragon-scale armour with a curved blade. Keep the dragon-scale armour and the olive orc; make the armour bright crimson-orange with wing-fin pauldrons and a diagonal battleaxe."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-w/refs/orcs.png",
+          "sha256": "527072f80858b15e355c9d5e033a5105b501fb5faba40cb6c82b185b5fb8e8b7",
+          "role": "family",
+          "note": "Nine shipped orc tokens (olive orc warrior with a scimitar, spiked dark orc soldier with an axe, orc archer, hooded assassin, hooded necromancer, master assassin, and the robed pyromancer, cryomancer and blood mage): the two wyrmics are armoured dragon-scale axe fighters, bare olive-green faces under horned helms, not robed casters, not hooded and not carrying a scimitar or a bow."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A fiery orc wyrmic seen from a steep overhead three-quarter angle: a broad, powerful OLIVE-GREEN orc with small tusks and a snarling roar, wearing BRIGHT CRIMSON-ORANGE DRAGON-SCALE armour (overlapping scale plates with pale gold edges and bright orange-yellow highlight planes), a pair of red drake-wing-fin pauldrons flaring from the shoulders, a horned pale-bone-and-gold helm, a wide belt with a small red totem charm; the RIGHT ARM holds a SHORT-HANDLED steel hand axe at shoulder height angled up and out to the right (a small orange fire glint on the head, the whole axe well inside the disc), the LEFT HAND open in front of the hip with a small tongue of flame, feet planted wide. Fiery, scaled, diagonal-axe and complete.",
+        "contrast": "Orc wyrmics: the FIERY orc wyrmic is the CRIMSON-ORANGE SCALED ONE with a diagonal raised axe and a flame in the open hand (silhouette: an upright wide-stanced figure with one long diagonal line to the upper right; hue: crimson-orange scale armour with gold edges over olive skin; value: mid-light). The shipped orc warrior is an olive fighter with a scimitar, the soldier a dark spiked axeman, the archer holds a bow and the casters are robed: this must not be robed, hooded, dark-plated or holding a scimitar or bow. Its twin, the icy orc wyrmic, is pale blue-white scaled, crouched low with a horizontal axe.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. Calibration from the previous generation of this exact token: the design, the crimson-orange scale armour and the wide stance were right, but the battleaxe stuck OUT of the disc across the rim at the upper left. This time keep the same olive-green tusked orc in bright crimson-orange dragon-scale armour with red wing-fin pauldrons, horned bone-and-gold helm and a small flame in the open left hand, but hold a SHORT-HANDLED hand axe (haft no longer than the orc's forearm, a modest steel head) raised in the right hand at shoulder height, angled up and out to the RIGHT, the axe head at least one full head-height inside the disc rim and NOT above the head, with both elbows kept in close to the body. Put the figure exactly in the centre of the disc, the WHOLE figure including axe and flame inside a circle of about two thirds of the disc radius with a wide bare ring of plate on every side, nothing whatsoever touching or crossing the disc rim. Render the WHOLE disc, its outer ring band and the plate under the figure, at reference lightness, a hair lighter, never darker, evenly all round, with NO cast shadow and no ambient darkening of the disc from the creature, and no fire glow on the plate.",
+        "palette": "Olive-green skin, crimson-orange scale armour in a mid-light value with pale orange-yellow highlight planes and gold edging, pale bone-and-gold helm, bright steel axe head with a bright rim, a small orange flame (the flame stays on the hand and must not glow onto or warm the disc); nothing darker than dark red-brown except the eye slits and thin seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=fiery orc wyrmic, define_as=ORC_FIRE_WYRMIC, type=humanoid/subtype=orc, unique=False, native_tall=False); details and hashes in evidence/monster-batch-w-20260930/source-contracts.json. base BASE_NPC_ORC (humanoid/orc, faction orc-pride, no image=, no shader, no sustains_at_birth); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip fills inventory slots only (no moddable_tile, so no display change) (battleaxe, totem charm); resolvers.racial() adds only levelup talent tables; resolvers.inscriptions(1, infusion); talents Weapons Mastery (passive), Bellowing Roar, Wing Buffet, Fire Breath (activated); make_escort of orc soldiers only; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-w-20260930/source-contracts.json",
+          "sha256": "96ca69784bec3c15699f4022058d68cede257f2a212a917ee75ff352a93458e3"
+        }
+      ]
+    }
+  ]
+}

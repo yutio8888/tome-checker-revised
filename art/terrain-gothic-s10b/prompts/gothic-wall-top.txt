@@ -1,0 +1,13 @@
+Use case: stylized-concept. Deliver ONE square, opaque, full-bleed terrain material master for a tabletop game board: GOTHIC_WALL gothic granite wall. Request 1024 x 1024 pixels; preserve actual output resolution.
+
+Subject and material: The top of a thick gothic keep wall seen from straight above: dark dressed slate-grey stone coping blocks, heavy and square-cut, laid in a tight running bond with thin black joints and a few black wrought-iron clamps and rivets set into the stone; solid and impassable, filling the square.
+Palette: Charcoal slate, dark blue-grey and near-black granite with small cool grey highlights catching upper-left light and dull black iron; dark overall: clearly much darker than a pale stone floor; not brown, not green, not warm.
+Relationship to adjacent materials: At 48 pixels it must read as a dark solid blocking mass filling its cell, clearly darker and heavier than any floor; distinct from pale Kor'Pul brick and brown rock by its dark cool slate masonry and iron; broad even forms, no holes showing floor, no small scattered objects.
+Composition and edge contract: Edge-to-edge overhead material filling the whole square with even density; stone courses run straight across; no border, gap, visible floor, cliff face, battlement silhouette, object or cast shadow.
+Gameplay contract (do not invent additional rules): Blocking wall top only. Paint no door, opening, window, stairs, hazard, character, symbol or text.
+
+Flat overhead printed-board surface; restrained matte paint texture and broad low-contrast variations. Match the supplied accepted reference's scale, palette hierarchy and upper-left lighting convention. No creature, disc, freestanding prop, text, symbol, hazard badge, frame, vignette or cast shadow implying an obstacle. Texture must reach all four edges. Grid seams, parity modulation, neighbour masks and rule overlays are assembled by the exporter, not painted as an atlas here. Do not create decorative cracks that resemble an interactive exit. Do not claim a seamless result without a separate tiled preview check. One master only.
+
+Reference roles:
+Image 1: identity — Native gothic granite wall: dark cut granite blocks. Keep the dark dressed-stone gothic identity as the top of a thick wall seen from above.
+Image 2: style — Accepted board wall-top material (TW5 mountain crest): an opaque overhead material of a solid blocking mass, its broad forms, scale and upper-left light. Not its natural rock or gold palette.

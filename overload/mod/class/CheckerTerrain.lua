@@ -474,7 +474,8 @@ local function voidTerrain(g,zoneName)
  -- contract) plus its VOID floor and rifts (Temporal Rift contract); its
  -- townKind also requires Point Zero's own list stamp.
  local pointZero=zoneName=='town-point-zero'
- if zoneName=='abashed-expanse' or pointZero then
+ if zoneName=='abashed-expanse' or pointZero or zoneName=='temporal-reprieve-talent' or
+  zoneName=='dreamscape-talent' then -- S16: space/rocks only; S17: space only (tw4.s17Kind)
   if file~='/data/general/grids/void.lua' then return end
   if id=='OUTERSPACE' and g.type=='void' and g.subtype=='void' and g.name=='void' and
    g.display==' ' and not g.image and g._noalpha==false and g.always_remember==true and
@@ -1337,7 +1338,12 @@ for _,z in ipairs{
  'scintillating-caves','town-lumberjack-village','shadow-crypt','tannen-tower','ring-of-blood','gorbat-pride',
  'eruan',
  -- S9: High Peak's Roomer levels (L5-10) and the Sanctum's diggable WALL.
- 'high-peak'} do tw4.S8_DARK[z]=true end
+ 'high-peak',
+ -- S10a: Grushnak Pride's barracks (basic.lua WALL; its slimy_walls.lua
+ -- SLIMED_WALL corner draws through the same stone kinds).
+ 'grushnak-pride',
+ -- S10b: Vor Pride's basic.lua stone (only the renegade-pyromancers vault).
+ 'vor-pride'} do tw4.S8_DARK[z]=true end
 tw4.ELVEN_TREE_LAYERS={'^invis%.png$','^terrain/grass/grass_[%w_]+%.png$','^terrain/trees/[%w_]+%.png$'}
 tw4.SNOW_TREE_LAYERS={'^invis%.png$','^terrain/grass/snowy_grass_[%w_]+%.png$','^terrain/trees/[%w_]+%.png$'}
 function tw4.shaturTree(g,zoneName)
@@ -1454,6 +1460,26 @@ function tw4.goldMountain(g,zoneName)
   not noTransition(g) or not tw4.goldWallParts(g) then return end
  return 'gold-mountain'
 end
+-- TW7: Zigur's and Angolwen's cultivated fields (town-zigur/grids.lua:45-50,
+-- town-angolwen/grids.lua:25-30): GRASS copies whose rules are plain grass.
+-- Only the nice_tiler results FIELDS1-4 under the town's own list stamp, with
+-- exactly their own cultivation0N add_mos and at most grass-border carriers;
+-- drawn as the board crop field (walkable ground).
+tw4.FIELD_BORDERS={'^invis%.png$','^terrain/grass/grass_[%w_]+%.png$'}
+function tw4.fields(g,zoneName)
+ local n=type(g.define_as)=='string' and tonumber(g.define_as:match('^FIELDS([1-4])$'))
+ if not n or (zoneName~='town-zigur' and zoneName~='town-angolwen') or not ownTown(g,zoneName) or
+  g.type~='floor' or g.subtype~='grass' or g.name~='cultivated fields' or g.display~=';' or g.grow~='TREE' or
+  g.image~='terrain/grass.png' or g.always_remember or g.does_block_move or g.block_sight or g.dig or g.can_pass or
+  g.road or g.notice or g.z or g.pass_projectile or not plainCell(g) or
+  not g.add_mos or #g.add_mos~=1 or g.add_mos[1].image~=('terrain/cultivation0%d.png'):format(n) then return end
+ for k in pairs(g.add_mos[1]) do if k~='image' then return end end
+ for _,d in ipairs(g.add_displays or {}) do
+  if d.image~='invis.png' or d.z or d.display_x or d.display_y or d.display_w or d.display_h or d.shader or
+   d.add_displays or not layersMatch({add_mos=d.add_mos},tw4.FIELD_BORDERS) then return end
+ end
+ return 'fields'
+end
 -- Every native prop a town cell redraws over its board tile (applyForest).
 function M.townProp(g,zoneName)
  if g and tw4.S5_FOREST[zoneName] then
@@ -1462,6 +1488,10 @@ function M.townProp(g,zoneName)
   local function prop(x)
    local k,d=tw4.valleyProp(x,zoneName)
    if not d then k,d=tw4.rockDoor(x,zoneName) end
+   -- S10a: Grushnak's training dummies.
+   if not d then k,d=tw4.s10Dummy(x,zoneName) end
+   -- S10b: Vor Pride's books.
+   if not d then k,d=tw4.s10bBook(x,zoneName) end
    return k,d
   end
   local kind,d=prop(g)
@@ -1500,7 +1530,10 @@ local function townKind(g,zoneName)
   tw4.goldMountain(g,zoneName) or
   -- TW6: Irkkk's jungle (Caldera art) and its bamboo huts; its deep water
   -- uses the contract above. (Defined below jungleKind.)
-  tw4.irkkkJungle(g,zoneName) or tw4.bambooHut(g,zoneName) or nil
+  tw4.irkkkJungle(g,zoneName) or tw4.bambooHut(g,zoneName) or
+  -- TW7: Zigur/Angolwen crop fields; Gates of Morning's palms on S6's exact
+  -- sand.lua palm contract (drawn with the S6 board palm).
+  tw4.fields(g,zoneName) or (zoneName=='town-gates-of-morning' and tw4.palm(g)) or nil
 end
 local function stewProp(g)
  if g.define_as~='STEW' or not stamped(g,'_checker_keepsake_source',keepsakeSource) or
@@ -1691,9 +1724,16 @@ tw4.S5_FILES={['tannen-tower']='/data/zones/tannen-tower/grids.lua',
  eruan='/data/zones/eruan/grids.lua',['gorbat-pride']='/data/zones/gorbat-pride/grids.lua',
  -- S9: High Peak. Every S9 identity (cave, stone, its two stairs) requires
  -- this list stamp; it is not a batch4/S5 forest family (tw4.hpCave).
- ['high-peak']='/data/zones/high-peak/grids.lua'}
+ ['high-peak']='/data/zones/high-peak/grids.lua',
+ -- S10a: Grushnak Pride, Slime Tunnels, Sludgenest. Every S10a identity
+ -- (slime family, reused families, stone kinds) requires this list stamp.
+ ['grushnak-pride']='/data/zones/grushnak-pride/grids.lua',['slime-tunnels']='/data/zones/slime-tunnels/grids.lua',
+ sludgenest='/data/zones/sludgenest/grids.lua',
+ -- S10b: Vor Pride. Every S10b identity (gothic family, reused families,
+ -- stone kinds) requires this list stamp.
+ ['vor-pride']='/data/zones/vor-pride/grids.lua'}
 tw4.S5_FOREST={['dreadfell-ambush']=true,['tannen-tower']=true,['valley-moon']=true,['ring-of-blood']=true,['arena-unlock']=true,
- eruan=true,['gorbat-pride']=true}
+ eruan=true,['gorbat-pride']=true,['grushnak-pride']=true,['slime-tunnels']=true,sludgenest=true,['vor-pride']=true}
 -- Stone zones whose all_remembered levels get the remembered-cell install.
 tw4.S5_REMEMBER={['shadow-crypt']=true,['tannen-tower']=true,['ring-of-blood']=true,['arena-unlock']=true}
 function tw4.zoneStamped(g,zoneName)
@@ -1870,7 +1910,284 @@ function tw4.s6Kind(g,zoneName)
  end
  -- Gorbat: hard and diggable mountains share the Daikara mountain masks.
  return hardMountain(g) or (rockTerrain(g,true)=='mountain-wall' and 'mountain') or deepWater(g) or
-  tw4.fenceHut(g,zoneName) or (tw4.rockDoor(g,zoneName)) or nil
+  tw4.fenceHut(g,zoneName) or (tw4.rockDoor(g,zoneName)) or (tw4.s11Kind(g,zoneName)) or nil -- S11: levers, lever rock
+end
+-- S10a: the slime family (Slime Tunnels, Sludgenest) and Grushnak Pride's
+-- underground_slimy.lua cells, all under the zone list stamp and the defining
+-- general file's stamp (_checker_slime_source). Exact rule fields and only the
+-- native NicerTiles layers (slime_wall edges, slimy-creep borders, the
+-- makeNewTrees mushroom parts). SLIME_DOOR*, the orb pedestals and the High
+-- Peak stairs/fake walls (callbacks) stay native. Sludgenest's jungle rim is
+-- jungleKind's contract drawn with the Caldera art (as Irkkk).
+tw4.S10_ZONES={['grushnak-pride']=true,['slime-tunnels']=true,sludgenest=true}
+tw4.SLIME_FILES={['/data/general/grids/slime.lua']=true,['/data/general/grids/slimy_walls.lua']=true,
+ ['/data/general/grids/underground_slimy.lua']=true}
+tw4.SLIME_LAYERS={'^invis%.png$','^terrain/slime/[%w_]+%.png$'}
+tw4.CREEP_LAYERS={'^terrain/mushrooms/creep_slimy_mushrooms_[%w_]+%.png$'}
+tw4.THICKET_LAYERS={'^invis%.png$','^terrain/mushrooms/[%w_]+%.png$'}
+-- {kind, name, display, change_level, change_zone, base image, stairs image, force_down}
+tw4.SLIME_STAIRS={SLIME_UP={'slime-up','previous level','<',-1,nil,'terrain/slime/slime_floor_01.png','terrain/slime/slime_stairs_up_left_01.png'},
+ SLIME_DOWN={'slime-down','next level','>',1,nil,'tterrain/slime/slime_floor_01.png','terrain/slime/slime_stair_down_01.png'},
+ UP_GRUSHNAK={'slime-up','exit to Grushnak Pride','<',3,'grushnak-pride','terrain/slime/slime_floor_01.png',
+  'terrain/slime/slime_stairs_up_left_01.png',true}}
+function tw4.slimeStamped(g,name) return stamped(g,'_checker_slime_source','/data/general/grids/'..name..'.lua') end
+-- NicerTiles border carriers: image-less invis displays holding only the
+-- given native border MOs, nothing else.
+function tw4.carriers(list,patterns,skip)
+ for i,d in ipairs(list or {}) do
+  if i~=skip then
+   if d.image~='invis.png' or d.add_displays or d.z or d.display_x or d.display_y or d.display_w or d.display_h or d.shader or
+    not d.add_mos or not layersMatch({add_mos=d.add_mos},patterns) then return false end
+  end
+ end
+ return true
+end
+function tw4.onlyCanPass(g,key)
+ if not g.can_pass or g.can_pass[key]~=1 then return false end
+ for k in pairs(g.can_pass) do if k~=key then return false end end
+ return true
+end
+function tw4.s10Dummy(g,zoneName)
+ if zoneName~='grushnak-pride' or not g or g.define_as~='TRAINING_DUMMY' or not tw4.zoneStamped(g,zoneName) then return end
+ for _,v in pairs(g) do if type(v)=='function' then return end end
+ local d=g.add_displays and #g.add_displays==1 and g.add_displays[1]
+ if not d or d.image~='npc/lure.png' or d.z~=9 or d.add_mos or d.add_displays or d.shader or d.display_x or d.display_y or
+  d.display_w or d.display_h then return end
+ if g.type~='training' or g.subtype~='dummy' or g.name~='training dummy' or g.display~='t' or
+  g.image~='terrain/underground_floor.png' or g.always_remember~=true or g.notice~=true or g.does_block_move~=true or
+  g.pass_projectile~=true or g.block_sight or g.block_sense or g.block_esp or g.air_level or g.dig or g.grow or g.can_pass or
+  g.is_door or hasMos(g) or g.on_stand or g.special or g.shader or g.tint or g.textures or g.z or not noTransition(g) then return end
+ return 'dummy',d
+end
+function tw4.s10Kind(g,zoneName)
+ if not g or not tw4.S10_ZONES[zoneName] or type(g.define_as)~='string' or not tw4.zoneStamped(g,zoneName) then return end
+ local id=g.define_as
+ if id=='TRAINING_DUMMY' then return (tw4.s10Dummy(g,zoneName)) end
+ if zoneName=='sludgenest' then
+  local j=jungleKind(g)
+  if j then return tw4.JUNGLE_KINDS[j] end
+ end
+ for _,v in pairs(g) do if type(v)=='function' then return end end
+ if g.on_stand or g.special or g.shader or g.tint or g.textures or g.is_door or g.block_sense or g.block_esp or
+  g.pass_projectile or g.z then return end
+ -- Slime Tunnels / Sludgenest: slime.lua floor, wall and stairs.
+ if zoneName~='grushnak-pride' and numbered(id,'SLIME_FLOOR',5) and tw4.slimeStamped(g,'slime') then
+  if g.type~='floor' or g.subtype~='slime' or g.name~='slime floor' or g.display~='.' or g.grow~='SLIME_WALL' or
+   type(g.image)~='string' or not g.image:match('^terrain/slime/slime_floor_0[1-5]%.png$') or
+   g.does_block_move or g.block_sight or g.dig or g.can_pass or g.air_level or g.always_remember or g.notice or
+   hasMos(g) or g.add_displays or not noTransition(g) then return end
+  return 'slime-floor'
+ end
+ if zoneName~='grushnak-pride' and numbered(id,'SLIME_WALL',5) and tw4.slimeStamped(g,'slime') then
+  if g.type~='wall' or g.subtype~='slime' or g.name~='slime wall' or g.display~='#' or g.always_remember~=true or
+   g.does_block_move~=true or g.block_sight~=true or g.air_level~=-20 or g.dig~='SLIME_FLOOR' or g.grow or g.notice or
+   hasMos(g) or not tw4.onlyCanPass(g,'pass_wall') or type(g.image)~='string' or not g.image:match('^terrain/slime/slime_wall_V2_[%w_]+%.png$') or
+   not noTransition(g) or not layersMatch(g,tw4.SLIME_LAYERS) then return end
+  return 'slime-wall'
+ end
+ local st=tw4.SLIME_STAIRS[id]
+ if st and zoneName~='grushnak-pride' and (id=='UP_GRUSHNAK' and zoneName=='slime-tunnels' or id~='UP_GRUSHNAK' and tw4.slimeStamped(g,'slime')) then
+  local ds=g.add_displays
+  local d=ds and ds[1]
+  if g.type~='floor' or g.subtype~='slime' or g.name~=st[2] or g.display~=st[3] or g.change_level~=st[4] or
+   g.change_zone~=st[5] or g.force_down~=st[8] or g.image~=st[6] or g.notice~=true or g.always_remember~=true or
+   g.does_block_move or g.block_sight or g.dig or g.can_pass or g.air_level or g.grow or hasMos(g) or
+   not d or d.image~=st[7] or d.z or d.add_mos or d.add_displays or d.shader or d.display_x or d.display_y or
+   d.display_w or d.display_h or not tw4.carriers(ds,tw4.CREEP_LAYERS,1) then return end
+  for i=3,#transitionKeys do if transitionKeys[i]~='force_down' and g[transitionKeys[i]]~=nil then return end end
+  return st[1]
+ end
+ if zoneName~='grushnak-pride' then return end
+ -- Grushnak Pride: underground_slimy.lua floor, mushroom creep and thicket,
+ -- and the zone's own entrance to the Slime Tunnels.
+ if numbered(id,'UNDERGROUND_FLOOR',20) and tw4.slimeStamped(g,'underground_slimy') then
+  local mos=g.add_mos
+  if g.type~='floor' or g.subtype~='underground' or g.name~='floor' or g.display~='.' or g.grow~='UNDERGROUND_TREE' or
+   type(g.image)~='string' or not g.image:match('^terrain/underground_floor[1-8]?%.png$') or
+   g.does_block_move or g.block_sight or g.dig or g.can_pass or g.air_level or g.always_remember or g.notice or
+   g.add_displays or not noTransition(g) or
+   mos and (#mos~=1 or type(mos[1].image)~='string' or not mos[1].image:match('^terrain/mushrooms/deco_floor_slimy_mushroom_0[1-8]%.png$') or
+    next(mos[1],next(mos[1])) or next(mos[1])~='image') then return end
+  return 'under-floor'
+ end
+ if numbered(id,'UNDERGROUND_CREEP',5) and tw4.slimeStamped(g,'underground_slimy') then
+  if g.type~='floor' or g.subtype~='creep' or g.name~='mushroom creep' or g.display~='.' or g.grow~='TREE' or
+   type(g.image)~='string' or not g.image:match('^terrain/slime/slime_floor_0[1-5]%.png$') or
+   g.does_block_move or g.block_sight or g.dig or g.can_pass or g.air_level or g.always_remember or g.notice or
+   hasMos(g) or not noTransition(g) or not tw4.carriers(g.add_displays,tw4.CREEP_LAYERS) then return end
+  return 'creep'
+ end
+ if numbered(id,'UNDERGROUND_TREE',30) and tw4.slimeStamped(g,'underground_slimy') then
+  if g.type~='wall' or g.subtype~='underground' or g.name~='underground thick vegetation' or g.display~='#' or
+   g.always_remember~=true or g.does_block_move~=true or g.block_sight~=true or g.dig~='UNDERGROUND_FLOOR' or
+   g.air_level or g.grow or g.notice or not tw4.onlyCanPass(g,'pass_tree') or not noTransition(g) or
+   (g.image~='terrain/underground_floor.png' and g.image~='terrain/tree.png') or not layersMatch(g,tw4.THICKET_LAYERS) then return end
+  return 'thicket'
+ end
+ if id=='SLIME_TUNNELS' then
+  local d=g.add_displays and #g.add_displays==1 and g.add_displays[1]
+  if g.type or g.subtype or g.name~='entrance to a slimy pit' or g.display~='>' or g.image~='terrain/underground_floor.png' or
+   g.change_level~=1 or g.change_zone~='slime-tunnels' or g.notice~=true or g.always_remember~=true or
+   g.does_block_move or g.block_sight or g.dig or g.can_pass or g.air_level or g.grow or hasMos(g) or
+   not d or d.image~='terrain/slime/slime_stair_down_01.png' or d.z~=4 or d.add_mos or d.add_displays or d.shader or
+   d.display_x or d.display_y or d.display_w or d.display_h then return end
+  for i=3,#transitionKeys do if g[transitionKeys[i]]~=nil then return end end
+  return 'slime-down'
+ end
+end
+-- S10b: Vor Pride (vor-pride/grids.lua). Its gothic.lua halls (floor, wall3d
+-- walls and pillars, doors, flat exits) draw the board gothic family; its
+-- burntland yard, basic.lua FLAT_DOWN4 and (unobserved) water/forest cells
+-- reuse the existing exact contracts. Every cell needs the zone list stamp;
+-- gothic cells also the gothic.lua stamp. Vor's list rewrites the
+-- marble_floor.png image of every gothic definition except GOTHIC_FLOOR and
+-- GOTHIC_FLAT_* to grass_burnt1.png (vor-pride/grids.lua:21-25): the specs
+-- pin that image (false below). Levers, lever doors (callbacks), sealed
+-- vault doors (prompt), candles (embedded particles), gothic hardwalls and
+-- non-flat stairs (not generated) and any cell with extra layers stay native.
+tw4.GOTHIC_FILE='/data/general/grids/gothic.lua'
+tw4.GW='terrain/gothic_walls/'
+tw4.VOR_BASE='terrain/grass_burnt1.png'
+function tw4.gothicStamped(g) return stamped(g,'_checker_gothic_source',tw4.GOTHIC_FILE) end
+function tw4.gothicImage(g,name) return g.image==(name and tw4.GW..name or tw4.VOR_BASE) end
+-- Exact display layers {image, z, display_y} in native order, nothing else.
+function tw4.gothicLayers(g,spec)
+ local ds=g.add_displays or {}
+ if #ds~=#spec then return false end
+ for i,s in ipairs(spec) do
+  local d=ds[i]
+  if type(d)~='table' or d.image~=tw4.GW..s[1] or d.z~=s[2] or d.display_y~=s[3] or d.display_x or d.display_w or
+   d.display_h or d.add_mos or d.add_displays or d.shader then return false end
+ end
+ return true
+end
+-- Exactly one MO holding only this image.
+function tw4.oneMos(g,image)
+ local m=g.add_mos
+ return m and #m==1 and type(m[1])=='table' and m[1].image==image and next(m[1],next(m[1]))==nil and next(m[1])=='image' or false
+end
+-- wall3d walls and pillars (gothic.lua:156-181): {image or false, z, layers}.
+function tw4.buildGothic()
+ local W={GOTHIC_WALL={'granite_wall1.png',3,{}},GOTHIC_WALL_NORTH_SOUTH={'granite_wall2.png',3,{{'granite_wall3.png',18,-1}}},
+  GOTHIC_WALL_SOUTH={'granite_wall2.png',3,{}},
+  GOTHIC_WALL_SMALL_PILLAR={false,1,{{'granite_wall_pillar_small.png',3},{'granite_wall_pillar_small_top.png',18,-1}}},
+  GOTHIC_WALL_PILLAR_6={false,1,{{'granite_wall_pillar_3.png',3},{'granite_wall_pillar_9.png',18,-1}}},
+  GOTHIC_WALL_PILLAR_4={false,1,{{'granite_wall_pillar_1.png',3},{'granite_wall_pillar_7.png',18,-1}}},
+  GOTHIC_WALL_PILLAR_2={false,1,{{'granite_wall_pillar_2.png',3}}}}
+ for i=1,5 do
+  W['GOTHIC_WALL'..i]={'granite_wall1_'..i..'.png',3,{}}
+  W['GOTHIC_WALL_NORTH'..i]={'granite_wall1_'..i..'.png',3,{{'granite_wall3.png',18,-1}}}
+  W['GOTHIC_WALL_PILLAR_8'..i]={'granite_wall1_'..i..'.png',3,{{'granite_wall_pillar_8.png',18,-1}}}
+ end
+ for i=1,17 do W['GOTHIC_WALL_SOUTH'..i]={'granite_wall2_'..i..'.png',3,{}} end
+ tw4.GOTHIC_WALLS=W
+ -- Doors (gothic.lua:217-242): {kind, image or false, z, layers, door_opened, door_closed, dig}.
+ tw4.GOTHIC_DOORS={GOTHIC_DOOR={'gothic-door-closed','granite_door1.png',nil,{},'GOTHIC_DOOR_OPEN',nil,'GOTHIC_FLOOR'},
+  GOTHIC_DOOR_HORIZ={'gothic-door-closed-h','granite_door1.png',3,{{'granite_wall3.png',18,-1}},'GOTHIC_DOOR_HORIZ_OPEN',nil,'GOTHIC_FLOOR'},
+  GOTHIC_DOOR_VERT={'gothic-door-closed-v',false,nil,{{'granite_door1_vert.png',17},{'granite_door1_vert_north.png',18,-1}},
+   'GOTHIC_DOOR_OPEN_VERT',nil,'GOTHIC_DOOR_OPEN_VERT'},
+  GOTHIC_DOOR_OPEN={'gothic-door-open','granite_door1_open.png',nil,{},nil,'GOTHIC_DOOR'},
+  GOTHIC_DOOR_HORIZ_OPEN={'gothic-door-open-h',false,nil,{{'granite_door1_open.png',17},{'granite_wall3.png',18,-1}},nil,'GOTHIC_DOOR_HORIZ'},
+  GOTHIC_DOOR_OPEN_VERT={'gothic-door-open-v',false,nil,{{'granite_door1_open_vert.png',17},{'granite_door1_open_vert_north.png',18,-1}},
+   nil,'GOTHIC_DOOR_VERT'}}
+ -- Flat exits (gothic.lua:57-139): {kind, name, display, change_level, change_zone, MO image}.
+ local E={GOTHIC_FLAT_UP_WILDERNESS={'gothic-exit-world','exit to the worldmap','<',1,'wilderness','terrain/worldmap.png'}}
+ for _,d in ipairs{2,4,6,8} do
+  E['GOTHIC_FLAT_UP'..d]={'gothic-exit-up','way to the previous level','<',-1,nil,'terrain/way_next_'..d..'.png'}
+  E['GOTHIC_FLAT_DOWN'..d]={'gothic-exit-down','way to the next level','>',1,nil,'terrain/way_next_'..d..'.png'}
+ end
+ tw4.GOTHIC_EXITS=E
+end
+tw4.buildGothic()
+-- Vor's books (vor-pride/grids.lua:30-55): gothic floor + the native book.
+function tw4.s10bBook(g,zoneName)
+ if zoneName~='vor-pride' or not g or type(g.define_as)~='string' or not g.define_as:match('^GENERIC_BOOK[1-3]$') or
+  not tw4.zoneStamped(g,zoneName) then return end
+ for _,v in pairs(g) do if type(v)=='function' then return end end
+ if g.type~='floor' or g.subtype~='floor' or g.name~='book' or g.display~='_' or not tw4.gothicImage(g,'marble_floor.png') or
+  g.notice~=true or g.always_remember~=true or g.does_block_move or g.block_sight or g.block_sense or g.block_esp or g.dig or
+  g.can_pass or g.air_level or g.grow or g.is_door or g.z or g.add_displays or g.on_stand or g.special or g.shader or g.tint or
+  g.textures or g.embed_particles or g.door_opened or g.door_closed or g.door_player_check or g.door_player_stop or
+  g.pass_projectile or not noTransition(g) or not tw4.oneMos(g,'terrain/book_generic'..g.define_as:sub(-1)..'.png') then return end
+ return 'gothic-book',{image=g.add_mos[1].image,z=5}
+end
+function tw4.s10bKind(g,zoneName)
+ if zoneName~='vor-pride' or not g or type(g.define_as)~='string' or not tw4.zoneStamped(g,zoneName) then return end
+ local id=g.define_as
+ -- S11: the levers, lever door and candles (exact S11 contract).
+ local s11=tw4.s11Kind(g,zoneName)
+ if s11 then return s11 end
+ -- Reused families: burnt ground and trees (exact aura rings included),
+ -- deep water, grass and trees.
+ local b=burntTerrain(g)
+ if b=='floor' or b=='tree' then return 'burnt-'..b end
+ if b then return end
+ local reused=deepWater(g) or forestTree(g,false) or meadowGrass(g)
+ if reused then return reused end
+ if id:match('^GENERIC_BOOK') then return (tw4.s10bBook(g,zoneName)) end
+ for _,v in pairs(g) do if type(v)=='function' then return end end
+ if g.on_stand or g.special or g.shader or g.tint or g.textures or g.block_sense or g.block_esp or g.pass_projectile or
+  g.door_player_check or g.door_player_stop or g.embed_particles or g.air_condition or
+  not tw4.GOTHIC_DOORS[id] and (g.door_opened or g.door_closed) then return end
+ -- basic.lua FLAT_DOWN4 (mapscript '>' on L1-2), on the burnt outer yard.
+ if id=='FLAT_DOWN4' then
+  if not stamped(g,'_checker_grid_source','/data/general/grids/basic.lua') or g.type~='floor' or g.subtype~='floor' or
+   g.name~='way to the next level' or g.display~='>' or g.image~='terrain/marble_floor.png' or g.change_level~=1 or
+   g.notice~=true or g.always_remember~=true or g.does_block_move or g.block_sight or g.dig or g.can_pass or g.air_level or
+   g.grow or g.is_door or g.z or g.add_displays or not tw4.oneMos(g,'terrain/way_next_4.png') then return end
+  for i=2,#transitionKeys do if g[transitionKeys[i]]~=nil then return end end
+  return 'burnt-exit-down'
+ end
+ if not tw4.gothicStamped(g) or g.subtype~='floor' then return end
+ if id=='GOTHIC_FLOOR' then
+  if g.type~='floor' or g.name~='floor' or g.display~='.' or not tw4.gothicImage(g,'marble_floor.png') or g.grow~='GOTHIC_WALL' or
+   g.does_block_move or g.block_sight or g.dig or g.can_pass or g.air_level or g.is_door or g.always_remember or g.notice or
+   g.z or hasMos(g) or g.add_displays or not noTransition(g) then return end
+  return 'gothic-floor'
+ end
+ local w=tw4.GOTHIC_WALLS[id]
+ if w then
+  if g.type~='wall' or g.name~='wall' or g.display~='#' or g.always_remember~=true or g.does_block_move~=true or
+   g.block_sight~=true or g.air_level~=-20 or g.dig~='GOTHIC_FLOOR' or g.grow or g.notice or g.is_door or hasMos(g) or
+   not tw4.onlyCanPass(g,'pass_wall') or not noTransition(g) or g.z~=w[2] or not tw4.gothicImage(g,w[1]) or
+   not tw4.gothicLayers(g,w[3]) then return end
+  return 'gothic-wall'
+ end
+ local d=tw4.GOTHIC_DOORS[id]
+ if d then
+  if g.type~='wall' or g.is_door~=true or g.always_remember~=true or g.does_block_move or g.can_pass or g.air_level or
+   g.grow or hasMos(g) or not noTransition(g) or g.z~=d[3] or not tw4.gothicImage(g,d[2]) or not tw4.gothicLayers(g,d[4]) or
+   g.door_opened~=d[5] or g.door_closed~=d[6] or g.dig~=d[7] then return end
+  if d[6] then
+   if g.name~='open door' or g.display~="'" or g.block_sight or g.notice then return end
+  elseif g.name~='door' or g.display~='+' or g.block_sight~=true or g.notice~=true then return end
+  return d[1]
+ end
+ local e=tw4.GOTHIC_EXITS[id]
+ if e then
+  if g.type~='floor' or g.name~=e[2] or g.display~=e[3] or g.change_level~=e[4] or g.change_zone~=e[5] or
+   not tw4.gothicImage(g,'marble_floor.png') or g.notice~=true or g.always_remember~=true or g.does_block_move or
+   g.block_sight or g.dig or g.can_pass or g.air_level or g.grow or g.is_door or g.z or g.add_displays or
+   not tw4.oneMos(g,e[6]) then return end
+  for i=3,#transitionKeys do if g[transitionKeys[i]]~=nil then return end end
+  return e[1]
+ end
+end
+M.s10bKind=tw4.s10bKind
+-- Display only: a gothic wall's mask counts gothic walls, gothic doors (they
+-- sit in the wall line) and Vor's native lever doors as connected.
+function tw4.gothicMask(m,x,y,family,kindOf)
+ local v=0
+ for i,d in ipairs(dirs) do
+  local nx,ny=x+d[1],y+d[2]
+  local n=nx>=0 and ny>=0 and nx<m.w and ny<m.h and m(nx,ny,Map.TERRAIN)
+  local k=n and kindOf(n,family)
+  if k=='gothic-wall' or type(k)=='string' and k:match('^gothic%-door') or
+   n and type(n.define_as)=='string' and n.define_as:match('^GOTHIC_GENERIC_LEVER_DOOR') and tw4.zoneStamped(n,'vor-pride') then
+   v=v+2^(i-1)
+  end
+ end
+ return v
 end
 -- S9: High Peak L1-4 (Cavern: cave.lua CAVEFLOOR/CAVEWALL) on the existing
 -- cave contract, plus the zone's own cave stair (CAVE_HIGH_PEAK_UP,
@@ -1901,6 +2218,16 @@ function tw4.s5Kind(g,zoneName)
   return meadowGrass(g) or forestTree(g,false) or surfaceSandKind(g) and 'sand' or nil
  elseif zoneName=='eruan' or zoneName=='gorbat-pride' then
   return tw4.s6Kind(g,zoneName)
+ elseif tw4.S10_ZONES[zoneName] then
+  return tw4.s10Kind(g,zoneName)
+ elseif zoneName=='vor-pride' then
+  return tw4.s10bKind(g,zoneName)
+ elseif zoneName=='tutorial' or zoneName=='dreams' then
+  return tw4.s15Kind(g,zoneName) -- S15 (defined with the S15 block)
+ elseif zoneName=='temporal-reprieve-talent' then
+  return tw4.s16Kind(g,zoneName) -- S16 (defined with the S16 block)
+ elseif zoneName=='dreamscape-talent' then
+  return tw4.s17Kind(g,zoneName) -- S17 (defined with the S17 block)
  end
 end
 -- Exact native ring/centre cells (S1) are judged as the grid they cloned.
@@ -1989,10 +2316,12 @@ local function batch4Image(m,x,y,g,mode,family)
    t=='mountain' or t=='statue' or t=='lava' or t=='crystal' or t=='rock' or
    t=='snow-tree' or t=='cold-tree' or t=='void-space' or t=='void-rift' or t=='gold-mountain' or
    t=='jungle-tree' or t=='hut-wall' or t=='hut-door-h' or t=='hut-door-v' or t=='moonstone' or t=='altar' or
-   t=='palm' or t=='rock-door' or
+   t=='palm' or t=='rock-door' or t=='slime-wall' or t=='thicket' or t=='dummy' or
+   t=='gothic-wall' or t=='burnt-tree' or t=='dream-void' or t:match('^gothic%-door%-closed') or
    t:match('^cave%-door%-closed')) and 'tree' or
    (t=='deep' or t=='poison' or t=='fountain') and 'water' or
-   (t=='exit' or t=='jungle-exit' or t:match('^exit%-') or t:match('^cave%-ladder%-')) and 'exit' or
+   (t=='exit' or t=='jungle-exit' or t=='slime-up' or t=='slime-down' or t:match('^exit%-') or t:match('^cave%-ladder%-') or
+    t:match('^gothic%-exit%-') or t=='burnt-exit-down') and 'exit' or
    t=='road' and 'road' or 'grass'
   return img(kind..parity)
  end
@@ -2044,6 +2373,27 @@ local function batch4Image(m,x,y,g,mode,family)
  end
  -- TW6: Irkkk's jungle (Noxious Caldera art) and bamboo huts. A hut wall's
  -- mask counts hut walls and hut doors (doors sit in the wall line).
+ -- S10a: the board slime family (Slime Tunnels, Sludgenest, Grushnak's pit)
+ -- and Grushnak's underground floor (the board stone floor, as FLOOR there),
+ -- mushroom thicket (Heart of the Gloom plain skin) and training dummies.
+ -- A creep edge is open toward anything but creep or the slime stairs in it.
+ if t=='slime-floor' then return img('refined/slime/floor'..parity) end
+ if t=='slime-wall' then return img('refined/slime/wall-'..mask('slime-wall')..'-'..parity) end
+ if t=='slime-up' or t=='slime-down' then return img('refined/slime/stairs-'..t:sub(7)..parity) end
+ if t=='creep' then return img('refined/slime/creep-'..(mask('creep')+mask('slime-down'))..'-'..parity) end
+ if t=='thicket' then return img('refined/gloom/plain/wall-'..mask('thicket')..'-'..parity) end
+ if t=='under-floor' or t=='dummy' then return img('refined/korpul/floor-'..((x*17+y*7)%3==0 and 'b' or 'a')..'-0-'..parity) end
+ -- S10b: Vor Pride's gothic halls (new board gothic family) and burnt yard
+ -- (Mark of the Spellblaze art). Books keep their native layer (townProp).
+ if t=='gothic-floor' or t=='gothic-book' then return img('refined/gothic/floor-'..({'a','b','c'})[((x*17+y*7)%3)+1]..parity) end
+ if t=='gothic-wall' then return img('refined/gothic/wall-'..tw4.gothicMask(m,x,y,family,batch4Kind)..'-'..parity) end
+ local gdoor=t:match('^gothic%-door%-(%a+)')
+ if gdoor then
+  local o=t:match('%-([hv])$') or (tw4.gothicMask(m,x,y,family,batch4Kind)==5 and 'v' or 'h')
+  return img('refined/gothic/door-'..gdoor..'-'..(o=='v' and 'vertical' or 'horizontal')..parity)
+ end
+ if t:match('^gothic%-exit%-') then return img('refined/gothic/'..t:sub(8)..parity) end
+ if t=='burnt-floor' or t=='burnt-tree' or t=='burnt-exit-down' then return img('refined/burnt/'..t:sub(7)..parity) end
  if t=='jungle-grass' then return img('refined/caldera/floor'..parity) end
  if t=='jungle-tree' then return img('refined/caldera/tree-'..({'a','b','c'})[((x*17+y*7)%3)+1]..parity) end
  if t=='jungle-exit' then return img('refined/caldera/exit-world'..parity) end
@@ -2071,10 +2421,15 @@ local function batch4Image(m,x,y,g,mode,family)
  if family=='eruan' and t:match('^exit%-') then return img('refined/eruan/'..t..parity) end
  if t=='rock-door' then return img('refined/beach/sand'..parity) end
  if tw4.S5_FOREST[family] and (t=='poison' or t=='wall') then return img('refined/caldera/'..t..'-'..mask(t)..'-'..parity) end
+ -- S17: the Dreamscape cloud floor (rim toward non-cloud) and dream void.
+ if t=='dream-cloud' or t=='dream-void' then return tw4.s17File(x,y,t,t=='dream-cloud' and mask(t) or nil,parity) end
  if family~='caldera' then
   if t=='tree' and family=='beach' then return img('refined/beach/'..({'tree-oak','tree-pine','tree-willow'})[((x*17+y*7)%3)+1]..parity) end
   if t=='tree' then return img('refined/'..({'tree-oak','tree-pine','tree-willow'})[((x*17+y*7)%3)+1]..parity) end
   if t=='hardtree' then return img('refined/tree-hard'..parity) end
+  -- TW7: town roads are board stone slabs (other zones keep the dirt road);
+  -- Zigur/Angolwen fields are the board crop field.
+  if townFiles[family] and (t=='road' or t=='fields') then return img('refined/town/'..t..parity) end
   return img('refined/'..t..parity)
  end
  if t=='tree' then return img('refined/caldera/tree-'..({'a','b','c'})[((x*17+y*7)%3)+1]..parity) end
@@ -2285,9 +2640,10 @@ rakshorKind=ringAware(rakshorKind)
 local function batch5Kind(g,family)
  if not g or type(g.define_as)~='string' or
   (g.replace_display and (not g._checker_terrain or g.replace_display~=g._checker_terrain.display)) then return end
- if family=='scorch' then return scorchKind(g) end
- if family=='shertul' then return fortressKind(g) end
- if family=='rakshor' then return rakshorKind(g) end
+ if family=='scorch' then return scorchKind(g) or tw4.s14Forest(g) end -- S14: the demonic return portal
+ if family=='shertul' then return fortressKind(g) or tw4.s14Forest(g) end -- S14: the exploratory farportal
+ if family=='rakshor' then return rakshorKind(g) or (tw4.s11Kind(g,'rak-shor-pride')) end -- S11: levers, lever doors
+ if family=='fearscape' then return tw4.s16Fearscape(g) end -- S16: the Fearscape spell's plane
 end
 M.batch5Kind=batch5Kind
 local function batch5Image(m,x,y,g,mode,family,zoneName)
@@ -2312,10 +2668,15 @@ local function batch5Image(m,x,y,g,mode,family,zoneName)
  end
  if t=='lava' then return img('refined/burnt/lava-'..mask('lava')..'-'..parity) end
  if t=='lava-floor' then return img('refined/daikara/lava-floor'..parity) end
+ -- S16: the spell plane's damaging lava floor is the S12 hazard lava.
+ if t=='lava-hazard' then
+  local p=img('refined/hazard/lava-'..({'a','b','c'})[((x*17+y*7)%3)+1]..'-'..mask(t)..'-'..parity)
+  return M.hazardAssets.files[p] and p or nil
+ end
  if t=='lava-wall' then
   -- S8 (V7): the Fearscape walks on dark lava floor; its rock draws the
   -- darker basalt recolour (same masks). The Charred Scar keeps the ash rock.
-  local dark=family=='scorch' and zoneName=='demon-plane' and
+  local dark=(family=='scorch' and zoneName=='demon-plane' or family=='fearscape') and
    img('refined/scorch-dark/wall-'..mask('lava-wall')..'-'..parity)
   if dark and M.scorchDarkAssets.files[dark] then return dark end
   return img('refined/scorch/wall-'..mask('lava-wall')..'-'..parity)
@@ -2386,7 +2747,7 @@ local function terrainImage(m,x,y,g,mode,allowDarkGrass,rock,gloom,sand,crystal,
  elseif void then t=floatingTree or voidTerrain(g,zoneName)
  elseif burnt then t=burntTerrain(g) or (tw4.s2Forest(g,'forest',zoneName)=='altar' and 'floor') or nil -- T16
  elseif cave=='high-peak' then t=tw4.hpCave(g) -- S9: zone-stamped cave cells only
- elseif cave then t=caveTerrain(g) or zoneName=='valley-moon-caverns' and valleyExit(g) or nil
+ elseif cave then t=caveTerrain(g) or zoneName=='valley-moon-caverns' and valleyExit(g) or (tw4.s13Kind(g,zoneName)) or nil -- S13: wormhole
  elseif crystal then t=crystalTerrain(g)
  elseif sand then t=sandTerrain(g)
  elseif gloom then t=gloomTerrain(g,gloom) or zoneName=='deep-bellow' and (tw4.s2Forest(g,'deep-bellow')) or nil
@@ -2631,7 +2992,7 @@ local function applyForest(self,x1,y1,x2,y2,changed)
   zoneName=='flooded-cave' or zoneName=='temple-of-creation'
  local batch4=zoneName=='south-beach' and 'beach' or zoneName=='keepsake-meadow' and 'meadow' or
   zoneName=='noxious-caldera' and 'caldera' or (townFiles[zoneName] or tw4.S5_FOREST[zoneName]) and zoneName or nil
- local batch5=(zoneName=='charred-scar' or zoneName=='demon-plane') and 'scorch' or
+ local batch5=(zoneName=='charred-scar' or zoneName=='demon-plane') and 'scorch' or zoneName=='demon-plane-spell' and 'fearscape' or
   zoneName=='shertul-fortress' and 'shertul' or zoneName=='rak-shor-pride' and 'rakshor' or nil
  local lakeSurface=(zoneName=='lake-nur' and self.level.level==1 or
   zoneName=='temporal-rift' and self.level.level==4)
@@ -2689,10 +3050,14 @@ local function applyForest(self,x1,y1,x2,y2,changed)
     -- TW2/TW3: an exact town prop (Last Hope statue, Zigur post, Angolwen
     -- rock or 6x5 fountain) keeps its native layer over the board tile.
     -- S5: so do the valley's moonstones and Fearscape portals.
-    local _,statue
+    local _,statue,lever
     if batch4 and (townFiles[batch4] or tw4.S5_FOREST[batch4]) then _,statue=M.townProp(g,batch4)
     -- S2: Keepsake's marker post and forest.lua's loose vault rock.
     else statue=tw4.s2Prop(g,batch4 or 'forest',zoneName) end
+    -- S11: a lever's native MO, a lever door's padlock, Gorbat's lever rock.
+    if not statue then statue,lever=tw4.s11Prop(g,zoneName) end
+    -- S14: a portal's native layer (the 3x3 farportal base, a portal image).
+    if not statue then statue=tw4.s14Prop(g,zoneName) end
     local visualKey=file..'|'..tostring(aura and auraMask(aura))..'|'..tostring(prop and prop.image)..'|'..tostring(statue and statue.image)
     if state.image~=visualKey then
      g:removeAllMOs()
@@ -2710,6 +3075,7 @@ local function applyForest(self,x1,y1,x2,y2,changed)
      state.display=Entity.new{image=file,display='.',color={255,255,255},display_on_seen=true,display_on_remember=true,
       add_displays=layers}
      state.image=visualKey;g.replace_display=state.display
+     state.lever=lever and statue.image or nil
      if changed then changed[#changed+1]={x,y} end
     end
    elseif state then
@@ -2794,6 +3160,8 @@ end
 -- scorch-dark the Fearscape basalt. Presentation only.
 M.korpulDarkAssets={ready=false,files={}}
 M.scorchDarkAssets={ready=false,files={}}
+M.hazardAssets={ready=false,files={}}
+M.dreamAssets={ready=false,files={}}
 do
  local function load(path,pattern,want)
   if not (fs and fs.exists and fs.exists(path)) then return end
@@ -2813,6 +3181,12 @@ do
   '^checker%-revised%+(refined/korpul%-dark/[%w%-]+%-%d+%-[01]%.png)$',160) or M.korpulDarkAssets
  M.scorchDarkAssets=load('/data-checker-revised/terrain-scorch-dark-manifest.lua',
   '^checker%-revised%+(refined/scorch%-dark/wall%-%d+%-[01]%.png)$',32) or M.scorchDarkAssets
+ -- S12: hazard lava (3 variants) and stone-kerb deep water, 16 masks x 2 parities.
+ M.hazardAssets=load('/data-checker-revised/terrain-hazard-manifest.lua',
+  '^checker%-revised%+(refined/hazard/[%w%-]+%-%d+%-[01]%.png)$',128) or M.hazardAssets
+ -- S17: Dreamscape cloud floor (3 variants x 16 masks) and dream void (2), 2 parities.
+ M.dreamAssets=load('/data-checker-revised/terrain-dream-manifest.lua',
+  '^checker%-revised%+(refined/dream/[%w%-]+%-[01]%.png)$',100) or M.dreamAssets
 end
 M.mazeAssets={ready=false,files={}}
 do
@@ -3148,6 +3522,700 @@ function tw4.s2Prop(g,family,zoneName)
  if kind and spec.prop=='mos' then return g.add_mos[1] end
  if kind and spec.prop=='layer' then return g.add_displays[1] end
 end
+-- S11: levers, lever doors and Vor's candles in covered zones. markSource
+-- stamps each reviewed definition with its own callbacks (field@file:line)
+-- and prompt string (_checker_s11_source). A placed grid is accepted only in
+-- its listed zones, with that stamp, exactly the spec's own fields (any other
+-- field -> native), every fixed field equal (fingerprint), the exact native
+-- layers and callbacks (a wrapped or moved callback -> native). A lever is
+-- accepted in either native state only: lever=false with lever1_state1 and
+-- UMBER, lever=true with lever1_state2 and white (basic.lua:434-450 and its
+-- bone/gothic copies). Candles: the exact embedded candle particle (its
+-- loader adds base_size/use_shader to the args). Levels generated before the
+-- stamp keep native. Display: board floor + the native lever MO, board door
+-- (+ the native padlock, centred as the S2 locks), Gorbat's rock over board
+-- sand; the particle stays on the grid (Entity:getMapObjects draws it on the
+-- replacement's MO). Rules, callbacks and lever state are never touched.
+do
+local function colour(r,g,b,br,bg,bb) return {color_r=r,color_g=g,color_b=b,color_br=br,color_bg=bg,color_bb=bb} end
+local function spec(t,base)
+ local w={tint_r=1,tint_g=1,tint_b=1}
+ for k,v in pairs(base) do w[k]=v end
+ for k,v in pairs(t.want or {}) do w[k]=v end
+ t.want=w;return t
+end
+local function lever(id,zones,board,image,subtype,funcs,special,stone)
+ return id,spec({kind='lever',zones=zones,board=board,stone=stone,funcs=funcs,prop='lever',
+  want={type='lever',subtype=subtype,name='huge lever',image=image,display='&',notice=true,always_remember=true,force_clone=true,special=special}},
+  {define_as=id,color_br=87,color_bg=94,color_bb=37})
+end
+-- d: id, zones, board kind, o(rientation), stone?, callback line, padlock?, image, z, mos, layers, open/close target.
+local function door(file,prefix,subtype,special,closed,d)
+ local funcs='on_lever_change@@'..file..':'..d.line
+ local ns,we=prefix..(closed and 'VERT' or 'OPEN_VERT'),prefix..(closed and 'HORIZ' or 'HORIZ_OPEN')
+ local w={define_as=d.id,type='wall',subtype=subtype,name=closed and 'sealed door' or 'open door',image=d.image,z=d.z,
+  display=closed and '+' or "'",always_remember=true,is_door=true,special=special,door_opened=closed and d.target or nil,
+  door_closed=not closed and d.target or nil,notice=closed or nil,block_sight=closed or nil,block_sense=closed or nil,
+  block_esp=closed or nil,force_clone=closed or nil,nice_tiler={method='door3d',north_south=ns,west_east=we}}
+ local c=closed and colour(238,154,77,87,94,37) or colour(238,154,77,67,67,67)
+ for k,v in pairs(c) do w[k]=v end
+ return d.id,spec({kind=closed and 'lock' or 'open',zones=d.zones,board=d.board,o=d.o,stone=d.stone,funcs=funcs,
+  mos=d.mos,layers=d.layers,stop=true,prop=closed and d.padlock and 'padlock' or nil,want={}},w)
+end
+local basicZones={['tannen-tower']=true,['arena-unlock']=true,['ruined-dungeon']=true}
+local B,G,O,V='/data/general/grids/basic.lua','/data/general/grids/gothic.lua','/data/general/grids/bone.lua','/data/zones/vor-pride/grids.lua'
+local GORBAT='/data/zones/gorbat-pride/grids.lua'
+local lock={'terrain/padlock2.png',x=0.2,y=-0.4}
+local S={[B]={},[G]={},[O]={},[GORBAT]={},[V]={}}
+local function put(file,id,t) S[file][id]=t end
+put(B,lever('GENERIC_LEVER',{['tannen-tower']=true},'prop','terrain/marble_floor.png','floor','block_move@@'..B..':434',true,true))
+put(G,lever('GOTHIC_GENERIC_LEVER',{['vor-pride']=true},'burnt-floor','terrain/grass_burnt1.png','floor','block_move@@'..G..':328',true))
+put(O,lever('BONE_GENERIC_LEVER',{['rak-shor-pride']=true},'floor','terrain/sandfloor.png','bone','block_move@@'..O..':189',nil))
+put(GORBAT,lever('GENERIC_LEVER_SAND',{['gorbat-pride']=true},'hut-floor','terrain/bamboo/hut_dirt_floor_01.png','floor','block_move@@'..B..':434',true))
+-- basic.lua:371-422 (stone adapter: board lock + native padlock / board open door).
+put(B,door(B,'GENERIC_LEVER_DOOR_','floor',true,true,{id='GENERIC_LEVER_DOOR_HORIZ',zones=basicZones,board='lock',o='horizontal',stone=true,line=387,
+ image='terrain/granite_door1.png',target='GENERIC_LEVER_DOOR_HORIZ_OPEN',layers={{'terrain/granite_wall3.png',z=18,y=-1,mos={{'terrain/padlock2.png',y=0.1}}}}}))
+put(B,door(B,'GENERIC_LEVER_DOOR_','floor',true,true,{id='GENERIC_LEVER_DOOR_VERT',zones=basicZones,board='lock',o='vertical',stone=true,line=387,
+ image='terrain/marble_floor.png',target='GENERIC_LEVER_DOOR_OPEN_VERT',layers={{'terrain/granite_door1_vert.png',z=17,mos={lock}},
+ {'terrain/granite_door1_vert_north.png',z=18,y=-1}}}))
+put(B,door(B,'GENERIC_LEVER_DOOR_','floor',true,false,{id='GENERIC_LEVER_DOOR_HORIZ_OPEN',zones=basicZones,board='door-open',o='horizontal',stone=true,line=411,
+ image='terrain/marble_floor.png',target='GENERIC_LEVER_DOOR_HORIZ',layers={{'terrain/granite_door1_open.png',z=17},{'terrain/granite_wall3.png',z=18,y=-1}}}))
+put(B,door(B,'GENERIC_LEVER_DOOR_','floor',true,false,{id='GENERIC_LEVER_DOOR_OPEN_VERT',zones=basicZones,board='door-open',o='vertical',stone=true,line=411,
+ image='terrain/marble_floor.png',target='GENERIC_LEVER_DOOR_VERT',layers={{'terrain/granite_door1_open_vert.png',z=17},
+ {'terrain/granite_door1_open_vert_north.png',z=18,y=-1}}}))
+-- gothic.lua:265-316 in Vor (its list rewrites gothic marble_floor.png to grass_burnt1.png): board gothic doors.
+local vor={['vor-pride']=true}
+local gw='terrain/gothic_walls/'
+put(G,door(G,'GOTHIC_GENERIC_LEVER_DOOR_','floor',true,true,{id='GOTHIC_GENERIC_LEVER_DOOR_HORIZ',zones=vor,board='gothic-door-closed-h',line=281,padlock=true,
+ image=gw..'granite_door1.png',target='GOTHIC_GENERIC_LEVER_DOOR_HORIZ_OPEN',layers={{gw..'granite_wall3.png',z=18,y=-1,mos={{'terrain/padlock2.png',y=0.1}}}}}))
+put(G,door(G,'GOTHIC_GENERIC_LEVER_DOOR_','floor',true,true,{id='GOTHIC_GENERIC_LEVER_DOOR_VERT',zones=vor,board='gothic-door-closed-v',line=281,padlock=true,
+ image='terrain/grass_burnt1.png',target='GOTHIC_GENERIC_LEVER_DOOR_OPEN_VERT',layers={{gw..'granite_door1_vert.png',z=17,mos={lock}},
+ {gw..'granite_door1_vert_north.png',z=18,y=-1}}}))
+put(G,door(G,'GOTHIC_GENERIC_LEVER_DOOR_','floor',true,false,{id='GOTHIC_GENERIC_LEVER_DOOR_HORIZ_OPEN',zones=vor,board='gothic-door-open-h',line=305,
+ image='terrain/grass_burnt1.png',target='GOTHIC_GENERIC_LEVER_DOOR_HORIZ',layers={{gw..'granite_door1_open.png',z=17},{gw..'granite_wall3.png',z=18,y=-1}}}))
+put(G,door(G,'GOTHIC_GENERIC_LEVER_DOOR_','floor',true,false,{id='GOTHIC_GENERIC_LEVER_DOOR_OPEN_VERT',zones=vor,board='gothic-door-open-v',line=305,
+ image='terrain/grass_burnt1.png',target='GOTHIC_GENERIC_LEVER_DOOR_VERT',layers={{gw..'granite_door1_open_vert.png',z=17},
+ {gw..'granite_door1_open_vert_north.png',z=18,y=-1}}}))
+-- bone.lua:129-155 in Rak'shor (opens into the plain BONE_DOOR_* the Rak'shor contract covers).
+local rak={['rak-shor-pride']=true}
+put(O,door(O,'BONE_GENERIC_LEVER_DOOR_','bone',nil,true,{id='BONE_GENERIC_LEVER_DOOR_HORIZ',zones=rak,board='door-closed',line=144,padlock=true,z=3,
+ image='terrain/sandfloor.png',target='BONE_DOOR_HORIZ_OPEN',mos={{'terrain/bone/bone_door1.png',mos={lock}}},layers={{'terrain/bone/bonewall_8_1.png',z=18,y=-1}}}))
+put(O,door(O,'BONE_GENERIC_LEVER_DOOR_','bone',nil,true,{id='BONE_GENERIC_LEVER_DOOR_VERT',zones=rak,board='door-closed',line=144,padlock=true,
+ image='terrain/sandfloor.png',target='BONE_DOOR_OPEN_VERT',layers={{'terrain/bone/bone_door1_vert.png',z=17,mos={lock}},
+ {'terrain/bone/bone_door1_vert_north.png',z=18,y=-1}}}))
+-- Gorbat's lever rock (gorbat-pride/grids.lua:120-140): board sand + the native rock, as ROCK_DOOR.
+put(GORBAT,'ROCK_LEVER_DOOR',spec({kind='rock',zones={['gorbat-pride']=true},board='rock-door',funcs='on_lever_change@@'..GORBAT..':133',
+ layers={{'terrain/huge_rock.png',z=18}},stop=true,prop='rock'},
+ {define_as='ROCK_LEVER_DOOR',type='wall',subtype='sand',name='huge loose rock',image='terrain/sandfloor.png',display='+',notice=true,
+  always_remember=true,block_sight=true,block_sense=true,block_esp=true,is_door=true,door_opened='FLOOR',
+  color_r=127,color_g=127,color_b=127,color_br=44,color_bg=95,color_bb=43}))
+-- Vor's reading candles (vor-pride/grids.lua:57-66): board gothic floor; the candle is the particle alone.
+for i=1,3 do
+ put(V,'CANDLE'..i,spec({kind='candle',zones=vor,board='gothic-floor'},{define_as='CANDLE'..i,type='floor',subtype='floor',
+  name='reading candle',image=gw..'marble_floor.png',display=';',always_remember=true,force_clone=true,
+  nice_tiler={method='replace',base={'CANDLE',100,1,3}},color_r=255,color_g=215,color_b=0,color_br=-1,color_bg=-1,color_bb=-1}))
+end
+tw4.S11=S
+end
+tw4.S11_STATE={[false]={'terrain/lever1_state1.png',142,69,0},[true]={'terrain/lever1_state2.png',255,255,255}}
+-- The spec a placed grid exactly matches in this zone, or nil.
+function tw4.s11(g,zoneName)
+ local s=type(g)=='table' and rawget(g,'_checker_s11_source')
+ local file=s and tw4.S11[s.file]
+ local spec=file and s.id==g.define_as and file[s.id]
+ if not spec or not spec.zones[zoneName] or tw4.s2Funcs(g)~=(spec.funcs or '') or s.funcs~=(spec.funcs or '') then return end
+ local want,st=spec.want,rawget(g,'_checker_terrain')
+ for k,v in pairs(g) do
+  if type(k)~='string' then return end
+  if type(v)~='function' and k:sub(1,1)~='_' and k~='uid' and k~='changed' and want[k]==nil and
+   not (k=='add_mos' and (spec.mos or spec.kind=='lever')) and not (k=='add_displays' and spec.layers) and
+   not (k=='door_player_stop' and spec.stop) and not (k=='embed_particles' and spec.kind=='candle') and
+   not (spec.kind=='lever' and (k=='lever' or k=='color_r' or k=='color_g' or k=='color_b')) and
+   not (k=='replace_display' and st and v==st.display) then return end
+ end
+ for k,v in pairs(want) do
+  if not (spec.kind=='lever' and (k=='color_r' or k=='color_g' or k=='color_b')) and fingerprint(rawget(g,k))~=fingerprint(v) then return end
+ end
+ if spec.stop and (type(g.door_player_stop)~='string' or g.door_player_stop~=s.stop) or not spec.stop and g.door_player_stop~=nil then return end
+ -- Layer lists hold their layers only.
+ for _,list in ipairs{g.add_mos or {},g.add_displays or {},type(g.embed_particles)=='table' and g.embed_particles or {}} do
+  local c=0;for _ in pairs(list) do c=c+1 end
+  if c~=#list then return end
+ end
+ if not tw4.s2Layers(g.add_displays,spec.layers) then return end
+ if spec.kind=='lever' then
+  local state=tw4.S11_STATE[g.lever]
+  local m=g.add_mos
+  if not state or type(m)~='table' or #m~=1 or type(m[1])~='table' or next(m[1])~='image' or next(m[1],'image')~=nil or
+   m[1].image~=state[1] or g.color_r~=state[2] or g.color_g~=state[3] or g.color_b~=state[4] then return end
+ elseif not tw4.s2Layers(g.add_mos,spec.mos) then return end
+ if spec.kind=='candle' then
+  local e=g.embed_particles
+  local p=type(e)=='table' and #e==1 and e[1]
+  if not p or p.name~='candle' or p.rad~=1 or type(p.args)~='table' or p.args.candle_id~='light1' then return end
+  for k in pairs(p) do if k~='name' and k~='rad' and k~='args' then return end end
+  for k in pairs(p.args) do if k~='candle_id' and k~='base_size' and k~='use_shader' then return end end
+ end
+ return spec
+end
+-- The board kind of an exact S11 grid (stone=true: the stone adapter's kind).
+function tw4.s11Kind(g,zoneName,stone)
+ local spec=tw4.s11(g,zoneName)
+ if spec and (spec.stone or false)==(stone or false) then return spec.board,spec end
+end
+M.s11Kind=function(g,zoneName) return tw4.s11Kind(g,zoneName) or tw4.s11Kind(g,zoneName,true) end
+tw4.PADLOCK={image='terrain/padlock2.png'}
+-- The native layer a forest-side S11 cell keeps over its board tile, and
+-- whether it is a lever (its image is then watched by s11Stale).
+function tw4.s11Prop(g,zoneName)
+ local kind,spec=tw4.s11Kind(g,zoneName)
+ if not kind then return end
+ if spec.prop=='lever' then return g.add_mos[1],true end
+ if spec.prop=='padlock' then return tw4.PADLOCK end
+ if spec.prop=='rock' then return g.add_displays[1] end
+end
+-- Display only (superload/engine/Map.lua): a board-drawn lever whose native
+-- block_move switched its MO image (and asked for updateMap) needs its
+-- replacement rebuilt; the native swap only reaches the grid's own MOs.
+function M.s11Stale(m,x,y)
+ local c=m.map and m.map[x+y*m.w]
+ local g=c and c[Map.TERRAIN]
+ local st=g and rawget(g,'_checker_terrain')
+ if not (st and st.lever and g.replace_display==st.display) then return false end
+ local mo=g.add_mos and g.add_mos[1]
+ return not (mo and mo.image==st.lever)
+end
+-- The native callback asks for that updateMap between switching the MO and
+-- toggling self.lever (basic.lua:436-445, bone.lua:197-206), so the grid is
+-- only back in an exact state after the callback returns: repaint at the end
+-- of the tick, if the lever is still stale then.
+function M.s11Repaint(m,x,y)
+ if not (game and game.onTickEnd and game.checkerRepairTerrain) then return end
+ game:onTickEnd(function()
+  if game and game.level and game.level.map==m and game.checkerRepairTerrain and M.s11Stale(m,x,y) then
+   game:checkerRepairTerrain(x,y,x,y)
+  end
+ end,'checker-s11-lever-'..x..','..y)
+end
+-- S12: the damaging lava floor (T19) and Vor Armoury's deep water (T20),
+-- drawn by the stone adapter. markSource stamps lava.lua's LAVA_FLOOR and
+-- LAVA_FLOOR1-16 and water.lua's DEEP_WATER with their own callbacks
+-- (field@file:line) and, for lava, the damage resolvers (_checker_s12_source).
+-- A placed grid is accepted only in its listed zones, with that stamp, exactly
+-- the definition's own fields (any other own field -> native) and every fixed
+-- field equal: lava.lua:24-43 type/subtype/name/image/display/RED on DARK_GREY/
+-- tint/shader, DamageType FIRE (:32), the on_stand at :33 (a stripped, wrapped
+-- or moved callback -> native: Daikara, Charred Scar and the Fearscape strip it,
+-- the Fearscape spell copy and the spellblaze/meteor events bring their own),
+-- mindam/maxdam the resolved :30-31 mbonus (integers 15-20 / 30-40, stamped
+-- resolver unchanged), nice_tiler/nice_editer, and only the native NicerTiles
+-- border layer (invis.png + terrain/lava/lava_floor_* MOs, force_clone with it).
+-- The native on_stand writes self.x/self.y (two integers, allowed). Deep water:
+-- water.lua:122-140 fields and the existing exact deepWater contract, Vor
+-- Armoury only. Levels generated before the stamp keep native. Display:
+-- refined/hazard (lava-<v>-<mask>-<p> / deep-<mask>-<p>, mask from the
+-- neighbour records of the same kind). Rules and callbacks are never touched.
+do
+local LAVA,WATER='/data/general/grids/lava.lua','/data/general/grids/water.lua'
+local S={[LAVA]={},[WATER]={}}
+local zones={['vor-armoury']=true,['high-peak']=true,dreadfell=true}
+local function lava(id,image)
+ S[LAVA][id]={kind='lava-hazard',zones=zones,funcs='on_stand@@'..LAVA..':33',
+  want={define_as=id,type='floor',subtype='lava',name='lava floor',image=image,display='.',color_r=201,color_g=0,color_b=0,
+   color_br=67,color_bg=67,color_bb=67,tint_r=1,tint_g=1,tint_b=1,shader='lava',DamageType='FIRE',
+   nice_tiler={method='replace',base={'LAVA_FLOOR',100,1,16}},nice_editer={method='borders_def',def='lava'}}}
+end
+lava('LAVA_FLOOR','terrain/lava_floor.png')
+for i=1,16 do lava('LAVA_FLOOR'..i,'terrain/lava/lava_floor'..i..'.png') end
+S[WATER].DEEP_WATER={kind='deep-stone',zones={['vor-armoury']=true},funcs='',
+ want={define_as='DEEP_WATER',type='floor',subtype='water',name='deep water',image='terrain/water_grass_5_1.png',display='~',
+  color_r=127,color_g=255,color_b=212,color_br=0,color_bg=0,color_bb=147,tint_r=1,tint_g=1,tint_b=1,always_remember=true,
+  special_minimap={r=0,g=0,b=227},shader='water',air_level=-5,air_condition='water'}}
+tw4.S12=S
+end
+-- lava.lua:30-31 resolvers.mbonus(max, add): the resolved value is add..add+max.
+tw4.S12_DAM={mindam={5,15},maxdam={10,30}}
+function tw4.s12Dam(v)
+ return type(v)=='table' and v.__resolver=='mbonus' and 'mbonus'..fingerprint(v) or type(v)
+end
+do
+local function own(k) return type(k)=='string' and k:sub(1,1)~='_' and k~='uid' and k~='changed' end
+-- The native NicerTiles lava border (borders_def "lava"): one invis.png layer
+-- carrying only terrain/lava/lava_floor_* edge MOs one cell off.
+function tw4.s12Border(list)
+ if type(list)~='table' or #list~=1 then return false end
+ for k in pairs(list) do if k~=1 then return false end end
+ local d=list[1]
+ local want={image='invis.png',display='.',force_clone=true,color_r=0,color_g=0,color_b=0,color_br=-1,color_bg=-1,color_bb=-1,
+  tint_r=1,tint_g=1,tint_b=1}
+ if type(d)~='table' then return false end
+ for k,v in pairs(d) do
+  if type(v)=='function' or own(k) and want[k]==nil and k~='add_mos' then return false end
+ end
+ for k,v in pairs(want) do if rawget(d,k)~=v then return false end end
+ local mos=rawget(d,'add_mos')
+ if type(mos)~='table' or #mos<1 then return false end
+ for k,mo in pairs(mos) do
+  if type(k)~='number' or type(mo)~='table' or type(mo.image)~='string' or
+   not mo.image:match('^terrain/lava/lava_floor_[%w_]-%d+_%d+%.png$') then return false end
+  for f,v in pairs(mo) do
+   if type(v)=='function' or own(f) and f~='image' and not ((f=='display_x' or f=='display_y') and (v==1 or v==-1)) then return false end
+  end
+ end
+ return true
+end
+-- The spec a placed grid exactly matches in this zone, or nil.
+-- S16: `funcs` replaces the lava spec's callback string (the Fearscape
+-- spell's injected on_stand, zone-checked by its caller); the grid may then
+-- also carry the forest adapter's own replace_display.
+function tw4.s12(g,zoneName,funcs)
+ local s=type(g)=='table' and rawget(g,'_checker_s12_source')
+ local file=s and tw4.S12[s.file]
+ local spec=file and s.id==g.define_as and file[s.id]
+ local f=spec and (funcs and spec.kind=='lava-hazard' and funcs or spec.funcs)
+ if not spec or not (funcs or spec.zones[zoneName]) or s.funcs~=f or tw4.s2Funcs(g)~=f then return end
+ local lava,want,st=spec.kind=='lava-hazard',spec.want,funcs and rawget(g,'_checker_terrain')
+ for k,v in pairs(g) do
+  if type(k)~='string' then return end
+  if type(v)~='function' and own(k) and want[k]==nil then
+   local r=lava and tw4.S12_DAM[k]
+   if r then
+    if type(v)~='number' or v~=math.floor(v) or v<r[2] or v>r[1]+r[2] or s[k]~='mbonus'..fingerprint(r) then return end
+   elseif lava and (k=='x' or k=='y') then
+    if type(v)~='number' or v~=math.floor(v) or v<0 then return end
+   elseif not (lava and (k=='add_displays' or k=='force_clone')) and not (k=='replace_display' and st and v==st.display) then return end
+  end
+ end
+ for k,v in pairs(want) do if fingerprint(rawget(g,k))~=fingerprint(v) then return end end
+ if lava then
+  local layer=rawget(g,'add_displays')
+  if rawget(g,'mindam')==nil or rawget(g,'maxdam')==nil or (rawget(g,'x')==nil)~=(rawget(g,'y')==nil) or
+   rawget(g,'force_clone')~=(layer~=nil or nil) or layer~=nil and not tw4.s12Border(layer) then return end
+ elseif deepWater(g)~='deep' or s.image~=g.image then return end
+ return spec
+end
+function tw4.s12Kind(g,zoneName)
+ local spec=tw4.s12(g,zoneName)
+ return spec and spec.kind or nil
+end
+M.s12Kind=tw4.s12Kind
+-- Board file of an S12 record: same-kind neighbour records form the mask.
+function tw4.s12File(m,x,y,kind)
+ local mask=0
+ for i,d in ipairs(dirs) do
+  local nx,ny=x+d[1],y+d[2]
+  local r=nx>=0 and ny>=0 and nx<m.w and ny<m.h and m._checker_korpul and m._checker_korpul[nx+ny*m.w]
+  if r and r.kind==kind then mask=mask+2^(i-1) end
+ end
+ local p=(x+y)%2
+ if kind=='lava-hazard' then return img('refined/hazard/lava-'..({'a','b','c'})[((x*17+y*7)%3)+1]..'-'..mask..'-'..p) end
+ return img('refined/hazard/deep-'..mask..'-'..p)
+end
+end
+-- S13 (T2): Ardhungol's unstable wormhole (ardhungol/grids.lua:24-50), drawn
+-- by the cave family as board cave floor. The wormhole itself is the grid's
+-- own particle emitter (resolvers.generic addParticles "wormhole"): the
+-- forest adapter only sets replace_display, and the engine's
+-- Entity:getMapObjects (engine/Entity.lua:521-541) hands the replacement's map
+-- object to the grid's own defineDisplayCallback, so the native emitter is
+-- drawn over the board tile (the S11 candle bridge). markSource stamps the
+-- definition with its callbacks (_checker_s13_source); a placed grid is
+-- accepted only in Ardhungol, with that stamp, exactly the definition's own
+-- fields (any other own field, a missing/extra/foreign emitter, a wrapped or
+-- moved damage_project -> native) and every fixed field equal. The spell
+-- interaction (teleport / nullmagic burst) never changes the grid, so the
+-- display does not depend on it. Levels generated before the stamp keep
+-- native. Rules, the callback and the emitter are never touched.
+do
+local ARD='/data/zones/ardhungol/grids.lua'
+tw4.S13={[ARD]={WORMHOLE={kind='floor',zones={ardhungol=true},funcs='damage_project@@'..ARD..':28',
+ want={define_as='WORMHOLE',type='floor',subtype='cave',name='unstable wormhole',image='terrain/cave/cave_floor_1_01.png',display='*',
+  color_r=127,color_g=127,color_b=127,color_br=87,color_bg=94,color_bb=37,tint_r=1,tint_g=1,tint_b=1,
+  grow='CAVEWALL',nice_tiler=false,force_clone=true}}}}
+local function own(k) return type(k)=='string' and k:sub(1,1)~='_' and k~='uid' and k~='changed' end
+-- The one native emitter: Particles.new("wormhole", 1, {}) (args gain the
+-- particle file's base_size=64 when it loads), no shader, not back-drawn.
+function tw4.s13Emitter(g)
+ local list=rawget(g,'__particles')
+ local p=type(list)=='table' and next(list)
+ if not p or next(list,p)~=nil or list[p]~=true or type(p)~='table' or p.def~='wormhole' or p.radius~=1 or
+  p.shader~=nil or p.toback or p.subps or type(p.args)~='table' then return false end
+ for k,v in pairs(p.args) do if not (k=='base_size' and v==64) then return false end end
+ return true
+end
+function tw4.s13(g,zoneName)
+ local s=type(g)=='table' and rawget(g,'_checker_s13_source')
+ local file=s and tw4.S13[s.file]
+ local spec=file and s.id==g.define_as and file[s.id]
+ if not spec or not spec.zones[zoneName] or s.funcs~=spec.funcs or tw4.s2Funcs(g)~=spec.funcs or s.image~=g.image then return end
+ local want,st=spec.want,rawget(g,'_checker_terrain')
+ for k,v in pairs(g) do
+  if type(k)~='string' then return end
+  if type(v)~='function' and own(k) and want[k]==nil and not (k=='replace_display' and st and v==st.display) then return end
+ end
+ for k,v in pairs(want) do if fingerprint(rawget(g,k))~=fingerprint(v) then return end end
+ if rawget(g,'embed_particles')~=nil or not tw4.s13Emitter(g) then return end
+ return spec
+end
+function tw4.s13Kind(g,zoneName)
+ local spec=tw4.s13(g,zoneName)
+ return spec and spec.kind or nil
+end
+M.s13Kind=tw4.s13Kind
+-- S13: the S12 stone-kerb deep water also covers the exact water.lua
+-- DEEP_WATER that Dreadfell's and High Peak's greater vaults (water-vault,
+-- trapped-hexagon: specialList water.lua, so the S12 definition stamp) place
+-- in those stone levels (census: evidence/terrain-s13-20260930). Same exact
+-- contract (tw4.s12 + deepWater); combined zones whose forest side already
+-- owns deep water (Tannen, Rhaloren overground) are not listed.
+local deep=tw4.S12['/data/general/grids/water.lua'].DEEP_WATER.zones
+deep.dreadfell=true;deep['high-peak']=true
+-- The plain FLOOR beside those High Peak pools carries the native
+-- marble-to-water edge (T21 carrier, already accepted in Dreadfell): the
+-- same exact carrier rule, so the floor beside the board water is board floor.
+tw4.EDGE_ZONES['high-peak']=true
+end
+-- S14: portals and farportals as a board floor under their native portal art.
+-- A farportal is a 3x3 of exact ring grids (plain floor, orb_portal) around a
+-- centre whose single native layer is the 3x3 farportal-base; the centre's own
+-- on_added puts the vortex/lightning on the MAP (level.map:particleEmitter),
+-- so those emitters are drawn whatever the grid displays. The ring draws the
+-- zone's board floor, the centre the board floor plus its native 3x3 base, and
+-- the particles keep drawing on top, so the exit stays as conspicuous as the
+-- native one. High Peak's invocation portals (ORB_*), the Sanctum portal
+-- (PORTAL_BOSS) and the demonic return portals (Tannen, Demon Plane) keep their
+-- one native portal layer over the board floor the same way (S2 prop path).
+-- markSource stamps each listed definition with the canonical form of every
+-- own field (functions as their defining file:line, _-fields/uid/changed/
+-- force_clone/replace_display left out) and the list of callbacks, nested ones
+-- included (orb_portal.on_use, orb_command.special). A placed grid is accepted
+-- only in its listed zones, with that stamp, the same callbacks as the stamp
+-- AND the reviewed spec, every own field equal to the stamp, every scalar
+-- field equal to the reviewed definition (want), its nested orb table equal
+-- to the reviewed one (less the translated message) and exactly its native
+-- layer. The one in-place state change a listed grid has is accepted
+-- explicitly: invocation_close (high-peak/grids.lua:111-127) renames an
+-- invocation portal "<name> (disabled)" and whitens its ASCII colour; its
+-- native art does not change, so the board display does not either. Anything
+-- else (wrapped/extra/foreign callbacks, an event rewrite, a missing stamp from
+-- an old save) keeps the cell native. Rules, callbacks and emitters are never
+-- touched. Left native, with reasons in evidence/terrain-s14-20260930: Eruan's
+-- Charred Scar farportal (shoreline base tile; its on_preuse strips
+-- orb_portal in place), the Charred Scar farportal (NicerTiles lava borders
+-- on the ring), Ruined Dungeon's puzzle orbs (T18), the Slazish coral portal,
+-- Abashed Expanse's wormhole (T3), rifts (T11), event portals (E11).
+do
+local SKIP={uid=true,changed=true,force_clone=true,replace_display=true}
+local function ser(v,depth,path,fns)
+ local t=type(v)
+ if t=='function' then
+  local i=debug.getinfo(v,'S')
+  local s=tostring(i and i.source)..':'..tostring(i and i.linedefined)
+  if fns then fns[#fns+1]=path..'@'..s end
+  return 'fn@'..s
+ end
+ if t~='table' then return t..':'..tostring(v) end
+ if depth>6 then return 'deep' end
+ local keys={}
+ for k in pairs(v) do
+  if type(k)=='number' or (type(k)=='string' and k:sub(1,1)~='_' and not SKIP[k]) then keys[#keys+1]=k end
+ end
+ table.sort(keys,function(a,b) return tostring(a)<tostring(b) end)
+ local out={}
+ for _,k in ipairs(keys) do out[#out+1]=tostring(k)..'='..ser(v[k],depth+1,path..'.'..tostring(k),fns) end
+ return '{'..table.concat(out,';')..'}'
+end
+-- Own fields of g: key -> canonical string, and the sorted callback list.
+-- A non-string key makes the grid unlisted (nil).
+function tw4.s14Canon(g)
+ local c,fns={}, {}
+ for k,v in pairs(g) do
+  if type(k)~='string' then return end
+  if k:sub(1,1)~='_' and not SKIP[k] then c[k]=ser(v,0,k,fns) end
+ end
+ table.sort(fns)
+ return c,table.concat(fns,',')
+end
+-- Nested table canon without its (translated) message.
+function tw4.s14Orb(t)
+ if type(t)~='table' then return tostring(t) end
+ local v={};for k,x in pairs(t) do if k~='message' then v[k]=x end end
+ return ser(v,0,'orb')
+end
+local HP,RK,LH,GM='/data/zones/high-peak/grids.lua','/data/zones/reknor/grids.lua',
+ '/data/zones/town-last-hope/grids.lua','/data/zones/town-gates-of-morning/grids.lua'
+local TT,SF,DP='/data/zones/tannen-tower/grids.lua','/data/zones/shertul-fortress/grids.lua','/data/zones/demon-plane/grids.lua'
+local BASE={image='terrain/farportal-base.png',x=-1,y=-1,w=3,h=3}
+local VIOLET={color_r=255,color_g=0,color_b=220,color_br=192,color_bg=0,color_bb=175}
+-- Every scalar own field of the reviewed definition (colours as the engine
+-- normalises them: colors.VIOLET back colour = 192,0,175).
+local function want(t,colours)
+ local w={display='&',notice=true,always_remember=true,show_tooltip=true,tint_r=1,tint_g=1,tint_b=1,desc=true}
+ for k,v in pairs(colours or VIOLET) do w[k]=v end
+ for k,v in pairs(t) do w[k]=v end
+ return w
+end
+local function farOrb(file,line,zone,spot,extra)
+ return '{'..(extra and extra.after or '')..'change_level=number:1;change_wilderness={'..(extra and extra.level or '')..
+  'spot={subtype=string:'..spot..';type=string:farportal-end}};change_zone=string:'..zone..';on_use=fn@@'..file..':'..line..'}'
+end
+-- A farportal pair: ring id (floor) and centre id (floor + 3x3 base, on_added).
+local function farportal(t,file,ring,centre,name,useLine,addLine,orb,image)
+ local w={name=name,image=image or 'terrain/marble_floor.png'}
+ t[ring]={kind='floor',want=want(w),orb=orb,funcs=useLine and 'orb_portal.on_use@@'..file..':'..useLine or ''}
+ t[centre]={kind='prop',layer=BASE,want=want(w),orb=orb,
+  funcs=(useLine and 'on_added@@'..file..':'..addLine..',orb_portal.on_use@@'..file..':'..useLine) or 'on_added@@'..file..':'..addLine}
+end
+local hp,rk,lh,gm={}, {}, {}, {}
+farportal(hp,HP,'FAR_EAST_PORTAL','CFAR_EAST_PORTAL','Farportal: the Far East',43,50,farOrb(HP,43,'wilderness','fareast'))
+farportal(hp,HP,'WEST_PORTAL','CWEST_PORTAL','Farportal: Iron Throne',75,82,farOrb(HP,75,'wilderness','iron-throne'))
+farportal(hp,HP,'VOID_PORTAL','CVOID_PORTAL','Farportal: the Void',nil,103,nil)
+-- The void farportal's ASCII colour is colors.DARK_GREY (67,67,67).
+for _,id in ipairs{'VOID_PORTAL','CVOID_PORTAL'} do
+ for k,v in pairs{color_r=67,color_g=67,color_b=67} do hp[id].want[k]=v end
+end
+-- The four invocation portals share invocation_close (:111) and differ in
+-- colour and summon; back colour colors.PURPLE = 128,0,139.
+for id,d in pairs{ORB_UNDEATH={'Undeath','undead',{127,127,127}},ORB_ELEMENTS={'Elements','elemental',{255,0,104}},
+ ORB_DRAGON={'Dragons','dragon',{81,221,255}},ORB_DESTRUCTION={'Destruction','demon',{255,255,255}}} do
+ hp[id]={kind='prop',mos='terrain/demon_portal4.png',closed=true,funcs='orb_command.special@@'..HP..':111',
+  orbKey='orb_command',orb='{special=fn@@'..HP..':111;summon=string:'..d[2]..'}',
+  want=want({name='Invocation Portal: '..d[1],image='terrain/marble_floor.png'},
+   {color_r=d[3][1],color_g=d[3][2],color_b=d[3][3],color_br=128,color_bg=0,color_bb=139})}
+end
+-- The Sanctum portal (L10's last stair): its change_level_check (:192) only
+-- announces the orb; the orb's orb_portal.on_use (:197) moves to L11.
+hp.PORTAL_BOSS={kind='prop',mos='terrain/demon_portal4.png',
+ funcs='change_level_check@@'..HP..':192,orb_portal.on_use@@'..HP..':197',orb='{nothing=boolean:true;on_use=fn@@'..HP..':197}',
+ want=want({name='Portal: The Sanctum',image='terrain/marble_floor.png',change_level=1},
+  {color_r=81,color_g=221,color_b=255,color_br=128,color_bg=0,color_bb=139})}
+farportal(rk,RK,'FAR_EAST_PORTAL','CFAR_EAST_PORTAL','Farportal: the Far East',43,57,
+ farOrb(RK,43,'unremarkable-cave','fareast',{after='after_zone_teleport={x=number:98;y=number:25};',level='level_name=string:wilderness-1;'}))
+farportal(lh,LH,'FAR_EAST_PORTAL','CFAR_EAST_PORTAL','Farportal: Gates of Morning',51,58,farOrb(LH,51,'wilderness','gates-of-morning'))
+farportal(gm,GM,'WEST_PORTAL','CWEST_PORTAL','Farportal: Last Hope',52,59,farOrb(GM,52,'wilderness','last-hope'))
+-- The Sher'Tul exploratory farportal (forest side, fortress board floor):
+-- on_move asks and travels, checkSpecialLocation picks the odd destination.
+local sf={}
+farportal(sf,SF,'FARPORTAL','CFARPORTAL','Exploratory Farportal',nil,208,nil,'terrain/solidwall/solid_floor1.png')
+sf.FARPORTAL.funcs='checkSpecialLocation@@'..SF..':119,on_move@@'..SF..':142'
+sf.CFARPORTAL.funcs='checkSpecialLocation@@'..SF..':119,on_added@@'..SF..':208,on_move@@'..SF..':142'
+tw4.S14={
+ [HP]={zones={['high-peak']=true},side='stone',ids=hp},
+ [RK]={zones={reknor=true},side='stone',ids=rk},
+ [LH]={zones={['town-last-hope']=true},side='stone',ids=lh},
+ [GM]={zones={['town-gates-of-morning']=true},side='stone',ids=gm},
+ -- The return portals: Tannen's (quest east-portal tannen_exit) over marble,
+ -- the Demon Plane's (Draebor's on_die) over the scorch family's lava floor.
+ [TT]={zones={['tannen-tower']=true},side='stone',ids={PORTAL_BACK={kind='prop',mos='terrain/demon_portal.png',
+  funcs='on_move@@'..TT..':35',want=want({name='Portal to Last Hope',image='terrain/marble_floor.png'})}}},
+ [SF]={zones={['shertul-fortress']=true},side='forest',ids=sf},
+ [DP]={zones={['demon-plane']=true},side='forest',ids={PORTAL_BACK={kind='lava-floor',
+  layer={image='terrain/demon_portal.png'},funcs='on_move@@'..DP..':32',want=want({name='Demonic Portal',image='terrain/lava_floor.png'})}}},
+}
+for _,f in pairs(tw4.S14) do for id,spec in pairs(f.ids) do spec.want.define_as=id end end
+local CLOSE={name=true,color_r=true,color_g=true,color_b=true}
+-- The spec a placed grid satisfies, or nil and the first failed check.
+function tw4.s14(g,zoneName)
+ local s=type(g)=='table' and rawget(g,'_checker_s14_source')
+ if not s then return nil,'stamp' end
+ local file=tw4.S14[s.file]
+ local spec=file and s.id==g.define_as and file.ids[s.id]
+ if not spec then return nil,'spec' end
+ if not file.zones[zoneName] then return nil,'zone' end
+ local rd,st=rawget(g,'replace_display'),rawget(g,'_checker_terrain')
+ if rd~=nil and not (st and rd==st.display) then return nil,'foreign-display' end
+ local c,funcs=tw4.s14Canon(g)
+ if not c then return nil,'key' end
+ if funcs~=s.funcs or funcs~=spec.funcs then return nil,'funcs' end
+ local closed=false
+ for k,v in pairs(s.canon) do
+  if c[k]~=v then
+   if spec.closed and CLOSE[k] then closed=true else return nil,'field:'..k end
+  end
+ end
+ for k in pairs(c) do if s.canon[k]==nil then return nil,'extra:'..k end end
+ -- Scalar fields: exactly the reviewed definition's (desc: any string, it
+ -- is translated at load; the stamp comparison above pins it).
+ for k,v in pairs(c) do
+  local w=spec.want[k]
+  local x=rawget(g,k)
+  if type(x)~='table' and type(x)~='function' then
+   if w==nil or (k=='desc' and type(x)~='string') or (k~='desc' and x~=w and not (closed and CLOSE[k])) then return nil,'want:'..k end
+  end
+ end
+ for k in pairs(spec.want) do if k~='desc' and rawget(g,k)==nil then return nil,'missing:'..k end end
+ if closed then
+  -- invocation_close's own write: ("%s (disabled)"):tformat(_t(name)) and
+  -- the engine's colors.WHITE (255,255,255).
+  local ok,name=pcall(function() return ('%s (disabled)'):tformat(_t(s.name)) end)
+  if not ok or g.name~=name or g.color_r~=255 or g.color_g~=255 or g.color_b~=255 then return nil,'closed' end
+ end
+ local orbKey=spec.orbKey or 'orb_portal'
+ if tw4.s14Orb(rawget(g,orbKey))~=(spec.orb or 'nil') then return nil,orbKey end
+ if orbKey~='orb_portal' and rawget(g,'orb_portal')~=nil then return nil,'orb_portal' end
+ -- Tables other than the orb and the layer list are not part of any spec.
+ for k,v in pairs(g) do
+  if type(k)=='string' and k:sub(1,1)~='_' and not SKIP[k] and type(v)=='table' and k~=orbKey and k~='add_displays' and k~='add_mos' then
+   return nil,'table:'..k
+  end
+ end
+ local L,d=spec.layer
+ if spec.mos then
+  d=type(g.add_mos)=='table' and #g.add_mos==1 and g.add_mos[1]
+  if g.add_displays or type(d)~='table' or d.image~=spec.mos then return nil,'layer' end
+  for k in pairs(d) do if k~='image' then return nil,'layer' end end
+ elseif L then
+  d=type(g.add_displays)=='table' and #g.add_displays==1 and g.add_displays[1]
+  if g.add_mos or type(d)~='table' or d.image~=L.image or d.display_x~=L.x or d.display_y~=L.y or d.display_w~=L.w or
+   d.display_h~=L.h or d.z or d.shader or d.add_mos or d.add_displays or d.embed_particles or
+   (type(rawget(d,'__particles'))=='table' and next(d.__particles)) then return nil,'layer' end
+ elseif g.add_displays or g.add_mos then return nil,'layer' end
+ -- No grid particle of its own (the farportal's emitters live on the map).
+ if type(rawget(g,'__particles'))=='table' and next(g.__particles) or rawget(g,'embed_particles') then return nil,'particles' end
+ return spec,d,file.side
+end
+-- Kind, or nil and the reason (fixture census).
+function tw4.s14Why(g,zoneName)
+ local spec,why=tw4.s14(g,zoneName)
+ if spec then return spec.kind end
+ return nil,why
+end
+M.s14Kind=function(g,zoneName) return (tw4.s14Why(g,zoneName)) end
+M.s14Why=function(g,zoneName) local k,why=tw4.s14Why(g,zoneName);return k or why end
+-- Stone side (classify): 'floor', or 'prop' with the native layer.
+function tw4.s14Stone(g,zoneName)
+ local spec,d,side=tw4.s14(g,zoneName)
+ if not spec or side~='stone' then return end
+ if spec.kind=='prop' then return 'prop',d end
+ return spec.kind
+end
+-- Forest side: the board kind in the zone's family (batch5Kind), and the
+-- native layer the board tile keeps (applyForest's statue path).
+function tw4.s14Forest(g)
+ local zoneName=game and game.zone and game.zone.short_name
+ local spec,_,side=tw4.s14(g,zoneName)
+ if spec and side=='forest' then return spec.kind=='prop' and 'floor' or spec.kind end
+end
+M.s14ForestKind=function(g) return tw4.s14Forest(g) end
+function tw4.s14Prop(g,zoneName)
+ local spec,d,side=tw4.s14(g,zoneName)
+ if spec and side=='forest' and d then return d end
+end
+end
+-- S15 (mode / tutorial and class planes; census in
+-- evidence/terrain-s15-20260930). Two reachable levels fit existing families
+-- with no new art, each as its own S5 forest-side family key:
+-- * tutorial L1 (the Tutorial button's only map, maps/tutorial/tutorial1.lua):
+--   forest.lua GRASS/TREE and water.lua DEEP_WATER on the Tannen/ambush
+--   contracts (meadowGrass, forestTree, deepWater).
+-- * dreams L1 (Noxious Caldera's altar of dreams, changeLevel(1,'dreams')):
+--   the jungle.lua maze (JUNGLE_GRASS floor, JUNGLE_TREE walls) on the exact
+--   jungleKind contract, drawn with the Caldera jungle art (as Irkkk).
+-- Every cell also needs the zone's own list stamp (superload/mod/class/
+-- Grid.lua), so levels generated before S15 keep native. Staying native: the
+-- dream portal (DREAM_END, on_move), the mouse holes (DREAM_MOUSE_HOLE,
+-- block_move/on_move), the basic.lua arrival FLOOR, and all of dreams L2
+-- (dreams/grids.lua's own invisible bamboo huts, DREAM2_END, DREAM_STONE).
+-- Talent/eidolon planes swap game.level without Game:changeLevel and are not
+-- covered here.
+tw4.S5_FILES.tutorial='/data/zones/tutorial/grids.lua'
+tw4.S5_FILES.dreams='/data/zones/dreams/grids.lua'
+tw4.S5_FOREST.tutorial=true
+tw4.S5_FOREST.dreams=true
+function tw4.s15Kind(g,zoneName)
+ if not g or not tw4.zoneStamped(g,zoneName) then return end
+ if zoneName=='tutorial' then return meadowGrass(g) or forestTree(g,false) or deepWater(g) or nil end
+ if zoneName=='dreams' then
+  local k=jungleKind(g)
+  if k=='floor' or k=='tree' then return tw4.JUNGLE_KINDS[k] end
+ end
+end
+M.s15Kind=function(g,zoneName) return (tw4.s15Kind(g,zoneName)) end
+-- S16 (talent planes; evidence/terrain-s16-20260930). Fearscape
+-- (talents/corruptions/shadowflame.lua:216-240) and Temporal Reprieve
+-- (talents/chronomancy/timetravel.lua:249-270) assign game.zone/game.level in
+-- an onTickEnd callback, never through Game:changeLevel; the Game:tick
+-- superload calls M.directSwap after each tick and re-applies the current
+-- settings when the level was swapped into or out of one of these planes
+-- (display only; the source level is re-applied on the way back, exactly as a
+-- changeLevel return). Dreamscape and the eidolon plane are not listed.
+-- * demon-plane-spell (batch5 family 'fearscape'): lava.lua LAVA_WALL on the
+--   Fearscape lava-wall contract (dark basalt masks) and LAVA_FLOOR(1-16) as
+--   the S12 hazard lava, on the exact S12 field contract except that the
+--   only callback must be the injected on_stand closure at
+--   demon-plane-spell/grids.lua:23 (a faction set at load, a wrapped or
+--   moved callback -> native).
+-- * temporal-reprieve-talent (S5 forest-side family): void.lua OUTERSPACE /
+--   FLOATING_ROCKS on the Point Zero space/rocks contract, forest.lua GRASS
+--   and HARDTREE on meadowGrass / forestTree(hard).
+-- Every cell also needs the plane's own zone-list stamp (Grid.lua), so a
+-- plane level saved before S16 keeps native.
+tw4.S16_PLANES={['demon-plane-spell']=true,['temporal-reprieve-talent']=true}
+tw4.S16_STAND='on_stand@@/data/zones/demon-plane-spell/grids.lua:23'
+tw4.S5_FILES['demon-plane-spell']='/data/zones/demon-plane-spell/grids.lua'
+tw4.S5_FILES['temporal-reprieve-talent']='/data/zones/temporal-reprieve-talent/grids.lua'
+tw4.S5_FOREST['temporal-reprieve-talent']=true
+function tw4.s16Fearscape(g)
+ if not tw4.zoneStamped(g,'demon-plane-spell') then return end
+ if tw4.s12(g,'demon-plane-spell',tw4.S16_STAND) then return 'lava-hazard' end
+ if scorchKind(g)=='lava-wall' then return 'lava-wall' end
+end
+function tw4.s16Kind(g,zoneName)
+ if not g or zoneName~='temporal-reprieve-talent' or not tw4.zoneStamped(g,zoneName) then return end
+ local k=voidTerrain(g,zoneName)
+ if k=='space' or k=='rocks' then return 'void-'..k end
+ return meadowGrass(g) or forestTree(g,true) or nil
+end
+M.s16Kind=function(g,zoneName)
+ if zoneName=='demon-plane-spell' then return batch5Kind(g,'fearscape') end
+ return (tw4.s16Kind(g,zoneName))
+end
+function M.directSwap(before,after)
+ local function plane(z) return type(z)=='table' and tw4.S16_PLANES[z.short_name] or false end
+ return before~=after and (plane(before) or plane(after)) or false
+end
+-- S17 (Solipsist Dreamscape; evidence/terrain-s17-20260930). The talent
+-- (talents/psionic/slumber.lua:170-193) and EFF_DREAMSCAPE's deactivate
+-- (timed_effects/other.lua:2136-2158) swap game.level in onTickEnd like the
+-- S16 planes, so the plane joins tw4.S16_PLANES (Game:tick hook installs on
+-- entry, re-applies the source level on return). S5 forest-side family:
+-- * CLOUD (dreamscape-talent/grids.lua:23-29, cloud_anim shader natively):
+--   exact field whitelist below (the entity init turns back_color DARK_GREY
+--   into color_br/bg/bb 67; no callback, no other own field) ->
+--   'dream-cloud', refined/dream/cloud-<a|b|c>-<mask>-<p>, mask = cloud
+--   neighbours (a soft rim toward anything else).
+-- * void.lua OUTERSPACE: the voidTerrain space contract -> 'dream-void',
+--   refined/dream/void-<a|b>-<p>.
+-- Both need the plane's zone-list stamp (Grid.lua; an older saved plane
+-- stays native) and the gated dream manifest (missing -> native). Display
+-- only; passability, sight and callbacks are untouched.
+tw4.S16_PLANES['dreamscape-talent']=true
+tw4.S5_FILES['dreamscape-talent']='/data/zones/dreamscape-talent/grids.lua'
+tw4.S5_FOREST['dreamscape-talent']=true
+tw4.S17_CLOUD={define_as='CLOUD',type='floor',subtype='cloud',name='floor',image='terrain/clouds/cloud_normal_002.png',
+ display='~',color_r=255,color_g=255,color_b=255,color_br=67,color_bg=67,color_bb=67,tint_r=1,tint_g=1,tint_b=1,shader='cloud_anim'}
+function tw4.s17Cloud(g)
+ if rawget(g,'define_as')~='CLOUD' or tw4.s2Funcs(g)~='' then return end
+ local st=rawget(g,'_checker_terrain')
+ for k,v in pairs(g) do
+  if type(k)~='string' then return end
+  if k:sub(1,1)~='_' and k~='uid' and k~='changed' and tw4.S17_CLOUD[k]==nil and
+   not (k=='replace_display' and st and v==st.display) then return end
+ end
+ for k,v in pairs(tw4.S17_CLOUD) do if rawget(g,k)~=v then return end end
+ return 'dream-cloud'
+end
+function tw4.s17Kind(g,zoneName)
+ if not g or zoneName~='dreamscape-talent' or not tw4.zoneStamped(g,zoneName) then return end
+ if voidTerrain(g,zoneName)=='space' then return 'dream-void' end
+ return tw4.s17Cloud(g)
+end
+M.s17Kind=function(g,zoneName) return (tw4.s17Kind(g,zoneName)) end
+function tw4.s17File(x,y,t,mask,parity)
+ local p=t=='dream-cloud' and img('refined/dream/cloud-'..({'a','b','c'})[((x*17+y*7)%3)+1]..'-'..mask..'-'..parity) or
+  img('refined/dream/void-'..({'a','b'})[((x*17+y*7)%2)+1]..'-'..parity)
+ return M.dreamAssets.files[p] and p or nil
+end
 function M.markSource(g,file)
  -- S1: the definition's own values of every field a ring/centre event
  -- rewrites, so an event cell can be compared with the grid it cloned.
@@ -3157,6 +4225,11 @@ function M.markSource(g,file)
    special_minimap=g.special_minimap,on_stand_safe=g.on_stand_safe,stand=g.on_stand~=nil or nil,
    display=g.display,color_r=g.color_r,color_g=g.color_g,color_b=g.color_b,notice=g.notice}
  end
+ -- S10a: the defining general file of the slime family and Grushnak's
+ -- underground_slimy/slimy_walls cells.
+ if tw4.SLIME_FILES[file] and type(g.define_as)=='string' then g._checker_slime_source={file=file,id=g.define_as} end
+ -- S10b: the gothic family's defining file.
+ if file==tw4.GOTHIC_FILE and type(g.define_as)=='string' then g._checker_gothic_source={file=file,id=g.define_as} end
  if file=='/data/general/grids/sand.lua' and g.define_as=='SAND' then
   g._checker_surface_sand_source={file=file,id='SAND'}
  end
@@ -3191,6 +4264,29 @@ function M.markSource(g,file)
  if s2 and type(g.define_as)=='string' and type(s2[g.define_as])=='table' then
   g._checker_s2_source={file=file,id=g.define_as,signature=signature(g),extra=tw4.s2Extra(g),funcs=tw4.s2Funcs(g),
    check=g.door_player_check,lore=g.lore}
+ end
+ -- S11: levers, lever doors and candles (own callbacks and prompt string).
+ local s11=tw4.S11[file]
+ if s11 and type(g.define_as)=='string' and s11[g.define_as] then
+  g._checker_s11_source={file=file,id=g.define_as,funcs=tw4.s2Funcs(g),stop=g.door_player_stop}
+ end
+ -- S12: damaging lava floor and deep water (own callbacks, damage resolvers, image).
+ local s12=tw4.S12[file]
+ if s12 and type(g.define_as)=='string' and s12[g.define_as] then
+  g._checker_s12_source={file=file,id=g.define_as,funcs=tw4.s2Funcs(g),image=g.image,
+   mindam=tw4.s12Dam(rawget(g,'mindam')),maxdam=tw4.s12Dam(rawget(g,'maxdam'))}
+ end
+ -- S13: Ardhungol's wormhole (own callback and image).
+ local s13=tw4.S13[file]
+ if s13 and type(g.define_as)=='string' and s13[g.define_as] then
+  g._checker_s13_source={file=file,id=g.define_as,funcs=tw4.s2Funcs(g),image=g.image}
+ end
+ -- S14: portals and farportals (every own field in canonical form, callbacks
+ -- with file:line, nested ones included, and the definition's own name).
+ local s14=tw4.S14[file]
+ if s14 and type(g.define_as)=='string' and s14.ids[g.define_as] then
+  local c,f=tw4.s14Canon(g)
+  if c then g._checker_s14_source={file=file,id=g.define_as,canon=c,funcs=f,name=g.name} end
  end
  if file==fortressSource and type(g.define_as)=='string' then
   g._checker_fortress_source={file=file,id=g.define_as,image=g.image}
@@ -3337,6 +4433,12 @@ function M.variant(zone)
  -- S9: High Peak's Roomer levels (L5-10), their pits and vaults, and the
  -- Sanctum (static L11) import basic.lua stone; L1-4 caverns are cave cells.
  if zone and zone.short_name=='high-peak' then return 'HIGH_PEAK' end
+ -- S10a: Grushnak Pride's barracks (basic.lua stone, whose floors and stairs
+ -- keep the zone's underground_floor base image) and slimy_walls.lua corner.
+ if zone and zone.short_name=='grushnak-pride' then return 'GRUSHNAK_PRIDE' end
+ -- S10b: Vor Pride's basic.lua stone (the renegade-pyromancers vault; its
+ -- FLAT_DOWN4 draws through the gothic family's forest path).
+ if zone and zone.short_name=='vor-pride' then return 'VOR_PRIDE' end
  if zone and zone.short_name=='maze' and (zone.is_collapsed==nil or type(zone.is_collapsed)=='boolean') then
   return zone.is_collapsed and 'COLLAPSED' or 'DEFAULT'
  end
@@ -3429,6 +4531,55 @@ function M.townStone(g,zoneName)
   not d.display_h and g.type=='wall' and g.subtype=='floor' and g.display=='#' and g.z==1 and g.always_remember==true and
   g.block_sense==true and g.block_esp==true and g.air_level==-20 then return 'prop',d end
 end
+-- S10a: Grushnak's slimy_walls.lua corner (SLIMED_*): basic.lua's granite
+-- walls, floor and doors reskinned with slime and imported with the zone's
+-- marble->underground floor rewrite. Exact stamps, rule fields and native
+-- slimed_walls layers; drawn with the stone adapter's pictures, so a SLIMED
+-- wall joins the basic.lua wall beside it. Sealed/lever doors, levers and
+-- stairs stay native.
+tw4.SLIMED_LAYERS={'^terrain/slimed_walls/granite_[%w_]+%.png$'}
+-- {kind, orientation, door_opened, door_closed, dig}
+tw4.SLIMED_DOORS={SLIMED_DOOR={'door-closed','horizontal','SLIMED_DOOR_OPEN',nil,'SLIMED_FLOOR'},
+ SLIMED_DOOR_HORIZ={'door-closed','horizontal','SLIMED_DOOR_HORIZ_OPEN',nil,'SLIMED_FLOOR'},
+ SLIMED_DOOR_VERT={'door-closed','vertical','SLIMED_DOOR_OPEN_VERT',nil,'SLIMED_DOOR_OPEN_VERT'},
+ SLIMED_DOOR_OPEN={'door-open','horizontal',nil,'SLIMED_DOOR'},
+ SLIMED_DOOR_HORIZ_OPEN={'door-open','horizontal',nil,'SLIMED_DOOR_HORIZ'},
+ SLIMED_DOOR_OPEN_VERT={'door-open','vertical',nil,'SLIMED_DOOR_VERT'}}
+function tw4.s10Stone(g,zoneName)
+ if zoneName~='grushnak-pride' or not g or type(g.define_as)~='string' or not tw4.zoneStamped(g,zoneName) or
+  not tw4.slimeStamped(g,'slimy_walls') then return end
+ for _,v in pairs(g) do if type(v)=='function' then return end end
+ local id=g.define_as
+ local image=type(g.image)=='string' and g.image or ''
+ if g.on_stand or g.special or g.shader or g.tint or g.textures or g.door_player_check or g.door_player_stop or hasMos(g) or
+  g.subtype~='floor' or g.can_pass and not tw4.onlyCanPass(g,'pass_wall') or not noTransition(g) or
+  not layersMatch(g,tw4.SLIMED_LAYERS) or
+  not (image:match('^terrain/slimed_walls/granite_[%w_]+%.png$') or image=='terrain/underground_floor.png') then return end
+ if id=='SLIMED_FLOOR' then
+  if g.type=='floor' and g.name=='floor' and g.display=='.' and image=='terrain/underground_floor.png' and g.grow=='SLIMED_WALL' and
+   not (g.does_block_move or g.block_sight or g.block_sense or g.block_esp or g.air_level or g.dig or g.can_pass or g.is_door or
+   g.always_remember or g.notice or g.add_displays or g.z) then return 'floor' end
+  return
+ end
+ if id:match('^SLIMED_WALL[%w_]*$') or id:match('^SLIMED_HARDWALL[%w_]*$') then
+  local hard=id:match('^SLIMED_HARDWALL')~=nil
+  if g.type~='wall' or g.name~='wall' or g.display~='#' or g.always_remember~=true or g.does_block_move~=true or
+   g.block_sight~=true or g.air_level~=-20 or g.is_door or g.notice or g.grow or
+   image=='terrain/underground_floor.png' and not (g.add_displays and #g.add_displays>0) then return end
+  if hard then
+   if g.block_sense==true and g.block_esp==true and not g.dig and not g.can_pass then return 'hardwall' end
+  elseif not g.block_sense and not g.block_esp and g.dig=='SLIMED_FLOOR' and g.can_pass then return 'wall' end
+  return
+ end
+ local d=tw4.SLIMED_DOORS[id]
+ if not d or g.type~='wall' or g.is_door~=true or g.always_remember~=true or g.does_block_move or g.can_pass or
+  g.air_level or g.block_sense or g.block_esp or g.grow then return end
+ if d[1]=='door-closed' then
+  if g.name=='door' and g.display=='+' and g.notice==true and g.block_sight==true and g.door_opened==d[3] and
+   not g.door_closed and g.dig==d[5] then return d[1],d[2] end
+ elseif g.name=='open door' and g.display=="'" and not g.block_sight and g.door_closed==d[4] and not g.door_opened and
+  not g.dig then return d[1],d[2] end
+end
 function M.classify(g)
  local maze=g and g._checker_maze_source
  if maze and maze.file==mazeSource and maze.id=='CRACKS' and g.define_as=='CRACKS' then
@@ -3457,17 +4608,33 @@ function M.classify(g)
  end
  local stamp=g and g._checker_grid_source
  local town=game and game.zone and game.zone.short_name
+ -- S12: damaging lava floor / Vor Armoury deep water (own definition stamp; a
+ -- vault's specialList copy carries no zone list stamp).
+ local s12=tw4.s12Kind(g,town)
+ if s12 then return s12 end
+ -- S14: portals and farportals (own definition stamp and exact contract).
+ local s14,s14o=tw4.s14Stone(g,town)
+ if s14 then return s14,s14o end
  if g and town and townFiles[town] and not townStamped(g,town) then return end
  -- S6: Gorbat's and Eruan's stone need the list stamp too (older levels keep native).
  -- S9: so does High Peak's.
- if g and (town=='gorbat-pride' or town=='eruan' or town=='high-peak') and not tw4.zoneStamped(g,town) then return end
+ -- S10a: and Grushnak's. S10b: and Vor Pride's.
+ if g and (town=='gorbat-pride' or town=='eruan' or town=='high-peak' or town=='grushnak-pride' or town=='vor-pride') and
+  not tw4.zoneStamped(g,town) then return end
  if g and town and townFiles[town] then
   local kind,d=M.townStone(g,town)
   if kind then return kind,d end
  end
  -- S2: zone-local exits, locks and props (exact stamp and native spec).
+ -- S10a: Grushnak's slimy_walls.lua granite (exact stamp and native layers).
+ local s10,s10o=tw4.s10Stone(g,town)
+ if s10 then return s10,s10o end
  local s2,s2o=tw4.s2Stone(g,town)
  if s2 then return s2,s2o end
+ -- S11: Tannen's levers and the basic.lua lever doors (Tannen, Derth's arena, Ruined Dungeon).
+ local s11,s11spec=tw4.s11Kind(g,town,true)
+ if s11=='prop' then return 'prop',g.add_mos[1] end
+ if s11 then return s11,s11spec.o end
  if not stamp or (stamp.file~=source and stamp.file~=conclaveSource) or stamp.id~=g.define_as or stamp.signature~=signature(g) then return end
  local kind=stamp.file==source and identities[stamp.id] or stamp.file==conclaveSource and conclaveIdentities[stamp.id]
  local aura=M.auraKind(g)
@@ -3503,7 +4670,10 @@ function M.classify(g)
  for k,v in pairs(g) do if type(v)=='function' and not (k=='on_stand' and aura) then return end end
  if g.subtype~='floor' then return end
  if stair then
-  if g.type~='floor' or g.image~='terrain/marble_floor.png' or g.does_block_move or g.block_sight or g.block_sense or g.block_esp or g.air_level or g.can_pass or g.dig or g.is_door or g.add_displays then return end
+  -- S10a: Grushnak imports basic.lua with marble_floor.png rewritten to
+  -- underground_floor.png (grushnak-pride/grids.lua:20); its stamped stairs
+  -- keep that base (the signature above pins the rest).
+  if g.type~='floor' or g.image~=(town=='grushnak-pride' and 'terrain/underground_floor.png' or 'terrain/marble_floor.png') or g.does_block_move or g.block_sight or g.block_sense or g.block_esp or g.air_level or g.can_pass or g.dig or g.is_door or g.add_displays then return end
   if g.change_level~=stair.level or g.change_zone~=stair.zone or g.notice~=true or g.always_remember~=true then return end
   for i=3,#transitionFields do if g[transitionFields[i]]~=nil then return end end
   -- Exact reviewed single-layer definition; extra layers, transformations and
@@ -3593,7 +4763,8 @@ local function display(record,file,overlay,aura)
   if file and record.prop then
    def.add_displays=def.add_displays or {}
    def.add_displays[#def.add_displays+1]={image=record.prop.image,z=record.prop.z,display_y=record.prop.display_y,
-    display_h=record.prop.display_h,display_on_seen=true,display_on_remember=true}
+    display_h=record.prop.display_h,display_x=record.prop.display_x,display_w=record.prop.display_w,
+    display_on_seen=true,display_on_remember=true}
   end
   if file and overlay then def.add_mos={{image=overlay}} end
   cache[key]=entity(def)
@@ -3631,7 +4802,7 @@ record=function(m,x,y,g)
  if kind=='prop' then
   local d=orientation;orientation=nil
   if type(d)~='table' then kind=nil
-  else prop={image=d.image,z=d.z,display_y=d.display_y,display_h=d.display_h} end
+  else prop={image=d.image,z=d.z,display_x=d.display_x,display_y=d.display_y,display_w=d.display_w,display_h=d.display_h} end
  end
  if not kind then
   if old then records[key]=nil;return true end
@@ -3640,6 +4811,8 @@ record=function(m,x,y,g)
  if old and old.signature==sig and old.aura==aura and (old.prop and old.prop.image)==(prop and prop.image) then return false end
  records[key]={kind=kind,orientation=orientation,signature=sig,aura=aura,prop=prop,
   source=(g._checker_grid_source or g._checker_maze_source or g._checker_town_source or g._checker_s2_source or {}).id,native=nativeSnapshot(g)}
+ -- S12: lava and water keep their native shader in the native snapshot.
+ if kind=='lava-hazard' or kind=='deep-stone' then records[key].native.shader=g.shader end
  return true
 end
 local offsets={{0,-1},{1,0},{0,1},{-1,0}}
@@ -3667,6 +4840,12 @@ function M.ready()
 end
 -- Board path for a record from its current neighbour records.
 local function recordFile(m,x,y,record)
+ -- S12: hazard lava / stone-kerb deep water (their own gated set).
+ if record.kind=='lava-hazard' or record.kind=='deep-stone' then
+  local path=tw4.s12File(m,x,y,record.kind)
+  record.file=M.hazardAssets.files[path] and path or nil;record.overlay=nil
+  return
+ end
  local stair=record.kind:match('^stairs%-')
  local mazeKind=record.kind=='old-wall' or record.kind=='cracks'
  -- S2/T6: an untiled lock (Kryl-Feijan LOCK before its door3d re-tile)
@@ -3715,7 +4894,8 @@ function M.render(m,x,y,g,mode)
   -- Never recompute hidden tile edges from newly observed neighbours.
   if M.visible(m,x,y) then recordFile(m,x,y,record) end
   file=record.file
-  if file and not (mazeKind and M.mazeAssets.files[file] or M.assets.files[file] or M.conclaveAssets.files[file] or M.korpulDarkAssets.files[file]) then file=nil end
+  if file and not (mazeKind and M.mazeAssets.files[file] or M.assets.files[file] or M.conclaveAssets.files[file] or M.korpulDarkAssets.files[file] or
+   M.hazardAssets.files[file]) then file=nil end
   overlay=record.overlay
   if stair and (not overlay or not M.stairAssets.files[overlay]) then file=nil;overlay=nil end
  end
@@ -3749,7 +4929,12 @@ M.combined={['rhaloren-camp']=true,['last-hope-graveyard']=true,['lake-nur']=tru
  -- S6: sand, mountains, bamboo roosts and palms beside basic.lua stone.
  ['gorbat-pride']=true,eruan=true,
  -- S9: High Peak's cavern levels (cave family) beside its stone levels.
- ['high-peak']=true}
+ ['high-peak']=true,
+ -- S10a: Grushnak's underground floor, mushroom creep and thicket beside its
+ -- basic.lua / slimy_walls.lua stone.
+ ['grushnak-pride']=true,
+ -- S10b: Vor Pride's gothic halls and burnt yard beside the vault's stone.
+ ['vor-pride']=true}
 -- TW1: Zone:newLevel calls map:rememberAll for all_remembered levels, so a
 -- town's whole plan is native knowledge from arrival although its cells were
 -- never in FOV (map.seens). observe() only records FOV cells, which left the
@@ -3803,5 +4988,23 @@ function M.repair(host,x1,y1,x2,y2)
  for _,c in ipairs(changed) do m:updateMap(c[1],c[2]) end
  if #changed>0 then m.changed=true end
  return #changed
+end
+-- S11, display only (superload/engine/Map.lua): a native on_lever_change
+-- swapped the terrain at (x,y) from `before` (an exact S11 lever door). The
+-- map set already ran updateMap; board-drawn neighbours are re-applied (the
+-- forest adapter installs its display once) and, for the stone adapter, a
+-- remembered cell outside FOV re-reads the new grid: the native remembered
+-- display shows the new grid too, so no knowledge is created. Cells in FOV
+-- were already re-observed by that updateMap.
+function M.s11Changed(m,x,y,before)
+ if not (game and game.level and game.level.map==m and game.zone) then return end
+ local zoneName=game.zone.short_name
+ if not (tw4.s11Kind(before,zoneName) or tw4.s11Kind(before,zoneName,true)) then return end
+ if game.checkerRepairTerrain then game:checkerRepairTerrain(x-1,y-1,x+1,y+1) end
+ if M.variant(game.zone) and not M.visible(m,x,y) and m.remembers and m.remembers(x,y) and record(m,x,y,m(x,y,Map.TERRAIN)) then
+  local rec=m._checker_korpul and m._checker_korpul[x+y*m.w]
+  if rec then recordFile(m,x,y,rec) end
+  m:updateMap(x,y)
+ end
 end
 return M

@@ -1,0 +1,68 @@
+{
+  "count": 4,
+  "masters": {
+    "road": {
+      "path": "masters/town-road-slab-v1.png",
+      "sha256": "69690702c97b112542955b44e09ed660de7b1059787c7b79c0d80de729e0edf1"
+    },
+    "fields": {
+      "path": "masters/town-crop-field-v1.png",
+      "sha256": "9ef964b168f76de00f06f1ef847597548f34a0f48767e877a2f2ffccce66f0a7"
+    }
+  },
+  "runtime_dir": "data/gfx/refined/town",
+  "files": {
+    "road0.png": "2748f5e646986573892c5928efb87d9014bb19b9e40ebb389708d5924a9b4f9b",
+    "road1.png": "3b5f387d26f595f3db37086a7a11fe83c16c2a89820b4e526ed7a5d957c1366e",
+    "fields0.png": "66762c3c19e626bbcdb6c81dafce2832e178ddc6ba62be6245a71617828a55f6",
+    "fields1.png": "cf0dad172ba135e73b878cc8b1665129ded9bcc32973e06a8864b8b6187087ec"
+  },
+  "luminance": {
+    "road0.png": 152.896,
+    "road1.png": 133.363,
+    "fields0.png": 113.144,
+    "fields1.png": 98.568
+  },
+  "neighbour_luminance": {
+    "grass0.png": 108.966,
+    "grass1.png": 97.581,
+    "road0.png": 113.151,
+    "korpul/floor-a-0-0.png": 131.786,
+    "korpul/floor-b-0-0.png": 134.061,
+    "korpul/hardwall-15-0.png": 106.9,
+    "korpul/hardwall-5-0.png": 104.077,
+    "gold-mountain/wall-15-0.png": 63.932,
+    "beach/sand0.png": 109.173,
+    "tree-oak0.png": 100.765,
+    "eruan/palm-a0.png": 72.317,
+    "deep15-0-0.png": 61.446
+  },
+  "metrics": {
+    "road_vs_grass_parity0": 0.2873,
+    "road_vs_plaza_floor_parity0": 0.1381,
+    "road_vs_hardwall_interior": 0.3008,
+    "road_vs_gold_mountain": 0.5819,
+    "fields_vs_grass_parity0": 0.0369,
+    "fields_vs_tree": 0.1094,
+    "min_parity_gap": 0.1278
+  },
+  "constants": {
+    "ROAD_WINDOW": [
+      380,
+      380,
+      880,
+      880
+    ],
+    "ROAD_BRIGHTNESS": 0.86,
+    "ROAD_CONTRAST": 0.78,
+    "FIELD_WINDOW": [
+      300,
+      18,
+      717,
+      435
+    ],
+    "FIELD_BRIGHTNESS": 1.02,
+    "FIELD_CONTRAST": 0.82,
+    "PARITY": 0.875
+  }
+}

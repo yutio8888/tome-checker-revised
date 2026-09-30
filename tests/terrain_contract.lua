@@ -1442,8 +1442,9 @@ local bdp=bone('BONE_DOOR');bdp.door_player_check='This door seems to have been 
 eq(T.batch5Kind(bdp,'rakshor'),nil,'S2 prompt on a plain bone door stays native')
 local bvo=bone('BONE_VAULT_DOOR_OPEN');bvo.door_closed='BONE_DOOR'
 eq(T.batch5Kind(bvo,'rakshor'),nil,'S2 bone vault open door closing into another door stays native')
+-- S11: the placed bone lever and lever doors are exact S11 cells (tests/terrain_s11.lua).
 for _,id in ipairs{
- 'BONE_GENERIC_LEVER','BONE_GENERIC_LEVER_DOOR','BONE_GENERIC_LEVER_DOOR_HORIZ','BONE_GENERIC_LEVER_DOOR_VERT','BONE_GENERIC_LEVER_DOOR_OPEN',
+ 'BONE_GENERIC_LEVER_DOOR','BONE_GENERIC_LEVER_DOOR_OPEN',
  'BONE_GENERIC_LEVER_DOOR_HORIZ_OPEN','BONE_GENERIC_LEVER_DOOR_OPEN_VERT','BONE_UP8','BONE_DOWN6'} do
  eq(T.batch5Kind(bone(id),'rakshor'),nil,'bone special stays native '..id)
 end
@@ -1469,8 +1470,7 @@ mode='blockout';T.apply(host);eq(cell.replace_display.image,'checker-revised+tre
 mode='vanilla';T.apply(host);eq(cell.replace_display,nil,'Rak\'Shor vanilla restore')
 mode='refined';cell=newBone(bone('BONE_DOOR_VERT'));T.apply(host)
 eq(cell.replace_display.image,'checker-revised+refined/rakshor/door-closed0.png','Rak\'Shor board door')
-cell=newBone(bone('BONE_GENERIC_LEVER'));T.apply(host)
-eq(cell.replace_display,nil,'Rak\'Shor lever native')
+-- S11: Rak'Shor's lever is drawn by the S11 contract (tests/terrain_s11.lua).
 host.zone={short_name='other-zone'};cell=newBone(bone('BONEFLOOR'));T.apply(host)
 eq(cell.replace_display,nil,'Rak\'Shor family zone scoped')
 eq(T.variant({short_name='rak-shor-pride'}),nil,'no stone adapter in Rak\'Shor')
@@ -2097,7 +2097,12 @@ for _,zone in ipairs{'gorbat-pride','noxious-caldera','wilderness','trollmire'} 
  -- S6: Gorbat Pride is now a combined (non-town) zone.
  eq(T.combined[zone] and zone~='trollmire' and zone~='gorbat-pride' or nil,nil,'TW6 non-town zone is not a combined town '..zone)
 end
-eq(T.variant({short_name='grushnak-pride'}),nil,'TW6 non-town zone stays without a town variant')
+-- S10a: Grushnak Pride is now a combined (non-town) stone zone. S10b: so is
+-- Vor Pride (not a town); an unsupported zone still has no variant.
+eq(T.variant({short_name='infinite-dungeon'}),nil,'TW6 non-town zone stays without a town variant')
+eq(T.variant({short_name='vor-pride'}),'VOR_PRIDE','S10b Vor Pride stone gate')
+eq(T.townFiles['vor-pride'],nil,'S10b Vor Pride is not a town')
+eq(T.townFiles['grushnak-pride'],nil,'S10a Grushnak Pride is not a town')
 eq(T.combined['town-derth'] and T.combined['town-lumberjack-village'],true,'TW1 towns combine forest and stone')
 local savedGame=env.game
 env.game={zone={short_name='town-derth'}}
@@ -2156,7 +2161,7 @@ T.apply(th)
 eq(th.checker_mode,'refined','TW1 Derth refined mode')
 eq(tm(0,0,1).replace_display.image:match('^checker%-revised%+refined/tree%-')~=nil,true,'TW1 Derth tree is board tree')
 eq(tm(1,0,1).replace_display.image,'checker-revised+refined/grass1.png','TW1 Derth grass')
-eq(tm(3,1,1).replace_display.image,'checker-revised+refined/road0.png','TW1 Derth stone road')
+eq(tm(3,1,1).replace_display.image,'checker-revised+refined/town/road0.png','TW1 Derth stone road (TW7 board stone slabs)')
 eq(tm(0,3,1).replace_display.image,'checker-revised+refined/exit1.png','TW1 Derth world exit')
 eq(tm(4,1,1).replace_display.image,'checker-revised+refined/deep5-1-0.png','TW1 Derth deep water mask (N,S)')
 eq(tm(1,1,1).replace_display,nil,'TW1 stone never takes a forest replace_display')
@@ -2314,8 +2319,12 @@ end
 local lhWall=deep(lhDefs.HARDWALL);lhWall._checker_town_source=nil
 eq(T.classify(lhWall),nil,'TW2 old-save wall (no town stamp) stays native')
 eq(T.classify(methods.clone(lhDefs.FLOOR_ROAD_STONE)),nil,'TW2 plaza road is not stone floor')
-eq(T.classify(methods.clone(lhDefs.CFAR_EAST_PORTAL)),nil,'TW2 quest farportal (marble floor image) stays native')
-eq(T.classify(methods.clone(lhDefs.FAR_EAST_PORTAL)),nil,'TW2 quest farportal base stays native')
+-- S14 draws the exact stamped quest farportal (tests/terrain_s14.lua); without
+-- its S14 stamp (a pre-S14 save) the TW2 town contract keeps it native.
+for _,id in ipairs{'CFAR_EAST_PORTAL','FAR_EAST_PORTAL'} do
+ local c=methods.clone(lhDefs[id]);c._checker_s14_source=nil
+ eq(T.classify(c),nil,'TW2 quest farportal without the S14 stamp stays native '..id)
+end
 eq(T.classify(mountainRuntime('HARDMOUNTAIN_WALL')),nil,'TW2 mountain is not a stone wall')
 env.game={zone={short_name='town-elvala'}}
 eq(T.classify(methods.clone(elDefs.OLD_FLOOR)),'floor','TW2 Elvala old-stone plaza')
@@ -2366,8 +2375,8 @@ eq(sm(1,0,1).add_displays[1].image,'terrain/statues/statue_tolak.png','TW2 statu
 eq(sm(3,0,1).replace_display.image,'checker-revised+refined/daikara/mountain-wall-61.png','TW2 mountain mask (E,S) Daikara art')
 eq(sm(4,0,1).replace_display.image,'checker-revised+refined/daikara/mountain-wall-80.png','TW2 mountain mask (W)')
 eq(sm(3,1,1).replace_display.image,'checker-revised+refined/daikara/mountain-wall-10.png','TW2 mountain mask (N)')
-eq(sm(1,1,1).replace_display.image,'checker-revised+refined/road0.png','TW2 plaza road is board road')
-eq(sm(3,3,1).replace_display.image,'checker-revised+refined/road0.png','TW2 plaza road by water')
+eq(sm(1,1,1).replace_display.image,'checker-revised+refined/town/road0.png','TW2 plaza road is board road (TW7 stone slabs)')
+eq(sm(3,3,1).replace_display.image,'checker-revised+refined/town/road0.png','TW2 plaza road by water (TW7 stone slabs)')
 eq(sm(4,2,1).replace_display.image:match('^checker%-revised%+refined/deep')~=nil,true,'TW2 moat water')
 eq(sm(2,1,1).replace_display,nil,'TW2 plaza floor is stone, not forest')
 eq(T.render(sm,2,1,sm(2,1,1),'refined').image:match('^checker%-revised%+refined/korpul/floor')~=nil,true,'TW2 remembered plaza floor is board floor')
@@ -2486,16 +2495,16 @@ eq(T.batch4Kind(fe,'town-zigur'),nil,'TW3 exit with another destination stays na
 eq(T.batch4Kind(anMountain('HARDMOUNTAIN_WALL'),'town-angolwen'),'mountain','TW3 Angolwen mountain with native editer layers')
 local fs0=sandRuntime();fs0.add_displays[1].add_mos[1].image='terrain/lava/lava_floor.png'
 eq(T.batch4Kind(fs0,'town-zigur'),nil,'TW3 sand with a foreign layer stays native')
-for _,id in ipairs{'FIELDS','FIELDS1','FIELDS4','COBBLESTONE','ROCK','CLOSED_GATE','OPEN_GATE','HARDWALL','OLD_FLOOR','FLOOR','DOOR'} do
+for _,id in ipairs{'FIELDS','COBBLESTONE','ROCK','CLOSED_GATE','OPEN_GATE','HARDWALL','OLD_FLOOR','FLOOR','DOOR'} do
  if zgDefs[id] then eq(T.batch4Kind(methods.clone(zgDefs[id]),'town-zigur'),nil,'TW3 Zigur non-forest/unsupported identity '..id) end
 end
-for _,id in ipairs{'FIELDS','FIELDS2','COBBLESTONE','HARDWALL'} do
+for _,id in ipairs{'FIELDS','COBBLESTONE','HARDWALL'} do
  eq(T.batch4Kind(methods.clone(anDefs[id]),'town-angolwen'),nil,'TW3 Angolwen non-forest/unsupported identity '..id)
 end
 for _,id in ipairs{'OLD_FLOOR','HARDWALL','UP_WILDERNESS','DEEP_BELLOW','ESCAPE_REKNOR','STATUE1','STATUE6'} do
  eq(T.batch4Kind(methods.clone(icDefs[id]),'town-iron-council'),nil,'TW3 Iron Council stone identity not forest '..id)
 end
--- Fields keep native art: no crop tile exists (FIELDS = GRASS rules plus cultivation MO).
+-- FIELDS = GRASS rules plus one cultivation MO (TW7 draws FIELDS1-4 as the board crop field; the untiled base stays native).
 eq(zgDefs.FIELDS2.add_mos[1].image,'terrain/cultivation02.png','TW3 fields native crop layer')
 eq(T.crystalTerrain(methods.clone(icDefs.CRYSTAL_WALL)),nil,'TW3 council crystal is not crystal.lua (no crystal stamp)')
 local _,fprop=T.townProp(methods.clone(anDefs.FOUNTAIN_MAIN),'town-angolwen')
@@ -3029,7 +3038,7 @@ eq(sm(2,0,1).replace_display.image,'checker-revised+refined/snow/snow-ground0.pn
 eq(sm(2,0,TRAP),sstore,'TW4 Shatur shop trap-layer object untouched')
 for k,v in pairs(shopRulesS) do if k~='replace_display' and k~='_checker_terrain' then eq(sm(2,0,1)[k],v,'TW4 Shatur shop cell field '..tostring(k)) end end
 eq(sm(0,2,1).replace_display.image:match('^checker%-revised%+refined/tree%-')~=nil,true,'TW4 Shatur green elven tree is a board forest tree')
-eq(sm(2,2,1).replace_display.image,'checker-revised+refined/road0.png','TW4 Shatur bridge is board road')
+eq(sm(2,2,1).replace_display.image,'checker-revised+refined/town/road0.png','TW4 Shatur bridge is board road (TW7 stone slabs)')
 eq(sm(3,2,1).replace_display.image,'checker-revised+refined/deep1-1-0.png','TW4 Shatur lake mask (N)')
 eq(sm(4,3,1).replace_display.image,'checker-revised+refined/exit1.png','TW4 Shatur world exit')
 local ss=sm(1,3,1).replace_display
@@ -3212,7 +3221,9 @@ for _,id in ipairs{'PALMTREE','PALMTREE5','PALMTREE20','FENS','WEST_PORTAL','CWE
 end
 env.game={zone={short_name='town-gates-of-morning'}}
 for _,id in ipairs{'FENS','WEST_PORTAL','CWEST_PORTAL','PALMTREE5','GOLDEN_MOUNTAIN','GOLDEN_MOUNTAIN_WALL3','FLOOR_ROAD_STONE','SAND'} do
- eq(T.classify(methods.clone(gDefs[id])),nil,'TW5 not a Gates stone kind '..id)
+ -- (S14: the farportal is an S14 cell with its own stamp, tests/terrain_s14.lua.)
+ local c=methods.clone(gDefs[id]);c._checker_s14_source=nil
+ eq(T.classify(c),nil,'TW5 not a Gates stone kind '..id)
 end
 for _,m in ipairs{
  {'GOLDEN_MOUNTAIN',function(c) c.dig='FLOOR' end},{'GOLDEN_MOUNTAIN',function(c) c.can_pass={pass_wall=1} end},
@@ -3297,11 +3308,11 @@ eq(gi(5,3),'checker-revised+refined/gold-mountain/wall-5-0.png','TW5 mountain be
 eq(gi(1,4),'checker-revised+refined/gold-mountain/wall-10-1.png','TW5 base GOLDEN_MOUNTAIN joins its variants (E,W)')
 eq(gi(5,4),'checker-revised+refined/gold-mountain/wall-9-1.png','TW5 mountain corner (N,W)')
 for k,v in pairs(mountainRules) do if k~='replace_display' and k~='_checker_terrain' then eq(gm(0,0,1)[k],v,'TW5 mountain rule field '..tostring(k)) end end
-eq(gi(4,1),'checker-revised+refined/road1.png','TW5 Gates road is board road')
+eq(gi(4,1),'checker-revised+refined/town/road1.png','TW5 Gates road is board road (TW7 stone slabs)')
 eq(gi(0,3),'checker-revised+refined/exit1.png','TW5 Gates world exit')
 eq(gi(1,3),'checker-revised+refined/beach/sand0.png','TW5 Gates sand is beach sand')
 eq(gi(2,3),'checker-revised+refined/beach/sand1.png','TW5 Gates sand parity')
-eq(gm(3,3,1).replace_display,nil,'TW5 Gates palm stays native')
+eq(gm(3,3,1).replace_display,nil,'TW5 Gates palm without its native makeTrees parts stays native (TW7 needs them)')
 eq(gi(4,3),'checker-revised+refined/deep0-1-0.png','TW5 Gates ocean (no water neighbour)')
 eq(gm(1,1,1).replace_display,nil,'TW5 plaza floor is stone, not forest')
 eq(gm(2,1,1).replace_display,nil,'TW5 building wall is stone, not forest')
@@ -3322,7 +3333,7 @@ eq(T.render(gm,2,1,gm(2,1,1),'vanilla').image,gDefs.HARDWALL.image,'TW5 native m
 mode='refined';T.apply(gh)
 eq(gi(0,0),'checker-revised+refined/gold-mountain/wall-6-0.png','TW5 refined restore mountain')
 eq(gi(1,3),'checker-revised+refined/beach/sand0.png','TW5 refined restore sand')
-eq(gm(3,3,1).replace_display,nil,'TW5 refined restore leaves the palm native')
+eq(gm(3,3,1).replace_display,nil,'TW5 refined restore leaves the partless palm native')
 -- Old save: a Gates level generated before the list stamp stays native.
 local go=townMap(4,1,function(x) local g=deep(gDefs[({'GOLDEN_MOUNTAIN','SAND','FLOOR_ROAD_STONE','HARDWALL'})[x+1]]);g._checker_town_source=nil;return g end)
 T.apply({zone={short_name='town-gates-of-morning'},level={map=go,data={all_remembered=true}}})
@@ -3697,10 +3708,12 @@ for _,m in ipairs{
  eq(T.batch4Kind(c,m[3]),nil,'S5 altered '..m[3]..' '..m[2]..' stays native')
 end
 -- Callback, lever, portal and transition cells keep native on both adapters.
-local natives={{tDefs,'tannen-tower',{'PORTAL_BACK','GENERIC_LEVER','GENERIC_LEVER_DOOR','GENERIC_LEVER_DOOR_HORIZ','GENERIC_LEVER_DOOR_VERT',
-  'GENERIC_LEVER_DOOR_OPEN','GENERIC_LEVER_DOOR_HORIZ_OPEN','GENERIC_LEVER_DOOR_OPEN_VERT','LAVA_FLOOR','ROCKY_GROUND'}},
+-- S11: Tannen's levers and the tiled lever doors (Tannen, arena) are exact
+-- S11 cells (tests/terrain_s11.lua); the untiled bases stay native.
+local natives={{tDefs,'tannen-tower',{'PORTAL_BACK','GENERIC_LEVER_DOOR',
+  'GENERIC_LEVER_DOOR_OPEN','LAVA_FLOOR','ROCKY_GROUND'}},
  {rDefs,'ring-of-blood',{'CONTROL_ORB','GENERIC_LEVER','GENERIC_LEVER_DOOR'}},
- {uDefs,'arena-unlock',{'GENERIC_LEVER_DOOR','GENERIC_LEVER_DOOR_HORIZ','GENERIC_LEVER_DOOR_VERT','LOCK','WALL_SEE'}},
+ {uDefs,'arena-unlock',{'GENERIC_LEVER_DOOR','LOCK','WALL_SEE'}},
  {vDefs,'valley-moon',{'MOONSTONE','ROCKY_GROUND','SHALLOW_WATER'}},
  {cDefs,'shadow-crypt',{'QUICK_EXIT','GENERIC_LEVER_DOOR'}}}
 for _,c in ipairs(natives) do
@@ -3708,7 +3721,9 @@ for _,c in ipairs(natives) do
  for _,id in ipairs(c[3]) do
   if c[1][id] then
    eq(T.batch4Kind(methods.clone(c[1][id]),c[2]),nil,'S5 '..c[2]..' '..id..' not a forest kind')
-   eq(T.classify(methods.clone(c[1][id])),nil,'S5 '..c[2]..' '..id..' not a stone kind')
+   -- (S14: Tannen's return portal is an S14 cell with its own stamp, tests/terrain_s14.lua.)
+   local g=methods.clone(c[1][id]);g._checker_s14_source=nil
+   eq(T.classify(g),nil,'S5 '..c[2]..' '..id..' not a stone kind')
   end
  end
 end
@@ -3754,7 +3769,8 @@ for _,zone in ipairs{'dreadfell','ruins-kor-pul','shadow-crypt','town-derth'} do
  eq(T.classify(methods.clone(tDefs.TUP)),nil,'S5 TUP is Tannen only ('..zone..')')
 end
 env.game={zone={short_name='tannen-tower'}}
-eq(T.classify(methods.clone(tDefs.PORTAL_BACK)),nil,'S5 Tannen portal back stays native')
+do local g=methods.clone(tDefs.PORTAL_BACK);g._checker_s14_source=nil
+ eq(T.classify(g),nil,'S5 Tannen portal back without the S14 stamp stays native') end
 -- The flooded floor's native marble-to-water edge carrier (fixture probe).
 local function edged(id,mos,extra)
  local g=deep(tDefs[id]);local d={image='invis.png',add_mos=mos}
@@ -4548,7 +4564,8 @@ for id,kind in pairs(oKinds) do
  end
 end
 eq(T.batch4Kind(methods.clone(oDefs.FENCE_DOOR),'gorbat-pride'),nil,'S6 unresolved door3d base stays native')
-for _,id in ipairs{'ROCK_LEVER_DOOR','GENERIC_LEVER_SAND','FLOOR','DOOR','FLAT_UP6','UP_WILDERNESS','PALMTREE5','TREE3'} do
+-- S11: ROCK_LEVER_DOOR and GENERIC_LEVER_SAND are exact S11 cells (tests/terrain_s11.lua).
+for _,id in ipairs{'FLOOR','DOOR','FLAT_UP6','UP_WILDERNESS','PALMTREE5','TREE3'} do
  if oDefs[id] then eq(T.batch4Kind(methods.clone(oDefs[id]),'gorbat-pride'),nil,'S6 not a Gorbat forest kind '..id) end
 end
 -- Irkkk's jungle_hut grids never become Gorbat roosts (and vice versa above).
@@ -4655,10 +4672,10 @@ eq(gm(3,1,1).replace_display.add_displays[1].image,'terrain/huge_rock.png','S6 r
 local go=townMap(3,1,function(x) local g=deep(oDefs[({'FENCE_WALL','SAND','ROCK_DOOR'})[x+1]]);g._checker_zone_source=nil;return g end)
 T.apply({zone={short_name='gorbat-pride'},level={map=go,data={}}})
 for x=0,2 do eq(go(x,0,1).replace_display,nil,'S6 old-save Gorbat cell stays native '..x) end
--- Gates of Morning keeps its native palms (open decision); its other kinds unchanged.
+-- TW7: Gates of Morning's palms use this exact S6 palm contract under the town stamp; its other kinds unchanged.
 local gates=loadDefs('/data/zones/town-gates-of-morning/grids.lua')
 local gp=deep(gates.PALMTREE5);gp.add_displays={setmetatable({image='terrain/palmtree_alpha2.png',z=16,shader='tree',shader_args={attenuation=25},display_h=1},meta)}
-eq(T.batch4Kind(gp,'town-gates-of-morning'),nil,'S6 Gates of Morning palm stays native')
+eq(T.batch4Kind(gp,'town-gates-of-morning'),'palm','TW7 Gates of Morning palm on the S6 palm contract')
 eq(T.batch4Kind(methods.clone(gates.SAND),'town-gates-of-morning'),'sand','S6 Gates sand unchanged')
 env.game=saved;mode='refined'
 end)()
@@ -4840,8 +4857,600 @@ for x=0,1 do ro.seen[x]=true;T.observe(ro,x,0,ro(x,0,1));eq(T.render(ro,x,0,ro(x
 T.stairAssets,T.korpulDarkAssets=savedStairs,savedDark
 env.game=sg;mode='refined'
 end)()
+-- TW7: town roads draw board stone slabs (every other zone keeps the dirt
+-- road), Zigur/Angolwen FIELDS1-4 draw the board crop field on an exact
+-- plain-grass contract, and Gates of Morning's palms use S6's exact palm
+-- contract under the town stamp. Rules are never touched.
+;(function()
+local sg=env.game
+local zFile,aFile,gFile='/data/zones/town-zigur/grids.lua','/data/zones/town-angolwen/grids.lua','/data/zones/town-gates-of-morning/grids.lua'
+local zDefs,aDefs,gDefs=loadDefs(zFile),loadDefs(aFile),loadDefs(gFile)
+local dDefs=loadDefs('/data/zones/town-derth/grids.lua')
+eq(zDefs.FIELDS3._checker_town_source.file,zFile,'TW7 Zigur list stamps its fields')
+eq(aDefs.FIELDS1._checker_town_source.id,'FIELDS1','TW7 Angolwen stamp id is the variant id')
+eq(zDefs.FIELDS3._checker_forest_source.id,'GRASS','TW7 fields inherit only the GRASS forest stamp')
+local function field(defs,id,borders)
+ local g=deep(defs[id])
+ if borders then
+  local ms={};for i,img in ipairs(borders) do ms[i]={image=img} end
+  g.add_displays={setmetatable({image='invis.png',add_mos=ms},meta)}
+ end
+ return g
+end
+for i=1,4 do
+ eq(T.batch4Kind(field(zDefs,'FIELDS'..i),'town-zigur'),'fields','TW7 Zigur FIELDS'..i)
+ eq(T.batch4Kind(field(aDefs,'FIELDS'..i),'town-angolwen'),'fields','TW7 Angolwen FIELDS'..i)
+ eq(T.batch4Kind(field(aDefs,'FIELDS'..i,{'terrain/grass/grass_7_01.png'}),'town-angolwen'),'fields','TW7 Angolwen FIELDS'..i..' with its grass-border carrier')
+ local u=field(zDefs,'FIELDS'..i);u._checker_town_source=nil
+ eq(T.batch4Kind(u,'town-zigur'),nil,'TW7 unstamped (old-save) field stays native '..i)
+ eq(T.batch4Kind(field(zDefs,'FIELDS'..i),'town-angolwen'),nil,'TW7 Zigur field is not an Angolwen field '..i)
+ eq(T.batch4Kind(field(aDefs,'FIELDS'..i),'town-zigur'),nil,'TW7 Angolwen field is not a Zigur field '..i)
+ eq(T.batch4Kind(field(dDefs,'FIELDS'..i),'town-derth'),nil,'TW7 Derth (0 map cells) fields stay native '..i)
+ for _,fam in ipairs{'beach','meadow','caldera','town-gates-of-morning','valley-moon'} do
+  eq(T.batch4Kind(field(zDefs,'FIELDS'..i),fam),nil,'TW7 fields are town scoped '..fam..' '..i)
+ end
+ env.game={zone={short_name='town-zigur'}}
+ eq(T.classify(field(zDefs,'FIELDS'..i)),nil,'TW7 field is not stone '..i)
+end
+eq(T.batch4Kind(field(zDefs,'FIELDS'),'town-zigur'),nil,'TW7 untiled FIELDS base stays native')
+for _,m in ipairs{
+ {'wrong crop number',function(c) c.add_mos[1].image='terrain/cultivation03.png' end},
+ {'no crop layer',function(c) c.add_mos=nil end},
+ {'second crop layer',function(c) c.add_mos[2]={image='terrain/cultivation01.png'} end},
+ {'crop layer offset',function(c) c.add_mos[1].display_y=-1 end},
+ {'foreign carrier art',function(c) c.add_displays={setmetatable({image='invis.png',add_mos={{image='terrain/road_dirt/road_a_01.png'}}},meta)} end},
+ {'carrier with depth',function(c) c.add_displays={setmetatable({image='invis.png',z=3,add_mos={{image='terrain/grass/grass_2_01.png'}}},meta)} end},
+ {'prop display',function(c) c.add_displays={setmetatable({image='terrain/signpost.png'},meta)} end},
+ {'blocks move',function(c) c.does_block_move=true end},{'blocks sight',function(c) c.block_sight=true end},
+ {'diggable',function(c) c.dig='GRASS' end},{'can_pass',function(c) c.can_pass={pass_tree=1} end},
+ {'grows other',function(c) c.grow='FIELDS' end},{'road',function(c) c.road='dirt' end},
+ {'on_move',function(c) c.on_move=function() end end},{'on_stand',function(c) c.on_stand=function() end end},
+ {'block_move',function(c) c.block_move=function() return true end end},{'transition',function(c) c.change_zone='wilderness' end},
+ {'renamed',function(c) c.name='grass' end},{'redisplayed',function(c) c.display='.' end},
+ {'retyped',function(c) c.subtype='floor' end},{'other image',function(c) c.image='terrain/cultivation.png' end},
+ {'remembered',function(c) c.always_remember=true end},{'noticed',function(c) c.notice=true end},
+ {'air',function(c) c.air_level=-5 end},{'shader',function(c) c.shader='water' end},
+} do
+ local c=field(zDefs,'FIELDS2');m[2](c)
+ eq(T.batch4Kind(c,'town-zigur'),nil,'TW7 altered field stays native: '..m[1])
+end
+-- Gates of Morning palms: the S6 contract (makeTrees parts, optional sand carrier) under the town stamp.
+local function gpalm(id,parts,carrier)
+ local g=deep(gDefs[id]);local ds={}
+ for i=1,parts do ds[i]=setmetatable({image='terrain/palmtree_alpha'..i..'.png',z=15+i,shader='tree',shader_args={attenuation=25},display_h=i==1 and 1 or 2},meta) end
+ if carrier then ds[#ds+1]=setmetatable({image='invis.png',add_mos={{image='terrain/sand/sand_2_01.png'}}},meta) end
+ g.add_displays=ds;return g
+end
+eq(gDefs.PALMTREE13._checker_sand_source.file,'/data/general/grids/sand.lua','TW7 Gates palm keeps its sand.lua stamp')
+eq(gDefs.PALMTREE13._checker_town_source.file,gFile,'TW7 Gates list stamps its nested palms')
+eq(T.batch4Kind(gpalm('PALMTREE13',2),'town-gates-of-morning'),'palm','TW7 Gates palm (two parts)')
+eq(T.batch4Kind(gpalm('PALMTREE17',1),'town-gates-of-morning'),'palm','TW7 Gates palm (one part)')
+eq(T.batch4Kind(gpalm('PALMTREE4',1,true),'town-gates-of-morning'),'palm','TW7 Gates palm with its sand-border carrier')
+local up=gpalm('PALMTREE9',2);up._checker_town_source=nil
+eq(T.batch4Kind(up,'town-gates-of-morning'),nil,'TW7 unstamped (old-save) Gates palm stays native')
+local us=gpalm('PALMTREE9',2);us._checker_sand_source=nil
+eq(T.batch4Kind(us,'town-gates-of-morning'),nil,'TW7 Gates palm without the sand.lua stamp stays native')
+for _,other in ipairs{'town-zigur','town-derth','town-irkkk','town-last-hope'} do
+ eq(T.batch4Kind(gpalm('PALMTREE9',2),other),nil,'TW7 Gates palm is scoped to its town '..other)
+end
+eq(T.batch4Kind(deep(gDefs.PALMTREE),'town-gates-of-morning'),nil,'TW7 base PALMTREE stays native')
+for _,m in ipairs{
+ {'passable',function(c) c.does_block_move=nil end},{'see-through',function(c) c.block_sight=nil end},
+ {'dig',function(c) c.dig='FLOOR' end},{'pass_wall',function(c) c.can_pass={pass_tree=1,pass_wall=1} end},
+ {'foreign part',function(c) c.add_displays[1].image='terrain/trees/pine_01.png' end},
+ {'part depth',function(c) c.add_displays[1].z=5 end},{'callback',function(c) c.on_stand=function() end end},
+ {'four parts',function(c) for i=3,4 do c.add_displays[i]=setmetatable({image='terrain/palmtree_alpha1.png',z=15+i,shader='tree',shader_args={attenuation=25},display_h=2},meta) end end},
+} do
+ local c=gpalm('PALMTREE12',2);m[2](c)
+ eq(T.batch4Kind(c,'town-gates-of-morning'),nil,'TW7 altered Gates palm stays native: '..m[1])
+end
+-- Scene: a Zigur plot with road and grass; Gates beach with a palm.
+local zplan={'.__-','.-.-','t_--'}
+local zsym={['.']='GRASS',_='GRASS_ROAD_STONE',t='TREE3'}
+local fn=0
+local zm=townMap(4,3,function(x,y)
+ local c=zplan[y+1]:sub(x+1,x+1)
+ if c=='-' then fn=fn%4+1;return field(zDefs,'FIELDS'..fn) end
+ return zDefs[zsym[c]]
+end)
+local rules={}
+for x=0,3 do for y=0,2 do local r={};for k,v in pairs(zm(x,y,1)) do r[k]=v end;rules[x+y*4]=r end end
+env.game={zone={short_name='town-zigur'}}
+local zh={zone={short_name='town-zigur'},level={map=zm,data={}}}
+mode='refined';T.apply(zh)
+local function zi(x,y) return zm(x,y,1).replace_display and zm(x,y,1).replace_display.image end
+eq(zi(3,0),'checker-revised+refined/town/fields1.png','TW7 Zigur field is the board crop field')
+eq(zi(1,1),'checker-revised+refined/town/fields0.png','TW7 field parity')
+eq(zi(1,0),'checker-revised+refined/town/road1.png','TW7 Zigur road is board stone slabs')
+eq(zi(2,0),'checker-revised+refined/town/road0.png','TW7 road parity')
+eq(zi(0,0),'checker-revised+refined/grass0.png','TW7 Zigur grass unchanged')
+eq(zm(3,0,1).replace_display.add_mos,nil,'TW7 native crop layer is not redrawn over the board field')
+for x=0,3 do for y=0,2 do
+ for k,v in pairs(rules[x+y*4]) do if k~='replace_display' and k~='_checker_terrain' then eq(zm(x,y,1)[k],v,'TW7 rule field unchanged '..x..','..y..' '..tostring(k)) end end
+end end
+mode='blockout';T.apply(zh)
+eq(zi(3,0),'checker-revised+grass1.png','TW7 blockout field reads as walkable ground')
+eq(zi(1,0),'checker-revised+road1.png','TW7 blockout road')
+mode='vanilla';T.apply(zh)
+for x=0,3 do for y=0,2 do eq(zm(x,y,1).replace_display,nil,'TW7 native mode restores Zigur '..x..','..y) end end
+mode='refined';T.apply(zh)
+eq(zi(3,0),'checker-revised+refined/town/fields1.png','TW7 refined restore field')
+eq(zi(1,0),'checker-revised+refined/town/road1.png','TW7 refined restore road')
+local gplan={'*p_','*p*'}
+local gm=townMap(3,2,function(x,y)
+ local c=gplan[y+1]:sub(x+1,x+1)
+ if c=='p' then return gpalm(y==0 and 'PALMTREE13' or 'PALMTREE17',y==0 and 2 or 1) end
+ return gDefs[c=='*' and 'SAND' or 'FLOOR_ROAD_STONE']
+end)
+env.game={zone={short_name='town-gates-of-morning'}}
+local gh={zone={short_name='town-gates-of-morning'},level={map=gm,data={all_remembered=true}}}
+mode='refined';T.apply(gh)
+local function gi(x,y) return gm(x,y,1).replace_display and gm(x,y,1).replace_display.image end
+eq(gi(1,0),'checker-revised+refined/eruan/palm-a1.png','TW7 Gates palm draws the S6 board palm')
+eq(gi(1,1),'checker-revised+refined/eruan/palm-a0.png','TW7 Gates palm parity follows S6')
+eq(gi(2,0),'checker-revised+refined/town/road0.png','TW7 Gates plaza road is board stone slabs')
+eq(gi(0,0),'checker-revised+refined/beach/sand0.png','TW7 Gates sand unchanged')
+eq(gm(1,0,1).does_block_move,true,'TW7 Gates palm still blocks movement')
+eq(gm(1,0,1).block_sight,true,'TW7 Gates palm still blocks sight')
+mode='blockout';T.apply(gh)
+eq(gi(1,0),'checker-revised+tree1.png','TW7 blockout palm reads as blocking')
+mode='vanilla';T.apply(gh)
+for x=0,2 do for y=0,1 do eq(gm(x,y,1).replace_display,nil,'TW7 native mode restores Gates '..x..','..y) end end
+-- Other zones keep the forest dirt road: South Beach and Old Forest style families.
+local bh=townMap(1,1,function() return dDefs.GRASS_ROAD_STONE end)
+local bc=bh(0,0,1);bc._checker_town_source=nil
+env.game={zone={short_name='south-beach'}};mode='refined'
+T.apply({zone={short_name='south-beach'},level={map=bh,data={}}})
+eq(bh(0,0,1).replace_display and bh(0,0,1).replace_display.image,'checker-revised+refined/road0.png','TW7 South Beach road keeps the dirt road tile')
+-- Old save: unstamped Zigur plot cells stay native.
+local zo=townMap(2,1,function(x) local g=x==0 and field(zDefs,'FIELDS1') or deep(zDefs.GRASS_ROAD_STONE);g._checker_town_source=nil;return g end)
+env.game={zone={short_name='town-zigur'}}
+T.apply({zone={short_name='town-zigur'},level={map=zo,data={}}})
+for x=0,1 do eq(zo(x,0,1).replace_display,nil,'TW7 old-save Zigur cell stays native '..x) end
+env.game=sg;mode='refined'
+end)()
+-- S10a: Grushnak Pride L1-3, Slime Tunnels, Sludgenest L1-3. The new board
+-- slime family (floor, wall masks, stairs, creep over board stone) and the
+-- reused families (Kor'Pul stone incl. the SLIMED_* corner, gloom plain
+-- thicket, Caldera jungle, training dummy prop). Every S10a cell needs its
+-- zone list stamp and its defining file's stamp; callbacks stay native.
+;(function()
+local sg,savedStairs,savedDark=env.game,T.stairAssets,T.korpulDarkAssets
+local gFile,sFile,nFile='/data/zones/grushnak-pride/grids.lua','/data/zones/slime-tunnels/grids.lua','/data/zones/sludgenest/grids.lua'
+local gD,sD,nD=loadDefs(gFile),loadDefs(sFile),loadDefs(nFile)
+T.stairAssets={ready=true,files=setmetatable({},{__index=function(_,k) return type(k)=='string' and k:match('^checker%-revised%+refined/korpul/stairs%-') and true or nil end})}
+T.korpulDarkAssets={ready=true,files=setmetatable({},{__index=function(_,k) return type(k)=='string' and k:match('^checker%-revised%+refined/korpul%-dark/') and true or nil end})}
+-- Stamps: general-file stamps survive the outer zone list stamp.
+eq(sD.SLIME_WALL3._checker_slime_source.file,'/data/general/grids/slime.lua','S10a slime.lua stamps its wall variants')
+eq(sD.SLIME_WALL3._checker_zone_source.file,sFile,'S10a Slime Tunnels list stamps nested slime.lua')
+eq(nD.SLIME_FLOOR2._checker_zone_source.file,nFile,'S10a Sludgenest list stamps nested slime.lua')
+eq(nD.JUNGLE_TREE7._checker_jungle_source.file,'/data/general/grids/jungle.lua','S10a Sludgenest jungle keeps its jungle.lua stamp')
+eq(gD.UNDERGROUND_CREEP2._checker_slime_source.file,'/data/general/grids/underground_slimy.lua','S10a underground_slimy.lua stamp')
+eq(gD.SLIMED_WALL_NORTH3._checker_slime_source.file,'/data/general/grids/slimy_walls.lua','S10a slimy_walls.lua stamp')
+eq(gD.SLIMED_FLOOR.image,'terrain/underground_floor.png','S10a Grushnak rewrites the slimed floor image')
+eq(gD.FLOOR.image,'terrain/underground_floor.png','S10a Grushnak rewrites basic.lua FLOOR image')
+eq(gD.FLOOR._checker_grid_source.file,'/data/general/grids/basic.lua','S10a Grushnak FLOOR keeps its basic.lua stamp')
+eq(gD.TRAINING_DUMMY._checker_zone_source.id,'TRAINING_DUMMY','S10a Grushnak list stamps its dummy')
+eq(sD.UP_GRUSHNAK._checker_slime_source.id,'SLIME_UP','S10a UP_GRUSHNAK carries only the inherited SLIME_UP stamp')
+-- Gating: Grushnak combines stone with the slime/underground cells; the
+-- tunnels and the nest are forest-style families only.
+eq(T.variant({short_name='grushnak-pride'}),'GRUSHNAK_PRIDE','S10a Grushnak stone gate')
+eq(T.combined['grushnak-pride'],true,'S10a Grushnak combined')
+for _,z in ipairs{'slime-tunnels','sludgenest'} do eq(T.variant({short_name=z}),nil,'S10a no stone variant '..z) end
+local K=T.batch4Kind
+local function kinds(defs,zone,list,label)
+ for id,kind in pairs(list) do eq(K(methods.clone(assert(defs[id],id)),zone),kind,'S10a '..label..' '..id) end
+end
+kinds(sD,'slime-tunnels',{SLIME_FLOOR='slime-floor',SLIME_FLOOR4='slime-floor',SLIME_WALL='slime-wall',SLIME_WALL5='slime-wall',
+ UP_GRUSHNAK='slime-up',SLIME_UP='slime-up',SLIME_DOWN='slime-down'},'tunnels')
+kinds(nD,'sludgenest',{SLIME_FLOOR2='slime-floor',SLIME_WALL1='slime-wall',SLIME_UP='slime-up',SLIME_DOWN='slime-down',
+ JUNGLE_GRASS='jungle-grass',JUNGLE_GRASS_PATCH3='jungle-grass',JUNGLE_TREE12='jungle-tree',JUNGLE_GRASS_UP_WILDERNESS='jungle-exit'},'nest')
+kinds(gD,'grushnak-pride',{UNDERGROUND_FLOOR='under-floor',UNDERGROUND_FLOOR7='under-floor',UNDERGROUND_CREEP='creep',
+ UNDERGROUND_CREEP3='creep',UNDERGROUND_TREE='thicket',UNDERGROUND_TREE9='thicket',TRAINING_DUMMY='dummy',SLIME_TUNNELS='slime-down'},'grushnak')
+-- Callback cells, doors, unused and foreign definitions stay native.
+for _,id in ipairs{'ORB_DRAGON','ORB_UNDEATH','ORB_ELEMENTS','ORB_DESTRUCTION','PEAK_STAIR','PEAK_STAIR_FAKE','FAKE_WALL','PEAK_DOOR',
+ 'SLIME_DOOR','SLIME_DOOR_HORIZ','SLIME_DOOR_VERT','SLIME_DOOR_OPEN','SLIME_DOOR_HORIZ_OPEN','SLIME_DOOR_OPEN_VERT','FLOOR','WALL'} do
+ eq(K(methods.clone(sD[id]),'slime-tunnels'),nil,'S10a tunnels native '..id)
+end
+eq(K(methods.clone(nD.UP_GRUSHNAK),'sludgenest'),nil,'S10a Sludgenest\'s unused UP_GRUSHNAK (level 6) stays native')
+eq(K(methods.clone(nD.PEAK_STAIR),'sludgenest'),nil,'S10a Sludgenest peak stair (callback) native')
+for _,id in ipairs{'UNDERGROUND_HARDTREE','UNDERGROUND_HARDTREE4','UNDERGROUND_VAULT','UNDERGROUND_LADDER_DOWN','UNDERGROUND_LADDER_UP_WILDERNESS',
+ 'SLIMED_WALL','SLIMED_FLOOR','SLIMED_DOOR','FLOOR','WALL','HARDWALL','UP','DOWN','LAVA_FLOOR','DEEP_WATER','GRASS','TREE'} do
+ if gD[id] then eq(K(methods.clone(gD[id]),'grushnak-pride'),nil,'S10a grushnak not a forest kind '..id) end
+end
+-- Zone scope: slime cells in Grushnak, underground cells elsewhere, and
+-- every S10a cell outside its three zones stay native.
+eq(K(methods.clone(sD.SLIME_FLOOR),'grushnak-pride'),nil,'S10a slime floor not claimed in Grushnak')
+eq(K(methods.clone(gD.UNDERGROUND_CREEP),'slime-tunnels'),nil,'S10a creep not claimed in the tunnels')
+eq(K(methods.clone(gD.TRAINING_DUMMY),'sludgenest'),nil,'S10a dummy not claimed outside Grushnak')
+for _,z in ipairs{'infinite-dungeon','vor-pride','gorbat-pride','high-peak'} do
+ eq(K(methods.clone(sD.SLIME_WALL),z),nil,'S10a slime wall ungated in '..z)
+ eq(K(methods.clone(gD.UNDERGROUND_CREEP),z),nil,'S10a creep ungated in '..z)
+end
+-- Old save: without the zone list stamp or the general-file stamp, native.
+for _,c in ipairs{{sD,'SLIME_WALL','slime-tunnels'},{sD,'UP_GRUSHNAK','slime-tunnels'},{nD,'JUNGLE_TREE3','sludgenest'},
+ {gD,'UNDERGROUND_CREEP1','grushnak-pride'},{gD,'TRAINING_DUMMY','grushnak-pride'},{gD,'SLIME_TUNNELS','grushnak-pride'}} do
+ local u=deep(c[1][c[2]]);u._checker_zone_source=nil
+ eq(K(u,c[3]),nil,'S10a unstamped (old save) stays native '..c[2])
+end
+for _,c in ipairs{{sD,'SLIME_WALL','slime-tunnels'},{nD,'SLIME_DOWN','sludgenest'},{gD,'UNDERGROUND_TREE4','grushnak-pride'}} do
+ local u=deep(c[1][c[2]]);u._checker_slime_source=nil
+ eq(K(u,c[3]),nil,'S10a without the general-file stamp stays native '..c[2])
+end
+-- Native NicerTiles layers are accepted exactly; anything else is native.
+local function withDisplays(g,list) g=deep(g);g.add_displays={};for i,d in ipairs(list) do g.add_displays[i]=setmetatable(d,meta) end;return g end
+local wallEdge=withDisplays(sD.SLIME_WALL2,{{image='invis.png',add_mos={{image='terrain/slime/slime_edge_vertical_left_01.png',display_x=-0.03125}}},
+ {image='terrain/slime/slime_wall_V2_top_01.png',z=18,display_y=-1},{image='terrain/slime/floor_wall_slime_02.png',display_y=1}})
+wallEdge.image='terrain/slime/slime_wall_V2_8_01.png'
+eq(K(wallEdge,'slime-tunnels'),'slime-wall','S10a slime wall with native slime_wall edges')
+local creepEdge=withDisplays(gD.UNDERGROUND_CREEP4,{{image='invis.png',add_mos={{image='terrain/mushrooms/creep_slimy_mushrooms_2_01.png',display_y=-1},
+ {image='terrain/mushrooms/creep_slimy_mushrooms_inner_7_01.png',display_x=-1,display_y=-1}}}})
+eq(K(creepEdge,'grushnak-pride'),'creep','S10a creep with native slimy-creep borders')
+local upEdge=withDisplays(sD.UP_GRUSHNAK,{{image='terrain/slime/slime_stairs_up_left_01.png'},
+ {image='invis.png',add_mos={{image='terrain/mushrooms/creep_slimy_mushrooms_6_01.png',display_x=-1}}}})
+eq(K(upEdge,'slime-tunnels'),'slime-up','S10a Grushnak exit with its native creep carrier')
+local treeParts=withDisplays(gD.UNDERGROUND_TREE5,{{image='invis.png',z=3,add_mos={{image='terrain/mushrooms/slimy_mushroom_02_trunk.png'}}},
+ {image='terrain/mushrooms/slimy_mushroom_02_head_02.png',z=16,display_y=-0.92,display_h=2}})
+eq(K(treeParts,'grushnak-pride'),'thicket','S10a thicket with its native mushroom parts')
+local deco=deep(gD.UNDERGROUND_FLOOR5);deco.add_mos={{image='terrain/mushrooms/deco_floor_slimy_mushroom_04.png'}}
+eq(K(deco,'grushnak-pride'),'under-floor','S10a underground floor with its native floor mushroom')
+for label,g in pairs{
+ wallForeign=withDisplays(sD.SLIME_WALL2,{{image='terrain/granite_wall3.png',z=18,display_y=-1}}),
+ wallMos=(function() local g=deep(sD.SLIME_WALL);g.add_mos={{image='terrain/slime/slime_edge_upper_left_01.png'}};return g end)(),
+ creepSlimeCarrier=withDisplays(gD.UNDERGROUND_CREEP4,{{image='invis.png',add_mos={{image='terrain/slime/slime_edge_upper_left_01.png'}}}}),
+ creepDisplay=withDisplays(gD.UNDERGROUND_CREEP4,{{image='terrain/mushrooms/creep_slimy_mushrooms_2_01.png'}}),
+ creepCarrierZ=withDisplays(gD.UNDERGROUND_CREEP4,{{image='invis.png',z=3,add_mos={{image='terrain/mushrooms/creep_slimy_mushrooms_2_01.png'}}}}),
+ upNoStairs=withDisplays(sD.UP_GRUSHNAK,{{image='invis.png',add_mos={{image='terrain/mushrooms/creep_slimy_mushrooms_6_01.png'}}}}),
+ upWrongStairs=withDisplays(sD.SLIME_UP,{{image='terrain/slime/slime_stair_down_01.png'}}),
+ upStairsZ=withDisplays(sD.SLIME_UP,{{image='terrain/slime/slime_stairs_up_left_01.png',z=5}}),
+ treeForeign=withDisplays(gD.UNDERGROUND_TREE5,{{image='terrain/trees/oak_01.png',z=16}}),
+ decoTwo=(function() local g=deep(gD.UNDERGROUND_FLOOR5);g.add_mos={{image='terrain/mushrooms/deco_floor_slimy_mushroom_04.png'},{image='terrain/mushrooms/deco_floor_slimy_mushroom_05.png'}};return g end)(),
+ decoShift=(function() local g=deep(gD.UNDERGROUND_FLOOR5);g.add_mos={{image='terrain/mushrooms/deco_floor_slimy_mushroom_04.png',display_y=-1}};return g end)(),
+ floorStairs=withDisplays(gD.UNDERGROUND_FLOOR7,{{image='terrain/stair_down.png',z=5}}),
+ dummyTwo=withDisplays(gD.TRAINING_DUMMY,{{image='npc/lure.png',z=9},{image='npc/lure.png',z=10}}),
+ dummyZ=withDisplays(gD.TRAINING_DUMMY,{{image='npc/lure.png',z=18}}),
+} do eq(K(g,label:match('^up') and 'slime-tunnels' or label:match('^wall') and 'slime-tunnels' or 'grushnak-pride'),nil,'S10a foreign layer stays native: '..label) end
+-- One changed rule field or a callback keeps each kind native.
+local mutations={
+ stand=function(g) g.on_stand=function() end end, bump=function(g) g.block_move=function() end end,
+ move=function(g) g.on_move=function() end end, special=function(g) g.special=true end, shader=function(g) g.shader='water' end,
+ level=function(g) g.change_level=(g.change_level or 0)+1 end, zone=function(g) g.change_zone='wilderness' end,
+ check=function(g) g.change_level_check=function() return true end end, name=function(g) g.name='x' end,
+ display=function(g) g.display='?' end, image=function(g) g.image='terrain/marble_floor.png' end,
+ blockmove=function(g) g.does_block_move=not g.does_block_move or nil end, sight=function(g) g.block_sight=not g.block_sight or nil end,
+ sense=function(g) g.block_sense=true end, air=function(g) g.air_level=(g.air_level or 0)-5 end,
+ dig=function(g) g.dig=g.dig and 'FLOOR' or 'SLIME_FLOOR' end, canpass=function(g) g.can_pass=g.can_pass or {};g.can_pass.pass_void=1 end,
+ door=function(g) g.is_door=true end, subtype=function(g) g.subtype='floor' end, type=function(g) g.type=g.type=='wall' and 'floor' or 'wall' end,
+ grow=function(g) g.grow='WALL' end, remember=function(g) g.always_remember=not g.always_remember or nil end,
+ projectile=function(g) g.pass_projectile=not g.pass_projectile or nil end, z=function(g) g.z=7 end,
+ abs=function(g) g.change_level_abs=true end,
+}
+for _,c in ipairs{{sD,'SLIME_FLOOR3','slime-tunnels'},{sD,'SLIME_WALL4','slime-tunnels'},{sD,'UP_GRUSHNAK','slime-tunnels'},
+ {nD,'SLIME_DOWN','sludgenest'},{gD,'UNDERGROUND_FLOOR3','grushnak-pride'},{gD,'UNDERGROUND_CREEP5','grushnak-pride'},
+ {gD,'UNDERGROUND_TREE12','grushnak-pride'},{gD,'TRAINING_DUMMY','grushnak-pride'},{gD,'SLIME_TUNNELS','grushnak-pride'}} do
+ local base=K(methods.clone(c[1][c[2]]),c[3])
+ assert(base,c[2])
+ for label,mut in pairs(mutations) do
+  local g=deep(c[1][c[2]]);mut(g)
+  eq(K(g,c[3]),nil,'S10a altered '..c[2]..' stays native: '..label)
+ end
+end
+-- Stone adapter in Grushnak: basic.lua with the rewritten base image, and
+-- the SLIMED_* corner as stone kinds.
+env.game={zone={short_name='grushnak-pride'}}
+for id,kind in pairs{FLOOR='floor',WALL='wall',WALL_NORTH3='wall',HARDWALL='hardwall',DOOR='door-closed',DOOR_OPEN='door-open',
+ UP='stairs-up',DOWN='stairs-down',UP_WILDERNESS='stairs-world',SLIMED_FLOOR='floor',SLIMED_WALL='wall',SLIMED_WALL3='wall',
+ SLIMED_WALL_NORTH2='wall',SLIMED_WALL_SOUTH12='wall',SLIMED_WALL_NORTH_SOUTH='wall',SLIMED_WALL_PILLAR_6='wall',SLIMED_WALL_SMALL_PILLAR='wall',
+ SLIMED_HARDWALL='hardwall',SLIMED_HARDWALL_PILLAR_85='hardwall',SLIMED_DOOR='door-closed',SLIMED_DOOR_HORIZ='door-closed',
+ SLIMED_DOOR_VERT='door-closed',SLIMED_DOOR_OPEN='door-open',SLIMED_DOOR_HORIZ_OPEN='door-open',SLIMED_DOOR_OPEN_VERT='door-open'} do
+ eq(T.classify(methods.clone(assert(gD[id],id))),kind,'S10a Grushnak stone '..id)
+ local u=deep(gD[id]);u._checker_zone_source=nil
+ eq(T.classify(u),nil,'S10a Grushnak stone without the list stamp stays native '..id)
+end
+eq(select(2,T.classify(methods.clone(gD.SLIMED_DOOR_VERT))),'vertical','S10a slimed vertical door orientation')
+eq(select(2,T.classify(methods.clone(gD.SLIMED_DOOR_HORIZ_OPEN))),'horizontal','S10a slimed open door orientation')
+for _,id in ipairs{'SLIMED_DOOR_VAULT','SLIMED_DOOR_VAULT_VERT','SLIMED_GENERIC_LEVER_DOOR','SLIMED_GENERIC_LEVER_DOOR_HORIZ',
+ 'SLIMED_GENERIC_LEVER_DOOR_OPEN','SLIMED_GENERIC_LEVER','SLIMED_GENERIC_TRIGGER_BOOL','SLIMED_UP','SLIMED_DOWN','SLIMED_UP_WILDERNESS',
+ 'SLIMED_FLAT_UP8','TRAINING_DUMMY','SLIME_TUNNELS','UNDERGROUND_FLOOR','UNDERGROUND_CREEP','UNDERGROUND_TREE'} do
+ if gD[id] then eq(T.classify(methods.clone(gD[id])),nil,'S10a Grushnak not a stone kind '..id) end
+end
+for label,c in pairs{
+ dig=function(g) g.dig='FLOOR' end, pass=function(g) g.can_pass.pass_void=1 end, sense=function(g) g.block_sense=true end,
+ image=function(g) g.image='terrain/granite_wall1.png' end, layer=function(g) g.add_displays={setmetatable({image='terrain/granite_wall3.png',z=18,display_y=-1},meta)} end,
+ mos=function(g) g.add_mos={{image='terrain/slimed_walls/granite_wall3.png'}} end, stand=function(g) g.on_stand=function() end end,
+ air=function(g) g.air_level=-10 end, notice=function(g) g.notice=true end, unslimed=function(g) g._checker_slime_source=nil end,
+} do local g=deep(gD.SLIMED_WALL2);c(g);eq(T.classify(g),nil,'S10a altered slimed wall stays native: '..label) end
+for label,c in pairs{
+ opened=function(g) g.door_opened='SLIMED_DOOR_OPEN' end, dig=function(g) g.dig='SLIMED_FLOOR' end, sight=function(g) g.block_sight=nil end,
+ check=function(g) g.door_player_check='x' end, stop=function(g) g.door_player_stop='x' end, notice=function(g) g.notice=nil end,
+ move=function(g) g.does_block_move=true end,
+} do local g=deep(gD.SLIMED_DOOR_VERT);c(g);eq(T.classify(g),nil,'S10a altered slimed door stays native: '..label) end
+-- The rewritten stairs base is accepted only in Grushnak.
+env.game={zone={short_name='dreadfell'}}
+for _,id in ipairs{'UP','DOWN','SLIMED_WALL','SLIMED_FLOOR'} do eq(T.classify(methods.clone(gD[id])),nil,'S10a Grushnak copy not claimed in Dreadfell '..id) end
+-- Scene: Slime Tunnels. Refined -> Blockout -> Native -> Refined; rules unchanged.
+local function scene(zone,defs,plan,sym)
+ local m=townMap(#plan[1],#plan,function(x,y) return assert(defs[sym[plan[y+1]:sub(x+1,x+1)]],plan[y+1]:sub(x+1,x+1)) end)
+ local rules={}
+ for x=0,m.w-1 do for y=0,m.h-1 do local r={};for key,v in pairs(m(x,y,1)) do r[key]=v end;rules[x+y*m.w]=r end end
+ local h={zone={short_name=zone},level={map=m,data={}}}
+ return m,h,rules
+end
+local function img(m,x,y) local g=m(x,y,1);return g.replace_display and g.replace_display.image end
+local function sameRules(m,rules,label)
+ for x=0,m.w-1 do for y=0,m.h-1 do
+  for key,v in pairs(rules[x+y*m.w]) do if key~='replace_display' and key~='_checker_terrain' then eq(m(x,y,1)[key],v,label..' rule '..tostring(key)) end end
+ end end
+end
+local sm,sh,srules=scene('slime-tunnels',sD,{'###','.<.','#&.'},{['#']='SLIME_WALL2',['.']='SLIME_FLOOR3',['<']='UP_GRUSHNAK',['&']='ORB_DRAGON'})
+env.game={zone=sh.zone};mode='refined';T.apply(sh)
+eq(img(sm,0,0),'checker-revised+refined/slime/wall-2-0.png','S10a slime wall joins east only')
+eq(img(sm,1,0),'checker-revised+refined/slime/wall-10-1.png','S10a slime wall joins east and west')
+eq(img(sm,0,1),'checker-revised+refined/slime/floor1.png','S10a slime floor')
+eq(img(sm,1,1),'checker-revised+refined/slime/stairs-up0.png','S10a Grushnak exit on board slime stairs')
+eq(img(sm,0,2),'checker-revised+refined/slime/wall-0-0.png','S10a lone slime wall')
+eq(img(sm,1,2),nil,'S10a orb pedestal (callback) stays native')
+eq(sm(1,1,1).change_zone,'grushnak-pride','S10a exit still leads to Grushnak')
+sameRules(sm,srules,'S10a tunnels')
+mode='blockout';T.apply(sh)
+eq(img(sm,0,0),'checker-revised+tree0.png','S10a blockout slime wall blocks')
+eq(img(sm,1,1),'checker-revised+exit0.png','S10a blockout slime stairs exit')
+mode='vanilla';T.apply(sh)
+for x=0,2 do for y=0,2 do eq(sm(x,y,1).replace_display,nil,'S10a native mode restores tunnels '..x..','..y) end end
+mode='refined';T.apply(sh)
+eq(img(sm,1,0),'checker-revised+refined/slime/wall-10-1.png','S10a refined restore slime wall')
+sameRules(sm,srules,'S10a tunnels after toggles')
+-- Scene: Sludgenest L1: jungle rim beside the slime lake; masks per family.
+local nm,nh,nrules=scene('sludgenest',nD,{'T#.','g#>','gGT'},{T='JUNGLE_TREE4',['#']='SLIME_WALL',['.']='SLIME_FLOOR1',['>']='SLIME_DOWN',
+ g='JUNGLE_GRASS',G='JUNGLE_GRASS_UP_WILDERNESS'})
+env.game={zone=nh.zone};T.apply(nh)
+eq(img(nm,1,0),'checker-revised+refined/slime/wall-4-1.png','S10a slime wall ignores the jungle tree beside it')
+eq(img(nm,1,1),'checker-revised+refined/slime/wall-1-0.png','S10a slime wall joins north')
+eq(img(nm,0,0),'checker-revised+refined/caldera/tree-a0.png','S10a Sludgenest jungle tree on Caldera art')
+eq(img(nm,0,1),'checker-revised+refined/caldera/floor1.png','S10a Sludgenest jungle grass on Caldera art')
+eq(img(nm,1,2),'checker-revised+refined/caldera/exit-world1.png','S10a Sludgenest world exit')
+eq(img(nm,2,1),'checker-revised+refined/slime/stairs-down1.png','S10a Sludgenest slime stairs down')
+eq(img(nm,2,0),'checker-revised+refined/slime/floor0.png','S10a Sludgenest slime floor')
+sameRules(nm,nrules,'S10a nest')
+-- Sludgenest's on_turn turns a wall into fresh slime floor and re-tiles
+-- around it (NicerTiles:updateAround -> repair): the board follows.
+nm(1,1,1,methods.clone(nD.SLIME_FLOOR2))
+nm.updateMap=function() end;T.repair(nh,0,0,2,2)
+eq(img(nm,1,1),'checker-revised+refined/slime/floor0.png','S10a spawned slime floor gets the board floor')
+eq(img(nm,1,0),'checker-revised+refined/slime/wall-0-1.png','S10a neighbour wall mask follows the new floor')
+-- Scene: Grushnak's slime pit and barracks edge (combined zone).
+local gm,gh,grules=scene('grushnak-pride',gD,{'TT;;','T;>;','.t;T'},{T='UNDERGROUND_TREE3',[';']='UNDERGROUND_CREEP2',['>']='SLIME_TUNNELS',
+ ['.']='UNDERGROUND_FLOOR4',t='TRAINING_DUMMY'})
+env.game={zone=gh.zone};T.apply(gh)
+eq(img(gm,0,0),'checker-revised+refined/gloom/plain/wall-6-0.png','S10a thicket joins east and south')
+eq(img(gm,2,0),'checker-revised+refined/slime/creep-6-0.png','S10a creep joins creep east and the slime stairs south')
+eq(img(gm,1,1),'checker-revised+refined/slime/creep-2-0.png','S10a creep joins only the slime stairs east')
+eq(img(gm,2,1),'checker-revised+refined/slime/stairs-down1.png','S10a slime pit entrance is board slime stairs')
+eq(img(gm,0,2),'checker-revised+refined/korpul/floor-a-0-0.png','S10a underground floor is the board stone floor')
+eq(img(gm,1,2),'checker-revised+refined/korpul/floor-a-0-1.png','S10a dummy stands on the board stone floor')
+local dl=gm(1,2,1).replace_display.add_displays
+eq(dl and #dl==1 and dl[1].image,'npc/lure.png','S10a dummy keeps its native lure layer')
+eq(dl[1].z,9,'S10a dummy layer keeps its z')
+eq(gm(1,2,1).does_block_move,true,'S10a dummy still blocks movement')
+eq(gm(1,2,1).pass_projectile,true,'S10a dummy still passes projectiles')
+eq(gm(2,1,1).change_zone,'slime-tunnels','S10a pit entrance still leads to the tunnels')
+sameRules(gm,grules,'S10a grushnak pit')
+mode='vanilla';T.apply(gh)
+for x=0,3 do for y=0,2 do eq(gm(x,y,1).replace_display,nil,'S10a native mode restores Grushnak '..x..','..y) end end
+mode='refined';T.apply(gh)
+eq(img(gm,1,2),'checker-revised+refined/korpul/floor-a-0-1.png','S10a refined restore Grushnak dummy')
+-- Stone adapter: a SLIMED wall joins the basic.lua wall beside it (dark brick).
+local bm=townMap(3,2,function(x,y) return gD[({{'WALL','SLIMED_WALL','SLIMED_WALL'},{'FLOOR','SLIMED_FLOOR','UP'}})[y+1][x+1]] end)
+for x=0,2 do for y=0,1 do bm.seen[x+y*3]=true end end
+for x=0,2 do for y=0,1 do T.observe(bm,x,y,bm(x,y,1)) end end
+eq(T.render(bm,0,0,bm(0,0,1),'refined').image,'checker-revised+refined/korpul-dark/wall-2-0.png','S10a basic wall joins the slimed wall east')
+eq(T.render(bm,1,0,bm(1,0,1),'refined').image,'checker-revised+refined/korpul-dark/wall-10-1.png','S10a slimed wall joins both sides')
+eq(T.render(bm,1,1,bm(1,1,1),'refined').image,'checker-revised+refined/korpul/floor-b-0-0.png','S10a slimed floor is the board stone floor')
+eq(T.render(bm,2,1,bm(2,1,1),'refined').image,'checker-revised+refined/korpul/floor-a-0-1.png','S10a Grushnak stairs on the board floor')
+-- Old save: unstamped cells on every S10a family stay native.
+local om=townMap(3,1,function(x) local g=deep(({sD.SLIME_WALL,sD.SLIME_FLOOR,sD.UP_GRUSHNAK})[x+1]);g._checker_zone_source=nil;return g end)
+env.game={zone={short_name='slime-tunnels'}};T.apply({zone={short_name='slime-tunnels'},level={map=om,data={}}})
+for x=0,2 do eq(om(x,0,1).replace_display,nil,'S10a old-save tunnel cell stays native '..x) end
+T.stairAssets,T.korpulDarkAssets=savedStairs,savedDark
+env.game=sg;mode='refined'
+end)()
 T.assets=savedAssets;env.game=savedGame
 
+-- S10b: Vor Pride L1-3. The new board gothic family (floor variants, wall
+-- masks incl. pillars, four door states, flat exits, books) and the reused
+-- families (Spellblaze burnt ground/trees and exit-down for basic.lua
+-- FLAT_DOWN4, deep water/grass/trees, Kor'Pul stone for the vault). Every
+-- S10b cell needs the Vor list stamp, gothic cells the gothic.lua stamp;
+-- levers, lever doors, sealed doors and candles stay native.
+;(function()
+local sg=env.game
+local vFile,gothic='/data/zones/vor-pride/grids.lua','/data/general/grids/gothic.lua'
+-- ToME's string:prefix (engine utils), used by Vor's import rewrite.
+local savedPrefix=string.prefix
+string.prefix=function(str,pre) return str:sub(1,#pre)==pre end
+local vD=loadDefs(vFile)
+local rD=loadDefs(gothic)
+-- Stamps: the gothic.lua stamp survives the outer zone list stamp; Vor's
+-- import rewrite is visible in the definitions the contract pins.
+eq(vD.GOTHIC_WALL3._checker_gothic_source.file,gothic,'S10b gothic.lua stamps its walls')
+eq(vD.GOTHIC_WALL3._checker_zone_source.file,vFile,'S10b Vor list stamps nested gothic.lua')
+eq(vD.BURNT_TREE7._checker_burnt_source.file,'/data/general/grids/burntland.lua','S10b Vor burnt tree keeps its burntland stamp')
+eq(vD.BURNT_TREE7._checker_zone_source.file,vFile,'S10b Vor list stamps nested burntland.lua')
+eq(vD.FLAT_DOWN4._checker_grid_source.file,'/data/general/grids/basic.lua','S10b Vor FLAT_DOWN4 keeps its basic.lua stamp')
+eq(vD.GENERIC_BOOK2._checker_zone_source.id,'GENERIC_BOOK2','S10b Vor list stamps its own books')
+eq(vD.GENERIC_BOOK2._checker_gothic_source,nil,'S10b books are not gothic.lua definitions')
+eq(vD.GOTHIC_DOOR_VERT.image,'terrain/grass_burnt1.png','S10b Vor rewrites the vertical door base')
+eq(vD.GOTHIC_WALL_SMALL_PILLAR.image,'terrain/grass_burnt1.png','S10b Vor rewrites the pillar base')
+eq(vD.GOTHIC_FLOOR.image,'terrain/gothic_walls/marble_floor.png','S10b Vor keeps the gothic floor image')
+eq(vD.GOTHIC_FLAT_UP6.image,'terrain/gothic_walls/marble_floor.png','S10b Vor keeps the flat exit base')
+eq(rD.GOTHIC_WALL._checker_zone_source,nil,'S10b a bare gothic.lua list carries no Vor stamp')
+-- Gating.
+eq(T.variant({short_name='vor-pride'}),'VOR_PRIDE','S10b Vor stone gate')
+eq(T.combined['vor-pride'],true,'S10b Vor combines the gothic family and stone')
+local K=T.batch4Kind
+local kinds={GOTHIC_FLOOR='gothic-floor',GOTHIC_WALL='gothic-wall',GOTHIC_WALL3='gothic-wall',GOTHIC_WALL_NORTH2='gothic-wall',
+ GOTHIC_WALL_PILLAR_84='gothic-wall',GOTHIC_WALL_NORTH_SOUTH='gothic-wall',GOTHIC_WALL_SOUTH='gothic-wall',GOTHIC_WALL_SOUTH12='gothic-wall',
+ GOTHIC_WALL_SOUTH17='gothic-wall',GOTHIC_WALL_SMALL_PILLAR='gothic-wall',GOTHIC_WALL_PILLAR_2='gothic-wall',GOTHIC_WALL_PILLAR_4='gothic-wall',
+ GOTHIC_WALL_PILLAR_6='gothic-wall',GOTHIC_DOOR='gothic-door-closed',GOTHIC_DOOR_HORIZ='gothic-door-closed-h',
+ GOTHIC_DOOR_VERT='gothic-door-closed-v',GOTHIC_DOOR_OPEN='gothic-door-open',GOTHIC_DOOR_HORIZ_OPEN='gothic-door-open-h',
+ GOTHIC_DOOR_OPEN_VERT='gothic-door-open-v',GOTHIC_FLAT_UP_WILDERNESS='gothic-exit-world',GOTHIC_FLAT_UP6='gothic-exit-up',
+ GOTHIC_FLAT_UP2='gothic-exit-up',GOTHIC_FLAT_DOWN4='gothic-exit-down',GOTHIC_FLAT_DOWN8='gothic-exit-down',
+ GENERIC_BOOK1='gothic-book',GENERIC_BOOK2='gothic-book',GENERIC_BOOK3='gothic-book',BURNT_GROUND='burnt-floor',
+ BURNT_GROUND3='burnt-floor',BURNT_TREE='burnt-tree',BURNT_TREE7='burnt-tree',FLAT_DOWN4='burnt-exit-down',DEEP_WATER='deep',
+ TREE3='tree',GRASS='grass'}
+for id,kind in pairs(kinds) do eq(K(methods.clone(assert(vD[id],id)),'vor-pride'),kind,'S10b Vor '..id) end
+eq(select(2,T.townProp(methods.clone(vD.GENERIC_BOOK3),'vor-pride')).image,'terrain/book_generic3.png','S10b book keeps its native layer')
+-- Callback, prompt, particle, unused and foreign definitions stay native.
+-- S11: the lever, tiled lever doors and CANDLE1-3 are exact S11 cells (tests/terrain_s11.lua).
+for _,id in ipairs{'GOTHIC_GENERIC_LEVER_DOOR',
+ 'GOTHIC_GENERIC_LEVER_DOOR_OPEN','GOTHIC_GENERIC_TRIGGER_BOOL',
+ 'GOTHIC_DOOR_VAULT','GOTHIC_DOOR_VAULT_HORIZ','GOTHIC_DOOR_VAULT_VERT','CANDLE','GOTHIC_HARDWALL','GOTHIC_HARDWALL3',
+ 'GOTHIC_HARDWALL_NORTH2','GOTHIC_HARDWALL_SMALL_PILLAR','GOTHIC_UP','GOTHIC_DOWN','GOTHIC_UP_WILDERNESS','FLOOR','WALL','HARDWALL','DOOR',
+ 'UP','DOWN','FLAT_UP6','FLAT_DOWN6','FLAT_UP_WILDERNESS','BURNT_UP4','BURNT_DOWN6','BURNT_UP_WILDERNESS','POISON_DEEP_WATER'} do
+ if vD[id] then eq(K(methods.clone(vD[id]),'vor-pride'),nil,'S10b Vor native '..id) end
+end
+-- Zone scope: gothic cells and Vor's reused cells outside Vor stay native.
+for _,z in ipairs{'rak-shor-pride','grushnak-pride','infinite-dungeon','gorbat-pride','high-peak','vor-armoury'} do
+ for _,id in ipairs{'GOTHIC_FLOOR','GOTHIC_WALL3','GOTHIC_DOOR_VERT','GOTHIC_FLAT_UP6','GENERIC_BOOK1','FLAT_DOWN4','BURNT_TREE7'} do
+  eq(K(methods.clone(vD[id]),z),nil,'S10b Vor cell ungated in '..z..' '..id)
+ end
+end
+for _,id in ipairs{'GOTHIC_FLOOR','GOTHIC_WALL3','GOTHIC_DOOR_HORIZ'} do eq(K(methods.clone(rD[id]),'vor-pride'),nil,'S10b bare gothic.lua (no Vor stamp) native '..id) end
+-- Old save: without the Vor list stamp, or a gothic cell without its file stamp.
+for _,id in ipairs{'GOTHIC_FLOOR','GOTHIC_WALL_NORTH3','GOTHIC_DOOR_VERT','GOTHIC_FLAT_UP_WILDERNESS','GENERIC_BOOK2','BURNT_GROUND2',
+ 'BURNT_TREE12','FLAT_DOWN4','DEEP_WATER'} do
+ local u=deep(vD[id]);u._checker_zone_source=nil
+ eq(K(u,'vor-pride'),nil,'S10b unstamped (old save) stays native '..id)
+end
+for _,id in ipairs{'GOTHIC_FLOOR','GOTHIC_WALL_PILLAR_6','GOTHIC_DOOR_OPEN_VERT','GOTHIC_FLAT_DOWN2'} do
+ local u=deep(vD[id]);u._checker_gothic_source=nil
+ eq(K(u,'vor-pride'),nil,'S10b without the gothic.lua stamp stays native '..id)
+end
+local u=deep(vD.FLAT_DOWN4);u._checker_grid_source=nil
+eq(K(u,'vor-pride'),nil,'S10b FLAT_DOWN4 without its basic.lua stamp stays native')
+-- Exact native layers; anything else is native.
+local function withDisplays(g,list) g=deep(g);g.add_displays={};for i,d in ipairs(list) do g.add_displays[i]=setmetatable(d,meta) end;return g end
+for label,c in pairs{
+ wallExtra={'GOTHIC_WALL_NORTH3',{{image='terrain/gothic_walls/granite_wall3.png',z=18,display_y=-1},{image='terrain/gothic_walls/granite_wall3.png',z=18,display_y=-1}}},
+ wallZ={'GOTHIC_WALL_NORTH3',{{image='terrain/gothic_walls/granite_wall3.png',z=17,display_y=-1}}},
+ wallY={'GOTHIC_WALL_NORTH3',{{image='terrain/gothic_walls/granite_wall3.png',z=18,display_y=-2}}},
+ wallX={'GOTHIC_WALL_NORTH3',{{image='terrain/gothic_walls/granite_wall3.png',z=18,display_y=-1,display_x=0.5}}},
+ wallForeign={'GOTHIC_WALL_NORTH3',{{image='terrain/granite_wall3.png',z=18,display_y=-1}}},
+ plainWallTop={'GOTHIC_WALL3',{{image='terrain/gothic_walls/granite_wall3.png',z=18,display_y=-1}}},
+ pillarMissing={'GOTHIC_WALL_SMALL_PILLAR',{{image='terrain/gothic_walls/granite_wall_pillar_small.png',z=3}}},
+ pillarSwap={'GOTHIC_WALL_PILLAR_6',{{image='terrain/gothic_walls/granite_wall_pillar_1.png',z=3},{image='terrain/gothic_walls/granite_wall_pillar_7.png',z=18,display_y=-1}}},
+ doorPadlock={'GOTHIC_DOOR_VERT',{{image='terrain/gothic_walls/granite_door1_vert.png',z=17,add_mos={{image='terrain/padlock2.png'}}},
+  {image='terrain/gothic_walls/granite_door1_vert_north.png',z=18,display_y=-1}}},
+ floorEvent={'GOTHIC_FLOOR',{{image='terrain/stair_down.png',z=5},{z=17}}},
+ floorPortal={'GOTHIC_FLOOR',{{image='terrain/demon_portal3.png'},{z=17}}},
+ burntChest={'BURNT_GROUND',{{image='object/chest3.png',z=5}}},
+ exitLayer={'GOTHIC_FLAT_UP6',{{image='terrain/gothic_walls/granite_wall3.png',z=18,display_y=-1}}},
+ bookLayer={'GENERIC_BOOK1',{{image='terrain/book_generic1.png',z=5}}},
+ flatLayer={'FLAT_DOWN4',{{image='invis.png',add_mos={{image='terrain/marble_water/marble_floor_2_to_water_outer_1.png'}}}}},
+} do eq(K(withDisplays(vD[c[1]],c[2]),'vor-pride'),nil,'S10b foreign layer stays native: '..label) end
+for label,c in pairs{
+ floorMos={'GOTHIC_FLOOR',{{image='terrain/book_generic1.png'}}},
+ exitTwo={'GOTHIC_FLAT_UP6',{{image='terrain/way_next_6.png'},{image='terrain/way_next_4.png'}}},
+ exitWrong={'GOTHIC_FLAT_UP6',{{image='terrain/way_next_4.png'}}},
+ exitShift={'GOTHIC_FLAT_UP6',{{image='terrain/way_next_6.png',display_y=-1}}},
+ bookWrong={'GENERIC_BOOK1',{{image='terrain/book_generic2.png'}}},
+ flatWrong={'FLAT_DOWN4',{{image='terrain/way_next_6.png'}}},
+ wallMos={'GOTHIC_WALL3',{{image='terrain/gothic_walls/granite_wall3.png'}}},
+} do local g=deep(vD[c[1]]);g.add_mos=c[2];eq(K(g,'vor-pride'),nil,'S10b foreign MO stays native: '..label) end
+-- One changed rule field or a callback keeps each kind native.
+local mutations={
+ stand=function(g) g.on_stand=function() end end, bump=function(g) g.block_move=function() end end,
+ move=function(g) g.on_move=function() end end, special=function(g) g.special=true end, shader=function(g) g.shader='water' end,
+ level=function(g) g.change_level=(g.change_level or 0)+1 end, zone=function(g) g.change_zone='wilderness-x' end,
+ check=function(g) g.change_level_check=function() return true end end, name=function(g) g.name='x' end,
+ display=function(g) g.display='?' end, image=function(g) g.image='terrain/foreign.png' end,
+ blockmove=function(g) g.does_block_move=not g.does_block_move or nil end, sight=function(g) g.block_sight=not g.block_sight or nil end,
+ sense=function(g) g.block_sense=true end, esp=function(g) g.block_esp=true end, air=function(g) g.air_level=(g.air_level or 0)-5 end,
+ dig=function(g) g.dig=g.dig and 'FLOOR' or 'GOTHIC_FLOOR' end, canpass=function(g) g.can_pass=g.can_pass and deep(g.can_pass) or {};g.can_pass.pass_void=1 end,
+ door=function(g) g.is_door=not g.is_door or nil end, subtype=function(g) g.subtype='x' end, type=function(g) g.type=g.type=='wall' and 'floor' or 'wall' end,
+ grow=function(g) g.grow='WALL' end, remember=function(g) g.always_remember=not g.always_remember or nil end,
+ notice=function(g) g.notice=not g.notice or nil end, projectile=function(g) g.pass_projectile=not g.pass_projectile or nil end,
+ z=function(g) g.z=7 end, abs=function(g) g.change_level_abs=true end, down=function(g) g.force_down=true end,
+ opened=function(g) g.door_opened='X' end, closed=function(g) g.door_closed='X' end, prompt=function(g) g.door_player_check='x' end,
+ stop=function(g) g.door_player_stop='x' end, particles=function(g) g.embed_particles={{name='candle'}} end, tint=function(g) g.tint={} end,
+}
+for _,id in ipairs{'GOTHIC_FLOOR','GOTHIC_WALL_NORTH3','GOTHIC_WALL_SOUTH9','GOTHIC_WALL_SMALL_PILLAR','GOTHIC_WALL_PILLAR_4','GOTHIC_DOOR',
+ 'GOTHIC_DOOR_HORIZ','GOTHIC_DOOR_VERT','GOTHIC_DOOR_OPEN','GOTHIC_DOOR_HORIZ_OPEN','GOTHIC_DOOR_OPEN_VERT','GOTHIC_FLAT_UP_WILDERNESS',
+ 'GOTHIC_FLAT_UP6','GOTHIC_FLAT_DOWN4','GENERIC_BOOK2','FLAT_DOWN4'} do
+ assert(K(methods.clone(vD[id]),'vor-pride'),id)
+ for label,mut in pairs(mutations) do
+  local g=deep(vD[id]);mut(g)
+  eq(K(g,'vor-pride'),nil,'S10b altered '..id..' stays native: '..label)
+ end
+end
+-- Stone adapter in Vor: basic.lua stone of the vault needs the list stamp;
+-- gothic cells are never stone kinds.
+env.game={zone={short_name='vor-pride'}}
+for id,kind in pairs{HARDWALL='hardwall',WALL='wall',FLOOR='floor',DOOR='door-closed',DOOR_OPEN='door-open',DOOR_VAULT='door-closed'} do
+ eq(T.classify(methods.clone(vD[id])),kind,'S10b Vor vault stone '..id)
+ local v=deep(vD[id]);v._checker_zone_source=nil
+ eq(T.classify(v),nil,'S10b Vor stone without the list stamp stays native '..id)
+end
+for _,id in ipairs{'GOTHIC_FLOOR','GOTHIC_WALL','GOTHIC_WALL_NORTH2','GOTHIC_DOOR_VERT','GOTHIC_FLAT_UP6','GENERIC_BOOK1','BURNT_GROUND'} do
+ eq(T.classify(methods.clone(vD[id])),nil,'S10b Vor not a stone kind '..id)
+end
+-- Scene: a hall with a lever door, pillar, books, a candle and the burnt yard.
+local plan={'#####L#','#.o.+.#','#B.C#..','#|##-.<',';T;>;.W','E;;;;;;'}
+local sym={['#']='GOTHIC_WALL_NORTH2',['.']='GOTHIC_FLOOR',o='GOTHIC_WALL_SMALL_PILLAR',['+']='GOTHIC_DOOR_VERT',['|']='GOTHIC_DOOR_OPEN_VERT',
+ ['-']='GOTHIC_DOOR_HORIZ',L='GOTHIC_GENERIC_LEVER_DOOR_VERT',B='GENERIC_BOOK2',C='CANDLE1',[';']='BURNT_GROUND',T='BURNT_TREE4',['>']='FLAT_DOWN4',
+ ['<']='GOTHIC_FLAT_UP6',W='GOTHIC_FLAT_UP_WILDERNESS',E='GOTHIC_GENERIC_LEVER'}
+local vm=townMap(#plan[1],#plan,function(x,y) return assert(vD[sym[plan[y+1]:sub(x+1,x+1)]],plan[y+1]:sub(x+1,x+1)) end)
+local rules={}
+for x=0,vm.w-1 do for y=0,vm.h-1 do local r={};for key,v in pairs(vm(x,y,1)) do r[key]=v end;rules[x+y*vm.w]=r end end
+local vh={zone={short_name='vor-pride'},level={map=vm,data={}}}
+local function img(x,y) local g=vm(x,y,1);return g.replace_display and g.replace_display.image end
+local function sameRules(label)
+ for x=0,vm.w-1 do for y=0,vm.h-1 do
+  for key,v in pairs(rules[x+y*vm.w]) do if key~='replace_display' and key~='_checker_terrain' then eq(vm(x,y,1)[key],v,label..' rule '..tostring(key)) end end
+ end end
+end
+local G='checker-revised+refined/gothic/'
+local function floorImg(x,y) return G..'floor-'..({'a','b','c'})[((x*17+y*7)%3)+1]..((x+y)%2)..'.png' end
+mode='refined';T.apply(vh)
+eq(vh.checker_mode,'refined','S10b Vor refined mode')
+eq(img(0,0),G..'wall-6-0.png','S10b corner wall joins east and south')
+eq(img(4,0),G..'wall-14-0.png','S10b wall beside the lever door joins it (E,S,W)')
+eq(img(6,0),G..'wall-12-0.png','S10b wall joins the lever door west and wall south')
+eq(img(1,1),floorImg(1,1),'S10b gothic floor variant')
+eq(img(2,1),G..'wall-1-1.png','S10b pillar joins the wall to its north only')
+eq(img(4,1),G..'door-closed-vertical1.png','S10b vertical door')
+eq(img(4,2),G..'wall-5-0.png','S10b wall joins the doors north and south')
+eq(img(1,3),G..'door-open-vertical0.png','S10b open vertical door')
+eq(img(4,3),G..'door-closed-horizontal1.png','S10b horizontal door')
+eq(img(1,2),floorImg(1,2),'S10b book cell draws the gothic floor')
+eq(vm(1,2,1).replace_display.add_displays[1].image,'terrain/book_generic2.png','S10b book keeps its native layer on top')
+eq(img(6,3),G..'exit-up1.png','S10b flat up exit on the board stairs piece')
+eq(img(6,4),G..'exit-world0.png','S10b world exit on the board stairs piece')
+eq(img(0,4),'checker-revised+refined/burnt/floor0.png','S10b burnt ground on Spellblaze art')
+eq(img(1,4),'checker-revised+refined/burnt/tree1.png','S10b burnt tree on Spellblaze art')
+eq(img(3,4),'checker-revised+refined/burnt/exit-down1.png','S10b FLAT_DOWN4 on the burnt exit-down')
+eq(vm(6,4,1).change_zone,'wilderness','S10b world exit still leads to the world map')
+sameRules('S10b Vor')
+mode='blockout';T.apply(vh)
+eq(img(0,0),'checker-revised+tree0.png','S10b blockout gothic wall blocks')
+eq(img(4,1),'checker-revised+tree1.png','S10b blockout closed door blocks sight')
+eq(img(1,3),'checker-revised+grass0.png','S10b blockout open door is open ground')
+eq(img(1,4),'checker-revised+tree1.png','S10b blockout burnt tree blocks')
+eq(img(6,3),'checker-revised+exit1.png','S10b blockout flat exit')
+eq(img(3,4),'checker-revised+exit1.png','S10b blockout burnt exit-down')
+mode='vanilla';T.apply(vh)
+for x=0,vm.w-1 do for y=0,vm.h-1 do eq(vm(x,y,1).replace_display,nil,'S10b native mode restores Vor '..x..','..y) end end
+mode='refined';T.apply(vh)
+eq(img(4,0),G..'wall-14-0.png','S10b refined restore gothic wall')
+eq(img(1,2),floorImg(1,2),'S10b refined restore book floor')
+sameRules('S10b Vor after toggles')
+-- Old save: a level generated before the stamps keeps every cell native.
+local om=townMap(3,1,function(x) local g=deep(vD[({'GOTHIC_WALL3','GOTHIC_FLOOR','BURNT_GROUND'})[x+1]]);g._checker_zone_source=nil;return g end)
+T.apply({zone={short_name='vor-pride'},level={map=om,data={}}})
+for x=0,2 do eq(om(x,0,1).replace_display,nil,'S10b old-save Vor cell stays native '..x) end
+string.prefix=savedPrefix
+env.game=sg;mode='refined'
+end)()
 string.tformat=nil
 mode='vanilla'
 end)()

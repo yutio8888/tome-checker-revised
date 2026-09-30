@@ -135,8 +135,10 @@ BATCH4_KINDS = {
     # TW3: Zigur sand shore (beach sand), lava pit (burnt lava masks) and post
     # sign; Angolwen fountain basin (deep masks) and rocks; Iron Council
     # crystal walls (crystal-wall masks).
-    'town-zigur': ('grass', 'tree', 'road', 'deep', 'exit', 'sand', 'lava', 'post'),
-    'town-angolwen': ('grass', 'tree', 'road', 'exit', 'mountain', 'fountain', 'rock'),
+    # TW7: town roads draw board stone slabs (refined/town/road); Zigur and
+    # Angolwen FIELDS1-4 the board crop field; Gates palms the S6 board palm.
+    'town-zigur': ('grass', 'tree', 'road', 'deep', 'exit', 'sand', 'lava', 'post', 'fields'),
+    'town-angolwen': ('grass', 'tree', 'road', 'exit', 'mountain', 'fountain', 'rock', 'fields'),
     'town-iron-council': ('crystal',),
     # TW4: Shatur snow glades (snow family ground and trees); Point Zero cold
     # forest (snow pines) and its outer-space platform (void family).
@@ -144,7 +146,7 @@ BATCH4_KINDS = {
     'town-point-zero': ('cold-tree', 'void-space', 'void-rocks', 'void-rift', 'void-floor'),
     # TW5: Gates of Morning forest kinds, beach sand and the Sunwall mountain
     # (golden-mountain wall masks).
-    'town-gates-of-morning': ('grass', 'tree', 'road', 'deep', 'exit', 'sand', 'gold-mountain'),
+    'town-gates-of-morning': ('grass', 'tree', 'road', 'deep', 'exit', 'sand', 'gold-mountain', 'palm'),
     # TW6: Irkkk jungle (Caldera floor/tree/exit art), lake, and the bamboo
     # huts (bamboo wall masks, hut floor, cooking pit floor, four door states).
     'town-irkkk': ('jungle-grass', 'jungle-tree', 'jungle-exit', 'deep', 'hut-floor', 'hut-cooking', 'hut-wall',
@@ -165,6 +167,21 @@ BATCH4_KINDS = {
     'eruan': ('sand', 'palm', 'deep', 'exit-world', 'exit-up', 'exit-down', 'mountain'),
     'gorbat-pride': ('sand', 'mountain', 'deep', 'hut-wall', 'hut-floor', 'hut-door-h', 'hut-door-v',
                      'hut-door-h-open', 'hut-door-v-open', 'rock-door'),
+    # S10a: the board slime family (floor, wall masks, stairs, creep masks over
+    # board stone) in Slime Tunnels and Sludgenest (plus Caldera jungle), and
+    # Grushnak's underground floor (board stone), gloom-plain thicket masks,
+    # training dummy (board stone + native layer) and slime-pit entrance.
+    'slime-tunnels': ('slime-floor', 'slime-wall', 'slime-up'),
+    'sludgenest': ('slime-floor', 'slime-wall', 'slime-up', 'slime-down', 'jungle-grass', 'jungle-tree', 'jungle-exit'),
+    'grushnak-pride': ('under-floor', 'creep', 'thicket', 'dummy', 'slime-down'),
+    # S10b: Vor Pride's board gothic family (three floor variants, wall masks,
+    # four door states, flat exits on the Kor'Pul stair pieces, books over
+    # board floor) and its burnt yard (Spellblaze floor/tree/exit-down), plus
+    # the (unobserved) forest/water cells on their existing art.
+    'vor-pride': ('gothic-floor', 'gothic-book', 'gothic-wall', 'gothic-door-closed', 'gothic-door-closed-h',
+                  'gothic-door-closed-v', 'gothic-door-open', 'gothic-door-open-h', 'gothic-door-open-v',
+                  'gothic-exit-up', 'gothic-exit-down', 'gothic-exit-world', 'burnt-floor', 'burnt-tree',
+                  'burnt-exit-down', 'deep', 'tree', 'grass'),
 }
 
 
@@ -634,6 +651,28 @@ def audit():
         reachable.setdefault(path, set()).add('korpul-dark:wall-door')
     for path in scorch_dark:
         reachable.setdefault(path, set()).add('scorch-dark:wall')
+    # S12: hazard lava (three variants) and stone-kerb deep water, stone
+    # adapter, behind their own manifest.
+    if ("img('refined/hazard/lava-'..({'a','b','c'})[((x*17+y*7)%3)+1]..'-'..mask..'-'..p)" not in maze_source or
+            "img('refined/hazard/deep-'..mask..'-'..p)" not in maze_source or
+            "M.hazardAssets.files[path]" not in maze_source):
+        raise AuditError('S12 hazard renderer reachability contract changed')
+    hazard = {f'data/gfx/refined/hazard/lava-{v}-{mask}-{parity}.png'
+              for v in 'abc' for mask in range(16) for parity in range(2)}
+    hazard.update(f'data/gfx/refined/hazard/deep-{mask}-{parity}.png' for mask in range(16) for parity in range(2))
+    for path in hazard:
+        reachable.setdefault(path, set()).add('hazard:lava-deep')
+    # S17: Dreamscape cloud floor (three variants x 16 masks) and dream void
+    # (two variants), forest adapter, behind their own manifest.
+    if ("img('refined/dream/cloud-'..({'a','b','c'})[((x*17+y*7)%3)+1]..'-'..mask..'-'..parity)" not in maze_source or
+            "img('refined/dream/void-'..({'a','b'})[((x*17+y*7)%2)+1]..'-'..parity)" not in maze_source or
+            "M.dreamAssets.files[p]" not in maze_source):
+        raise AuditError('S17 dream renderer reachability contract changed')
+    dream = {f'data/gfx/refined/dream/cloud-{v}-{mask}-{parity}.png'
+             for v in 'abc' for mask in range(16) for parity in range(2)}
+    dream.update(f'data/gfx/refined/dream/void-{v}-{parity}.png' for v in 'ab' for parity in range(2))
+    for path in dream:
+        reachable.setdefault(path, set()).add('dream:cloud-void')
     if ("img('refined/underwater/wall-'..mask..'-'..parity)" not in maze_source or
             "img('refined/underwater/'..t..parity)" not in maze_source):
         raise AuditError('underwater renderer reachability contract changed')
@@ -691,7 +730,8 @@ def audit():
     conclave_manifest = manifest_entries(ROOT / 'data/terrain-conclave-manifest.lua',
                                          r"\['checker-revised\+([\w./-]+\.png)'\]=true")
     maze_mismatch += sorted({'data/gfx/' + n for n in conclave_manifest} ^ conclave)
-    for name, expected in (('terrain-korpul-dark-manifest.lua', korpul_dark), ('terrain-scorch-dark-manifest.lua', scorch_dark)):
+    for name, expected in (('terrain-korpul-dark-manifest.lua', korpul_dark), ('terrain-scorch-dark-manifest.lua', scorch_dark),
+                           ('terrain-hazard-manifest.lua', hazard), ('terrain-dream-manifest.lua', dream)):
         entries = manifest_entries(ROOT / 'data' / name, r"\['checker-revised\+([\w./-]+\.png)'\]=true")
         maze_mismatch += sorted({'data/gfx/' + n for n in entries} ^ expected)
 

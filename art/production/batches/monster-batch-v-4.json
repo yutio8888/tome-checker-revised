@@ -1,0 +1,210 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-v-4",
+  "assets": [
+    {
+      "asset_id": "dolleg",
+      "native_name": "dolleg",
+      "scope": "valley-moon-caverns, demon-plane, ardhungol and three more zones' demon pools (general/npcs/major-demon.lua:51, demon/major, non-unique, no define_as, rank 2, base BASE_NPC_MAJOR_DEMON, explicit nice_tile tall body); single definition; the Fearscape summons of Kryl-Feijan, Lithfengel and Harkor'Zun only draw major demons from the level pool, so a dolleg from them is this same leaf",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 51,
+          "anchor": "name = \"dolleg\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 52,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 67,
+          "anchor": "T_ACIDIC_SKIN"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_dolleg.png",
+          "sha256": "2fff30455dc41f7ab9d7c21a4a0afd888eceaf403e51e4ba7062f99bac6c96ad",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a tall dark red-brown thorned demon with long whip-like horns and amber thorns down its back. Keep the thorny brute and the whip-like horns, but draw it as ONE compact upright figure filling the disc, brick-red, no tall canvas."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-v/refs/demons.png",
+          "sha256": "f6e441cec7480ee7e4d07b6c3ed463010ebb9d91b521ad082f4e770c92360def",
+          "role": "family",
+          "note": "Five shipped demon tokens (small vermilion winged fire imp, bronze bull-headed quasit with a round shield, yellow-green crouching wretchling, grey-mauve onilug, teal water imp): the dolleg is a big upright brick-red thorned brute, none of these."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A dolleg seen from a steep overhead three-quarter angle: a thick-set upright thorned demon with BRICK-RED and TERRACOTTA skin in a mid value, a broad chest and heavy shoulders, two thick arms held slightly out from the body with clawed hands, a heavy brow, small glowing amber eyes, and TWO LONG CURLING WHIP-LIKE HORNS sweeping back from the head, its shoulders, upper arms, spine and knees studded with short pale AMBER-BONE THORNS (a starburst of short thorns around the silhouette, none longer than a hand's width), a few drops of bright ACID-GREEN liquid dripping from the thorn tips. Brutish, spiky, upright and complete; the whole figure kept inside the disc with the horns curled in.",
+        "contrast": "Demons: the DOLLEG is the BIG UPRIGHT THORNED BRICK-RED ONE (silhouette: a heavy upright figure with a starburst of short thorns and two curling horns; hue: brick-red with amber-bone thorns and acid-green drips; value: mid). The shipped fire imp is a small vermilion winged imp throwing a fire ball, quasit a bronze bull-headed shield bearer, wretchling a yellow-green crouching crawler, onilug a grey-mauve slouching figure: this must not be small, winged, yellow-green, bull-headed or hunched, and must not throw fire.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Brick-red and terracotta skin in a mid value with pale salmon highlight planes and deep red-brown shadows, pale amber-bone thorns and horns with cream tips, amber eyes, bright acid-green drips (the drips stay on the creature and must not glow onto the disc); nothing darker than dark red-brown except the eye sockets and thin seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=dolleg, define_as=None, type=demon/subtype=major, unique=False, native_tall=True); details and hashes in evidence/monster-batch-v-20260930/source-contracts.json. base BASE_NPC_MAJOR_DEMON (demon/major, faction fearscape, no image=, no shader, no sustains_at_birth); NPC.lua:33 default-name image on the leaf; resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/demon_major_dolleg.png\", display_h=2, display_y=-1}}} (an explicit tall body, keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true (nativeTallImage accepts the body only for unique or native_tall entries, as for bone giant and onilug); talents Acidic Skin (sustained, not started at birth) and Slime Spit; resolvers.inscriptions(1, rune); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-v-20260930/source-contracts.json",
+          "sha256": "2bf61831a3d4e67d3152ac5925673d689b454868c4e2e454b95959fa833143ed"
+        }
+      ]
+    },
+    {
+      "asset_id": "eternal-bone-giant",
+      "native_name": "eternal bone giant",
+      "scope": "rak-shor-pride, telmur and vor-armoury pools (general/npcs/bone-giant.lua:72, undead/giant, non-unique, no define_as, rank 2, base BASE_NPC_BONE_GIANT, explicit nice_tile tall body); the necromancer's Assemble talent (talents/spells/master-of-bones.lua:393, minions_list.e_bone_giant) builds the same-named minion with type undead, subtype giant, the same nice_tile body and no define_as, so it wears the same token by the ordinary name key (see summons_and_same_body_copies)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+          "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+          "line": 72,
+          "anchor": "name = \"eternal bone giant\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+          "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+          "line": 74,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/talents/spells/master-of-bones.lua",
+          "sha256": "4318c0328da28c7a7767bf96027d8ccc449ab120b17558d8af699a6a6a05d170",
+          "line": 393,
+          "anchor": "name = \"eternal bone giant\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/spells/master-of-bones.lua",
+          "sha256": "4318c0328da28c7a7767bf96027d8ccc449ab120b17558d8af699a6a6a05d170",
+          "line": 390,
+          "anchor": "is_bone_giant = \"e_bone_giant\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_eternal_bone_giant.png",
+          "sha256": "15c7f16dd09d83b8eac30febd091844eb2965a8bb1be33d16e8ece28df032986",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a tall pale bone golem with a lilac outline aura. Keep the ivory bone golem with a faint lilac aura, but draw it as ONE compact hunched figure filling the disc, no tall canvas."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-v/refs/bone-giants.png",
+          "sha256": "bcdfee5b46053ef5756dc838aae5722e246ec7f880f83f460d63ff4524953672",
+          "role": "family",
+          "note": "Three shipped giant tokens (tan bone giant, muscular and symmetric with both arms hanging; purple half-finished bone giant, a thin skeleton; snow giant): the eternal bone giant is an ivory-white ossuary golem with skulls and ONE huge arm raised overhead, not a symmetric arms-down pose and not a thin skeleton."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An eternal bone giant seen from a steep overhead three-quarter angle: a hulking IVORY-WHITE ossuary golem built from hundreds of bones, hunched forward, its shoulders and chest studded with a ring of small pale SKULLS, ONE HUGE ARM made of fused thigh bones RAISED HIGH over the shoulder like a hammer with a knuckled bone fist, the other arm hanging down with a heavy bone fist, a small skull-like head sunk between the shoulders with cold VIOLET glowing eye sockets, thick bone legs, and a faint pale LILAC unholy aura hugging its outline (a thin glow, no wisps beyond the inner three quarters of the disc). Massive, asymmetric, bony and complete.",
+        "contrast": "Giants: the ETERNAL BONE GIANT is the IVORY-WHITE SKULL-STUDDED ONE with ONE HUGE ARM RAISED OVERHEAD (silhouette: a hunched mass with one big raised arm like a hammer; hue: ivory white with cool lilac shadows and violet eye glow; value: light). The shipped bone giant is a tan, muscular, symmetric figure with both arms hanging and the half-finished bone giant a thin purple skeleton: this must not be tan, must not be symmetric with both arms down and must not be thin. ",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Ivory-white bone in a light value with bright highlight planes and cool lilac-grey shadows, pale skulls, violet eye glow, a faint lilac outline aura (the aura stays thin, on the creature, and must not brighten or tint the disc); nothing darker than mid lilac-grey except the eye sockets and thin seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=eternal bone giant, define_as=None, type=undead/subtype=giant, unique=False, native_tall=True); details and hashes in evidence/monster-batch-v-20260930/source-contracts.json. base BASE_NPC_BONE_GIANT (undead/giant, no image=, no shader, no sustains_at_birth); NPC.lua:33 default-name image on the leaf; resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/undead_giant_eternal_bone_giant.png\", display_h=2, display_y=-1}}} (an explicit tall body, keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true (nativeTallImage accepts the body only for unique or native_tall entries, as for bone giant and onilug); talents Bone Armour, Stun, Skeleton Reassemble (all activated); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-v-20260930/source-contracts.json",
+          "sha256": "2bf61831a3d4e67d3152ac5925673d689b454868c4e2e454b95959fa833143ed"
+        }
+      ]
+    },
+    {
+      "asset_id": "yaech-hunter",
+      "native_name": "yaech hunter",
+      "scope": "murgol-lair pool (general/npcs/yaech.lua:64, humanoid/yaech, non-unique, no define_as, rank 2, base BASE_NPC_YAECH, default-name image); single definition; the south-beach zone only draws yaech from the humanoid/yaech pool, so a yaech hunter there is this same leaf",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/yaech.lua",
+          "sha256": "918f92bdd94df8a9004f7620f44561c30c538888f184185519e3ee6453fe3754",
+          "line": 64,
+          "anchor": "name = \"yaech hunter\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/yaech.lua",
+          "sha256": "918f92bdd94df8a9004f7620f44561c30c538888f184185519e3ee6453fe3754",
+          "line": 74,
+          "anchor": "T_MINDHOOK"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/yaech.lua",
+          "sha256": "918f92bdd94df8a9004f7620f44561c30c538888f184185519e3ee6453fe3754",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_YAECH\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_yaech_yaech_hunter.png",
+          "sha256": "d593e8fecc57db07817bd53a9ee9f6650a21c0b55023f566c9aa181d1f5dbb25",
+          "role": "identity",
+          "note": "Native shape (64x64): a fluffy pale blue-white yeek-like swimmer with a trident. Keep the fluffy yeek body and the trident, but umber-brown fur and a diagonal thrust."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-v/refs/yeeks.png",
+          "sha256": "f3df028fe8286d11895786e46ff9000d5d51166439e01f990f89c793b86305f6",
+          "role": "family",
+          "note": "Two shipped yeek-kin tokens (pale blue fluffy yaech diver swimming with bubbles, white yeek wayist with a dagger): the yaech hunter is umber-brown with an ochre belly, not blue and not white."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A yaech hunter seen from a steep overhead three-quarter angle: a small fluffy yeek-like aquatic hunter with thick UMBER-BROWN and OCHRE-TAN fur in a mid-light value, a cream belly, big pale-yellow eyes with a determined scowl, a small coral-and-shell shoulder guard, a coil of pale rope net at the hip, LUNGING forward in a low crouch and THRUSTING a long pale-steel TRIDENT with both hands out along a DIAGONAL toward the upper right (the trident tip well inside the disc, no longer than the body), a few small bubbles by the shoulder. Compact, furry, diagonal and complete.",
+        "contrast": "Yeeks: the YAECH HUNTER is the UMBER-BROWN FURRY ONE lunging with a trident on a diagonal (silhouette: a compact furry crouch with one long diagonal trident; hue: umber brown and ochre fur with a cream belly and pale steel; value: mid-light). The shipped yaech diver is a pale blue-white fluffy swimmer and the yeek wayist a white yeek with a dagger: this must not be blue, white or holding a dagger.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Umber-brown and ochre-tan fur in a mid-light value with pale tan highlight planes, a cream belly, pale-yellow eyes, pale-steel trident with a bright highlight edge, pale shell and coral accents, tiny pale bubbles; nothing darker than dark umber except the pupils and thin seams; the disc stays neutral charcoal at reference lightness with no warm cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=yaech hunter, define_as=None, type=humanoid/subtype=yaech, unique=False, native_tall=False); details and hashes in evidence/monster-batch-v-20260930/source-contracts.json. base BASE_NPC_YAECH (humanoid/yaech, can_breath water, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip fills inventory slots only (no moddable_tile, so no display change) (trident); talents Exotic Weapons Mastery (passive), Mindhook, Perfect Control (activated); no sustains_at_birth and no auto_classes on the leaf or base (only the Murgol-lair bosses have Mindslayer auto_classes). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-v-20260930/source-contracts.json",
+          "sha256": "2bf61831a3d4e67d3152ac5925673d689b454868c4e2e454b95959fa833143ed"
+        }
+      ]
+    }
+  ]
+}

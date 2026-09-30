@@ -564,6 +564,168 @@ M.catalog = {
 	{id="greater-mummy-lord", name="Greater Mummy Lord", image="npc/undead_mummy_greater_mummy_lord.png", type="undead", subtype="mummy", define_as="GREATER_MUMMY_LORD", unique=true},
 	{id="kors-fury", name="Kor's Fury", image="npc/undead_ghost_kor_s_fury.png", type="undead", subtype="ghost", define_as="KOR_FURY", unique=true, urh_rok_form=true},
 	{id="borfast", name="Borfast the Broken", image="npc/undead_ghoul_borfast_the_broken.png", type="undead", subtype="ghoul", define_as="BORFAST", unique=true},
+	-- Batch T: the remaining 12.0-tier story identities (art/monster-batch-t/
+	-- SELECTION.md; Training Dummy is left native), each re-verified against
+	-- source (evidence/monster-batch-t-20260930/source-contracts.json). Every
+	-- define_as is bound. The caravan people, war dog and Pumpkin name their PNG
+	-- with image=; the rest use the NPC.lua:33 default-name PNG. Slasul is a
+	-- UNIQUE explicit nice_tile tall body (no native_tall flag, like Walrog).
+	-- The war dog shares canine_dw.png with the dire wolf and the corrupted war
+	-- dog; each matches only its own exact name and define_as. The Fortress
+	-- Shadow's subtype is exactly "Sher'Tul". The Weirdling Beast can learn Flame
+	-- of Urh'Rok through its Corruptor auto_class, so it opts into urh_rok_form.
+	{id="caravan-merchant", name="caravan merchant", image="npc/humanoid_human_spectator02.png", type="humanoid", subtype="human", define_as="CARAVAN_MERCHANT"},
+	{id="caravan-guard", name="caravan guard", image="npc/humanoid_human_spectator.png", type="humanoid", subtype="human", define_as="CARAVAN_GUARD"},
+	{id="caravan-porter", name="caravan porter", image="npc/humanoid_human_spectator03.png", type="humanoid", subtype="human", define_as="CARAVAN_PORTER"},
+	{id="lost-merchant", name="Lost Merchant", image="npc/humanoid_human_lost_merchant.png", type="humanoid", subtype="human", define_as="MERCHANT"},
+	{id="nimisil", name="Nimisil", image="npc/spiderkin_spider_nimisil.png", type="spiderkin", subtype="spider", define_as="NIMISIL", unique=true},
+	{id="slasul", name="Slasul", image="npc/humanoid_naga_slasul.png", type="humanoid", subtype="naga", define_as="SLASUL", unique=true},
+	{id="draebor", name="Draebor, the Imp", image="npc/demon_minor_draebor__the_imp.png", type="demon", subtype="minor", define_as="DRAEBOR", unique=true},
+	{id="war-dog", name="war dog", image="npc/canine_dw.png", type="animal", subtype="canine", define_as="WAR_DOG"},
+	{id="yeek-wayist", name="Yeek Wayist", image="npc/humanoid_yeek_yeek_wayist.png", type="humanoid", subtype="yeek", define_as="YEEK_WAYIST", unique=true},
+	{id="weirdling-beast", name="Weirdling Beast", image="npc/horror_eldritch_weirdling_beast.png", type="horror", subtype="eldritch", define_as="WEIRDLING_BEAST", unique=true, urh_rok_form=true},
+	{id="fortress-shadow", name="Fortress Shadow", image="npc/horror_sher_tul_fortress_shadow.png", type="horror", subtype="Sher'Tul", define_as="BUTLER"},
+	{id="pumpkin", name="Pumpkin, the little kitty", image="npc/sage_kitty.png", type="animal", subtype="feline", define_as="KITTY", unique=true},
+	-- Batch U: the twelve identities after the finished 12.0 tier in the
+	-- survey-2 unscheduled list (art/monster-batch-u/SELECTION.md), each
+	-- re-verified against source (evidence/monster-batch-u-20260930/
+	-- source-contracts.json). All are non-unique leaves WITHOUT define_as, so
+	-- they match by exact name, type and subtype like the orc assassin; each
+	-- name has a single definition. The nagas name their PNG with image=, the
+	-- rest use the NPC.lua:33 default-name PNG (all 64x64, no tall bodies, no
+	-- native_tall). Two birth sustains only touch temporary values (Stealth,
+	-- Apply Poison, Acidic Skin). None has an auto_class that can reach Flame
+	-- of Urh'Rok, so there is no urh_rok_form. The Wild Gift "ritch
+	-- flamespitter" summon has the same name and type but its own PNG
+	-- (summoner_ritch.png); it wears this token through the per-entry
+	-- image_aliases rule below (real summon fields only, plus its exact
+	-- "(wild summon)" rename). The tutorial "hairy spider" wears the
+	-- ninurlhing PNG under another name and stays native.
+	{id="ritch-flamespitter", name="ritch flamespitter", image="npc/insect_ritch_ritch_flamespitter.png", type="insect", subtype="ritch"},
+	{id="ritch-impaler", name="ritch impaler", image="npc/insect_ritch_ritch_impaler.png", type="insect", subtype="ritch"},
+	{id="chitinous-ritch", name="chitinous ritch", image="npc/insect_ritch_chitinous_ritch.png", type="insect", subtype="ritch"},
+	{id="naga-tide-huntress", name="naga tide huntress", image="npc/naga_tide_huntress.png", type="humanoid", subtype="naga"},
+	{id="naga-psyren", name="naga psyren", image="npc/naga_psyren.png", type="humanoid", subtype="naga"},
+	{id="ancient-elven-mummy", name="ancient elven mummy", image="npc/undead_mummy_ancient_elven_mummy.png", type="undead", subtype="mummy"},
+	{id="orc-master-assassin", name="orc master assassin", image="npc/humanoid_orc_orc_master_assassin.png", type="humanoid", subtype="orc"},
+	{id="orc-grand-master-assassin", name="orc grand master assassin", image="npc/humanoid_orc_orc_grand_master_assassin.png", type="humanoid", subtype="orc"},
+	{id="fire-imp", name="fire imp", image="npc/demon_minor_fire_imp.png", type="demon", subtype="minor"},
+	{id="gaeramarth", name="gaeramarth", image="npc/spiderkin_spider_gaeramarth.png", type="spiderkin", subtype="spider"},
+	{id="ninurlhing", name="ninurlhing", image="npc/spiderkin_spider_ninurlhing.png", type="spiderkin", subtype="spider"},
+	{id="fate-weaver", name="fate weaver", image="npc/spiderkin_spider_fate_weaver.png", type="spiderkin", subtype="spider"},
+	-- Batch V: the twelve identities after batch U in the survey-2 unscheduled
+	-- list (art/monster-batch-v/SELECTION.md), each re-verified against source
+	-- (evidence/monster-batch-v-20260930/source-contracts.json). All are
+	-- non-unique leaves WITHOUT define_as, matched by exact name, type and
+	-- subtype; each name has a single leaf definition. The black crystal names
+	-- its PNG with image=; the rest use the NPC.lua:33 default-name PNG.
+	-- Dolleg and eternal bone giant are non-unique native_tall entries whose
+	-- nice_tile names the tall PNG explicitly (like bone giant); the Assemble
+	-- minion "eternal bone giant" (same name, type, subtype and body, no
+	-- define_as) wears the same token through the ordinary key, a Lord of Skulls
+	-- renames its minion and stays native. Birth sustains only touch temporary
+	-- values. No identity has an auto_class that can reach Flame of Urh'Rok, so
+	-- there is no urh_rok_form. The dreams "lost wife" (subtype "bloated horror")
+	-- has another name and stays native.
+	{id="black-crystal", name="black crystal", image="npc/crystal_black.png", type="immovable", subtype="crystal"},
+	{id="faerlhing", name="faerlhing", image="npc/spiderkin_spider_faerlhing.png", type="spiderkin", subtype="spider"},
+	{id="losselhing", name="losselhing", image="npc/spiderkin_spider_losselhing.png", type="spiderkin", subtype="spider"},
+	{id="dredge", name="dredge", image="npc/horror_temporal_dredge.png", type="horror", subtype="temporal"},
+	{id="dolleg", name="dolleg", image="npc/demon_major_dolleg.png", type="demon", subtype="major", native_tall=true},
+	{id="eternal-bone-giant", name="eternal bone giant", image="npc/undead_giant_eternal_bone_giant.png", type="undead", subtype="giant", native_tall=true},
+	{id="drem-master", name="drem master", image="npc/horror_corrupted_drem_master.png", type="horror", subtype="corrupted"},
+	{id="orc-pyromancer", name="orc pyromancer", image="npc/humanoid_orc_orc_pyromancer.png", type="humanoid", subtype="orc"},
+	{id="orc-cryomancer", name="orc cryomancer", image="npc/humanoid_orc_orc_cryomancer.png", type="humanoid", subtype="orc"},
+	{id="bloated-horror", name="bloated horror", image="npc/horror_eldritch_bloated_horror.png", type="horror", subtype="eldritch"},
+	{id="yaech-hunter", name="yaech hunter", image="npc/humanoid_yaech_yaech_hunter.png", type="humanoid", subtype="yaech"},
+	{id="orc-blood-mage", name="orc blood mage", image="npc/humanoid_orc_orc_blood_mage.png", type="humanoid", subtype="orc"},
+	-- Batch W: the twelve identities after batch V in the survey-2 unscheduled
+	-- list (art/monster-batch-w/SELECTION.md), each re-verified against source
+	-- (evidence/monster-batch-w-20260930/source-contracts.json). All are
+	-- non-unique single-definition leaves matched by exact name, type and
+	-- subtype. The two orc wyrmics bind their define_as (ORC_FIRE_WYRMIC,
+	-- ORC_ICE_WYRMIC; reknor-last builds them by define_as, the vaults by name,
+	-- both reaching the same leaf); the other ten have no define_as. The bears,
+	-- banshee and three ants name their PNG with image=; the rest use the
+	-- NPC.lua:33 default-name PNG. The heavy bone giant is a non-unique
+	-- native_tall entry whose nice_tile names the tall PNG explicitly (like the
+	-- eternal bone giant); the Assemble minion "heavy bone giant" (same name,
+	-- type, subtype and body, no define_as) wears the same token through the
+	-- ordinary key, a Lord of Skulls renames its minion and stays native. Birth
+	-- sustains (banshee Blur Sight, grannor'vin Call Shadows) only add particles
+	-- and temporary values. No identity has an auto_class that can reach Flame of
+	-- Urh'Rok, so there is no urh_rok_form. The acid ant (tied at 4.8, dropped by
+	-- source order) stays native.
+	{id="fiery-orc-wyrmic", name="fiery orc wyrmic", image="npc/humanoid_orc_fiery_orc_wyrmic.png", type="humanoid", subtype="orc", define_as="ORC_FIRE_WYRMIC"},
+	{id="icy-orc-wyrmic", name="icy orc wyrmic", image="npc/humanoid_orc_icy_orc_wyrmic.png", type="humanoid", subtype="orc", define_as="ORC_ICE_WYRMIC"},
+	{id="yaech-mindslayer", name="yaech mindslayer", image="npc/humanoid_yaech_yaech_mindslayer.png", type="humanoid", subtype="yaech"},
+	{id="heavy-bone-giant", name="heavy bone giant", image="npc/undead_giant_heavy_bone_giant.png", type="undead", subtype="giant", native_tall=true},
+	{id="cave-bear", name="cave bear", image="npc/cave_bear.png", type="animal", subtype="bear"},
+	{id="war-bear", name="war bear", image="npc/war_bear.png", type="animal", subtype="bear"},
+	{id="grannor-vin", name="grannor'vin", image="npc/horror_corrupted_grannor_vin.png", type="horror", subtype="corrupted"},
+	{id="rotting-mummy", name="rotting mummy", image="npc/undead_mummy_rotting_mummy.png", type="undead", subtype="mummy"},
+	{id="banshee", name="banshee", image="npc/banshee.png", type="undead", subtype="ghost"},
+	{id="giant-fire-ant", name="giant fire ant", image="npc/fire_ant.png", type="insect", subtype="ant"},
+	{id="giant-ice-ant", name="giant ice ant", image="npc/ice_ant.png", type="insect", subtype="ant"},
+	{id="giant-lightning-ant", name="giant lightning ant", image="npc/lightning_ant.png", type="insect", subtype="ant"},
+	-- Batch X: the twelve identities after batch W in the survey-2 unscheduled
+	-- list (art/monster-batch-x/SELECTION.md), each re-verified against source
+	-- (evidence/monster-batch-x-20260930/source-contracts.json). All are
+	-- non-unique single-definition leaves matched by exact name, type and
+	-- subtype. Only the assassin binds a define_as (THIEF_ASSASSIN, which the
+	-- later "shadowblade" leaf repeats under another name and PNG, so that
+	-- leaf stays native); the other eleven have none. The ants, blue crystal
+	-- and dread name their PNG with image=; the rest use the NPC.lua:33
+	-- default-name PNG. The greater telugoroth is a non-unique native_tall
+	-- entry whose nice_tile names the tall PNG explicitly (like the heavy bone
+	-- giant); the plain telugoroth has its own token and the ultimate
+	-- telugoroth and the greater/ultimate teluvortas stay native. The
+	-- necromancer Dread talent minion, the dreadmaster's minions and its
+	-- summon are actors named "dread" with the same type, subtype and image and
+	-- no define_as, so they wear the same token through the ordinary key.
+	-- Birth sustains (Blur Sight, Stealth, Shadow Combat, Bone Shield) only add
+	-- particles and temporary values. No identity has an auto_class that can
+	-- reach Flame of Urh'Rok, so there is no urh_rok_form.
+	{id="giant-acid-ant", name="giant acid ant", image="npc/acid_ant.png", type="insect", subtype="ant"},
+	{id="giant-army-ant", name="giant army ant", image="npc/army_ant.png", type="insect", subtype="ant"},
+	{id="yaech-psion", name="yaech psion", image="npc/humanoid_yaech_yaech_psion.png", type="humanoid", subtype="yaech"},
+	{id="blue-crystal", name="blue crystal", image="npc/crystal_blue.png", type="immovable", subtype="crystal"},
+	{id="devourer", name="devourer", image="npc/horror_eldritch_devourer.png", type="horror", subtype="eldritch"},
+	{id="skeleton-assassin", name="skeleton assassin", image="npc/undead_skeleton_skeleton_assassin.png", type="undead", subtype="skeleton"},
+	{id="assassin", name="assassin", image="npc/humanoid_human_assassin.png", type="humanoid", subtype="human", define_as="THIEF_ASSASSIN"},
+	{id="elven-corruptor", name="elven corruptor", image="npc/humanoid_shalore_elven_corruptor.png", type="humanoid", subtype="shalore"},
+	{id="orc-fighter", name="orc fighter", image="npc/humanoid_orc_orc_fighter.png", type="humanoid", subtype="orc"},
+	{id="greater-telugoroth", name="greater telugoroth", image="npc/elemental_temporal_greater_telugoroth.png", type="elemental", subtype="temporal", native_tall=true},
+	{id="teluvorta", name="teluvorta", image="npc/elemental_temporal_teluvorta.png", type="elemental", subtype="temporal"},
+	{id="dread", name="dread", image="npc/dread.png", type="undead", subtype="ghost"},
+	-- Batch Y: the twelve identities after batch X in the survey-2 unscheduled
+	-- list (art/monster-batch-y/SELECTION.md), each re-verified against source
+	-- (evidence/monster-batch-y-20260930/source-contracts.json). All are
+	-- non-unique single-definition leaves matched by exact name, type and
+	-- subtype. Only the blade horror binds a define_as (BLADEHORROR); the other
+	-- eleven have none. Six are non-unique native_tall bodies whose nice_tile
+	-- names the tall PNG explicitly (like the greater telugoroth): uruivellas,
+	-- thaurhereg, temporal stalker, blade horror, grizzly bear (which also has
+	-- image= and so keeps the single path with nicer_tiles off) and necrotic
+	-- mass. The animated mummy wrappings names object/mummy_wrappings.png. The
+	-- player's alchemist golem shares the golem name, type and subtype but uses
+	-- npc/alchemist_golem.png and a moddable_tile, so it stays native. Birth
+	-- sustains (Bone Shield, Stealth, Kinetic Aura/Shield, Chant of Fortitude,
+	-- Providence, Spin Fate) are temporary values and particles only. No
+	-- identity has an auto_class that can reach Flame of Urh'Rok, so there is
+	-- no urh_rok_form.
+	{id="uruivellas", name="uruivellas", image="npc/demon_major_uruivellas.png", type="demon", subtype="major", native_tall=true},
+	{id="thaurhereg", name="thaurhereg", image="npc/demon_major_thaurhereg.png", type="demon", subtype="major", native_tall=true},
+	{id="orc-corruptor", name="orc corruptor", image="npc/humanoid_orc_orc_corruptor.png", type="humanoid", subtype="orc"},
+	{id="temporal-stalker", name="temporal stalker", image="npc/horror_temporal_temporal_stalker.png", type="horror", subtype="temporal", native_tall=true},
+	{id="broken-golem", name="broken golem", image="npc/construct_golem_broken_golem.png", type="construct", subtype="golem"},
+	{id="golem", name="golem", image="npc/construct_golem_golem.png", type="construct", subtype="golem"},
+	{id="blade-horror", name="blade horror", image="npc/horror_eldritch_blade_horror.png", type="horror", subtype="eldritch", define_as="BLADEHORROR", native_tall=true},
+	{id="animated-mummy-wrappings", name="animated mummy wrappings", image="object/mummy_wrappings.png", type="undead", subtype="mummy"},
+	{id="grizzly-bear", name="grizzly bear", image="npc/grizzly_bear.png", type="animal", subtype="bear", native_tall=true},
+	{id="weaver-patriarch", name="weaver patriarch", image="npc/spiderkin_spider_weaver_patriarch.png", type="spiderkin", subtype="spider"},
+	{id="luminous-horror", name="luminous horror", image="npc/horror_eldritch_luminous_horror.png", type="horror", subtype="eldritch"},
+	{id="necrotic-mass", name="necrotic mass", image="npc/undead_horror_necrotic_mass.png", type="undead", subtype="horror", native_tall=true},
 }
 
 M.by_id = {}
@@ -710,10 +872,32 @@ local variants = {
 	end,
 }
 
+-- Image aliases (user decision 2026-09-30, "summons wear the token of the
+-- monster they copy"): a summon constructor may draw the same creature with
+-- another native PNG. The alias is per entry, names exactly one extra PNG and
+-- is honoured ONLY when the actor is that constructor's real summon (its own
+-- distinctive fields); appearance() consults it after the ordinary
+-- actor.image==entry.image path and never for uniques or define_as actors.
+-- summon-distance.lua Ritch Flamespitter (wild gift): image npc/summoner_ritch.png.
+local image_aliases = {
+	["ritch-flamespitter"] = {
+		image = "npc/summoner_ritch.png",
+		check = function(a)
+			return summoned(a) and summonedAI(a) and a.wild_gift_summon == true and a.summoner_gain_exp == true
+				and a.is_nature_summon == true and a.wild_gift_detonate == "T_RITCH_FLAMESPITTER"
+		end,
+	},
+}
+local function aliasImage(actor, entry)
+	local alias = image_aliases[entry.id]
+	return alias ~= nil and actor.image == alias.image and not entry.unique and actor.define_as == nil
+		and actor.unique == nil and alias.check(actor) and true or false
+end
+
 -- The nature summons of talents/gifts rename themselves to
 -- "<name> (wild summon)" when the caster has the wild_summon attribute.
 -- Only these covered same-body summons accept that exact form.
-local wild_summon_ids = {minotaur=true, ["black-jelly"]=true, ["fire-drake"]=true}
+local wild_summon_ids = {minotaur=true, ["black-jelly"]=true, ["fire-drake"]=true, ["ritch-flamespitter"]=true}
 -- Native code builds the name as ("%s (wild summon)"):tformat(_t(m.name)), so
 -- the stored string depends on the active locale. Rebuild the expected string
 -- exactly that way for each covered entry and accept only equality with it,
@@ -770,7 +954,7 @@ local function appearance(actor, entry, owned_display)
 	-- wrapped around whatever image is on the current display. Keep the token
 	-- installed so the aura wraps our art instead of falling back to native
 	-- art; the integration rebuilds the aura mo entries onto our Entity.
-	if actor.image == entry.image then
+	if actor.image == entry.image or aliasImage(actor, entry) then
 		if emptyIgnoringAura(actor.add_mos) then return "single" end
 		return nil, "add-mos"
 	end

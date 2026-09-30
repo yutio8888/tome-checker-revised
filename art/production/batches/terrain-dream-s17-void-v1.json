@@ -1,0 +1,63 @@
+{
+ "schema": 1,
+ "batch_id": "terrain-dream-s17-void-v1",
+ "assets": [
+  {
+   "gate": "ready",
+   "gate_reason": "S17: the Dreamscape plane's void (void.lua OUTERSPACE, the Forest generator's wall) needs a dream-themed board void beside the new cloud floor. One opaque void master; exporter crops 2 windows x 2 parities, unmasked (the cloud side carries the rim). Rules unchanged (blocks movement, not sight, no damage). No waiver.",
+   "max_attempts": 2,
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/terrain-s17-20260930/identity-s17.md",
+     "sha256": "6c1e78658aff856b79bfd5270e82c93000742f97787f192e0ccb19af1a2a3cc0"
+    }
+   ],
+   "asset_id": "dream-void",
+   "native_name": "OUTERSPACE dreamscape void",
+   "kind": "terrain-floor",
+   "scope": "void.lua OUTERSPACE as placed in the Dreamscape talent plane only (its Forest generator wall); Point Zero, Abashed Expanse and Temporal Reprieve keep the existing board space.",
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/grids/void.lua",
+     "sha256": "1346d53dfc56cc7d7e6a01f666523d3ecc0d22e88fe899e950cb5c70fb53fdf4",
+     "line": 31,
+     "anchor": "define_as = \"OUTERSPACE\""
+    },
+    {
+     "path": "game/modules/tome/data/zones/dreamscape-talent/zone.lua",
+     "sha256": "ce518c332a1b82fdd6eb4c8adfbee6323926277afb285d4e3860f483262830a9",
+     "line": 42,
+     "anchor": "wall = \"OUTERSPACE\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-dream-s17/masters/dream-cloud-floor-v1.png",
+     "sha256": "3e0c3d7b441c87422b0baeddcd1d3aa84bc67f4a6a4968fa25a9d5caf9a4bcf9",
+     "role": "family",
+     "note": "The accepted dream cloud floor that borders this void. Match its soft painted cloud handling and cool lavender hue family; the void must be far darker and emptier so the cloud floor reads as the only walkable ground."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-void-v1/masters/void-blocked-fracture-v1.png",
+     "sha256": "428374c806c59f9c340f1270fe78aa7cf180d4e5826b2f598b10e33fcd105ddf",
+     "role": "style",
+     "note": "Accepted board impassable-void master: flat overhead matte finish, deep indigo value range and texture scale. Not its fractured crystal shards or cyan cracks; the dream void is smooth, soft haze."
+    }
+   ],
+   "grid_contract": {
+    "movement": "Blocks movement (impassable void); only void-passing creatures could cross.",
+    "sight": "Does not block sight or projectiles; it is open empty space.",
+    "danger": "None: no callback, no damage. It is empty sky, not lava, poison, a portal or a trap.",
+    "interaction": "None.",
+    "export": "Opaque full-bleed material; the exporter crops 2 windows and 2 checker parities with no mask; the cloud tiles next to it carry the rim."
+   },
+   "prompt_fields": {
+    "subject": "The empty abyss of a dream seen from straight above, far below a floating cloud floor: deep, soft indigo-violet haze with a few very faint, blurred, distant cloud wisps drifting far down in the depth; calm, quiet, empty space with nothing to stand on.",
+    "palette": "Deep indigo, dark violet and blue-black, with the faint distant wisps only slightly lighter dusky lavender; overall very dark (roughly a fifth of the brightness of the pale cloud floor), low saturation, no bright spots.",
+    "contrast": "At 48 pixels it must read as empty, impassable depth: a dark, quiet, almost uniform field that the pale cloud floor clearly stands out against, so it does NOT read as floor, water, lava, poison, a starfield, a portal, a vortex or a wall.",
+    "composition": "Edge-to-edge overhead material filling the whole square; soft, non-directional haze with the faint wisps spread evenly, reaching all four edges; no border, rim, cloud edge, platform, object, star, planet, swirl, rune, symbol or glow.",
+    "mechanics": "Impassable empty void, harmless. Paint no floor, bridge, stairs, portal, character, warning sign, symbol or text."
+   }
+  }
+ ]
+}

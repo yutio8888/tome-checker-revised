@@ -1,0 +1,13 @@
+Use case: stylized-concept. Deliver ONE square, opaque, full-bleed terrain material master for a tabletop game board: SLIME_WALL slime wall. Request 1024 x 1024 pixels; preserve actual output resolution.
+
+Subject and material: The top surface of a solid wall of congealed slime seen from straight above: one continuous heavy mass of thick dark green ooze in broad rounded folds and lumps over buried rock, a slightly wet sheen on the rounded lumps; solid and impassable, filling the square.
+Palette: Deep bottle green, dark olive and blackish moss green, with small muted yellow-green wet highlights catching upper-left light. Dark overall: clearly much darker than a pale slime-glazed floor or a light stone floor; never neon, never translucent.
+Relationship to adjacent materials: At 48 pixels it must read as a dark solid blocking mass filling its cell, clearly darker and heavier than any floor; distinct from grey stone brick and brown mushroom thickets by its dark glossy green ooze; broad rounded forms, no small scattered blobs that look like separate objects, no holes showing floor.
+Composition and edge contract: Edge-to-edge overhead material filling the whole square with even density and broad rounded forms; no border, gap, visible floor, cliff face, drip line, object or cast shadow.
+Gameplay contract (do not invent additional rules): Blocking wall top only. Paint no door, opening, pool, stairs, hazard, character, symbol or text.
+
+Flat overhead printed-board surface; restrained matte paint texture and broad low-contrast variations. Match the supplied accepted reference's scale, palette hierarchy and upper-left lighting convention. No creature, disc, freestanding prop, text, symbol, hazard badge, frame, vignette or cast shadow implying an obstacle. Texture must reach all four edges. Grid seams, parity modulation, neighbour masks and rule overlays are assembled by the exporter, not painted as an atlas here. Do not create decorative cracks that resemble an interactive exit. Do not claim a seamless result without a separate tiled preview check. One master only.
+
+Reference roles:
+Image 1: identity — Native slime wall: a wall of thick translucent green slime. Keep the congealed-slime identity but as a dark, heavy, matte-to-glossy mass seen from above; not bright green, not translucent.
+Image 2: style — Accepted board wall-top material (TW5 mountain crest): an opaque overhead material of a solid blocking mass, its broad forms, scale and upper-left light. Not its sandstone material or gold palette.

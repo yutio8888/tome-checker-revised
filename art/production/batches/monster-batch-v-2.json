@@ -1,0 +1,216 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-v-2",
+  "assets": [
+    {
+      "asset_id": "dredge",
+      "native_name": "dredge",
+      "scope": "temporal-rift, ardhungol, dreadfell and others' temporal-horror pools (general/npcs/horror_temporal.lua:73, horror/temporal, non-unique, no define_as, rank 2, base BASE_NPC_HORROR_TEMPORAL, default-name image, leaf field dredge=1); single definition; the dredge captain (horror_temporal.lua:98) only lists it in make_escort by name, so escorts are this same leaf",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_temporal.lua",
+          "sha256": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+          "line": 73,
+          "anchor": "name = \"dredge\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_temporal.lua",
+          "sha256": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+          "line": 91,
+          "anchor": "T_CLINCH"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_temporal.lua",
+          "sha256": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+          "line": 115,
+          "anchor": "name=\"dredge\", number=3"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_temporal.lua",
+          "sha256": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+          "line": 95,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_temporal_dredge.png",
+          "sha256": "a620da334ebb9d41628a476e95a0a52b44d0ccaa3c51d9f6e379e0bd96b1382e",
+          "role": "identity",
+          "note": "Native shape (64x64): a huge hunched brownish-pink brute with very long arms hanging to the ground. Keep the hulking knuckle-walker but a salmon-pink stitched brute with enormous fists planted on the ground."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-v/refs/horrors.png",
+          "sha256": "0a26084e77749fa6836593860a9003b772d85211a6104e7d40dbdb292ad15077",
+          "role": "family",
+          "note": "Five shipped horror tokens (small thin pink dredgling crouched on all fours, dark-brown armoured drem with axe and shield, grey-white shaggy dremling, tan-pink many-armed weirdling beast, horned horror with a bull head and tentacles): none of the three new horrors may be any of these."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A dredge seen from a steep overhead three-quarter angle: a huge hunched knuckle-walking brute with wrinkled, stitched SALMON-PINK skin in a mid-light value, a massively broad rounded back and shoulders, TWO ENORMOUSLY THICK tree-trunk arms planted on the ground in front of it ending in heavy round fists, a TINY bald head with small pale eyes sunk deep between the shoulders, short stumpy legs, faint pale grey stubble and pale stitched scars across the back, and a few small pale blue clock-cog scars glowing softly on one shoulder. Wide, heavy, round and complete; the fists and knuckles stay well inside the disc.",
+        "contrast": "Horrors: the DREDGE is the HUGE HEAVY ROUND one, a hunched salmon-pink brute with enormous fists planted on the ground (silhouette: one wide rounded mass with two fat arm-posts and a tiny head; hue: salmon pink with pale grey stitches and pale blue cog scars; value: mid-light). The shipped dredgling is a small thin pink humanoid crouched on all fours with bulbous eyes, the weirdling beast a tan-pink many-armed octopus-like blob, drem and dremling armoured or shaggy dwarfish figures: this must not be small, thin or crouching on thin limbs, must have no tentacles and no armour. The other new horrors are a pale armoured faceless commander with a raised fist (drem master) and a cream-white floating bloated pear with red sores (bloated horror).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Salmon-pink skin in a mid-light value with pale peach highlight planes and warm rose-brown shadows, pale grey stubble and stitches, pale blue cog scars, pale eyes; nothing darker than dark rose-brown except the eye pits and thin seams; the disc stays neutral charcoal at reference lightness with no warm cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=dredge, define_as=None, type=horror/subtype=temporal, unique=False, native_tall=False); details and hashes in evidence/monster-batch-v-20260930/source-contracts.json. base BASE_NPC_HORROR_TEMPORAL (horror/temporal, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; leaf field dredge=1 (a flag read by the Dredge Frenzy talent only); talents Stun, Speed Sap, Clinch (activated), Crushing Hold (passive); resolvers.sustains_at_birth() on the leaf but no sustained talent known, so nothing starts; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-v-20260930/source-contracts.json",
+          "sha256": "2bf61831a3d4e67d3152ac5925673d689b454868c4e2e454b95959fa833143ed"
+        }
+      ]
+    },
+    {
+      "asset_id": "drem-master",
+      "native_name": "drem master",
+      "scope": "deep-bellow and maze corrupted-horror pools (general/npcs/horror-corrupted.lua:118, horror/corrupted, non-unique, no define_as, rank 2, base BASE_NPC_CORRUPTED_HORROR, default-name image); single definition; its make_escort lists drem and dremling by name, so nothing else is built as a drem master",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 118,
+          "anchor": "name = \"drem master\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 154,
+          "anchor": "T_DOMINATE"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 157,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_drem_master.png",
+          "sha256": "891ab12d8c157a71a318aace5014dcb4bd0bbfcd67c72de3de3dcd9ba4e6b8e6",
+          "role": "identity",
+          "note": "Native shape (64x64): a stocky dwarf-like figure in brown mail with a pale faceless head and a raised fist. Keep the pale faceless sewn-mouth head and the raised commanding fist, in lighter patched steel-blue mail."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-v/refs/horrors.png",
+          "sha256": "0a26084e77749fa6836593860a9003b772d85211a6104e7d40dbdb292ad15077",
+          "role": "family",
+          "note": "Five shipped horror tokens (small thin pink dredgling crouched on all fours, dark-brown armoured drem with axe and shield, grey-white shaggy dremling, tan-pink many-armed weirdling beast, horned horror with a bull head and tentacles): none of the three new horrors may be any of these."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A drem master seen from a steep overhead three-quarter angle: a stocky dwarf-proportioned corrupted commander with a PALE GREY faceless head, a stitched-shut mouth and no eyes, wearing patched-together DENTED STEEL-BLUE-GREY mail armour with orange RUST patches and a ragged pale grey cloth sash, ONE FIST RAISED HIGH IN COMMAND beside the head and the other hand holding a chipped waraxe pointing down and forward, short thick legs planted wide. Stocky, grim, lopsided and complete; everything stays inside the disc.",
+        "contrast": "Horrors: the DREM MASTER is the LIGHT STEEL-BLUE ARMOURED COMMANDER with one fist raised (silhouette: a stocky figure with one arm raised above the head and an axe pointing down on the other side; hue: pale grey face, steel-blue-grey mail, orange rust patches; value: mid-light). The shipped drem is a dark brown armoured dwarfish figure with a round shield, the dremling a grey-white shaggy hunched creature, the dredgling a thin pink crouching creature: this must not be brown, must not carry a shield and must not be shaggy. The other new horrors are a huge salmon-pink knuckle-walker (dredge) and a cream-white floating bloated pear (bloated horror).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Pale grey skin and cloth, dented steel-blue-grey mail in a mid-light value with pale highlight planes, orange rust patches, a chipped pale-steel axe head; nothing darker than dark steel-blue except thin seams and the stitched mouth; the disc stays neutral charcoal at reference lightness and the mail must not merge with it. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=drem master, define_as=None, type=horror/subtype=corrupted, unique=False, native_tall=False); details and hashes in evidence/monster-batch-v-20260930/source-contracts.json. base BASE_NPC_CORRUPTED_HORROR (horror/corrupted, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip fills inventory slots only (no moddable_tile, so no display change) (waraxe, shield, heavy armour); talents Dwarf Resilience, Dredge Frenzy, Dominate (all activated); resolvers.sustains_at_birth() on the leaf but no sustained talent known, so nothing starts; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-v-20260930/source-contracts.json",
+          "sha256": "2bf61831a3d4e67d3152ac5925673d689b454868c4e2e454b95959fa833143ed"
+        }
+      ]
+    },
+    {
+      "asset_id": "bloated-horror",
+      "native_name": "bloated horror",
+      "scope": "lake-nur, ardhungol, ruined-dungeon and eight more zones' pools plus the horror-chamber, skeleton-mage-cabal vaults and the Arena generator (general/npcs/horror.lua:116, horror/eldritch, non-unique, no define_as, rank 2, base BASE_NPC_HORROR, default-name image, never_move, levitation); single leaf definition named exactly this; the dreams zone's 'lost wife' (zones/dreams/npcs.lua:100, define_as WIFE) only sets subtype = \"bloated horror\" and keeps another name, type humanoid/orc base and its own tall PNG",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 116,
+          "anchor": "name = \"bloated horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 133,
+          "anchor": "T_MIND_DISRUPTION"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 140,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/maps/vaults/auto/greater/horror-chamber.lua",
+          "sha256": "b701452f38868db343ebee7eb14ff672786827ab626bef30bfa5d4d3b7cc205a",
+          "line": 46,
+          "anchor": "name=\"bloated horror\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_bloated_horror.png",
+          "sha256": "0843b9fc5533d77359e771f597937b17636ea90d3441cbf1a2cd82bfff6a1415",
+          "role": "identity",
+          "note": "Native shape (64x64): a fat pink bulbous body with a large bald childlike head and raised arms. Keep the bulbous body and the big childlike head, but pale cream-white with red sores."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-v/refs/horrors.png",
+          "sha256": "0a26084e77749fa6836593860a9003b772d85211a6104e7d40dbdb292ad15077",
+          "role": "family",
+          "note": "Five shipped horror tokens (small thin pink dredgling crouched on all fours, dark-brown armoured drem with axe and shield, grey-white shaggy dremling, tan-pink many-armed weirdling beast, horned horror with a bull head and tentacles): none of the three new horrors may be any of these."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A bloated horror seen from a steep overhead three-quarter angle: a FLOATING fat PEAR-SHAPED body of pale CREAM-WHITE and faint yellowish skin in a light value, swollen and glossy, pock-marked with a dozen bright RED-PINK SORES and a few purple veins, a disproportionately LARGE BALD CHILD-LIKE HEAD with big round pale eyes and a small open mouth at the top, two SMALL stubby arms raised in front of the chest, no legs, a soft rounded tapering underside hovering above the disc (no ground shadow). Round, bloated, pale and complete.",
+        "contrast": "Horrors: the BLOATED HORROR is the PALE ROUND FLOATING one, a cream-white pear with red sores and a big childlike head (silhouette: one rounded pear with a big head on top and tiny arms; hue: cream-white and yellowish with red-pink sores; value: light). The shipped dredgling is a thin pink crouching creature, the weirdling beast a tan-pink many-armed octopus-like blob, the horned horror a bull-headed tentacle monster, the dremling a grey-white shaggy figure: this must not be pink, must have no tentacles and must not crouch on limbs. The other new horrors are a huge salmon-pink knuckle-walker (dredge) and a steel-blue armoured commander with a raised fist (drem master).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Cream-white and faintly yellow skin in a light value with bright highlight planes and pale grey-lilac shadows, red-pink sores, purple veins, pale eyes; nothing darker than mid grey-lilac except the pupils and thin seams; the disc stays neutral charcoal at reference lightness and must not be brightened by the pale body. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=bloated horror, define_as=None, type=horror/subtype=eldritch, unique=False, native_tall=False); details and hashes in evidence/monster-batch-v-20260930/source-contracts.json. base BASE_NPC_HORROR (horror/eldritch, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; talents Phase Door, Mind Disruption, Mind Sear, Telekinetic Blast (all activated); resolvers.inscriptions(1, shielding rune); resolvers.sustains_at_birth() on the leaf but no sustained talent known, so nothing starts; ingredient_on_death only; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-v-20260930/source-contracts.json",
+          "sha256": "2bf61831a3d4e67d3152ac5925673d689b454868c4e2e454b95959fa833143ed"
+        }
+      ]
+    }
+  ]
+}

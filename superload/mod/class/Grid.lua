@@ -62,6 +62,39 @@ function _M:loadList(file,no_default,res,mod,loaded)
   -- S9: High Peak (its nested basic/cave imports keep their general stamps;
   -- its two next-level stairs get the S2 stamp).
   file=='/data/zones/high-peak/grids.lua' or
+  -- S10a: the slime family's general files and the three zone lists
+  -- (Grushnak Pride, Slime Tunnels, Sludgenest; nested imports keep their
+  -- general stamps too).
+  file=='/data/general/grids/slime.lua' or
+  file=='/data/general/grids/slimy_walls.lua' or
+  file=='/data/general/grids/underground_slimy.lua' or
+  file=='/data/zones/grushnak-pride/grids.lua' or
+  file=='/data/zones/slime-tunnels/grids.lua' or
+  file=='/data/zones/sludgenest/grids.lua' or
+  -- S10b: the gothic family's general file and Vor Pride's zone list (its
+  -- nested basic/gothic/forest/water/burntland imports keep their own
+  -- general stamps too).
+  file=='/data/general/grids/gothic.lua' or
+  file=='/data/zones/vor-pride/grids.lua' or
+  -- S13: Ardhungol's WORMHOLE (its nested basic/cave/water imports keep
+  -- their general stamps; only WORMHOLE gets the S13 stamp).
+  file=='/data/zones/ardhungol/grids.lua' or
+  -- S14: the Sher'Tul exploratory farportal and the Demon Plane's return
+  -- portal (nested imports keep their general stamps; only the listed
+  -- portal ids get the S14 stamp).
+  file=='/data/zones/shertul-fortress/grids.lua' or
+  file=='/data/zones/demon-plane/grids.lua' or
+  -- S15: the tutorial and dreams zone lists (the S5 zone-list stamp that
+  -- every S15 cell requires; nested imports keep their general stamps).
+  file=='/data/zones/tutorial/grids.lua' or
+  file=='/data/zones/dreams/grids.lua' or
+  -- S16: the Fearscape spell and Temporal Reprieve plane lists (zone-list
+  -- stamp; nested lava/basic/forest/void imports keep their general stamps).
+  file=='/data/zones/demon-plane-spell/grids.lua' or
+  file=='/data/zones/temporal-reprieve-talent/grids.lua' or
+  -- S17: the Dreamscape plane list (zone-list stamp on its own CLOUD and on
+  -- the nested basic/void imports, which keep their general stamps).
+  file=='/data/zones/dreamscape-talent/grids.lua' or
   -- S2: zone lists defining reviewed exits, locks and props (Iron Council
   -- exits, Elven Ruins teleport circle, Kryl-Feijan locks and symbols,
   -- lore posts). Only their own spec ids get the S2 stamp.

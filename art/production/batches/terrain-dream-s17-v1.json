@@ -1,0 +1,63 @@
+{
+ "schema": 1,
+ "batch_id": "terrain-dream-s17-v1",
+ "assets": [
+  {
+   "gate": "ready",
+   "gate_reason": "S17: the Solipsist Dreamscape plane's zone-local CLOUD floor (animated cloud_anim shader natively) has no board picture; user-approved new cloud-floor family. One opaque cloud-floor master; the exporter adds 3 windows x 16 cloud-edge masks x 2 parities. Rules unchanged (walkable, no callback). No waiver.",
+   "max_attempts": 2,
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/terrain-s17-20260930/identity-s17.md",
+     "sha256": "6c1e78658aff856b79bfd5270e82c93000742f97787f192e0ccb19af1a2a3cc0"
+    }
+   ],
+   "asset_id": "dream-cloud-floor",
+   "native_name": "CLOUD dreamscape cloud floor",
+   "kind": "terrain-floor",
+   "scope": "Zone-local CLOUD (dreamscape-talent/grids.lua) of the Dreamscape talent plane only: every walkable cell of the 20x20 plane; its void is OUTERSPACE (separate master).",
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/dreamscape-talent/grids.lua",
+     "sha256": "02c3de6012e5a25a15969502dc59957bb5f4480fd91609a8f7166b75ba1b08c3",
+     "line": 24,
+     "anchor": "define_as = \"CLOUD\""
+    },
+    {
+     "path": "game/modules/tome/data/zones/dreamscape-talent/zone.lua",
+     "sha256": "ce518c332a1b82fdd6eb4c8adfbee6323926277afb285d4e3860f483262830a9",
+     "line": 41,
+     "anchor": "floor = \"CLOUD\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/terrain/clouds/cloud_normal_002.png",
+     "sha256": "f2a3790e7f5f26c77a10bf794e5cba4a100fcf9bf196184a529b5760c3364852",
+     "role": "identity",
+     "note": "Native dreamscape floor: one soft white billowing cloud puff with pale blue shading. Keep the soft white cloud identity, but as a continuous flat walkable surface filling the whole square, not a single puff on a dark background."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-korpul-v1/masters/floor-a-v2.png",
+     "sha256": "aa50b00c1a936cb30e29e67e7a24a0243f8d936be8c9d413926a2a507aa42d29",
+     "role": "style",
+     "note": "Accepted board stone floor master: flat overhead matte printed-board finish, upper-left light, broad low-contrast variation and texture scale. Not its sandstone palette, stone grain or its value; the cloud floor is lighter and softer."
+    }
+   ],
+   "grid_contract": {
+    "movement": "Walkable floor; no movement rule, no speed bonus or penalty.",
+    "sight": "Does not block sight.",
+    "danger": "None: no callback, no damage. Must not look like ice, snow drift, water, a pit or a trap.",
+    "interaction": "None.",
+    "export": "Opaque full-bleed material; the exporter crops 3 windows and 2 checker parities and adds a soft cloud rim only where a neighbour is not cloud (16 masks), no wall, rail or fence."
+   },
+   "prompt_fields": {
+    "subject": "A walkable dream floor made of dense, packed cloud seen from straight above: a soft continuous surface of rounded, gently overlapping cloud billows pressed flat into one level, like a quilted pillowy ground you could stand on; faint soft hollows between billows, no holes and no gaps.",
+    "palette": "Pearl white and very pale lavender-grey billow tops with soft cool blue-grey and faint lilac shading in the hollows; a light, mid-high value overall (clearly lighter than a board stone floor) but not blown-out pure white, so the shading still reads at small size.",
+    "contrast": "At 48 pixels it must read as soft solid ground to stand on: about three to four billows across the square, broad and low-contrast, even and non-directional, so it does NOT read as snow with footprints, ice, foam on water, smoke, a pit or a wall, and so creature tokens stay the strongest element on it.",
+    "composition": "Edge-to-edge overhead floor material filling the whole square; billows of even size distributed uniformly, reaching all four edges; no border, rim, edge drop, sky, gap, hole, object, rune, symbol, vortex, glow spot or cast shadow.",
+    "mechanics": "Plain walkable floor with no effect. Paint no void, hole, edge, pit, stairs, portal, character, warning sign, symbol or text."
+   }
+  }
+ ]
+}

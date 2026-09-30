@@ -1,0 +1,1481 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "caravan-merchant",
+      "master": "masters/caravan-merchant-v1.png",
+      "sha256": "8c99ec6b7074849cbf65c0f15d0e57f44e0244ec6b03416f1cf468715d8ff574",
+      "exports": [
+        {
+          "path": "sprites/48/caravan-merchant.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            92,
+            81,
+            1162,
+            1170
+          ],
+          "export_window": [
+            -6.139535,
+            -7.639535,
+            1266.27907
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fa5c4a6dab4be8a476e6da4d1cd7430a2ad179a27f7596805a6131224429c6db"
+        },
+        {
+          "path": "sprites/64/caravan-merchant.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            92,
+            81,
+            1162,
+            1170
+          ],
+          "export_window": [
+            -6.139535,
+            -7.639535,
+            1266.27907
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e9d4e43df8138a97c4ac8cf5441c2bb100948883fc9d6b47777169c81e3bbd3b"
+        },
+        {
+          "path": "sprites/96/caravan-merchant.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            92,
+            81,
+            1162,
+            1170
+          ],
+          "export_window": [
+            -6.139535,
+            -7.639535,
+            1266.27907
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "941dd35d2e060eaeea4f8c5d8635d9d613d756286fceb4b8a299fd4ad67a96c1"
+        },
+        {
+          "path": "sprites/128/caravan-merchant.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            92,
+            81,
+            1162,
+            1170
+          ],
+          "export_window": [
+            -6.139535,
+            -7.639535,
+            1266.27907
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d0d18cfe6b0939cc8f298aee53e1925c8cf4e6fc6bf0a24a1227a04266ad9cae"
+        },
+        {
+          "path": "sprites/256/caravan-merchant.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            92,
+            81,
+            1162,
+            1170
+          ],
+          "export_window": [
+            -6.139535,
+            -7.639535,
+            1266.27907
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fb533757758818b21458b0e9d1b5f3b75eba7b6b3518087b666e30035b5b1efe"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.9,
+        "max_sector_intrusion": 3.03,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "caravan-guard",
+      "master": "masters/caravan-guard-v1.png",
+      "sha256": "6bc0a8cc460e890ef9cc11b5f46e2a4a49076c27525f21673f760b7d3765d07d",
+      "exports": [
+        {
+          "path": "sprites/48/caravan-guard.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1169,
+            1171
+          ],
+          "export_window": [
+            -9.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9646339a3c51fd5382893690727bfab37111099a453123d596ffc14bb43769d0"
+        },
+        {
+          "path": "sprites/64/caravan-guard.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1169,
+            1171
+          ],
+          "export_window": [
+            -9.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7668cebee3400dd77f47f844ce76d4c14946dec781c2789c56aa7aaf3b6fa355"
+        },
+        {
+          "path": "sprites/96/caravan-guard.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1169,
+            1171
+          ],
+          "export_window": [
+            -9.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "86cc46e3d6218a59f9bf38cf37bd07698c106439361f555720840cf1b852afc0"
+        },
+        {
+          "path": "sprites/128/caravan-guard.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1169,
+            1171
+          ],
+          "export_window": [
+            -9.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f853761a58e55413c6ba5534c6b4852a2974fc5f761db3da66b8641dcaa95831"
+        },
+        {
+          "path": "sprites/256/caravan-guard.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            74,
+            1169,
+            1171
+          ],
+          "export_window": [
+            -9.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8b740a7a452fda2750ac22f4eef6b72d0de88b0a7ce438c0fb750d9655530eb6"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -5.02,
+        "max_sector_intrusion": 2.98,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "caravan-porter",
+      "master": "masters/caravan-porter-v1.png",
+      "sha256": "eb91635798ec0c33e7aa22831af682ad11a33c3f180efe8e4e50056067a69061",
+      "exports": [
+        {
+          "path": "sprites/48/caravan-porter.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1162,
+            1171
+          ],
+          "export_window": [
+            -12.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d0d0250a47500a94be86604041ccab81ed0f061c015519085969702f4520b29f"
+        },
+        {
+          "path": "sprites/64/caravan-porter.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1162,
+            1171
+          ],
+          "export_window": [
+            -12.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "830a6d072db8841b2356468806b14e324d64cbea1c5546641ee5ead9480f91ce"
+        },
+        {
+          "path": "sprites/96/caravan-porter.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1162,
+            1171
+          ],
+          "export_window": [
+            -12.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9fde8d47c39c7b124dbc7cd37b52b70d14f24779eca3ad4e550df99432cc0962"
+        },
+        {
+          "path": "sprites/128/caravan-porter.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1162,
+            1171
+          ],
+          "export_window": [
+            -12.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e0057e0c6854456772ac5c15cc2ef49f784034144bd13cdfc1f5748dcead2256"
+        },
+        {
+          "path": "sprites/256/caravan-porter.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1162,
+            1171
+          ],
+          "export_window": [
+            -12.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7004c11206fa73fb6364e0b9c69779ba7a0a99182828242a00c4bc9365a3c145"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.79,
+        "max_sector_intrusion": 3.04,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "lost-merchant",
+      "master": "masters/lost-merchant-v1.png",
+      "sha256": "856bdabd7bcf6af0545597a953781ab71478449a8d775475e93e1440aeff498a",
+      "exports": [
+        {
+          "path": "sprites/48/lost-merchant.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            77,
+            66,
+            1173,
+            1174
+          ],
+          "export_window": [
+            -19.186047,
+            -24.186047,
+            1288.372093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "aabc7427475a5425bccb982fc005bc0f7c6fc11bb35f56595b9991e00397679a"
+        },
+        {
+          "path": "sprites/64/lost-merchant.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            77,
+            66,
+            1173,
+            1174
+          ],
+          "export_window": [
+            -19.186047,
+            -24.186047,
+            1288.372093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0b2e23834de13d5333fcb46b10353b0268deaca06b71b582f258d4014d822fe6"
+        },
+        {
+          "path": "sprites/96/lost-merchant.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            77,
+            66,
+            1173,
+            1174
+          ],
+          "export_window": [
+            -19.186047,
+            -24.186047,
+            1288.372093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "20548f4cba64a03bfcbbf6424886e23e7da8922f1669afde974ae6d8791081ab"
+        },
+        {
+          "path": "sprites/128/lost-merchant.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            77,
+            66,
+            1173,
+            1174
+          ],
+          "export_window": [
+            -19.186047,
+            -24.186047,
+            1288.372093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4c46144d508d8fad10c68d75d2378b27df44761d66936eeb1ff475c773be1743"
+        },
+        {
+          "path": "sprites/256/lost-merchant.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            77,
+            66,
+            1173,
+            1174
+          ],
+          "export_window": [
+            -19.186047,
+            -24.186047,
+            1288.372093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a1e71851a35d62f4819868ea8f953cae9aad3256be5563691ae2dd6e9930b6cb"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 5.56,
+        "max_sector_intrusion": 4.59,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "war-dog",
+      "master": "masters/war-dog-v1.png",
+      "sha256": "a3a1de570610e9ff68bd250f80dfdbf64d8c9361d8a79f662e2f100218e906cc",
+      "exports": [
+        {
+          "path": "sprites/48/war-dog.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1169,
+            1170
+          ],
+          "export_window": [
+            -9.709302,
+            -15.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "daf9bcaa1042d807f538c82c9aaebb83db9744f795630909b52370b272ae5d24"
+        },
+        {
+          "path": "sprites/64/war-dog.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1169,
+            1170
+          ],
+          "export_window": [
+            -9.709302,
+            -15.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "17d6a497d7578f151e601803bc2644140c3749adc1e0f96c9c695a8c5b15d33d"
+        },
+        {
+          "path": "sprites/96/war-dog.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1169,
+            1170
+          ],
+          "export_window": [
+            -9.709302,
+            -15.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f4ef918aba2dd8cf51b2d2c01fe6fd61cf517523f0ddae4ae89e8ced4cd6e8ab"
+        },
+        {
+          "path": "sprites/128/war-dog.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1169,
+            1170
+          ],
+          "export_window": [
+            -9.709302,
+            -15.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "36361b3696c06297cac6658844a2171da3cff1f84a375ce6eb2da09a0678afbc"
+        },
+        {
+          "path": "sprites/256/war-dog.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1169,
+            1170
+          ],
+          "export_window": [
+            -9.709302,
+            -15.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e6eabb1f2fda195f8291fc65124df2460663092980ab89c98e8aac0d7ef5c6f3"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.96,
+        "max_sector_intrusion": 4.85,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "yeek-wayist",
+      "master": "masters/yeek-wayist-v1.png",
+      "sha256": "40b9cbb3169f0fe3139d2db329f4fc05f5fecf5a71616615e56d75b608cd1a7b",
+      "exports": [
+        {
+          "path": "sprites/48/yeek-wayist.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            74,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -11.372093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f7b31fdc5f6bf787be78b7e6a8c20578dd920e354a3f76c3a40ba97d36064cc6"
+        },
+        {
+          "path": "sprites/64/yeek-wayist.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            74,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -11.372093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6c1d98fa3ab4f0dc687c8a72b4cdb9a982cda321930c5e47171a8ce4fd962e60"
+        },
+        {
+          "path": "sprites/96/yeek-wayist.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            74,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -11.372093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fb93edcb94e76db73767d595b8ecf05d664d5eb1e37a2e301edc69746c260aa2"
+        },
+        {
+          "path": "sprites/128/yeek-wayist.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            74,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -11.372093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9f3d90552f10e22512d684b09dc44e280d9a9ff4f0dfa78502ad152117e2c571"
+        },
+        {
+          "path": "sprites/256/yeek-wayist.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            74,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -11.372093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "40d2c77a031b7c02122f07c138d84ec447b17e31974eb551c0ee01556163d685"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 2.89,
+        "max_sector_intrusion": 3.36,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "nimisil",
+      "master": "masters/nimisil-v1.png",
+      "sha256": "487c6836020042678bc2f6c4d774a305c04be2a8b494e78755a559629d638073",
+      "exports": [
+        {
+          "path": "sprites/48/nimisil.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1165,
+            1170
+          ],
+          "export_window": [
+            -8.965116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "dd080c770420781e4fd1b7c86e47b97689f1d57ba3eec745417824fd2466ba99"
+        },
+        {
+          "path": "sprites/64/nimisil.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1165,
+            1170
+          ],
+          "export_window": [
+            -8.965116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bf4fa57240a4a3704ee28b63e9e78561d05ab76124e48e2a5371af6128f9c032"
+        },
+        {
+          "path": "sprites/96/nimisil.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1165,
+            1170
+          ],
+          "export_window": [
+            -8.965116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "276ad3bfd05924838fe730e916c47dd23b783f92752000487b10f8c30917a6e9"
+        },
+        {
+          "path": "sprites/128/nimisil.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1165,
+            1170
+          ],
+          "export_window": [
+            -8.965116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "27df67ab11e93f51505c58b0fc9e8da0a43cf8775e37c1047e91d328a6b12634"
+        },
+        {
+          "path": "sprites/256/nimisil.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1165,
+            1170
+          ],
+          "export_window": [
+            -8.965116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "77db097351aa34c3848346f1aa2ab4fc358d1d81af9b78c93969937dc3056320"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 5.21,
+        "max_sector_intrusion": 5.08,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "slasul",
+      "master": "masters/slasul-v1.png",
+      "sha256": "0b4a714fc4dcb69012c98809ef33d7860dd5ac9f771a4442c635ddccbfbccae8",
+      "exports": [
+        {
+          "path": "sprites/48/slasul.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1169,
+            1169
+          ],
+          "export_window": [
+            -9.046512,
+            -14.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7015002fb8ba72f30c2a96684c398c1f2c130a094cd9e49a4c2203c4fd89c644"
+        },
+        {
+          "path": "sprites/64/slasul.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1169,
+            1169
+          ],
+          "export_window": [
+            -9.046512,
+            -14.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "369a710383852fca4a3ed0d314f8bcd1c3c2212f3f64ae2721509d1e37deb9c6"
+        },
+        {
+          "path": "sprites/96/slasul.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1169,
+            1169
+          ],
+          "export_window": [
+            -9.046512,
+            -14.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0c77e80d6166ddfb0cbf637cc75ab7effd4e38332e17b8a57f81597f3eb75570"
+        },
+        {
+          "path": "sprites/128/slasul.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1169,
+            1169
+          ],
+          "export_window": [
+            -9.046512,
+            -14.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9de5fa6da4e23027f729fad1d6c50d0013b3f53a0fe185daee98b75fbfc16700"
+        },
+        {
+          "path": "sprites/256/slasul.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1169,
+            1169
+          ],
+          "export_window": [
+            -9.046512,
+            -14.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b84d4da60bd56282726dda41bccda591b56dd0dc89eb37ab7bcded80d28d0cab"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -5.39,
+        "max_sector_intrusion": 4.35,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "draebor",
+      "master": "masters/draebor-v1.png",
+      "sha256": "b776ae6321c06cd0847413a0f88d4cb4deb9c5f211c22b52e822c0473b3db870",
+      "exports": [
+        {
+          "path": "sprites/48/draebor.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            71,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -13.034884,
+            -18.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "91692d390798abf14ac24616ebe33832ec109201d3ea95f79894bfe2773fd43e"
+        },
+        {
+          "path": "sprites/64/draebor.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            71,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -13.034884,
+            -18.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fcdcbb860f8764bd2baba0782c51ddb1a442fd2e1e12fa97c5fee248a2aa2383"
+        },
+        {
+          "path": "sprites/96/draebor.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            71,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -13.034884,
+            -18.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8f712de52315b2c7a7ccb483a6925cc7616829f8f4bd8f9e6559a488b09ceaab"
+        },
+        {
+          "path": "sprites/128/draebor.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            71,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -13.034884,
+            -18.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3080f86ae2970ef600bb53d35325b8241c6341f2dbb17562562cec71f5cd7cf8"
+        },
+        {
+          "path": "sprites/256/draebor.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            71,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -13.034884,
+            -18.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fb5a0a9fe676b3624a5821919d59e826b9ebbbfb6b8df3e06ac79f2ea1091c29"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.02,
+        "max_sector_intrusion": 2.83,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "weirdling-beast",
+      "master": "masters/weirdling-beast-v1.png",
+      "sha256": "336ab3cf459befc2d76b1ca35a3c8f85fa56db632c6d76c4902b4c65df1be97b",
+      "exports": [
+        {
+          "path": "sprites/48/weirdling-beast.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1169,
+            1172
+          ],
+          "export_window": [
+            -9.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "218e4c54d94e6a346263b2386c1d103948582d0dc9add6da72e1dcc402be8cea"
+        },
+        {
+          "path": "sprites/64/weirdling-beast.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1169,
+            1172
+          ],
+          "export_window": [
+            -9.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a75d2133a8e4e5e4b278e8ae67ddded6b480906805e39edb7ba0dd050d6c4f40"
+        },
+        {
+          "path": "sprites/96/weirdling-beast.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1169,
+            1172
+          ],
+          "export_window": [
+            -9.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e351b7cadebe91382f8f7824a480052131ba396538865716c8a5aa0f7ac85370"
+        },
+        {
+          "path": "sprites/128/weirdling-beast.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1169,
+            1172
+          ],
+          "export_window": [
+            -9.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b07f852de7a5c091239f6c4f021aa2ee56aa45c1ab771b0e740f05bb803bd7d7"
+        },
+        {
+          "path": "sprites/256/weirdling-beast.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1169,
+            1172
+          ],
+          "export_window": [
+            -9.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e38aa683ccbb0b63244964e428b03b14ab3d13afdcf48066940ecf67d118e852"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.87,
+        "max_sector_intrusion": 4.96,
+        "max_opaque_radius": 0.8604,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "fortress-shadow",
+      "master": "masters/fortress-shadow-v2.png",
+      "sha256": "5e4671ef31d6fcf43e7502d92612dd452f78141c8c5e17221d64c4f42083305d",
+      "exports": [
+        {
+          "path": "sprites/48/fortress-shadow.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1169,
+            1173
+          ],
+          "export_window": [
+            -9.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2297dd79ebe29d8aeeaf698b48ba1bdea86568fda7d7eb01d975e369b0c54834"
+        },
+        {
+          "path": "sprites/64/fortress-shadow.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1169,
+            1173
+          ],
+          "export_window": [
+            -9.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c6a918b8e517de41e7a3854e0332830d3fd0a63a98d32bd92ce615666734672b"
+        },
+        {
+          "path": "sprites/96/fortress-shadow.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1169,
+            1173
+          ],
+          "export_window": [
+            -9.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9643f45a3b4bbb018a69c5f4580dc47f99a42aac6e9c906aebfe82ea1cd9a1f3"
+        },
+        {
+          "path": "sprites/128/fortress-shadow.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1169,
+            1173
+          ],
+          "export_window": [
+            -9.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "79c1a3bfd49538dacdcec51dd92dbd5579e55bad4a534f9e8e63ce4a777d12ba"
+        },
+        {
+          "path": "sprites/256/fortress-shadow.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1169,
+            1173
+          ],
+          "export_window": [
+            -9.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d9cf089107f830e14732630c919ed5070c99556ce27b1ce4a55805bea6dd4644"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 2.84,
+        "max_sector_intrusion": 3.97,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "pumpkin",
+      "master": "masters/pumpkin-v1.png",
+      "sha256": "eb35b5a7d0cc482d89fcf3714ad5a7d5758717dd9d891b93079e64893ba38b2a",
+      "exports": [
+        {
+          "path": "sprites/48/pumpkin.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            76,
+            1166,
+            1173
+          ],
+          "export_window": [
+            -12.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7a5766d4dcdb48ca62decd544fe9e0b13d87cd39c4e15b051bea304006ceb8fe"
+        },
+        {
+          "path": "sprites/64/pumpkin.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            76,
+            1166,
+            1173
+          ],
+          "export_window": [
+            -12.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d8c7297584cafbe4cd8b8e1fa662f0fd22c8b7e3e6c8e3bbcdc7c27738b11619"
+        },
+        {
+          "path": "sprites/96/pumpkin.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            76,
+            1166,
+            1173
+          ],
+          "export_window": [
+            -12.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7cd973df2f47900375723e1964c902e12cef098af947ff0284567b77b70f6e2d"
+        },
+        {
+          "path": "sprites/128/pumpkin.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            76,
+            1166,
+            1173
+          ],
+          "export_window": [
+            -12.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d2f402cb17d92a7672266ea6f1bdf67547284456b4dcee5ffaf91346ebd30ee3"
+        },
+        {
+          "path": "sprites/256/pumpkin.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            76,
+            1166,
+            1173
+          ],
+          "export_window": [
+            -12.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6d090bfb35c1d5ca5493c5d1af4e6c6c9048b15b99cf621baaddaf4ee6db0ed4"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.7,
+        "max_sector_intrusion": 2.78,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

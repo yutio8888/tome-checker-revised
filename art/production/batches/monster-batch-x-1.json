@@ -1,0 +1,138 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-x-1",
+  "assets": [
+    {
+      "asset_id": "giant-acid-ant",
+      "native_name": "giant acid ant",
+      "scope": "ardhungol, dreadfell, reknor, ruined-dungeon, old-forest and four more zones' ant pools (general/npcs/ant.lua:181, insect/ant, non-unique, no define_as, rank 1, base BASE_NPC_ANT, explicit image=npc/acid_ant.png); the only definition of this name; no vault, event or talent builds another actor with this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 181,
+          "anchor": "name = \"giant acid ant\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 189,
+          "anchor": "T_ACIDIC_SPRAY"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ANT\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/acid_ant.png",
+          "sha256": "8c74841351fea963492021c37315012eb00cc5509a018435bfcc9530f9af2eee",
+          "role": "identity",
+          "note": "Native shape (64x64): a black ant with yellow acid blotches, a big swollen black abdomen and yellow acid dripping from the front. Keep the acid-oozing ant, but render the carapace in mid-light slate grey (not black) with lime-yellow acid pores and bright dripping acid."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-x/refs/ants.png",
+          "sha256": "0d80fdade43c87fffa5973d38c3ffe574ad2f9c9119d1a6fde16c6edaaa4abb1",
+          "role": "family",
+          "note": "Eleven shipped ant tokens (white, golden yellow, brown, cobalt blue, black carpenter ant with big mandibles, plain glossy black ant, lime green ant, deep red ant, burnt-orange fire ant with a flame plume, pale cyan ice ant with a spike crest, lavender lightning ant with arcs): the acid ant and the army ant must not be recolours of these. The acid ant is a slate-grey ant with lime-yellow acid blotches and dripping acid; the army ant is a broad armoured bronze ant with a horned head shield."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A giant acid ant seen from a steep overhead three-quarter angle: a large ant angled diagonally with its head towards the lower left, a glossy SLATE-GREY and STEEL-BLUE-GREY carapace in a mid-light value with pale silver-white highlight planes, a big swollen bulbous abdomen raised towards the upper right that is covered with POROUS LIME-YELLOW ACID BLOTCHES and bright ACID-YELLOW-GREEN pores oozing glossy drops, thick strands of glowing lime-yellow acid dripping from the open mandibles and from the abdomen tip (short drips, kept on the body and close to it), glossy pale-yellow eye dots, antennae curled in close, legs tucked in, a few faint acid bubbles on the back. Corrosive, swollen, drooling and complete.",
+        "contrast": "Ants: the GIANT ACID ANT is the SLATE-GREY ONE with a swollen abdomen covered in lime-yellow acid blotches and dripping acid (silhouette: a diagonal ant with a big round raised abdomen and drops at both ends; hue: slate grey and steel blue-grey with lime-yellow and acid green; value: mid-light with bright yellow accents). The shipped black ant is a plain glossy black ant, the carpenter ant a black ant with huge mandibles, the green ant lime green and the yellow ant golden: this must not be black, not plain, not lime green all over and not golden. The other new ant of this batch is a bronze armoured army ant.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Slate-grey and steel-blue-grey carapace in a mid-light value with pale silver highlight planes and a bright rim light, lime-yellow and acid-green blotches and drips with a bright yellow core (the acid stays on the ant and must not glow onto, tint or lighten the disc); nothing darker than dark slate-grey except the eye dots and thin seams; NO black chitin anywhere. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=giant acid ant, define_as=None, type=insect/subtype=ant, unique=False, native_tall=False); details and hashes in evidence/monster-batch-x-20260930/source-contracts.json. base BASE_NPC_ANT (insect/ant, no image=, no shader, no sustains_at_birth); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; melee_project acid, talents Crawl Acid and Acidic Spray (activated); no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-x-20260930/source-contracts.json",
+          "sha256": "d3dd5bbd03d3fe045b05a6c6bb6d5c1259c16277838feee21714f1457e7dc3cc"
+        }
+      ]
+    },
+    {
+      "asset_id": "giant-army-ant",
+      "native_name": "giant army ant",
+      "scope": "ardhungol, dreadfell, reknor, ruined-dungeon, old-forest and three more zones' ant pools (general/npcs/ant.lua:197, insect/ant, non-unique, no define_as, rank 1, base BASE_NPC_ANT, explicit image=npc/army_ant.png); the only definition of this name; no vault, event or talent builds another actor with this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 197,
+          "anchor": "name = \"giant army ant\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 206,
+          "anchor": "T_DISARM"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ANT\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/army_ant.png",
+          "sha256": "76c68a51f3003da6c29d3bf3d2e746bbfc8bb3ac80c07659bf88790a0e563bc3",
+          "role": "identity",
+          "note": "Native shape (64x64): a heavy black-and-gold striped ant with an armoured horned head and thick plated exoskeleton. Keep the heavy plated war ant with a horned head, but render the plates in burnished mid-light bronze-brown with bright orange-gold bands."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-x/refs/ants.png",
+          "sha256": "0d80fdade43c87fffa5973d38c3ffe574ad2f9c9119d1a6fde16c6edaaa4abb1",
+          "role": "family",
+          "note": "Eleven shipped ant tokens (white, golden yellow, brown, cobalt blue, black carpenter ant with big mandibles, plain glossy black ant, lime green ant, deep red ant, burnt-orange fire ant with a flame plume, pale cyan ice ant with a spike crest, lavender lightning ant with arcs): the acid ant and the army ant must not be recolours of these. The acid ant is a slate-grey ant with lime-yellow acid blotches and dripping acid; the army ant is a broad armoured bronze ant with a horned head shield."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A giant army ant seen from a steep overhead three-quarter angle: a broad, heavily armoured ant facing straight up the picture, its exoskeleton made of thick overlapping riveted-looking PLATES of BURNISHED BRONZE-BROWN and dull gold in a mid-light value with bright ORANGE-GOLD BANDS across the abdomen and thorax and pale gold highlight planes, a wide flared HORNED HEAD SHIELD with two short curved horns, huge open serrated mandibles, thick armoured legs planted wide in a bracing stance (leg tips inside the disc), small pale-amber eyes, a pale bone-coloured scar on one plate. Heavy, armoured, planted and complete.",
+        "contrast": "Ants: the GIANT ARMY ANT is the BRONZE ARMOURED ONE facing straight up with a horned head shield and gold bands (silhouette: a broad plated body with a wide horned head and wide bracing legs; hue: burnished bronze-brown with orange-gold bands; value: mid-light). The shipped ants are slender, radial and smooth, and the new acid ant is a slate-grey diagonal ant with a swollen abdomen: this must not be slender, black or smooth and must not sit diagonally.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Burnished bronze-brown and dull gold plates in a mid-light value with orange-gold bands, pale gold highlight planes and a bright rim light, pale amber eyes, bone-coloured scar (nothing glows onto the disc); nothing darker than dark bronze-brown except the eye dots and thin seams; NO black chitin anywhere. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=giant army ant, define_as=None, type=insect/subtype=ant, unique=False, native_tall=False); details and hashes in evidence/monster-batch-x-20260930/source-contracts.json. base BASE_NPC_ANT (insect/ant, no image=, no shader, no sustains_at_birth); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; resolvers.inscriptions(1, infusion), talents Stun and Disarm (activated); no equip that changes display, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-x-20260930/source-contracts.json",
+          "sha256": "d3dd5bbd03d3fe045b05a6c6bb6d5c1259c16277838feee21714f1457e7dc3cc"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+Use case: stylized-concept. Deliver ONE square, opaque, full-bleed terrain material master for a tabletop game board: LAVA_FLOOR damaging lava floor. Request 1024 x 1024 pixels; preserve actual output resolution.
+
+Subject and material: Walkable but dangerous volcanic ground seen from straight above: flat, fitted plates of dark cooled basalt crust like a cracked pavement, separated by thin glowing molten seams of orange and yellow-orange, with a few tiny hot ember specks on the plates; everything is at one flat floor level.
+Palette: Crust plates in charcoal, dark umber and warm dark grey (not pure black, with a faint warm sheen); seams saturated orange grading to yellow-orange at their hottest centres, with a narrow deep-red glow bleeding onto the plate edges. Overall mid-dark: clearly darker than a pale stone floor, but with bright seams.
+Relationship to adjacent materials: At 48 pixels it must read as hot ground you could step onto but that will burn you: the crust plates dominate (roughly four to five plates across the square), the glowing seams are thin and continuous (about one fifth of the area), so it does NOT read as a molten lava lake, a pit or a wall, and not as a harmless dark rock floor either.
+Composition and edge contract: Edge-to-edge overhead floor material filling the whole square; irregular polygonal plates of even size, non-directional, seams reaching all four edges; no border, rim, step, lip, pool, object, rune, symbol or cast shadow.
+Gameplay contract (do not invent additional rules): Walkable hazard floor: burns whoever stands on it. Paint no pit, lake, raised rim, wall, stairs, character, warning sign, symbol or text.
+
+Flat overhead printed-board surface; restrained matte paint texture and broad low-contrast variations. Match the supplied accepted reference's scale, palette hierarchy and upper-left lighting convention. No creature, disc, freestanding prop, text, symbol, hazard badge, frame, vignette or cast shadow implying an obstacle. Texture must reach all four edges. Grid seams, parity modulation, neighbour masks and rule overlays are assembled by the exporter, not painted as an atlas here. Do not create decorative cracks that resemble an interactive exit. Do not claim a seamless result without a separate tiled preview check. One master only.
+
+Reference roles:
+Image 1: identity — Native damaging lava floor: dark cooled crust with scattered glowing molten spots. Keep the hot-crust identity; make the glow organised into clear seams between flat crust plates.
+Image 2: style — Accepted board stone floor master: flat overhead matte finish, upper-left light, texture scale. Not its sandstone palette or its light value; the hazard floor is much darker with glowing seams.

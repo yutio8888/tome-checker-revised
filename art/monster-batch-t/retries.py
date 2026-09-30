@@ -1,0 +1,5 @@
+# Retry packs are appended here (never edited in place).
+
+# Pack 5: fortress-shadow v1 failed only the base_drift gate (median -10.81, tolerance +-8; radius 0.858 and intrusion 5.8 passed, no other blocking item): the disc came out darker than the reference, most under the dark-teal tendrils. Same design, disc at reference lightness with no cast shadow.
+FS_DISC = " Calibration from the previous generation of this exact token: the design was right, but the base disc came out DARKER than the style reference, especially under and around the tendrils, where the dark teal edges seemed to darken the plate. This time keep the same pale aquamarine jellyfish-like dome with the rune ring and eight radial tendrils, but render the WHOLE disc, its outer ring band and the plate under the dome and tendrils, at reference lightness, a hair lighter, never darker, evenly all round, with NO cast shadow, no dark contact shadow and no ambient darkening of the disc from the creature. Keep the tendril edges a mid teal rather than dark."
+retry('fortress-shadow', 5, comp=COMP + FIT + COMPACT + BRIGHT + FS_DISC)

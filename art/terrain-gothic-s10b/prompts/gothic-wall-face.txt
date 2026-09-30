@@ -1,0 +1,13 @@
+Use case: stylized-concept. Deliver ONE transparent PNG terrain construction for a tabletop game board: GOTHIC_WALL_SOUTH gothic wall face. Request square 1024 x 1024; preserve native alpha and actual dimensions.
+
+Subject: One straight free-standing section of a dark gothic keep wall seen from the front and slightly above: dark dressed slate-grey stone blocks in even courses, a row of shallow pointed lancet-arch blind niches along the face, and a crest of short black wrought-iron spikes along the top edge; a solid wall section, wider than tall.
+Palette/material: Charcoal slate, dark blue-grey granite and near-black iron, small cool grey highlights from upper-left light; dark overall, no warm brown, no green.
+Distinct from these related pieces: At 48 pixels, compressed into a thin band, it must read as the dark vertical face of a blocking wall: darker than the floor it stands on, with the pointed niches and spikes as the gothic identity; no bright windows or openings.
+Footprint, height and composition: Single horizontal wall section centred, filling most of the width, straight top and bottom edges, the base sitting on an implied ground line; transparent background around it; no floor, ground patch, shadow on the background, door, gate, tower or banner.
+Gameplay contract: Wall face only. Paint no door, window, opening, stairs, hazard, character, symbol or text. Return a native RGBA PNG with real transparency; no white, grey, black or checkerboard background.
+
+Match accepted tabletop material, camera and soft upper-left illumination. Show a complete physical construction, including its structural supports where specified; not a detached crown or floating fragment. Return an RGBA PNG whose alpha channel is genuinely transparent outside the construction; do not paint a white, grey or checkerboard backdrop for someone to key out later, and do not return a flat opaque RGB image. No creature disc, square grass tile or baked underlying floor. Shadows must stay within the agreed footprint and preserve the neighbouring cell's actor space. No text, arrows, rarity, faction colors, health or shield rings. Do not add a door, hazard or blocking structure that is absent from the gameplay contract. Exporter supplies grid alignment and any separate rule overlay. One construction only, no contact sheet.
+
+Reference roles:
+Image 1: identity — Native gothic wall face: dark granite blocks crowned by black iron spikes. Keep the dark masonry with a row of iron spikes and the gothic character.
+Image 2: style — Accepted board wall-section prop: one straight free-standing section seen slightly from above and front, native transparency, margins and grounded base. Not its bamboo material.

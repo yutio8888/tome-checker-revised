@@ -1,0 +1,13 @@
+Use case: stylized-concept. Deliver ONE square, opaque, full-bleed terrain material master for a tabletop game board: CLOUD dreamscape cloud floor. Request 1024 x 1024 pixels; preserve actual output resolution.
+
+Subject and material: A walkable dream floor made of dense, packed cloud seen from straight above: a soft continuous surface of rounded, gently overlapping cloud billows pressed flat into one level, like a quilted pillowy ground you could stand on; faint soft hollows between billows, no holes and no gaps.
+Palette: Pearl white and very pale lavender-grey billow tops with soft cool blue-grey and faint lilac shading in the hollows; a light, mid-high value overall (clearly lighter than a board stone floor) but not blown-out pure white, so the shading still reads at small size.
+Relationship to adjacent materials: At 48 pixels it must read as soft solid ground to stand on: about three to four billows across the square, broad and low-contrast, even and non-directional, so it does NOT read as snow with footprints, ice, foam on water, smoke, a pit or a wall, and so creature tokens stay the strongest element on it.
+Composition and edge contract: Edge-to-edge overhead floor material filling the whole square; billows of even size distributed uniformly, reaching all four edges; no border, rim, edge drop, sky, gap, hole, object, rune, symbol, vortex, glow spot or cast shadow.
+Gameplay contract (do not invent additional rules): Plain walkable floor with no effect. Paint no void, hole, edge, pit, stairs, portal, character, warning sign, symbol or text.
+
+Flat overhead printed-board surface; restrained matte paint texture and broad low-contrast variations. Match the supplied accepted reference's scale, palette hierarchy and upper-left lighting convention. No creature, disc, freestanding prop, text, symbol, hazard badge, frame, vignette or cast shadow implying an obstacle. Texture must reach all four edges. Grid seams, parity modulation, neighbour masks and rule overlays are assembled by the exporter, not painted as an atlas here. Do not create decorative cracks that resemble an interactive exit. Do not claim a seamless result without a separate tiled preview check. One master only.
+
+Reference roles:
+Image 1: identity — Native dreamscape floor: one soft white billowing cloud puff with pale blue shading. Keep the soft white cloud identity, but as a continuous flat walkable surface filling the whole square, not a single puff on a dark background.
+Image 2: style — Accepted board stone floor master: flat overhead matte printed-board finish, upper-left light, broad low-contrast variation and texture scale. Not its sandstone palette, stone grain or its value; the cloud floor is lighter and softer.

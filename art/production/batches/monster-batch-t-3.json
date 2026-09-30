@@ -1,0 +1,240 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-t-3",
+  "assets": [
+    {
+      "asset_id": "nimisil",
+      "native_name": "Nimisil",
+      "scope": "maze (zones/maze/npcs.lua:152, spiderkin/spider, unique, define_as NIMISIL, rank 4, base BASE_NPC_SPIDER, default-name image); a backup guardian created by game.state:activateBackupGuardian(\"NIMISIL\", 2, 40) when the maze's Minotaur or Horned Horror dies (only on a return visit); single definition; auto_classes Anorithil from level 44",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/maze/npcs.lua",
+          "sha256": "f07231a5244764f2896978554836c032d56a19d06a56dc7c8528181e5a813c71",
+          "line": 152,
+          "anchor": "define_as = \"NIMISIL\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/maze/npcs.lua",
+          "sha256": "f07231a5244764f2896978554836c032d56a19d06a56dc7c8528181e5a813c71",
+          "line": 155,
+          "anchor": "name = \"Nimisil\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/maze/npcs.lua",
+          "sha256": "f07231a5244764f2896978554836c032d56a19d06a56dc7c8528181e5a813c71",
+          "line": 174,
+          "anchor": "auto_classes={{class=\"Anorithil\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/maze/npcs.lua",
+          "sha256": "f07231a5244764f2896978554836c032d56a19d06a56dc7c8528181e5a813c71",
+          "line": 93,
+          "anchor": "game.state:activateBackupGuardian(\"NIMISIL\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 43,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_nimisil.png",
+          "sha256": "d0c8652b7df43e04d4e08098a79e35d8dba1a9eccc028d86f91bccc854598930",
+          "role": "identity",
+          "note": "Native shape (64x64): a dark spider whose body and back are covered with glowing multicoloured crystalline growths."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-t/refs/spiders.png",
+          "sha256": "c946125cdf7ec6f53d47919a0914c45bd495cd7b89193ed67471a2e028bc1589",
+          "role": "family",
+          "note": "Four shipped spider tokens (grey giant spider, black ungole, steel-blue fate spinner, white-swirl weaver young): Nimisil must not be a plain long-legged dark or blue spider."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Nimisil seen from a steep overhead three-quarter angle: a large spider with a stout PALE SILVER-GREY body and short thick pale-banded legs held in a tight RADIAL RING (all eight legs bent compactly around the body), the bulbous abdomen and back crowned with a dense CLUSTER of luminous crystalline fungus-like growths and knobs in glowing AQUA-CYAN, pale PINK, LEMON-YELLOW and soft VIOLET like a jewelled crown of moonlit lumps, a small pale head with several glowing pale-blue eyes and short white fangs, a faint moon-white sheen. Eerie, jewelled and complete.",
+        "contrast": "Spiders: NIMISIL is a PALE SILVER spider with a JEWELLED CROWN OF GLOWING KNOBS clustered on its back and short stout legs in a tight ring (silhouette: a round crowned bump-covered mass with short stubby legs; hue: silver grey with aqua, pink, yellow and violet lumps; value: light). The shipped giant spider is a long-legged grey and white spider, ungole is black, fate spinner is a steel-blue spider with long serrated legs and a silk ring, weaver young is a white curled ball: this must not have long spread legs and must not be a plain single-colour spider.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Pale silver-grey body in a light value with bright highlight planes and blue-grey shadows, glowing aqua-cyan, pink, lemon and violet crystal knobs (bright, saturated but light), pale banded legs, pale blue eyes; nothing darker than mid blue-grey except the eyes; the glow must stay on the creature and must not spill onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Nimisil, define_as=NIMISIL, type=spiderkin/subtype=spider, unique=True, native_tall=False); details and hashes in evidence/monster-batch-t-20260930/source-contracts.json. base BASE_NPC_SPIDER (spiderkin/spider, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; talents Spider Web, Lay Web, Phase Door, Hymn of Moonlight (sustained), Moonlight Ray, Shadow Blast, Searing Light; the base has resolvers.sustains_at_birth() which starts Hymn of Moonlight (temporary values, callbacks and particles only, no type/subtype/image/add_mos write); auto_classes Anorithil from level 44 (see runtime_mutation_scan). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-t-20260930/source-contracts.json",
+          "sha256": "683dc4abbd177436803d6c58e8a73813c814b99615ff7fc26a3a5b9753fc5e54"
+        }
+      ]
+    },
+    {
+      "asset_id": "slasul",
+      "native_name": "Slasul",
+      "scope": "temple-of-creation (zones/temple-of-creation/npcs.lua:26, humanoid/naga, unique, define_as SLASUL, rank 4, no base, explicit nice_tile tall body 64x128); placed by the static last-level map maps/zones/temple-of-creation-last.lua:26; single definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/temple-of-creation/npcs.lua",
+          "sha256": "665e69eb25a1fd1e43f79b69dbc79b87af9a7880a56e7b0c9d5b92db611f376c",
+          "line": 26,
+          "anchor": "define_as = \"SLASUL\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/temple-of-creation/npcs.lua",
+          "sha256": "665e69eb25a1fd1e43f79b69dbc79b87af9a7880a56e7b0c9d5b92db611f376c",
+          "line": 29,
+          "anchor": "name = \"Slasul\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/temple-of-creation/npcs.lua",
+          "sha256": "665e69eb25a1fd1e43f79b69dbc79b87af9a7880a56e7b0c9d5b92db611f376c",
+          "line": 32,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/humanoid_naga_slasul.png\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/temple-of-creation/npcs.lua",
+          "sha256": "665e69eb25a1fd1e43f79b69dbc79b87af9a7880a56e7b0c9d5b92db611f376c",
+          "line": 93,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/maps/zones/temple-of-creation-last.lua",
+          "sha256": "9b0c8c381b0027db0db2898930a842302a170f887ff0e7bc61846609cd0df0e0",
+          "line": 26,
+          "anchor": "defineTile('@', \"WATER_FLOOR\", nil, \"SLASUL\")"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_naga_slasul.png",
+          "sha256": "e227e646fae67eddc26824306d43ccd63ee156aa18accadb9a9be4b02e62947a",
+          "role": "identity",
+          "note": "Native shape (64x128 tall body): a bare-chested naga in a bronze crested helm holding a round shield and a mace over a blue serpent tail."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-t/refs/nagas.png",
+          "sha256": "c864f0707acbc44b04bb2fb88ebd863b68e3cba489b7436b0717e2b02df16a0a",
+          "role": "family",
+          "note": "Six shipped naga tokens (blue-tailed myrmidon with a trident, brown tidewarden with a shield, yellow-tailed nereid, red lady zoisla, teal lady nashva, grey tidecaller): Slasul must not be another naga in one of those tail colours or poses."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Slasul seen from a steep overhead three-quarter angle: a towering regal male naga, a muscular bare torso with an exquisite large WHITE PEARL set in the centre of his chest, a bronze-gold CRESTED HELM with a tall fin-shaped crest and cheek plates, gold collar and armbands, a ROUND bronze-rimmed shield with a pearl boss held forward on the left arm and a heavy flanged MACE raised on the right, a stern face with tanned skin, and below the waist a thick SEA-GREEN serpent tail with a pale cream belly coiled in a broad round SPIRAL BASE beneath him, gold-edged scales. Regal, coiled, golden and complete.",
+        "contrast": "Nagas: SLASUL is a GOLD-CRESTED armoured king with a big pearl on his chest, a round shield forward and a mace raised, on a SEA-GREEN spiral tail base (silhouette: fin-crested helm above a round shield and a raised mace over a round coiled base; hue: sea green and bronze-gold with a white pearl; value: mid-light). The shipped myrmidon has a blue tail and a trident, the tidewarden is brown with a shield, the nereid is yellow-tailed, zoisla red-tailed, nashva teal-tailed, the tidecaller grey robed: none of those have a fin-crested helm, gold armour, a pearl or a green tail.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Sea-green tail in a mid-light value with pale jade highlight planes and cream belly, gold-edged scales, bronze-gold helm, collar and shield rim with bright pale-yellow highlight planes, tan skin, white pearl, pale steel mace head; nothing darker than dark green except the eyes and seams; the disc stays neutral charcoal with no green or gold cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Slasul, define_as=SLASUL, type=humanoid/subtype=naga, unique=True, native_tall=False); details and hashes in evidence/monster-batch-t-20260930/source-contracts.json. no base (humanoid/naga on the leaf, faction temple-of-creation); NPC.lua:33 default-name image on the leaf; resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/humanoid_naga_slasul.png\", display_h=2, display_y=-1}}} (an explicit tall body, keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; unique with define_as, so the catalog entry needs no native_tall flag (nativeTallImage accepts the body of any unique entry, as for Walrog); resolvers.equip mace, shield, heavy armour and the Eldritch Pearl (equipment only); talents Weapon Combat, Weapons Mastery, Shield Expertise, Shield Pummel, Riposte, Blinding Speed, Perfect Strike, Spit Poison, Heal, Uttercold (sustained), Ice Shards, Freeze, Tidal Wave, Ice Storm, Water Bolt, No Fatigue, Massive Blow, Draconic Will, Draconic Body, Arcane Might, Corrupted Shell; resolvers.sustains_at_birth() starts the sustained ones (temporary values and particles only, no type/subtype/image/add_mos write); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-t-20260930/source-contracts.json",
+          "sha256": "683dc4abbd177436803d6c58e8a73813c814b99615ff7fc26a3a5b9753fc5e54"
+        }
+      ]
+    },
+    {
+      "asset_id": "draebor",
+      "native_name": "Draebor, the Imp",
+      "scope": "demon-plane (zones/demon-plane/npcs.lua:26, demon/minor, unique, define_as DRAEBOR, rank 4, no base, default-name image, faction fearscape); the zone's guaranteed guardian (zones/demon-plane/zone.lua:58); single definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/demon-plane/npcs.lua",
+          "sha256": "497b080aea88ee06faa8137cb1c94f64fca3839619a9edf1703f56777c414f21",
+          "line": 26,
+          "anchor": "define_as = \"DRAEBOR\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/demon-plane/npcs.lua",
+          "sha256": "497b080aea88ee06faa8137cb1c94f64fca3839619a9edf1703f56777c414f21",
+          "line": 29,
+          "anchor": "name = \"Draebor, the Imp\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/demon-plane/npcs.lua",
+          "sha256": "497b080aea88ee06faa8137cb1c94f64fca3839619a9edf1703f56777c414f21",
+          "line": 73,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/zones/demon-plane/npcs.lua",
+          "sha256": "497b080aea88ee06faa8137cb1c94f64fca3839619a9edf1703f56777c414f21",
+          "line": 58,
+          "anchor": "summon = {"
+        },
+        {
+          "path": "game/modules/tome/data/zones/demon-plane/zone.lua",
+          "sha256": "fb77c72e4854aea9d946a1c6b4037c9ad59352f718bf745193b6b65d34bd6178",
+          "line": 58,
+          "anchor": "guardian = \"DRAEBOR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_minor_draebor__the_imp.png",
+          "sha256": "dcba098d6943f4fc906c01aadab132f5d76864f301f68866457dc9c9cd8c6434",
+          "role": "identity",
+          "note": "Native shape (64x64): a squat shaggy grey-white imp with red eyes, a wide toothy grin and claws."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-t/refs/imps.png",
+          "sha256": "6acaace60af7b222892f77a219bc5a1ee090f25cc42f3081a99583500650f53a",
+          "role": "family",
+          "note": "Four shipped minor-demon tokens (bronze bull-headed quasit with a round shield, teal water imp, yellow-green wretchling, grey onilug): Draebor must not be any of these."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Draebor, the Imp seen from a steep overhead three-quarter angle: a squat pot-bellied mocking imp crouched forward in a smug pose, covered in matted PALE GREY-WHITE shaggy fur, a big wide face with a huge toothy grin of sharp yellow fangs, two small curved horns, large pointed ears, glowing ORANGE eyes, long clawed hands, one hand raised with a small ball of ORANGE FIRE flickering above the palm and the other on its hip, a thin tufted tail curling up behind, oversized clawed feet. Smug, shaggy, squat and complete.",
+        "contrast": "Minor demons: DRAEBOR is a SHAGGY PALE GREY-WHITE pot-bellied imp with a huge grin and a small fireball in one raised hand (silhouette: a squat round fluffy mass with big ears and one raised hand; hue: pale grey-white fur with orange fire and yellow teeth; value: light). The shipped quasit is a bronze bull-headed demon holding a round shield, the water imp is a slim teal imp, the wretchling a yellow-green crouching demon, the onilug a grey lanky horror: this must not have a shield, a bull head, a smooth skin or a teal or yellow-green colour.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Pale grey-white matted fur in a light value with broad bright highlight planes and blue-grey shadow planes, yellow teeth, orange eyes and orange fire, dark grey claws and horns in a mid value; nothing darker than mid grey except the eyes; the fire must stay small and must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Draebor, the Imp, define_as=DRAEBOR, type=demon/subtype=minor, unique=True, native_tall=False); details and hashes in evidence/monster-batch-t-20260930/source-contracts.json. no base (demon/minor on the leaf, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip Boots of Phasing (equipment only); talents Summon, Flame, Blood Grasp, Wildfire (sustained), Phase Door, Curse of Vulnerability, Bone Shield (sustained); resolvers.sustains_at_birth() starts the sustained ones (temporary values and particles only, no type/subtype/image/add_mos write); summon={type=demon} draws generic demons from the level, never a copy of Draebor; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-t-20260930/source-contracts.json",
+          "sha256": "683dc4abbd177436803d6c58e8a73813c814b99615ff7fc26a3a5b9753fc5e54"
+        }
+      ]
+    }
+  ]
+}

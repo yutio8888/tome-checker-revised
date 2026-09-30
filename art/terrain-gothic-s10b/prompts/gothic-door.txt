@@ -1,0 +1,13 @@
+Use case: stylized-concept. Deliver ONE transparent PNG terrain construction for a tabletop game board: GOTHIC_DOOR gothic door. Request square 1024 x 1024; preserve native alpha and actual dimensions.
+
+Subject: One heavy gothic door leaf seen straight from the front: vertical weathered oak planks in a mid honey-brown, bound by two broad black wrought-iron strap hinges with pointed fleur ends and a row of iron studs, a small iron ring handle; a plain rectangular leaf (no arch on top), upright.
+Palette/material: Mid honey-brown and warm grey-brown oak with black iron; the wood clearly lighter than a dark slate wall and darker than a pale stone floor.
+Distinct from these related pieces: At 48 pixels, laid as a narrow band across a doorway, it must read as a wooden door between dark stone walls: warm wood against cool slate, iron straps visible as dark bands; never as a wall block or a bridge.
+Footprint, height and composition: Single rectangular door leaf centred, upright, filling most of the height, with transparent margins; no frame, wall, floor, arch, shadow on the background or second leaf.
+Gameplay contract: Door leaf only. Paint no padlock, seal, rune, keyhole glow, stairs, character, symbol or text. Return a native RGBA PNG with real transparency; no white, grey, black or checkerboard background.
+
+Match accepted tabletop material, camera and soft upper-left illumination. Show a complete physical construction, including its structural supports where specified; not a detached crown or floating fragment. Return an RGBA PNG whose alpha channel is genuinely transparent outside the construction; do not paint a white, grey or checkerboard backdrop for someone to key out later, and do not return a flat opaque RGB image. No creature disc, square grass tile or baked underlying floor. Shadows must stay within the agreed footprint and preserve the neighbouring cell's actor space. No text, arrows, rarity, faction colors, health or shield rings. Do not add a door, hazard or blocking structure that is absent from the gameplay contract. Exporter supplies grid alignment and any separate rule overlay. One construction only, no contact sheet.
+
+Reference roles:
+Image 1: identity — Native gothic door: a brown wooden double door set in dark spiked granite. Keep a heavy iron-bound wooden door leaf as the identity.
+Image 2: style — Accepted board door-leaf prop: one flat door leaf seen from the front, native transparency, margins and upright framing. Not its bamboo material.

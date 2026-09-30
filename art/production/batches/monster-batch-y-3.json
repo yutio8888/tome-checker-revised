@@ -1,0 +1,300 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-y-3",
+  "assets": [
+    {
+      "asset_id": "temporal-stalker",
+      "native_name": "temporal stalker",
+      "scope": "temporal-rift and ardhungol pools (general/npcs/horror_temporal.lua:129, horror/temporal, non-unique, no define_as, rank 2, base BASE_NPC_HORROR_TEMPORAL, nice_tile tall body); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_temporal.lua",
+          "sha256": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+          "line": 132,
+          "anchor": "name = \"temporal stalker\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_temporal.lua",
+          "sha256": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+          "line": 131,
+          "anchor": "npc/horror_temporal_temporal_stalker.png"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_temporal.lua",
+          "sha256": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+          "line": 150,
+          "anchor": "T_STEALTH"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_temporal.lua",
+          "sha256": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+          "line": 157,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_temporal.lua",
+          "sha256": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR_TEMPORAL\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_temporal_temporal_stalker.png",
+          "sha256": "03675b64da5e33c46d586a2beba6a7d77cec183a90f332193bf412c8b420439f",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a slender polished-steel monstrosity with a scythe-like crescent head, long blade claws in place of fingers and razor teeth. Keep the slender chrome horror with the crescent head and claw fingers, bright polished steel with cyan glints, drawn as ONE compact figure filling the disc, no tall canvas."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-y/refs/horrors.png",
+          "sha256": "1dfe60c67eddb11635ab570353eb66a9b5b8732306e73aedd236ccea3b2c1197",
+          "role": "family",
+          "note": "Eight shipped horror and spectre tokens (cream bloated horror, tan-pink weirdling beast, pink fleshy experiment brute, red sanguine blob, tan boney experiment, dark shadow stalker, slate-violet dread wraith with red eyes, horned horror): the necrotic mass is a low lumpy heap of BRUISE-MAUVE and grey-pink rotting flesh with green-yellow pustules and pale bone knobs, not a brute, not red and not cream; the blade horror is a pale grey-blue hooded floating figure with violet eyes inside a whirl of bright steel blades and white wind, not a slate-violet smoke wraith and not red-eyed; the temporal stalker is a slender polished chrome horror with a scythe-crescent head, long claw fingers and cyan glints; the luminous horror is a lanky figure of pure golden-yellow light."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A temporal stalker seen from a steep overhead three-quarter angle: a SLENDER gaunt hunched horror of bright POLISHED CHROME and steel-silver metal in a light value with white specular highlights, a head shaped like a big curved SCYTHE-CRESCENT blade, a narrow torso, long thin legs, and very long thin arms ending in bundles of long curved BLADE-CLAW fingers hanging forward and outward (the claw tips inside the disc), a rim of small bright CYAN time-glints and a few pale cyan clock-hand shards floating close to the body, a thin gap of dark grey seams between the plates. Metallic, slender, claw-fingered and complete.",
+        "contrast": "Horrors: the TEMPORAL STALKER is the SLENDER POLISHED CHROME HORROR with a scythe-crescent head and long blade-claw fingers (silhouette: a thin hunched figure with a big crescent head and long hanging claws; hue: chrome silver with cyan glints; value: light). The shadow stalker is a dark smoke cat-shape, Atamathon a white-grey bulky metal giant, the dredge pink flesh: this must not be dark, not bulky, not fleshy and not smoke.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Polished chrome and steel-silver in a light value with white specular highlights and a bright rim light, cyan glints and pale cyan shards (the glints stay on the creature and must not tint or light the disc); nothing darker than mid steel-grey except thin plate seams; NO black metal."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=temporal stalker, define_as=None, type=horror/subtype=temporal, unique=False, native_tall=True); details and hashes in evidence/monster-batch-y-20260930/source-contracts.json. base BASE_NPC_HORROR_TEMPORAL (horror/temporal, no image=, no shader, no sustains_at_birth in the base); NPC.lua:33 default-name image on the leaf; resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/horror_temporal_temporal_stalker.png\", display_h=2, display_y=-1}}} (an explicit tall body, keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true (nativeTallImage accepts the body only for unique or native_tall entries, as for bone giant and eternal bone giant); the leaf calls resolvers.sustains_at_birth() and its Stealth is a sustain (stealth temporary values only; Fateweaver and Spin Fate are temporal values only); two inscriptions; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-y-20260930/source-contracts.json",
+          "sha256": "83d35e6f54d8f3e094ee96ef7b509b1f998a338d59f92f3fc4a297670640cd83"
+        }
+      ]
+    },
+    {
+      "asset_id": "blade-horror",
+      "native_name": "blade horror",
+      "scope": "lake-nur, ardhungol, dreadfell and more pools plus the living-weapons vault 'b' tile (general/npcs/horror.lua:514, horror/eldritch, non-unique, define_as BLADEHORROR, rank 2, base BASE_NPC_HORROR, nice_tile tall body); the only definition of this name (the unique Ak'Gishil is another name with resolvers.nice_tile{tall=1} and stays native)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 515,
+          "anchor": "name = \"blade horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 517,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 515,
+          "anchor": "define_as=\"BLADEHORROR\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_blade_horror.png",
+          "sha256": "9c95428119f9a3987f61b9485304197d76a18800223a86d95e36743f7969a5e7",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a black hooded floating figure with glowing violet eyes inside a whirl of countless telekinetic blades and pale wind. Keep the hooded floating figure inside a whirling ring of blades, but render the figure in pale slate-blue and white with a bright steel blade ring, drawn as ONE compact figure filling the disc, no tall canvas."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-y/refs/horrors.png",
+          "sha256": "1dfe60c67eddb11635ab570353eb66a9b5b8732306e73aedd236ccea3b2c1197",
+          "role": "family",
+          "note": "Eight shipped horror and spectre tokens (cream bloated horror, tan-pink weirdling beast, pink fleshy experiment brute, red sanguine blob, tan boney experiment, dark shadow stalker, slate-violet dread wraith with red eyes, horned horror): the necrotic mass is a low lumpy heap of BRUISE-MAUVE and grey-pink rotting flesh with green-yellow pustules and pale bone knobs, not a brute, not red and not cream; the blade horror is a pale grey-blue hooded floating figure with violet eyes inside a whirl of bright steel blades and white wind, not a slate-violet smoke wraith and not red-eyed; the temporal stalker is a slender polished chrome horror with a scythe-crescent head, long claw fingers and cyan glints; the luminous horror is a lanky figure of pure golden-yellow light."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A blade horror seen from a steep overhead three-quarter angle: a thin FLOATING hooded figure in the centre of the disc, its ragged cloak of PALE GREY-BLUE and near-white mist in a light-mid value with bright silver highlight planes, a hooded face with two glowing VIOLET-WHITE eyes, thin hands raised, surrounded by a tight SPIRAL RING of six to eight BRIGHT POLISHED STEEL SWORDS AND DAGGERS orbiting the body in mid-air (all blades short, angled tangent to the ring, every blade tip inside the disc) and curling swirls of white wind between them. Floating, blade-ringed, pale and complete.",
+        "contrast": "Horrors: the BLADE HORROR is the PALE GREY-BLUE HOODED FLOATER inside a spiral ring of bright steel blades and white wind with violet-white eyes (silhouette: a small central figure inside a round blade wheel; hue: pale grey-blue and white with steel and violet-white eyes; value: light-mid). The dread is a slate-violet smoke wraith with RED eyes and a red chest core, the shadow stalker dark smoke: this must not be a violet smoke wraith, not red-eyed and not black.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Pale grey-blue and near-white mist in a light-mid value with silver highlight planes and a bright rim light, bright polished steel blades with white edge highlights, violet-white eyes (nothing glows onto or tints the disc); nothing darker than mid slate-grey except the eye sockets and thin seams; NO black cloak or black body anywhere. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=blade horror, define_as=BLADEHORROR, type=horror/subtype=eldritch, unique=False, native_tall=True); details and hashes in evidence/monster-batch-y-20260930/source-contracts.json. base BASE_NPC_HORROR (horror/eldritch, no image=, no shader, no sustains_at_birth in the base); NPC.lua:33 default-name image on the leaf; resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/horror_eldritch_blade_horror.png\", display_h=2, display_y=-1}}} (an explicit tall body, keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true (nativeTallImage accepts the body only for unique or native_tall entries, as for bone giant and eternal bone giant); the leaf binds define_as BLADEHORROR (so the catalog entry binds it too, native_tall=true); levitate; the leaf calls resolvers.sustains_at_birth() and Kinetic Aura and Kinetic Shield are sustains (temporary values only, no type/subtype/image/add_mos/shader write); Knife Storm, Implode, Razor Knife, Psionic Pull and Kinetic Leech are activated; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-y-20260930/source-contracts.json",
+          "sha256": "83d35e6f54d8f3e094ee96ef7b509b1f998a338d59f92f3fc4a297670640cd83"
+        }
+      ]
+    },
+    {
+      "asset_id": "luminous-horror",
+      "native_name": "luminous horror",
+      "scope": "lake-nur, ardhungol, dreadfell and more pools, escorted by other horrors (general/npcs/horror.lua:408, horror/eldritch, non-unique, no define_as, rank 1, base BASE_NPC_HORROR, default-name image); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 409,
+          "anchor": "name = \"luminous horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 426,
+          "anchor": "T_CHANT_OF_FORTITUDE"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 434,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_luminous_horror.png",
+          "sha256": "74429cc73d28cf3cad2d83f3c83bb1242564a8fdb927128ed14c323a92947da9",
+          "role": "identity",
+          "note": "Native shape (64x64): a lanky humanoid outline made of glowing yellow light, hollow inside. Keep the lanky glowing yellow humanoid of light, but render it as a solid bright golden-yellow figure with a white-hot core."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-y/refs/horrors.png",
+          "sha256": "1dfe60c67eddb11635ab570353eb66a9b5b8732306e73aedd236ccea3b2c1197",
+          "role": "family",
+          "note": "Eight shipped horror and spectre tokens (cream bloated horror, tan-pink weirdling beast, pink fleshy experiment brute, red sanguine blob, tan boney experiment, dark shadow stalker, slate-violet dread wraith with red eyes, horned horror): the necrotic mass is a low lumpy heap of BRUISE-MAUVE and grey-pink rotting flesh with green-yellow pustules and pale bone knobs, not a brute, not red and not cream; the blade horror is a pale grey-blue hooded floating figure with violet eyes inside a whirl of bright steel blades and white wind, not a slate-violet smoke wraith and not red-eyed; the temporal stalker is a slender polished chrome horror with a scythe-crescent head, long claw fingers and cyan glints; the luminous horror is a lanky figure of pure golden-yellow light."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A luminous horror seen from a steep overhead three-quarter angle: a LANKY humanoid figure with long thin limbs and a small head, its body made of solid BRIGHT GOLDEN-YELLOW LIGHT in a light value with a WHITE-HOT glowing core in the chest, pale lemon highlight planes and a brilliant white-gold rim along the outline, thin darker AMBER contour lines where the limbs cross the body so the figure reads as a solid shape, long arms hanging forward with spread glowing fingers, a few tiny lemon light motes drifting close to the body (all inside the disc). Radiant, lanky, luminous and complete.",
+        "contrast": "Horrors: the LUMINOUS HORROR is the LANKY GOLDEN-YELLOW LIGHT FIGURE with a white-hot core (silhouette: a tall thin humanoid with long arms and a small head; hue: golden yellow, lemon and white-gold with amber contours; value: very light). Every shipped horror is flesh, smoke or tentacles in pink, cream, red or violet: this must not be flesh, not smoke, not tentacled and not pink.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Golden-yellow, lemon and white-gold light in a light value with amber contour lines (the light stays on the figure and must not glow onto, brighten or yellow the disc); nothing darker than deep amber except thin contour lines; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=luminous horror, define_as=None, type=horror/subtype=eldritch, unique=False, native_tall=False); details and hashes in evidence/monster-batch-y-20260930/source-contracts.json. base BASE_NPC_HORROR (horror/eldritch, no image=, no shader, no sustains_at_birth in the base); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; lite=3; the leaf calls resolvers.sustains_at_birth() and Chant of Fortitude and Providence are sustains (temporary values and particles only, no type/subtype/image/add_mos/shader write); no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-y-20260930/source-contracts.json",
+          "sha256": "83d35e6f54d8f3e094ee96ef7b509b1f998a338d59f92f3fc4a297670640cd83"
+        }
+      ]
+    },
+    {
+      "asset_id": "necrotic-mass",
+      "native_name": "necrotic mass",
+      "scope": "rak-shor-pride pool (general/npcs/horror-undead.lua:46, undead/horror, non-unique, no define_as, rank 1, base BASE_NPC_HORROR_UNDEAD, nice_tile tall body, never_move); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 47,
+          "anchor": "name = \"necrotic mass\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 49,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 58,
+          "anchor": "never_move"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-undead.lua",
+          "sha256": "9d61fc4dc002d2d6a3b0c8b8aa14014f6982d807e36cab79fdd937fdce4ff0bf",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_HORROR_UNDEAD\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_horror_necrotic_mass.png",
+          "sha256": "9bf87ea9d4da5afa4148d00995d052d264d8fbd6747a15d5c3b2cb1f12890ed1",
+          "role": "identity",
+          "note": "Native shape (64x128 canvas, a low lump at the bottom): a shapeless mound of rotting pink-grey flesh with dark pits and pale flecks. Keep the shapeless quivering heap of rotting flesh, but render it in bruise-mauve and grey-pink with green-yellow pustules and pale bone knobs, a low wide heap filling the disc, no tall canvas."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-y/refs/horrors.png",
+          "sha256": "1dfe60c67eddb11635ab570353eb66a9b5b8732306e73aedd236ccea3b2c1197",
+          "role": "family",
+          "note": "Eight shipped horror and spectre tokens (cream bloated horror, tan-pink weirdling beast, pink fleshy experiment brute, red sanguine blob, tan boney experiment, dark shadow stalker, slate-violet dread wraith with red eyes, horned horror): the necrotic mass is a low lumpy heap of BRUISE-MAUVE and grey-pink rotting flesh with green-yellow pustules and pale bone knobs, not a brute, not red and not cream; the blade horror is a pale grey-blue hooded floating figure with violet eyes inside a whirl of bright steel blades and white wind, not a slate-violet smoke wraith and not red-eyed; the temporal stalker is a slender polished chrome horror with a scythe-crescent head, long claw fingers and cyan glints; the luminous horror is a lanky figure of pure golden-yellow light."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A necrotic mass seen from a steep overhead three-quarter angle: a low wide quivering HEAP of putrefying flesh filling the middle of the disc, the surface a lumpy mix of BRUISE-MAUVE, dusty PINK-GREY and pale mottled flesh in a light-mid value with cream wet highlights on every upper-left bulge, clusters of sickly GREEN-YELLOW PUSTULES and blisters, a few pale BONE KNOBS and rib tips pushing out of the mass, dark maroon pits and splits in the flesh, a few thick strings of green-yellow ooze dripping down its sides (short, close to the body), no face, no limbs, no eyes. Putrid, shapeless, lumpy and complete.",
+        "contrast": "Horrors: the NECROTIC MASS is the LOW LUMPY HEAP OF BRUISE-MAUVE AND GREY-PINK ROTTING FLESH with green-yellow pustules and pale bone knobs, no limbs and no face (silhouette: a wide lumpy mound; hue: mauve, grey-pink, green-yellow and bone; value: light-mid). The shipped fleshy experiment is a pink muscled brute, the sanguine experiment a red blob, the bloated horror cream and the boney experiment a tan bone pile: this must not be a brute, not solid red, not cream and not just bones.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Bruise-mauve, dusty pink-grey and pale flesh in a light-mid value with cream wet highlights, green-yellow pustules, pale bone knobs and dark maroon pits (nothing glows onto or darkens the disc); nothing darker than deep maroon except thin splits; NO black anywhere. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=necrotic mass, define_as=None, type=undead/subtype=horror, unique=False, native_tall=True); details and hashes in evidence/monster-batch-y-20260930/source-contracts.json. base BASE_NPC_HORROR_UNDEAD (undead/horror, no image=, no shader, no sustains_at_birth in the base); NPC.lua:33 default-name image on the leaf; resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/undead_horror_necrotic_mass.png\", display_h=2, display_y=-1}}} (an explicit tall body, keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the default-name image is the single path); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true (nativeTallImage accepts the body only for unique or native_tall entries, as for bone giant and eternal bone giant); never_move, no talents, no sustains_at_birth on the leaf, no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-y-20260930/source-contracts.json",
+          "sha256": "83d35e6f54d8f3e094ee96ef7b509b1f998a338d59f92f3fc4a297670640cd83"
+        }
+      ]
+    }
+  ]
+}

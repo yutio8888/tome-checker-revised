@@ -1,0 +1,228 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-y-2",
+  "assets": [
+    {
+      "asset_id": "orc-corruptor",
+      "native_name": "orc corruptor",
+      "scope": "rak-shor-pride pool (general/npcs/orc-rak-shor.lua:139, humanoid/orc, non-unique, no define_as, rank 3, base BASE_NPC_ORC_RAK_SHOR, default-name image); the antimagic quest lists it by name; the only definition of this name (the named uniques Brotoq the Reaver, Golbug the Destroyer and Krogar are other names)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-rak-shor.lua",
+          "sha256": "c4875efb25a55eac7f55ca07b7d20f7602722458e70a3dfa6fcbad80207d7192",
+          "line": 140,
+          "anchor": "name = \"orc corruptor\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-rak-shor.lua",
+          "sha256": "c4875efb25a55eac7f55ca07b7d20f7602722458e70a3dfa6fcbad80207d7192",
+          "line": 164,
+          "anchor": "T_BONE_SHIELD"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-rak-shor.lua",
+          "sha256": "c4875efb25a55eac7f55ca07b7d20f7602722458e70a3dfa6fcbad80207d7192",
+          "line": 167,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-rak-shor.lua",
+          "sha256": "c4875efb25a55eac7f55ca07b7d20f7602722458e70a3dfa6fcbad80207d7192",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC_RAK_SHOR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_corruptor.png",
+          "sha256": "3a6b49c2f21d20b4b785b55114ca6f61119bbd37902085de8b5087a2b67dce69",
+          "role": "identity",
+          "note": "Native shape (64x64): a green-skinned orc with black spiked shoulder pauldrons in long dark putrid robes. Keep the green orc in long tattered robes with spiked shoulders, but render the robes in mid-light moss-green and ochre with bone-white spikes."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-y/refs/orcs.png",
+          "sha256": "bfbb9ff61d7077e5f9ae3c09faf2f4a239cb494fc53447103420d888dbd411a8",
+          "role": "family",
+          "note": "Six shipped orc tokens (olive orc warrior with a scimitar, spiked grey orc soldier, red-robed blood mage with a ruby orb, dark blue-robed necromancer, pyromancer, cryomancer): the orc corruptor is an olive-green orc in tattered PUTRID moss-green and ochre-yellow robes with bone-white shoulder spikes and a short staff with a sickly green-yellow blight glow, not red-robed, not dark blue, not armoured and not fire or ice themed."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orc corruptor seen from a steep overhead three-quarter angle: a hunched OLIVE-GREEN tusked orc standing with a slight stoop, wrapped in long tattered PUTRID robes of light MOSS-GREEN and OCHRE-YELLOW in a mid-light value with pale highlight planes and bright bile-yellow stains, big pauldrons on the shoulders bristling with short BONE-WHITE SPIKES, a hood pushed back, a SHORT gnarled staff held close in one hand topped with a small sickly GREEN-YELLOW blight glow, the free hand raised with curling green wisps (short, close to the body), a little rim of pale bone charms on the belt. Rotting, robed, spiked and complete.",
+        "contrast": "Orcs: the ORC CORRUPTOR is the ROBED OLIVE ORC in putrid moss-green and ochre with bone spikes on the shoulders and a blight-glowing staff (silhouette: a hunched robed figure with spiked shoulders and a short staff; hue: olive green skin, moss green and ochre robes, bone white spikes, sickly yellow-green glow; value: mid-light). The shipped orc warrior is a bare olive fighter with a scimitar, the soldier a grey spiked armoured orc, the blood mage red-robed, the necromancer dark blue-robed: this must not be armoured, red, dark blue or bare.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Olive skin and light moss-green and ochre robes in a mid-light value with pale highlight planes and a bright rim light, bone-white spikes, a small sickly green-yellow staff glow (kept on the staff and must not tint or light the disc); nothing darker than deep olive except thin robe seams; NO black robes or black leather anywhere. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc corruptor, define_as=None, type=humanoid/subtype=orc, unique=False, native_tall=False); details and hashes in evidence/monster-batch-y-20260930/source-contracts.json. base BASE_NPC_ORC_RAK_SHOR (humanoid/orc, no image=, no shader, no moddable_tile, no sustains_at_birth in the base); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip staff, cloth armour and charm (inventory only); the leaf calls resolvers.sustains_at_birth() and its Bone Shield is a sustain (particle and temporary values only); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-y-20260930/source-contracts.json",
+          "sha256": "83d35e6f54d8f3e094ee96ef7b509b1f998a338d59f92f3fc4a297670640cd83"
+        }
+      ]
+    },
+    {
+      "asset_id": "broken-golem",
+      "native_name": "broken golem",
+      "scope": "golem-graveyard pool and the collapsed-tower vault (general/npcs/construct.lua:58, construct/golem, non-unique, no define_as, rank 1, base BASE_NPC_CONSTRUCT, default-name image); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/construct.lua",
+          "sha256": "61cbeb027f35ccbbfeb5b33fe7a6a46684f630f079a5ad8ff651ef68ae5ae36a",
+          "line": 59,
+          "anchor": "name = \"broken golem\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/construct.lua",
+          "sha256": "61cbeb027f35ccbbfeb5b33fe7a6a46684f630f079a5ad8ff651ef68ae5ae36a",
+          "line": 71,
+          "anchor": "T_GOLEM_KNOCKBACK"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/construct.lua",
+          "sha256": "61cbeb027f35ccbbfeb5b33fe7a6a46684f630f079a5ad8ff651ef68ae5ae36a",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_CONSTRUCT\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/construct_golem_broken_golem.png",
+          "sha256": "4db534f3f13163a69219da07807609b3c0dc67a49ee0726939e259c7f2531923",
+          "role": "identity",
+          "note": "Native shape (64x64): a dark grey-brown lumpy stone golem, one arm a stump, cracked and crumbling, standing hunched. Keep the crumbling hunched golem with the damaged arm, but render the stone in mid-light pale limestone-grey with bright cracks and a rust-orange exposed seam."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-y/refs/golems.png",
+          "sha256": "e39ca9e6193dcdb3d01622a0b31b0a504af26f9f75d3b3c8d53c303e3241bcbe",
+          "role": "family",
+          "note": "Four shipped big-bodied tokens (the grey-white segmented metal giant golem Atamathon, the tan bone giant, the stone troll, the minotaur): the broken golem is a lumpy PALE LIMESTONE-GREY stone figure with a big crack, a missing chunk and a rust-orange exposed seam, slumped, with no glow; the golem is an intact honey-tan clay figure with glowing cyan eyes and cyan rune lines, holding a huge maul, standing square. Neither is white-grey segmented metal and neither is bone."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A broken golem seen from a steep overhead three-quarter angle: a slumped hulking golem of blocky PALE LIMESTONE-GREY and cool light grey stone in a mid-light value with cream highlight planes on every upper-left face, deep zig-zag CRACKS, a big missing chunk in the chest and the LEFT FOREARM BROKEN OFF into a jagged stump with a few pale rubble pieces on the disc close to its feet, a RUST-ORANGE exposed iron seam and rivets in the chest crack, tufts of pale green moss on the shoulders, a blank dark eye socket with no glow, the right arm hanging heavy. Damaged, slumped, crumbling and complete.",
+        "contrast": "Golems: the BROKEN GOLEM is the SLUMPED PALE LIMESTONE-GREY STONE FIGURE with a cracked chest, a broken-off forearm and a rust-orange seam, no glow (silhouette: a hunched blocky figure missing one forearm with rubble at its feet; hue: pale limestone grey with rust orange and moss green; value: mid-light). Atamathon is a white-grey segmented metal giant and the bone giants are tan: this must not be metal, not tan and not skeletal; and it must differ from the intact glowing-eyed honey-tan golem of this batch.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Pale limestone-grey stone in a mid-light value with cream highlight planes and a bright rim light, rust-orange seam, pale green moss, no glow anywhere; nothing darker than mid grey except the crack seams and the blank eye socket; NO dark brown or black stone. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=broken golem, define_as=None, type=construct/subtype=golem, unique=False, native_tall=False); details and hashes in evidence/monster-batch-y-20260930/source-contracts.json. base BASE_NPC_CONSTRUCT (construct/golem, no image=, no shader, no sustains_at_birth); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip greatmaul (inventory only), one rune inscription, talents Weapon Combat, Weapons Mastery and Golem Knockback (activated); no sustains_at_birth, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-y-20260930/source-contracts.json",
+          "sha256": "83d35e6f54d8f3e094ee96ef7b509b1f998a338d59f92f3fc4a297670640cd83"
+        }
+      ]
+    },
+    {
+      "asset_id": "golem",
+      "native_name": "golem",
+      "scope": "golem-graveyard pool (general/npcs/construct.lua:75, construct/golem, non-unique, no define_as, rank 1, base BASE_NPC_CONSTRUCT, default-name image); the only NPC leaf with this name. The player's alchemist golem (talents/spells/golemancy.lua:30) is also named golem with the same type and subtype but uses image=npc/alchemist_golem.png plus a moddable_tile paper doll, so the matcher rejects it (image and moddable-tile checks) and it stays native",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/construct.lua",
+          "sha256": "61cbeb027f35ccbbfeb5b33fe7a6a46684f630f079a5ad8ff651ef68ae5ae36a",
+          "line": 76,
+          "anchor": "name = \"golem\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/construct.lua",
+          "sha256": "61cbeb027f35ccbbfeb5b33fe7a6a46684f630f079a5ad8ff651ef68ae5ae36a",
+          "line": 89,
+          "anchor": "T_GOLEM_BEAM"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/construct.lua",
+          "sha256": "61cbeb027f35ccbbfeb5b33fe7a6a46684f630f079a5ad8ff651ef68ae5ae36a",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_CONSTRUCT\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/spells/golemancy.lua",
+          "sha256": "d49a29e2ccb26796d7479f8091d90c7902d362b96933c32fa13618c0fcd740bf",
+          "line": 33,
+          "anchor": "name = \"golem\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/spells/golemancy.lua",
+          "sha256": "d49a29e2ccb26796d7479f8091d90c7902d362b96933c32fa13618c0fcd740bf",
+          "line": 34,
+          "anchor": "image = \"npc/alchemist_golem.png\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/spells/golemancy.lua",
+          "sha256": "d49a29e2ccb26796d7479f8091d90c7902d362b96933c32fa13618c0fcd740bf",
+          "line": 36,
+          "anchor": "moddable_tile = \"runic_golem\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/construct_golem_golem.png",
+          "sha256": "4314aaad44015254439eb2e1c0512b995a106b7ad225e0912e901529bdaf7191",
+          "role": "identity",
+          "note": "Native shape (64x64): a sturdy tan clay-and-stone golem standing square with glowing cyan eyes. Keep the sturdy square golem with glowing cyan eyes, but render the body in bright honey-tan clay with cyan rune lines and a huge maul."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-y/refs/golems.png",
+          "sha256": "e39ca9e6193dcdb3d01622a0b31b0a504af26f9f75d3b3c8d53c303e3241bcbe",
+          "role": "family",
+          "note": "Four shipped big-bodied tokens (the grey-white segmented metal giant golem Atamathon, the tan bone giant, the stone troll, the minotaur): the broken golem is a lumpy PALE LIMESTONE-GREY stone figure with a big crack, a missing chunk and a rust-orange exposed seam, slumped, with no glow; the golem is an intact honey-tan clay figure with glowing cyan eyes and cyan rune lines, holding a huge maul, standing square. Neither is white-grey segmented metal and neither is bone."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A golem seen from a steep overhead three-quarter angle: a sturdy intact blocky golem standing square, its body sculpted from bright HONEY-TAN and warm terracotta clay in a light-mid value with cream highlight planes, glowing CYAN EYES and thin glowing cyan RUNE LINES along the chest and arms, thick rounded limbs with pale stone knuckles, a HUGE grey-steel MAUL held low across the body in both hands (the maul head inside the disc), simple stitched clay seams. Solid, intact, rune-lit and complete.",
+        "contrast": "Golems: the GOLEM is the INTACT HONEY-TAN CLAY FIGURE with glowing cyan eyes and rune lines and a big maul (silhouette: a square blocky figure holding a huge maul across the body; hue: honey tan and terracotta with cyan; value: light-mid). The broken golem of this batch is pale grey, cracked and armless below the elbow, Atamathon is a white-grey metal giant and the bone giants are skeletal: this must not be grey, not cracked, not metal and not bone.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Honey-tan and terracotta clay in a light-mid value with cream highlight planes and a bright rim light, glowing cyan eyes and rune lines, grey-steel maul (the cyan glow stays on the golem and must not tint or light the disc); nothing darker than deep terracotta except the seams; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=golem, define_as=None, type=construct/subtype=golem, unique=False, native_tall=False); details and hashes in evidence/monster-batch-y-20260930/source-contracts.json. base BASE_NPC_CONSTRUCT (construct/golem, no image=, no shader, no sustains_at_birth); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip greatmaul (inventory only), two rune inscriptions, talents Weapon Combat, Weapons Mastery, Golem Knockback and Golem Beam (activated); no sustains_at_birth, no auto_classes; the alchemist golem of the player has the same name, type and subtype but image npc/alchemist_golem.png and a moddable_tile, both of which the matcher refuses. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-y-20260930/source-contracts.json",
+          "sha256": "83d35e6f54d8f3e094ee96ef7b509b1f998a338d59f92f3fc4a297670640cd83"
+        }
+      ]
+    }
+  ]
+}

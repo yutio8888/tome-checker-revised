@@ -1,0 +1,222 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-t-1",
+  "assets": [
+    {
+      "asset_id": "caravan-merchant",
+      "native_name": "caravan merchant",
+      "scope": "keepsake-meadow (zones/keepsake-meadow/npcs.lua:62, humanoid/human, non-unique, define_as CARAVAN_MERCHANT, rank 2, base BASE_CARAVANEER, faction merchant-caravan, explicit image=npc/humanoid_human_spectator02.png); placed by the static dream-level map maps/zones/keepsake-dream.lua:32 (tile M); single definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 62,
+          "anchor": "define_as = \"CARAVAN_MERCHANT\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 63,
+          "anchor": "name = \"caravan merchant\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 63,
+          "anchor": "image=\"npc/humanoid_human_spectator02.png\""
+        },
+        {
+          "path": "game/modules/tome/data/maps/zones/keepsake-dream.lua",
+          "sha256": "b4f0bc0b3b1d3f09bdfa13aa182cf5739274f575efac7af4c634426298578331",
+          "line": 32,
+          "anchor": "defineTile(\"M\", \"GRASS\", nil, \"CARAVAN_MERCHANT\")"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_spectator02.png",
+          "sha256": "fd3eaf1a4d03df15e5a97c6961e6cae704dbab739d96fc07954cf0b2bad97e60",
+          "role": "identity",
+          "note": "Native shape (64x64): a blond man in a plain blue tunic standing with arms at his sides."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-t/refs/humans.png",
+          "sha256": "a4c2cb5d5d8b805936665cc3cf8e7d48f4172e13d7f0f6e4ed79c9984a790b08",
+          "role": "family",
+          "note": "Four shipped human tokens (cutpurse, rogue, thief, bandit: lean or muscular figures with paired daggers, hoods or a bald brawler pose): no caravan token or the Lost Merchant may be a dagger-wielding thief, hooded rogue or bald dagger brawler."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A caravan merchant seen from a steep overhead three-quarter angle: a plump, prosperous middle-aged human trader with a round belly, a bright SKY-BLUE knee-length tunic with a wide OCHRE-YELLOW sash, a cream linen shirt, a WIDE-BRIMMED PALE-KHAKI TRAVELLING HAT with one small white feather, rosy cheeks and a curled light-brown moustache, one arm raised HIGH holding a big bulging tan leather COIN PURSE tied at the neck, a rolled cream scroll tucked under the other arm, a short sheathed sword at the hip, brown boots. Jovial, round, prosperous and complete.",
+        "contrast": "Caravan people: the MERCHANT is a ROUND-BELLIED figure under a WIDE-BRIMMED HAT with one arm raised holding a big round coin purse (silhouette: wide flat hat brim above a round body plus a raised round bag; hue: sky blue, ochre and cream; value: mid-light). The shipped cutpurse, rogue, thief and bandit are lean or muscular figures with paired daggers, hoods or a bald head: no daggers, no hood, no crouched stalking pose here. The other caravan people are a mail-clad shield bearer (guard), a hunched man under stacked crates (porter) and a bald cowering man with a lantern (Lost Merchant).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Sky-blue tunic in a mid-light value with pale blue highlight planes, cream shirt and scroll, ochre sash, pale khaki hat with a white feather, tan purse, light-brown moustache, pink skin; nothing darker than dark brown except the eyes; the disc stays neutral charcoal with no blue cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=caravan merchant, define_as=CARAVAN_MERCHANT, type=humanoid/subtype=human, unique=False, native_tall=False); details and hashes in evidence/monster-batch-t-20260930/source-contracts.json. base BASE_CARAVANEER (humanoid/human, its own image=spectator02 repeated by the leaf, faction merchant-caravan, ai dumb_talented_simple); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; resolvers.racial() only adds levelup talents (Higher Heal, Born into Magic, Highborn's Bloom), resolvers.equip longsword (equipment only, no moddable_tile); talents Armour Training, Weapon Combat, Weapons Mastery; no sustains_at_birth and no auto_classes on the leaf or base. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-t-20260930/source-contracts.json",
+          "sha256": "683dc4abbd177436803d6c58e8a73813c814b99615ff7fc26a3a5b9753fc5e54"
+        }
+      ]
+    },
+    {
+      "asset_id": "caravan-guard",
+      "native_name": "caravan guard",
+      "scope": "keepsake-meadow (zones/keepsake-meadow/npcs.lua:75, humanoid/human, non-unique, define_as CARAVAN_GUARD, rank 2, base BASE_CARAVANEER, faction merchant-caravan, explicit image=npc/humanoid_human_spectator.png); placed by maps/zones/keepsake-dream.lua:33 (tile G); single definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 75,
+          "anchor": "define_as = \"CARAVAN_GUARD\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 76,
+          "anchor": "name = \"caravan guard\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 76,
+          "anchor": "image=\"npc/humanoid_human_spectator.png\""
+        },
+        {
+          "path": "game/modules/tome/data/maps/zones/keepsake-dream.lua",
+          "sha256": "b4f0bc0b3b1d3f09bdfa13aa182cf5739274f575efac7af4c634426298578331",
+          "line": 33,
+          "anchor": "defineTile(\"G\", \"GRASS\", nil, \"CARAVAN_GUARD\")"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_spectator.png",
+          "sha256": "3239cf2de4c61830c2fdbacc55c7b4c3cd5ccadd4aeb0ee90515ab7d1ddb18e7",
+          "role": "identity",
+          "note": "Native shape (64x64): a dark-haired commoner in an olive cloak and brown tunic standing with his hands lowered."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/human-sun-paladin.png",
+          "sha256": "d0ed0659361182d352ef475f4e530da66683c7c23a33ff2ca9d99af5ba8daee1",
+          "role": "family",
+          "note": "Shipped human sun-paladin (gold plate, round sunburst shield, mace): the caravan guard must not be a gold plate knight with a round shield."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A caravan guard seen from a steep overhead three-quarter angle: a broad-shouldered human mercenary standing BRACED with knees bent, an open-faced rounded IRON KETTLE HELM with a plain brow band, a light grey RING-MAIL hauberk under a KHAKI-YELLOW surcoat with a small brown WAGON-WHEEL emblem, a LARGE RECTANGULAR STEEL-GREY SHIELD with a pale riveted rim and a central iron boss held straight IN FRONT of the body covering the torso, a plain bright steel longsword thrust forward along the shield's right edge, brown leather boots and gauntlets, a square stubbled jaw. Steady, boxy and complete.",
+        "contrast": "Caravan people: the GUARD is a helmeted mail-clad figure behind a big RECTANGULAR grey shield held in front, with a sword edge beside it (silhouette: a boxy shield block in front topped by a rounded helm; hue: steel grey, khaki and brown; value: mid-light). The shipped human sun-paladin is a GOLD plate knight with a ROUND sunburst shield and a mace: this must not be gold, not plate, not a round shield. The merchant is a plump blue figure with a wide hat and a coin purse; the porter is a hunched man carrying crates on his back with warm pale wood; the Lost Merchant is a bald cowering man.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Light grey ring-mail with pale highlight planes, khaki-yellow surcoat, steel-grey shield face with pale rim and boss, bright polished steel sword and helm, tan skin, brown boots and gauntlets; nothing darker than dark grey-brown except the eyes; the disc stays neutral charcoal with no yellow cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=caravan guard, define_as=CARAVAN_GUARD, type=humanoid/subtype=human, unique=False, native_tall=False); details and hashes in evidence/monster-batch-t-20260930/source-contracts.json. base BASE_CARAVANEER (humanoid/human, faction merchant-caravan); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; resolvers.racial() only adds levelup talents, resolvers.equip longsword, shield and heavy armour (equipment only, no moddable_tile); talents Armour Training, Weapon Combat, Weapons Mastery, Shield Pummel; no sustains_at_birth and no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-t-20260930/source-contracts.json",
+          "sha256": "683dc4abbd177436803d6c58e8a73813c814b99615ff7fc26a3a5b9753fc5e54"
+        }
+      ]
+    },
+    {
+      "asset_id": "caravan-porter",
+      "native_name": "caravan porter",
+      "scope": "keepsake-meadow (zones/keepsake-meadow/npcs.lua:91, humanoid/human, non-unique, define_as CARAVAN_PORTER, rank 2, base BASE_CARAVANEER, faction merchant-caravan, explicit image=npc/humanoid_human_spectator03.png); placed by maps/zones/keepsake-dream.lua:34 (tile P); single definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 91,
+          "anchor": "define_as = \"CARAVAN_PORTER\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 92,
+          "anchor": "name = \"caravan porter\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 92,
+          "anchor": "image=\"npc/humanoid_human_spectator03.png\""
+        },
+        {
+          "path": "game/modules/tome/data/maps/zones/keepsake-dream.lua",
+          "sha256": "b4f0bc0b3b1d3f09bdfa13aa182cf5739274f575efac7af4c634426298578331",
+          "line": 34,
+          "anchor": "defineTile(\"P\", \"GRASS\", nil, \"CARAVAN_PORTER\")"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_spectator03.png",
+          "sha256": "46a37e31e8832d401b804555a8f3d8400c2c8aace89ac6265c5995181dfbe283",
+          "role": "identity",
+          "note": "Native shape (64x64): a dark-haired man in a cream vest, brown shorts and a dark cloak standing with his arms at his sides."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-t/refs/humans.png",
+          "sha256": "a4c2cb5d5d8b805936665cc3cf8e7d48f4172e13d7f0f6e4ed79c9984a790b08",
+          "role": "family",
+          "note": "Four shipped human tokens (cutpurse, rogue, thief, bandit: lean or muscular figures with paired daggers, hoods or a bald brawler pose): no caravan token or the Lost Merchant may be a dagger-wielding thief, hooded rogue or bald dagger brawler."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A caravan porter seen from a steep overhead three-quarter angle: a stocky, burly human labourer HUNCHED forward under the weight of a tall stack of TWO WARM PALE-WOOD CRATES with dark iron corner plates strapped together with a coil of rope and carried on his back and shoulders (the stack rises behind and above his head like a blocky pack, its top edge pulled well inside the disc), a cream linen shirt with rolled sleeves and a brown leather harness strap across the chest, light tan trousers, a flat brown cap, a small waraxe hanging from his belt, thick bare forearms, heavy boots, a stubbled chin, head thrust forward. Laden, hunched, boxy and complete.",
+        "contrast": "Caravan people: the PORTER is a HUNCHED figure whose main mass is a blocky STACK OF CRATES ON HIS BACK with his head thrust out in front (silhouette: one big square pack behind a small forward head; hue: warm pale wood, cream and tan; value: light). The guard holds a grey shield block IN FRONT; the merchant is a round blue figure with a wide hat; the Lost Merchant is a bald man with a lumpy canvas rucksack and a lantern. The shipped cutpurse, rogue, thief and bandit carry paired daggers or wear hoods: the porter has no dagger and no hood.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Warm pale wood crates in a light value with cream highlight planes on the upper-left faces and dark iron corner plates, rope in tan, cream shirt, light tan trousers, brown cap and harness, tanned skin, steel waraxe head; nothing darker than dark brown except the eyes and the iron corner plates; the disc stays neutral charcoal with no warm cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=caravan porter, define_as=CARAVAN_PORTER, type=humanoid/subtype=human, unique=False, native_tall=False); details and hashes in evidence/monster-batch-t-20260930/source-contracts.json. base BASE_CARAVANEER (humanoid/human, faction merchant-caravan); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; resolvers.racial() only adds levelup talents, resolvers.equip waraxe (equipment only, no moddable_tile); talents Armour Training, Weapon Combat, Weapons Mastery; no sustains_at_birth and no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-t-20260930/source-contracts.json",
+          "sha256": "683dc4abbd177436803d6c58e8a73813c814b99615ff7fc26a3a5b9753fc5e54"
+        }
+      ]
+    }
+  ]
+}

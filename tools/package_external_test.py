@@ -16,7 +16,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 ADDONS = ROOT.parent
-VERSION = "0.6.29"
+VERSION = "0.6.30"
 HUD_VERSION = "0.2.7"
 CHECKER_NAME = "tome-checker-revised.teaa"
 HUD_NAME = "tome-board-hud.teaa"
@@ -95,7 +95,7 @@ def build(output: Path) -> tuple[Path, str]:
     }
     hud = ADDONS / "tome-board-hud" / "dist" / f"tome-board-hud-{HUD_VERSION}.teaa"
     payload[HUD_NAME] = validate_addon(hud, HUD_VERSION, "board-hud")
-    guide = ROOT / "docs" / "external-test-v0629" / INSTALL_NAME
+    guide = ROOT / "docs" / "external-test-v0630" / INSTALL_NAME
     payload[INSTALL_NAME] = guide.read_bytes()
     checksums = "".join(f"{digest(payload[name])}  {name}\n" for name in sorted(payload))
     payload["SHA256SUMS"] = checksums.encode("ascii")

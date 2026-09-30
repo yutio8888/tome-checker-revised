@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-x-7",
+  "assets": [
+    {
+      "asset_id": "skeleton-assassin",
+      "native_name": "skeleton assassin",
+      "scope": "dreadfell, telmur, rak-shor-pride and two more zones' skeleton pools (general/npcs/skeleton.lua:194, undead/skeleton, non-unique, no define_as, rank 3, base BASE_NPC_SKELETON, default-name image); the only definition of this name; no vault, event or talent builds another actor with this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 194,
+          "anchor": "name = \"skeleton assassin\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 215,
+          "anchor": "T_SHADOWSTEP"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 218,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/skeleton.lua",
+          "sha256": "7f37a3efc49aea34511eadd7387b5b15e7e3b783bc485dfcaaceffca5f5fd2f4",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_SKELETON\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_skeleton_skeleton_assassin.png",
+          "sha256": "58ec90b23816e879ecce3c403b61a74cdd08a1e2354ff51a0d6eb26ee9dff208",
+          "role": "identity",
+          "note": "Native shape (64x64): a charred-black skeleton with a dark hood, orange-red eye glints, a bandolier and a dagger in the raised hand. Keep the hooded lean skeleton with glowing eyes and a dagger, but render the bones as mid-light ash-grey with bone-cream highlights and a slate-blue cowl."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-x/refs/skeletons.png",
+          "sha256": "de7b0a41c8a85e629b5e084336a729441c549b7172415a6f6df4f3e037a43240",
+          "role": "family",
+          "note": "Six shipped skeleton tokens (armoured sword skeleton, magus with flames, armoured shield skeleton, archer, degenerated warrior, master archer): the skeleton assassin is a lean charred ash-grey skeleton with a slate-blue cowl and two pale daggers, crouched low and stealthy, not armoured, not carrying a sword, shield or bow and not flaming."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A skeleton assassin seen from a steep overhead three-quarter angle: a compact crouched hooded skeleton, the bones BONE-WHITE and IVORY with bright cream highlight planes on the skull, ribs and joints, wrapped in a broad tattered LIGHT ASH-GREY and pale PERIWINKLE-BLUE cloak and hood with bright frayed pale edge strips, a thin pale-tan bandolier, TWO BRIGHT POLISHED STEEL DAGGERS held low in reverse grip (short, inside the disc), small hot ORANGE-RED eye glints in the hood shadow, knees bent, leaning forward towards the upper left. Stealthy, angular, bone-and-cloak, bright and complete.",
+        "contrast": "Skeletons: the SKELETON ASSASSIN is the LEAN CROUCHED ASH-GREY ONE with a slate-blue cowl and two reverse-grip daggers (silhouette: a low leaning angular figure with two short blades; hue: ash grey and bone cream with slate blue and orange-red eye glints; value: mid-light). The shipped skeleton warrior and armoured warrior are armoured and upright with sword and shield, the magus is flaming and the archers hold bows: this must not be armoured, upright, flaming or carrying a sword, shield or bow. The other new hooded dagger figure is a human assassin in dove-grey cloth.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. LIGHT-VALUE REFINEMENT (the previous version was rejected at 48 pixels: a thin lean figure with a dark slate cowl and dark straps lost its silhouette on every floor): draw the skeleton as a BONE-WHITE and IVORY skeleton (very light, only soft warm-grey shadow planes) wrapped in a LARGE, broad, tattered pale ash-grey and light periwinkle-grey cloak and hood covering much of the body (the cloak clearly lighter than the copper-grey disc bevel, with bright pale frayed edge strips), thin pale-tan straps, two bright polished steel daggers, small orange-red eye glints, and a bright pale RIM LIGHT along the whole outline. The figure is compact and BIG: it fills the inner three quarters of the disc (about 0.7 of the disc radius across, centred, daggers tucked inside), NOT thin. No black, charcoal or dark-blue mass anywhere; NO cast shadow, contact shadow or dark halo on the plate; render the whole disc, outer ring and plate under the figure at exactly the reference lightness, a hair lighter, never darker.",
+        "palette": "Ash-grey and smoky-brown bones in a mid-light value with bone-cream highlight planes and a bright pale rim light, slate-blue cloth in a mid value with lighter edge strips, bright steel blades, small orange-red eye glints (nothing glows onto the disc); nothing darker than dark slate-grey except the eye sockets and thin seams; NO black cloth or black bone anywhere. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=skeleton assassin, define_as=None, type=undead/subtype=skeleton, unique=False, native_tall=False); details and hashes in evidence/monster-batch-x-20260930/source-contracts.json. base BASE_NPC_SKELETON (undead/skeleton, no image=, no shader, no sustains_at_birth in the base); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip fills inventory slots only (no moddable_tile, so no display change) (two daggers, light armour); resolvers.racial() adds only levelup talent tables; resolvers.inscriptions(1, rune); the leaf calls resolvers.sustains_at_birth(), starting the sustained talents Stealth and Shadow Combat (temporary values only, no type/subtype/image/add_mos write; Tempo is passive); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-x-20260930/source-contracts.json",
+          "sha256": "d3dd5bbd03d3fe045b05a6c6bb6d5c1259c16277838feee21714f1457e7dc3cc"
+        }
+      ],
+      "refinement": {
+        "supersedes": "skeleton-assassin",
+        "previous_batch": "monster-batch-x-3",
+        "design_change_reason": "The first skeleton assassin (charred ash-grey bones, dark slate-blue cowl, dark straps; masked luminance 62.7) passed the numeric style gate but the coordinator's 48px floor review found the thin figure lost its silhouette on every floor. This refinement changes the value design, not just the roll: ivory bone-white skeleton, a broad light ash-grey and periwinkle cloak instead of a dark cowl, pale straps, bright steel, and a larger compact figure so the body mass is light.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-x/masters/skeleton-assassin-v1.png",
+            "sha256": "4f0be2a56131fc45069f6457921f286cb77aee5b36b26135f3ec16513ce73d0b"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-x-3/skeleton-assassin/imagegen-calls/call-1/call.json",
+            "sha256": "babbe7e1ebab48808670142678ee60c024c889875dc700484adfb16bb6eca3ff"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-x-3/skeleton-assassin/receipts/attempt-1.json",
+            "sha256": "da7c73906c5b7bae956a633d2a64e44bffc7517c56d01c5739df861ab14a6f2e"
+          }
+        ]
+      }
+    }
+  ]
+}

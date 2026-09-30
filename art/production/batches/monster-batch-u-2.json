@@ -1,0 +1,216 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-u-2",
+  "assets": [
+    {
+      "asset_id": "naga-tide-huntress",
+      "native_name": "naga tide huntress",
+      "scope": "general npc list (general/npcs/naga.lua:73, humanoid/naga, non-unique, no define_as, rank 3, base BASE_NPC_NAGA, explicit image=npc/naga_tide_huntress.png); loaded by temple-of-creation (zones/temple-of-creation/npcs.lua:22), high-peak, the naga-portal event and the water-vault/flooded-prison vaults; the Arena generator names it (class/generator/actor/Arena.lua:167); one definition everywhere",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/naga.lua",
+          "sha256": "082cfb5e3044418b8ee2c6bb8ff4eaa09a32d7c4f1b39493f2b9f7e6696039fd",
+          "line": 74,
+          "anchor": "name = \"naga tide huntress\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/naga.lua",
+          "sha256": "082cfb5e3044418b8ee2c6bb8ff4eaa09a32d7c4f1b39493f2b9f7e6696039fd",
+          "line": 74,
+          "anchor": "image=\"npc/naga_tide_huntress.png\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/temple-of-creation/npcs.lua",
+          "sha256": "665e69eb25a1fd1e43f79b69dbc79b87af9a7880a56e7b0c9d5b92db611f376c",
+          "line": 22,
+          "anchor": "load(\"/data/general/npcs/naga.lua\", rarity(0))"
+        },
+        {
+          "path": "game/modules/tome/class/generator/actor/Arena.lua",
+          "sha256": "a7e45cef4c5da48475cb92b460e61d1eb2dd582e0396e0f2fc5f9806a23a86c6",
+          "line": 167,
+          "anchor": "name = \"naga tide huntress\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/naga_tide_huntress.png",
+          "sha256": "c222150a2b063c134afcd4895ae999f5c457dea35abc02d2044a4e87643ff125",
+          "role": "identity",
+          "note": "Native shape (64x64): a blonde female naga drawing a longbow over a blue serpent tail. Keep the bow-drawing archer, but with a white-silver tail and a short compact bow."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-u/refs/nagas.png",
+          "sha256": "f1307e3ebacd5215363dfd3443b69dbef17022bb39af5e8554dba3ebe6d7d942",
+          "role": "family",
+          "note": "Seven shipped naga tokens (blue-tailed myrmidon with a trident, brown tidewarden with a shield, yellow-tailed nereid with a crystal staff, red lady zoisla, teal lady nashva, grey tidecaller, green slasul): none of them carries a bow, and none has a white-silver tail or a violet spiral tail."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A naga tide huntress seen from a steep overhead three-quarter angle: a slender young female naga whose torso rises from a tight flat coil of a long serpent tail covered in PALE ICE-BLUE and WHITE-SILVER scales with a bright pearly belly, a long SILVER-WHITE braid over one shoulder, a teal-green leather cuirass, the arms DRAWING a short recurve bow diagonally (the bow no taller than her torso, drawn to the cheek) with a nocked arrow tipped by a small clear ICE CRYSTAL pointing to the upper right, a narrow cold determined face with pale ice-blue eyes, a quiver of pale feathered arrows on her back. Poised, cold, bow-drawn and complete.",
+        "contrast": "Nagas: the TIDE HUNTRESS is a female ARCHER, the only one drawing a BOW (silhouette: a coiled tail base, an upright torso and a diagonal bow with a nocked arrow; hue: white-silver and ice-blue tail, teal cuirass, silver braid; value: light). The shipped nagas hold tridents, staffs or shields and have blue, brown, yellow, red, teal, grey or green tails: this must not hold a trident or staff, and the tail must be pale white-silver, not a saturated blue or yellow. The psyren is a violet-tailed spiral figure with an orb and flowing hair, no bow.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "White-silver and pale ice-blue scales in a light value with bright pearly highlight planes and soft blue-grey shadows, silver braid, teal-green cuirass in a mid value, pale wood bow with a bright tip, clear ice-crystal arrowhead; nothing darker than mid teal except the eyes and thin seams; the ice glint must not tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=naga tide huntress, define_as=None, type=humanoid/subtype=naga, unique=False, native_tall=False); details and hashes in evidence/monster-batch-u-20260930/source-contracts.json. base BASE_NPC_NAGA (humanoid/naga, no image=; the murgol-lair and slazish-fen zone files redefine BASE_NPC_NAGA for their own leaves and are not loaded with general/npcs/naga.lua); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; resolvers.racial() (naga has no racials entry: nothing added), resolvers.equip longbow and arrows (equipment only, no moddable_tile), resolvers.inscriptions(1, infusion/rune); talents Spit Poison, Water Jet, Water Bolt, Shoot, Weapon Combat, Bow Mastery (none sustained); no sustains_at_birth and no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-u-20260930/source-contracts.json",
+          "sha256": "4f46e3336b48581c8d53801ec1d5c3d5d1d178d2d33ced48e36e0058a6e62f43"
+        }
+      ]
+    },
+    {
+      "asset_id": "naga-psyren",
+      "native_name": "naga psyren",
+      "scope": "general npc list (general/npcs/naga.lua:102, humanoid/naga, non-unique, no define_as, rank 3, base BASE_NPC_NAGA, explicit image=npc/naga_psyren.png); loaded by temple-of-creation, high-peak, the naga-portal event and vaults; the Arena generator names it (class/generator/actor/Arena.lua:179); one definition everywhere",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/naga.lua",
+          "sha256": "082cfb5e3044418b8ee2c6bb8ff4eaa09a32d7c4f1b39493f2b9f7e6696039fd",
+          "line": 103,
+          "anchor": "name = \"naga psyren\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/naga.lua",
+          "sha256": "082cfb5e3044418b8ee2c6bb8ff4eaa09a32d7c4f1b39493f2b9f7e6696039fd",
+          "line": 103,
+          "anchor": "image=\"npc/naga_psyren.png\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/temple-of-creation/npcs.lua",
+          "sha256": "665e69eb25a1fd1e43f79b69dbc79b87af9a7880a56e7b0c9d5b92db611f376c",
+          "line": 22,
+          "anchor": "load(\"/data/general/npcs/naga.lua\", rarity(0))"
+        },
+        {
+          "path": "game/modules/tome/class/generator/actor/Arena.lua",
+          "sha256": "a7e45cef4c5da48475cb92b460e61d1eb2dd582e0396e0f2fc5f9806a23a86c6",
+          "line": 179,
+          "anchor": "name = \"naga psyren\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/naga_psyren.png",
+          "sha256": "e48bb861a8d784a4dfefdb406d74592136f2d9cc888645b02956091b54829638",
+          "role": "identity",
+          "note": "Native shape (64x64): a blonde female naga with a glowing purple orb in her hand over a blue serpent tail. Keep the orb-casting siren, but with a violet spiral tail and flowing rose hair."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-u/refs/nagas.png",
+          "sha256": "f1307e3ebacd5215363dfd3443b69dbef17022bb39af5e8554dba3ebe6d7d942",
+          "role": "family",
+          "note": "Seven shipped naga tokens (blue-tailed myrmidon with a trident, brown tidewarden with a shield, yellow-tailed nereid with a crystal staff, red lady zoisla, teal lady nashva, grey tidecaller, green slasul): none of them carries a bow, and none has a white-silver tail or a violet spiral tail."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A naga psyren seen from a steep overhead three-quarter angle: an ethereal female naga whose serene torso rises from a tail coiled in a tight RISING SPIRAL of pearlescent MAGENTA-VIOLET and pale pink scales with a cream belly, long flowing ROSE-PINK hair spreading out to both sides like soft wings, a pearl-and-gold shell bodice, closed eyes and a faint smile, both hands raised and cupped in front of the chest around a glowing PURPLE-WHITE psychic ORB the size of her head (its glow contained, a few tiny pale motes only). Serene, spiralled, ethereal and complete.",
+        "contrast": "Nagas: the PSYREN is a SPIRAL-TAILED siren with flowing hair wings and a glowing orb in both raised hands (silhouette: a rising spiral column with a wide hair spread and a round orb at chest height; hue: magenta-violet tail, rose hair, pearl and gold, purple-white orb; value: mid-light). The shipped nereid has a yellow tail and blonde hair with a crystal staff, myrmidon a blue tail with a trident, nashva a teal water figure: this must not hold a weapon or staff, and its tail must be violet-magenta. The tide huntress is a white-silver archer with a bow.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Magenta-violet and pale pink scales in a mid-light value with pearly highlight planes, rose-pink hair in a mid-light value, cream belly, pearl-and-gold bodice, purple-white orb with a bright core; nothing darker than mid violet except the eyes and thin seams; the orb glow must stay on the creature and must not tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=naga psyren, define_as=None, type=humanoid/subtype=naga, unique=False, native_tall=False); details and hashes in evidence/monster-batch-u-20260930/source-contracts.json. base BASE_NPC_NAGA (humanoid/naga); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; resolvers.racial() (nothing added), resolvers.equip trident (equipment only), resolvers.inscriptions(1, infusion/rune); talents Mind Disruption, Mind Sear, Silence, Telekinetic Blast (none sustained); no sustains_at_birth and no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-u-20260930/source-contracts.json",
+          "sha256": "4f46e3336b48581c8d53801ec1d5c3d5d1d178d2d33ced48e36e0058a6e62f43"
+        }
+      ]
+    },
+    {
+      "asset_id": "ancient-elven-mummy",
+      "native_name": "ancient elven mummy",
+      "scope": "ancient-elven-ruins (zones/ancient-elven-ruins/npcs.lua:107, undead/mummy, non-unique, no define_as, rank 2, base BASE_NPC_MUMMY from general/npcs/mummy.lua, default-name image); the only definition of this name; the general mummy list (loaded by infinite-dungeon and ruined-dungeon) does not contain it",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 109,
+          "anchor": "name = \"ancient elven mummy\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 123,
+          "anchor": "T_CRUSH"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 23,
+          "anchor": "load(\"/data/general/npcs/mummy.lua\", rarity(0))"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_mummy_ancient_elven_mummy.png",
+          "sha256": "621fe0c9c911d1e0b97e3e0a646d720999d51482dfbc9b8c3f9d02c7577abf44",
+          "role": "identity",
+          "note": "Native shape (64x64): a slender bandaged mummy in pale wrappings standing with arms hanging slightly forward."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/greater-mummy-lord.png",
+          "sha256": "828af37b0ba39b9ae9002d6eeb1ea08b84e79623e9427bf91512c273d91e9dbc",
+          "role": "family",
+          "note": "Shipped greater mummy lord (bulky gold-armoured bandaged warrior with a round shield and a sword): the ancient elven mummy must not be a bulky armoured shield bearer."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An ancient elven mummy seen from a steep overhead three-quarter angle: a gaunt, tall-and-slender elven corpse wrapped from head to foot in aged CREAM and pale TAN linen bandages, two long POINTED ELF EARS poking out through the wrappings on the sides of the head, a thin tarnished GOLD circlet across the brow holding a small JADE-GREEN leaf gem, glowing pale JADE-GREEN eye sockets, both arms stretched STIFFLY FORWARD at chest height with ragged bandage strips trailing from the wrists and hem, a short narrow stance in a slow shuffling stride, small gold arm rings. Gaunt, elegant, ancient and complete, no weapon, no shield, no armour plates.",
+        "contrast": "Undead mummies: the ANCIENT ELVEN MUMMY is a GAUNT SLENDER figure with POINTED EARS, a gold-and-jade circlet and both arms stretched forward with trailing bandage ends, no weapon or shield (silhouette: a narrow vertical figure with two ear points and forward arms; hue: cream and tan wrappings with gold and jade green accents; value: light). The shipped greater mummy lord is a bulky gold-armoured bandaged warrior with a round shield and a sword: this must not be bulky, armoured, crowned with horns or holding a shield.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Cream and pale tan bandages in a light value with bright highlight planes on the upper-left folds and soft warm-grey shadows, tarnished gold circlet and rings, jade-green gem and eye glow (small), nothing darker than mid warm grey except the eye sockets and thin seams; the eye glow must not tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ancient elven mummy, define_as=None, type=undead/subtype=mummy, unique=False, native_tall=False); details and hashes in evidence/monster-batch-u-20260930/source-contracts.json. base BASE_NPC_MUMMY (undead/mummy, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.racial(\"shalore\") only adds levelup talents, resolvers.equip greatsword and mummy armour (equipment only, no moddable_tile), resolvers.inscriptions(2, rune); talents Stunning Blow, Crush, Manathrust (none sustained); no sustains_at_birth and no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-u-20260930/source-contracts.json",
+          "sha256": "4f46e3336b48581c8d53801ec1d5c3d5d1d178d2d33ced48e36e0058a6e62f43"
+        }
+      ]
+    }
+  ]
+}

@@ -7,6 +7,8 @@ local Terrain=require 'mod.class.CheckerTerrain'
 -- (data/general/npcs/horror_aquatic.lua:45-58). Display only: after the native
 -- call has run, re-apply board terrain around the cell when its grid actually
 -- changed and the old or new grid is an exact bubble.
+-- S14: the same for a forest-side exact portal placed this way (the Demon
+-- Plane's return portal from Draebor's on_die, zones/demon-plane/npcs.lua:81-89).
 local addEntity=_M.addEntity
 function _M:addEntity(level,e,typ,x,y,...)
  local map=(typ=='terrain' or typ=='grid') and x and y and level and level.map
@@ -15,7 +17,7 @@ function _M:addEntity(level,e,typ,x,y,...)
  local result=addEntity(self,level,e,typ,x,y,...)
  local after=map(x,y,map.TERRAIN)
  if game.level==level and after~=before and game.checkerRepairTerrain and
-  (Terrain.underwaterKind(before)=='bubble' or Terrain.underwaterKind(after)=='bubble') then
+  (Terrain.underwaterKind(before)=='bubble' or Terrain.underwaterKind(after)=='bubble' or Terrain.s14ForestKind(after)) then
   game:checkerRepairTerrain(x-1,y-1,x+1,y+1)
  end
  return result

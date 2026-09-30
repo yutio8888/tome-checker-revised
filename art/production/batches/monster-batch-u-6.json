@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-u-6",
+  "assets": [
+    {
+      "asset_id": "orc-master-assassin",
+      "native_name": "orc master assassin",
+      "scope": "general npc list (general/npcs/orc.lua:204, humanoid/orc, non-unique, no define_as, rank 3, base BASE_NPC_ORC, default-name image); loaded by reknor, vor-armoury, rak-shor-pride and others; the orc-armoury vault names it in a random_filter (maps/vaults/auto/greater/orc-armoury.lua:43) and builds this same leaf; one definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 205,
+          "anchor": "name = \"orc master assassin\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 235,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/maps/vaults/auto/greater/orc-armoury.lua",
+          "sha256": "a42f17cdf7c08f35f271764d0483b685845b502b0a0765ce243c7da47357838a",
+          "line": 43,
+          "anchor": "name='orc master assassin'"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_master_assassin.png",
+          "sha256": "385968aad55d1896659e59e5684c219221c46684c60627e87c009770d9f2d624",
+          "role": "identity",
+          "note": "Native shape (64x64): an olive-green orc in wrapped bands crouching with two daggers, dark and swarthy. Do NOT copy its dark tones: keep the same green skin but with light sky-blue and cream wrappings."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-u/refs/orcs.png",
+          "sha256": "fec7af483278b1774101a2054d9560e0daa715e262808a072b7091a7cc0cb8e4",
+          "role": "family",
+          "note": "Four shipped orc tokens (hooded blue-grey orc assassin crouching with two curved daggers, hooded orc necromancer, orc warrior with a scimitar, spiked orc soldier): the two master assassins must not be a hooded crouching dagger orc."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orc master assassin seen from a steep overhead three-quarter angle: a lean muscular OLIVE-GREEN orc standing FACING THE VIEWER in a wide low stance, BARE-HEADED with shaved sides and a short RED-BROWN PONYTAIL tied low behind the head (no hood, no helmet, no tall topknot), small tusks, narrow yellow eyes, a cream leather vest with layered SKY-BLUE cloth wraps on the forearms and shins, a pale leather sash, and TWO long steel daggers held CROSSED IN AN X in front of the chest with their blades pointing up and out (the crossed blades stay within the shoulder width). Compact, poised, lethal and complete.",
+        "contrast": "Orc assassins: the MASTER ASSASSIN is a BARE-HEADED TOPKNOT orc facing the viewer with two daggers CROSSED in an X in front of the chest (silhouette: a compact upright body with an X of blades; hue: olive-green skin with sky-blue and cream wraps and a red-brown topknot; value: mid-light). The shipped orc-assassin is a HOODED blue-grey orc CROUCHING sideways with curved daggers held low: this must not be hooded, not blue-grey clothes and not a side crouch. The grand master is a taller ivory-masked figure with arms spread wide and the blades pointing outward and down.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere. Calibration from the previous generation of this exact token: the design was right, but the tall red topknot stuck up OUT of the disc across the rim at the top and the dagger tips reached the ring band, and the disc came out slightly darker than the reference. This time keep the same bare-headed olive-green orc facing the viewer in a wide low stance with two daggers crossed in an X in front of the chest, but draw the figure SMALLER and LOWER in the disc: the hair is a SHORT LOW TIED PONYTAIL hanging behind the head (no tall topknot, nothing rising above the head by more than a hand's width), the crossed dagger points stop at shoulder height, the boots stop well inside the inner ring, and the top of the head is at least one full head-height below the disc rim. Render the WHOLE disc, its outer ring band and the plate under the figure, at reference lightness, a hair lighter, never darker, evenly all round, with NO cast shadow and no ambient darkening of the disc from the creature.",
+        "palette": "Olive-green skin in a mid-light value with pale green highlight planes, cream vest and sky-blue wraps in a light value, pale leather sash, red-brown topknot, bright polished steel daggers; nothing darker than dark olive-brown except the eyes and thin seams; the disc stays neutral charcoal with no blue or green cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc master assassin, define_as=None, type=humanoid/subtype=orc, unique=False, native_tall=False); details and hashes in evidence/monster-batch-u-20260930/source-contracts.json. base BASE_NPC_ORC (humanoid/orc, faction orc-pride, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; color_r/g/b tint fields only; resolvers.racial() (orc racials: Orc Fury, Hold the Ground, Skirmisher, Pride of the Orcs, levelup talents only), resolvers.equip two daggers and light armour (equipment only, no moddable_tile), resolvers.inscriptions(1, infusion); talents Knife Mastery, Stealth (sustained), Lethality, Apply Poison (sustained), Vile Poisons, Venomous Strike; resolvers.sustains_at_birth() starts Stealth and Apply Poison (temporary values only, no type/subtype/image/add_mos write); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-u-20260930/source-contracts.json",
+          "sha256": "4f46e3336b48581c8d53801ec1d5c3d5d1d178d2d33ced48e36e0058a6e62f43"
+        }
+      ]
+    }
+  ]
+}

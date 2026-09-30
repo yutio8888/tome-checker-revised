@@ -1,0 +1,144 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-w-3",
+  "assets": [
+    {
+      "asset_id": "rotting-mummy",
+      "native_name": "rotting mummy",
+      "scope": "ancient-elven-ruins pool (zones/ancient-elven-ruins/npcs.lua:155, undead/mummy, non-unique, no define_as, rank 2, base BASE_NPC_MUMMY, default-name image); the only definition of this name; no vault, event or talent builds another actor with this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 156,
+          "anchor": "name = \"rotting mummy\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/ancient-elven-ruins/npcs.lua",
+          "sha256": "175bb1e011623b9130dc158b79a00217f4c5275572c6cb6d32bca4ce85b9f9b9",
+          "line": 171,
+          "anchor": "T_BITE_POISON"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/mummy.lua",
+          "sha256": "06c0e07e77a753b1ecdbed7efbc7ce457342a53bab952c544a1d4208d5346b2a",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_MUMMY\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_mummy_rotting_mummy.png",
+          "sha256": "d552d523a293587b232059fe0a0d3e7aefd0fe56a7d8fe1d3dd545ec749bd061",
+          "role": "identity",
+          "note": "Native shape (64x64): a hunched bandage-wrapped corpse in grey and tan stripes with arms hanging. Keep the striped bandages and the hunched shambling corpse, but paler bandages with green-grey rot and one arm reaching."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-w/refs/undead.png",
+          "sha256": "f499f449a4c459cb0fe80b81cceccd57a1e99e0e5fa981abdaae73e69ac64b99",
+          "role": "family",
+          "note": "Four shipped undead tokens (upright tan ancient elven mummy with pointed ears, green ghoul, pale ghast, greater mummy lord): the rotting mummy is a hunched shambling bandaged corpse with green-grey rot lunging with one arm out, not upright and not elven."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A rotting mummy seen from a steep overhead three-quarter angle: a hunched, shambling corpse wrapped in filthy TAN and BONE-CREAM linen bandages stained with brown and GREEN-GREY rot patches, frayed bandage tails trailing from the arms and legs, ONE ARM STRETCHED FORWARD towards the lower left with grasping fingers of grey-green rotting flesh showing through the wrappings, the other arm hanging, the head half-wrapped with one sunken glowing PALE YELLOW-GREEN eye and a gaping jaw with grey teeth. Lurching, ragged, round and complete.",
+        "contrast": "Undead: the ROTTING MUMMY is the HUNCHED LURCHING ONE in stained tan bandages with green-grey rot and one arm reaching out (silhouette: a hunched mass with one long arm stretched forward and trailing rags; hue: tan and bone-cream bandages with brown stains and green-grey rot; value: mid-light). The shipped ancient elven mummy is an upright pale tan elf with pointed ears, the ghoul is green, the ghast pale and the greater mummy lord ornate: this must not be upright, must not have pointed ears and must not be clean tan.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Tan and bone-cream bandages in a mid-light value with pale highlight planes and warm brown stains, green-grey rot patches, grey-green flesh, a pale yellow-green eye glow (the glow stays on the creature and must not tint the disc); nothing darker than dark brown-grey except the eye socket and thin seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=rotting mummy, define_as=None, type=undead/subtype=mummy, unique=False, native_tall=False); details and hashes in evidence/monster-batch-w-20260930/source-contracts.json. base BASE_NPC_MUMMY (undead/mummy, no image=, no shader, no sustains_at_birth); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.racial(\"shalore\") only adds levelup talent tables, resolvers.equip mummy armour (equipment only, no moddable_tile), resolvers.inscriptions(1, rune); talents Weakness Disease, Gnaw, Retch, Bite Poison (none sustained); no auto_classes (the only auto_classes in that file belong to another leaf). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-w-20260930/source-contracts.json",
+          "sha256": "96ca69784bec3c15699f4022058d68cede257f2a212a917ee75ff352a93458e3"
+        }
+      ]
+    },
+    {
+      "asset_id": "banshee",
+      "native_name": "banshee",
+      "scope": "dreadfell, rak-shor-pride, telmur and demon-plane ghost pools (general/npcs/ghost.lua:108, undead/ghost, non-unique, no define_as, rank 2, base BASE_NPC_GHOST, explicit image=npc/banshee.png); the only definition of this name (ruin banshee is another name and PNG, not selected); no vault, event or talent builds another actor with this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ghost.lua",
+          "sha256": "c20b2ae1af1d1d99d0128b817a975cbfda791fa821778cee5bcc814600400238",
+          "line": 109,
+          "anchor": "name = \"banshee\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ghost.lua",
+          "sha256": "c20b2ae1af1d1d99d0128b817a975cbfda791fa821778cee5bcc814600400238",
+          "line": 121,
+          "anchor": "T_SHRIEK"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ghost.lua",
+          "sha256": "c20b2ae1af1d1d99d0128b817a975cbfda791fa821778cee5bcc814600400238",
+          "line": 59,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ghost.lua",
+          "sha256": "c20b2ae1af1d1d99d0128b817a975cbfda791fa821778cee5bcc814600400238",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_GHOST\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/banshee.png",
+          "sha256": "bc7fae04e0a0bb1224a1713eb61455b564c2bc32ab000f65b98f89bae28ca405",
+          "role": "identity",
+          "note": "Native shape (64x64): a translucent cyan ghostly woman with long flowing hair. Keep the cyan wailing woman with streaming hair and mist-dissolving gown, drawn as a solid glowing spectre."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-w/refs/ghosts.png",
+          "sha256": "39295b191e8e4185cb36ed718b8aade2b06c9070608b2cad7cb7b9b1e1b418aa",
+          "role": "family",
+          "note": "Four shipped spectral tokens (blue ice shade of telos, forest wight, grave wight, shadow stalker): the banshee is a translucent pale cyan-white wailing woman with long streaming hair and a mist-dissolving gown, not a blue ice figure and not a robed wight."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A banshee seen from a steep overhead three-quarter angle: a translucent ghostly woman's form in PALE CYAN and ICE-WHITE glowing in a light value, LONG WILD HAIR streaming up and sideways like wind-blown mist, a tattered flowing gown dissolving into curling wisps of mist below the waist, the face gaunt with hollow deep-blue eyes and the mouth wide open in a wail, BOTH ARMS raised with clawed hands beside the head, floating just above the floor. Ethereal but solid enough to read as a bold bright silhouette; every wisp tip inside the disc.",
+        "contrast": "Spectres: the BANSHEE is the PALE CYAN-WHITE WAILING WOMAN with streaming hair and raised clawed hands (silhouette: a woman's torso with a big wind-blown hair mass and mist tails, both arms raised; hue: pale cyan and ice-white with deep-blue eye hollows; value: light). The shipped shade of telos is a blue ice humanoid, the forest and grave wights are robed undead and the shadow stalker is dark: this must not be blue ice, robed or dark.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Pale cyan and ice-white spectral body in a light value with bright white highlights and a bright light rim, deep-blue hollow eyes and mouth, pale mist wisps (the glow stays on the creature and must not brighten or tint the disc); nothing darker than mid blue-grey except the eye hollows and mouth. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=banshee, define_as=None, type=undead/subtype=ghost, unique=False, native_tall=False); details and hashes in evidence/monster-batch-w-20260930/source-contracts.json. base BASE_NPC_GHOST (undead/ghost, pass_wall, no image=, no shader); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; talents Shriek, Phase Door, Silence, Mind Disruption (activated) and Blur Sight (sustained); the base resolvers.sustains_at_birth() starts Blur Sight (a phantasm_shield particle and temporary values only, no type/subtype/image/add_mos write); no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-w-20260930/source-contracts.json",
+          "sha256": "96ca69784bec3c15699f4022058d68cede257f2a212a917ee75ff352a93458e3"
+        }
+      ]
+    }
+  ]
+}

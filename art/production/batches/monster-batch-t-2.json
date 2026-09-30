@@ -1,0 +1,210 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-t-2",
+  "assets": [
+    {
+      "asset_id": "lost-merchant",
+      "native_name": "Lost Merchant",
+      "scope": "thieves-tunnels (zones/thieves-tunnels/npcs.lua:113, humanoid/human, non-unique, define_as MERCHANT, no base, no rank field, faction victim, default-name image); placed by the static quest map maps/quests/lost-merchant.lua:29 (tile @); single definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/thieves-tunnels/npcs.lua",
+          "sha256": "f49a2df26aa12c69e90b3c70ddfb9b28fb6899afc384ca2de42a9f5a5c3a68cf",
+          "line": 113,
+          "anchor": "define_as = \"MERCHANT\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/thieves-tunnels/npcs.lua",
+          "sha256": "f49a2df26aa12c69e90b3c70ddfb9b28fb6899afc384ca2de42a9f5a5c3a68cf",
+          "line": 116,
+          "anchor": "name = \"Lost Merchant\""
+        },
+        {
+          "path": "game/modules/tome/data/maps/quests/lost-merchant.lua",
+          "sha256": "99e4ad9b038d28dcbe19a607c1e6a978d686b8f1f83b2915a158f6f2a33a6a2d",
+          "line": 29,
+          "anchor": "defineTile('@', \"FLOOR\", nil, \"MERCHANT\")"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_lost_merchant.png",
+          "sha256": "2b0973fa7a5fe46a3c31ad4b683e6b80d090b00b762021307e3adc2351e51bb5",
+          "role": "identity",
+          "note": "Native shape (64x64): a stout bald bearded man in a cream tunic and belt standing with his hands at his sides."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-t/refs/humans.png",
+          "sha256": "a4c2cb5d5d8b805936665cc3cf8e7d48f4172e13d7f0f6e4ed79c9984a790b08",
+          "role": "family",
+          "note": "Four shipped human tokens (cutpurse, rogue, thief, bandit: lean or muscular figures with paired daggers, hoods or a bald brawler pose): no caravan token or the Lost Merchant may be a dagger-wielding thief, hooded rogue or bald dagger brawler."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "The Lost Merchant seen from a steep overhead three-quarter angle: a stout middle-aged human trader CROUCHING low and COWERING, shoulders hunched and head pulled in, a shiny bald head with a bushy GREY beard and wide frightened eyes, a dusty long TAN-OLIVE travelling coat torn at the hem over a cream shirt with a red neckerchief, a huge lumpy pale CANVAS RUCKSACK bulging on his back with a rolled bedroll on top, one hand raised palm-out in fright and the other clutching a small brass LANTERN with a tiny warm flame close to his chest, worn brown boots. Frightened, round, unarmed and complete.",
+        "contrast": "Human traders: the LOST MERCHANT is a low ROUND CROUCHED figure with a big lumpy RUCKSACK on his back and a small lantern, no weapon (silhouette: one squat round mass with a bulging pack and a raised hand; hue: dusty tan-olive, cream and grey beard; value: mid-light). The shipped bandit is a bald bearded muscular fighter with two daggers and the cutpurse, rogue and thief are lean dagger figures: this man holds no weapon and cowers. The caravan merchant is a plump upright blue figure with a wide hat; the porter carries crates; the guard holds a shield.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Dusty tan-olive coat in a mid-light value with pale straw highlight planes, cream shirt and rucksack canvas, grey beard, pink bald head, red neckerchief, brass lantern with a tiny warm flame; nothing darker than dark brown except the eyes and boots; the flame and lantern must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Lost Merchant, define_as=MERCHANT, type=humanoid/subtype=human, unique=False, native_tall=False); details and hashes in evidence/monster-batch-t-20260930/source-contracts.json. no base (humanoid/human on the leaf, faction victim, ai simple, cant_be_moved, can_talk lost-merchant); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; no resolvers, no talents, no equipment, no sustains_at_birth and no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-t-20260930/source-contracts.json",
+          "sha256": "683dc4abbd177436803d6c58e8a73813c814b99615ff7fc26a3a5b9753fc5e54"
+        }
+      ]
+    },
+    {
+      "asset_id": "war-dog",
+      "native_name": "war dog",
+      "scope": "keepsake-meadow (zones/keepsake-meadow/npcs.lua:104, animal/canine, non-unique, define_as WAR_DOG, base BASE_NPC_CANINE, explicit image=npc/canine_dw.png); spawned twice by quests/keepsake.lua:290 (on_spawn_companions, next to the Berethh companions); the SAME PNG is also the dire wolf (general/npcs/canine.lua:75) and the corrupted war dog (keepsake-meadow/npcs.lua:118, CORRUPTED_WAR_DOG), told apart by exact name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 104,
+          "anchor": "define_as = \"WAR_DOG\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 105,
+          "anchor": "name = \"war dog\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 105,
+          "anchor": "image=\"npc/canine_dw.png\""
+        },
+        {
+          "path": "game/modules/tome/data/quests/keepsake.lua",
+          "sha256": "824e925568702c5599da8ec29f3e979cc6d6ba4b07fa86bc2e869e9509c31da9",
+          "line": 290,
+          "anchor": "makeEntityByName(game.level, \"actor\", \"WAR_DOG\")"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/canine_dw.png",
+          "sha256": "31784e483aaa0b3dfd8dc583698416b61d0f4188dccf2ef6ec038b9a70074a4f",
+          "role": "identity",
+          "note": "Native shape (64x64, shared by dire wolf, war dog and corrupted war dog): a dark brown heavy canine standing side-on with a snarling face. Do NOT copy its dark fur or its side-on stance."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-t/refs/canines.png",
+          "sha256": "2497f9e955fe21af0426fe6dec060c643ebb207f70df9abc6e55c9b117fa70d1",
+          "role": "family",
+          "note": "Four shipped canine tokens (brown dire wolf pacing sideways, grey corrupted war dog pouncing sideways with purple-green cracks, grey wolf, dark warg): the war dog must not be a sideways wolf or dog in brown, grey or black fur."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A war dog seen from a steep overhead three-quarter angle: a huge heavy-set MASTIFF-type fighting dog with a short SANDY-FAWN coat and a cream chest and paws, standing BRACED and FACING THE VIEWER HEAD-ON with its head lowered and its shoulders wide, a broad short blunt muzzle with a dark brown mask, small folded ears, bared front teeth, a studded brown leather HARNESS with bright steel rivets and a small polished steel breastplate on the chest, a RED CLOTH CAPARISON draped over its back, a spiked steel collar, front legs planted wide apart, tail low. Braced, wide, armoured and complete.",
+        "contrast": "Canines sharing one native PNG: the WAR DOG is a WARM SANDY-FAWN and CREAM mastiff seen HEAD-ON, wide-shouldered, with a red cloth on its back and a steel breastplate (silhouette: a wide front-facing triangle with a broad flat face and a chest plate; hue: sandy fawn, cream, red and steel; value: light). The shipped dire wolf is a brown long-muzzled wolf pacing SIDEWAYS, the corrupted war dog is a grey dog pouncing SIDEWAYS with purple-green cracks: this must not be side-on, not brown, not grey, not cracked, and must carry the harness and red cloth.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Sandy-fawn short coat in a light value with pale cream highlight planes, cream chest and paws, brown mask, brown leather harness with bright steel rivets and breastplate, red cloth in a mid-light value, pale steel spikes; nothing darker than dark brown except the eyes, nose and mask; the disc stays neutral charcoal with no red or tan cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=war dog, define_as=WAR_DOG, type=animal/subtype=canine, unique=False, native_tall=False); details and hashes in evidence/monster-batch-t-20260930/source-contracts.json. base BASE_NPC_CANINE (animal/canine, no image=); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; talents Rush, Grappling Stance (sustained, only if the AI starts it: temporary values), Clinch; no sustains_at_birth, no auto_classes and no resolvers.equip; shares canine_dw.png with dire wolf and corrupted war dog, each entry matching only its exact name. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-t-20260930/source-contracts.json",
+          "sha256": "683dc4abbd177436803d6c58e8a73813c814b99615ff7fc26a3a5b9753fc5e54"
+        }
+      ]
+    },
+    {
+      "asset_id": "yeek-wayist",
+      "native_name": "Yeek Wayist",
+      "scope": "halfling-ruins (zones/halfling-ruins/npcs.lua:117, humanoid/yeek, unique, define_as YEEK_WAYIST, rank 3, no base, default-name image, faction the-way, never_act); placed by the static last-level map maps/zones/halfling-ruins-last.lua:51 (tile Y); single definition",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/halfling-ruins/npcs.lua",
+          "sha256": "a4e8724a977e6421c5860514589265d9cdca949565429524bea42c400294d0c3",
+          "line": 117,
+          "anchor": "define_as=\"YEEK_WAYIST\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/halfling-ruins/npcs.lua",
+          "sha256": "a4e8724a977e6421c5860514589265d9cdca949565429524bea42c400294d0c3",
+          "line": 118,
+          "anchor": "name = \"Yeek Wayist\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/halfling-ruins/npcs.lua",
+          "sha256": "a4e8724a977e6421c5860514589265d9cdca949565429524bea42c400294d0c3",
+          "line": 149,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/maps/zones/halfling-ruins-last.lua",
+          "sha256": "169a587860b1c83786dc10ba1b131793e146ba4158d2f8d35f79a3fd581e8e62",
+          "line": 51,
+          "anchor": "defineTile('Y', \"FLOOR\", nil, \"YEEK_WAYIST\")"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_yeek_yeek_wayist.png",
+          "sha256": "708dac62a13daac98b5eb84d8e335fe25d31275333af074ae9ecc264575b0902",
+          "role": "identity",
+          "note": "Native shape (64x64): a small white-furred yeek with a big head and a sword floating beside it."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "The Yeek Wayist seen from a steep overhead three-quarter angle: a small pot-shaped WHITE-FURRED yeek elder standing calmly upright, long thin arms held out with open palms as if guiding, a big rounded head with a large forehead, huge pale ICE-BLUE eyes and a tiny mouth, a teal-blue cloth BANDOLIER across the chest and small teal wrist wraps, bare pale feet, and a broad steel GREATSWORD FLOATING in the air beside his shoulder on the left, tilted diagonally point-down and NOT held, no longer than his own body height, with a small ring of pale motes around the hilt. Serene, small, pale and complete.",
+        "contrast": "Yeek: the WAYIST is a small WHITE furry pot-shaped figure with a large round head and a teal bandolier, with a FLOATING diagonal greatsword hovering unheld beside him (silhouette: small rounded body with a round head plus a diagonal blade floating apart from the hands; hue: white fur, teal and steel; value: light). No yeek token exists yet; the shipped naga, human and imp tokens are much larger and more armoured, so this must read as a small pale gentle creature with a floating sword, not a warrior holding a sword.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "White fur in a light value with pale blue-grey shadow planes and broad bright highlight planes, pale skin on face and feet, ice-blue eyes, teal bandolier and wraps in a mid value, bright polished steel blade with a pale edge; nothing darker than mid blue-grey except the eyes; the disc stays neutral charcoal and must not be brightened by the white fur. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=Yeek Wayist, define_as=YEEK_WAYIST, type=humanoid/subtype=yeek, unique=True, native_tall=False); details and hashes in evidence/monster-batch-t-20260930/source-contracts.json. no base (humanoid/yeek on the leaf, no image=); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip greatsword (equipment only, no moddable_tile); talents Kinetic Shield (sustained), Mindhook, Pyrokinesis, Mindlash, Charged Aura (sustained), Telekinetic Smash; resolvers.sustains_at_birth() starts the sustained ones (temporary values and particles only, no type/subtype/image/add_mos write); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-t-20260930/source-contracts.json",
+          "sha256": "683dc4abbd177436803d6c58e8a73813c814b99615ff7fc26a3a5b9753fc5e54"
+        }
+      ]
+    }
+  ]
+}

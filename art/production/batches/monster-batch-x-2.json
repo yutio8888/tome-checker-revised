@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-x-2",
+  "assets": [
+    {
+      "asset_id": "yaech-psion",
+      "native_name": "yaech psion",
+      "scope": "murgol-lair pool (general/npcs/yaech.lua:98, humanoid/yaech, non-unique, no define_as, rank 2, base BASE_NPC_YAECH, default-name image); single definition; the south-beach zone only draws yaech from the humanoid/yaech pool, so a yaech psion there is this same leaf",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/yaech.lua",
+          "sha256": "918f92bdd94df8a9004f7620f44561c30c538888f184185519e3ee6453fe3754",
+          "line": 98,
+          "anchor": "name = \"yaech psion\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/yaech.lua",
+          "sha256": "918f92bdd94df8a9004f7620f44561c30c538888f184185519e3ee6453fe3754",
+          "line": 109,
+          "anchor": "T_MINDLASH"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/yaech.lua",
+          "sha256": "918f92bdd94df8a9004f7620f44561c30c538888f184185519e3ee6453fe3754",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_YAECH\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_yaech_yaech_psion.png",
+          "sha256": "b472940ef43d587de5557b157b86ac94eeb0c552ccf1091cac6e6ff316a36aa1",
+          "role": "identity",
+          "note": "Native shape (64x64): a pale grey-white fluffy yeek-like swimmer with a dark headband floating with one hand reaching out, a purple psychic aura and a few bubbles. Keep the fluffy floating psion with a headband and a reaching hand, but oat-cream fur, a lilac aura and a rose-red flame in the hand."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-x/refs/yaech.png",
+          "sha256": "2b57bbb469754852bac654a086dda193feebfb40e809b372b9d8e13324dedc4a",
+          "role": "family",
+          "note": "Four shipped yeek-kin tokens (pale blue-white fluffy yaech diver swimming with bubbles, white yeek wayist with a dagger, umber-brown yaech hunter thrusting a trident, seafoam-teal yaech mindslayer floating cross-legged with a lightning ball and a shield ring): the yaech psion is an oat-cream and pale lilac fluffy floating psion with a rose-red pyrokinetic flame in one outstretched hand, not blue-white, not teal, not umber and not cross-legged."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A yaech psion seen from a steep overhead three-quarter angle: a small fluffy yeek-like aquatic psion with warm OAT-CREAM and pale BUFF fur in a light value, a rose-red headband, large calm dark-violet eyes with white glints, FLOATING a little above the floor leaning forward towards the lower right, the RIGHT HAND stretched out ahead with a swirling small ball of ROSE-RED and orange PYROKINETIC FLAME, the LEFT HAND pressed to the temple, a soft translucent LILAC-VIOLET psychic aura hugging the body (thin, no wider than the body), a few tiny bubbles. Focused, psionic, fluffy and complete.",
+        "contrast": "Yeeks: the YAECH PSION is the OAT-CREAM FLOATING ONE leaning forward with a rose-red flame in one outstretched hand and the other hand at its temple (silhouette: a round fluffy body with one long reaching arm; hue: oat-cream fur, rose-red flame and headband, lilac aura; value: light). The shipped yaech diver is a pale blue-white swimmer, the wayist a white yeek with a dagger, the hunter an umber lunger with a trident and the mindslayer a seafoam-teal cross-legged floater with a lightning ball: this must not be blue-white, teal, umber or cross-legged and must not hold a weapon.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Oat-cream and buff fur in a light value with pale highlight planes and a bright rim light, rose-red headband and flame with a bright orange-yellow core, dark-violet eyes with white glints, soft lilac aura, tiny pale bubbles (the flame and aura stay on the creature and must not brighten, warm or tint the disc); nothing darker than dark violet except the pupils and thin seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=yaech psion, define_as=None, type=humanoid/subtype=yaech, unique=False, native_tall=False); details and hashes in evidence/monster-batch-x-20260930/source-contracts.json. base BASE_NPC_YAECH (humanoid/yaech, can_breath water, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.equip fills inventory slots only (no moddable_tile, so no display change) (trident); talents Pyrokinesis and Mindlash (activated); no sustains_at_birth on the leaf or base; no auto_classes on the leaf or base (only the Murgol-lair bosses have Mindslayer auto_classes). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-x-20260930/source-contracts.json",
+          "sha256": "d3dd5bbd03d3fe045b05a6c6bb6d5c1259c16277838feee21714f1457e7dc3cc"
+        }
+      ]
+    },
+    {
+      "asset_id": "blue-crystal",
+      "native_name": "blue crystal",
+      "scope": "scintillating-caves and old-forest crystal pools (general/npcs/crystal.lua:142, immovable/crystal, non-unique, no define_as, rank 2, base BASE_NPC_CRYSTAL, explicit image=npc/crystal_blue.png, tint=BLUE); the only definition of this name; no vault, event or talent builds another actor with this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/crystal.lua",
+          "sha256": "d6cdbfe8d69dc00a9167ec1c348469f915103835ee7485534f8e0086982decc2",
+          "line": 142,
+          "anchor": "name = \"blue crystal\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/crystal.lua",
+          "sha256": "d6cdbfe8d69dc00a9167ec1c348469f915103835ee7485534f8e0086982decc2",
+          "line": 148,
+          "anchor": "T_TIDAL_WAVE"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/crystal.lua",
+          "sha256": "d6cdbfe8d69dc00a9167ec1c348469f915103835ee7485534f8e0086982decc2",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_CRYSTAL\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/crystal_blue.png",
+          "sha256": "aa3cc91f48768a84a771beae131693639036a5cd37c0f4f445ad7885c3f033ff",
+          "role": "identity",
+          "note": "Native shape (64x64): a translucent blue crystal formation curled like an arch over a base of small facets. Keep the sapphire-blue crystal formation, but draw it as a compact wave-like arch of chunky facets on a small dark rock base with aqua highlights."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-x/refs/crystals.png",
+          "sha256": "4ece20471b86345a75f896cbfcf6237be25c0bbc5023b2a0560589b22a2827fe",
+          "role": "family",
+          "note": "Four shipped crystal tokens (white crystal cluster of tall spires, red crystal fan of shards, crimson crystal with two fat ruby prisms, black crystal cluster on rock): the blue crystal is a sapphire-cerulean crystal formation curling like a breaking wave, a low arch of facets rather than upright spires, with aqua highlights."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A blue crystal seen from a steep overhead three-quarter angle: a compact formation of chunky faceted SAPPHIRE-BLUE and CERULEAN crystal prisms with pale AQUA-CYAN highlight planes, arranged as a CURLING WAVE CREST, a low arch of leaning prisms rising from the lower left, cresting over the centre and curling down to the right like a breaking wave, one large central hexagonal prism, smaller shard prisms along the crest, a few deep-navy facets in the shadow planes of the crystals, a small base of grey-brown rock chips, bright white glints on the edges. Cool, faceted, wave-shaped and complete.",
+        "contrast": "Crystals: the BLUE CRYSTAL is the SAPPHIRE CURLING-WAVE ONE (silhouette: a low arch of leaning prisms curling over like a breaking wave; hue: sapphire and cerulean blue with aqua highlights; value: mid-light with white glints). The shipped white crystal is a cluster of tall white spires, the red crystal a fan of red shards, the crimson crystal two fat ruby prisms and the black crystal a dark cluster on rock: this must not be white, red, crimson or black and must not be a cluster of tall upright spires.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Sapphire-blue and cerulean crystal in a mid-light value with pale aqua-cyan highlight planes, white edge glints, a few deep-navy shadow facets, grey-brown rock chips (the crystal glow stays on the crystal and must not tint or brighten the disc); nothing darker than deep navy except thin seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=blue crystal, define_as=None, type=immovable/subtype=crystal, unique=False, native_tall=False); details and hashes in evidence/monster-batch-x-20260930/source-contracts.json. base BASE_NPC_CRYSTAL (immovable/crystal, base image npc/crystal_npc.png replaced by the leaf, no shader, no sustains_at_birth); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64 (the leaf tint=BLUE is a colour tint only, not a display field); talent Tidal Wave (activated); never_move; no equip, no auto_classes (the multi-hued and shimmering crystals carry shaders and are other names). Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-x-20260930/source-contracts.json",
+          "sha256": "d3dd5bbd03d3fe045b05a6c6bb6d5c1259c16277838feee21714f1457e7dc3cc"
+        }
+      ]
+    },
+    {
+      "asset_id": "devourer",
+      "native_name": "devourer",
+      "scope": "lake-nur, ardhungol, dreadfell and three more zones' horror pools (general/npcs/horror.lua:485, horror/eldritch, non-unique, no define_as, rank 2, base BASE_NPC_HORROR, default-name image); its own make_escort builds more of the same leaf by name; the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 485,
+          "anchor": "name = \"devourer\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 502,
+          "anchor": "T_GNASHING_TEETH"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_devourer.png",
+          "sha256": "2a6a68a9d7714094657d6130cebb4dfa5e3fb639c69b58cb859c496c5581112e",
+          "role": "identity",
+          "note": "Native shape (64x64): a headless round reddish-brown creature with stubby arms and legs and a huge round mouth full of teeth in place of a head. Keep the squat headless body that is all mouth, in crimson-rose flesh with bright ivory teeth."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-x/refs/horrors.png",
+          "sha256": "b2eabdb81b84e9079e6caf203a8d5bc50d0fd18f43c81ed947a3d6ab8f30bfe6",
+          "role": "family",
+          "note": "Four shipped horror tokens (cream bloated horror, tan-pink weirdling beast, pink flesh dredge, lavender grannor'vin slug): the devourer is a squat round crimson-rose body that is almost all one huge ring-toothed maw with stubby arms and legs, not cream, not tentacled and not slug-shaped."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A devourer seen from a steep overhead three-quarter angle: a squat round HEADLESS horror in glistening CRIMSON-ROSE and warm salmon-pink flesh in a mid-light value with pale pink highlight planes, its whole front one huge round MAW ringed with two rows of BRIGHT IVORY TEETH around a dark-maroon throat, two stubby thick arms raised and clawed at the sides, two stubby legs planted wide, a few strands of glistening drool, a ridge of blistered flesh across the back. Ravenous, round and complete.",
+        "contrast": "Horrors: the DEVOURER is the CRIMSON-ROSE ROUND ONE that is almost all mouth with a ring of ivory teeth and stubby limbs (silhouette: a round ball with a big round toothy hole and four stubs; hue: crimson-rose and salmon flesh, ivory teeth; value: mid-light with bright teeth). The shipped bloated horror is a cream pear, the weirdling beast a tan-pink many-armed beast, the dredge a hulking pink horror and the grannor'vin a lavender slug: this must not be cream, tentacled, hulking or slug-shaped.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Crimson-rose and salmon flesh in a mid-light value with pale pink highlight planes and a bright rim light, bright ivory teeth, dark-maroon throat, glistening drool (nothing glows onto the disc); nothing darker than dark maroon except the throat and thin seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=devourer, define_as=None, type=horror/subtype=eldritch, unique=False, native_tall=False); details and hashes in evidence/monster-batch-x-20260930/source-contracts.json. base BASE_NPC_HORROR (horror/eldritch, faction horrors, no image=, no shader, no sustains_at_birth); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; talents Bloodbath (passive), Gnashing Teeth, Frenzied Leap and Frenzied Bite (activated); no equip, no auto_classes; make_escort of two more devourers by name. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-x-20260930/source-contracts.json",
+          "sha256": "d3dd5bbd03d3fe045b05a6c6bb6d5c1259c16277838feee21714f1457e7dc3cc"
+        }
+      ]
+    }
+  ]
+}

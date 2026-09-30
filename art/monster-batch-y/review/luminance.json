@@ -1,0 +1,86 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "uruivellas": 123.93,
+    "thaurhereg": 77.49,
+    "orc-corruptor": 82.93,
+    "temporal-stalker": 78.3,
+    "broken-golem": 88.7,
+    "golem": 101.39,
+    "blade-horror": 112.88,
+    "animated-mummy-wrappings": 120.47,
+    "grizzly-bear": 90.02,
+    "weaver-patriarch": 84.89,
+    "luminous-horror": 137.16,
+    "necrotic-mass": 114.57
+  },
+  "floors": {
+    "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+    "cave mushroom (ardhungol)": 134.28,
+    "crystal (scintillating-caves)": 104.14,
+    "grass (old-forest, lake-nur)": 108.97,
+    "gloom plain (deep-bellow)": 79.5,
+    "void floor (temporal-rift)": 163.25,
+    "underwater floor (murgol-lair, lake-nur)": 129.4,
+    "burnt ground (demon-plane)": 72.7,
+    "korpul stone A (vor-armoury, telmur)": 131.79,
+    "rak-shor floor (rak-shor-pride)": 163.04
+  },
+  "zone_floors": {
+    "uruivellas": {
+      "burnt ground (demon-plane)": 72.7,
+      "korpul stone A (vor-armoury, telmur)": 131.79
+    },
+    "thaurhereg": {
+      "burnt ground (demon-plane)": 72.7,
+      "korpul stone A (vor-armoury, telmur)": 131.79
+    },
+    "orc-corruptor": {
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "temporal-stalker": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "void floor (temporal-rift)": 163.25
+    },
+    "broken-golem": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "korpul stone A (vor-armoury, telmur)": 131.79
+    },
+    "golem": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "korpul stone A (vor-armoury, telmur)": 131.79
+    },
+    "blade-horror": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "gloom plain (deep-bellow)": 79.5,
+      "underwater floor (murgol-lair, lake-nur)": 129.4
+    },
+    "animated-mummy-wrappings": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "grizzly-bear": {
+      "grass (old-forest, lake-nur)": 108.97,
+      "burnt ground (demon-plane)": 72.7
+    },
+    "weaver-patriarch": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "luminous-horror": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "gloom plain (deep-bellow)": 79.5,
+      "underwater floor (murgol-lair, lake-nur)": 129.4
+    },
+    "necrotic-mass": {
+      "rak-shor floor (rak-shor-pride)": 163.04
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

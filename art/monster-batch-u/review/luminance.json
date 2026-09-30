@@ -1,0 +1,76 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "ritch-flamespitter": 73.51,
+    "ritch-impaler": 70.49,
+    "chitinous-ritch": 111.42,
+    "naga-tide-huntress": 111.97,
+    "naga-psyren": 104.38,
+    "ancient-elven-mummy": 97.49,
+    "orc-master-assassin": 83.61,
+    "orc-grand-master-assassin": 74.87,
+    "fire-imp": 81.64,
+    "gaeramarth": 102.37,
+    "ninurlhing": 113.4,
+    "fate-weaver": 145.13,
+    "naga-psyren OLD v1 (rejected by gate: base_drift -9.08, disc darkened, hair to the rim)": 126.47,
+    "orc-master-assassin OLD v1 (rejected by review: topknot and daggers over the rim, export shrunk)": 84.9,
+    "fire-imp OLD v1 (passed gate; replaced: masked body lum 62.11, dark red at 48px)": 62.11,
+    "gaeramarth OLD v1 (passed gate; replaced: cream radial spider like chitinous-spider at 48px)": 109.64
+  },
+  "floors": {
+    "sand (ritch-tunnels)": 110.23,
+    "underwater floor (temple-of-creation)": 129.4,
+    "cave rock (ancient-elven-ruins, ardhungol, valley-moon)": 130.64,
+    "cave mushroom (ardhungol)": 134.28,
+    "void floor (unhallowed-morass)": 163.25,
+    "korpul stone A (reknor, vor-armoury)": 131.79,
+    "rak-shor floor (rak-shor-pride)": 163.04,
+    "burnt ground (demon-plane)": 72.7
+  },
+  "zone_floors": {
+    "ritch-flamespitter": {
+      "sand (ritch-tunnels)": 110.23
+    },
+    "ritch-impaler": {
+      "sand (ritch-tunnels)": 110.23
+    },
+    "chitinous-ritch": {
+      "sand (ritch-tunnels)": 110.23
+    },
+    "naga-tide-huntress": {
+      "underwater floor (temple-of-creation)": 129.4
+    },
+    "naga-psyren": {
+      "underwater floor (temple-of-creation)": 129.4
+    },
+    "ancient-elven-mummy": {
+      "cave rock (ancient-elven-ruins, ardhungol, valley-moon)": 130.64
+    },
+    "orc-master-assassin": {
+      "korpul stone A (reknor, vor-armoury)": 131.79,
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "orc-grand-master-assassin": {
+      "korpul stone A (reknor, vor-armoury)": 131.79,
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "fire-imp": {
+      "cave rock (ancient-elven-ruins, ardhungol, valley-moon)": 130.64,
+      "burnt ground (demon-plane)": 72.7
+    },
+    "gaeramarth": {
+      "cave rock (ancient-elven-ruins, ardhungol, valley-moon)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "ninurlhing": {
+      "cave rock (ancient-elven-ruins, ardhungol, valley-moon)": 130.64,
+      "cave mushroom (ardhungol)": 134.28
+    },
+    "fate-weaver": {
+      "void floor (unhallowed-morass)": 163.25
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

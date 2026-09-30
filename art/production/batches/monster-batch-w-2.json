@@ -1,0 +1,216 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-w-2",
+  "assets": [
+    {
+      "asset_id": "cave-bear",
+      "native_name": "cave bear",
+      "scope": "old-forest, noxious-caldera, scintillating-caves, norgos-lair, daikara and more zones' bear pools (general/npcs/bear.lua:72, animal/bear, non-unique, no define_as, rank 2, base BASE_NPC_BEAR, explicit image=npc/cave_bear.png); the only definition of this name; no vault, event or talent builds another actor with this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/bear.lua",
+          "sha256": "cc10a3e47f431d040b6cf2ff1a7a9ac3e0e9e82e044fc119a1e6dd5f5d52df63",
+          "line": 73,
+          "anchor": "name = \"cave bear\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bear.lua",
+          "sha256": "cc10a3e47f431d040b6cf2ff1a7a9ac3e0e9e82e044fc119a1e6dd5f5d52df63",
+          "line": 80,
+          "anchor": "T_KNOCKBACK"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bear.lua",
+          "sha256": "cc10a3e47f431d040b6cf2ff1a7a9ac3e0e9e82e044fc119a1e6dd5f5d52df63",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_BEAR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/cave_bear.png",
+          "sha256": "ca9d67d2ef68a89719c066e9b822d3405e4447a928ace27c262d6e6dd609f0ce",
+          "role": "identity",
+          "note": "Native shape (64x64): a big shaggy grey-brown bear walking on all fours with its head lowered to the left. Keep the bear on all fours but make the fur pale stone-grey and draw it in profile walking to the right with a domed shoulder hump."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-w/refs/bears.png",
+          "sha256": "fe188043fbb346f1d38ad038b20b77b0615c9242f3639c1a86bbeef2ee7f9659",
+          "role": "family",
+          "note": "Four shipped animal tokens (brown bear walking towards the lower left, black bear facing front-right, white wolf, great wolf): the cave bear is a pale stone-grey bear walking in profile, the war bear a russet-red bear reared up on its hind legs with tusks; neither may repeat the brown or black bear poses and colours."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A cave bear seen from a steep overhead three-quarter angle: a big shaggy STONE-GREY and ASH-BROWN bear in a mid-light value, pale grey-white frosted guard hairs over a domed shoulder hump, a lighter BUFF muzzle and pale claws, small dark eyes, walking heavily on all four legs in PROFILE towards the right with its head held low and slightly swinging, pale cave dust on the paws. A heavy, round, hump-backed animal, complete.",
+        "contrast": "Bears: the CAVE BEAR is the PALE STONE-GREY ONE walking in profile to the right with a domed shoulder hump and a low head (silhouette: a long low body in side view with a hump; hue: stone grey and ash brown with a buff muzzle; value: mid-light). The shipped brown bear is a brown bear walking towards the lower left and the black bear a black front-facing bear: this must not be brown or black and must not face the lower left or the front. The other new bear is a russet-red bear reared up on its hind legs with tusks (war bear).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Stone-grey and ash-brown fur in a mid-light value with pale grey-white frosted highlight planes on the hump and shoulders, buff muzzle, pale claws; nothing darker than dark grey-brown except the eyes, nose and thin seams; the disc stays neutral charcoal at reference lightness and no grey fur may merge with it. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=cave bear, define_as=None, type=animal/subtype=bear, unique=False, native_tall=False); details and hashes in evidence/monster-batch-w-20260930/source-contracts.json. base BASE_NPC_BEAR (animal/bear, no image=, no shader, no sustains_at_birth); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; talents Stamina Pool, Stun, Knockback (activated); no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-w-20260930/source-contracts.json",
+          "sha256": "96ca69784bec3c15699f4022058d68cede257f2a212a917ee75ff352a93458e3"
+        }
+      ]
+    },
+    {
+      "asset_id": "war-bear",
+      "native_name": "war bear",
+      "scope": "old-forest, noxious-caldera, scintillating-caves, norgos-lair, daikara and more zones' bear pools and the grushnak-armoury vault (general/npcs/bear.lua:83, animal/bear, non-unique, no define_as, rank 2, base BASE_NPC_BEAR, explicit image=npc/war_bear.png); the only definition of this name; the vault builds this same leaf by name (random_filter) as a random boss 'Warbear', which the existing random-origin path covers for single-image entries",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/bear.lua",
+          "sha256": "cc10a3e47f431d040b6cf2ff1a7a9ac3e0e9e82e044fc119a1e6dd5f5d52df63",
+          "line": 84,
+          "anchor": "name = \"war bear\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bear.lua",
+          "sha256": "cc10a3e47f431d040b6cf2ff1a7a9ac3e0e9e82e044fc119a1e6dd5f5d52df63",
+          "line": 91,
+          "anchor": "T_DISARM"
+        },
+        {
+          "path": "game/modules/tome/data/maps/vaults/grushnak-armory.lua",
+          "sha256": "f14a8fc4b6445219ace9aa16bb94943b92d9fd3c091765102bc4f712650d446c",
+          "line": 40,
+          "anchor": "name = \"war bear\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bear.lua",
+          "sha256": "cc10a3e47f431d040b6cf2ff1a7a9ac3e0e9e82e044fc119a1e6dd5f5d52df63",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_BEAR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/war_bear.png",
+          "sha256": "5dfa46c6298f4d25a5c2b6187dbd083250b8d6d27885a02dd5ba01adc05355f2",
+          "role": "identity",
+          "note": "Native shape (64x64): a dark brown bear facing the front with an open mouth and tusks. Keep the tusks and the snarling mouth, but make the fur russet-red and draw the bear reared up on its hind legs with both forepaws raised."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-w/refs/bears.png",
+          "sha256": "fe188043fbb346f1d38ad038b20b77b0615c9242f3639c1a86bbeef2ee7f9659",
+          "role": "family",
+          "note": "Four shipped animal tokens (brown bear walking towards the lower left, black bear facing front-right, white wolf, great wolf): the cave bear is a pale stone-grey bear walking in profile, the war bear a russet-red bear reared up on its hind legs with tusks; neither may repeat the brown or black bear poses and colours."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A war bear seen from a steep overhead three-quarter angle: a big bear REARED UP on its hind legs in a roaring stance with both forepaws raised and clawed, RUSSET-RED-BROWN fur in a mid-light value with bright copper highlight planes and a cream chest patch, two long curved IVORY TUSKS curling up from the lower jaw, an open pink mouth with pale teeth, a broad rough IRON-BANDED LEATHER collar with brass rivets and a short frayed chain at the neck. Fierce, upright, round and complete; the raised paws kept inside the disc.",
+        "contrast": "Bears: the WAR BEAR is the RUSSET-RED ONE reared up on its hind legs with tusks and an iron collar (silhouette: an upright figure with two raised paws and curved tusks; hue: russet red-brown with copper highlights, cream chest, ivory tusks, iron and brass; value: mid-light). The shipped brown bear is a brown bear on all fours towards the lower left and the black bear a black front-facing bear on all fours: this must not be on all fours, brown or black. The other new bear is a pale stone-grey bear walking in profile (cave bear).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Russet red-brown fur in a mid-light value with copper highlight planes, a cream chest patch, ivory tusks with bright highlights, pale claws, an open pink mouth, a dull iron collar with brass rivets; nothing darker than dark red-brown except the eyes and thin seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=war bear, define_as=None, type=animal/subtype=bear, unique=False, native_tall=False); details and hashes in evidence/monster-batch-w-20260930/source-contracts.json. base BASE_NPC_BEAR (animal/bear, no image=, no shader, no sustains_at_birth); explicit image= on the leaf (no nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base); generic actor.image==entry.image single path; native sprite 64x64; talents Stamina Pool, Stun, Knockback, Disarm (activated); no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-w-20260930/source-contracts.json",
+          "sha256": "96ca69784bec3c15699f4022058d68cede257f2a212a917ee75ff352a93458e3"
+        }
+      ]
+    },
+    {
+      "asset_id": "grannor-vin",
+      "native_name": "grannor'vin",
+      "scope": "deep-bellow and maze pools (general/npcs/horror-corrupted.lua:216, horror/corrupted, non-unique, no define_as, rank 2, base BASE_NPC_CORRUPTED_HORROR, default-name image); the only definition of this name; no vault, event or talent builds another actor with this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 217,
+          "anchor": "name = \"grannor'vin\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 237,
+          "anchor": "T_CALL_SHADOWS"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 242,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_CORRUPTED_HORROR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_grannor_vin.png",
+          "sha256": "bb07e3f90d6b8ec469d970382b3a0f0a1b0622a3680e5f3458c8e23af0df0c11",
+          "role": "identity",
+          "note": "Native shape (64x64): a big reddish-brown slug with an S-curved raised tail and a screaming human face on its front. Keep the sluglike body with the human face, but make it smoky lavender and mauve with pale highlights, the front half reared up."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-w/refs/slugs.png",
+          "sha256": "5d9aa4d2ccf30970b56583ebaec128eaadd3900ccb1c48983ceff0bea0e9e3d0",
+          "role": "family",
+          "note": "Four shipped horror tokens (blue-grey curled acid slug grannor-vor with green slime, slimy crawler, cream bloated horror, tan-pink weirdling beast): the grannor-vin is a smoky lavender-and-mauve slug rearing up in an S-curve with a pale human face, not blue-grey, not curled flat, not green-slimed."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A grannor'vin seen from a steep overhead three-quarter angle: a large sluglike horror with a smooth glossy SMOKY LAVENDER-GREY and PALE MAUVE body in a mid-light value with silver-white highlight planes along the back, the FRONT HALF REARED UP in an S-curve, at the front of the raised head a pale cream-white HUMAN FACE (grief-stricken, hollow eyes, open mouth), a ribbed underside in pale pink-grey, the tail curling in a compact round spiral at the base, and a few thin wisps of DEEP-VIOLET shadow smoke curling off the back (thin, kept behind and beside the body, never covering it). Heavy, glossy, reared and complete.",
+        "contrast": "Horrors: the GRANNOR'VIN is the SMOKY LAVENDER-MAUVE SLUG with its front half reared in an S-curve and a pale human face (silhouette: a tall S-shaped rear on a round spiral base; hue: lavender-grey and pale mauve with silver highlights and thin violet smoke; value: mid-light). The shipped grannor'vor is a blue-grey acid slug curled flat with green slime, the slimy crawler a crawler, the bloated horror a cream floating pear and the weirdling beast a tan-pink many-armed beast: this must not be blue-grey, green-slimed, curled flat or black.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere.",
+        "palette": "Smoky lavender-grey and pale mauve in a mid-light value with silver-white highlight planes and a bright light rim, cream-white face with hollow dark-violet eyes, pale pink-grey underside, thin deep-violet smoke wisps (the smoke stays thin and must not darken the disc or cover the body); nothing darker than dark violet except the eye hollows, the mouth and thin seams; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=grannor'vin, define_as=None, type=horror/subtype=corrupted, unique=False, native_tall=False); details and hashes in evidence/monster-batch-w-20260930/source-contracts.json. base BASE_NPC_CORRUPTED_HORROR (horror/corrupted, faction horrors, no image=, no shader, no sustains_at_birth in the base); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; talents Call Shadows (sustained), Creeping Darkness, Dark Torrent (activated); resolvers.sustains_at_birth() on the leaf starts Call Shadows (a rotating shield particle and shadow summons, no type/subtype/image/add_mos write; the shadows are separate actors); no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-w-20260930/source-contracts.json",
+          "sha256": "96ca69784bec3c15699f4022058d68cede257f2a212a917ee75ff352a93458e3"
+        }
+      ]
+    }
+  ]
+}

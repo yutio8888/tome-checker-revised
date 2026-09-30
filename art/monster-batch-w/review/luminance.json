@@ -1,0 +1,89 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "fiery-orc-wyrmic": 76.27,
+    "icy-orc-wyrmic": 105.28,
+    "yaech-mindslayer": 134.85,
+    "heavy-bone-giant": 95.43,
+    "cave-bear": 103.06,
+    "war-bear": 71.73,
+    "grannor-vin": 105.53,
+    "rotting-mummy": 84.39,
+    "banshee": 167.65,
+    "giant-fire-ant": 79.55,
+    "giant-ice-ant": 115.96,
+    "giant-lightning-ant": 120.02
+  },
+  "floors": {
+    "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+    "cave mushroom (ardhungol)": 134.28,
+    "crystal (scintillating-caves)": 104.14,
+    "grass (old-forest, lake-nur)": 108.97,
+    "gloom plain (deep-bellow)": 79.5,
+    "void floor (temporal-rift)": 163.25,
+    "underwater floor (murgol-lair, lake-nur)": 129.4,
+    "burnt ground (demon-plane)": 72.7,
+    "korpul stone A (vor-armoury, telmur)": 131.79,
+    "rak-shor floor (rak-shor-pride)": 163.04
+  },
+  "zone_floors": {
+    "fiery-orc-wyrmic": {
+      "korpul stone A (vor-armoury, telmur)": 131.79,
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "icy-orc-wyrmic": {
+      "korpul stone A (vor-armoury, telmur)": 131.79,
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "yaech-mindslayer": {
+      "underwater floor (murgol-lair, lake-nur)": 129.4
+    },
+    "heavy-bone-giant": {
+      "korpul stone A (vor-armoury, telmur)": 131.79,
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "cave-bear": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "crystal (scintillating-caves)": 104.14,
+      "grass (old-forest, lake-nur)": 108.97
+    },
+    "war-bear": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "crystal (scintillating-caves)": 104.14,
+      "grass (old-forest, lake-nur)": 108.97
+    },
+    "grannor-vin": {
+      "gloom plain (deep-bellow)": 79.5
+    },
+    "rotting-mummy": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64
+    },
+    "banshee": {
+      "burnt ground (demon-plane)": 72.7,
+      "korpul stone A (vor-armoury, telmur)": 131.79,
+      "rak-shor floor (rak-shor-pride)": 163.04
+    },
+    "giant-fire-ant": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "grass (old-forest, lake-nur)": 108.97,
+      "korpul stone A (vor-armoury, telmur)": 131.79
+    },
+    "giant-ice-ant": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "grass (old-forest, lake-nur)": 108.97,
+      "korpul stone A (vor-armoury, telmur)": 131.79
+    },
+    "giant-lightning-ant": {
+      "cave rock (ancient-elven-ruins, ardhungol, old-forest)": 130.64,
+      "cave mushroom (ardhungol)": 134.28,
+      "grass (old-forest, lake-nur)": 108.97,
+      "korpul stone A (vor-armoury, telmur)": 131.79
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

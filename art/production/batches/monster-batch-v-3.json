@@ -1,0 +1,222 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-v-3",
+  "assets": [
+    {
+      "asset_id": "orc-pyromancer",
+      "native_name": "orc pyromancer",
+      "scope": "vor-armoury and rak-shor-pride pools and the renegade-pyromancers and orc-hatred vaults (general/npcs/orc-vor.lua:55, humanoid/orc, non-unique, no define_as, rank 2, base BASE_NPC_ORC_VOR, default-name image); single definition; the vaults build this same leaf by name (random_filter), some as random bosses",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-vor.lua",
+          "sha256": "7ef30e07dd59c5784f06b8faa7e038ca27e4e2754671c3949f416b54450bd458",
+          "line": 55,
+          "anchor": "name = \"orc pyromancer\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-vor.lua",
+          "sha256": "7ef30e07dd59c5784f06b8faa7e038ca27e4e2754671c3949f416b54450bd458",
+          "line": 68,
+          "anchor": "T_FLAMESHOCK"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-vor.lua",
+          "sha256": "7ef30e07dd59c5784f06b8faa7e038ca27e4e2754671c3949f416b54450bd458",
+          "line": 74,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/maps/vaults/renegade-pyromancers.lua",
+          "sha256": "6164ecfe7eb1cbab2cd27e8188aeb6e7d140672b6881bd609e7b8bd186ebc7e6",
+          "line": 64,
+          "anchor": "name = \"orc pyromancer\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_pyromancer.png",
+          "sha256": "6c8d1625e5a9094f770c7e4209671ce1224a2c86e0dfbcade1fd9d919c457236",
+          "role": "identity",
+          "note": "Native shape (64x64): an olive-green orc in a bright red robe with one arm raised. Keep the olive-green orc in a bright red-orange robe and give it a staff with a fire ball."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-v/refs/orcs.png",
+          "sha256": "491dec6b1d10c6d88bcf5cc5575acf0e11d63fd930fa171d5ea49b0c6b06afd5",
+          "role": "family",
+          "note": "Seven shipped orc tokens (hooded navy orc necromancer with a green glow, orc archer with a bow, hooded blue-grey assassin, orc warrior with a scimitar, spiked orc soldier, olive orc master assassin with crossed daggers, ivory-masked grand master assassin): the three new orc casters are bare-headed robed mages, none of them hooded or armed with blades or bows."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orc pyromancer seen from a steep overhead three-quarter angle: a broad-shouldered OLIVE-GREEN orc with a bald head painted with red war stripes, small tusks and a hard scowl, wearing a BRIGHT ORANGE-RED long robe with gold trim and a gold sash (bare-headed, no hood), standing with feet apart, the RIGHT ARM holding a wooden staff diagonally up and outward with a compact bright ORANGE FIRE BALL with a yellow-white core on the staff head (the fire ball no bigger than the head and the staff tip well inside the disc), the left hand open at the hip with a few small flames. Fiery, robed, diagonal and complete.",
+        "contrast": "Orc casters: the PYROMANCER is the ORANGE-RED ROBED ONE with a diagonal staff ending in a fire ball (silhouette: a robed figure with one long diagonal line and a round flame; hue: orange-red robe with gold trim over olive skin; value: mid-light). The shipped orc necromancer is a hooded navy-robed orc with a green glow, the assassins are hooded or crossed-dagger fighters, the warrior and soldier are armoured melee orcs and the archer holds a bow: this must not be hooded, must not hold blades or a bow and must not be navy or grey. The other two new orc casters are a blue-robed one with arms wide throwing an ice shard fan (cryomancer) and a rose-and-bone robed hunched one holding a blood orb (blood mage).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Olive-green skin, orange-red robe in a mid-light value with pale orange highlight planes, gold trim and sash, a wooden staff, orange fire ball with a yellow-white core (the fire stays on the staff and must not glow onto or warm the disc); nothing darker than dark red-brown except the eye slits and thin seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc pyromancer, define_as=None, type=humanoid/subtype=orc, unique=False, native_tall=False); details and hashes in evidence/monster-batch-v-20260930/source-contracts.json. base BASE_NPC_ORC_VOR (humanoid/orc, faction orc-pride, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.racial() adds only levelup talent tables (no display); resolvers.auto_equip_filters and resolvers.equip only fill inventory (no moddable_tile, so no display change); resolvers.inscriptions(runes); talents Flame, Flameshock, Fireflash, Phase Door (activated), Spellcraft (sustained), Staff Mastery (passive); resolvers.sustains_at_birth() starts Spellcraft (temporary values only, no type/subtype/image/add_mos write); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-v-20260930/source-contracts.json",
+          "sha256": "2bf61831a3d4e67d3152ac5925673d689b454868c4e2e454b95959fa833143ed"
+        }
+      ]
+    },
+    {
+      "asset_id": "orc-cryomancer",
+      "native_name": "orc cryomancer",
+      "scope": "vor-armoury and rak-shor-pride pools and the orc-hatred vault (general/npcs/orc-vor.lua:109, humanoid/orc, non-unique, no define_as, rank 2, base BASE_NPC_ORC_VOR, default-name image); single definition; the vault builds this same leaf by name (random_filter)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-vor.lua",
+          "sha256": "7ef30e07dd59c5784f06b8faa7e038ca27e4e2754671c3949f416b54450bd458",
+          "line": 109,
+          "anchor": "name = \"orc cryomancer\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-vor.lua",
+          "sha256": "7ef30e07dd59c5784f06b8faa7e038ca27e4e2754671c3949f416b54450bd458",
+          "line": 122,
+          "anchor": "T_ICE_STORM"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-vor.lua",
+          "sha256": "7ef30e07dd59c5784f06b8faa7e038ca27e4e2754671c3949f416b54450bd458",
+          "line": 128,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/maps/vaults/auto/greater/orc-hatred.lua",
+          "sha256": "62118b421d5045102119d64d54c929eef32be6ad359f5c39559655cff66340cd",
+          "line": 71,
+          "anchor": "name = \"orc cryomancer\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_cryomancer.png",
+          "sha256": "9e43f6a167b960cf281739b9abf4ec84ce4d90fc2beb10b0c18eb6a90f50cc4f",
+          "role": "identity",
+          "note": "Native shape (64x64): an olive-green orc in a bright blue robe with rune markings. Keep the olive-green orc in an ice-blue rune-embroidered robe; no staff, hands thrown wide with ice shards."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-v/refs/orcs.png",
+          "sha256": "491dec6b1d10c6d88bcf5cc5575acf0e11d63fd930fa171d5ea49b0c6b06afd5",
+          "role": "family",
+          "note": "Seven shipped orc tokens (hooded navy orc necromancer with a green glow, orc archer with a bow, hooded blue-grey assassin, orc warrior with a scimitar, spiked orc soldier, olive orc master assassin with crossed daggers, ivory-masked grand master assassin): the three new orc casters are bare-headed robed mages, none of them hooded or armed with blades or bows."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orc cryomancer seen from a steep overhead three-quarter angle: a broad-shouldered OLIVE-GREEN orc with a shaved head, small tusks and one long WHITE BRAID falling over the front of the shoulder (bare-headed, no hood), wearing a bright ICE-BLUE long robe embroidered with pale WHITE RUNES and a white sash, standing with feet apart, BOTH ARMS SPREAD WIDE to the sides with the palms pushed outward, and in front of and beside the hands a fan of SIX pale-cyan and white ICE SHARDS radiating outward (each shard short and the whole fan kept inside the inner three quarters of the disc), a little white frost on the sleeves. Icy, robed, wide and complete; no staff.",
+        "contrast": "Orc casters: the CRYOMANCER is the ICE-BLUE ROBED ONE with arms thrown wide and a fan of ice shards (silhouette: a wide low V of arms with a shard fan, no staff; hue: ice-blue robe with white runes and a white braid over olive skin; value: mid-light). The shipped orc necromancer is a hooded navy-robed orc with a green glow, the assassins are hooded or crossed-dagger fighters, the warrior and soldier are armoured melee orcs and the archer holds a bow: this must not be hooded, must not hold a staff, blade or bow and must not be navy or grey. The other two new orc casters are an orange-red robed one with a diagonal fire staff (pyromancer) and a rose-and-bone robed hunched one holding a blood orb (blood mage).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Olive-green skin, ice-blue robe in a mid-light value with pale cyan highlight planes, white runes, sash and braid, pale-cyan and white ice shards (the frost stays on the creature and must not tint or brighten the disc); nothing darker than mid steel-blue except the eye slits and thin seams. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc cryomancer, define_as=None, type=humanoid/subtype=orc, unique=False, native_tall=False); details and hashes in evidence/monster-batch-v-20260930/source-contracts.json. base BASE_NPC_ORC_VOR (humanoid/orc, faction orc-pride, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.racial() adds only levelup talent tables (no display); resolvers.auto_equip_filters and resolvers.equip only fill inventory (no moddable_tile, so no display change); resolvers.inscriptions(runes); talents Freeze, Ice Storm, Tidal Wave, Phase Door (activated), Spellcraft (sustained), Staff Mastery (passive); resolvers.sustains_at_birth() starts Spellcraft (temporary values only, no type/subtype/image/add_mos write); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-v-20260930/source-contracts.json",
+          "sha256": "2bf61831a3d4e67d3152ac5925673d689b454868c4e2e454b95959fa833143ed"
+        }
+      ]
+    },
+    {
+      "asset_id": "orc-blood-mage",
+      "native_name": "orc blood mage",
+      "scope": "rak-shor-pride, ardhungol and reknor pools, the rak-shor-pride mapscript (main.lua:29) and the renegade-undead vault (general/npcs/orc-rak-shor.lua:116, humanoid/orc, non-unique, no define_as, rank 2, base BASE_NPC_ORC_RAK_SHOR, default-name image); single definition; the mapscript and vault build this same leaf by name as random bosses (random_boss path)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-rak-shor.lua",
+          "sha256": "c4875efb25a55eac7f55ca07b7d20f7602722458e70a3dfa6fcbad80207d7192",
+          "line": 116,
+          "anchor": "name = \"orc blood mage\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-rak-shor.lua",
+          "sha256": "c4875efb25a55eac7f55ca07b7d20f7602722458e70a3dfa6fcbad80207d7192",
+          "line": 128,
+          "anchor": "T_BLOOD_GRASP"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-rak-shor.lua",
+          "sha256": "c4875efb25a55eac7f55ca07b7d20f7602722458e70a3dfa6fcbad80207d7192",
+          "line": 136,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/mapscripts/main.lua",
+          "sha256": "209da0a8f4f57f652a0bf388804c29ba54dab6a4223ba2fbd552f89c2bc0e744",
+          "line": 29,
+          "anchor": "name=\"orc blood mage\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_blood_mage.png",
+          "sha256": "4fe7ddb07f8319bd1c4f3a5034057143e37e46884391a21f7788f86f9451ce26",
+          "role": "identity",
+          "note": "Native shape (64x64): an olive-green orc in a dark blood-red robe with a gold collar. Keep the olive-green orc in a blood-stained robe, but rose-red and bone-white, hunched, holding a blood orb."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-v/refs/orcs.png",
+          "sha256": "491dec6b1d10c6d88bcf5cc5575acf0e11d63fd930fa171d5ea49b0c6b06afd5",
+          "role": "family",
+          "note": "Seven shipped orc tokens (hooded navy orc necromancer with a green glow, orc archer with a bow, hooded blue-grey assassin, orc warrior with a scimitar, spiked orc soldier, olive orc master assassin with crossed daggers, ivory-masked grand master assassin): the three new orc casters are bare-headed robed mages, none of them hooded or armed with blades or bows."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orc blood mage seen from a steep overhead three-quarter angle: an OLIVE-GREEN orc hunched forward with a small BONE CIRCLET on a shaved head, small tusks and glowing pale-red eyes (bare-headed, no hood), wearing a long ROSE-RED and BONE-WHITE robe with a cream bone-plate collar and a few dark red blood stains (the robe rose-red, not black), both hands cupped together in front of the chest holding a compact floating glossy BLOOD-RED ORB with a bright pink highlight and a thin ring of red mist around it (the orb no bigger than the head), feet planted close. Hunched, robed, round and complete.",
+        "contrast": "Orc casters: the BLOOD MAGE is the HUNCHED ROSE-AND-BONE ROBED ONE cupping a blood orb in both hands (silhouette: a compact forward-leaning mass with one round orb at the chest; hue: rose-red robe with bone-white plates over olive skin; value: mid-light). The shipped orc necromancer is a hooded navy-robed orc with a green glow, the assassins are hooded or crossed-dagger fighters, the warrior and soldier are armoured melee orcs and the archer holds a bow: this must not be hooded, must not be black or navy, must not hold a staff, blade or bow. The other two new orc casters are an orange-red robed one with a diagonal fire staff (pyromancer) and an ice-blue robed one with arms wide throwing an ice shard fan (cryomancer).",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Olive-green skin, rose-red robe in a mid-light value with pale pink highlight planes, cream bone plates and circlet, glossy blood-red orb with a bright pink highlight (the red mist stays on the creature and must not tint the disc); nothing darker than dark rose-brown except the eye glow, blood stains and thin seams; no black robe anywhere. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc blood mage, define_as=None, type=humanoid/subtype=orc, unique=False, native_tall=False); details and hashes in evidence/monster-batch-v-20260930/source-contracts.json. base BASE_NPC_ORC_RAK_SHOR (humanoid/orc, faction orc-pride, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.racial() adds only levelup talent tables (no display); resolvers.auto_equip_filters and resolvers.equip only fill inventory (no moddable_tile, so no display change); resolvers.inscriptions(runes); talents Soul Rot, Blood Grasp, Curse of Vulnerability (activated), Staff Mastery (passive); resolvers.sustains_at_birth() on the leaf but no sustained talent known besides possible racial ones (temporary values only); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-v-20260930/source-contracts.json",
+          "sha256": "2bf61831a3d4e67d3152ac5925673d689b454868c4e2e454b95959fa833143ed"
+        }
+      ]
+    }
+  ]
+}

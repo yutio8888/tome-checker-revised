@@ -1,0 +1,67 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "caravan-merchant": 79.67,
+    "caravan-guard": 85.01,
+    "caravan-porter": 76.06,
+    "lost-merchant": 80.62,
+    "war-dog": 91.21,
+    "yeek-wayist": 110.84,
+    "nimisil": 130.15,
+    "slasul": 99.47,
+    "draebor": 113.38,
+    "weirdling-beast": 106.23,
+    "fortress-shadow": 153.39,
+    "pumpkin": 111.29,
+    "fortress-shadow OLD v1 (rejected by gate: base_drift -10.81, disc darkened under tendrils)": 143.76
+  },
+  "floors": {
+    "meadow grass (keepsake-meadow/dream)": 108.97,
+    "cave rock (keepsake cave, temple, thieves)": 130.64,
+    "korpul stone A (maze, halfling-ruins stone)": 131.79,
+    "underwater floor (temple-of-creation)": 129.4,
+    "shertul floor (shertul-fortress)": 162.35,
+    "burnt ground (demon-plane)": 72.7
+  },
+  "zone_floors": {
+    "caravan-merchant": {
+      "meadow grass (keepsake-meadow/dream)": 108.97
+    },
+    "caravan-guard": {
+      "meadow grass (keepsake-meadow/dream)": 108.97
+    },
+    "caravan-porter": {
+      "meadow grass (keepsake-meadow/dream)": 108.97
+    },
+    "lost-merchant": {
+      "korpul stone A (maze, halfling-ruins stone)": 131.79
+    },
+    "war-dog": {
+      "meadow grass (keepsake-meadow/dream)": 108.97,
+      "cave rock (keepsake cave, temple, thieves)": 130.64
+    },
+    "yeek-wayist": {
+      "korpul stone A (maze, halfling-ruins stone)": 131.79
+    },
+    "nimisil": {
+      "korpul stone A (maze, halfling-ruins stone)": 131.79
+    },
+    "slasul": {
+      "underwater floor (temple-of-creation)": 129.4
+    },
+    "draebor": {
+      "burnt ground (demon-plane)": 72.7
+    },
+    "weirdling-beast": {
+      "shertul floor (shertul-fortress)": 162.35
+    },
+    "fortress-shadow": {
+      "shertul floor (shertul-fortress)": 162.35
+    },
+    "pumpkin": {
+      "shertul floor (shertul-fortress)": 162.35
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}
