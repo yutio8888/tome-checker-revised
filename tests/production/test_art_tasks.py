@@ -285,7 +285,8 @@ class CoverageTests(unittest.TestCase):
         rows, families, summary, zones, grids = audit.build()
         self.assertEqual(len(rows), len({r['native_name'] for r in rows}))
         self.assertEqual(sum(r['art_status']=='mapped' for r in rows), len(audit.current_catalog()))
-        self.assertEqual(summary['missing_candidates'] + summary['installed_token_count'], len(rows))
+        self.assertEqual(summary['missing_candidates'] + summary['mapped_planning_name_count'], len(rows))
+        self.assertEqual(summary['installed_token_count'], sum(len(ids.split(';')) for ids in audit.current_catalog().values()))
         self.assertEqual(sum(summary['missing_by_priority'].values()), summary['missing_candidates'])
         by_name = {r['native_name']:r for r in rows}
         self.assertEqual(by_name['giant white rat']['origin'], 'rodent-family-completion')

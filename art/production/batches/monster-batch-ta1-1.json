@@ -1,0 +1,258 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ta1-1",
+  "assets": [
+    {
+      "asset_id": "apprentice-mage",
+      "native_name": "apprentice mage",
+      "scope": "TA-1 town resident; game/modules/tome/data/zones/town-angolwen/npcs.lua:208",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/town-angolwen/npcs.lua",
+          "sha256": "d2855e0fe7a71cea1eccea75df71b1882331366be244393880fd20e7db6f2130",
+          "line": 208,
+          "anchor": "name = \"apprentice mage\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-angolwen/npcs.lua",
+          "sha256": "d2855e0fe7a71cea1eccea75df71b1882331366be244393880fd20e7db6f2130",
+          "line": 180,
+          "anchor": "define_as = \"BASE_NPC_ANGOLWEN_TOWN\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 192,
+          "anchor": "make_escort = {"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 193,
+          "anchor": "name=\"enthralled slave\", number=2"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_apprentice_mage.png",
+          "sha256": "f5ec3661ed1638a06e4d30f1c79d961c243f8551c75803e5316fe79682dd66ab",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ta1/refs/angolwen-mages.png",
+          "sha256": "213a0e62d62c986efb7e38aefcdeb582a6c07e9950dbf0ed31c6e761b992c767",
+          "role": "family",
+          "note": "Shipped siblings row order: elven-mage, elven-tempest, orc-pyromancer, orc-cryomancer, necromancer, urkis. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A young human APPRENTICE of the Angolwen school: a plain tan-brown cowled robe with a short shoulder cape, the hood down over short brown hair, NO pointed hat and NO staff, both empty hands hanging relaxed and open at his sides. Warm beige and light brown cloth, pale skin, calm upright junior-student stance. Broad pale upper-left planes on the cowl, shoulders and robe folds. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "The junior unarmed member: bare/cowled head (no pointed hat) and no staff, versus the four full wizards' tall hats and staves; versus the shipped necromancer hooded skull-caster and elven mage robed staff wizard. Silhouette and equipment, never colour alone. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Flat single 64x64 default-name native image; no nice_tile or add_mos; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. Static source contract only; see evidence/monster-batch-ta1-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ta1-20261001/source-contracts.json",
+          "sha256": "ae95dcb93cbcfc59e40ffa479e1fba691671be910b6754a4a6b491aca2011972"
+        }
+      ]
+    },
+    {
+      "asset_id": "pyromancer",
+      "native_name": "pyromancer",
+      "scope": "TA-1 town resident; game/modules/tome/data/zones/town-angolwen/npcs.lua:222",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/town-angolwen/npcs.lua",
+          "sha256": "d2855e0fe7a71cea1eccea75df71b1882331366be244393880fd20e7db6f2130",
+          "line": 222,
+          "anchor": "name = \"pyromancer\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-angolwen/npcs.lua",
+          "sha256": "d2855e0fe7a71cea1eccea75df71b1882331366be244393880fd20e7db6f2130",
+          "line": 180,
+          "anchor": "define_as = \"BASE_NPC_ANGOLWEN_TOWN\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 192,
+          "anchor": "make_escort = {"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 193,
+          "anchor": "name=\"enthralled slave\", number=2"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_pyromancer.png",
+          "sha256": "07e5dc28692b573715bad56af411905cfa602a1188021fdddd79a067d35e5268",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 128]."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ta1/refs/angolwen-mages.png",
+          "sha256": "213a0e62d62c986efb7e38aefcdeb582a6c07e9950dbf0ed31c6e761b992c767",
+          "role": "family",
+          "note": "Shipped siblings row order: elven-mage, elven-tempest, orc-pyromancer, orc-cryomancer, necromancer, urkis. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A tall grey-bearded wizard in a CRIMSON hooded robe with restrained gold trim and a tall red pointed hat leaning slightly forward. Both hands grip a LONG STAFF held diagonally low across the chest; the lowered off-hand cups a small bright ember. Crimson and vermilion cloth, gold edging, pale ash-grey beard and face, broad pale upper-left highlight planes. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Differentiated by staff angle + focus prop + stance: staff couched LOW and diagonal across the chest, ember cupped low, forward lean. Versus cryomancer's vertical staff and ice shards, geomancer's short conical hat and rune-cube, tempest's overhead staff and lightning, and shipped orc/elven casters. Pose and props, never colour alone. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exactly one nice_tile body at display_h=2/display_y=-1 (native_tall=true admits it); no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. nicer_tiles off uses the same single native image. Static source contract only; see evidence/monster-batch-ta1-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ta1-20261001/source-contracts.json",
+          "sha256": "ae95dcb93cbcfc59e40ffa479e1fba691671be910b6754a4a6b491aca2011972"
+        }
+      ]
+    },
+    {
+      "asset_id": "cryomancer",
+      "native_name": "cryomancer",
+      "scope": "TA-1 town resident; game/modules/tome/data/zones/town-angolwen/npcs.lua:237",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/town-angolwen/npcs.lua",
+          "sha256": "d2855e0fe7a71cea1eccea75df71b1882331366be244393880fd20e7db6f2130",
+          "line": 237,
+          "anchor": "name = \"cryomancer\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-angolwen/npcs.lua",
+          "sha256": "d2855e0fe7a71cea1eccea75df71b1882331366be244393880fd20e7db6f2130",
+          "line": 180,
+          "anchor": "define_as = \"BASE_NPC_ANGOLWEN_TOWN\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 192,
+          "anchor": "make_escort = {"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 193,
+          "anchor": "name=\"enthralled slave\", number=2"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_cryomancer.png",
+          "sha256": "e5f2203e0734c1fee40987e0454a3437426ca714270efaa0c6be3197382ad704",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 128]."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ta1/refs/angolwen-mages.png",
+          "sha256": "213a0e62d62c986efb7e38aefcdeb582a6c07e9950dbf0ed31c6e761b992c767",
+          "role": "family",
+          "note": "Shipped siblings row order: elven-mage, elven-tempest, orc-pyromancer, orc-cryomancer, necromancer, urkis. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A tall grey-bearded wizard in a dark sapphire-blue robe and a tall STRAIGHT blue pointed hat, standing fully UPRIGHT with the LONG STAFF held nearly VERTICAL in the outer hand; a cluster of pale angular ICE SHARDS and a snowflake crystal floats above the near open hand. Blue cloth, frost-white highlights, pale grey beard, broad light upper-left planes. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Differentiated by upright stance + near-vertical staff + pale angular ice-shard prop. Versus pyromancer's diagonal low staff and ember, geomancer's short hat and rune-cube, tempest's raised lightning staff, and shipped orc-cryomancer (bare green orc, no hat). Structure, not colour. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exactly one nice_tile body at display_h=2/display_y=-1 (native_tall=true admits it); no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. nicer_tiles off uses the same single native image. Static source contract only; see evidence/monster-batch-ta1-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ta1-20261001/source-contracts.json",
+          "sha256": "ae95dcb93cbcfc59e40ffa479e1fba691671be910b6754a4a6b491aca2011972"
+        }
+      ]
+    }
+  ]
+}

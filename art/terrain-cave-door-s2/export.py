@@ -26,6 +26,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[2]
 GFX = ROOT / 'data/gfx/refined'
 HERE = Path(__file__).resolve().parent
+FROZEN = ROOT / 'art/terrain-contrast-v1/frozen-inputs/korpul'
 KINDS = (('closed-horizontal', 10), ('closed-vertical', 5), ('open-horizontal', 10), ('open-vertical', 5))
 STONE_SATURATION = 0.18
 WALL_GAIN = 1.35
@@ -36,8 +37,9 @@ def rgb(path):
 
 
 def tile(kind, mask, parity):
-    door = rgb(GFX / f'korpul/door-{kind}-{mask}-{parity}.png')
-    base = rgb(GFX / f'korpul/floor-a-0-{parity}.png')
+    # Frozen pre-2026-10-01 Kor'Pul door/floor pair (the live pair got a hue finish).
+    door = rgb(FROZEN / f'door-{kind}-{mask}-{parity}.png')
+    base = rgb(FROZEN / f'floor-a-0-{parity}.png')
     floor = rgb(GFX / f'cave/floor{parity}.png')
     wall = rgb(GFX / f'cave/wall-15-{parity}.png')
     content = np.abs(door - base).sum(2) > 0

@@ -1,0 +1,23 @@
+window.monsterCatalog = [
+  {
+    "id": "multi-hued-drake-hatchling"
+  },
+  {
+    "id": "multi-hued-drake"
+  },
+  {
+    "id": "greater-multi-hued-wyrm"
+  },
+  {
+    "id": "shadow-claw"
+  },
+  {
+    "id": "shadow-caster"
+  },
+  {
+    "id": "multi-hued-crystal"
+  },
+  {
+    "id": "shimmering-crystal"
+  }
+];

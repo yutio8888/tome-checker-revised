@@ -1,0 +1,258 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ta1-4",
+  "assets": [
+    {
+      "asset_id": "dwarven-guard",
+      "native_name": "dwarven guard",
+      "scope": "TA-1 town resident; game/modules/tome/data/zones/town-iron-council/npcs.lua:54",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/town-iron-council/npcs.lua",
+          "sha256": "9b6118ed3681b6c4146ca768d574d99d14f388883a656500bfd6a505ec59ff80",
+          "line": 54,
+          "anchor": "name = \"dwarven guard\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-iron-council/npcs.lua",
+          "sha256": "9b6118ed3681b6c4146ca768d574d99d14f388883a656500bfd6a505ec59ff80",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_IRON_COUNCIL_TOWN\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 192,
+          "anchor": "make_escort = {"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 193,
+          "anchor": "name=\"enthralled slave\", number=2"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_dwarf_dwarven_guard.png",
+          "sha256": "35968cee95f883b65342a480a2a7bb7af7cbfc730ad2b07260bf4d9ef4875a45",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ta1/refs/guards.png",
+          "sha256": "5357fb900fde6df7994f50b74c3d428a53e7bd79e0da6cffb4f4ba5d232e5e0b",
+          "role": "family",
+          "note": "Shipped siblings row order: caravan-guard, elven-guard, mean-looking-elven-guard, human-sun-paladin, elven-warrior, norgan. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A stocky DWARF guard in a grey steel helm and grey mail with a huge pale beard, gripping a TWO-HANDED BATTLEAXE carried diagonally across the body with both hands; heavy planted broad stance. Grey mail, brown leather straps, pale ivory beard, bright pale upper-left planes on the helm and axe head. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Dwarf proportions (short, broad, huge beard) plus helm and two-handed axe with NO shield, versus dwarven-earthwarden's bare head and large round shield, norgan's bare head and hammer, and every human guard. Proportion and weapon, not colour. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Flat single 64x64 default-name native image; no nice_tile or add_mos; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. Static source contract only; see evidence/monster-batch-ta1-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ta1-20261001/source-contracts.json",
+          "sha256": "ae95dcb93cbcfc59e40ffa479e1fba691671be910b6754a4a6b491aca2011972"
+        }
+      ]
+    },
+    {
+      "asset_id": "elvala-guard",
+      "native_name": "elvala guard",
+      "scope": "TA-1 town resident; game/modules/tome/data/zones/town-elvala/npcs.lua:53",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/town-elvala/npcs.lua",
+          "sha256": "4a40fbff2ee1840bb82f7a6c91e55b32b6161baa9a661c381ae454153ada4120",
+          "line": 53,
+          "anchor": "name = \"elvala guard\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-elvala/npcs.lua",
+          "sha256": "4a40fbff2ee1840bb82f7a6c91e55b32b6161baa9a661c381ae454153ada4120",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ELVALA_TOWN\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 192,
+          "anchor": "make_escort = {"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 193,
+          "anchor": "name=\"enthralled slave\", number=2"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_shalore_elvala_guard.png",
+          "sha256": "5627331a908981972f740afbc79188fefa45d96413d1b261340da373df373392",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ta1/refs/guards.png",
+          "sha256": "5357fb900fde6df7994f50b74c3d428a53e7bd79e0da6cffb4f4ba5d232e5e0b",
+          "role": "family",
+          "note": "Shipped siblings row order: caravan-guard, elven-guard, mean-looking-elven-guard, human-sun-paladin, elven-warrior, norgan. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A slender TALL elven guard in warm gold-bronze SCALE armour with a tall crested helm, a longsword in the right hand and a shield bearing a green leaf emblem on the left. Gold-bronze scale, green accent, pale skin, broad pale upper-left planes on the helm, pauldrons and shield. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Tall slender elf with gold-bronze scale and a TALL CRESTED helm plus leaf-emblem shield, versus elven-guard's green-and-gold kit, mean-looking-elven-guard's unarmoured ranger body, and every human guard. Silhouette and helm, not colour. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Flat single 64x64 default-name native image; no nice_tile or add_mos; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. Static source contract only; see evidence/monster-batch-ta1-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ta1-20261001/source-contracts.json",
+          "sha256": "ae95dcb93cbcfc59e40ffa479e1fba691671be910b6754a4a6b491aca2011972"
+        }
+      ]
+    },
+    {
+      "asset_id": "slaver",
+      "native_name": "slaver",
+      "scope": "TA-1 town resident; game/modules/tome/data/zones/ring-of-blood/npcs.lua:173",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 173,
+          "anchor": "name = \"slaver\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 145,
+          "anchor": "define_as = \"BASE_NPC_SLAVER\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 192,
+          "anchor": "make_escort = {"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 193,
+          "anchor": "name=\"enthralled slave\", number=2"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_yaech_slaver.png",
+          "sha256": "0050f61e36ebde733bc856452c2fb471bc2713544a6489a54e64cdf8c85b7ac4",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ta1/refs/ring-of-blood.png",
+          "sha256": "6f25f27251ce5893ba4b6f18662b20b1dc6b41fcc42e8671b3383a1f96aedc45",
+          "role": "family",
+          "note": "Shipped siblings row order: yaech-hunter, yaech-mindslayer, yaech-psion, yaech-diver, bandit. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A small hunched blue-grey amphibian YAECH slaver with huge red eyes and a finned head crest, one arm raised mid-gesture and the other holding a wavy serrated DAGGER; predatory crouch. Cold blue-grey scales, bright red eyes, dark steel blade, broad pale upper-left planes on the crest and shoulders. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Serrated dagger plus raised commanding arm and finned crest, versus shipped yaech-hunter/diver (trident/swim), yaech-mindslayer/psion (psionic glow, no weapon) and bandit. Weapon and posture, not colour. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Flat single 64x64 default-name native image; no nice_tile or add_mos; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. Static source contract only; see evidence/monster-batch-ta1-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ta1-20261001/source-contracts.json",
+          "sha256": "ae95dcb93cbcfc59e40ffa479e1fba691671be910b6754a4a6b491aca2011972"
+        }
+      ]
+    }
+  ]
+}

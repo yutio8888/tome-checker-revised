@@ -441,6 +441,49 @@ T.assets.ready=false;am._checker_korpul=nil
 local before=updates;am:apply(2,2)
 eq(updates,before,'no asset readiness means no added FOV work')
 T.assets.ready=true
+-- Reveal: native remembers(x,y,true) outside FOV (debug "Reveal all map",
+-- magic mapping, detection) never calls updateMap; the adapter queues those
+-- cells and rebuilds them once at tick end, so render() drops the unknown
+-- placeholder. Nothing is stored on the map for the queue.
+do
+ local tickEnd,rupdates={},{}
+ local rcells={}
+ for k=0,24 do rcells[k]=setmetatable(copy(grids.DOOR),{__index=Grid}) end
+ local rseen={}
+ local baseR={updateMap=function(_,a,b) rupdates[#rupdates+1]=a+b*5 end,
+  loaded=function(self)
+   self.remembers=self.remembers or {}
+   setmetatable(self.remembers,{__call=function(t,a,b,v)
+    if not a or not b or a<0 or b<0 or a>=5 or b>=5 then return end
+    if v~=nil then t[a+b*5]=v end
+    return t[a+b*5]
+   end})
+   return 'loaded'
+  end}
+ env.loadPrevious=function() return baseR end
+ local R=load(root..'superload/engine/Map.lua')
+ local rm=setmetatable({w=5,h=5,TERRAIN=1,seens=function(a,b) return rseen[a+b*5] end,infovs=function(a,b) return rseen[a+b*5] end},
+  {__index=R,__call=function(_,a,b) return rcells[a+b*5] end})
+ local savedGame=env.game
+ env.game={zone={short_name='ruins-kor-pul'},level={map=rm},onTickEnd=function(_,f) tickEnd[#tickEnd+1]=f end}
+ eq(rm:loaded(),'loaded','reveal: native loaded return preserved')
+ rseen[13]=true
+ rm.remembers(1,1,true);rm.remembers(1,1,true);rm.remembers(3,2,true)
+ rm.remembers(7,7,true);rm.remembers(-1,0,true);rm.remembers(2,1,false)
+ eq(rm.remembers(1,1),true,'reveal: native remembers value preserved')
+ eq(#tickEnd,1,'reveal: one tick-end flush per batch')
+ eq(#rupdates,0,'reveal: nothing rebuilt before tick end')
+ for k in pairs(rm) do assert(not tostring(k):match('reveal'),'reveal queue stored on the map') end;n=n+1
+ tickEnd[1]()
+ eq(#rupdates,1,'reveal: only the newly remembered hidden in-bounds cell rebuilt (not visible, repeated, false or outside)')
+ eq(rupdates[1],6,'reveal: rebuilt cell is (1,1)')
+ eq(rm._checker_korpul and rm._checker_korpul[6]~=nil,true,'reveal: remembered hidden cell recorded like the all_remembered install')
+ eq(rm._checker_korpul[13],nil,'reveal: a visible cell is left to the native FOV path')
+ rm.remembers(1,1,true);eq(#tickEnd,1,'reveal: already remembered cell queues nothing')
+ env.game.zone={short_name='wilderness'};rm.remembers(0,0,true)
+ eq(#tickEnd,1,'reveal: zones without the board adapter queue nothing')
+ env.game=savedGame
+end
 -- Preserve the established forest selector and ownership behavior.
 local grass={name='grass',subtype='grass',type='floor',define_as='GRASS'}
 function grass:clone() local g={};for k,v in pairs(self) do g[k]=v end;return g end

@@ -1,0 +1,191 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-af-4",
+  "assets": [
+    {
+      "asset_id": "blood-lich",
+      "native_name": "blood lich",
+      "scope": "class a off-list pool; game/modules/tome/data/general/npcs/lich.lua:181; coordinator-requested AF rework; source identity unchanged",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/lich.lua",
+          "sha256": "39fa573c3793bc42f429288be32b0f108ace67543482134afe9b21ae6bc1dbfc",
+          "line": 181,
+          "anchor": "name = \"blood lich\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/lich.lua",
+          "sha256": "39fa573c3793bc42f429288be32b0f108ace67543482134afe9b21ae6bc1dbfc",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_LICH\""
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved tabletop disc, camera, lighting only; do not copy creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_lich_blood_lich.png",
+          "sha256": "d8476e476f1237ae44454d670ca7056a9235fb8b8cd869ef1aac112c81d645c9",
+          "role": "identity",
+          "note": "Inspected native identity and anatomy, [64, 64]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-af/refs/rework-siblings.png",
+          "sha256": "223246a3a17baa1158f00f99d51d288d05e0ca08234a815494875379e2f3a38a",
+          "role": "family",
+          "note": "Opened shipped siblings in row order: luminous horror, previous radiant horror, red-robed lich, sanguine horror, animated blood, bone horror. Do not copy the rejected radiant pose; compare silhouette and value at 48/64px."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A flayed BLOOD-RED SKELETAL LICH-MAGE, a wiry upright humanoid undead sorcerer with a clearly exposed rib cage, stern ivory-bone skull face washed in bright scarlet, articulated pale bone shoulder and forearm ridges partly sheathed in blood, long bent arms and two planted skeletal legs. NO ROBE, CLOTH, CLOAK OR ARMOUR. One open claw hand holds a small bright crimson blood-orb close beside the ribcage; the other reaches inward in a casting gesture. A small low physical bone-and-blood circlet hugs the skull, no floating rank mark. Bold broad MID-LIGHT CRIMSON-SCARLET surfaces over torso and limbs, large pale ivory bone accents on skull, ribs and limbs, pink-scarlet highlight planes covering most body surfaces, deep red only in narrow creases. All blood tendrils short and tucked in, no blood puddle or floor aura. Complete compact flayed lich sorcerer, not a robed wizard, giant blood mass or faceless blob. Body must be strongly light enough at 48px: broad pale bone and scarlet masses, not tiny white specular dots. Aim masked-body luminance comfortably ABOVE 65, around 85-100, while keeping the neutral disc unchanged.",
+        "contrast": "Structural identity: exposed skeletal rib cage, recognizable skull, long thin casting arms, planted bony legs, small blood-orb and close physical circlet. Red-robed lich is a narrow hooded cloth caster with a wand; NEVER copy its robe. Sanguine horror is a heavy amorphous monstrous blood mass, animated blood is a round faceless dripping sac. This is a lean naked skeletal lich-mage, with conspicuous pale bone planes and scarlet wet anatomy; not a recolour of any sibling.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "NPC default-name image; flat single image 64x64;  Static evidence only; live separate. Explicit user-authorized retry/redesign after infrastructure provenance failure, NOT a waiver or lowered gate.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-af-20261001/source-contracts.json",
+          "sha256": "79f3f3adb69a153d3add9b766b38db42af8fa2ea537f266c48b039471bfc2948"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-af-rework-20261001/review-request.json",
+          "sha256": "e1be71d27afc12f5c4f30ef7e0cc97799f5b0e5874f00f33f655bb920fc55501"
+        }
+      ],
+      "retry_authorization": {
+        "previous_batch": "monster-batch-af-3",
+        "reason": "User explicitly authorizes additional serial calls after infrastructure failure; new flayed skeletal lich-mage direction and broad pale bone/scarlet value structure.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-af-3/blood-lich/imagegen-calls/call-2/call.json",
+            "sha256": "084a59be772b42453d13f89eb7cc011c6f0aa967e28ffeb059ede5f305ff4050"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/evidence/monster-batch-af-rework-20261001/review-request.json",
+            "sha256": "e1be71d27afc12f5c4f30ef7e0cc97799f5b0e5874f00f33f655bb920fc55501"
+          }
+        ]
+      }
+    },
+    {
+      "asset_id": "radiant-horror",
+      "native_name": "radiant horror",
+      "scope": "class a off-list pool; game/modules/tome/data/general/npcs/horror.lua:444; coordinator-requested AF rework; source identity unchanged",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 444,
+          "anchor": "name = \"radiant horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR\""
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved tabletop disc, camera, lighting only; do not copy creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_radiant_horror.png",
+          "sha256": "3e53e13695e2d7f0aa06c87157b7acc1da68a9bd5d91ffc3565fe317d84a722c",
+          "role": "identity",
+          "note": "Inspected native identity and anatomy, [64, 64]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-af/refs/rework-siblings.png",
+          "sha256": "223246a3a17baa1158f00f99d51d288d05e0ca08234a815494875379e2f3a38a",
+          "role": "family",
+          "note": "Opened shipped siblings in row order: luminous horror, previous radiant horror, red-robed lich, sanguine horror, animated blood, bone horror. Do not copy the rejected radiant pose; compare silhouette and value at 48/64px."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A lanky radiant horror, a faceless narrow humanoid made of WHITE-HOT GOLDEN LIGHT, with EXACTLY FOUR long arms spread very clearly into a broad X: two upper arms stretch diagonally up-left/up-right, two lower arms diagonally down-left/down-right; four separated hands at four unmistakable diagonal tips. Two thin legs descend close together beneath the waist. Behind head and shoulders is a compact opaque sculptural WHITE-HOT SUNBURST of thick pointed rays, eight broad angular ivory-white rays with short warm-gold recesses, framing upper torso; NO solid circular halo ring. This sunburst belongs to the creature body and stays fully within the safe central plate area; no glow/bounce light whatsoever on the disc. Smooth small faceless head; large broad ivory-white body planes, hot pale white-gold limbs, restrained amber grooves only. Bold front-facing upright four-arm X pose, no fists curled inward, no crouching stance, no wings or weapons, no robe. Render opaque physical miniature sculpture, with clearly separated ray geometry and four limbs at 48px, not blurred luminous particles. Keep entire figure and sunburst compact inside inner three quarters of disc radius, wide visible bare base ring on all sides.",
+        "contrast": "Shipped luminous horror is a yellow-gold broad crouching humanoid with drooping curved arms and no ray crown. New radiant horror must be a white-hot narrow upright four-armed X with a thick spiked sunburst framing head/upper torso: the silhouette changes at 48px and in grayscale, not just the hue. All FOUR arms extend straight diagonally into open negative spaces, never two faint extra inward-curled arms. Sunburst is creature anatomy/light sculpture, not faction/health/selection/rank UI.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "NPC default-name image; flat single image 64x64;  Static evidence only; live separate.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-af-20261001/source-contracts.json",
+          "sha256": "79f3f3adb69a153d3add9b766b38db42af8fa2ea537f266c48b039471bfc2948"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-af-rework-20261001/review-request.json",
+          "sha256": "e1be71d27afc12f5c4f30ef7e0cc97799f5b0e5874f00f33f655bb920fc55501"
+        }
+      ],
+      "refinement": {
+        "supersedes": "radiant-horror",
+        "previous_batch": "monster-batch-af-1",
+        "design_change_reason": "Prior 48/64 silhouette was too similar to luminous horror. Structural redesign: exactly four arms widely spread in a clear X, white-hot sunburst ray crown behind body, white-gold rather than yellow. Keep native identity, disc/style gates unchanged. This is a separately reviewed change in pose and thick sculptural ray geometry, not a colour-only correction.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-af-1/radiant-horror/receipts/attempt-1.json",
+            "sha256": "c1f681103bc482d6f2bec0d3d8c41dcb86552ca697d9d5718b84141f99b44144"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-af-1/radiant-horror/imagegen-calls/call-1/call.json",
+            "sha256": "143d2911e7d0aa9f98d97fb3a19348ea48b6b1f76163ca24431a8f547e5a8e2e"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/evidence/monster-batch-af-rework-20261001/review-request.json",
+            "sha256": "e1be71d27afc12f5c4f30ef7e0cc97799f5b0e5874f00f33f655bb920fc55501"
+          }
+        ]
+      }
+    }
+  ]
+}

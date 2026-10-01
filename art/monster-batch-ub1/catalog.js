@@ -1,0 +1,29 @@
+window.monsterCatalog = [
+  {
+    "id": "high-sun-paladin-aeryn"
+  },
+  {
+    "id": "fallen-sun-paladin-aeryn"
+  },
+  {
+    "id": "caldizar"
+  },
+  {
+    "id": "chronolith-twin"
+  },
+  {
+    "id": "chronolith-clone"
+  },
+  {
+    "id": "temporal-defiler"
+  },
+  {
+    "id": "corrupted-daelach"
+  },
+  {
+    "id": "supreme-archmage-linaniil"
+  },
+  {
+    "id": "archmage-tarelion"
+  }
+];

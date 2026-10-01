@@ -1,0 +1,32 @@
+[
+  {
+    "path": "game/engines/default/engine/Entity.lua",
+    "sha256": "4c9eb3873ad9f99ffd01ab75a44faaf219a6dc1393dbf0a30584a9288f2141d2",
+    "line": 1234,
+    "anchor": "local e = newenv.class.new(t, no_default)"
+  },
+  {
+    "path": "game/engines/default/engine/Entity.lua",
+    "sha256": "4c9eb3873ad9f99ffd01ab75a44faaf219a6dc1393dbf0a30584a9288f2141d2",
+    "line": 150,
+    "anchor": "if self.unique and type(self.unique) ~= \"string\""
+  },
+  {
+    "path": "game/modules/tome/class/Actor.lua",
+    "sha256": "e839397f675ca77d46aa345b81ea49c341c7109b4d3064e6b3598639be5fa711",
+    "line": 2003,
+    "anchor": "function _M:getName"
+  },
+  {
+    "path": "game/addons/tome-checker-revised/overload/mod/class/CheckerTokenStyle.lua",
+    "sha256": "d7f515f25bb80203e8383bb608d8a9f31ea6d89430e947164328d0b4dbc394b1",
+    "line": 149,
+    "anchor": "function M.rankBadge(rank)"
+  },
+  {
+    "path": "game/addons/tome-checker-revised/superload/mod/class/GameState.lua",
+    "sha256": "62775055e5245c7364e69306d34ea866839da97d195ab6b5d0434d698737f5a2",
+    "line": 9,
+    "anchor": "local origin = Tokens.captureRandomOrigin(base)"
+  }
+]

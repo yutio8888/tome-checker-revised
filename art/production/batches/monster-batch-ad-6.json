@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ad-6",
+  "assets": [
+    {
+      "asset_id": "orc-mage-hunter",
+      "native_name": "orc mage-hunter",
+      "scope": "gorbat-pride and dungeon pool (general/npcs/orc-gorbat.lua:148, humanoid/orc, non-unique, no define_as, rank 3, base BASE_NPC_ORC_GORBAT, default-name image npc/humanoid_orc_orc_mage_hunter.png via the hyphen-to-underscore rule); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 149,
+          "anchor": "name = \"orc mage-hunter\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 176,
+          "anchor": "T_MANA_CLASH"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 157,
+          "anchor": "resolvers.equip"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 43,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC_GORBAT\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_orc_mage_hunter.png",
+          "sha256": "264a14df9b9ef6793121c9106dab321ab9103ca05a483f0266576322e654def9",
+          "role": "identity",
+          "note": "Native shape (64x64): a huge fully enclosed blue-steel armoured orc with a slit visor and thick plates and spikes. Keep the bulky fully enclosed armoured orc, drawn as ONE compact figure filling the disc, in pale blue-steel and silver plate with a turquoise-glowing visor slit, a round ringed shield and a waraxe, clearly not the spiked brown berserker or the gold-and-blue elite fighter."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ad/refs/orc-pride.png",
+          "sha256": "85f4b784634ef9ae6dcd48f7c1cb7c48c7b3f39aca1628028a2793f2fa846a8d",
+          "role": "family",
+          "note": "Six shipped orc tokens (the orc summoner: a green beast-shaman with antlers and a teal-cyan swirl; the fiery orc wyrmic: a red-orange armoured axe orc; the icy orc wyrmic: a white-and-ice-blue armoured axe orc; the orc berserker: a spiked silver-brown axe orc; the orc elite fighter: a gold-and-blue plate fighter with a tower shield; the orc necromancer: a dark-robed caster): the ORC GRAND SUMMONER is a bare-chested BEASTMASTER in earth-tone hides and a fur-and-bone mantle, a bone-white python and a green viper coiled around his body and a totem staff topped with a tusked skull, no glow; the ORC MASTER WYRMIC is a bronze-and-sand-gold DRAKE-SCALE armoured orc in a dragon-head helm with four differently coloured drake-scale pauldrons (crimson, ice-blue, sand-gold, storm-violet) and a huge single-bladed battleaxe; the ORC MAGE-HUNTER is a fully ENCLOSED bulky pale blue-steel and silver armoured orc with a great helm whose visor slit glows turquoise, a big round shield with concentric rings and a waraxe; none of them is a teal-aura antlered shaman, a red or white axe orc, a spiked berserker, a gold-blue shield fighter or a dark robed caster."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An orc mage-hunter seen from a steep overhead three-quarter angle: a huge hulking orc FULLY ENCLOSED in bulky pale BLUE-STEEL and bright SILVER massive plate armour, a rounded GREAT HELM with a single narrow visor slit glowing pale TURQUOISE, broad overlapping layered pauldrons and thick greaves etched with thin pale lavender antimagic sigils, a big ROUND SHIELD in the left hand painted with concentric rings like a target and a short steel WARAXE in the right hand held in close, short silver chains hanging from the belt; broad pale highlight planes on every upper-left plate and a thin bright rim light. Enclosed, blue-steel, ringed-shield and complete. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Gorbat-pride orcs: the ORC MAGE-HUNTER is the FULLY ENCLOSED hulking pale blue-steel and silver armoured orc with a turquoise visor slit, a concentric-ring round shield and a waraxe (silhouette: a blocky faceless armoured mass with a big round shield; hue: pale blue-steel, silver and turquoise with no visible skin; value: bright). The shipped berserker is a spiked silver-brown axe orc with a visible face, the elite fighter a gold-and-blue tower-shield fighter with a plume, the fiery and icy wyrmics red and white axe orcs: this must not show an orc face, must not be brown, gold or red and must carry the ringed round shield.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Pale blue-steel and bright silver plate, turquoise visor glow, thin lavender sigils, steel waraxe, a thin bright rim; nothing darker than mid steel-blue except the visor slit and plate seams; NO black armour; the glow stays on the visor and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=orc mage-hunter, define_as=None, type=humanoid/subtype=orc, unique=False, native_tall=False); details and hashes in evidence/monster-batch-ad-20260930/source-contracts.json. base BASE_NPC_ORC_GORBAT (humanoid/orc, faction orc-pride, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; resolvers.racial() only adds orc levelup talents (the racial doll belongs to random bosses, see the evidence); the base calls resolvers.sustains_at_birth() (Resolve is passive; Antimagic Shield is the only sustained talent and is a particle-and-shield buff (shader_shield particles only, no actor shader); the leaf also sets power_source antimagic); resolvers.equip a waraxe, a shield and massive armour (equipment only, no moddable_tile); resolvers.inscriptions picks infusions (no display write); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ad-20260930/source-contracts.json",
+          "sha256": "fb4815f3439287c0d34c0368fe774009c09353228bd77f5d4b1240785023bb74"
+        }
+      ]
+    }
+  ]
+}

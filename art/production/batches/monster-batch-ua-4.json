@@ -1,0 +1,312 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ua-4",
+  "assets": [
+    {
+      "asset_id": "gorbat",
+      "native_name": "Gorbat, Supreme Wyrmic of the Pride",
+      "scope": "UA class b unique; game/modules/tome/data/zones/gorbat-pride/npcs.lua:35",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/gorbat-pride/npcs.lua",
+          "sha256": "5cdb350a6980797a3af55b4969ff0f8179ca3f1cc2dfa546c8ab8275569ff009",
+          "line": 35,
+          "anchor": "name = \"Gorbat, Supreme Wyrmic of the Pride\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC_GORBAT\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+          "line": 33,
+          "anchor": "e.name = rng.table{_t\"gloomy"
+        },
+        {
+          "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+          "line": 46,
+          "anchor": "e.name = rng.table{_t\"dreaming"
+        },
+        {
+          "path": "game/modules/tome/data/timed_effects/magical.lua",
+          "sha256": "10de292fffb104890909a9a1ec40a7453234a79fc7f267e3b754c0d290aa7b3b",
+          "line": 1120,
+          "anchor": "name = \"PHOENIX_EGG\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/misc/npcs.lua",
+          "sha256": "dc640c1af5d22a45472d843380c9de01334530b3831bd2b9fe88ee0cba3abc23",
+          "line": 1415,
+          "anchor": "list.GRGGLCK_TENTACLE"
+        },
+        {
+          "path": "game/modules/tome/data/talents/misc/horrors.lua",
+          "sha256": "0690eca57ddb8ebe78694f63ff7587798fa7432fde6e6b6ae32000255ab19292",
+          "line": 623,
+          "anchor": "--Ak'Gishil"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_gorbat__supreme_wyrmic_of_the_pride.png",
+          "sha256": "4f88d71a29b6ee32180197ac2c5d8f2d1cf83cea6e80ab113c38f5c1f15961d1",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 128]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ua/refs/orc-bosses.png",
+          "sha256": "b28cc2d3c5ad1824d0649636a539348e41f68754b0d4f0431a96ec67ccb71e82",
+          "role": "family",
+          "note": "Shipped siblings in row order: orc-berserker, orc-elite-fighter, orc-master-wyrmic, fiery-orc-wyrmic, icy-orc-wyrmic, orc-high-pyromancer, orc-high-cryomancer, golbug, massok. Structural boss distinction, not colour-only; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A supreme ORC WYRMIC lord with pale green scaly tusked face, clawed hands, TWO small leathery dragon wings folded high behind his shoulders, elaborate dragon-scale harness with ivory dragon-jaw shoulder plates and layered ceremonial scale skirt, gripping the native long dragon-headed POLEARM tucked diagonally across the chest. Broad pale bronze-silver armour highlights and mid-light green scales. Supreme physical regalia through jaw pauldrons, scale layers and a strong winged V-shaped silhouette, structurally richer than shipped fiery/icy/master orc wyrmics. No breath plume, dragon companion, crown or tactical badge. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Boss identity through the specified body proportions, structural anatomy, equipment and pose; never just recolour the shipped siblings. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light broad body masses and pale upper-left highlights.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Whole neutral disc stays at reference lightness; no colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exactly one nice_tile body at display_h=2/display_y=-1; unique=true admits native tall without native_tall flag. Exact static verification only.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ua/source-contracts.json",
+          "sha256": "b6c9fdda1e56d3b6b4bf53aafe00787697121e5831f5df8c1f9960c3f855d814"
+        }
+      ]
+    },
+    {
+      "asset_id": "grushnak",
+      "native_name": "Grushnak, Battlemaster of the Pride",
+      "scope": "UA class b unique; game/modules/tome/data/zones/grushnak-pride/npcs.lua:31",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/grushnak-pride/npcs.lua",
+          "sha256": "8799da1ba86651e729a0c42e8b381cd8a258450900a47802b7e1edd2195d3ad1",
+          "line": 31,
+          "anchor": "name = \"Grushnak, Battlemaster of the Pride\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC_GRUSHNAK\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+          "line": 33,
+          "anchor": "e.name = rng.table{_t\"gloomy"
+        },
+        {
+          "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+          "line": 46,
+          "anchor": "e.name = rng.table{_t\"dreaming"
+        },
+        {
+          "path": "game/modules/tome/data/timed_effects/magical.lua",
+          "sha256": "10de292fffb104890909a9a1ec40a7453234a79fc7f267e3b754c0d290aa7b3b",
+          "line": 1120,
+          "anchor": "name = \"PHOENIX_EGG\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/misc/npcs.lua",
+          "sha256": "dc640c1af5d22a45472d843380c9de01334530b3831bd2b9fe88ee0cba3abc23",
+          "line": 1415,
+          "anchor": "list.GRGGLCK_TENTACLE"
+        },
+        {
+          "path": "game/modules/tome/data/talents/misc/horrors.lua",
+          "sha256": "0690eca57ddb8ebe78694f63ff7587798fa7432fde6e6b6ae32000255ab19292",
+          "line": 623,
+          "anchor": "--Ak'Gishil"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_grushnak__battlemaster_of_the_pride.png",
+          "sha256": "c68da1c01d4374cc0be19230d59f01c8b4cc8646f086da25da33dc8a8ea908f0",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ua/refs/orc-bosses.png",
+          "sha256": "b28cc2d3c5ad1824d0649636a539348e41f68754b0d4f0431a96ec67ccb71e82",
+          "role": "family",
+          "note": "Shipped siblings in row order: orc-berserker, orc-elite-fighter, orc-master-wyrmic, fiery-orc-wyrmic, icy-orc-wyrmic, orc-high-pyromancer, orc-high-cryomancer, golbug, massok. Structural boss distinction, not colour-only; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An old massive battle-scarred orc BATTLEMASTER with bare pale grey-green tusked head, thick neck, ornate heavy ribbed steel plate, asymmetrical broad layered pauldrons, engraved metal belt and short torn ceremonial war mantle. ONE huge notched broad GREATSWORD, blade held low horizontally across both thighs, massive planted stance and scarred exposed forearms. Bright worn silver upper plates and mid-light skin. More imposing layered regalia than ordinary berserker or fighter; low horizontal two-hand sword, bare head and broad planted stance distinguish Gorbat winged scale-polearm lord and Ukruk upright sword-shield. No crown. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Boss identity through the specified body proportions, structural anatomy, equipment and pose; never just recolour the shipped siblings. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light broad body masses and pale upper-left highlights.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Whole neutral disc stays at reference lightness; no colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Flat single 64x64 native image. Exact static verification only.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ua/source-contracts.json",
+          "sha256": "b6c9fdda1e56d3b6b4bf53aafe00787697121e5831f5df8c1f9960c3f855d814"
+        }
+      ]
+    },
+    {
+      "asset_id": "vor",
+      "native_name": "Vor, Grand Geomancer of the Pride",
+      "scope": "UA class b unique; game/modules/tome/data/zones/vor-pride/npcs.lua:30",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/vor-pride/npcs.lua",
+          "sha256": "56bbf54ee15ba9811c60194c5de208dec126310085f98e650da312d2c632b213",
+          "line": 30,
+          "anchor": "name = \"Vor, Grand Geomancer of the Pride\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-vor.lua",
+          "sha256": "7ef30e07dd59c5784f06b8faa7e038ca27e4e2754671c3949f416b54450bd458",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC_VOR\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+          "line": 33,
+          "anchor": "e.name = rng.table{_t\"gloomy"
+        },
+        {
+          "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+          "line": 46,
+          "anchor": "e.name = rng.table{_t\"dreaming"
+        },
+        {
+          "path": "game/modules/tome/data/timed_effects/magical.lua",
+          "sha256": "10de292fffb104890909a9a1ec40a7453234a79fc7f267e3b754c0d290aa7b3b",
+          "line": 1120,
+          "anchor": "name = \"PHOENIX_EGG\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/misc/npcs.lua",
+          "sha256": "dc640c1af5d22a45472d843380c9de01334530b3831bd2b9fe88ee0cba3abc23",
+          "line": 1415,
+          "anchor": "list.GRGGLCK_TENTACLE"
+        },
+        {
+          "path": "game/modules/tome/data/talents/misc/horrors.lua",
+          "sha256": "0690eca57ddb8ebe78694f63ff7587798fa7432fde6e6b6ae32000255ab19292",
+          "line": 623,
+          "anchor": "--Ak'Gishil"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_vor__grand_geomancer_of_the_pride.png",
+          "sha256": "d04c5d85013d23f0b289dea03a460009ac7ebd18011c008f082d1280c1fb3f30",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ua/refs/orc-bosses.png",
+          "sha256": "b28cc2d3c5ad1824d0649636a539348e41f68754b0d4f0431a96ec67ccb71e82",
+          "role": "family",
+          "note": "Shipped siblings in row order: orc-berserker, orc-elite-fighter, orc-master-wyrmic, fiery-orc-wyrmic, icy-orc-wyrmic, orc-high-pyromancer, orc-high-cryomancer, golbug, massok. Structural boss distinction, not colour-only; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An elderly orc GRAND GEOMANCER with wrinkled pale olive face in sumptuous layered multicoloured robes: broad ivory-gold embroidered collar, pale blue and muted crimson heavy panels, wide sculpted sleeves and tiered ash-cream hem. Native physical Crown of the Elements is a low ornate METAL headband with three large inset mineral facets attached to the head, never a floating badge. One short ornate crystal-tipped staff held upright close to his body, free hand raised to cast. Broad mid-light robe planes and pale face. Rich stepped robe architecture, wide collar, mineral staff and attached circlet versus plain hooded pyromancer/cryomancer; no loose ice shards, ground fire, lightning aura or rank graphics. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Boss identity through the specified body proportions, structural anatomy, equipment and pose; never just recolour the shipped siblings. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light broad body masses and pale upper-left highlights.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Whole neutral disc stays at reference lightness; no colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Flat single 64x64 native image. Exact static verification only.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ua/source-contracts.json",
+          "sha256": "b6c9fdda1e56d3b6b4bf53aafe00787697121e5831f5df8c1f9960c3f855d814"
+        }
+      ]
+    }
+  ]
+}

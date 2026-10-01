@@ -1,0 +1,69 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "multi-hued-drake-hatchling": 106.32,
+    "multi-hued-drake": 118.86,
+    "greater-multi-hued-wyrm": 72.84,
+    "shadow-claw": 76.64,
+    "shadow-caster": 67.38,
+    "multi-hued-crystal": 126.32,
+    "shimmering-crystal": 145.15
+  },
+  "floors": {
+    "korpul stone A (dreadfell, vor-armoury)": 131.66,
+    "crystal floor (scintillating-caves)": 104.14,
+    "cave rock (ardhungol, keepsake cave)": 130.64,
+    "underwater floor (lake-nur)": 129.4,
+    "rak-shor floor (rak-shor-pride)": 163.04,
+    "gothic stone (conclave-vault nearest)": 145.44,
+    "snow ground": 175.0,
+    "grass": 108.97,
+    "caldera": 96.54,
+    "burnt ground": 72.7,
+    "void floor": 163.25
+  },
+  "zone_floors": {
+    "multi-hued-drake-hatchling": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.66,
+      "cave rock (ardhungol, keepsake cave)": 130.64,
+      "snow ground": 175.0,
+      "grass": 108.97,
+      "caldera": 96.54,
+      "burnt ground": 72.7
+    },
+    "multi-hued-drake": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.66,
+      "cave rock (ardhungol, keepsake cave)": 130.64,
+      "snow ground": 175.0,
+      "grass": 108.97,
+      "caldera": 96.54,
+      "burnt ground": 72.7
+    },
+    "greater-multi-hued-wyrm": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.66,
+      "cave rock (ardhungol, keepsake cave)": 130.64,
+      "snow ground": 175.0,
+      "grass": 108.97,
+      "caldera": 96.54,
+      "burnt ground": 72.7
+    },
+    "shadow-claw": {
+      "cave rock (ardhungol, keepsake cave)": 130.64,
+      "grass": 108.97
+    },
+    "shadow-caster": {
+      "cave rock (ardhungol, keepsake cave)": 130.64,
+      "grass": 108.97
+    },
+    "multi-hued-crystal": {
+      "crystal floor (scintillating-caves)": 104.14,
+      "grass": 108.97
+    },
+    "shimmering-crystal": {
+      "crystal floor (scintillating-caves)": 104.14,
+      "grass": 108.97
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

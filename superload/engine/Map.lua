@@ -38,6 +38,44 @@ function _M:checkEntity(x,y,pos,what,...)
  if before and self(x,y,pos)~=before then Terrain.s11Changed(self,x,y,before) end
  return result
 end
+-- Native remembers(x,y,true) outside FOV (debug "Reveal all map", magic
+-- mapping, detection) never calls updateMap, so a cell render() blanked as
+-- unknown stayed blank. Queue those cells and rebuild them once at tick end.
+-- The queue is weak-keyed and never stored on the map, so it cannot enter a save.
+local revealQueues=setmetatable({},{__mode='k'})
+local function flushRevealed(self)
+ local queue=revealQueues[self]
+ revealQueues[self]=nil
+ if not queue or not active(self) then return end
+ local cells={}
+ for key in pairs(queue) do cells[#cells+1]=key end
+ table.sort(cells)
+ Terrain.revealRemembered(self,cells)
+ for _,key in ipairs(cells) do self:updateMap(key%self.w,math.floor(key/self.w)) end
+end
+local loaded=_M.loaded
+function _M:loaded(...)
+ local result=loaded(self,...)
+ local mt=getmetatable(self.remembers)
+ local base=mt and mt.__call
+ if base then
+  mt.__call=function(t,x,y,v)
+   local inside=v and x and y and x>=0 and y>=0 and x<self.w and y<self.h
+   local before=inside and t[x+y*self.w]
+   local r=base(t,x,y,v)
+   if inside and not before and active(self) and not Terrain.visible(self,x,y) then
+    local queue=revealQueues[self]
+    if not queue then
+     queue={};revealQueues[self]=queue
+     game:onTickEnd(function() flushRevealed(self) end)
+    end
+    queue[x+y*self.w]=true
+   end
+   return r
+  end
+ end
+ return result
+end
 -- Native FOV callbacks remain authoritative; refresh only terrain actually seen.
 for _,name in ipairs{'apply','applyLite','applyExtraLite'} do
  local base=_M[name]

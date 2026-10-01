@@ -1,6 +1,58 @@
 # 当前进度与续接入口
 
-更新时间：2026-09-30。接续开发先读本文；已验证交付、历史结果与未完成范围分别记录。
+更新时间：2026-10-01。接续开发先读本文；已验证交付、历史结果与未完成范围分别记录。
+
+## 当前交付：0.6.32 —— 怪物 Batch AD–UB2（462 款）、召唤别名／时空复制与地形可读性发布（2026-10-01；按本任务要求不推送、不建 GitHub release）
+
+- 纳入已提交的怪物 Batch AD、AE、AF、AG、UA、TA-1、UB-1、UB-2（棋子目录 376→**462** 款，共 86 款；无新增地形）。版本提交 `42ff9833`（`init.lua`、`data/token-manifest.json`、`tools/package_external_test.py`、`docs/external-test-v0632/`）；发布文档与证据为其后的发布提交。规则要点：召唤别名（野性天赋蜘蛛体、void shard、orc spirit、Vilespawn、Risen Ghoul、walking corpse、Blood-Edge animated blood）只认原生构造函数字段；Vilespawn／animated blood 用固定 blight 100／nature -100 抗性对；悖论分身覆盖全目录非唯一怪；唯一怪与 define_as 演员保持原生。
+- 修复 Debug“地图全开”／魔法探图揭示的石质格空白（`3ed95542`）。地形可读性：黑暗之心／深渊咆哮清晰俯冲墙顶（`b79d6682`），沙虫巢穴／迷宫／闪光洞穴墙（`0f25ef8d`），Kor'Pul 暖地冷砖保 luma 色相分离（`96243418`）。
+- 构建：包均由 `git archive HEAD`（`42ff9833`）的干净解压构建。TEAA **2,449** 个成员逐字节匹配 `git show HEAD:<path>`，**2,421** 张 PNG 全为 ZIP_STORED，28 个 Lua／JSON 压缩；顶层白名单仅 init.lua、COPYING、data、hooks、overload、superload。**dist TEAA** SHA256 `a55b20ac8e7418afff542fdc7a212c98012a7615537c0e82f1a5d8f38bdc643b`（70,080,254 字节）；**外测 ZIP** SHA256 `fa8920be20ce7ebf3c65c29a1fa81714aec0131a35742d4c1d69f3de105b7171`（70,175,587 字节）；HUD 0.2.7 TEAA 沿用未重建（`4592696e…8675bb1`）；**全 STORED 发布 TEAA** `tome-checker-revised-0.6.32.teaa`（2,449 文件条目、零日期、无目录条目，位于 `tmp/rel0632/release/`，不入库）SHA256 `23050938fc5726a1052d7e82aac983a8578d9ea553224b0aaae5a61486f0f2da`（70,599,936 字节），成员逐字节匹配源码。
+- 门禁（`git archive HEAD` 隔离副本）：纯 Lua **21** 个脚本（`token_mapping` **38,132**、`terrain_contract` **17,277** 项）；生产测试 **487** 项；死资产审计零；`git diff --cached --check`（排除 `evidence/`、handoffs）通过。地名核对：地形说明 73 个区域／城镇名对照 `mod-tome.lua` 全部命中，无修正。
+- 安装后冒烟：全 STORED 发布包安装到隔离夹具，9 场独立冷启动（8 个怪物阵容 + 1 个地形场次 3 区）：AD／AE／AF／AG／UA 阵容（英文）、UB-1 高图阵容（英文）、UB-2 阵容（zh_hans）、TA-1 全阵容（英文）、黑暗之心 gloomy／dreamy 与深渊咆哮 L1（地形，原生回退 0／0／0）；**0** 个 Lua 错误，进程均已停止，105 张怪物裁切与 12 张地形裁切人工核对。证据见 [runtime-v0632](evidence/runtime-v0632/README.md)。
+- 已知限制：竞技场与无尽地下城不含；Eidolon Plane、Stellar System、梦境 L2 保持原生；旧存档中的城镇／区域保持原生；冒烟为归档安装＋暂停夹具场景，未验证完整战役跨进程读档、自然连续战斗或其他游戏版本；其余沿 0.6.31。
+
+## 怪物 Batch UA 安装包实机检查（2026-10-01；未升版、未发布）
+
+- 干净 `git archive HEAD`（`497ad85d`，含 `ca468455` 与四款返工）副本仅构建一个 0.6.31 TEAA；2416 成员逐字节匹配、2388 PNG 全 STORED。SHA256 `61de8c45e56f49dfc469eba3f1094814e39fbdba0d119cb3aeab04a04f70fe4f`。新增 `--batch ua`，只测试该归档，工作树产品代码未参与；34 个既有场景定义与 AE／AF／AG 历史 verdict 不变。
+- **本轮请求检查全部 PASS**：隔离离线夹具、shader 开、1920×1080、48／64／96；十二首领英文／简体阵列、每尺寸两轮开关，identify＝rendered；七 native-tall 单棋子，无原生高图叠画；unique／boss／elite_boss 徽记独立，rank=2 夹具对照移除徽记而十二棋子图仍在。
+- 四返工首领与已发布同族并排，48px 结构可辨；Rungof 原生黑暗之心两分支六前缀（实际英文／简体回调）均戴 rungof；Phoenix 原生蛋效果启用后回退蛋图、移除后恢复 phoenix；Shade 保留 unique_glow 原生；Grushnak 与 Phoenix 缺失／错误 define_as 均原生。
+- 七最终场景 0 Lua／step 错误；首轮同族源选择器、前缀回调 Talents 环境错误仅修夹具工具后重跑，含两次替代场景共九次冷启动均停止（只核查 session processes.json 的 PID 与 /proc/cmdline）。人工打开全部 65 裁切与 23 联系表，PNG 入库，完整截图仅留 R18-scratch。无产品／美术／门限修改。仅暂停放置场景与实际效果回调，不宣称自然战斗复活、整局读档或独立 HUD。详见 [UA 实机证据](evidence/monster-batch-ua-live-20261001/README.md)。
+
+## 怪物 Batch AG 与 Blood-Edge 修复安装包实机检查（2026-10-01；未升版、未发布）
+
+- 干净 `git archive HEAD`（`2d9af41e`，含 `0e634a44`、caster 返工与 `c15b61f8` Blood-Edge 修复）副本仅构建一个 0.6.31 TEAA；2404 成员逐字节匹配、2376 PNG 全 STORED。SHA256 `065caf04bfcf58c16552eca3c0d7179eea3ef71233f1ee3ac150596903ca4e84`。并行 UA 工作树代码未参与；新增 `--batch ag`，旧场景定义和 AE／AF 历史 census verdict 不变。
+- **本轮请求检查全部 PASS**：隔离离线夹具、shader 开、1920×1080、48／64／96；七身份英文／简体阵列与两轮开关，greater wyrm 高图单棋子，两款同名 shadow claw 按 SHADOW_CLAW／SHADOW_CASTER 并排各戴自己的棋子；缺失／错误 define_as、非 nil shader_args／其他 shader、Ambush 原生 helper 的 shadowy assassin 与 dreaming horror 均原生回退。原生 makeParadoxClone 的 multi-hued drake／SHADOW_CASTER 戴正确棋子，原生倒计时到期后原体仍在。
+- `nicer_tiles` 开：drakes 无 shader、crystals 为 `quad_hue`；关：三 drakes 与两 crystals 均为 `quad_hue`、nil args。每尺寸三帧间隔 0.887–1.207s：完整棋子格逐像素不变，replacement Entity 不继承 shader；关棋子后原生 quad_hue 图像随时间变色，验证装饰色循环不染棋子底盘／本体。
+- **Blood-Edge 修复实机通过**：真实 artifact special_on_hit proc 英文 `max_vim=256`、简体 `活化血液`／`max_vim=260`，均 identify＝rendered＝animated-blood，48／64／96 可见。未改 15% 概率、产品代码、门限或地板；历史 AF FAIL 记录保留，详见新证据。
+- 七最终场景 0 Lua／step 错误；含三次工具／补图重跑共十次冷启动全部停止。人工打开全部 108 最终裁切、18 全量与 6 关键联系表；本轮按用户要求 **裁切 PNG 与联系表入库，完整截图不入库**。仅暂停放置场景；assassin 调用原生 Ambush summon helper，未铺设／触发整场陷阱；无连续战斗／整局读档／独立 HUD 结论。详见 [AG 实机证据](evidence/monster-batch-ag-live-20261001/README.md)。
+
+## 怪物 Batch AF 安装包实机检查（2026-10-01；未升版、未发布）
+
+- 干净 `git archive HEAD`（`0b2b855f`，含 AF 原稿与返工）副本，仅构建一个 0.6.31 TEAA；2397 成员逐字节匹配、2369 PNG 全 STORED；SHA256 `6d32c8f1212246bf8fc7e6ec995da43fcfb375588e1137c41d621f64fb8f9418`。并行 AG 工作树改动未参与。隔离夹具，shader 开、1920×1080、48/64/96；新增 `--batch af`，AE 原有 census 回归仍通过。
+- 九款池演员身份／两轮开关、六款 native_tall 单棋子无原生高图叠画、英文／简体阵列、radiant／luminous 对照、四档 lich、maelstrom 原生冰 aura 与 snowfall、archlich 原生 makeParadoxClone 及自然召唤倒计时、dreaming horror 保留 shadow_simulacrum 均通过。nicer_tiles 关：五款仍戴棋子，animated blood 按已记录缺图合同回退原生红 h。
+- **总体 FAIL：Blood-Edge 真实 proc 的活化血液召唤物在英文与 zh_hans 均不戴棋子**。英文 `native-tall-changed`，简体 `no-art`；独立英文诊断实际 `max_vim=256`，产品 guard 要求严格 200，存在已证明的 guard 不匹配。未修改产品代码／门限／地板。后续须由产品负责人处理召唤路径，不宣称 AF 召唤物完成。
+- 人工打开全部 97 候选裁切，94 张接受；额外 guard 诊断 3 张太暗已移 scratch 拒绝区，不作视觉证据。有效中英文召唤图清晰显示原生回退。最终 12 场景 0 Lua／step 错误，含重试共 14 次冷启动进程全部停止；仅暂停夹具场景，无自然连续战斗／整局读档／独立原生 HUD 结论。详见 [实机证据](evidence/monster-batch-af-live-20261001/README.md)；PNG 不入库。
+
+## 地形地墙分离：Kor’Pul／Kor’Pul-dark 色相分离（2026-10-01；未升版、未发布）
+
+- 既有门禁把地板与墙的明度都锁死：地板 luma 受 Conclave／S8 暗砖／TW7 道路／Gothic 地板夹在约 124–138（p0）、116–120（p1）；暗砖须 ≥79 且为亮砖的 0.55–0.66。因此改用保 luma 的色相分离，每像素 PIL 灰度不变，所有既有明度门禁读数不变，也未改任何门限。`art/terrain-contrast-v1/korpul.py` 做法：地板 a／b 暖砂岩（RGB 增益 1.08／0.99／0.82）；可挖亮砖及其门框冷灰（0.93／1.00／1.14）；暗砖逐字节不变；门格中原地板像素与新地板逐像素一致。零 ImageGen，运行 Lua 不变。
+- floor-a 对墙 CIELAB ΔE（p0／p1）：korpul 10.4／9.6→**28.9／26.5**；korpul-dark 19.3／17.7→**28.2／26.0**；hardwall 16.9／15.5→27.6／25.4；Maze（地板即 korpul floor-a）32.2／29.5→36.4／33.4。暗砖明度台阶保持 15.2／14.0 L*；亮砖受门禁约束仍比地板亮约 9 L*，靠暖地冷墙分离（Δb* 27）。新增 `tests/production/test_korpul_contrast.py`。
+- 共用文件：slime 侵蚀边（30）、墓园棺材／陵墓路面（6）随新地板重导以免接缝；batch4／batch5／洞穴门／S8 自检改读 `frozen-inputs/korpul` 冻结基线，重导逐字节不变。
+- 实机：隔离夹具，干净 `git archive` TEAA，shader 开，1920×1080，48／64／96 与记忆区 64px。场景为 Kor’Pul L1 两布局、Rhaloren L1、Maze、Derth（取景落在湖与树）、墓园 L2，均 0 原生回退，裁切已人工看图。门禁：20 个 Lua 脚本、429 项生产测试、死资产审计均通过。详见 [证据](evidence/korpul-contrast-20261001/README.md)、[REVIEW](art/terrain-contrast-v1/REVIEW.md)。
+
+## 地形地墙分离检查（2026-10-01；未升版、未发布）
+
+- 本轮完成 sand、maze old-wall、crystal **96 张墙 PNG**的既有母版重导；零 ImageGen，地板／门／锁／楼梯、gloom、运行代码与规则不变。sand 恢复母版真实岩面纹理，三族增加露边亮唇／接触暗边。p0 平均 CIELAB ΔE：sand 27.1→37.0、maze 11.9→32.2、crystal 23.7→36.7；两奇偶新增 ΔE≥25／L*差≥24 门禁。具体指标与确定性重导路径见 [REVIEW](art/terrain-contrast-v1/REVIEW.md)。
+- 隔离夹具、干净 git archive HEAD 副本 TEAA，shader 开、1920×1080，四区 before／after 冷启动，48／64／96 与记忆区 64px 裁切已人工看图；Kor’Pul 是不改图对照。地图在两次启动间不同，不宣称像素配准。包逐字节／PNG STORED 核查及其他精修资产字节冻结见 [证据](evidence/terrain-contrast-20261001/README.md)。
+- 门禁：`git checkout-index` 隔离副本 20 个纯 Lua 脚本、405 项生产测试、死资产审计与暂存 diff 检查通过；隔离副本怪物文件逐字节等于本轮基线 HEAD，未混入 AD。
+- ~~PENDING waiver request：Kor’Pul／Kor’Pul-dark~~ **已解决**（见下节），无需豁免。
+
+## 地形返工：黑暗之心／深渊咆哮菌林墙清晰化与地墙分离（2026-09-30；未升版、未打包）
+
+- 用户反馈“黑暗之心这张图的墙看起来有点模糊”，另有试玩反馈 gloomy／plain 地板与墙颜色太近。模糊根因：`art/terrain-gloom-v1/export.py` 的旧 `vegetation_wall()` 把整张侧视菌墙道具压进每格，向墙邻居拉伸 18px 边条，并对三／四面接墙格叠加 `GaussianBlur(9)`（掩码 7/11/13/14 混 46%，全封闭掩码 15 混 **78%**）；实机 L1 墙格中掩码 15 占 55–75%。分离根因：糊墙均值几乎等于地板（gloomy 墙 57–65 vs 地板 68.6），地下墙格与记忆地板同样昏暗，实机记忆区 gloomy 地板／墙中位 34.4／32.4。plain（深渊咆哮）同一函数；兽人育种棚 `gloom/pit` 不在范围且字节不变。
+- 新增两张俯视菌盖墙顶母版（`handoffs/heart-gloom-3`，`terrain-floor`；plain 由 gloomy 母版按既有 `plain()` 调色）。ImageGen **2 次**（gpt-6.1-sol＋ephemeral，串行），均首轮入库，无返修、无豁免、未改门限。墙体按哥特／晶洞墙语言合成：每掩码／奇偶固定 400px 窗口清晰缩放（无模糊、无拉伸）；北／西露边亮唇、东侧阴影、南侧唯一立面为原侧视母版的等比菌柄带；三／四面接墙格用起伏最小的窗口；奇偶 1 先对齐奇偶 0 均值再乘原 0.895。地板与 creep 同倍提亮（gloomy 1.42、dreamy 1.06、plain 1.32），关系与奇偶比不变。floor0／wall-15 平均 CIELAB ΔE：gloomy 7.7→**27.9**、plain 6.0→**28.7**、dreamy 16.0→**28.5**（奇偶 1 最低 25.2）。文件名、掩码位、奇偶合同与运行代码不变。批次 5 育种棚所用旧 plain `floor0`／`wall-15-0`／`wall-0-0` 冻结到 `art/terrain-batch5-v1/frozen-inputs/`，重导 106 个文件字节不变。详见 [美术复核](art/terrain-gloom-v1/REVIEW.md#wall-rework-crisp-canopy-walls-and-floorwall-separation-2026-09-30)。
+- 实机（隔离夹具，干净副本打包的 TEAA，shader 开、1920×1080，前后各一次冷启动）：黑暗之心 L1 gloomy／dreamy 与深渊咆哮 L1，受支持格 2,499／2,500／2,499，原生回退 0；48/64/96px 墙体清晰；记忆区地板／墙中位 gloomy 34.4/32.4→53.0/22.8、深渊咆哮 38.2/31.5→50.1/21.1。前后两次地图随机不同（同区同层同皮肤）。详见 [实机证据](evidence/gloom-walls-20260930/README.md)。
+- 门禁（`git checkout-index` 隔离副本）：非 live 纯 Lua 20 个脚本、生产测试、死资产审计、`git diff --cached --check`（排除 evidence 与 handoffs）通过。
 
 ## 当前交付：0.6.31 —— 怪物 Batch Z–AC（376 款）发布（2026-09-30；按本任务要求不推送、不建 GitHub release）
 

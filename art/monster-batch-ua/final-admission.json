@@ -1,0 +1,38 @@
+{
+  "accepted_ids": [
+    "kra-tor",
+    "khulmanar",
+    "rungof",
+    "grgglck",
+    "queen-ant",
+    "ak-gishil",
+    "ninandra",
+    "phoenix",
+    "ukruk",
+    "gorbat",
+    "grushnak",
+    "vor"
+  ],
+  "native": {
+    "the-shade": "Unsupported actor shader unique_glow; no image call or mapping."
+  },
+  "art_review": "accepted static 48/64/96 colour/grayscale and real-floor sheets; no game launch",
+  "body_minimum": 65.0,
+  "descriptive_floor_baseline": 45.0,
+  "calls": 17,
+  "recorded_masters": 15,
+  "provenance_rejections": 2,
+  "waivers": [],
+  "selected_masters": 12,
+  "coordinator_rework": {
+    "parent_commit": "ca468455",
+    "additional_calls": 4,
+    "outcomes": "4 recorded masters; 3 structural external-review refinements and 1 successful Grushnak infrastructure retry",
+    "superseded_selected_masters": [
+      "masters/rungof-v1.png",
+      "masters/ninandra-v1.png",
+      "masters/grgglck-v1.png"
+    ],
+    "grushnak_native_hold": "SUPERSEDED by explicit coordinator instruction; no-path failures were infrastructure failures. Fresh authorized retry recorded and passed."
+  }
+}

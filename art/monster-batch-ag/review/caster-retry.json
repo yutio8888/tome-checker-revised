@@ -1,0 +1,21 @@
+{
+  "classification": "RETRY",
+  "first_call": "art/production/handoffs/monster-batch-ag-3/shadow-caster/imagegen-calls/call-1/call.json",
+  "reason": "Base drift +8.61 exceeds frozen \u00b18; all other original gates passed. Viewed actual 128px export: hood and two psionic rings readable, plate noticeably lighter than sibling shadows.",
+  "rejected_native_alpha_master": "superseded/shadow-caster-v1.png",
+  "alpha_receipt_note": "art_tasks.record validates and preserves native alpha bytes only; accepted=false and visual/runtime pending. It is not a style acceptance and cannot enter runtime. This alpha-only rejected-draft receipt provides the edit target for the unchanged run_imagegen metric-repair path. Original rejected call.json is immutable.",
+  "next_action": "RETRY: both calls in this reviewed pack are spent. Stop this identity for a reviewed new design iteration; do not wash the count by a fresh directory, waive the result, repaint pixels or lower a threshold.",
+  "second_call": "art/production/handoffs/monster-batch-ag-3/shadow-caster/imagegen-calls/call-2/call.json",
+  "second_failure": "base_drift -18.88 exceeds unchanged \u00b18; no runtime admission",
+  "second_rejected_master": "superseded/shadow-caster-v2.png",
+  "runtime_decision": "SHADOW_CASTER retains native art; SHADOW_CLAW is independently admitted if all final gates pass.",
+  "resolution": {
+    "authority": "evidence/monster-batch-ag-rework-20261001/review-request.json",
+    "classification": "RESOLVED",
+    "call": "art/production/handoffs/monster-batch-ag-4/shadow-caster/imagegen-calls/call-1/call.json",
+    "selected_master": "masters/shadow-caster-v3.png",
+    "base_drift": -4.78,
+    "body_mean": 67.38,
+    "runtime_decision": "Admitted exact name + SHADOW_CASTER + native image; prior fields record the original rejected iteration."
+  }
+}

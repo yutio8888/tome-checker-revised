@@ -1,0 +1,119 @@
+{
+  "master": "art/monster-batch-ua/masters/ninandra-v2.png",
+  "sha256": "29ac901eee6cfb745f90d0cbde6277ea73512da0f5e8f41d546645ad18d1cfaf",
+  "body_luminance": 149.49,
+  "unchanged_body_minimum": 65.0,
+  "body_passed": true,
+  "style_gate": {
+    "asset_id": "ninandra",
+    "token": {
+      "path": "/workspace/t-engine4/game/addons/tome-checker-revised/art/monster-batch-ua/rework/candidates/ninandra-v2/128.png",
+      "sha256": "19d88989971e66ca19cecce3247109de461637e24a70ec62450ad8927522be53",
+      "sector_medians": [
+        68.63,
+        64.23,
+        62.15,
+        61.42,
+        61.64,
+        68.83,
+        73.5,
+        72.53
+      ],
+      "sector_offsets": [
+        -3.46,
+        -6.92,
+        -2.51,
+        -1.55,
+        -3.57,
+        1.78,
+        -0.83,
+        -3.89
+      ],
+      "base_drift": -2.99,
+      "max_sector_intrusion": 4.77,
+      "max_opaque_radius": 0.8576,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ring_samples": [
+        298,
+        303,
+        298,
+        303,
+        298,
+        303,
+        298,
+        303
+      ]
+    },
+    "master": {
+      "path": "art/monster-batch-ua/masters/ninandra-v2.png",
+      "sha256": "29ac901eee6cfb745f90d0cbde6277ea73512da0f5e8f41d546645ad18d1cfaf",
+      "format": "PNG",
+      "mode": "RGBA",
+      "native_alpha_channel": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    "findings": [
+      {
+        "check": "master_native_alpha",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255",
+        "mode": "RGBA",
+        "alpha_min": 0,
+        "alpha_max": 255
+      },
+      {
+        "check": "disc_overflow",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u6700\u5927\u4e0d\u900f\u660e\u534a\u5f84 0.858\uff08\u4e0a\u9650 0.867\uff09",
+        "value": 0.8576,
+        "limit": 0.867
+      },
+      {
+        "check": "base_drift",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u5e95\u76d8\u504f\u79fb\u4e2d\u4f4d -2.99\uff08\u5bb9\u5dee \u00b18\uff09",
+        "value": -2.99,
+        "limit": 8.0
+      },
+      {
+        "check": "subject_intrusion",
+        "level": "warning",
+        "ok": true,
+        "detail": "\u5355\u6247\u533a\u76f8\u5bf9\u672c\u6b3e\u4e2d\u4f4d\u6700\u5927\u4e0a\u504f +4.77\uff08\u5bb9\u5dee +20\uff09",
+        "value": 4.77,
+        "limit": 20.0
+      },
+      {
+        "check": "corner_alpha",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]",
+        "value": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "blocking": [],
+    "warnings": [],
+    "grandfathered": false,
+    "waived": false,
+    "notes": [],
+    "passed": true
+  }
+}

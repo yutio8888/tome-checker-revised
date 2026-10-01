@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ub1-rework-2",
+  "assets": [
+    {
+      "asset_id": "fallen-sun-paladin-aeryn",
+      "native_name": "Fallen Sun Paladin Aeryn",
+      "scope": "UB-1 rework; game/modules/tome/data/zones/high-peak/npcs.lua:243",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/high-peak/npcs.lua",
+          "sha256": "a92fb0a13938f79b0c2725a6c004f24a557ac139920af5f4790d4b998a448d02",
+          "line": 243,
+          "anchor": "name = \"Fallen Sun Paladin Aeryn\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_fallen_sun_paladin_aeryn.png",
+          "sha256": "f819f9f1b0ce3073a070c1f9a312d4042cb268b54828e6a8e06ed98eb572dd1a",
+          "role": "identity",
+          "note": "Exact native body 64x128; match its portrait."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub1/refs/native-sun-paladin-pair.png",
+          "sha256": "6e571eb91649e789c07795ac5b9a55a1d8e3c562bbae30342b85b0d380f6fe89",
+          "role": "family",
+          "note": "Native pair 2x nearest: the same character/creature in its two states."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A tall grim fallen paladin woman: BLACKENED BLOOD-STAINED plate armour in dark oxblood and charcoal, thick smeared blood down the chest and greaves, torn dark-crimson cloth. The whole figure is wrapped in a BROAD GLOWING BLOOD-RED AURA with a strong crimson rim light along every upper-left edge and a bright red halo behind the shoulders, so the body reads as a luminous red figure and NEVER as a black mass. Pale blonde hair and a pale gaunt hollow-eyed face catch the light. She holds a heavy two-handed greatsword POINT-DOWN in front of her, both hands on the hilt, the bloody blade bright silver-red with a broad pale reflection face, its tip near the ground. Hunched forward in a spent, heavy stance, weight over the sword, a long tattered dark-crimson cloak trailing to one side. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Fallen vs High Aeryn: a POINT-DOWN two-handed greatsword in a grim hunched stance, dark blood-soaked plate and a strong crimson aura, versus the High Aeryn's bright polished silver plate, upright one-handed sword and free open hand. Structure and value must separate them at 48px. The dark armour is carried by broad crimson glow and pale red rim highlights, never a black silhouette. Distinct from the broad dark Aluin knight by being a slender woman.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Dark blood-crimson and charcoal armour masses, but with broad luminous blood-red glow, strong crimson rim light, pale blonde hair and face, and a bright silver-red blade reflection.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. The disc is a NEUTRAL physical prop: render the charcoal-brown plate and its bronze-grey bevel at EXACTLY the style reference's own lightness, evenly all round, including the outer sixth ring band and the plate directly under and beside the creature. Add no contact shadow, glow, bounce light or colour spill onto the plate."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exactly one native-tall body: image=\"invis.png\" with one add_mos entry {image=npc/humanoid_human_fallen_sun_paladin_aeryn.png, display_h=2, display_y=-1}; unique=true admits it without a native_tall flag (Walrog/Kyless/Walrog precedent). No shader, moddable_tile, anim or add_displays anywhere in leaf/base. auto_classes, where present, only roll talents, never the drawn body. Coordinator-requested rework; see evidence/monster-batch-ub1-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub1-20261001/source-contracts.json",
+          "sha256": "de194706efbca841ca76782391ca8176477e057be5834457a9b1554f0bae47c6"
+        }
+      ],
+      "refinement": {
+        "supersedes": "fallen-sun-paladin-aeryn",
+        "previous_batch": "monster-batch-ub1",
+        "design_change_reason": "The first two reworks made Fallen Aeryn a bright silver mirror of the High Aeryn token. The native sprite is visibly corrupted, so the design direction changes from 'bright silver plate' to 'dark blood-stained plate carried by a crimson aura and rim light', with a point-down two-handed greatsword so Fallen and High separate by both structure and value at 48px.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-ub1/superseded/fallen-sun-paladin-aeryn-rework-v2.png",
+            "sha256": "e5a1dda59b0ebc7b69f73b1e6761cced4e831c01b2e0995a90cd3b039e33de9f"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-ub1-rework-1/fallen-sun-paladin-aeryn/receipts/attempt-2.json",
+            "sha256": "16e74205c61a09128d07990ac6c7c19129a2dda4e722cdfe5967161c2cda2fdf"
+          }
+        ]
+      }
+    }
+  ]
+}

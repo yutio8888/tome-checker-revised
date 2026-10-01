@@ -1,0 +1,208 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ub1-3",
+  "assets": [
+    {
+      "asset_id": "corrupted-daelach",
+      "native_name": "Corrupted Daelach",
+      "scope": "UB-1 native-tall unique/boss; game/modules/tome/data/zones/valley-moon/npcs.lua:27",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/valley-moon/npcs.lua",
+          "sha256": "9666a7b631d072504f5a2f11f2405c3e7eb85782509b8f7236529ccb97bbea9e",
+          "line": 27,
+          "anchor": "name = \"Corrupted Daelach\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_corrupted_daelach.png",
+          "sha256": "002d125d64ce642dc0501f7206d4ff281b7b9eb6cbd14be3a782458f9b794630",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 128]."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub1/refs/demons.png",
+          "sha256": "f84bbf91296deae18d6e7aa39536e3146206f355daafc01efa60a64ff9201d6f",
+          "role": "family",
+          "note": "Shipped siblings row order: daelach, lithfengel, kryl-feijan, uruivellas, champion-of-urh-rok, forge-giant. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A huge demon of shadow and fire: two enormous broad black leathery bat wings spread WIDE to either side and raised above the shoulders, a molten amber-orange body with a glowing chest core, a low horned demon head set forward between raised shoulders with a small pale-eyed face and burning mouth, arms ending in black smoking claws, and a short black tail. Fire stays on the body; no ground flames, no smoke curtain. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "The Corrupted Daelach has OPEN wings spread wide and a molten amber-orange fire body, versus the shipped daelach token's magenta hunched demon with FOLDED wings and a pink aura. Wing geometry (wide open vs folded) and the fire palette are the structural cue; also distinct from the brown spiky Lithfengel and the grey smoke Kryl-Feijan. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exactly one native-tall body: image=\"invis.png\" with one add_mos entry {image=npc/demon_major_corrupted_daelach.png, display_h=2, display_y=-1}; unique=true admits it without a native_tall flag (Walrog/Kyless/Walrog precedent). No shader, moddable_tile, anim or add_displays anywhere in leaf/base. auto_classes, where present, only roll talents, never the drawn body. Static source contract only; see evidence/monster-batch-ub1-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub1-20261001/source-contracts.json",
+          "sha256": "de194706efbca841ca76782391ca8176477e057be5834457a9b1554f0bae47c6"
+        }
+      ]
+    },
+    {
+      "asset_id": "supreme-archmage-linaniil",
+      "native_name": "Linaniil, Supreme Archmage of Angolwen",
+      "scope": "UB-1 native-tall unique/boss; game/modules/tome/data/zones/town-angolwen/npcs.lua:26",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/town-angolwen/npcs.lua",
+          "sha256": "d2855e0fe7a71cea1eccea75df71b1882331366be244393880fd20e7db6f2130",
+          "line": 26,
+          "anchor": "name = \"Linaniil, Supreme Archmage of Angolwen\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_linaniil_supreme_archmage.png",
+          "sha256": "6a4529a4e17e3007fc6a6b22123096dd452e8cfac4a532f771077078217b052e",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 128]."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub1/refs/archmages.png",
+          "sha256": "c3fdfab9f4d018788f151fac5dd16c891cebd06bbd924491549939e9bef6e390",
+          "role": "family",
+          "note": "Shipped siblings row order: elven-mage, rhaloren-inquisitor, necromancer, fillarel-aldaren, grand-corruptor, elven-blood-mage. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A tall regal sorceress with very long straight copper-red hair, pale skin and an intense forward stare; she wears a long flowing ivory-white silk robe with a slashed front panel over a pale inner under-robe and a long dark waist sash, bare arms. She holds a tall ornate silver-knobbed staff vertically in her right hand with its finial above her head, the left hand hanging open at her side. Slender full-height upright stance. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Linaniil is a full-height unhooded woman in a pale ivory robe with long copper-red hair and a tall ornate staff, versus the shipped grey hooded skeletal Necromancer and the purple hooded bearded Elven Mage. Bare head, hair colour, robe and staff distinguish her; not a colour swap of either. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exactly one native-tall body: image=\"invis.png\" with one add_mos entry {image=npc/humanoid_human_linaniil_supreme_archmage.png, display_h=2, display_y=-1}; unique=true admits it without a native_tall flag (Walrog/Kyless/Walrog precedent). No shader, moddable_tile, anim or add_displays anywhere in leaf/base. auto_classes, where present, only roll talents, never the drawn body. Static source contract only; see evidence/monster-batch-ub1-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub1-20261001/source-contracts.json",
+          "sha256": "de194706efbca841ca76782391ca8176477e057be5834457a9b1554f0bae47c6"
+        }
+      ]
+    },
+    {
+      "asset_id": "archmage-tarelion",
+      "native_name": "Archmage Tarelion",
+      "scope": "UB-1 native-tall unique/boss; game/modules/tome/data/zones/town-angolwen/npcs.lua:125",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/town-angolwen/npcs.lua",
+          "sha256": "d2855e0fe7a71cea1eccea75df71b1882331366be244393880fd20e7db6f2130",
+          "line": 125,
+          "anchor": "name = \"Archmage Tarelion\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_shalore_archmage_tarelion.png",
+          "sha256": "ffca6781b66b5327d600c322b09a900d94002e70358ac238180e9f1a1b093bc8",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 128]."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub1/refs/archmages.png",
+          "sha256": "c3fdfab9f4d018788f151fac5dd16c891cebd06bbd924491549939e9bef6e390",
+          "role": "family",
+          "note": "Shipped siblings row order: elven-mage, rhaloren-inquisitor, necromancer, fillarel-aldaren, grand-corruptor, elven-blood-mage. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A tall calm shalore archmage: a slender elf with pale ivory skin, long silver-white hair, pointed ears, and a deep sapphire-blue layered robe with a tall stiff standing collar, broad shoulders, pale blue-white inner panels and wide draped sleeves. Both arms are held relaxed at his sides with open empty hands; no staff, no weapon. Full-height upright serene stance. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Tarelion is a full-height unarmoured elf in a deep blue layered robe with a tall collar and no staff, versus the purple hooded bearded Elven Mage, the blue armoured sword-carrying Rhaloren Inquisitor and the grey hooded Necromancer. Collar, empty hands and blue robe are the cue. Distinct from Linaniil (ivory robe, staff, red hair, female). No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exactly one native-tall body: image=\"invis.png\" with one add_mos entry {image=npc/humanoid_shalore_archmage_tarelion.png, display_h=2, display_y=-1}; unique=true admits it without a native_tall flag (Walrog/Kyless/Walrog precedent). No shader, moddable_tile, anim or add_displays anywhere in leaf/base. auto_classes, where present, only roll talents, never the drawn body. Static source contract only; see evidence/monster-batch-ub1-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub1-20261001/source-contracts.json",
+          "sha256": "de194706efbca841ca76782391ca8176477e057be5834457a9b1554f0bae47c6"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub1/refs/tarelion-probe.md",
+          "sha256": "151f17e367b941140ad63fa730832fc120b9b4992aa0e056c501ec6373855e8c"
+        }
+      ]
+    }
+  ]
+}

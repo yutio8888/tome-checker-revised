@@ -1,0 +1,312 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ua-2",
+  "assets": [
+    {
+      "asset_id": "grgglck",
+      "native_name": "Grgglck the Devouring Darkness",
+      "scope": "UA class b unique; game/modules/tome/data/general/npcs/horror.lua:970",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 970,
+          "anchor": "name = \"Grgglck the Devouring Darkness\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+          "line": 33,
+          "anchor": "e.name = rng.table{_t\"gloomy"
+        },
+        {
+          "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+          "line": 46,
+          "anchor": "e.name = rng.table{_t\"dreaming"
+        },
+        {
+          "path": "game/modules/tome/data/timed_effects/magical.lua",
+          "sha256": "10de292fffb104890909a9a1ec40a7453234a79fc7f267e3b754c0d290aa7b3b",
+          "line": 1120,
+          "anchor": "name = \"PHOENIX_EGG\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/misc/npcs.lua",
+          "sha256": "dc640c1af5d22a45472d843380c9de01334530b3831bd2b9fe88ee0cba3abc23",
+          "line": 1415,
+          "anchor": "list.GRGGLCK_TENTACLE"
+        },
+        {
+          "path": "game/modules/tome/data/talents/misc/horrors.lua",
+          "sha256": "0690eca57ddb8ebe78694f63ff7587798fa7432fde6e6b6ae32000255ab19292",
+          "line": 623,
+          "anchor": "--Ak'Gishil"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_grgglck.png",
+          "sha256": "1b105dc0a37b318f8b339096e4e6ecf31e6b9ac76ae5578d0cdfd7a46cabec40",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 128]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ua/refs/horror-demon-bosses.png",
+          "sha256": "0f1e18527f3862f8aef9f548b718fedaaf394111fbb230019370c584c079dd72",
+          "role": "family",
+          "note": "Shipped siblings in row order: abyssal-horror, nightmare-horror, blade-horror, umbral-horror, champion-of-urh-rok, forge-giant, uruivellas, kryl-feijan. Structural boss distinction, not colour-only; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A colossal compact PILE of thick muscular coiled tentacles rising in a domed tiered mass around ONE HUGE round upward-facing razor-toothed mouth. No eyes, humanoid or robe. Midnight charcoal-violet tentacles with BROAD MID-LIGHT slate-lavender raised folds and pale pearl rims, ivory teeth in a gaping central mouth. Thick tentacle loops folded inward, no strand on the outer base ring. Monumental multi-tier dome and thick loops versus nightmare horror flat eight-hook radial maw and abyssal horror eye-covered aquatic tangle; no detached summoned tentacles. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Boss identity through the specified body proportions, structural anatomy, equipment and pose; never just recolour the shipped siblings. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light broad body masses and pale upper-left highlights.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Whole neutral disc stays at reference lightness; no colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exactly one nice_tile body at display_h=2/display_y=-1; unique=true admits native tall without native_tall flag. Exact static verification only.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ua/source-contracts.json",
+          "sha256": "b6c9fdda1e56d3b6b4bf53aafe00787697121e5831f5df8c1f9960c3f855d814"
+        }
+      ]
+    },
+    {
+      "asset_id": "queen-ant",
+      "native_name": "Queen Ant",
+      "scope": "UA class b unique; game/modules/tome/data/general/npcs/ant.lua:211",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 211,
+          "anchor": "name = \"Queen Ant\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ANT\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+          "line": 33,
+          "anchor": "e.name = rng.table{_t\"gloomy"
+        },
+        {
+          "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+          "line": 46,
+          "anchor": "e.name = rng.table{_t\"dreaming"
+        },
+        {
+          "path": "game/modules/tome/data/timed_effects/magical.lua",
+          "sha256": "10de292fffb104890909a9a1ec40a7453234a79fc7f267e3b754c0d290aa7b3b",
+          "line": 1120,
+          "anchor": "name = \"PHOENIX_EGG\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/misc/npcs.lua",
+          "sha256": "dc640c1af5d22a45472d843380c9de01334530b3831bd2b9fe88ee0cba3abc23",
+          "line": 1415,
+          "anchor": "list.GRGGLCK_TENTACLE"
+        },
+        {
+          "path": "game/modules/tome/data/talents/misc/horrors.lua",
+          "sha256": "0690eca57ddb8ebe78694f63ff7587798fa7432fde6e6b6ae32000255ab19292",
+          "line": 623,
+          "anchor": "--Ak'Gishil"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/insect_ant_queen_ant.png",
+          "sha256": "78c23ae5d7f79cc38bd6bfec2ed393c0b293752fba4ef334d796aabed04b7dcb",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 128]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ua/refs/insect-bosses.png",
+          "sha256": "400dbc3bc72ceb31125fa2a3cae69c48a069086709cd7f01505f7b5020ea5b4b",
+          "role": "family",
+          "note": "Shipped siblings in row order: giant-black-ant, giant-army-ant, giant-carpenter-ant, giant-spider, weaver-young, weaver-queen, weaver-matriarch, weaver-patriarch, ungole. Structural boss distinction, not colour-only; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "One imposing QUEEN ANT with an enormous swollen pear-shaped segmented egg-bearing abdomen raised high behind a small armored thorax, broad ridged head and huge paired mandibles, six stout jointed legs tucked around the body, two short curved antennae. Wingless. Glossy mid-light red-brown chitin, ivory raised segment seams and pale upper-facing plates. Biological royal grandeur through abdomen proportion, raised thorax carapace and huge mandibles, NOT a crown or human regalia. Compact high domed triangular silhouette unlike low elongated black/army ants or carpenter ant; no eggs, subjects or winged swarm. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Boss identity through the specified body proportions, structural anatomy, equipment and pose; never just recolour the shipped siblings. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light broad body masses and pale upper-left highlights.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Whole neutral disc stays at reference lightness; no colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exactly one nice_tile body at display_h=2/display_y=-1; unique=true admits native tall without native_tall flag. Exact static verification only.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ua/source-contracts.json",
+          "sha256": "b6c9fdda1e56d3b6b4bf53aafe00787697121e5831f5df8c1f9960c3f855d814"
+        }
+      ]
+    },
+    {
+      "asset_id": "ak-gishil",
+      "native_name": "Ak'Gishil",
+      "scope": "UA class b unique; game/modules/tome/data/general/npcs/horror.lua:1064",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 1064,
+          "anchor": "name = \"Ak'Gishil\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+          "line": 33,
+          "anchor": "e.name = rng.table{_t\"gloomy"
+        },
+        {
+          "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+          "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+          "line": 46,
+          "anchor": "e.name = rng.table{_t\"dreaming"
+        },
+        {
+          "path": "game/modules/tome/data/timed_effects/magical.lua",
+          "sha256": "10de292fffb104890909a9a1ec40a7453234a79fc7f267e3b754c0d290aa7b3b",
+          "line": 1120,
+          "anchor": "name = \"PHOENIX_EGG\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/misc/npcs.lua",
+          "sha256": "dc640c1af5d22a45472d843380c9de01334530b3831bd2b9fe88ee0cba3abc23",
+          "line": 1415,
+          "anchor": "list.GRGGLCK_TENTACLE"
+        },
+        {
+          "path": "game/modules/tome/data/talents/misc/horrors.lua",
+          "sha256": "0690eca57ddb8ebe78694f63ff7587798fa7432fde6e6b6ae32000255ab19292",
+          "line": 623,
+          "anchor": "--Ak'Gishil"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_ak_gishil.png",
+          "sha256": "e1f9d23c2a525c2f1281f9e2542fa8c01bb10f0a518be8a1ca6cb6b611c8844e",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 128]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ua/refs/horror-demon-bosses.png",
+          "sha256": "0f1e18527f3862f8aef9f548b718fedaaf394111fbb230019370c584c079dd72",
+          "role": "family",
+          "note": "Shipped siblings in row order: abyssal-horror, nightmare-horror, blade-horror, umbral-horror, champion-of-urh-rok, forge-giant, uruivellas, kryl-feijan. Structural boss distinction, not colour-only; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An imposing temporal BLADE HORROR with a narrow upright faceless HUMANOID charcoal body, high tapering blade-like head, two long hooked claw arms and a ragged split tapering lower torso. Three small red-white mineral nodes are embedded on chest and abdomen. Two long SILVER blades attached closely along its shoulders and forearms form an asymmetrical angular sword fan. Broad MID-LIGHT slate-grey dorsal, shoulder, arm and torso planes with pale silver blade edges; deepest black only in local creases. Unlike the shipped blade horror radial spinning mass of swords, this unique has an unmistakable tall narrow torso, pointed head, hanging claw arms and compact vertical blade collar. No portals, detached summoned actors, smoke, halo or tactical marks. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Boss identity through the specified body proportions, structural anatomy, equipment and pose; never just recolour the shipped siblings. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light broad body masses and pale upper-left highlights.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Whole neutral disc stays at reference lightness; no colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exactly one nice_tile body at display_h=2/display_y=-1; unique=true admits native tall without native_tall flag. Exact static verification only.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ua/source-contracts.json",
+          "sha256": "b6c9fdda1e56d3b6b4bf53aafe00787697121e5831f5df8c1f9960c3f855d814"
+        }
+      ]
+    }
+  ]
+}

@@ -319,7 +319,9 @@ M.catalog = {
 	-- Cruthdar the Abomination are single-image uniques. Weaver Queen, Lady
 	-- Nashva and The Possessed are unique native-tall: nice_tile names the PNG
 	-- explicitly. Ben Cruthdar the Cursed (town-lumberjack-village) shares
-	-- Ben's PNG but is another name and stays native. Kyless uses the
+	-- Ben's PNG but is another name; since UB-2 it has its own exact
+	-- name+define_as entry (BEN_CRUTHDAR) that reuses the abomination runtime
+	-- token. Kyless uses the
 	-- nice_tile{tall=1} shorthand with no image= (resolve-time image is nil,
 	-- see batch F) and stays native.
 	{id="shardskin", name="Shardskin", image="npc/immovable_crystal_golden_crystal.png", type="giant", subtype="crystal", define_as="SHARDSKIN", unique=true},
@@ -846,14 +848,175 @@ M.catalog = {
 	{id="vampire-lord", name="vampire lord", image="npc/vampire_lord.png", type="undead", subtype="vampire"},
 	{id="degenerated-ogric-mass", name="degenerated ogric mass", image="npc/giant_ogre_degenerated_ogric_mass.png", type="giant", subtype="ogre", native_tall=true},
 	{id="ogric-abomination", name="ogric abomination", image="npc/giant_ogre_ogric_abomination.png", type="giant", subtype="ogre", native_tall=true},
+	-- Batch AD (first off-list dungeon-pool batch): thirteen non-unique leaves,
+	-- none binding a define_as (art/monster-batch-ad/SELECTION.md), each
+	-- re-verified against source (evidence/monster-batch-ad-20260930/
+	-- source-contracts.json) and matched by exact name, type and subtype. Four
+	-- are tall nice_tile bodies and carry native_tall=true: duathedlen and
+	-- daelach (demon/major), ice wyrm (dragon/cold) and snow cat (animal/feline;
+	-- its nice_tile image="invis.png" is only the tall-body mechanism, like
+	-- dolleg). The duathedlen's name is not ASCII (u-acute, written as the UTF-8
+	-- bytes \195\186 so every Lua accepts it), so with nicer_tiles off its
+	-- default-name image is the nonexistent npc/demon_major_d__athedlen.png and
+	-- the token is simply not applied. The other nine are 64x64 default-name
+	-- images: orc grand summoner, orc master wyrmic and orc mage-hunter (Gorbat
+	-- pride), ritch larva, ritch hunter and ritch hive mother, panther, tiger and
+	-- sabertooth tiger. The non-unique "ritch hive mother" draws the same PNG as
+	-- the unique "Ritch Great Hive Mother" (id ritch-hive-mother, define_as
+	-- HIVE_MOTHER), so it takes the id ritch-hive-mother-pool; the names differ,
+	-- so name lookup never crosses. None has an auto_class that can reach Flame of
+	-- Urh'Rok, so there is no urh_rok_form; no summon, effect or vault builds a
+	-- copy of these bodies, so no variant or alias is added.
+	{id="duathedlen", name="d\195\186athedlen", image="npc/demon_major_duathedlen.png", type="demon", subtype="major", native_tall=true},
+	{id="daelach", name="daelach", image="npc/demon_major_daelach.png", type="demon", subtype="major", native_tall=true},
+	{id="orc-grand-summoner", name="orc grand summoner", image="npc/humanoid_orc_orc_grand_summoner.png", type="humanoid", subtype="orc"},
+	{id="orc-master-wyrmic", name="orc master wyrmic", image="npc/humanoid_orc_orc_master_wyrmic.png", type="humanoid", subtype="orc"},
+	{id="orc-mage-hunter", name="orc mage-hunter", image="npc/humanoid_orc_orc_mage_hunter.png", type="humanoid", subtype="orc"},
+	{id="ritch-larva", name="ritch larva", image="npc/insect_ritch_ritch_larva.png", type="insect", subtype="ritch"},
+	{id="ritch-hunter", name="ritch hunter", image="npc/insect_ritch_ritch_hunter.png", type="insect", subtype="ritch"},
+	{id="ritch-hive-mother-pool", name="ritch hive mother", image="npc/insect_ritch_ritch_hive_mother.png", type="insect", subtype="ritch"},
+	{id="snow-cat", name="snow cat", image="npc/animal_feline_snow_cat.png", type="animal", subtype="feline", native_tall=true},
+	{id="panther", name="panther", image="npc/animal_feline_panther.png", type="animal", subtype="feline"},
+	{id="tiger", name="tiger", image="npc/animal_feline_tiger.png", type="animal", subtype="feline"},
+	{id="sabertooth-tiger", name="sabertooth tiger", image="npc/animal_feline_sabertooth_tiger.png", type="animal", subtype="feline"},
+	{id="ice-wyrm", name="ice wyrm", image="npc/dragon_cold_ice_wyrm.png", type="dragon", subtype="cold", native_tall=true},
+	-- Batch AE: twelve exact off-list pool leaves (source-contracts.json).
+	-- Nine supported single-body tall entries; three flat entries. Arena
+	-- HEADLESSHORROR and renamed tall random bosses retain native art.
+	-- Burning Wake aura bookkeeping is supported by the existing guard;
+	-- same-body hummerhorn multiplication wears its exact token.
+	{id="champion-of-urh-rok", name="champion of Urh'Rok", image="npc/demon_major_champion_of_urh_rok.png", type="demon", subtype="major", native_tall=true},
+	{id="forge-giant", name="forge-giant", image="npc/demon_major_forge_giant.png", type="demon", subtype="major", native_tall=true},
+	{id="hummerhorn", name="hummerhorn", image="npc/hummerhorn.png", type="insect", subtype="swarms"},
+	{id="weaver-matriarch", name="weaver matriarch", image="npc/spiderkin_spider_weaver_matriarch.png", type="spiderkin", subtype="spider", native_tall=true},
+	{id="patchwork-troll", name="patchwork troll", image="npc/giant_troll_patchwork_troll.png", type="giant", subtype="troll", native_tall=true},
+	{id="maulotaur", name="maulotaur", image="npc/giant_minotaur_maulotaur.png", type="giant", subtype="minotaur", native_tall=true},
+	{id="worm-that-walks", name="worm that walks", image="npc/horror_eldritch_worm_that_walks.png", type="horror", subtype="eldritch"},
+	{id="headless-horror", name="headless horror", image="npc/horror_eldritch_headless_horror.png", type="horror", subtype="eldritch"},
+	{id="storm-wyrm", name="storm wyrm", image="npc/dragon_storm_storm_wyrm.png", type="dragon", subtype="storm", native_tall=true},
+	{id="spire-dragon", name="spire dragon", image="npc/dragon_wild_spire_dragon.png", type="dragon", subtype="wild", native_tall=true},
+	{id="blinkwyrm", name="blinkwyrm", image="npc/dragon_wild_blinkwyrm.png", type="dragon", subtype="wild", native_tall=true},
+	{id="emperor-wight", name="emperor wight", image="npc/emperor_wight.png", type="undead", subtype="wight", native_tall=true},
+
+	-- Batch AF: nine admitted source-verified off-list pool bodies. Dreaming horror
+	-- retains native art because of its actor shader. Blood lich was admitted
+	-- after coordinator-authorized infrastructure retry. No clone-specific rules.
+	{id="nightmare-horror", name="nightmare horror", image="npc/horror_eldritch_nightmare_horror.png", type="horror", subtype="eldritch"},
+	{id="radiant-horror", name="radiant horror", image="npc/horror_eldritch_radiant_horror.png", type="horror", subtype="eldritch"},
+	{id="maelstrom", name="maelstrom", image="npc/horror_eldritch_maelstrom.png", type="horror", subtype="eldritch", native_tall=true},
+	{id="parasitic-horror", name="parasitic horror", image="npc/horror_eldritch_parasitic_horror.png", type="horror", subtype="eldritch", native_tall=true},
+	{id="lich", name="lich", image="npc/undead_lich_lich.png", type="undead", subtype="lich", native_tall=true},
+	{id="ancient-lich", name="ancient lich", image="npc/undead_lich_ancient_lich.png", type="undead", subtype="lich", native_tall=true},
+	{id="archlich", name="archlich", image="npc/undead_lich_archlich.png", type="undead", subtype="lich", native_tall=true},
+	{id="blood-lich", name="blood lich", image="npc/undead_lich_blood_lich.png", type="undead", subtype="lich"},
+	{id="animated-blood", name="animated blood", image="npc/undead_horror_animated_blood.png", type="undead", subtype="blood", native_tall=true},
+	-- AG: exact quad_hue/no-args identities; iridescence is painted in the
+	-- body, never applied to the neutral replacement disc. Two distinct
+	-- keepsake shadows share a name; each binds its exact define_as.
+	{id="multi-hued-drake-hatchling", name="multi-hued drake hatchling", image="npc/dragon_multihued_multi_hued_drake_hatchling.png", type="dragon", subtype="multihued", native_shader="quad_hue"},
+	{id="multi-hued-drake", name="multi-hued drake", image="npc/dragon_multihued_multi_hued_drake.png", type="dragon", subtype="multihued", native_shader="quad_hue"},
+	{id="greater-multi-hued-wyrm", name="greater multi-hued wyrm", image="npc/dragon_multihued_greater_multi_hued_wyrm.png", type="dragon", subtype="multihued", define_as="GREATER_MULTI_HUED_WYRM", native_tall=true, native_shader="quad_hue"},
+	{id="shadow-claw", name="shadow claw", image="npc/shadow-claw.png", type="undead", subtype="shadow", define_as="SHADOW_CLAW", shared_name=true},
+	{id="shadow-caster", name="shadow claw", image="npc/shadow-caster.png", type="undead", subtype="shadow", define_as="SHADOW_CASTER", shared_name=true},
+	{id="multi-hued-crystal", name="multi-hued crystal", image="npc/crystal_violet.png", type="immovable", subtype="crystal", native_shader="quad_hue"},
+	{id="shimmering-crystal", name="shimmering crystal", image="npc/crystal_npc.png", type="immovable", subtype="crystal", native_shader="quad_hue"},
+	-- UA: exact off-list unique/boss bodies. Shade unique_glow stays native;
+	-- tall uniques reuse the verified 2x/-1 path, without a native_tall flag.
+	-- Phoenix egg and all extra/shader/paper-doll appearances stay native.
+	{id="kra-tor", name="Kra'Tor the Gluttonous", image="npc/humanoid_orc_kra_tor_the_gluttonous.png", type="humanoid", subtype="orc", unique=true},
+	{id="khulmanar", name="Khulmanar, General of Urh'Rok", image="npc/demon_major_general_of_urh_rok.png", type="demon", subtype="major", unique=true},
+	{id="rungof", name="Rungof the Warg Titan", image="npc/canine_rungof.png", type="animal", subtype="canine", unique=true},
+	{id="grgglck", name="Grgglck the Devouring Darkness", image="npc/horror_eldritch_grgglck.png", type="horror", subtype="eldritch", unique=true},
+	{id="queen-ant", name="Queen Ant", image="npc/insect_ant_queen_ant.png", type="insect", subtype="ant", unique=true},
+	{id="ak-gishil", name="Ak'Gishil", image="npc/horror_eldritch_ak_gishil.png", type="horror", subtype="eldritch", unique=true},
+	{id="ninandra", name="Ninandra, the Great Weaver", image="npc/spiderkin_spider_ninandra_the_great_weaver.png", type="spiderkin", subtype="spider", unique=true},
+	{id="phoenix", name="Phoenix", image="npc/animal_bird_phoenix.png", type="animal", subtype="bird", define_as="NPC_PHOENIX", unique=true},
+	{id="ukruk", name="Ukruk the Fierce", image="npc/humanoid_orc_ukruk_the_fierce.png", type="humanoid", subtype="orc", define_as="UKRUK", unique=true},
+	{id="gorbat", name="Gorbat, Supreme Wyrmic of the Pride", image="npc/humanoid_orc_gorbat__supreme_wyrmic_of_the_pride.png", type="humanoid", subtype="orc", define_as="GORBAT", unique=true},
+	{id="grushnak", name="Grushnak, Battlemaster of the Pride", image="npc/humanoid_orc_grushnak__battlemaster_of_the_pride.png", type="humanoid", subtype="orc", define_as="GRUSHNAK", unique=true},
+	{id="vor", name="Vor, Grand Geomancer of the Pride", image="npc/humanoid_orc_vor__grand_geomancer_of_the_pride.png", type="humanoid", subtype="orc", define_as="VOR", unique=true},
+	-- TA-1: first town-resident batch. Angolwen mages (four native-tall
+	-- nice_tile bodies), six town guards and the two Ring of Blood residents.
+	-- All are non-unique with no define_as; native equipment is not a
+	-- paper-doll, so the drawn body never changes. The slaver's make_escort
+	-- copies are the same enthralled-slave body and wear the same token.
+	{id="apprentice-mage", name="apprentice mage", image="npc/humanoid_human_apprentice_mage.png", type="humanoid", subtype="human"},
+	{id="pyromancer", name="pyromancer", image="npc/humanoid_human_pyromancer.png", type="humanoid", subtype="human", native_tall=true},
+	{id="cryomancer", name="cryomancer", image="npc/humanoid_human_cryomancer.png", type="humanoid", subtype="human", native_tall=true},
+	{id="geomancer", name="geomancer", image="npc/humanoid_human_geomancer.png", type="humanoid", subtype="human", native_tall=true},
+	{id="tempest", name="tempest", image="npc/humanoid_human_tempest.png", type="humanoid", subtype="human", native_tall=true},
+	{id="human-guard", name="human guard", image="npc/humanoid_human_human_guard.png", type="humanoid", subtype="human"},
+	{id="derth-guard", name="derth guard", image="npc/humanoid_human_derth_guard.png", type="humanoid", subtype="human"},
+	{id="last-hope-guard", name="last hope guard", image="npc/humanoid_human_last_hope_guard.png", type="humanoid", subtype="human"},
+	{id="halfling-guard", name="halfling guard", image="npc/humanoid_halfling_halfling_guard.png", type="humanoid", subtype="halfling"},
+	{id="dwarven-guard", name="dwarven guard", image="npc/humanoid_dwarf_dwarven_guard.png", type="humanoid", subtype="dwarf"},
+	{id="elvala-guard", name="elvala guard", image="npc/humanoid_shalore_elvala_guard.png", type="humanoid", subtype="shalore"},
+	{id="slaver", name="slaver", image="npc/humanoid_yaech_slaver.png", type="humanoid", subtype="yaech"},
+	{id="enthralled-slave", name="enthralled slave", image="npc/humanoid_human_enthralled_slave.png", type="humanoid", subtype="human"},
+	-- UB-1: second uniques/bosses batch, nine exact native-tall unique bodies.
+	-- Each resolves to one nice_tile body (image=invis.png + a single add_mos
+	-- display_h=2/display_y=-1); unique=true admits it without a native_tall flag.
+	-- Aeryn's High form is bound at two define sites (high-peak, gates-of-morning)
+	-- with the same name/define_as/PNG, so one entry covers both. Caldizar's two
+	-- define sites share one byte-identical body, so one shared token is bound to
+	-- CALDIZAR plus a second bound define_as CALDIZAR_AOADS (shared_name).
+	{id="high-sun-paladin-aeryn", name="High Sun Paladin Aeryn", image="npc/humanoid_human_high_sun_paladin_aeryn.png", type="humanoid", subtype="human", define_as="HIGH_SUN_PALADIN_AERYN", unique=true},
+	{id="fallen-sun-paladin-aeryn", name="Fallen Sun Paladin Aeryn", image="npc/humanoid_human_fallen_sun_paladin_aeryn.png", type="humanoid", subtype="human", define_as="FALLEN_SUN_PALADIN_AERYN", unique=true},
+	{id="caldizar", name="Caldizar", image="npc/horror_sher_tul_caldizar.png", type="horror", subtype="sher'tul", define_as="CALDIZAR", define_as_alias="CALDIZAR_AOADS", shared_name=true, unique=true},
+	{id="chronolith-twin", name="Chronolith Twin", image="npc/horror_temporal_cronolith_twin.png", type="horror", subtype="temporal", define_as="CHRONOLITH_TWIN", unique=true},
+	{id="chronolith-clone", name="Chronolith Clone", image="npc/horror_temporal_cronolith_clone.png", type="horror", subtype="temporal", define_as="CHRONOLITH_CLONE", unique=true},
+	{id="temporal-defiler", name="Temporal Defiler", image="npc/horror_temporal_temporal_defiler.png", type="horror", subtype="temporal", define_as="TEMPORAL_DEFILER", unique=true},
+	{id="corrupted-daelach", name="Corrupted Daelach", image="npc/demon_major_corrupted_daelach.png", type="demon", subtype="major", define_as="CORRUPTED_DAELACH", unique=true},
+	{id="supreme-archmage-linaniil", name="Linaniil, Supreme Archmage of Angolwen", image="npc/humanoid_human_linaniil_supreme_archmage.png", type="humanoid", subtype="human", define_as="SUPREME_ARCHMAGE_LINANIIL", unique=true},
+	{id="archmage-tarelion", name="Archmage Tarelion", image="npc/humanoid_shalore_archmage_tarelion.png", type="humanoid", subtype="shalore", define_as="TARELION", unique=true},
+	-- UB-2: third uniques/bosses batch. Ten flat 64x64 unique identities (six
+	-- default name images, four explicit image=/base pairs) plus the wiring-only
+	-- Ben Cruthdar, the Cursed. The Cursed shares the byte-identical native PNG
+	-- with the Abomination, so it reuses the abomination runtime token; the
+	-- abomination entry above is unchanged.
+	{id="sun-paladin-guren", name="Sun Paladin Guren", image="npc/humanoid_human_sun_paladin_guren.png", type="humanoid", subtype="human", define_as="SUN_PALADIN_GUREN", unique=true},
+	{id="epoch", name="Epoch", image="npc/elemental_temporal_epoch.png", type="elemental", subtype="temporal", define_as="EPOCH", unique=true},
+	{id="corrupted-oozemancer", name="Corrupted Oozemancer", image="npc/giant_troll_corrupted_oozemancer.png", type="giant", subtype="troll", define_as="CORRUPTED_OOZEMANCER", unique=true},
+	{id="zemekkys", name="Zemekkys, Grand Keeper of Reality", image="npc/humanoid_elf_high_chronomancer_zemekkys.png", type="humanoid", subtype="shalore", define_as="ZEMEKKYS", unique=true},
+	{id="blood-master", name="Blood Master", image="npc/humanoid_yaech_blood_master.png", type="humanoid", subtype="yaech", define_as="RING_MASTER", unique=true},
+	{id="limmir-the-jeweler", name="Limmir the Jeweler", image="npc/humanoid_elf_limmir_the_jeweler.png", type="humanoid", subtype="elf", define_as="LIMMIR", unique=true},
+	{id="protector-myssil", name="Protector Myssil", image="npc/humanoid_halfling_protector_myssil.png", type="humanoid", subtype="halfling", define_as="PROTECTOR_MYSSIL", unique=true},
+	{id="rak-shor-cultist", name="Rak'Shor Cultist", image="npc/humanoid_orc_rak_shor_cultist.png", type="humanoid", subtype="orc", define_as="CULTIST_RAK_SHOR", unique=true},
+	{id="shady-cornac-man", name="Shady cornac man", image="npc/humanoid_human_shady_cornac_man.png", type="humanoid", subtype="human", define_as="ARENA_AGENT", unique=true},
+	{id="tannen", name="Tannen", image="npc/humanoid_human_tannen.png", type="humanoid", subtype="human", define_as="TANNEN", unique=true},
+	{id="ben-cruthdar-the-cursed", name="Ben Cruthdar, the Cursed", image="npc/humanoid_human_ben_cruthdar__the_cursed.png", type="humanoid", subtype="human", define_as="BEN_CRUTHDAR", unique=true},
 }
 
 M.by_id = {}
 local by_name = {}
 for _, entry in ipairs(M.catalog) do
-	assert(not M.by_id[entry.id] and not by_name[entry.name], "duplicate token identity")
+	assert(not M.by_id[entry.id], "duplicate token identity")
+	local old = by_name[entry.name]
+	if entry.shared_name then
+		assert(type(entry.define_as) == "string" and entry.define_as ~= "", "shared token name needs define_as")
+		assert(not old or old.shared_name_index, "duplicate token identity")
+		old = old or {shared_name_index=true, entries={}}
+		assert(not old.entries[entry.define_as], "duplicate token identity")
+		old.entries[entry.define_as] = entry
+		-- One shared token may be bound to a second native define_as (UB-1
+		-- Caldizar: CALDIZAR + CALDIZAR_AOADS, byte-identical art).
+		if entry.define_as_alias ~= nil then
+			assert(type(entry.define_as_alias) == "string" and entry.define_as_alias ~= "", "shared token alias needs define_as")
+			assert(not old.entries[entry.define_as_alias], "duplicate token identity")
+			old.entries[entry.define_as_alias] = entry
+		end
+		by_name[entry.name] = old
+	else
+		assert(not old, "duplicate token identity")
+		by_name[entry.name] = entry
+	end
 	M.by_id[entry.id] = entry
-	by_name[entry.name] = entry
+end
+
+local function namedEntry(index, name, define_as)
+	local entry = index[name]
+	if entry and entry.shared_name_index then return entry.entries[define_as] end
+	return entry
 end
 
 -- heart-gloom/npcs.lua prepends one of these exact words to an otherwise
@@ -875,12 +1038,34 @@ local function heartGloomBase(name)
 	if type(name) ~= "string" then return nil end
 	for _, prefix in ipairs(heart_gloom_prefixes) do
 		if name:sub(1, #prefix) == prefix then
-			local entry = by_name[name:sub(#prefix + 1)]
+			local entry = namedEntry(by_name, name:sub(#prefix + 1), nil)
 			if entry and not entry.unique and not entry.define_as
 				and heart_gloom_families[entry.type.."/"..entry.subtype] then return entry end
 		end
 	end
 end
+
+-- Heart Gloom's native load modifier runs AFTER Entity:init has converted
+-- unique=true to the original name (engine/Entity.lua). Unlike the generic
+-- prefix rule above, this one exact unique must retain that original marker
+-- plus Rungof's fixed constructor fields. Both modifiers leave its body alone.
+-- Localized prefix/base name strings are built as the native callback builds
+-- them; do not strip arbitrary words from unknown unique names.
+local function heartGloomRungof(actor)
+	local entry = M.by_id.rungof
+	if not entry or actor.unique ~= entry.name or actor.define_as ~= nil
+		or actor.life_rating ~= 18 or actor.size_category ~= 4
+		or type(actor.level_range) ~= "table" or actor.level_range[1] ~= 20
+		or actor.level_range[2] ~= nil then return nil end
+	for _, prefix in ipairs(heart_gloom_prefixes) do
+		if actor.name == prefix .. entry.name then return entry end
+		if type(_t) == "function" then
+			local ok, localized = pcall(function() return _t(prefix) .. _t(entry.name, "entity name") end)
+			if ok and actor.name == localized then return entry end
+		end
+	end
+end
+
 
 local function empty(value)
 	return value == nil or (type(value) == "table" and next(value) == nil)
@@ -917,8 +1102,11 @@ local function urhRokForm(actor, entry)
 	return type(sustains) == "table" and sustains.T_FLAME_OF_URH_ROK and true or false
 end
 
+local bodyAlias -- defined with the other summon aliases below
+
 local function sameBody(actor, entry)
 	return (actor.type == entry.type and actor.subtype == entry.subtype) or urhRokForm(actor, entry)
+		or bodyAlias(actor, entry)
 end
 
 local function nativeTallImage(actor, entry)
@@ -1014,10 +1202,35 @@ local function aliasImage(actor, entry)
 		and actor.unique == nil and alias.check(actor) and true or false
 end
 
+-- Body aliases (user decision 2026-09-30): a summon constructor may give the
+-- copied creature another type/subtype. talents/gifts/summon-utility.lua:276
+-- builds the Spider summon as animal/spider with the giant spider's name and
+-- PNG, while the catalogued zone spider is spiderkin/spider. The relaxed pair
+-- is honoured only for that real Wild Gift summon (its own fields and the
+-- Spider talent id T_SPIDER, summon-utility.lua:216,293-302) and never for
+-- uniques or define_as actors, so the tutorial TUT_SPIDER_1 (spiderkin,
+-- define_as) keeps its native art and a bare animal/spider "giant spider" too.
+local body_aliases = {
+	["giant-spider"] = {
+		type = "animal", subtype = "spider",
+		check = function(a)
+			return summoned(a) and summonedAI(a) and a.wild_gift_summon == true and a.summoner_gain_exp == true
+				and a.is_nature_summon == true and a.wild_gift_detonate == "T_SPIDER"
+		end,
+	},
+}
+bodyAlias = function(actor, entry)
+	local alias = body_aliases[entry.id]
+	return alias ~= nil and actor.type == alias.type and actor.subtype == alias.subtype
+		and not entry.unique and actor.define_as == nil and actor.unique == nil and alias.check(actor) and true or false
+end
+
 -- The nature summons of talents/gifts rename themselves to
 -- "<name> (wild summon)" when the caster has the wild_summon attribute.
 -- Only these covered same-body summons accept that exact form.
 local wild_summon_ids = {minotaur=true, ["black-jelly"]=true, ["fire-drake"]=true, ["ritch-flamespitter"]=true}
+-- The Wild Gift Spider (body alias above) builds the same localized rename.
+wild_summon_ids["giant-spider"] = true
 -- Native code builds the name as ("%s (wild summon)"):tformat(_t(m.name)), so
 -- the stored string depends on the active locale. Rebuild the expected string
 -- exactly that way for each covered entry and accept only equality with it,
@@ -1040,22 +1253,168 @@ local function wildSummonBase(actor)
 	end
 end
 
+-- Name aliases (user decision 2026-09-30, "summons wear the token of the
+-- monster they copy"): a summon or minion constructor may draw a catalogued
+-- monster's body (same type, subtype and PNG) under another name. Each alias
+-- names exactly one extra name and is honoured ONLY for that constructor's real
+-- summon (its own distinctive fields); it never applies to uniques or define_as
+-- actors, and type/subtype/image/appearance are still checked by the caller.
+-- Native code builds these names with _t"..." so the stored string depends on
+-- the locale; accept the English name and its _t() form, as wildSummonNames does.
+-- Not aliased (stay native): shadowy assassin (traps.lua:318 sets shader
+-- shadow_simulacrum, a different appearance), terror and tormentor (nightmare
+-- horror PNG, no token yet).
+-- max_vim=200 on the Corpathus / Blood-Edge constructors grows with level-ups
+-- (live: Vilespawn 204, Blood-Edge animated blood 256); their blight 100 /
+-- nature -100 resist pair is fixed, so the summon guards use that instead.
+local function blightNatureResists(a)
+	return type(a.resists) == "table" and a.resists.BLIGHT == 100 and a.resists.NATURE == -100
+end
+local name_aliases = {
+	-- Blood-Edge uses _t"animated blood" at construction (pool leaf is English).
+	{name = "animated blood", id = "animated-blood", check = function(a)
+		return summoned(a) and summonedAI(a) and a.ai_real == "tactical"
+			and a.autolevel == "dexmage" and blightNatureResists(a)
+			and a.negative_status_effect_immune == 1 and a.summoner_gain_exp == true
+	end},
+	-- talents/misc/horrors.lua:299 Void Shard (void horror body, smaller)
+	{name = "void shard", id = "void-horror", check = function(a)
+		return summoned(a) and summonedAI(a) and a.summoner_gain_exp == true and a.ai_real == "dumb_talented_simple"
+			and a.autolevel == "summoner" and a.size_category == 1 and a.life_rating == 2 and a.fear_immune == 1
+	end},
+	-- damage_types.lua:3453 Garkul's orc spirit (berserker body)
+	{name = "orc spirit", id = "orc-berserker", check = function(a)
+		return summoned(a) and summonedAI(a) and a.ai_real == "dumb_talented_simple" and a.autolevel == "warrior"
+			and a.life_rating == 12 and a.exp_worth == 0 and a.summoner_gain_exp == nil
+	end},
+	-- world-artifacts.lua:3439 Corpathus' Vilespawn (oozing horror body, image= set explicitly)
+	{name = "Vilespawn", id = "oozing-horror", check = function(a)
+		return summoned(a) and summonedAI(a) and a.ai_real == "tactical" and a.autolevel == "dexmage"
+			and a.summoner_gain_exp == true and a.life_rating == 8 and a.silent_levelup == true
+			and blightNatureResists(a)
+	end},
+	-- talents/undeads/ghoul.lua:159 Gnaw's Risen Ghoul
+	{name = "Risen Ghoul", id = "ghoul", check = function(a)
+		return summoned(a) and summonedAI(a) and a.ai_real == "tactical" and a.autolevel == "ghoul"
+			and a.summoner_gain_exp == true and a.silent_levelup == true and a.combat_armor_hardiness == 40
+	end},
+	-- timed_effects/other.lua:1025 Curse of Corpses' walking corpse
+	{name = "walking corpse", id = "ghoul", check = function(a)
+		return summoned(a) and summonedAI(a) and a.ai_real == "dumb_talented_simple" and a.autolevel == "ghoul"
+			and a.summoner_gain_exp == true and a.no_drops == true and a.silent_levelup == nil
+	end},
+}
+local function nameAlias(actor)
+	local name = actor.name
+	if type(name) ~= "string" or actor.define_as ~= nil or actor.unique ~= nil then return nil end
+	for _, alias in ipairs(name_aliases) do
+		local match = name == alias.name
+		if not match and type(_t) == "function" then
+			local ok, localized = pcall(_t, alias.name)
+			match = ok and localized == name
+		end
+		if match then
+			local entry = M.by_id[alias.id]
+			if entry and not entry.unique and alias.check(actor) then return entry end
+			return nil
+		end
+	end
+end
+
 local function sameBodyVariant(actor, entry)
 	local check = variants[entry.id]
 	return check ~= nil and not entry.unique and actor.define_as == nil and actor.unique == nil and check(actor) and true or false
 end
 
+-- Temporal clones (chronomancy/chronomancer.lua:240 makeParadoxClone, used by
+-- Paradox talents and anomalies on any nearby actor) copy the target with
+-- cloneActor and rename it ("%s's temporal clone"):tformat(target:getName()).
+-- Policy: a same-body copy wears the copied creature's token, so this applies
+-- to every covered non-unique entry, not to one batch. The clone keeps the
+-- target's define_as, which must equal the entry's; uniques stay native, and
+-- type/subtype/image/appearance are still checked by the caller. The name map
+-- is rebuilt when the active _t / tformat functions change (locale switch).
+local cloneNames, cloneNamesT, cloneNamesF
+local function temporalCloneNames()
+	local t, f = _t, string.tformat
+	if cloneNames and cloneNamesT == t and cloneNamesF == f then return cloneNames end
+	cloneNames, cloneNamesT, cloneNamesF = {}, t, f
+	local function add(name, entry)
+		if type(name) ~= "string" then return end
+		local old = cloneNames[name]
+		if entry.shared_name and (old == nil or (type(old) == "table" and old.shared_name_index)) then
+			old = old or {shared_name_index=true, entries={}}
+			old.entries[entry.define_as] = entry
+			cloneNames[name] = old
+		elseif old == nil then cloneNames[name] = entry
+		elseif old ~= entry then cloneNames[name] = false end -- ambiguous: stay native
+	end
+	for _, entry in ipairs(M.catalog) do
+		if not entry.unique then
+			add(entry.name .. "'s temporal clone", entry)
+			if type(t) == "function" and type(f) == "function" then
+				local ok, localized = pcall(function()
+					return ("%s's temporal clone"):tformat(_t(entry.name, "entity name"))
+				end)
+				if ok and localized ~= entry.name .. "'s temporal clone" then add(localized, entry) end
+			end
+		end
+	end
+	return cloneNames
+end
+local function temporalClone(actor)
+	if actor.unique ~= nil or not summoned(actor) or not summonedAI(actor)
+		or actor.summoner_gain_exp ~= true or actor.ai_real ~= "tactical" or actor.exp_worth ~= 0
+		or type(actor.summon_time) ~= "number" or actor.summon_time < 0
+		or type(actor.max_level) ~= "number" or actor.max_level ~= actor.level
+		or type(actor.ai_tactic) ~= "table" or actor.ai_tactic.escape ~= 0 then return nil end
+	local entry = type(actor.name) == "string" and namedEntry(temporalCloneNames(), actor.name, actor.define_as)
+	if entry and actor.define_as == entry.define_as then return entry end
+end
+
 local function exactIdentity(actor, allow_player_identity)
-	local entry = by_name[actor.name] or heartGloomBase(actor.name) or wildSummonBase(actor)
+	local entry = namedEntry(by_name, actor.name, actor.define_as) or heartGloomBase(actor.name) or heartGloomRungof(actor) or wildSummonBase(actor)
+	local aliased = false
+	if not entry then entry = nameAlias(actor) or temporalClone(actor); aliased = entry ~= nil end
 	if not entry then return nil, actor.unique and "unknown-unique" or "no-art" end
 	if not sameBody(actor, entry) then return nil, "body-changed" end
-	if actor.define_as ~= entry.define_as and not sameBodyVariant(actor, entry) then return nil, "identity-changed" end
+	local bound = actor.define_as == entry.define_as
+		or (entry.define_as_alias ~= nil and actor.define_as == entry.define_as_alias)
+	if not bound and not aliased and not sameBodyVariant(actor, entry) then return nil, "identity-changed" end
 	-- Native Party:setPlayer converts a normal creature to Player and sets the
 	-- literal "player" sentinel. Only the integration can verify party/control
 	-- history; callers cannot use this opt-in to admit any other unique actor.
 	if actor.unique and not entry.unique
 		and not (allow_player_identity == true and actor.unique == "player") then return nil, "unknown-unique" end
 	return entry
+end
+
+-- Blood-Edge (world-artifacts-far-east.lua): same animated-blood PNG at
+-- 1x dimensions, not the pool's 2x tall layout. Accept only this constructor's
+-- summoned dexmage and exactly one unmodified body; aura bookkeeping is kept.
+local function bloodEdgeBody(actor, entry)
+	if entry.id ~= "animated-blood" or actor.image ~= "invis.png"
+		or actor.define_as ~= nil or actor.unique ~= nil or type(actor.summoner) ~= "table"
+		or not summonedAI(actor) or actor.ai_real ~= "tactical" or actor.autolevel ~= "dexmage"
+		or actor.summoner_gain_exp ~= true or actor.negative_status_effect_immune ~= 1
+		or not blightNatureResists(actor) or actor.rank ~= 3 or actor.exp_worth ~= 0
+		or actor.silent_levelup ~= true or actor.life_rating ~= 10
+		or type(actor.summon_time) ~= "number" or actor.summon_time < 0 or actor.summon_time > 9
+		or type(actor.add_mos) ~= "table" then return false end
+	local body
+	for key, value in pairs(actor.add_mos) do
+		if type(key) ~= "number" or type(value) ~= "table" then return false end
+		if not value._isshaderaura then
+			if body then return false end
+			body = value
+		end
+	end
+	if not body then return false end
+	for key in pairs(body) do if not tall_keys[key] then return false end end
+	return body.image == entry.image and body.display_h == 1 and body.display_y == 0
+		and (body.display_w == nil or body.display_w == 1)
+		and (body.display_x == nil or body.display_x == 0)
+		and (body.display_scale == nil or body.display_scale == 1)
 end
 
 local function appearance(actor, entry, owned_display)
@@ -1066,7 +1425,12 @@ local function appearance(actor, entry, owned_display)
 	-- These visual systems can communicate state or a different body. Preserve
 	-- them until there is an explicit rendering contract for that appearance.
 	if actor.moddable_tile then return nil, "moddable-tile" end
-	if actor.shader then return nil, "shader" end
+	-- quad_hue is a cosmetic native colour cycle only for these pinned bodies.
+	-- Entity:getMapObjects builds the fresh replacement Entity without shader;
+	-- applying the actor shader there would tint the neutral physical disc.
+	if actor.shader and not (entry.native_shader == "quad_hue"
+		and actor.shader == entry.native_shader and actor.shader_args == nil) then return nil, "shader" end
+	if entry.native_shader and actor.shader_args ~= nil then return nil, "shader-args" end
 	if actor.anim then return nil, "animation" end
 	if not empty(actor.add_displays) then return nil, "add-displays" end
 	if not empty(actor.textures) then return nil, "textures" end
@@ -1079,6 +1443,7 @@ local function appearance(actor, entry, owned_display)
 		return nil, "add-mos"
 	end
 	if nativeTallImage(actor, entry) then return "native-tall" end
+	if bloodEdgeBody(actor, entry) then return "single-body-summon" end
 	if actor.image == "invis.png" and (entry.unique or entry.native_tall) then return nil, "native-tall-changed" end
 	return nil, "body-changed"
 end

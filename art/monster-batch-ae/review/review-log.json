@@ -1,0 +1,145 @@
+{
+  "method": "Direct visual inspection; no game launch. Full family/floor sheets are reviewed after completion.",
+  "pre_generation": [
+    "refs/native-identities.png",
+    "refs/demons.png",
+    "refs/dragons.png",
+    "refs/giants.png",
+    "refs/insects.png",
+    "refs/horrors-wights.png",
+    "../monsters-v2/masters/prox-v2.png"
+  ],
+  "intermediate": [
+    {
+      "id": "champion-of-urh-rok",
+      "views": [
+        "master",
+        "48/64/96 first-demons sheet"
+      ],
+      "finding": "Enclosed silver knight and centred vertical sword; readable at all three sizes."
+    },
+    {
+      "id": "forge-giant",
+      "views": [
+        "master",
+        "48/64/96 first-demons sheet"
+      ],
+      "finding": "Broad burning smith with two square hammers; distinct from champion and shipped demons."
+    },
+    {
+      "id": "weaver-matriarch",
+      "views": [
+        "128px export"
+      ],
+      "finding": "Blue broad low spider with prominent yellow-white pattern; pale legs distinct from disc."
+    },
+    {
+      "id": "patchwork-troll",
+      "views": [
+        "128px export"
+      ],
+      "finding": "Uneven purple/green arms, visible stitches and broken weapon pieces; complete compact silhouette."
+    },
+    {
+      "id": "maulotaur",
+      "views": [
+        "128px export"
+      ],
+      "finding": "Pale bull with a compact square-headed greatmaul; distinct from axe minotaurs."
+    },
+    {
+      "id": "worm-that-walks",
+      "views": [
+        "128px export"
+      ],
+      "finding": "Ragged hood, large pale worm bundles and paired waraxes; no solid human arms."
+    },
+    {
+      "id": "headless-horror",
+      "views": [
+        "128px export"
+      ],
+      "finding": "Empty neck stump, distended belly and long bent arms; no head, face or eye escorts painted in."
+    },
+    {
+      "id": "storm-wyrm",
+      "views": [
+        "128px export",
+        "storm-anchor-48-64-96.png"
+      ],
+      "finding": "Long slender raised neck and open horseshoe coil versus ice wyrm compact spiral and short broad head; storm drake is a crouched winged body. Distinct at 48/64/96, not just hue."
+    },
+    {
+      "id": "spire-dragon",
+      "views": [
+        "128px export"
+      ],
+      "finding": "Low heavy wingless coil and densely layered blade armour, distinct from raised-neck winged storm wyrm."
+    },
+    {
+      "id": "blinkwyrm",
+      "views": [
+        "128px export"
+      ],
+      "finding": "Smooth slender high S-curve, small fins and swept horns; no wings, fading or afterimages."
+    },
+    {
+      "id": "emperor-wight",
+      "views": [
+        "128px export"
+      ],
+      "finding": "Gold funerary armour, bright skull face, raised curved sword and ragged robe; no crown/rank graphic."
+    },
+    {
+      "id": "hummerhorn",
+      "views": [
+        "128px export",
+        "final family/floor sheets"
+      ],
+      "finding": "One gold wasp with a thin waist, four pale wings and a complete compact stinger/leg silhouette."
+    }
+  ],
+  "final_sheets": [
+    "demons-giants-color-48-64-96.png",
+    "demons-giants-grayscale-48-64-96.png",
+    "dragons-color-48-64-96.png",
+    "dragons-grayscale-48-64-96.png",
+    "insects-horrors-wights-color-48-64-96.png",
+    "insects-horrors-wights-grayscale-48-64-96.png",
+    "floor-readability-48-x2.png",
+    "floor-readability-48-x2-b.png"
+  ],
+  "final_verdict": "Eleven initial designs accepted by coordinator; storm-wyrm-v1 rejected for cold-family similarity and superseded by reviewed violet/gold storm-wyrm-v2. All twelve selected designs pass unchanged static gates. Live checks separate.",
+  "body_minimum": 65,
+  "luminance": {
+    "champion-of-urh-rok": 82.21,
+    "forge-giant": 79.43,
+    "hummerhorn": 84.08,
+    "weaver-matriarch": 108.07,
+    "patchwork-troll": 94.85,
+    "maulotaur": 80.07,
+    "worm-that-walks": 91.42,
+    "headless-horror": 100.45,
+    "storm-wyrm": 100.71,
+    "spire-dragon": 110.45,
+    "blinkwyrm": 114.44,
+    "emperor-wight": 84.73
+  },
+  "refinement_review": {
+    "request": "../../evidence/monster-batch-ae-storm-refinement-20261001/review-request.json",
+    "supersedes": "storm-wyrm-v1; original intermediate and final storm conclusions superseded by coordinator review",
+    "selected": "masters/storm-wyrm-v2.png",
+    "calls": 1,
+    "outcome": "recorded; strict style passed; visually accepted",
+    "finding": "At 48/64/96px violet scales and yellow belly/lightning establish the shipped storm family. Broad gold-edged forked horns and scalloped fan wings differ from ice-wyrm needle crystals and Rantha pale angular fins. Upright neck and round coil distinguish the great wyrm from the crouching storm-drake. Gold belly keeps the body readable in grayscale and on all ten floor composites. Fine lightning lines become clearer at 64/96px.",
+    "sheets": [
+      "dragons-color-48-64-96.png",
+      "dragons-grayscale-48-64-96.png",
+      "floor-readability-48.png",
+      "floor-readability-48-x2-b.png"
+    ],
+    "body_luminance": 100.71,
+    "body_minimum": 65,
+    "threshold_changes": false
+  }
+}

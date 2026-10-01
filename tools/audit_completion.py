@@ -44,13 +44,27 @@ def read_csv(path):
 
 def current_catalog():
     path = ROOT / 'overload/mod/class/CheckerTokens.lua'
-    entries = re.findall(r'\{id="([^"]+)", name="([^"]+)"', path.read_text())
+    rows = re.findall(r'\{id="([^"]+)", name="([^"]+)"([^\n]*)', path.read_text())
     manifest = json.loads((ROOT / 'data/token-manifest.json').read_text())
-    if len(entries) != len(set(name for _, name in entries)):
-        raise ValueError('duplicate planning name; identity key must be reviewed')
-    if {item[0] for item in entries} != {a['id'] for a in manifest['assets']}:
+    names, definitions, shared = {}, {}, {}
+    for asset_id, name, fields in rows:
+        composite = 'shared_name=true' in fields
+        definition = re.search(r'define_as="([^"]+)"', fields)
+        definition = definition[1] if definition else None
+        if composite and not definition:
+            raise ValueError('shared planning name requires define_as')
+        if name in names and (not composite or not shared[name] or definition in definitions[name]):
+            raise ValueError('duplicate planning name; identity key must be reviewed')
+        names.setdefault(name, []).append(asset_id)
+        definitions.setdefault(name, set()).add(definition)
+        shared[name] = composite
+    if len(rows) != len({r[0] for r in rows}):
+        raise ValueError('duplicate planning id')
+    if {r[0] for r in rows} != {a['id'] for a in manifest['assets']}:
         raise ValueError('catalog parser / runtime manifest mismatch')
-    return {name: asset_id for asset_id, name in entries}
+    # Planning names remain names; enumerate every explicit composite id in
+    # the CSV cell without treating the name as a runtime selector.
+    return {name: ';'.join(ids) for name, ids in names.items()}
 
 
 def global_indexes(native_root, matrix):
@@ -186,7 +200,8 @@ def build():
             design=row.get('design', ''), generation_note=row.get('generation_note', '')))
     missing = [r for r in result if r['art_status'] == 'missing-candidate']
     summary = dict(schema=1, scope='curated early-zone candidates + room gaps + existing tokens; NOT exhaustive',
-        installed_token_count=len(catalog), historical_union=len(historical),
+        installed_token_count=sum(len(ids.split(';')) for ids in catalog.values()),
+        mapped_planning_name_count=len(catalog), historical_union=len(historical),
         historical_mapped=len(historical & catalog.keys()),
         historical_missing=len(historical - catalog.keys()), registry_rows=len(result),
         missing_candidates=len(missing), missing_by_priority=dict(sorted(Counter(r['priority'] for r in missing).items())),

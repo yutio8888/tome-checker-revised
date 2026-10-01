@@ -1,0 +1,944 @@
+{
+  "schema": 1,
+  "task": "UA first off-list class b uniques/bosses; static source audit; no game launch",
+  "identities": [
+    {
+      "id": "kra-tor",
+      "native_name": "Kra'Tor the Gluttonous",
+      "source": {
+        "path": "game/modules/tome/data/general/npcs/orc.lua",
+        "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+        "line": 280,
+        "anchor": "name = \"Kra'Tor the Gluttonous\""
+      },
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 280,
+          "anchor": "name = \"Kra'Tor the Gluttonous\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC\""
+        }
+      ],
+      "define_as": null,
+      "unique": true,
+      "type": "humanoid",
+      "subtype": "orc",
+      "rank": 3.5,
+      "native_tall": true,
+      "native_image": "npc/humanoid_orc_kra_tor_the_gluttonous.png",
+      "native_image_path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_kra_tor_the_gluttonous.png",
+      "native_image_sha256": "6bd60576a59eb10b2e052d6bff0a5d7da89fc4705293aa1edcb8d23808d89894",
+      "native_image_size": [
+        64,
+        128
+      ],
+      "default_image": "npc/humanoid_orc_kra_tor_the_gluttonous.png",
+      "default_image_exists": true,
+      "shader": null,
+      "moddable_tile": null,
+      "add_displays": null,
+      "anim": null,
+      "nice_tile": "explicit single body",
+      "add_mos": [
+        {
+          "image": "npc/humanoid_orc_kra_tor_the_gluttonous.png",
+          "display_h": 2,
+          "display_y": -1
+        }
+      ],
+      "structure": "Exactly one nice_tile body at display_h=2/display_y=-1; unique=true admits native tall without native_tall flag.",
+      "leaf_source_lines": [
+        279,
+        335
+      ],
+      "talents": [
+        "T_ICE_CLAW",
+        "T_ICY_SKIN",
+        "T_SAND_BREATH",
+        "T_RESOLVE",
+        "T_AURA_OF_SILENCE",
+        "T_MANA_CLASH",
+        "T_WARSHOUT",
+        "T_DEATH_DANCE",
+        "T_BERSERKER",
+        "T_BATTLE_CALL",
+        "T_CRUSH",
+        "T_WEAPON_COMBAT",
+        "T_WEAPONS_MASTERY",
+        "T_ARMOUR_TRAINING",
+        "T_SPELL_FEEDBACK",
+        "T_WEAPON_COMBAT"
+      ],
+      "verdict": "READY"
+    },
+    {
+      "id": "khulmanar",
+      "native_name": "Khulmanar, General of Urh'Rok",
+      "source": {
+        "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+        "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+        "line": 296,
+        "anchor": "name = \"Khulmanar, General of Urh'Rok\""
+      },
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 296,
+          "anchor": "name = \"Khulmanar, General of Urh'Rok\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_MAJOR_DEMON\""
+        }
+      ],
+      "define_as": null,
+      "unique": true,
+      "type": "demon",
+      "subtype": "major",
+      "rank": 3.5,
+      "native_tall": true,
+      "native_image": "npc/demon_major_general_of_urh_rok.png",
+      "native_image_path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_general_of_urh_rok.png",
+      "native_image_sha256": "453002cd9c258735b22ce4d294fa96110e313f18d5dff7ad264634cdb2ce37a3",
+      "native_image_size": [
+        64,
+        128
+      ],
+      "default_image": "npc/demon_major_khulmanar__general_of_urh_rok.png",
+      "default_image_exists": false,
+      "shader": null,
+      "moddable_tile": null,
+      "add_displays": null,
+      "anim": null,
+      "nice_tile": "explicit single body",
+      "add_mos": [
+        {
+          "image": "npc/demon_major_general_of_urh_rok.png",
+          "display_h": 2,
+          "display_y": -1
+        }
+      ],
+      "structure": "Exactly one nice_tile body at display_h=2/display_y=-1; unique=true admits native tall without native_tall flag.",
+      "leaf_source_lines": [
+        295,
+        350
+      ],
+      "talents": [
+        "T_SUMMON",
+        "T_WEAPON_COMBAT",
+        "T_WEAPONS_MASTERY",
+        "T_RUSH",
+        "T_BATTLE_CRY",
+        "T_BATTLE_CALL",
+        "T_STUNNING_BLOW",
+        "T_KNOCKBACK",
+        "T_FIRE_STORM",
+        "T_WILDFIRE",
+        "T_FLAME",
+        "T_INFERNAL_BREATH",
+        "T_ELEMENTAL_SURGE",
+        "T_SPELL_FEEDBACK"
+      ],
+      "verdict": "READY"
+    },
+    {
+      "id": "rungof",
+      "native_name": "Rungof the Warg Titan",
+      "source": {
+        "path": "game/modules/tome/data/general/npcs/canine.lua",
+        "sha256": "edbbc6bd1d02c92bf53b569e210e26cfb4eb25ecba1b077f90697f390cab5e7a",
+        "line": 145,
+        "anchor": "name = \"Rungof the Warg Titan\""
+      },
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/canine.lua",
+          "sha256": "edbbc6bd1d02c92bf53b569e210e26cfb4eb25ecba1b077f90697f390cab5e7a",
+          "line": 145,
+          "anchor": "name = \"Rungof the Warg Titan\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/canine.lua",
+          "sha256": "edbbc6bd1d02c92bf53b569e210e26cfb4eb25ecba1b077f90697f390cab5e7a",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_CANINE\""
+        }
+      ],
+      "define_as": null,
+      "unique": true,
+      "type": "animal",
+      "subtype": "canine",
+      "rank": 3.5,
+      "native_tall": false,
+      "native_image": "npc/canine_rungof.png",
+      "native_image_path": "game/modules/tome/data/gfx/shockbolt/npc/canine_rungof.png",
+      "native_image_sha256": "78fff8d92740131cb86697522d6bb5086ecd05a91c0da36fc7176de4f3cfbeb0",
+      "native_image_size": [
+        64,
+        64
+      ],
+      "default_image": "npc/animal_canine_rungof_the_warg_titan.png",
+      "default_image_exists": false,
+      "shader": null,
+      "moddable_tile": null,
+      "add_displays": null,
+      "anim": null,
+      "nice_tile": null,
+      "add_mos": null,
+      "structure": "Flat single 64x64 native image.",
+      "leaf_source_lines": [
+        144,
+        175
+      ],
+      "talents": [
+        "T_RUSH",
+        "T_CRIPPLE",
+        "T_HACK_N_BACK",
+        "T_SET_UP",
+        "T_VITALITY",
+        "T_UNFLINCHING_RESOLVE",
+        "T_DAUNTING_PRESENCE",
+        "T_HOWL"
+      ],
+      "verdict": "READY"
+    },
+    {
+      "id": "grgglck",
+      "native_name": "Grgglck the Devouring Darkness",
+      "source": {
+        "path": "game/modules/tome/data/general/npcs/horror.lua",
+        "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+        "line": 970,
+        "anchor": "name = \"Grgglck the Devouring Darkness\""
+      },
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 970,
+          "anchor": "name = \"Grgglck the Devouring Darkness\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR\""
+        }
+      ],
+      "define_as": null,
+      "unique": true,
+      "type": "horror",
+      "subtype": "eldritch",
+      "rank": 3.5,
+      "native_tall": true,
+      "native_image": "npc/horror_eldritch_grgglck.png",
+      "native_image_path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_grgglck.png",
+      "native_image_sha256": "1b105dc0a37b318f8b339096e4e6ecf31e6b9ac76ae5578d0cdfd7a46cabec40",
+      "native_image_size": [
+        64,
+        128
+      ],
+      "default_image": "npc/horror_eldritch_grgglck_the_devouring_darkness.png",
+      "default_image_exists": false,
+      "shader": null,
+      "moddable_tile": null,
+      "add_displays": null,
+      "anim": null,
+      "nice_tile": "tall=1",
+      "add_mos": [
+        {
+          "image": "npc/horror_eldritch_grgglck.png",
+          "display_h": 2,
+          "display_y": -1
+        }
+      ],
+      "structure": "Exactly one nice_tile body at display_h=2/display_y=-1; unique=true admits native tall without native_tall flag.",
+      "leaf_source_lines": [
+        969,
+        1021
+      ],
+      "talents": [
+        "T_STARFALL",
+        "T_MOONLIGHT_RAY",
+        "T_PACIFICATION_HEX",
+        "T_BURNING_HEX"
+      ],
+      "verdict": "READY"
+    },
+    {
+      "id": "queen-ant",
+      "native_name": "Queen Ant",
+      "source": {
+        "path": "game/modules/tome/data/general/npcs/ant.lua",
+        "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+        "line": 211,
+        "anchor": "name = \"Queen Ant\""
+      },
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 211,
+          "anchor": "name = \"Queen Ant\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ant.lua",
+          "sha256": "174db6009f98d7431e7ddff1e9bf95fd8301bec8067bbbac88528a12525c51be",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ANT\""
+        }
+      ],
+      "define_as": null,
+      "unique": true,
+      "type": "insect",
+      "subtype": "ant",
+      "rank": 3.5,
+      "native_tall": true,
+      "native_image": "npc/insect_ant_queen_ant.png",
+      "native_image_path": "game/modules/tome/data/gfx/shockbolt/npc/insect_ant_queen_ant.png",
+      "native_image_sha256": "78c23ae5d7f79cc38bd6bfec2ed393c0b293752fba4ef334d796aabed04b7dcb",
+      "native_image_size": [
+        64,
+        128
+      ],
+      "default_image": "npc/insect_ant_queen_ant.png",
+      "default_image_exists": true,
+      "shader": null,
+      "moddable_tile": null,
+      "add_displays": null,
+      "anim": null,
+      "nice_tile": "explicit single body",
+      "add_mos": [
+        {
+          "image": "npc/insect_ant_queen_ant.png",
+          "display_h": 2,
+          "display_y": -1
+        }
+      ],
+      "structure": "Exactly one nice_tile body at display_h=2/display_y=-1; unique=true admits native tall without native_tall flag.",
+      "leaf_source_lines": [
+        210,
+        240
+      ],
+      "talents": [
+        "T_SLIME_SPIT",
+        "T_BITE_POISON",
+        "T_GRAB",
+        "T_STUN",
+        "T_ACIDIC_SPRAY",
+        "T_ACIDIC_SKIN",
+        "T_SUMMON"
+      ],
+      "verdict": "READY"
+    },
+    {
+      "id": "ak-gishil",
+      "native_name": "Ak'Gishil",
+      "source": {
+        "path": "game/modules/tome/data/general/npcs/horror.lua",
+        "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+        "line": 1064,
+        "anchor": "name = \"Ak'Gishil\""
+      },
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 1064,
+          "anchor": "name = \"Ak'Gishil\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR\""
+        }
+      ],
+      "define_as": null,
+      "unique": true,
+      "type": "horror",
+      "subtype": "eldritch",
+      "rank": 3.5,
+      "native_tall": true,
+      "native_image": "npc/horror_eldritch_ak_gishil.png",
+      "native_image_path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_ak_gishil.png",
+      "native_image_sha256": "e1f9d23c2a525c2f1281f9e2542fa8c01bb10f0a518be8a1ca6cb6b611c8844e",
+      "native_image_size": [
+        64,
+        128
+      ],
+      "default_image": "npc/horror_eldritch_ak_gishil.png",
+      "default_image_exists": true,
+      "shader": null,
+      "moddable_tile": null,
+      "add_displays": null,
+      "anim": null,
+      "nice_tile": "tall=1",
+      "add_mos": [
+        {
+          "image": "npc/horror_eldritch_ak_gishil.png",
+          "display_h": 2,
+          "display_y": -1
+        }
+      ],
+      "structure": "Exactly one nice_tile body at display_h=2/display_y=-1; unique=true admits native tall without native_tall flag.",
+      "leaf_source_lines": [
+        1063,
+        1132
+      ],
+      "talents": [
+        "T_KNIFE_STORM",
+        "T_IMPLODE",
+        "T_RAZOR_KNIFE",
+        "T_PSIONIC_PULL",
+        "T_KINETIC_AURA",
+        "T_KINETIC_SHIELD",
+        "T_THERMAL_SHIELD",
+        "T_CHARGED_SHIELD",
+        "T_KINETIC_LEECH",
+        "T_INDUCE_ANOMALY",
+        "T_QUANTUM_SPIKE",
+        "T_WEAPON_FOLDING",
+        "T_RETHREAD",
+        "T_DIMENSIONAL_STEP",
+        "T_THROUGH_THE_CROWD"
+      ],
+      "verdict": "READY"
+    },
+    {
+      "id": "ninandra",
+      "native_name": "Ninandra, the Great Weaver",
+      "source": {
+        "path": "game/modules/tome/data/general/npcs/spider.lua",
+        "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+        "line": 327,
+        "anchor": "name = \"Ninandra, the Great Weaver\""
+      },
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 327,
+          "anchor": "name = \"Ninandra, the Great Weaver\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_SPIDER\""
+        }
+      ],
+      "define_as": null,
+      "unique": true,
+      "type": "spiderkin",
+      "subtype": "spider",
+      "rank": 3.5,
+      "native_tall": true,
+      "native_image": "npc/spiderkin_spider_ninandra_the_great_weaver.png",
+      "native_image_path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_ninandra_the_great_weaver.png",
+      "native_image_sha256": "cc7e9441efea0c62d455f790468d20cc1269f67a49e5f5870530fca838906703",
+      "native_image_size": [
+        64,
+        128
+      ],
+      "default_image": "npc/spiderkin_spider_ninandra__the_great_weaver.png",
+      "default_image_exists": false,
+      "shader": null,
+      "moddable_tile": null,
+      "add_displays": null,
+      "anim": null,
+      "nice_tile": "explicit single body",
+      "add_mos": [
+        {
+          "image": "npc/spiderkin_spider_ninandra_the_great_weaver.png",
+          "display_h": 2,
+          "display_y": -1
+        }
+      ],
+      "structure": "Exactly one nice_tile body at display_h=2/display_y=-1; unique=true admits native tall without native_tall flag.",
+      "leaf_source_lines": [
+        326,
+        387
+      ],
+      "talents": [
+        "T_SPIDER_WEB",
+        "T_LAY_WEB",
+        "T_SPIN_FATE",
+        "T_WEBS_OF_FATE",
+        "T_FATEWEAVER",
+        "T_SEAL_FATE",
+        "T_STOP",
+        "T_STATIC_HISTORY",
+        "T_CHRONO_TIME_SHIELD",
+        "T_SPACETIME_STABILITY",
+        "T_DIMENSIONAL_STEP",
+        "T_PHASE_PULSE",
+        "T_DIMENSIONAL_SHIFT",
+        "T_RETHREAD",
+        "T_SUMMON",
+        "T_LUCKY_DAY"
+      ],
+      "verdict": "READY"
+    },
+    {
+      "id": "phoenix",
+      "native_name": "Phoenix",
+      "source": {
+        "path": "game/modules/tome/data/general/npcs/bird.lua",
+        "sha256": "df514b6263a32309d9f757a6272ebb8ebb7302fed14f251a6df0cdb5f479ab56",
+        "line": 47,
+        "anchor": "name = \"Phoenix\""
+      },
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/bird.lua",
+          "sha256": "df514b6263a32309d9f757a6272ebb8ebb7302fed14f251a6df0cdb5f479ab56",
+          "line": 47,
+          "anchor": "name = \"Phoenix\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/bird.lua",
+          "sha256": "df514b6263a32309d9f757a6272ebb8ebb7302fed14f251a6df0cdb5f479ab56",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_BIRD\""
+        }
+      ],
+      "define_as": "NPC_PHOENIX",
+      "unique": true,
+      "type": "animal",
+      "subtype": "bird",
+      "rank": 3.5,
+      "native_tall": false,
+      "native_image": "npc/animal_bird_phoenix.png",
+      "native_image_path": "game/modules/tome/data/gfx/shockbolt/npc/animal_bird_phoenix.png",
+      "native_image_sha256": "2619f129a40769d1198d32e26c9b57186e329cdfcd1ff62fe3f07ce365285345",
+      "native_image_size": [
+        64,
+        64
+      ],
+      "default_image": "npc/animal_bird_phoenix.png",
+      "default_image_exists": true,
+      "shader": null,
+      "moddable_tile": null,
+      "add_displays": null,
+      "anim": null,
+      "nice_tile": null,
+      "add_mos": null,
+      "structure": "Flat single 64x64 native image.",
+      "leaf_source_lines": [
+        46,
+        110
+      ],
+      "talents": [
+        "T_BODY_OF_FIRE",
+        "T_FIRE_STORM",
+        "T_HEAT",
+        "T_WILDFIRE",
+        "T_WING_BUFFET",
+        "T_BURNING_WAKE",
+        "T_FLAME",
+        "T_INFERNO",
+        "T_BLASTWAVE",
+        "T_FLAMESHOCK"
+      ],
+      "verdict": "READY"
+    },
+    {
+      "id": "the-shade",
+      "native_name": "The Shade",
+      "source": {
+        "path": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+        "sha256": "ccf6405af2919d0074c4d876ad14a96bd77dee83dcb071178652fd60226844e4",
+        "line": 44,
+        "anchor": "name = \"The Shade\""
+      },
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/ruins-kor-pul/npcs.lua",
+          "sha256": "ccf6405af2919d0074c4d876ad14a96bd77dee83dcb071178652fd60226844e4",
+          "line": 44,
+          "anchor": "name = \"The Shade\""
+        }
+      ],
+      "define_as": "SHADE",
+      "unique": true,
+      "type": "undead",
+      "subtype": "skeleton",
+      "rank": 4.0,
+      "native_tall": false,
+      "native_image": "npc/undead_skeleton_the_shade.png",
+      "native_image_path": "game/modules/tome/data/gfx/shockbolt/npc/undead_skeleton_the_shade.png",
+      "native_image_sha256": "6662516c9ab2175e13ac7afea0d13d510bbdadee5b428976bd6d213681040b44",
+      "native_image_size": [
+        64,
+        64
+      ],
+      "default_image": "npc/undead_skeleton_the_shade.png",
+      "default_image_exists": true,
+      "shader": "unique_glow",
+      "moddable_tile": null,
+      "add_displays": null,
+      "anim": null,
+      "nice_tile": null,
+      "add_mos": null,
+      "structure": "Unsupported actor shader unique_glow; native, no art generation or mapping.",
+      "leaf_source_lines": [
+        41,
+        92
+      ],
+      "talents": [
+        "T_MANATHRUST",
+        "T_FREEZE",
+        "T_TIDAL_WAVE",
+        "T_WEAPONS_MASTERY"
+      ],
+      "verdict": "NATIVE shader"
+    },
+    {
+      "id": "ukruk",
+      "native_name": "Ukruk the Fierce",
+      "source": {
+        "path": "game/modules/tome/data/zones/dreadfell-ambush/npcs.lua",
+        "sha256": "f0f4a282c76da22ba82f18c604bfe11c9c4b5d167fe1888cbede1bb3127b8e27",
+        "line": 26,
+        "anchor": "name = \"Ukruk the Fierce\""
+      },
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/dreadfell-ambush/npcs.lua",
+          "sha256": "f0f4a282c76da22ba82f18c604bfe11c9c4b5d167fe1888cbede1bb3127b8e27",
+          "line": 26,
+          "anchor": "name = \"Ukruk the Fierce\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc.lua",
+          "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC\""
+        }
+      ],
+      "define_as": "UKRUK",
+      "unique": true,
+      "type": "humanoid",
+      "subtype": "orc",
+      "rank": 4.0,
+      "native_tall": false,
+      "native_image": "npc/humanoid_orc_ukruk_the_fierce.png",
+      "native_image_path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_ukruk_the_fierce.png",
+      "native_image_sha256": "17f6317a450806261679840927548875ae1e576bc97014736a6eee705cb32155",
+      "native_image_size": [
+        64,
+        64
+      ],
+      "default_image": "npc/humanoid_orc_ukruk_the_fierce.png",
+      "default_image_exists": true,
+      "shader": null,
+      "moddable_tile": null,
+      "add_displays": null,
+      "anim": null,
+      "nice_tile": null,
+      "add_mos": null,
+      "structure": "Flat single 64x64 native image.",
+      "leaf_source_lines": [
+        24,
+        73
+      ],
+      "talents": [
+        "T_WEAPONS_MASTERY",
+        "T_ASSAULT",
+        "T_SHIELD_SLAM",
+        "T_RUSH",
+        "T_WEAPON_COMBAT"
+      ],
+      "verdict": "READY"
+    },
+    {
+      "id": "gorbat",
+      "native_name": "Gorbat, Supreme Wyrmic of the Pride",
+      "source": {
+        "path": "game/modules/tome/data/zones/gorbat-pride/npcs.lua",
+        "sha256": "5cdb350a6980797a3af55b4969ff0f8179ca3f1cc2dfa546c8ab8275569ff009",
+        "line": 35,
+        "anchor": "name = \"Gorbat, Supreme Wyrmic of the Pride\""
+      },
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/gorbat-pride/npcs.lua",
+          "sha256": "5cdb350a6980797a3af55b4969ff0f8179ca3f1cc2dfa546c8ab8275569ff009",
+          "line": 35,
+          "anchor": "name = \"Gorbat, Supreme Wyrmic of the Pride\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+          "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC_GORBAT\""
+        }
+      ],
+      "define_as": "GORBAT",
+      "unique": true,
+      "type": "humanoid",
+      "subtype": "orc",
+      "rank": 5.0,
+      "native_tall": true,
+      "native_image": "npc/humanoid_orc_gorbat__supreme_wyrmic_of_the_pride.png",
+      "native_image_path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_gorbat__supreme_wyrmic_of_the_pride.png",
+      "native_image_sha256": "4f88d71a29b6ee32180197ac2c5d8f2d1cf83cea6e80ab113c38f5c1f15961d1",
+      "native_image_size": [
+        64,
+        128
+      ],
+      "default_image": "npc/humanoid_orc_gorbat__supreme_wyrmic_of_the_pride.png",
+      "default_image_exists": true,
+      "shader": null,
+      "moddable_tile": null,
+      "add_displays": null,
+      "anim": null,
+      "nice_tile": "explicit single body",
+      "add_mos": [
+        {
+          "image": "npc/humanoid_orc_gorbat__supreme_wyrmic_of_the_pride.png",
+          "display_h": 2,
+          "display_y": -1
+        }
+      ],
+      "structure": "Exactly one nice_tile body at display_h=2/display_y=-1; unique=true admits native tall without native_tall flag.",
+      "leaf_source_lines": [
+        33,
+        114
+      ],
+      "talents": [
+        "T_ICE_BREATH",
+        "T_FIRE_BREATH",
+        "T_SAND_BREATH",
+        "T_NATURE_TOUCH",
+        "T_ICE_BREATH",
+        "T_FIRE_BREATH",
+        "T_SAND_BREATH",
+        "T_ICY_SKIN",
+        "T_ICE_CLAW",
+        "T_BELLOWING_ROAR",
+        "T_WING_BUFFET",
+        "T_RIMEBARK",
+        "T_RITCH_FLAMESPITTER",
+        "T_RAGE",
+        "T_RESILIENCE",
+        "T_MASTER_SUMMONER",
+        "T_WILD_SUMMON",
+        "T_GRAND_ARRIVAL",
+        "T_HOWL",
+        "T_DISARM",
+        "T_WEAPON_COMBAT",
+        "T_WEAPONS_MASTERY",
+        "T_ARMOUR_TRAINING",
+        "T_SPELL_FEEDBACK",
+        "T_MASSIVE_BLOW"
+      ],
+      "verdict": "READY"
+    },
+    {
+      "id": "grushnak",
+      "native_name": "Grushnak, Battlemaster of the Pride",
+      "source": {
+        "path": "game/modules/tome/data/zones/grushnak-pride/npcs.lua",
+        "sha256": "8799da1ba86651e729a0c42e8b381cd8a258450900a47802b7e1edd2195d3ad1",
+        "line": 31,
+        "anchor": "name = \"Grushnak, Battlemaster of the Pride\""
+      },
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/grushnak-pride/npcs.lua",
+          "sha256": "8799da1ba86651e729a0c42e8b381cd8a258450900a47802b7e1edd2195d3ad1",
+          "line": 31,
+          "anchor": "name = \"Grushnak, Battlemaster of the Pride\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+          "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC_GRUSHNAK\""
+        }
+      ],
+      "define_as": "GRUSHNAK",
+      "unique": true,
+      "type": "humanoid",
+      "subtype": "orc",
+      "rank": 5.0,
+      "native_tall": false,
+      "native_image": "npc/humanoid_orc_grushnak__battlemaster_of_the_pride.png",
+      "native_image_path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_grushnak__battlemaster_of_the_pride.png",
+      "native_image_sha256": "c68da1c01d4374cc0be19230d59f01c8b4cc8646f086da25da33dc8a8ea908f0",
+      "native_image_size": [
+        64,
+        64
+      ],
+      "default_image": "npc/humanoid_orc_grushnak__battlemaster_of_the_pride.png",
+      "default_image_exists": true,
+      "shader": null,
+      "moddable_tile": null,
+      "add_displays": null,
+      "anim": null,
+      "nice_tile": null,
+      "add_mos": null,
+      "structure": "Flat single 64x64 native image.",
+      "leaf_source_lines": [
+        29,
+        111
+      ],
+      "talents": [
+        "T_WEAPON_COMBAT",
+        "T_ARMOUR_TRAINING",
+        "T_WEAPONS_MASTERY",
+        "T_RUSH",
+        "T_BATTLE_CALL",
+        "T_SHIELD_PUMMEL",
+        "T_OVERPOWER",
+        "T_ASSAULT",
+        "T_SHIELD_EXPERTISE",
+        "T_BATTLE_SHOUT",
+        "T_SHIELD_WALL",
+        "T_SHATTERING_SHOUT",
+        "T_BATTLE_CRY",
+        "T_ONSLAUGHT",
+        "T_SECOND_WIND",
+        "T_JUGGERNAUT",
+        "T_UNSTOPPABLE",
+        "T_MORTAL_TERROR",
+        "T_BLOODBATH",
+        "T_ETERNAL_GUARD",
+        "T_UNBREAKABLE_WILL",
+        "T_GIANT_LEAP"
+      ],
+      "verdict": "READY"
+    },
+    {
+      "id": "vor",
+      "native_name": "Vor, Grand Geomancer of the Pride",
+      "source": {
+        "path": "game/modules/tome/data/zones/vor-pride/npcs.lua",
+        "sha256": "56bbf54ee15ba9811c60194c5de208dec126310085f98e650da312d2c632b213",
+        "line": 30,
+        "anchor": "name = \"Vor, Grand Geomancer of the Pride\""
+      },
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/vor-pride/npcs.lua",
+          "sha256": "56bbf54ee15ba9811c60194c5de208dec126310085f98e650da312d2c632b213",
+          "line": 30,
+          "anchor": "name = \"Vor, Grand Geomancer of the Pride\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-vor.lua",
+          "sha256": "7ef30e07dd59c5784f06b8faa7e038ca27e4e2754671c3949f416b54450bd458",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC_VOR\""
+        }
+      ],
+      "define_as": "VOR",
+      "unique": true,
+      "type": "humanoid",
+      "subtype": "orc",
+      "rank": 5.0,
+      "native_tall": false,
+      "native_image": "npc/humanoid_orc_vor__grand_geomancer_of_the_pride.png",
+      "native_image_path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_vor__grand_geomancer_of_the_pride.png",
+      "native_image_sha256": "d04c5d85013d23f0b289dea03a460009ac7ebd18011c008f082d1280c1fb3f30",
+      "native_image_size": [
+        64,
+        64
+      ],
+      "default_image": "npc/humanoid_orc_vor__grand_geomancer_of_the_pride.png",
+      "default_image_exists": true,
+      "shader": null,
+      "moddable_tile": null,
+      "add_displays": null,
+      "anim": null,
+      "nice_tile": null,
+      "add_mos": null,
+      "structure": "Flat single 64x64 native image.",
+      "leaf_source_lines": [
+        28,
+        112
+      ],
+      "talents": [
+        "T_FLAME",
+        "T_FLAMESHOCK",
+        "T_FIREFLASH",
+        "T_INFERNO",
+        "T_BLASTWAVE",
+        "T_CLEANSING_FLAMES",
+        "T_BURNING_WAKE",
+        "T_FREEZE",
+        "T_ICE_STORM",
+        "T_TIDAL_WAVE",
+        "T_ICE_SHARDS",
+        "T_FROZEN_GROUND",
+        "T_LIGHTNING",
+        "T_CHAIN_LIGHTNING",
+        "T_SPELLCRAFT",
+        "T_ESSENCE_OF_SPEED",
+        "T_PHASE_DOOR",
+        "T_STAFF_MASTERY",
+        "T_METEORIC_CRASH"
+      ],
+      "verdict": "READY"
+    }
+  ],
+  "auxiliary_sources": [
+    {
+      "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+      "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+      "line": 33,
+      "anchor": "e.name = rng.table{_t\"gloomy"
+    },
+    {
+      "path": "game/modules/tome/data/zones/heart-gloom/npcs.lua",
+      "sha256": "0aa0c8cb3488b735cd4b7455eec73acd6d0c62d424cf74edd330e71caeed56d8",
+      "line": 46,
+      "anchor": "e.name = rng.table{_t\"dreaming"
+    },
+    {
+      "path": "game/modules/tome/data/timed_effects/magical.lua",
+      "sha256": "10de292fffb104890909a9a1ec40a7453234a79fc7f267e3b754c0d290aa7b3b",
+      "line": 1120,
+      "anchor": "name = \"PHOENIX_EGG\""
+    },
+    {
+      "path": "game/modules/tome/data/talents/misc/npcs.lua",
+      "sha256": "dc640c1af5d22a45472d843380c9de01334530b3831bd2b9fe88ee0cba3abc23",
+      "line": 1415,
+      "anchor": "list.GRGGLCK_TENTACLE"
+    },
+    {
+      "path": "game/modules/tome/data/talents/misc/horrors.lua",
+      "sha256": "0690eca57ddb8ebe78694f63ff7587798fa7432fde6e6b6ae32000255ab19292",
+      "line": 623,
+      "anchor": "--Ak'Gishil"
+    },
+    {
+      "path": "game/modules/tome/class/NPC.lua",
+      "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+      "line": 32,
+      "anchor": "-- Grab default image name"
+    },
+    {
+      "path": "game/modules/tome/resolvers.lua",
+      "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+      "line": 1375,
+      "anchor": "function resolvers.calc.nice_tile"
+    }
+  ],
+  "rename_policy": "Heart Gloom both constructors alter Rungof name/rarity/talents only. Six prefixes preserve same body. Exact per-Rungof alias with constructor/provenance fields; no other unique prefix opt-in.",
+  "appearance_policy": "Uniques with define_as bind exactly; no define_as is invented for pool uniques. Shader, moddable paper-dolls and extra composites stay native. Shade unique_glow unsupported. Phoenix PHOENIX_EGG changes image; egg remains native and bird token restores on deactivation. Native shader auras and particles are separate from actor shader.",
+  "random_boss_policy": "Reuse existing captureRandomOrigin/recordRandomOrigin for verified unique bodies, including tall unique precedent; no arbitrary renamed unique admission. Unique temporal clones remain native under existing generic policy.",
+  "summon_policy": "Queen Ant and Khulmanar summons/escorts draw separate pool bodies; Ninandra summons weaver young/escorts patriarchs. Grgglck tentacle and AkGishil animated blades are separate identities outside UA. Gorbat summons separate rimebark/ritch bodies. No escorts or tactical state baked in art."
+}

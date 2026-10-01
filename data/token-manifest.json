@@ -1,5 +1,5 @@
 {
-  "version": "0.6.31",
+  "version": "0.6.32",
   "size": 128,
   "assets": [
     {
@@ -2257,6 +2257,522 @@
       "batch": "monster-batch-ac",
       "master_sha256": "13719a65468ab495846b3213adcd549ed0f8cc39d94fe3b217a46ac9471272e7",
       "runtime_sha256": "a234c3e9becb3d1b98b3fe202bee8cc7105702c04e9ed2d2ad93c7c80f25dd21"
+    },
+    {
+      "id": "duathedlen",
+      "batch": "monster-batch-ad",
+      "master_sha256": "5e491019c88a33f4f10ab2f319be682974e898c1a1f205f2d2afe950b5c09d61",
+      "runtime_sha256": "1a1cf9fc967bf71f930357d488e598020719da222209fcfe7c5a7d61e77e877b"
+    },
+    {
+      "id": "daelach",
+      "batch": "monster-batch-ad",
+      "master_sha256": "18fab3d578778e5da0c25d18f2fed8fe558b25a12a197773cdec93ca59d3c5a4",
+      "runtime_sha256": "c9fedc9a42f365505f582e8acc29d38ab48a021e4390f9de32252dd288f3aa67"
+    },
+    {
+      "id": "orc-grand-summoner",
+      "batch": "monster-batch-ad",
+      "master_sha256": "759ff919820e3bc5a2c5742651f6bcd98afe3e19190e1466d681cd5d1a45c474",
+      "runtime_sha256": "90a363604fbe7e0be76691a81120e90d2eb804632c6aa95af763e31d256351f9"
+    },
+    {
+      "id": "orc-master-wyrmic",
+      "batch": "monster-batch-ad",
+      "master_sha256": "5d6771f2aea7b5066db942e3b2fb89f03abbfcd1368dfd7f2757b0cb81d27aab",
+      "runtime_sha256": "6306e6e5788cb385166837cdb4f204cc616693d0718025e69f68dd44eaf45ac6"
+    },
+    {
+      "id": "orc-mage-hunter",
+      "batch": "monster-batch-ad",
+      "master_sha256": "36853202f0c7a1f7e1bec7bad4562d84720515678340ef5392f031611ebb0b5f",
+      "runtime_sha256": "84aa95de925d14bb542abb266e99d752550fdb0671187f4ef798adb3b43a83ec"
+    },
+    {
+      "id": "ritch-larva",
+      "batch": "monster-batch-ad",
+      "master_sha256": "094b67201882b0d80b0814a90b0d5468232c56be16fe082a9acb8be96eaac344",
+      "runtime_sha256": "66909759d978de5fba1ed035a475b39d0e7cb3d6efa5c99bb39b9fcc83ce0b10"
+    },
+    {
+      "id": "ritch-hunter",
+      "batch": "monster-batch-ad",
+      "master_sha256": "9643eeaada2ce9ee0e622d02253c09cbe11c496ffdaa2797e975cc133ba62fb5",
+      "runtime_sha256": "abf5536d594358c527eeafcb14eefb9273fa903d940f12d29a7d71b3214cc4a5"
+    },
+    {
+      "id": "ritch-hive-mother-pool",
+      "batch": "monster-batch-ad",
+      "master_sha256": "479862a389fa75124fe86d3ab36a67405768aa566481571e332e5143f3448776",
+      "runtime_sha256": "d15e57ff9ae8adf4d611cf03a6e8c2f2aa862bd82d6068f73235ea01cd938fed"
+    },
+    {
+      "id": "snow-cat",
+      "batch": "monster-batch-ad",
+      "master_sha256": "97c7c420240e67a075cb37a4014402cc47db9a8ca9f02d9ff8d6c99a77a7e627",
+      "runtime_sha256": "2582dfb29a00b59db98fbb95c398f2468e96bca834d5bd50baaf15e98ea83bc5"
+    },
+    {
+      "id": "panther",
+      "batch": "monster-batch-ad",
+      "master_sha256": "34575830233b8b278b9bb5fec1adfdcf49031f0e2d395895f0baae02c1d64c3b",
+      "runtime_sha256": "507f152f050c297da77b264e5359a39bc20f071466ac2139abe99c5fee437cba"
+    },
+    {
+      "id": "tiger",
+      "batch": "monster-batch-ad",
+      "master_sha256": "dc8fe0ab0e6fb695f0cd188e366b35c2a5cf3397945ad4299b62e6bc3d09c316",
+      "runtime_sha256": "6dd5b84416a54d80794ba60272c638a5be3518e498192b22904ad041f772c28d"
+    },
+    {
+      "id": "sabertooth-tiger",
+      "batch": "monster-batch-ad",
+      "master_sha256": "0cc5ef9d0190c4afe822a3f0bf1578ef0e8dfe4efc6568fa5e8544d056737db9",
+      "runtime_sha256": "9b9860456267cc2377321489694cd068e62de23482c6a8dac56bbb057ee42ea6"
+    },
+    {
+      "id": "ice-wyrm",
+      "batch": "monster-batch-ad",
+      "master_sha256": "530a4cb370a59bed69a36d15b36c28db8c22db0fcd5867c0cdc3e8f9239038e8",
+      "runtime_sha256": "787f4af9b7c461ca48a0b62a6dfef216f548471c08370175b77b2a33229bfd98"
+    },
+    {
+      "id": "champion-of-urh-rok",
+      "batch": "monster-batch-ae",
+      "master_sha256": "ca5d89d2633a072bed3f2cdd9a933c0265d3d8ccab76c3c6016052b54968e672",
+      "runtime_sha256": "ead35e878f81fbb276d4d124dde9d939ad4e3f881f4121309841db434dcb42bf"
+    },
+    {
+      "id": "forge-giant",
+      "batch": "monster-batch-ae",
+      "master_sha256": "a5fa2b9c36455daaa58f72d0867938fd7e04c2a28c0e26e4c068b438fcb1da1b",
+      "runtime_sha256": "28f5cb82297b0e66000db49e039603bc005fd8e267ddf3566a2107f1226bf54c"
+    },
+    {
+      "id": "hummerhorn",
+      "batch": "monster-batch-ae",
+      "master_sha256": "41f33feffdf0adf6f265956344025be21a75c876d0dda4b749cd385a117136a8",
+      "runtime_sha256": "6d28e09b315bdf59138472baabda316878f75c58d54c3ce1f02ce08e8c55d0a1"
+    },
+    {
+      "id": "weaver-matriarch",
+      "batch": "monster-batch-ae",
+      "master_sha256": "7f8b3884b027907282c669143d5b01cf8508c4c70665ba70391816697c1b2f4f",
+      "runtime_sha256": "fcba15da89169b9d1028abeb4b2e4d97fc02aab31c94113fd29db67ce86e3c97"
+    },
+    {
+      "id": "patchwork-troll",
+      "batch": "monster-batch-ae",
+      "master_sha256": "a199d047e2771f28beb0f3a2f20faf75b244e7d8fedafef2b1659515b9594976",
+      "runtime_sha256": "44d39f62d02b5c0b168af677b5fe35f78d5249efb6439053e3b8913660b21e12"
+    },
+    {
+      "id": "maulotaur",
+      "batch": "monster-batch-ae",
+      "master_sha256": "ecb550f5572433185e171f2469c053df26849995901d3effbaa8f05415e15554",
+      "runtime_sha256": "f84b2fcecc61363c3822f5bd149e063108a69c5477c5f28063759898b8a2adff"
+    },
+    {
+      "id": "worm-that-walks",
+      "batch": "monster-batch-ae",
+      "master_sha256": "4e889729e2448f25f8076f153476b66d660030a36347eb0b12fcfd89d20627b4",
+      "runtime_sha256": "2689c20c28487cf380c22c398124e7a2f04ae24861b52c67f39ee66cc7bde23e"
+    },
+    {
+      "id": "headless-horror",
+      "batch": "monster-batch-ae",
+      "master_sha256": "77eca55f3f95b6a03c16f9e19501f2b4d4a99749a4a39f4b245e850114496270",
+      "runtime_sha256": "51a264bf122a952736e519f2a68dda874f2206a709f82c5077d50d6e453399de"
+    },
+    {
+      "id": "storm-wyrm",
+      "batch": "monster-batch-ae",
+      "master_sha256": "e2c78440261978549d53dafb597cec9dc9a0ad654587c602b27e0f23587a80f6",
+      "runtime_sha256": "0b5b007ae68b894dd4f47a1c8a6bfe6356a5c47815000caed05d6b16c6d7b796"
+    },
+    {
+      "id": "spire-dragon",
+      "batch": "monster-batch-ae",
+      "master_sha256": "1b87a8c33a844dec5d7fbae8c4e14c99dac12af2252f5da6887e726f77681d13",
+      "runtime_sha256": "191edb73a8e934367a01ced329adf173ef1e558659d0ee4ab0a8178b95c7aa2d"
+    },
+    {
+      "id": "blinkwyrm",
+      "batch": "monster-batch-ae",
+      "master_sha256": "d058c7a1926614d194ba3a870a534e56c9c38dc9e6361940311c576e056cad28",
+      "runtime_sha256": "e13f91ade78601810bb61b1a846128a68394c82f18eeecaf543a52ec648e2fa8"
+    },
+    {
+      "id": "emperor-wight",
+      "batch": "monster-batch-ae",
+      "master_sha256": "ee6db6f4aced0de2b9c90719767faa1e08135eeb869f3d2fe3ad192c57ae9344",
+      "runtime_sha256": "d0b8456f0aa9b9d7be184467d8e10b99824fcea77ce5e6031f04ae91907ca706"
+    },
+    {
+      "id": "nightmare-horror",
+      "batch": "monster-batch-af",
+      "master_sha256": "035d6661335ba9abdf052d81ee0ba4512dd80a7e91d3e4c4dfcf47d58392058d",
+      "runtime_sha256": "42e54601cf443d535b944e1ff0c7d22e0ecaba743b4470e6fed820eae9e16ddc"
+    },
+    {
+      "id": "radiant-horror",
+      "batch": "monster-batch-af",
+      "master_sha256": "d008b4bbaaffedd8c9451ea05329ed0506247ff82877de745a9871cadeea4f03",
+      "runtime_sha256": "aee03b14a780ee88d1164c52c41170e359507b5b7b3d4f7d07b5a9429c89ce23"
+    },
+    {
+      "id": "maelstrom",
+      "batch": "monster-batch-af",
+      "master_sha256": "7249543066997c2b366f72251ce6c19e3408ef57214fc19b589e7dd65f0b7b10",
+      "runtime_sha256": "37b23f3fe5ce0300cec0808de9c6d411e122bce58cb184a9714a27b3723da19e"
+    },
+    {
+      "id": "parasitic-horror",
+      "batch": "monster-batch-af",
+      "master_sha256": "2c1fd364d21dc144957cd2ea76affc141f81adbbed1b03771e294ef0c7951dbd",
+      "runtime_sha256": "16bc5751562d39cca2835ee88ba0d46695631b3570efcfabc6537a80bc73e582"
+    },
+    {
+      "id": "lich",
+      "batch": "monster-batch-af",
+      "master_sha256": "24a95815055147f3ab5b67863f8c7d3bb6c8ba784d2bf239668eb10b069b45ed",
+      "runtime_sha256": "e5967c0b85a89c68ddee125959d88287dae703650ca9e62f7d57251f5d4d943e"
+    },
+    {
+      "id": "ancient-lich",
+      "batch": "monster-batch-af",
+      "master_sha256": "d1dd2c9b85b3755aa7d56e95f106c87b76c79dec4e7001bc54802f75955473d7",
+      "runtime_sha256": "7caa80f932c0c831931dd16ebe2c4d50b301816bb5a69616a4bc2f8f03258782"
+    },
+    {
+      "id": "archlich",
+      "batch": "monster-batch-af",
+      "master_sha256": "d790f0fb46bb7bf0892dae194033cba6909b9f77f36ed8866ba813b6522c1a1a",
+      "runtime_sha256": "69893cd551fde1ee510ea0c1d03ad3ead99ef7fd1d46930f6c106f80963b7b00"
+    },
+    {
+      "id": "blood-lich",
+      "batch": "monster-batch-af",
+      "master_sha256": "fd9d118ae47c6a25b61b731dc1b3e2aaced138f4f965611ccad84f583e9ee3f1",
+      "runtime_sha256": "d27ea8bdeb0b3f973878347af028a9128586da531fb6b59b7fca486b9996dc0f"
+    },
+    {
+      "id": "animated-blood",
+      "batch": "monster-batch-af",
+      "master_sha256": "76fd2eefe774aafc9d553c5b6a5c5b7e79e687962332486e2d6d459640436875",
+      "runtime_sha256": "126f01900d2e928320a04b4d076de27006b5be5d8cc2d71f9286ee8060cdac76"
+    },
+    {
+      "id": "multi-hued-drake-hatchling",
+      "batch": "monster-batch-ag",
+      "master_sha256": "1a5335a370a02ae668d48de640cb277ce8ec262e8c74fe1dee2862c72e406d43",
+      "runtime_sha256": "674ebf8c0e7e3375cd0d4b285b431e40c47497ee3164e5a237d736197b70e4f4"
+    },
+    {
+      "id": "multi-hued-drake",
+      "batch": "monster-batch-ag",
+      "master_sha256": "8d2f18fe4fc92cf49a07d4bc65a0a8fb9256158a3886835ef11cf062475d5112",
+      "runtime_sha256": "10e958b113dd09e1f1c31d45adec8e5ebc51ee2478ffed38c0ba28a14a6320e3"
+    },
+    {
+      "id": "greater-multi-hued-wyrm",
+      "batch": "monster-batch-ag",
+      "master_sha256": "3bfa0f694c51d3a40d24c395ea4a278b7b92d1dbcc1061265d2d27524ddd45fa",
+      "runtime_sha256": "ae7f40c8d33673b4137285c282806ddff248e7e08abe0581aa5ba074d69e4de7"
+    },
+    {
+      "id": "shadow-claw",
+      "batch": "monster-batch-ag",
+      "master_sha256": "71b2d56de251d78ec8dd03f833362124abbbb1ffdb6e91925baba376f01f2e6b",
+      "runtime_sha256": "de9eb899354772a393e5a2d653eaf109e469f01de3bba54899fea81b415a6da0"
+    },
+    {
+      "id": "multi-hued-crystal",
+      "batch": "monster-batch-ag",
+      "master_sha256": "cd7a1445a68732d5c8f47c9ca2e221b0c950aec38c9929b7288a46bd0309b91f",
+      "runtime_sha256": "80242ef19d7a3f07d94199b58af1d8aaf2ad2675351d882dbd8b3cad6b24a34e"
+    },
+    {
+      "id": "shimmering-crystal",
+      "batch": "monster-batch-ag",
+      "master_sha256": "9076a430c707e479ef871435015f4d608e93556567984787de3a19f4b7d43d82",
+      "runtime_sha256": "8c7423ea56c8313d24532b99a9ddc5bbe08d1b20b5095406a200d9c55db04372"
+    },
+    {
+      "id": "shadow-caster",
+      "batch": "monster-batch-ag",
+      "master_sha256": "e4210eca079d14a3b987308da56c5ad317a3b10c87629cdb63158484bdde0761",
+      "runtime_sha256": "d1d5f1deb6ebefe402ead802722c9afe0bda9aa5cc7e62fadcafe1e4ed33ea54"
+    },
+    {
+      "id": "kra-tor",
+      "batch": "monster-batch-ua",
+      "master_sha256": "d77356784aa6ea07e63fb8c130cf8a87dc114edfc9e0202c4a70098c3637b358",
+      "runtime_sha256": "069a62b27c71a7fdd7ff2f3d63556516de4a5fdfdce92a3b4e13563a27b4be92"
+    },
+    {
+      "id": "khulmanar",
+      "batch": "monster-batch-ua",
+      "master_sha256": "23e4aa1423f6c8c6db94a4f64263104a58fccf035f6e533d37874b89b8637823",
+      "runtime_sha256": "3e457f56aa3f813d9a53720c529a202ad64b15dc4113d4fb00addc87691dfc7d"
+    },
+    {
+      "id": "rungof",
+      "batch": "monster-batch-ua",
+      "master_sha256": "8f249c561d6378693fa6b300e3c16924074811a4968fde68d0ba9a991f31edbe",
+      "runtime_sha256": "7707a7076e509c7fbddb94416a4cc409700a8bc43e15aeb844b9197a890e9d3d"
+    },
+    {
+      "id": "grgglck",
+      "batch": "monster-batch-ua",
+      "master_sha256": "f438cd71e5b20cc03536962b30008134ef78121c90b5ba85c0e74e1240ab61c1",
+      "runtime_sha256": "12267cdffdc484704a44d550247fefeb2a63b979150e4f8a8ab6af84b61223fa"
+    },
+    {
+      "id": "queen-ant",
+      "batch": "monster-batch-ua",
+      "master_sha256": "c4d4e998bb136776f1c56e799fba953c280279aaaab74b4be2cd3c1300b4d3ae",
+      "runtime_sha256": "0d3a61067e818378572225ec443ea4615c1857a5a0a1601a53554b1106b19286"
+    },
+    {
+      "id": "ak-gishil",
+      "batch": "monster-batch-ua",
+      "master_sha256": "fffb9c3e6551b919e34f5c3efc4c7d141a71539f59ca5823a4bf32a44520def4",
+      "runtime_sha256": "6c87bcbc325ddc67f7c81f12ac0a9a4e3a72e6f4c59a4bf0ed79e35f8bf229d5"
+    },
+    {
+      "id": "ninandra",
+      "batch": "monster-batch-ua",
+      "master_sha256": "29ac901eee6cfb745f90d0cbde6277ea73512da0f5e8f41d546645ad18d1cfaf",
+      "runtime_sha256": "19d88989971e66ca19cecce3247109de461637e24a70ec62450ad8927522be53"
+    },
+    {
+      "id": "phoenix",
+      "batch": "monster-batch-ua",
+      "master_sha256": "7b9da3b4e2e17e2796046d7e615f5e196c0b3f7a773a41d5a2cae5f819858d72",
+      "runtime_sha256": "66a500327dcfa5e33aa711dd3b42c9aa86294558bbb4aa6966c87629fdb46e1d"
+    },
+    {
+      "id": "ukruk",
+      "batch": "monster-batch-ua",
+      "master_sha256": "1b14a003b5ca45a7eb507b5e26f04f2d6a7cd1238aa2e6a79f48b85402a5d95b",
+      "runtime_sha256": "c86a1eaac77b74f5beac17eb377fff54238b970adc54c7cb60ffea3ab94420cb"
+    },
+    {
+      "id": "gorbat",
+      "batch": "monster-batch-ua",
+      "master_sha256": "42be18a54661f616483eabc823af22d7a02ff10d7099771300dab1941707da6e",
+      "runtime_sha256": "c8fe86ac3dfcde4d05e7a967903de8441e380f784dc5e287e22a3e2635339f1c"
+    },
+    {
+      "id": "grushnak",
+      "batch": "monster-batch-ua",
+      "master_sha256": "3a1a9f961a93ba2d8c20940096e2555499da8a979000d666d20391841c6e1d8b",
+      "runtime_sha256": "bad16e4b858b25bb9d70f65fdc88acc8924e857bab408186f46fc9c7804b5c78"
+    },
+    {
+      "id": "vor",
+      "batch": "monster-batch-ua",
+      "master_sha256": "003ec1e2c6afff7270e883a0882b3aee3a066ba57e178efd6c609dc4e58ad7c3",
+      "runtime_sha256": "b2913d0a3ffe2605de2601ca23a72aa6d8ea5e1311d76fec49ad328ab4941a2d"
+    },
+    {
+      "id": "apprentice-mage",
+      "batch": "monster-batch-ta1",
+      "master_sha256": "c5df6dbe3f890f5ddb2382a27a6831037cc25368101ca42f2339641ab7d8b176",
+      "runtime_sha256": "275bdde03682c8ad8333d580e477b3866f4d655f7c1016e743641460e2c91179"
+    },
+    {
+      "id": "pyromancer",
+      "batch": "monster-batch-ta1",
+      "master_sha256": "e9e22e8f29d0d8b50ab6f3c34a1955900ea886a8f10beea7e0ca8d86ba7fc730",
+      "runtime_sha256": "c1c429cb8c4defea5baed482331c8f9c9a0750ee2b18eb784cb767b1ef4b7d06"
+    },
+    {
+      "id": "cryomancer",
+      "batch": "monster-batch-ta1",
+      "master_sha256": "56a73be39944fd619403fc4819ddacb15d3f41d674b02244d45529f9027d11a2",
+      "runtime_sha256": "27af4735efb5253d53e1baaba375fd1a8fba6961ba31c53c917851b58dc6c4a4"
+    },
+    {
+      "id": "geomancer",
+      "batch": "monster-batch-ta1",
+      "master_sha256": "d57128dc3d4b107ddc290d4490dd47f11afb5d89d0b395e3b23bbaaf22517866",
+      "runtime_sha256": "efc4c79d270a74efa11b6fa358c34cb732392cb1c0c5e9716ffbe7b0f00cebe3"
+    },
+    {
+      "id": "tempest",
+      "batch": "monster-batch-ta1",
+      "master_sha256": "ae8a89784bcfc9462dc353982175d710b07beed611a786bfb47c8cd2264eceeb",
+      "runtime_sha256": "e40a922417f1818689f0ab6467d8c7a7f617c5646e255170b88d8db780148abc"
+    },
+    {
+      "id": "human-guard",
+      "batch": "monster-batch-ta1",
+      "master_sha256": "e51f52947c2fc2aa838c8dd039e300d84f20216484240ec50914148a5cabef1c",
+      "runtime_sha256": "56f00426aaefc026f8907a7df62115f5fb28c6133e57a95cdbdc9ab2cf2908fe"
+    },
+    {
+      "id": "derth-guard",
+      "batch": "monster-batch-ta1",
+      "master_sha256": "881b9928521c2763a363fb0c93c9ed20e603e05a28099220064cdfc69106ba08",
+      "runtime_sha256": "024f03d4cdae8ec5467e9ef410e6dfc37d6b807001ab1e2477c1dc62bb37ca80"
+    },
+    {
+      "id": "last-hope-guard",
+      "batch": "monster-batch-ta1",
+      "master_sha256": "e86706183ddbcdb8bb7b9a8539ae2742d3251156f2be168f5a592273ecae6ba8",
+      "runtime_sha256": "b2cab43f62f2d7323c0f1ec7c34ade2d59e73f8619d65f7b8f138bfb1e6aa2b3"
+    },
+    {
+      "id": "halfling-guard",
+      "batch": "monster-batch-ta1",
+      "master_sha256": "1f4ab83677c1220a6ad222dd4ce55c3ce218fc092c1a14081e01e9ffe2f05add",
+      "runtime_sha256": "8dcb98d09b4e030fb73cd44582500a3a99fc9434bad098e1fddee8ddd65d5311"
+    },
+    {
+      "id": "dwarven-guard",
+      "batch": "monster-batch-ta1",
+      "master_sha256": "ef927d829e0187d95ddd3dd666fb5323516a7b3b68127be72df3b6c2baccc260",
+      "runtime_sha256": "b59419906692d0d1296c852ea7a15621d292e95f03b90624821f629c8810881d"
+    },
+    {
+      "id": "elvala-guard",
+      "batch": "monster-batch-ta1",
+      "master_sha256": "d8c680aa4bd85ae7b5e9226b547757d6a3ca0cdb38d408ac1fca96afa0bb9299",
+      "runtime_sha256": "04071b3b6b9aedeae0f27624568b5a206e7c48778f413fa64325eaf5701868b1"
+    },
+    {
+      "id": "slaver",
+      "batch": "monster-batch-ta1",
+      "master_sha256": "2b6fd51cff497c7bd85dc2d6ab49fc2036fa596e9edacf81294e2b1656147e53",
+      "runtime_sha256": "ce6ea372d614860d8386a0f42bacda60119ab6658a58c5108167e197578fad85"
+    },
+    {
+      "id": "enthralled-slave",
+      "batch": "monster-batch-ta1",
+      "master_sha256": "8f71958f7235d7d91cff2f683d200d2f8a6584f3346baa89872fdb3e5616ed03",
+      "runtime_sha256": "65a5cf7c5262b803933507f34220370dfac057222f9c833cf3af2e0c802a1a39"
+    },
+    {
+      "id": "high-sun-paladin-aeryn",
+      "batch": "monster-batch-ub1",
+      "master_sha256": "d4d2d227b548470af810cd827dd62bfdcbdb67c013e2bdd21b768e2dd33e892c",
+      "runtime_sha256": "d80374cab1cc2fe4dc43721bb6fe6c1c0990b908d458da9828dc3b40100c6075"
+    },
+    {
+      "id": "fallen-sun-paladin-aeryn",
+      "batch": "monster-batch-ub1",
+      "master_sha256": "7a2d0df6904af411f0a26b87828664df7eb119ce63141f677871bdb1af39cf9c",
+      "runtime_sha256": "e0c2c7127a7add8a6cda7107c0db88102e066d0c2bb3a92f8ed20d0bc7a317b0"
+    },
+    {
+      "id": "caldizar",
+      "batch": "monster-batch-ub1",
+      "master_sha256": "bde513200e24cd395518f09aafe6bf5dac909b530c9c64fe0bf46450fefbab0e",
+      "runtime_sha256": "93213590575e58157e04a5282b3adc993b450b8d4f6b6b4d1c5afc88a0632661"
+    },
+    {
+      "id": "chronolith-twin",
+      "batch": "monster-batch-ub1",
+      "master_sha256": "8e49da49bfbdf415eba64a284cd41a5c710300cc5bc275d407d107e1571c8ee3",
+      "runtime_sha256": "dd4c1b215b3c08773fc25a82821c7a6cd45db23ad2b9233b932089724a0f817b"
+    },
+    {
+      "id": "chronolith-clone",
+      "batch": "monster-batch-ub1",
+      "master_sha256": "23fef000634fa02fbaa16a48de273734f54785cc25e48a3eea25b8dbabd244b1",
+      "runtime_sha256": "91dc1c31aee3739e9f513fe16782c569646f5cbba1f4dcdbbdf304cf0dd23ad4"
+    },
+    {
+      "id": "temporal-defiler",
+      "batch": "monster-batch-ub1",
+      "master_sha256": "4f90eef2024446cca18b0a3c845592d9567ca1ac00fe0134fcd40a3ac419f5c2",
+      "runtime_sha256": "737044a46850867df5386ea7e907ca092df66eadc2ddeee2308c3aac471b14a7"
+    },
+    {
+      "id": "corrupted-daelach",
+      "batch": "monster-batch-ub1",
+      "master_sha256": "c5d68405223ba9fc6f2a2e5b8667f6b26b17a944c3882cdf074b6de51edf9791",
+      "runtime_sha256": "8dcf9abc10be5dcf71dc3dd8fd1ba6576897ef3509e6347e64d64480647c1209"
+    },
+    {
+      "id": "supreme-archmage-linaniil",
+      "batch": "monster-batch-ub1",
+      "master_sha256": "e9e2094de3d0db644916843c95bb779ab1d008b065cf7f7ea0d4326cfc4737ed",
+      "runtime_sha256": "7f7948330389352a4e027a551a8484124cc58393e60e668efe8dc4e8f23c3e73"
+    },
+    {
+      "id": "archmage-tarelion",
+      "batch": "monster-batch-ub1",
+      "master_sha256": "5e80d4cec6697cfda994c4ebd35a751281c75eb9a73f2359b190adbdca0976ff",
+      "runtime_sha256": "b4e8d5732a4ca2e790f3070fe0d4c0b0dcdbc8ea34acfca762dbaa2ae6e65652"
+    },
+    {
+      "id": "sun-paladin-guren",
+      "batch": "monster-batch-ub2",
+      "master_sha256": "453c2c8dd53241596ee64df6dc11e81676779c815967b24154858037ea6456d9",
+      "runtime_sha256": "336cc898c4fd584df7cad06b3d289fe6cf0af58e7e507397eafc95ab9b20f1ea"
+    },
+    {
+      "id": "epoch",
+      "batch": "monster-batch-ub2",
+      "master_sha256": "bffd74019041ed130e905115c55d55b7edbb1522fe75d63ac6ecc6d98a72519a",
+      "runtime_sha256": "7ac357bc1df3cd868a526ac3ee603e00d43275efc5caff21dced0d7d71dfccc2"
+    },
+    {
+      "id": "corrupted-oozemancer",
+      "batch": "monster-batch-ub2",
+      "master_sha256": "62619fe64f2d66761c4fe543770136d09f373455afd70d31314ce4e69cf7fe8c",
+      "runtime_sha256": "c559bd61a273c475cbf23d07d5a7db0867c7dd98d4a33adf26015ab89294ff61"
+    },
+    {
+      "id": "zemekkys",
+      "batch": "monster-batch-ub2",
+      "master_sha256": "89893fc694b41261b43a6be3d7f4e248c65c86de7b0ba0fc8fd3760b403ebc83",
+      "runtime_sha256": "6abca666c9b5671b12135735919d3854ec450f7d89505dc8da94a1bc2522120d"
+    },
+    {
+      "id": "blood-master",
+      "batch": "monster-batch-ub2",
+      "master_sha256": "1bf80b9253ba25f1f3f42b573cbb8267b16bd393faf1491809aac1bf4698145d",
+      "runtime_sha256": "67a830d711c8f0b8f39daa723b211fb4dc78e4d3ded16ee949cc29d576d5dc24"
+    },
+    {
+      "id": "limmir-the-jeweler",
+      "batch": "monster-batch-ub2",
+      "master_sha256": "7b7fb9227544192c80f09995e1144be4f55cb86241434d8551a4e95cc31b7d3b",
+      "runtime_sha256": "bfa96ea51cc1529bb64aa81200ca09b25eb3e04f5780bf2694b012c81c37391b"
+    },
+    {
+      "id": "protector-myssil",
+      "batch": "monster-batch-ub2",
+      "master_sha256": "85ccfa47f7d1d8fe1aea78771248e8e7a6e8c0f4b863b60e28b6c216274045bc",
+      "runtime_sha256": "4c4e8dea039425e6440d2ba9273aeb814b04e6ef2a523f120e4ac4b0349a9a2c"
+    },
+    {
+      "id": "rak-shor-cultist",
+      "batch": "monster-batch-ub2",
+      "master_sha256": "739ac9e9560c7aa16f9fb6c99d755aa7a2978c69cc8ff6842a6f124e48e7762a",
+      "runtime_sha256": "763fa860805b5c2d42c9aef891d8ab4bd8550c5ab80542d1fbaaefbb2ef61d4b"
+    },
+    {
+      "id": "shady-cornac-man",
+      "batch": "monster-batch-ub2",
+      "master_sha256": "a055fa2fc96b5ea85208055f2819fb0afb8fbc1c0d4863811909692e521a6380",
+      "runtime_sha256": "71cfd0754cd30a183500da8706873b2db751f057eccf6ec72b161e55df908b1e"
+    },
+    {
+      "id": "tannen",
+      "batch": "monster-batch-ub2",
+      "master_sha256": "7d44245d0dbb7a146b6ddee48220967e3a7995f2a0906a06a02ff98287999d2d",
+      "runtime_sha256": "240766162bba621e4558bd392e067752ed71044f4c3a80af596f67d67ab33d2b"
+    },
+    {
+      "id": "ben-cruthdar-the-cursed",
+      "batch": "monster-batch-ub2",
+      "master_sha256": "9c386abff7fe42b46925a31c62cf8022a8f9e500600c39ffa7d8edddb5a30665",
+      "runtime_sha256": "7a347b1cecbb613f4b3cdda4a6b4c6882caf8212f7862ff7b04bb4fdf07860f9"
     }
   ]
 }

@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ub2-4",
+  "assets": [
+    {
+      "asset_id": "tannen",
+      "native_name": "Tannen",
+      "scope": "UB-2 flat unique/boss; game/modules/tome/data/zones/tannen-tower/npcs.lua:35",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/tannen-tower/npcs.lua",
+          "sha256": "38f3800bd60e7d00c9ca3a872184ed228b969de0008e0a67f93d3d9d3874b1e5",
+          "line": 35,
+          "anchor": "name = \"Tannen\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_tannen.png",
+          "sha256": "e9f3cf8ded949b43f199dc4c2fdf4c2adabd1def604001b8fec9f08867278442",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]. Paint this clothing, armour, held items and silhouette."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub2/refs/human-story.png",
+          "sha256": "8e3e72b0f79899377692afcbacb231577ae549ce8a4909dca405a60eefd1686e",
+          "role": "family",
+          "note": "Shipped siblings row order: necromancer, assassin-lord, subject-z, the-possessed, celia, harno, urkis. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A stern grey-bearded human alchemist, balding with a short grey beard and heavy brows, wearing a heavy GOLDEN-TAN robe beneath a broad brown outer mantle with a wide collar; both arms are spread outward and away from the body with OPEN empty hands; no staff, no weapon, no hat. Broad robe-cone silhouette in mid-gold and tan values with broad pale upper-left highlight planes on the robe front. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Structurally distinct from the shipped necromancer (a narrow grey hooded caster with book/aura) and harno: Tannen is a broad OPEN-ARMED, unarmed, bearded alchemist in a gold-and-brown robe, a wide cone shape with no hood and no staff, versus the necromancer's narrow hooded silhouette. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "default image name from class/NPC.lua:33 (npc/humanoid_human_tannen.png); flat 64x64 body. No shader, moddable_tile, anim, add_displays, textures, add_mos or nice_tile anywhere in leaf/base. auto_classes / sustains_at_birth, where present, only roll talents or enable native sustains and never write the drawn body. Static source contract only; see evidence/monster-batch-ub2-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub2-20261001/source-contracts.json",
+          "sha256": "40c54882833d53c9b54227ccfc217ac7d995f8f233651315c9748326ce4600c0"
+        }
+      ]
+    }
+  ]
+}

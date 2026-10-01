@@ -1,0 +1,1604 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "apprentice-mage",
+      "master": "masters/apprentice-mage-v1.png",
+      "sha256": "c5df6dbe3f890f5ddb2382a27a6831037cc25368101ca42f2339641ab7d8b176",
+      "exports": [
+        {
+          "path": "sprites/48/apprentice-mage.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9d504673cd55d034828020000e6b237de9a7337fe1da4ff32dd76c033a3a44a6"
+        },
+        {
+          "path": "sprites/64/apprentice-mage.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c734576a1c87490c63332aea478b6c19c25a82d38e4467f8b6c13bda3fc6764c"
+        },
+        {
+          "path": "sprites/96/apprentice-mage.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "89ccfd95dfa55675f4847bb071ff155af14034262620e833fcd54de8c69eb748"
+        },
+        {
+          "path": "sprites/128/apprentice-mage.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "275bdde03682c8ad8333d580e477b3866f4d655f7c1016e743641460e2c91179"
+        },
+        {
+          "path": "sprites/256/apprentice-mage.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e588e9dabfafb7d102a4a3bc15c7284a73ca175453a50835566a20b016752c04"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.46,
+        "max_sector_intrusion": 3.71,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "pyromancer",
+      "master": "masters/pyromancer-v2.png",
+      "sha256": "e9e22e8f29d0d8b50ab6f3c34a1955900ea886a8f10beea7e0ca8d86ba7fc730",
+      "exports": [
+        {
+          "path": "sprites/48/pyromancer.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            73,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -14.616279,
+            -16.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4ac90261f96a9fed312c955c9f11a96750b4d9e173e84737e1fe900ab67b6a83"
+        },
+        {
+          "path": "sprites/64/pyromancer.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            73,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -14.616279,
+            -16.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d1ae8e318934c8fd5e6a2d04b3f734d8b212b1958f0d376ea2293717d5e4b6ea"
+        },
+        {
+          "path": "sprites/96/pyromancer.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            73,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -14.616279,
+            -16.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "349783693ee0e0b825508afd8f5481e9c48d9fe4b6b5bf9acc4a01fc14fd07e0"
+        },
+        {
+          "path": "sprites/128/pyromancer.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            73,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -14.616279,
+            -16.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c1c429cb8c4defea5baed482331c8f9c9a0750ee2b18eb784cb767b1ef4b7d06"
+        },
+        {
+          "path": "sprites/256/pyromancer.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            73,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -14.616279,
+            -16.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c777f2a6584c5599fb12e9e0f33d827960f56c3366793aab310116881de1522c"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.98,
+        "max_sector_intrusion": 2.8,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "cryomancer",
+      "master": "masters/cryomancer-v1.png",
+      "sha256": "56a73be39944fd619403fc4819ddacb15d3f41d674b02244d45529f9027d11a2",
+      "exports": [
+        {
+          "path": "sprites/48/cryomancer.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -10.627907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8c08a606b4a272dbd54d561dd7a987706cfc4ee72dc4f8b5f9019ea801c82c80"
+        },
+        {
+          "path": "sprites/64/cryomancer.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -10.627907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b8ef017d2f38a2420547cb15735a0d72f7626747ab238c52e22de96f4c1f7d7c"
+        },
+        {
+          "path": "sprites/96/cryomancer.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -10.627907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1b2e3c675df0c4470df44fb11647def16e235185bf37970cf14190c18bf892d9"
+        },
+        {
+          "path": "sprites/128/cryomancer.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -10.627907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "27af4735efb5253d53e1baaba375fd1a8fba6961ba31c53c917851b58dc6c4a4"
+        },
+        {
+          "path": "sprites/256/cryomancer.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            75,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -10.627907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6c1cd3ef0b264f00a4c1c3ae16edf85f3dd65af844dabd58b19363f0e21c0b00"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.05,
+        "max_sector_intrusion": 3.13,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "geomancer",
+      "master": "masters/geomancer-v1.png",
+      "sha256": "d57128dc3d4b107ddc290d4490dd47f11afb5d89d0b395e3b23bbaaf22517866",
+      "exports": [
+        {
+          "path": "sprites/48/geomancer.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -10.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "796848c4b69db4297919754a29d6f9d7c9c285b8d1efc05a6f67c98d3017ecc6"
+        },
+        {
+          "path": "sprites/64/geomancer.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -10.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d64a0d5d0ef48fe288a33031a42a98b8836d5e427973113eb8563e5fa645db73"
+        },
+        {
+          "path": "sprites/96/geomancer.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -10.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9940689a8aed5fe492ae0dd93398d9b48ca2af4e92c30dda37c885953154600b"
+        },
+        {
+          "path": "sprites/128/geomancer.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -10.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "efc4c79d270a74efa11b6fa358c34cb732392cb1c0c5e9716ffbe7b0f00cebe3"
+        },
+        {
+          "path": "sprites/256/geomancer.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -10.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9b35a29fb41f0be037e8d811d5e1fbfddbfc16e4ed34b8277a06206f8a94e079"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.44,
+        "max_sector_intrusion": 5.83,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "tempest",
+      "master": "masters/tempest-v1.png",
+      "sha256": "ae8a89784bcfc9462dc353982175d710b07beed611a786bfb47c8cd2264eceeb",
+      "exports": [
+        {
+          "path": "sprites/48/tempest.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            74,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -13.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5e07f2f66d6555dd8500e3d6916292b1b48ad9265bbe2b5915e1cc7f729a7fca"
+        },
+        {
+          "path": "sprites/64/tempest.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            74,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -13.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f7601b08acf0540ec489d3ed02edbc56c9e991f641f09bf0c92715797ac7a89e"
+        },
+        {
+          "path": "sprites/96/tempest.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            74,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -13.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "de4e7ef193a7c1ee189f5d93561284f494dc473a447afe995b1ee75ed456ce2c"
+        },
+        {
+          "path": "sprites/128/tempest.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            74,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -13.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e40a922417f1818689f0ab6467d8c7a7f617c5646e255170b88d8db780148abc"
+        },
+        {
+          "path": "sprites/256/tempest.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            74,
+            1163,
+            1174
+          ],
+          "export_window": [
+            -13.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d83b6faad7fbf51ba47db12770c327bafb032248a8b4a1c3b25885d7935f7b44"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 3.91,
+        "max_sector_intrusion": 4.38,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "human-guard",
+      "master": "masters/human-guard-v3.png",
+      "sha256": "e51f52947c2fc2aa838c8dd039e300d84f20216484240ec50914148a5cabef1c",
+      "exports": [
+        {
+          "path": "sprites/48/human-guard.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -12.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c5e2c467afcd8c491ab67cdfc669f9b4bf56755392099f43a48e87f2c8557f3a"
+        },
+        {
+          "path": "sprites/64/human-guard.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -12.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bb332770a9fe74af10169f90eb584df883c3707921150e0f55df497112a7c7bc"
+        },
+        {
+          "path": "sprites/96/human-guard.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -12.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "61dad047d691ccb9002a01a2b06903503903736b6b4ca648c8f3d80431f2ce4a"
+        },
+        {
+          "path": "sprites/128/human-guard.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -12.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "56f00426aaefc026f8907a7df62115f5fb28c6133e57a95cdbdc9ab2cf2908fe"
+        },
+        {
+          "path": "sprites/256/human-guard.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -12.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f44b12dacf78a0634dd3074ea239529cf6cd61323d89fa622ca06397ced5f749"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -5.06,
+        "max_sector_intrusion": 4.24,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "derth-guard",
+      "master": "masters/derth-guard-v2.png",
+      "sha256": "881b9928521c2763a363fb0c93c9ed20e603e05a28099220064cdfc69106ba08",
+      "exports": [
+        {
+          "path": "sprites/48/derth-guard.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1162,
+            1174
+          ],
+          "export_window": [
+            -15.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2a299ec3e67adb31348c68450ea22111c2721559b8158a46e18033d34987913b"
+        },
+        {
+          "path": "sprites/64/derth-guard.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1162,
+            1174
+          ],
+          "export_window": [
+            -15.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ff1e1ae21ece82b9d778805d3cf528d3b10a11ca5f8d1a800a64e327b5d17a14"
+        },
+        {
+          "path": "sprites/96/derth-guard.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1162,
+            1174
+          ],
+          "export_window": [
+            -15.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f58ec643f4a3b14e5078f9ecc7d807b6842ab2ad645d43a88bc23f8ea92a1292"
+        },
+        {
+          "path": "sprites/128/derth-guard.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1162,
+            1174
+          ],
+          "export_window": [
+            -15.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "024f03d4cdae8ec5467e9ef410e6dfc37d6b807001ab1e2477c1dc62bb37ca80"
+        },
+        {
+          "path": "sprites/256/derth-guard.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1162,
+            1174
+          ],
+          "export_window": [
+            -15.034884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b8a570bbaa935ab2a7d8e26daae303d1ffcaba51e92ad581334ca00d8240c10d"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 7.3,
+        "max_sector_intrusion": 5.27,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "last-hope-guard",
+      "master": "masters/last-hope-guard-v1.png",
+      "sha256": "e86706183ddbcdb8bb7b9a8539ae2742d3251156f2be168f5a592273ecae6ba8",
+      "exports": [
+        {
+          "path": "sprites/48/last-hope-guard.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            92,
+            95,
+            1163,
+            1163
+          ],
+          "export_window": [
+            4.825581,
+            6.325581,
+            1245.348837
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "957d2ff3fad211db4450af2b16e01c53cca8b5549acdc07bb1a3f3fc8f44cad0"
+        },
+        {
+          "path": "sprites/64/last-hope-guard.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            92,
+            95,
+            1163,
+            1163
+          ],
+          "export_window": [
+            4.825581,
+            6.325581,
+            1245.348837
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "79c1201f0e1deea9700b95e1579d8cd5da4c8e356ac5d167d8103eba12e690ab"
+        },
+        {
+          "path": "sprites/96/last-hope-guard.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            92,
+            95,
+            1163,
+            1163
+          ],
+          "export_window": [
+            4.825581,
+            6.325581,
+            1245.348837
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "09b405ab7f9ec9ac0017112c39d70595e785b4434826ba97994fc2d0cf915c78"
+        },
+        {
+          "path": "sprites/128/last-hope-guard.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            92,
+            95,
+            1163,
+            1163
+          ],
+          "export_window": [
+            4.825581,
+            6.325581,
+            1245.348837
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b2cab43f62f2d7323c0f1ec7c34ade2d59e73f8619d65f7b8f138bfb1e6aa2b3"
+        },
+        {
+          "path": "sprites/256/last-hope-guard.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            92,
+            95,
+            1163,
+            1163
+          ],
+          "export_window": [
+            4.825581,
+            6.325581,
+            1245.348837
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "69247efa303fb987eb311cd915029a9c60b8c7cecbe80251f79de11f88d517e9"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.47,
+        "max_sector_intrusion": 9.23,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "halfling-guard",
+      "master": "masters/halfling-guard-v1.png",
+      "sha256": "1f4ab83677c1220a6ad222dd4ce55c3ce218fc092c1a14081e01e9ffe2f05add",
+      "exports": [
+        {
+          "path": "sprites/48/halfling-guard.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            107,
+            100,
+            1140,
+            1152
+          ],
+          "export_window": [
+            11.872093,
+            14.372093,
+            1223.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "376deaef3d6b425019f6ea6589916168ee5de41f537bdbee5de152ba3702aa5e"
+        },
+        {
+          "path": "sprites/64/halfling-guard.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            107,
+            100,
+            1140,
+            1152
+          ],
+          "export_window": [
+            11.872093,
+            14.372093,
+            1223.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "efcbb5bff22107d005f8f94b4057e8f2a4bcd5822da041bc2ab789621532e421"
+        },
+        {
+          "path": "sprites/96/halfling-guard.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            107,
+            100,
+            1140,
+            1152
+          ],
+          "export_window": [
+            11.872093,
+            14.372093,
+            1223.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c58a4d11977869ccf11ab504de5535d386b5daa7f32e3a1b6d002f5e67b5aca7"
+        },
+        {
+          "path": "sprites/128/halfling-guard.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            107,
+            100,
+            1140,
+            1152
+          ],
+          "export_window": [
+            11.872093,
+            14.372093,
+            1223.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8dcb98d09b4e030fb73cd44582500a3a99fc9434bad098e1fddee8ddd65d5311"
+        },
+        {
+          "path": "sprites/256/halfling-guard.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            107,
+            100,
+            1140,
+            1152
+          ],
+          "export_window": [
+            11.872093,
+            14.372093,
+            1223.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "03316e636b9d7c85d409e3e9207eeffc1526767cba8beb4e6b27d9b43adbd986"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 3.96,
+        "max_sector_intrusion": 1.19,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "dwarven-guard",
+      "master": "masters/dwarven-guard-v1.png",
+      "sha256": "ef927d829e0187d95ddd3dd666fb5323516a7b3b68127be72df3b6c2baccc260",
+      "exports": [
+        {
+          "path": "sprites/48/dwarven-guard.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            73,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -13.872093,
+            -16.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "86b0a92a1e69797435df2d81f1a7664d7606535e7782c4816d44857dcb1bc07e"
+        },
+        {
+          "path": "sprites/64/dwarven-guard.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            73,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -13.872093,
+            -16.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a98e0c7fc85f4926077bbf12d394b811f76013fa9161b090a58f4b0ec9994c63"
+        },
+        {
+          "path": "sprites/96/dwarven-guard.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            73,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -13.872093,
+            -16.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d6e3162e9a36fc4c365f3fd6e540a63148b3c1ae256441be745460b0edf1d678"
+        },
+        {
+          "path": "sprites/128/dwarven-guard.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            73,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -13.872093,
+            -16.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b59419906692d0d1296c852ea7a15621d292e95f03b90624821f629c8810881d"
+        },
+        {
+          "path": "sprites/256/dwarven-guard.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            73,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -13.872093,
+            -16.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2cc87977209a4ced2c5825bd0a4c8d6a3263f6d0f534f851866b6f0ae7385517"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -6.91,
+        "max_sector_intrusion": 3.99,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "elvala-guard",
+      "master": "masters/elvala-guard-v1.png",
+      "sha256": "d8c680aa4bd85ae7b5e9226b547757d6a3ca0cdb38d408ac1fca96afa0bb9299",
+      "exports": [
+        {
+          "path": "sprites/48/elvala-guard.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            73,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -12.372093,
+            -16.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cc240712e4a31e459103f39920395f721c24dd1c998ab4a93683c3f004ea57dd"
+        },
+        {
+          "path": "sprites/64/elvala-guard.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            73,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -12.372093,
+            -16.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "06f248253b3640cb1da34399959901c1c66d97c1f3da58844042f32cd9829ac9"
+        },
+        {
+          "path": "sprites/96/elvala-guard.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            73,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -12.372093,
+            -16.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "faafd306ee8942e3062a0fa29bcbb0a30e10312a717be6cf5bb8be30b7476a3e"
+        },
+        {
+          "path": "sprites/128/elvala-guard.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            73,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -12.372093,
+            -16.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "04071b3b6b9aedeae0f27624568b5a206e7c48778f413fa64325eaf5701868b1"
+        },
+        {
+          "path": "sprites/256/elvala-guard.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            73,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -12.372093,
+            -16.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "93de151ca97f3fc7bba571aa371f757e3c1e6cd29166ca9525442798c61b3122"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -0.35,
+        "max_sector_intrusion": 1.73,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "slaver",
+      "master": "masters/slaver-v1.png",
+      "sha256": "2b6fd51cff497c7bd85dc2d6ab49fc2036fa596e9edacf81294e2b1656147e53",
+      "exports": [
+        {
+          "path": "sprites/48/slaver.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            77,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -12.127907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "073b205e2649033b581d68f27dfe02d7f36b883121cb53236200f40dfea4b357"
+        },
+        {
+          "path": "sprites/64/slaver.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            77,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -12.127907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9a289ae1f29d9a549ba2423884a1c411c31ba9bc1631890541b84322ee24e742"
+        },
+        {
+          "path": "sprites/96/slaver.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            77,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -12.127907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "dd97fa77c66fc7e12007c38194ec7d0f07a6237d81fab2d7f5b3b783e6780721"
+        },
+        {
+          "path": "sprites/128/slaver.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            77,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -12.127907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ce6ea372d614860d8386a0f42bacda60119ab6658a58c5108167e197578fad85"
+        },
+        {
+          "path": "sprites/256/slaver.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            77,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -12.127907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "548f4ad712c7445b3deea696616f25b29ca34f29a8c4d6e02f555168e3aa3235"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 3.47,
+        "max_sector_intrusion": 2.2,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "enthralled-slave",
+      "master": "masters/enthralled-slave-v1.png",
+      "sha256": "8f71958f7235d7d91cff2f683d200d2f8a6584f3346baa89872fdb3e5616ed03",
+      "exports": [
+        {
+          "path": "sprites/48/enthralled-slave.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1168,
+            1174
+          ],
+          "export_window": [
+            -12.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "93c04407062c65fe26584f5d9c772b766697c3d32a05430f07e62c1da72c355d"
+        },
+        {
+          "path": "sprites/64/enthralled-slave.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1168,
+            1174
+          ],
+          "export_window": [
+            -12.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2e3ca082218b505665e052d912af860d0261e8cbdb79daf8dc7ebe8eaa3ce27b"
+        },
+        {
+          "path": "sprites/96/enthralled-slave.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1168,
+            1174
+          ],
+          "export_window": [
+            -12.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "10cdac1787854c3b8c51e8b55d12c1994dab5e597ec0855a1d8e58e6100ef113"
+        },
+        {
+          "path": "sprites/128/enthralled-slave.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1168,
+            1174
+          ],
+          "export_window": [
+            -12.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "65a5cf7c5262b803933507f34220370dfac057222f9c833cf3af2e0c802a1a39"
+        },
+        {
+          "path": "sprites/256/enthralled-slave.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1168,
+            1174
+          ],
+          "export_window": [
+            -12.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "65c7c9fd2f80dab741485234696ed28a26968cf216dd80d5647bb14f36fa3f2b"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.68,
+        "max_sector_intrusion": 4.95,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "master": "art/monster-batch-ua/masters/rungof-v2.png",
+  "sha256": "8f249c561d6378693fa6b300e3c16924074811a4968fde68d0ba9a991f31edbe",
+  "body_luminance": 92.36,
+  "unchanged_body_minimum": 65.0,
+  "body_passed": true,
+  "style_gate": {
+    "asset_id": "rungof",
+    "token": {
+      "path": "/workspace/t-engine4/game/addons/tome-checker-revised/art/monster-batch-ua/rework/candidates/rungof-v2/128.png",
+      "sha256": "7707a7076e509c7fbddb94416a4cc409700a8bc43e15aeb844b9197a890e9d3d",
+      "sector_medians": [
+        69.74,
+        68.22,
+        68.09,
+        65.92,
+        64.27,
+        70.5,
+        75.39,
+        74.27
+      ],
+      "sector_offsets": [
+        -2.35,
+        -2.94,
+        3.43,
+        2.95,
+        -0.94,
+        3.45,
+        1.06,
+        -2.15
+      ],
+      "base_drift": 0.06,
+      "max_sector_intrusion": 3.39,
+      "max_opaque_radius": 0.8596,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ring_samples": [
+        298,
+        303,
+        297,
+        300,
+        298,
+        303,
+        298,
+        303
+      ]
+    },
+    "master": {
+      "path": "art/monster-batch-ua/masters/rungof-v2.png",
+      "sha256": "8f249c561d6378693fa6b300e3c16924074811a4968fde68d0ba9a991f31edbe",
+      "format": "PNG",
+      "mode": "RGBA",
+      "native_alpha_channel": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    "findings": [
+      {
+        "check": "master_native_alpha",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255",
+        "mode": "RGBA",
+        "alpha_min": 0,
+        "alpha_max": 255
+      },
+      {
+        "check": "disc_overflow",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u6700\u5927\u4e0d\u900f\u660e\u534a\u5f84 0.860\uff08\u4e0a\u9650 0.867\uff09",
+        "value": 0.8596,
+        "limit": 0.867
+      },
+      {
+        "check": "base_drift",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u5e95\u76d8\u504f\u79fb\u4e2d\u4f4d +0.06\uff08\u5bb9\u5dee \u00b18\uff09",
+        "value": 0.06,
+        "limit": 8.0
+      },
+      {
+        "check": "subject_intrusion",
+        "level": "warning",
+        "ok": true,
+        "detail": "\u5355\u6247\u533a\u76f8\u5bf9\u672c\u6b3e\u4e2d\u4f4d\u6700\u5927\u4e0a\u504f +3.39\uff08\u5bb9\u5dee +20\uff09",
+        "value": 3.39,
+        "limit": 20.0
+      },
+      {
+        "check": "corner_alpha",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]",
+        "value": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "blocking": [],
+    "warnings": [],
+    "grandfathered": false,
+    "waived": false,
+    "notes": [],
+    "passed": true
+  }
+}

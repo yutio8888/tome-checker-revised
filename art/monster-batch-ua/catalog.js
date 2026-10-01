@@ -1,0 +1,38 @@
+window.monsterCatalog = [
+  {
+    "id": "kra-tor"
+  },
+  {
+    "id": "khulmanar"
+  },
+  {
+    "id": "rungof"
+  },
+  {
+    "id": "grgglck"
+  },
+  {
+    "id": "queen-ant"
+  },
+  {
+    "id": "ak-gishil"
+  },
+  {
+    "id": "ninandra"
+  },
+  {
+    "id": "phoenix"
+  },
+  {
+    "id": "ukruk"
+  },
+  {
+    "id": "gorbat"
+  },
+  {
+    "id": "grushnak"
+  },
+  {
+    "id": "vor"
+  }
+];

@@ -1,0 +1,72 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "body_minimum": 65.0,
+  "assets": {
+    "sun-paladin-guren": 80.74,
+    "epoch": 113.95,
+    "corrupted-oozemancer": 75.14,
+    "zemekkys": 98.67,
+    "blood-master": 99.25,
+    "limmir-the-jeweler": 75.14,
+    "protector-myssil": 68.16,
+    "rak-shor-cultist": 75.43,
+    "shady-cornac-man": 69.05,
+    "tannen": 78.8,
+    "ben-cruthdar-the-cursed": 79.83
+  },
+  "floors": {
+    "shertul stone": 162.35,
+    "void": 163.25,
+    "gothic stone A": 145.44,
+    "korpul stone A": 131.66,
+    "sand": 110.23,
+    "town road A": 152.9,
+    "cave rock": 130.64,
+    "grass": 108.97,
+    "burnt ground": 72.7,
+    "snow ground": 175.0
+  },
+  "zone_floors": {
+    "sun-paladin-guren": {
+      "sand": 110.23,
+      "grass": 108.97
+    },
+    "epoch": {
+      "void": 163.25,
+      "cave rock": 130.64
+    },
+    "corrupted-oozemancer": {
+      "korpul stone A": 131.66,
+      "cave rock": 130.64
+    },
+    "zemekkys": {
+      "void": 163.25,
+      "snow ground": 175.0
+    },
+    "blood-master": {
+      "sand": 110.23,
+      "burnt ground": 72.7
+    },
+    "limmir-the-jeweler": {
+      "grass": 108.97
+    },
+    "protector-myssil": {
+      "sand": 110.23,
+      "grass": 108.97
+    },
+    "rak-shor-cultist": {
+      "gothic stone A": 145.44,
+      "cave rock": 130.64
+    },
+    "shady-cornac-man": {
+      "town road A": 152.9,
+      "grass": 108.97
+    },
+    "tannen": {
+      "cave rock": 130.64,
+      "grass": 108.97
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

@@ -1,0 +1,76 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "duathedlen": 69.03,
+    "daelach": 71.69,
+    "orc-grand-summoner": 91.6,
+    "orc-master-wyrmic": 78.23,
+    "orc-mage-hunter": 97.47,
+    "ritch-larva": 135.95,
+    "ritch-hunter": 66.98,
+    "ritch-hive-mother-pool": 69.15,
+    "snow-cat": 142.19,
+    "panther": 85.86,
+    "tiger": 104.57,
+    "sabertooth-tiger": 97.18,
+    "ice-wyrm": 107.92
+  },
+  "floors": {
+    "korpul stone A (dreadfell, vor-armoury)": 131.79,
+    "cave rock (ardhungol)": 130.64,
+    "underwater floor (lake-nur)": 129.4,
+    "rak-shor floor (rak-shor-pride)": 163.04,
+    "gothic stone (conclave-vault nearest)": 145.44,
+    "snow ground": 175.0,
+    "grass": 108.97,
+    "caldera": 96.54,
+    "burnt ground": 72.7,
+    "void floor": 163.25
+  },
+  "zone_floors": {
+    "duathedlen": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79,
+      "burnt ground": 72.7
+    },
+    "daelach": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79,
+      "burnt ground": 72.7
+    },
+    "ice-wyrm": {
+      "snow ground": 175.0
+    },
+    "orc-grand-summoner": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79
+    },
+    "orc-master-wyrmic": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79
+    },
+    "orc-mage-hunter": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79
+    },
+    "ritch-larva": {
+      "cave rock (ardhungol)": 130.64
+    },
+    "ritch-hunter": {
+      "cave rock (ardhungol)": 130.64
+    },
+    "ritch-hive-mother-pool": {
+      "cave rock (ardhungol)": 130.64
+    },
+    "snow-cat": {
+      "snow ground": 175.0,
+      "grass": 108.97
+    },
+    "panther": {
+      "grass": 108.97
+    },
+    "tiger": {
+      "grass": 108.97
+    },
+    "sabertooth-tiger": {
+      "grass": 108.97
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

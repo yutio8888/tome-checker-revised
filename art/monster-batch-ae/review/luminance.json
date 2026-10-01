@@ -1,0 +1,81 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "champion-of-urh-rok": 82.21,
+    "forge-giant": 79.43,
+    "hummerhorn": 84.08,
+    "weaver-matriarch": 108.07,
+    "patchwork-troll": 94.85,
+    "maulotaur": 80.07,
+    "worm-that-walks": 91.42,
+    "headless-horror": 100.45,
+    "storm-wyrm": 100.71,
+    "spire-dragon": 110.45,
+    "blinkwyrm": 114.44,
+    "emperor-wight": 84.73
+  },
+  "floors": {
+    "korpul stone A (dreadfell, vor-armoury)": 131.79,
+    "cave rock (ardhungol)": 130.64,
+    "underwater floor (lake-nur)": 129.4,
+    "rak-shor floor (rak-shor-pride)": 163.04,
+    "gothic stone (conclave-vault nearest)": 145.44,
+    "snow ground": 175.0,
+    "grass": 108.97,
+    "caldera": 96.54,
+    "burnt ground": 72.7,
+    "void floor": 163.25
+  },
+  "zone_floors": {
+    "champion-of-urh-rok": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79,
+      "burnt ground": 72.7
+    },
+    "forge-giant": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79,
+      "burnt ground": 72.7
+    },
+    "hummerhorn": {
+      "cave rock (ardhungol)": 130.64,
+      "grass": 108.97
+    },
+    "weaver-matriarch": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79,
+      "cave rock (ardhungol)": 130.64
+    },
+    "patchwork-troll": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79,
+      "cave rock (ardhungol)": 130.64
+    },
+    "maulotaur": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79,
+      "cave rock (ardhungol)": 130.64
+    },
+    "worm-that-walks": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79,
+      "underwater floor (lake-nur)": 129.4
+    },
+    "headless-horror": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79,
+      "underwater floor (lake-nur)": 129.4
+    },
+    "storm-wyrm": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79,
+      "snow ground": 175.0
+    },
+    "spire-dragon": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79,
+      "cave rock (ardhungol)": 130.64
+    },
+    "blinkwyrm": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79,
+      "cave rock (ardhungol)": 130.64
+    },
+    "emperor-wight": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.79,
+      "cave rock (ardhungol)": 130.64
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

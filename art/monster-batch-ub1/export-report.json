@@ -1,0 +1,1112 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "high-sun-paladin-aeryn",
+      "master": "masters/high-sun-paladin-aeryn-v1.png",
+      "sha256": "d4d2d227b548470af810cd827dd62bfdcbdb67c013e2bdd21b768e2dd33e892c",
+      "exports": [
+        {
+          "path": "sprites/48/high-sun-paladin-aeryn.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cc084478ec2e2b67b1d2d5eca811da1e422b1f7205d4405da409cf6ac4207fa2"
+        },
+        {
+          "path": "sprites/64/high-sun-paladin-aeryn.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7157d37ee94e4e18deec4426809da415e45b3978b9cc7af19a22df65a741baef"
+        },
+        {
+          "path": "sprites/96/high-sun-paladin-aeryn.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b55ba1d6cc2e55912737e1c142bb71e13748aa15cf302f21079a01ea1a154223"
+        },
+        {
+          "path": "sprites/128/high-sun-paladin-aeryn.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d80374cab1cc2fe4dc43721bb6fe6c1c0990b908d458da9828dc3b40100c6075"
+        },
+        {
+          "path": "sprites/256/high-sun-paladin-aeryn.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8a6124ac4ec0a6ad78bb80ab9c53dc81facf876abc4c863261b3c49d37af6c35"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.72,
+        "max_sector_intrusion": 2.48,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "fallen-sun-paladin-aeryn",
+      "master": "masters/fallen-sun-paladin-aeryn-rework-v4.png",
+      "sha256": "7a2d0df6904af411f0a26b87828664df7eb119ce63141f677871bdb1af39cf9c",
+      "exports": [
+        {
+          "path": "sprites/48/fallen-sun-paladin-aeryn.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cdec94c377db198aef6ecf334236671d1136aa33b5452094c96af45c5aee719c"
+        },
+        {
+          "path": "sprites/64/fallen-sun-paladin-aeryn.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bb0eb453056f5203fc563427b225c22b50536248439e85021939c5ee69a1fc2f"
+        },
+        {
+          "path": "sprites/96/fallen-sun-paladin-aeryn.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "44638288cd68beae4a9b85b85628907daeaeb843012d0cc463aeb4a216971c22"
+        },
+        {
+          "path": "sprites/128/fallen-sun-paladin-aeryn.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e0c2c7127a7add8a6cda7107c0db88102e066d0c2bb3a92f8ed20d0bc7a317b0"
+        },
+        {
+          "path": "sprites/256/fallen-sun-paladin-aeryn.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ed1ee803691f6ecee87d986d6f88184b0d7fedf98f16368506f72b81dc21d0b0"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.61,
+        "max_sector_intrusion": 4.47,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "caldizar",
+      "master": "masters/caldizar-v1.png",
+      "sha256": "bde513200e24cd395518f09aafe6bf5dac909b530c9c64fe0bf46450fefbab0e",
+      "exports": [
+        {
+          "path": "sprites/48/caldizar.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -10.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "03099d770ee9970a6764b1b50c23f304a0837380d0f82275c0f20dc266b70595"
+        },
+        {
+          "path": "sprites/64/caldizar.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -10.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "350fe7d02df06fc50d23d04ecfef3d08a3b2972860a12f78b7235d98018e41fd"
+        },
+        {
+          "path": "sprites/96/caldizar.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -10.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4e595ff55252e7aa7f8fdbccd555420db729391694d0ef273555ec92be3c5cbe"
+        },
+        {
+          "path": "sprites/128/caldizar.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -10.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "93213590575e58157e04a5282b3adc993b450b8d4f6b6b4d1c5afc88a0632661"
+        },
+        {
+          "path": "sprites/256/caldizar.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -10.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c9fade61627c1fa78029b5262f971686287aa7d1405c3c8b352314857a1b24d3"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.7,
+        "max_sector_intrusion": 4.33,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "chronolith-twin",
+      "master": "masters/chronolith-twin-v1.png",
+      "sha256": "8e49da49bfbdf415eba64a284cd41a5c710300cc5bc275d407d107e1571c8ee3",
+      "exports": [
+        {
+          "path": "sprites/48/chronolith-twin.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1166,
+            1170
+          ],
+          "export_window": [
+            -9.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2f0c8f128ae29faf156ad3660834aeb610281915ff8422fbff8bfb1a71229cfc"
+        },
+        {
+          "path": "sprites/64/chronolith-twin.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1166,
+            1170
+          ],
+          "export_window": [
+            -9.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6329fc84d4895e9f5b06094b7caffb7c3a7e1b7c05642e8164da8b1b5fb8e925"
+        },
+        {
+          "path": "sprites/96/chronolith-twin.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1166,
+            1170
+          ],
+          "export_window": [
+            -9.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6edf017a67b993b0a196de09ef99937ce8439c2d3e3dc762b0fa04b50c628e7f"
+        },
+        {
+          "path": "sprites/128/chronolith-twin.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1166,
+            1170
+          ],
+          "export_window": [
+            -9.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "dd4c1b215b3c08773fc25a82821c7a6cd45db23ad2b9233b932089724a0f817b"
+        },
+        {
+          "path": "sprites/256/chronolith-twin.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1166,
+            1170
+          ],
+          "export_window": [
+            -9.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6af43a5b61ab76ff642ac9b6efdf8270289d0e91af3a656bfbc6e9e17138393b"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -0.74,
+        "max_sector_intrusion": 3.23,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "chronolith-clone",
+      "master": "masters/chronolith-clone-rework-v1.png",
+      "sha256": "23fef000634fa02fbaa16a48de273734f54785cc25e48a3eea25b8dbabd244b1",
+      "exports": [
+        {
+          "path": "sprites/48/chronolith-clone.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1162,
+            1172
+          ],
+          "export_window": [
+            -10.627907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "87c892a4e8401aa4d3560c5e658d91d1da8fd34eabf4e9e040af7a2571a2a665"
+        },
+        {
+          "path": "sprites/64/chronolith-clone.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1162,
+            1172
+          ],
+          "export_window": [
+            -10.627907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3596ce1259dadfce09b9b1391a01142fc4f9aedacdd844122a362b9f133c036f"
+        },
+        {
+          "path": "sprites/96/chronolith-clone.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1162,
+            1172
+          ],
+          "export_window": [
+            -10.627907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "75e907acc565302f0b765fb2e2fede8aa9f8caa44274dd4dde0bb35ed8c5dfc7"
+        },
+        {
+          "path": "sprites/128/chronolith-clone.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1162,
+            1172
+          ],
+          "export_window": [
+            -10.627907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "91dc1c31aee3739e9f513fe16782c569646f5cbba1f4dcdbbdf304cf0dd23ad4"
+        },
+        {
+          "path": "sprites/256/chronolith-clone.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1162,
+            1172
+          ],
+          "export_window": [
+            -10.627907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "14caaee0fa5d9233bf61c240749899ffc7eea0ed06ef7f861c794e914cb29b47"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.68,
+        "max_sector_intrusion": 2.8,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "temporal-defiler",
+      "master": "masters/temporal-defiler-v1.png",
+      "sha256": "4f90eef2024446cca18b0a3c845592d9567ca1ac00fe0134fcd40a3ac419f5c2",
+      "exports": [
+        {
+          "path": "sprites/48/temporal-defiler.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -11.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "92c36c452e217678d53a4fc96d77fecf4f048e8286db67612545a540d8b393aa"
+        },
+        {
+          "path": "sprites/64/temporal-defiler.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -11.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bc0f934e1928fed87a9362f90872742e57dc23cc704784875f0b1b502314e232"
+        },
+        {
+          "path": "sprites/96/temporal-defiler.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -11.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "443e7e9fe1792926132cc0745e6018628869e540389644e502b407170bae076e"
+        },
+        {
+          "path": "sprites/128/temporal-defiler.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -11.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "737044a46850867df5386ea7e907ca092df66eadc2ddeee2308c3aac471b14a7"
+        },
+        {
+          "path": "sprites/256/temporal-defiler.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1169,
+            1174
+          ],
+          "export_window": [
+            -11.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0f8275e53eed3e99c47c436048205a661ba96d03ced1aa97eeb3a30778075bf8"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 4.54,
+        "max_sector_intrusion": 1.24,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "corrupted-daelach",
+      "master": "masters/corrupted-daelach-v1.png",
+      "sha256": "c5d68405223ba9fc6f2a2e5b8667f6b26b17a944c3882cdf074b6de51edf9791",
+      "exports": [
+        {
+          "path": "sprites/48/corrupted-daelach.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            72,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -13.616279,
+            -17.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "47e0fed20878023a8fb90bd49e5b48c224bf5960345dfc8f76729d6e32f56b2a"
+        },
+        {
+          "path": "sprites/64/corrupted-daelach.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            72,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -13.616279,
+            -17.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cfc322527dfac24b9682193dcbc42405c55d78c113d4110a00cc3db5df10fd49"
+        },
+        {
+          "path": "sprites/96/corrupted-daelach.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            72,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -13.616279,
+            -17.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "98c3eeaacfadd6773936840b3de31d791c6717f15848ef5e7a253439b45e8179"
+        },
+        {
+          "path": "sprites/128/corrupted-daelach.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            72,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -13.616279,
+            -17.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8dcf9abc10be5dcf71dc3dd8fd1ba6576897ef3509e6347e64d64480647c1209"
+        },
+        {
+          "path": "sprites/256/corrupted-daelach.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            72,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -13.616279,
+            -17.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6843292615bd62b277aecf95b2ea970b7b8e1f8a831583fdf74afa2af56d7a1a"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.41,
+        "max_sector_intrusion": 1.99,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "supreme-archmage-linaniil",
+      "master": "masters/supreme-archmage-linaniil-v1.png",
+      "sha256": "e9e2094de3d0db644916843c95bb779ab1d008b065cf7f7ea0d4326cfc4737ed",
+      "exports": [
+        {
+          "path": "sprites/48/supreme-archmage-linaniil.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "afc3886e45e132f6c960b129b3d15ef78f16e91636e6701ddc2a79eae6baa9e8"
+        },
+        {
+          "path": "sprites/64/supreme-archmage-linaniil.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "32776b124370ae2d405009ce603ac1041939e1d486e4982f530759afea03741b"
+        },
+        {
+          "path": "sprites/96/supreme-archmage-linaniil.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6f0c1153f9238c0c937d8e008756339cd0f83bcda7e95751d455b48dc77be2fd"
+        },
+        {
+          "path": "sprites/128/supreme-archmage-linaniil.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7f7948330389352a4e027a551a8484124cc58393e60e668efe8dc4e8f23c3e73"
+        },
+        {
+          "path": "sprites/256/supreme-archmage-linaniil.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "814c5b4072633f426294806d0f96966fc63b259f8fb4d243439dc52184afa85a"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.4,
+        "max_sector_intrusion": 3.46,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "archmage-tarelion",
+      "master": "masters/archmage-tarelion-v1.png",
+      "sha256": "5e80d4cec6697cfda994c4ebd35a751281c75eb9a73f2359b190adbdca0976ff",
+      "exports": [
+        {
+          "path": "sprites/48/archmage-tarelion.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1163,
+            1170
+          ],
+          "export_window": [
+            -11.209302,
+            -15.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "db7ef4bb41769ffdd43e619373239c7cb228ab30c6c02b0b34237bbc54ae6ca0"
+        },
+        {
+          "path": "sprites/64/archmage-tarelion.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1163,
+            1170
+          ],
+          "export_window": [
+            -11.209302,
+            -15.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0806da809a6997eed4f3ff5cce9ce3ef37f40b7aa60a1c287b65751c830ff1cb"
+        },
+        {
+          "path": "sprites/96/archmage-tarelion.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1163,
+            1170
+          ],
+          "export_window": [
+            -11.209302,
+            -15.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3539bced473aa66d738138b1462037e4df71b9de6f1ec7f4902c61ffd32fbdbc"
+        },
+        {
+          "path": "sprites/128/archmage-tarelion.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1163,
+            1170
+          ],
+          "export_window": [
+            -11.209302,
+            -15.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b4e8d5732a4ca2e790f3070fe0d4c0b0dcdbc8ea34acfca762dbaa2ae6e65652"
+        },
+        {
+          "path": "sprites/256/archmage-tarelion.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1163,
+            1170
+          ],
+          "export_window": [
+            -11.209302,
+            -15.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a001c45b4c3db5e629acd5e91862d4a05a537b6f418aaf195eb8b7911f16917d"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 2.09,
+        "max_sector_intrusion": 2.36,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

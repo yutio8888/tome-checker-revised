@@ -4960,6 +4960,27 @@ function M.installRemembered(host)
  end
  return n
 end
+-- A cell the map newly remembers while outside FOV (debug "Reveal all map",
+-- magic mapping, detection) is native knowledge now, exactly as for the
+-- all_remembered install above: record it, fix its edges from its static
+-- neighbours, and let the caller rebuild its display. Before this, render()
+-- kept the unknown-cell placeholder until the cell entered FOV.
+function M.revealRemembered(m,cells)
+ if not (m and m.remembers and M.variant(game.zone)) then return 0 end
+ local recorded={}
+ for _,key in ipairs(cells) do
+  local x,y=key%m.w,math.floor(key/m.w)
+  if m.remembers(x,y) and not M.visible(m,x,y) then
+   record(m,x,y,m(x,y,Map.TERRAIN))
+   recorded[#recorded+1]=key
+  end
+ end
+ for _,key in ipairs(recorded) do
+  local rec=m._checker_korpul and m._checker_korpul[key]
+  if rec then recordFile(m,key%m.w,math.floor(key/m.w),rec) end
+ end
+ return #recorded
+end
 function M.apply(host)
  if not host.level or not host.level.map then return end
  if M.variant(host.zone) then

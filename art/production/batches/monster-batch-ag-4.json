@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ag-4",
+  "assets": [
+    {
+      "asset_id": "shadow-caster",
+      "native_name": "shadow claw",
+      "scope": "class a off-list pool; game/modules/tome/data/zones/keepsake-meadow/npcs.lua:226",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 226,
+          "anchor": "define_as = \"SHADOW_CASTER\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 132,
+          "anchor": "define_as = \"BASE_SHADOW\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 227,
+          "anchor": "name = \"shadow claw\""
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved tabletop disc, camera, lighting only; do not copy creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/shadow-caster.png",
+          "sha256": "c05af8f5b95c6d133eb025a00195fc34571d5e10ea459ca47031a4d528b27efb",
+          "role": "identity",
+          "note": "Inspected native identity and anatomy, [64, 64]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ag/refs/shadows.png",
+          "sha256": "5dfb5feab206cf8e1455566bdd393fe3d91250eade4086d423079c86c1cf9bf4",
+          "role": "family",
+          "note": "Shipped siblings row order: shadow-stalker, dread, umbral-horror. Compare shape; do not copy anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A compact HOODED SHADOW-WRAITH sorcerer, upright narrow cloak-like sculpted body of opaque MID-LIGHT ash-lavender and silver-grey material, small pointed hood with tiny violet face hollow. TWO bent arms raise two small open hands beside the hood; a small bright VIOLET ANGULAR PSIONIC SIGIL is held BETWEEN THE HANDS in front of the chest, a solid miniature geometric rune sculpture, no text. Hands and glyph stay tightly beside the torso. A short tapered lower cloak ends in two small folded tips, NO smoke, tendrils, talons, blades or long claws. Broad pale silver upper-left planes make the whole body light and readable at 48px; only tiny hood recesses dark. Solid opaque material throughout, native alpha only outside the disc.",
+        "contrast": "Structurally distinct caster: upright hood, two small raised casting hands, violet glyph at chest, folded tapering cloak. Accepted shadow claw is a forward-lunging monstrous torso with huge scythe talons. No large talons, no head rings, no crouched stalker anatomy.",
+        "composition": "CALIBRATED SMALL FIGURE: one complete miniature on the style reference circular charcoal tabletop disc, same steep overhead camera, same copper-grey bevel. Centre the entire figure including hands and glyph inside a circle of 0.58 of the disc radius. Wide BARE plate ring visible on every side. Render the ENTIRE DISC at EXACTLY the reference disc lightness, including beneath and beside the body and the whole outer sixth band. No lighter compensation and no darker compensation. NO cast shadow, contact shadow, dark halo, ambient darkening, smoke, fog, ground effect, glow spill, vignette or colour cast anywhere on the plate. Keep the plate evenly dry neutral charcoal with its reference bevel. Creature occupies only the central small area. All limbs and glyph tightly pulled in, nothing crosses outer ring. Broad mid-light body planes and thin pale upper-left rim, no black cloak.",
+        "palette": "MID-LIGHT ash-lavender and pale silver body; concentrated bright violet glyph. The neutral charcoal plate and restrained copper-grey bevel exactly match the style reference brightness with no local shading or illumination from the creature."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "explicit image= on the leaf; flat single image 64x64.  Name \"shadow claw\" is shared by SHADOW_CLAW and SHADOW_CASTER: composite name+define_as identity (shared_name=true). Static evidence only; live separate.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ag-20261001/source-contracts.json",
+          "sha256": "d252989a9bb7046bc033bafdad4168fe96164de52793d09961cd91060d8a46d6"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ag-rework-20261001/review-request.json",
+          "sha256": "053178336bd8912767bc79d549611c6f9d659579e95ea3594dabc6eef9d17402"
+        }
+      ],
+      "refinement": {
+        "supersedes": "shadow-caster",
+        "previous_batch": "monster-batch-ag-3",
+        "design_change_reason": "SHADOW_CASTER: failed base drifts +8.61 and -18.88 require calibrated redraw. Small centred figure about 0.58 disc radius, wide bare plate, exactly reference plate lightness, no dark halo/smoke/ambient darkening. Distinct hooded wraith casting violet sigil between raised hands; no large talons. This explicitly authorized refinement replaces the failed hood-ring composition with two raised casting hands and a compact violet sigil; neither accepted claw anatomy nor its master is replaced.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-ag-3/shadow-caster/imagegen-calls/call-1/call.json",
+            "sha256": "3a24e1170512b257f8eff0edb17df5672874c4047b375160e9b0cc56052bcef1"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-ag-3/shadow-caster/imagegen-calls/call-2/call.json",
+            "sha256": "6a5f9104d260b0245ad5cf523fec1c1ef417ce9dd0713d2094f4b4e612dfbe95"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/evidence/monster-batch-ag-rework-20261001/review-request.json",
+            "sha256": "053178336bd8912767bc79d549611c6f9d659579e95ea3594dabc6eef9d17402"
+          }
+        ]
+      }
+    }
+  ]
+}

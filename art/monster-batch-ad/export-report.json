@@ -1,0 +1,1604 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "duathedlen",
+      "master": "masters/duathedlen-v1.png",
+      "sha256": "5e491019c88a33f4f10ab2f319be682974e898c1a1f205f2d2afe950b5c09d61",
+      "exports": [
+        {
+          "path": "sprites/48/duathedlen.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.209302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "66fab5416f60cd2f0b78159cfb5391c7c57860c735b05d2eb157288a7a695fa1"
+        },
+        {
+          "path": "sprites/64/duathedlen.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.209302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1c00992c5bc7428a5184fffaeee1ea840c17def376f6640c6ff019a5ce1c4149"
+        },
+        {
+          "path": "sprites/96/duathedlen.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.209302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "12cdafa059e1fdcfac25b65d65a457720c305ec2ca26ef5df133e4bd2e3c0fb1"
+        },
+        {
+          "path": "sprites/128/duathedlen.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.209302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1a1cf9fc967bf71f930357d488e598020719da222209fcfe7c5a7d61e77e877b"
+        },
+        {
+          "path": "sprites/256/duathedlen.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.209302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "340223eb834bad2352840a6fc1418fcba2ac1698e44e9cbd67334bea6a6d6ec6"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.75,
+        "max_sector_intrusion": 2.72,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "daelach",
+      "master": "masters/daelach-v1.png",
+      "sha256": "18fab3d578778e5da0c25d18f2fed8fe558b25a12a197773cdec93ca59d3c5a4",
+      "exports": [
+        {
+          "path": "sprites/48/daelach.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "af9c0ce89b060da57c19fd6a0ea893e6e48eef358289c864af3c7cefeb62e012"
+        },
+        {
+          "path": "sprites/64/daelach.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "15508ba7050a4515a9c12c03b386e8f1ff9e45fd5098d4bc9c6c480b0b8132dc"
+        },
+        {
+          "path": "sprites/96/daelach.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5df103424f5f4fe6d9720b5b2362d713ce6d015cc64cd517bcafc9d9b6d8a5a9"
+        },
+        {
+          "path": "sprites/128/daelach.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c9fedc9a42f365505f582e8acc29d38ab48a021e4390f9de32252dd288f3aa67"
+        },
+        {
+          "path": "sprites/256/daelach.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            75,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.953488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6412b23dd3308334fc9a2daab2ffc3585931977fdbddc52f61a0cb168049ad62"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -0.65,
+        "max_sector_intrusion": 3.92,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "orc-grand-summoner",
+      "master": "masters/orc-grand-summoner-v1.png",
+      "sha256": "759ff919820e3bc5a2c5742651f6bcd98afe3e19190e1466d681cd5d1a45c474",
+      "exports": [
+        {
+          "path": "sprites/48/orc-grand-summoner.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.209302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8a782bb019741214b0691464eaf842c62fc389b36a65507ce95a8bd1fc9e0de2"
+        },
+        {
+          "path": "sprites/64/orc-grand-summoner.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.209302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3f56b2002f36bc6cfbb8960e81eaf366f4c16b0e08a13e5b5161af16912cac78"
+        },
+        {
+          "path": "sprites/96/orc-grand-summoner.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.209302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e94363b87850db6c603825fc8b5c61942557c6308f3d0b95d3966fed9502b183"
+        },
+        {
+          "path": "sprites/128/orc-grand-summoner.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.209302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "90a363604fbe7e0be76691a81120e90d2eb804632c6aa95af763e31d256351f9"
+        },
+        {
+          "path": "sprites/256/orc-grand-summoner.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            77,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -11.209302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "73058bae09b77a39eb808b36be3c02e46edec7d029dac220ab3133d5f6427a59"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.53,
+        "max_sector_intrusion": 3.81,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "orc-master-wyrmic",
+      "master": "masters/orc-master-wyrmic-v1.png",
+      "sha256": "5d6771f2aea7b5066db942e3b2fb89f03abbfcd1368dfd7f2757b0cb81d27aab",
+      "exports": [
+        {
+          "path": "sprites/48/orc-master-wyrmic.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1166,
+            1175
+          ],
+          "export_window": [
+            -11.953488,
+            -13.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "33b4dab70ba05b1079fc4abe891d49dd6116ea3ae22a9da7b71ba4bd1b8aad1b"
+        },
+        {
+          "path": "sprites/64/orc-master-wyrmic.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1166,
+            1175
+          ],
+          "export_window": [
+            -11.953488,
+            -13.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7c2e74b2955e8f5f2eaa6df6dcc549c4fc1cf6a3e468019c58ec00d85415b154"
+        },
+        {
+          "path": "sprites/96/orc-master-wyrmic.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1166,
+            1175
+          ],
+          "export_window": [
+            -11.953488,
+            -13.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ba05bcdc891201ddca9755289eda10e80fa9a9b93381992f6b7e0928d690b7c2"
+        },
+        {
+          "path": "sprites/128/orc-master-wyrmic.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1166,
+            1175
+          ],
+          "export_window": [
+            -11.953488,
+            -13.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6306e6e5788cb385166837cdb4f204cc616693d0718025e69f68dd44eaf45ac6"
+        },
+        {
+          "path": "sprites/256/orc-master-wyrmic.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1166,
+            1175
+          ],
+          "export_window": [
+            -11.953488,
+            -13.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c463affc96cebc70a57202b1361694f45f34742dd41f6dd1048e0933701bdc2d"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -0.45,
+        "max_sector_intrusion": 2.44,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "orc-mage-hunter",
+      "master": "masters/orc-mage-hunter-v2.png",
+      "sha256": "36853202f0c7a1f7e1bec7bad4562d84720515678340ef5392f031611ebb0b5f",
+      "exports": [
+        {
+          "path": "sprites/48/orc-mage-hunter.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -13.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f8e03b3786a68f3ce37dbc6fb9a4682646bc639c4e6b6125c48eea772e430c44"
+        },
+        {
+          "path": "sprites/64/orc-mage-hunter.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -13.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c4991748c96b830cb39b3c113e7d732ca9fded7f9fad26eb0b01219814632de6"
+        },
+        {
+          "path": "sprites/96/orc-mage-hunter.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -13.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "557d7bd612bbb7417f383453cc0e765879e5b4a93545f8958eba411044f532f1"
+        },
+        {
+          "path": "sprites/128/orc-mage-hunter.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -13.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "84aa95de925d14bb542abb266e99d752550fdb0671187f4ef798adb3b43a83ec"
+        },
+        {
+          "path": "sprites/256/orc-mage-hunter.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -13.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a69c985e7ca0266a44c32f0864344175aec3ec08d2fb30c13ec99361c203db58"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.71,
+        "max_sector_intrusion": 5.38,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ritch-larva",
+      "master": "masters/ritch-larva-v1.png",
+      "sha256": "094b67201882b0d80b0814a90b0d5468232c56be16fe082a9acb8be96eaac344",
+      "exports": [
+        {
+          "path": "sprites/48/ritch-larva.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1166,
+            1178
+          ],
+          "export_window": [
+            -16.27907,
+            -14.77907,
+            1282.55814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a83c2f420641d666476345c9a31571b45b05b7a90a03a8890dcb88cd39dd159a"
+        },
+        {
+          "path": "sprites/64/ritch-larva.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1166,
+            1178
+          ],
+          "export_window": [
+            -16.27907,
+            -14.77907,
+            1282.55814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f80edad70e9aa815935e8ed1d5e60506670de839d71cd536ec7f8dadb6b75dfe"
+        },
+        {
+          "path": "sprites/96/ritch-larva.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1166,
+            1178
+          ],
+          "export_window": [
+            -16.27907,
+            -14.77907,
+            1282.55814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d6a058eb49e4b73cf88473be5468623b4b4050db589048790894f06a0ddc4add"
+        },
+        {
+          "path": "sprites/128/ritch-larva.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1166,
+            1178
+          ],
+          "export_window": [
+            -16.27907,
+            -14.77907,
+            1282.55814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "66909759d978de5fba1ed035a475b39d0e7cb3d6efa5c99bb39b9fcc83ce0b10"
+        },
+        {
+          "path": "sprites/256/ritch-larva.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            75,
+            1166,
+            1178
+          ],
+          "export_window": [
+            -16.27907,
+            -14.77907,
+            1282.55814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a1054c82318f6a8bc9cbd007a1a82b27cef4cfb641f43f1400053d04ff253733"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.59,
+        "max_sector_intrusion": 3.3,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ritch-hunter",
+      "master": "masters/ritch-hunter-v3.png",
+      "sha256": "9643eeaada2ce9ee0e622d02253c09cbe11c496ffdaa2797e975cc133ba62fb5",
+      "exports": [
+        {
+          "path": "sprites/48/ritch-hunter.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "851d7019ae8e4fda0df9f1951cf32e7b89ee08c5eb12687c2ec853dc83aa48c5"
+        },
+        {
+          "path": "sprites/64/ritch-hunter.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c913aa1f47614e97d9f8c83b196bee04b2bcf585043713beec46a406bfc6da7e"
+        },
+        {
+          "path": "sprites/96/ritch-hunter.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3be8c169bb0fcc00fb8b6b3c16655f1fd89f2ea5005a64d402faf1f9753ea4ae"
+        },
+        {
+          "path": "sprites/128/ritch-hunter.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "abf5536d594358c527eeafcb14eefb9273fa903d940f12d29a7d71b3214cc4a5"
+        },
+        {
+          "path": "sprites/256/ritch-hunter.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2efdb20cfc023c572220745f4bdcc81e402a01aaa8a295a908cae6bc7d188bb9"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.59,
+        "max_sector_intrusion": 1.78,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ritch-hive-mother-pool",
+      "master": "masters/ritch-hive-mother-pool-v1.png",
+      "sha256": "479862a389fa75124fe86d3ab36a67405768aa566481571e332e5143f3448776",
+      "exports": [
+        {
+          "path": "sprites/48/ritch-hive-mother-pool.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            81,
+            67,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -16.94186,
+            -22.94186,
+            1284.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ef01e135325f338829bdd1b8740a79d9c063ce5f1c33718fd81e66b333d089a0"
+        },
+        {
+          "path": "sprites/64/ritch-hive-mother-pool.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            81,
+            67,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -16.94186,
+            -22.94186,
+            1284.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a20afd7d33fd5c80b97dc3aa4d1536f5cd069ec319e9b5a348e6cbf592f52d83"
+        },
+        {
+          "path": "sprites/96/ritch-hive-mother-pool.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            81,
+            67,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -16.94186,
+            -22.94186,
+            1284.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "558577b298f98bb450a1273f7deba943ae2352903cbbcf0cf2bcc377fcbd7334"
+        },
+        {
+          "path": "sprites/128/ritch-hive-mother-pool.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            81,
+            67,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -16.94186,
+            -22.94186,
+            1284.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d15e57ff9ae8adf4d611cf03a6e8c2f2aa862bd82d6068f73235ea01cd938fed"
+        },
+        {
+          "path": "sprites/256/ritch-hive-mother-pool.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            81,
+            67,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -16.94186,
+            -22.94186,
+            1284.883721
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "423a26a04f76269f06ca609dbde4b0cf3b88f480e4c15fe4f3619f0bba361aa6"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 4.08,
+        "max_sector_intrusion": 3.33,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "snow-cat",
+      "master": "masters/snow-cat-v1.png",
+      "sha256": "97c7c420240e67a075cb37a4014402cc47db9a8ca9f02d9ff8d6c99a77a7e627",
+      "exports": [
+        {
+          "path": "sprites/48/snow-cat.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -11.790698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "42040ef310b5912d8288ca2496e23dbeaa15cee03ff1649b3c9fed8ed6ab9bf1"
+        },
+        {
+          "path": "sprites/64/snow-cat.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -11.790698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b57166b554465406427d488459d9ad6d4af521dfa28f07617fc2a2e8cc5c3eed"
+        },
+        {
+          "path": "sprites/96/snow-cat.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -11.790698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "dc9ef8fd36c82c0f97ef16034ef0f8bb1c541d7eac6f84c5743f20441e435319"
+        },
+        {
+          "path": "sprites/128/snow-cat.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -11.790698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2582dfb29a00b59db98fbb95c398f2468e96bca834d5bd50baaf15e98ea83bc5"
+        },
+        {
+          "path": "sprites/256/snow-cat.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -11.790698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f6783153595a4643ade24a11ae9a56fd3a96904e0d875d219d20aea786b4210d"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 3.76,
+        "max_sector_intrusion": 2.61,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "panther",
+      "master": "masters/panther-v2.png",
+      "sha256": "34575830233b8b278b9bb5fec1adfdcf49031f0e2d395895f0baae02c1d64c3b",
+      "exports": [
+        {
+          "path": "sprites/48/panther.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1166,
+            1175
+          ],
+          "export_window": [
+            -12.453488,
+            -13.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "02a6bbf2ccb3d93d8493b0551ec4d3390d877fa6a8539318bc9f7875a4fb4405"
+        },
+        {
+          "path": "sprites/64/panther.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1166,
+            1175
+          ],
+          "export_window": [
+            -12.453488,
+            -13.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5f566a1ce512dd81d8cb185ce8bdfbcc09e2c79418052edb3fe01ddc1b0d7ed0"
+        },
+        {
+          "path": "sprites/96/panther.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1166,
+            1175
+          ],
+          "export_window": [
+            -12.453488,
+            -13.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d416f7d1190156f4796f9f7afaac645d72b5a85d3e074fe38bc3bda43e846cdf"
+        },
+        {
+          "path": "sprites/128/panther.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1166,
+            1175
+          ],
+          "export_window": [
+            -12.453488,
+            -13.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "507f152f050c297da77b264e5359a39bc20f071466ac2139abe99c5fee437cba"
+        },
+        {
+          "path": "sprites/256/panther.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1166,
+            1175
+          ],
+          "export_window": [
+            -12.453488,
+            -13.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f314fd022e7b9c70f83e833f56592714cce8a6e7743fc59664868b8bbe6afd45"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -0.64,
+        "max_sector_intrusion": 2.42,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "tiger",
+      "master": "masters/tiger-v2.png",
+      "sha256": "dc8fe0ab0e6fb695f0cd188e366b35c2a5cf3397945ad4299b62e6bc3d09c316",
+      "exports": [
+        {
+          "path": "sprites/48/tiger.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            77,
+            88,
+            1172,
+            1169
+          ],
+          "export_window": [
+            -12.127907,
+            -8.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c0d809975a5107b7c2242146374e98e3a3a9205371502b3ecdf16e7853bf5010"
+        },
+        {
+          "path": "sprites/64/tiger.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            77,
+            88,
+            1172,
+            1169
+          ],
+          "export_window": [
+            -12.127907,
+            -8.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c8e39a8ad0ab5e74a8b6fcde0178d492867e6f9a6244ed98f70e0a3f74daddfd"
+        },
+        {
+          "path": "sprites/96/tiger.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            77,
+            88,
+            1172,
+            1169
+          ],
+          "export_window": [
+            -12.127907,
+            -8.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "48ead6ed2f4cdf437b8c164c409b7e34f88d72ffa8b6d38a496f8fa9cf005272"
+        },
+        {
+          "path": "sprites/128/tiger.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            77,
+            88,
+            1172,
+            1169
+          ],
+          "export_window": [
+            -12.127907,
+            -8.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6dd5b84416a54d80794ba60272c638a5be3518e498192b22904ad041f772c28d"
+        },
+        {
+          "path": "sprites/256/tiger.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            77,
+            88,
+            1172,
+            1169
+          ],
+          "export_window": [
+            -12.127907,
+            -8.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7c29f3e55a754f58151e3d88919eb6c528851f206f3b27a9dfb9937f5915be72"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 2.15,
+        "max_sector_intrusion": 3.4,
+        "max_opaque_radius": 0.8604,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "sabertooth-tiger",
+      "master": "masters/sabertooth-tiger-v1.png",
+      "sha256": "0cc5ef9d0190c4afe822a3f0bf1578ef0e8dfe4efc6568fa5e8544d056737db9",
+      "exports": [
+        {
+          "path": "sprites/48/sabertooth-tiger.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            73,
+            1165,
+            1177
+          ],
+          "export_window": [
+            -14.860465,
+            -16.860465,
+            1283.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8c8fc2f069da258ff6f4281c9b21ea1fcbd9733795a0120925c5a3a93e63651f"
+        },
+        {
+          "path": "sprites/64/sabertooth-tiger.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            73,
+            1165,
+            1177
+          ],
+          "export_window": [
+            -14.860465,
+            -16.860465,
+            1283.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "be9f46d835652fcfaeedf44ece01bfab3d604944d90c75a4a3fdb79e7c4cd296"
+        },
+        {
+          "path": "sprites/96/sabertooth-tiger.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            73,
+            1165,
+            1177
+          ],
+          "export_window": [
+            -14.860465,
+            -16.860465,
+            1283.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "88179d0b969514ba6140b1b53fe8c6334dc5944494d6cf643df7388fc82d4d50"
+        },
+        {
+          "path": "sprites/128/sabertooth-tiger.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            73,
+            1165,
+            1177
+          ],
+          "export_window": [
+            -14.860465,
+            -16.860465,
+            1283.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9b9860456267cc2377321489694cd068e62de23482c6a8dac56bbb057ee42ea6"
+        },
+        {
+          "path": "sprites/256/sabertooth-tiger.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            73,
+            1165,
+            1177
+          ],
+          "export_window": [
+            -14.860465,
+            -16.860465,
+            1283.72093
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "682a0094f2cc484cb2798a3e8f0bbf2a71155174c6a5afee1712c42234364699"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 4.01,
+        "max_sector_intrusion": 9.38,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ice-wyrm",
+      "master": "masters/ice-wyrm-v1.png",
+      "sha256": "530a4cb370a59bed69a36d15b36c28db8c22db0fcd5867c0cdc3e8f9239038e8",
+      "exports": [
+        {
+          "path": "sprites/48/ice-wyrm.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fbae14562a9a06ed48d00e2aa0b08c59a77e494b1ac95717722efe3882854f9f"
+        },
+        {
+          "path": "sprites/64/ice-wyrm.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1b28007c2e571e739bcb70dcde76d468b4820aa294e1b3321ecf6ca753023291"
+        },
+        {
+          "path": "sprites/96/ice-wyrm.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0e53e84a46861b226393a44d10a9abc24c5ef9b3179f5c70c5a7f013bbdd33a5"
+        },
+        {
+          "path": "sprites/128/ice-wyrm.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "787f4af9b7c461ca48a0b62a6dfef216f548471c08370175b77b2a33229bfd98"
+        },
+        {
+          "path": "sprites/256/ice-wyrm.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "73c4606c7fdd2bea329931db0f2e8c7f75b58a9728fa802b06ddd595df1bc73f"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.35,
+        "max_sector_intrusion": 3.13,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

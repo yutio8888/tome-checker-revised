@@ -1,0 +1,6 @@
+{
+  "review_scale": "48px, 64px, 96px actual exports, opened review/blood-lich-v1-48-64-96.png; masked-body measured at 128px",
+  "observed_failure": "Blood humanoid thin dark red torso/arms and planted legs read as dark twig lines at 48/64px. Masked-body luminance 51.30 fails the UNCHANGED 65 body minimum despite passing plate/style gates.",
+  "required_change": "Preserve lean articulated humanoid blood form, fluid skull face, bent arms and planted legs, pose, no robe/armour/staff/crown. Brighten the entire BLOOD MATERIAL to mid-light warm coral-crimson with broad opaque pale salmon-pink specular planes on head, chest, arms and legs; dark wine-red restricted to tiny grooves. Broaden torso and limb highlight masses so anatomy remains bold at 48px. Keep crimson-red identity, not ivory bone or white skeletal materials. Aim masked-body luminance safely above 65 (around 85), preserving disc value and no ground light/aura.",
+  "invariants": "Exact blood lich identity and native fluid humanoid anatomy, dark red creases, compact fit, camera, native RGBA alpha, physical disc neutral value. No equipment or tactical state. Preserve ALL passed style constraints: {\"base_drift\": 4.33, \"max_sector_intrusion\": 4.54, \"max_opaque_radius\": 0.8585, \"export_occupancy\": 0.8594}. No gate/threshold changes, no disc illumination spill."
+}

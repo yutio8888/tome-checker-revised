@@ -1,0 +1,29 @@
+window.monsterCatalog = [
+  {
+    "id": "nightmare-horror"
+  },
+  {
+    "id": "radiant-horror"
+  },
+  {
+    "id": "maelstrom"
+  },
+  {
+    "id": "parasitic-horror"
+  },
+  {
+    "id": "lich"
+  },
+  {
+    "id": "ancient-lich"
+  },
+  {
+    "id": "archlich"
+  },
+  {
+    "id": "blood-lich"
+  },
+  {
+    "id": "animated-blood"
+  }
+];

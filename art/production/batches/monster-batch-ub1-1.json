@@ -1,0 +1,222 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ub1-1",
+  "assets": [
+    {
+      "asset_id": "high-sun-paladin-aeryn",
+      "native_name": "High Sun Paladin Aeryn",
+      "scope": "UB-1 native-tall unique/boss; game/modules/tome/data/zones/high-peak/npcs.lua:320",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/high-peak/npcs.lua",
+          "sha256": "a92fb0a13938f79b0c2725a6c004f24a557ac139920af5f4790d4b998a448d02",
+          "line": 320,
+          "anchor": "name = \"High Sun Paladin Aeryn\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-gates-of-morning/npcs.lua",
+          "sha256": "c3cb2fc668adf531c204356d9eecf95ae515a06f4c562d8b9ff26ae865a2c1a9",
+          "line": 29,
+          "anchor": "name = \"High Sun Paladin Aeryn\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_high_sun_paladin_aeryn.png",
+          "sha256": "a65dc11ba88a7fefb9ea24ef1c431d04a62efeceb9ad81355887b7ca891026c4",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 128]."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub1/refs/sun-paladins.png",
+          "sha256": "0e5b4ac4fdd862bacc2e6ea361b6910a0b3b0a0693fe8dd14f03a30fb364cdba",
+          "role": "family",
+          "note": "Shipped siblings row order: human-sun-paladin, high-sun-paladin-rodmour, aluin-the-fallen, argoniel, elandar. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A tall heroic woman in bright polished silver full plate with warm gold edging and a long crimson cloak sweeping down one side; long pale blonde hair uncovered and calm face. She holds a long straight knight's sword PERFECTLY UPRIGHT in her right hand, the blade vertical beside her head, her left hand open and empty at her hip; no shield, no hammer. Full-height upright stance with both feet planted, broad pale upper-left plates and a thin bright rim; the crimson cloak is the only warm accent. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Aeryn is a full-height slender upright figure with an upright sword and an EMPTY off-hand (no shield and no hammer), versus the shipped gold human sun-paladin token with its huge round sun-disc shield and forward war-hammer, and versus the white-gold cape-and-mace Rodmour. Distinguish by tall height, the vertical sword line and the absent shield, never by hue alone; the Fallen variant is near-black and blood-red with a centred two-handed greatsword. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exactly one native-tall body: image=\"invis.png\" with one add_mos entry {image=npc/humanoid_human_high_sun_paladin_aeryn.png, display_h=2, display_y=-1}; unique=true admits it without a native_tall flag (Walrog/Kyless/Walrog precedent). No shader, moddable_tile, anim or add_displays anywhere in leaf/base. auto_classes, where present, only roll talents, never the drawn body. Static source contract only; see evidence/monster-batch-ub1-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub1-20261001/source-contracts.json",
+          "sha256": "de194706efbca841ca76782391ca8176477e057be5834457a9b1554f0bae47c6"
+        }
+      ]
+    },
+    {
+      "asset_id": "fallen-sun-paladin-aeryn",
+      "native_name": "Fallen Sun Paladin Aeryn",
+      "scope": "UB-1 native-tall unique/boss; game/modules/tome/data/zones/high-peak/npcs.lua:243",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/high-peak/npcs.lua",
+          "sha256": "a92fb0a13938f79b0c2725a6c004f24a557ac139920af5f4790d4b998a448d02",
+          "line": 243,
+          "anchor": "name = \"Fallen Sun Paladin Aeryn\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_fallen_sun_paladin_aeryn.png",
+          "sha256": "f819f9f1b0ce3073a070c1f9a312d4042cb268b54828e6a8e06ed98eb572dd1a",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 128]."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub1/refs/sun-paladins.png",
+          "sha256": "0e5b4ac4fdd862bacc2e6ea361b6910a0b3b0a0693fe8dd14f03a30fb364cdba",
+          "role": "family",
+          "note": "Shipped siblings row order: human-sun-paladin, high-sun-paladin-rodmour, aluin-the-fallen, argoniel, elandar. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A tall tragic woman in blackened full plate with dull oxblood-red trim and thin glowing crimson seams, a long tattered dark-red cloak trailing asymmetrically to one side; loose pale blonde hair and a gaunt hollow-eyed face. She grips a great TWO-HANDED blood-dark greatsword PERFECTLY UPRIGHT in the centre of her chest with BOTH hands on the hilt, the blade vertical down the body centre-line, no shield. Slightly hunched forward with a heavy planted stance and torn asymmetrical cloak. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "The Fallen Aeryn is defined by a centred TWO-HANDED vertical greatsword (both hands on the hilt), a forward hunch and a tattered one-sided cloak, versus the High Aeryn's calm upright one-handed off-side sword with a free open hand. Same character, different pose structure and crimson-black palette; structure must separate them at 48px, not colour alone. Distinct from the broad dark Aluin knight by being a slender woman. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exactly one native-tall body: image=\"invis.png\" with one add_mos entry {image=npc/humanoid_human_fallen_sun_paladin_aeryn.png, display_h=2, display_y=-1}; unique=true admits it without a native_tall flag (Walrog/Kyless/Walrog precedent). No shader, moddable_tile, anim or add_displays anywhere in leaf/base. auto_classes, where present, only roll talents, never the drawn body. Static source contract only; see evidence/monster-batch-ub1-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub1-20261001/source-contracts.json",
+          "sha256": "de194706efbca841ca76782391ca8176477e057be5834457a9b1554f0bae47c6"
+        }
+      ]
+    },
+    {
+      "asset_id": "caldizar",
+      "native_name": "Caldizar",
+      "scope": "UB-1 native-tall unique/boss; game/modules/tome/data/zones/shertul-fortress-caldizar/npcs.lua:24",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/shertul-fortress-caldizar/npcs.lua",
+          "sha256": "d8b31f2c4bab607af88285f3e6272788d82a3fe3bd51e560476f61cba8f570ca",
+          "line": 24,
+          "anchor": "name = \"Caldizar\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/shertul.lua",
+          "sha256": "97a990a1bd6c228bf309bdbdc80b159badad36e7cb48964c7ec856aa293a53f6",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_SHERTUL\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/high-peak/npcs.lua",
+          "sha256": "a92fb0a13938f79b0c2725a6c004f24a557ac139920af5f4790d4b998a448d02",
+          "line": 389,
+          "anchor": "name = \"Caldizar\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_sher_tul_caldizar.png",
+          "sha256": "3f9bfad83f8e42c0328571e25a6e92a0ec0aac481adeda740cf7e112e43e9ec2",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 128]."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub1/refs/shertul.png",
+          "sha256": "0405f5e47ae6398fd728e673937dacec609d42cdd6b33b867ed3ea0305b34fe2",
+          "role": "family",
+          "note": "Shipped siblings row order: fortress-shadow. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A massive ancient seated Sher'Tul: a low broad mound wrapped in a pale ivory-grey ceremonial mantle, a single squat rounded head bump rising low between the shoulders bearing a smooth mauve-violet crown-disc and a thin violet halo ring; a nest of long tapered magenta-purple tentacles splaying outward and downward around the base; a vertical fountain of fine golden motes rising above the head. No face, eyes or arms. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Caldizar is a low seated pale-ivory mound with a distinct mauve head-disc, a mantle, downward magenta tentacles and a golden mote fountain, versus the shipped Fortress Shadow token's flat radial cyan-teal dome with a bright central core and no head. Structure (head bump, robe, mote column) and palette (ivory/magenta/gold vs cyan/teal), never a recolour. This one art covers BOTH native define sites (CALDIZAR and CALDIZAR_AOADS), whose sprites are byte-identical. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exactly one native-tall body: image=\"invis.png\" with one add_mos entry {image=npc/horror_sher_tul_caldizar.png, display_h=2, display_y=-1}; unique=true admits it without a native_tall flag (Walrog/Kyless/Walrog precedent). No shader, moddable_tile, anim or add_displays anywhere in leaf/base. auto_classes, where present, only roll talents, never the drawn body. Static source contract only; see evidence/monster-batch-ub1-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub1-20261001/source-contracts.json",
+          "sha256": "de194706efbca841ca76782391ca8176477e057be5834457a9b1554f0bae47c6"
+        }
+      ]
+    }
+  ]
+}

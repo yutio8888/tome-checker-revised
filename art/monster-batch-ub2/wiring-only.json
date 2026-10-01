@@ -1,0 +1,29 @@
+{
+  "id": "ben-cruthdar-the-cursed",
+  "native_name": "Ben Cruthdar, the Cursed",
+  "define_as": "BEN_CRUTHDAR",
+  "sources": [
+    {
+      "path": "game/modules/tome/data/zones/town-lumberjack-village/npcs.lua",
+      "sha256": "9d22e739f7eaf9ef6ff64ac34b3c44fe7a3fdf89aca3ad414a13af75ddf5bf8a",
+      "line": 25,
+      "anchor": "name = \"Ben Cruthdar, the Cursed\""
+    },
+    {
+      "path": "game/modules/tome/data/zones/temporal-rift/npcs.lua",
+      "sha256": "f0f18f389196cc8fa4bf8f22988e9eed21547953297738c49f8bb4823899a993",
+      "line": 25,
+      "anchor": "define_as = \"BEN_CRUTHDAR_ABOMINATION\""
+    }
+  ],
+  "native_image": "npc/humanoid_human_ben_cruthdar__the_cursed.png",
+  "native_image_sha256": "ac786de0eebd1b55f0a60458c3e8d88f06cde9c46c395563fce510a7388cc99c",
+  "reuse": {
+    "batch": "monster-batch-j",
+    "id": "ben-cruthdar-abomination",
+    "master": "monster-batch-j/masters/ben-cruthdar-abomination-v1.png",
+    "master_sha256": "9c386abff7fe42b46925a31c62cf8022a8f9e500600c39ffa7d8edddb5a30665",
+    "runtime_sha256": "7a347b1cecbb613f4b3cdda4a6b4c6882caf8212f7862ff7b04bb4fdf07860f9"
+  },
+  "note": "wiring-only: reuses the existing ben-cruthdar-abomination runtime token (byte-identical native PNG), exported from the same master through the same deterministic exporter; no new ImageGen art. The abomination catalog entry, token and manifest row are unchanged."
+}

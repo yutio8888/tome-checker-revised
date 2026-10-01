@@ -1,0 +1,113 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ta1-rework-1",
+  "assets": [
+    {
+      "asset_id": "human-guard",
+      "native_name": "human guard",
+      "scope": "TA-1 town resident; game/modules/tome/data/general/npcs/sunwall-town.lua:46; coordinator-requested TA-1 rework on dcb5c982: faithful native jerkin/steel shield, no green tabard; original TA-1 calls and masters preserved",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/sunwall-town.lua",
+          "sha256": "474ff89312e91d1898ce23fef62df48e3718fc7a94453ff08b7bd0282fa7e051",
+          "line": 46,
+          "anchor": "name = \"human guard\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/sunwall-town.lua",
+          "sha256": "474ff89312e91d1898ce23fef62df48e3718fc7a94453ff08b7bd0282fa7e051",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_SUNWALL_TOWN\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 192,
+          "anchor": "make_escort = {"
+        },
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 193,
+          "anchor": "name=\"enthralled slave\", number=2"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_human_guard.png",
+          "sha256": "2515e9fd8cdaf602062a67b4cf255225a34a62cd08b62ab1490a564440f06a13",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ta1/refs/guards.png",
+          "sha256": "5357fb900fde6df7994f50b74c3d428a53e7bd79e0da6cffb4f4ba5d232e5e0b",
+          "role": "family",
+          "note": "Shipped siblings row order: caravan-guard, elven-guard, mean-looking-elven-guard, human-sun-paladin, elven-warrior, norgan. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A human TOWN GUARD drawn exactly from the native sprite: a rich BROWN LEATHER PADDED JERKIN with a vertical row of small metal studs down the chest and warm tan piping, over broad brown leather SHOULDER PADS; below the belt, plain GREEN TROUSERS. BARE HEAD with short brown hair, a clean-shaven face, bare lower legs and simple brown shoes. In the right hand a straight arming SWORD is held low with the blade angled diagonally across the body; the left arm holds a large GREY STEEL HEATER SHIELD out to the side, its face plain weathered steel with a dark central boss. NO green tabard, NO green tunic, NO green shield, NO helmet and NO cloak. Render mid-light warm browns and greens with broad pale upper-left highlight planes on the jerkin, shoulder pads and steel shield, and a thin bright rim, so the figure is clearly lighter than the charcoal disc; aim the central body luminance comfortably above 65, around 80-95, while the neutral disc stays unchanged. Every surface is SOLID OPAQUE material.",
+        "contrast": "Structural identity versus the shipped siblings: brown studded leather jerkin with shoulder pads, bare head, green trousers and a large out-held GREY STEEL heater shield. The rejected v2 brown-green tunic and green shield must not be copied. Versus elven-guard (green-and-gold outfit with a green-rimmed round shield and a helmeted blonde head) and caravan-guard (full chainmail body with a round shield and spear), the torso cloth is dominantly BROWN and the shield is plain grey steel; no green cloth on the torso or shield. Read the difference by silhouette and large value masses at 48 px, never by hue alone. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Flat single 64x64 default-name native image; no nice_tile or add_mos; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. Static source contract only; see evidence/monster-batch-ta1-20261001/source-contracts.json Coordinator-authorized faithful-native redesign after the dcb5c982 review; not a waiver and no gate/threshold changed.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ta1-20261001/source-contracts.json",
+          "sha256": "ae95dcb93cbcfc59e40ffa479e1fba691671be910b6754a4a6b491aca2011972"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ta1/rework/coordinator-rework-human-guard.json",
+          "sha256": "02eacb22bd1baded7cac15d31c1d097df9ede7a9d6951bfd1c1c989b0849298e"
+        }
+      ],
+      "refinement": {
+        "supersedes": "human-guard",
+        "previous_batch": "monster-batch-ta1-2",
+        "design_change_reason": "Rejected v2 read almost identical to the shipped elven-guard token (green tunic/tabard, green shield, upright sword) and was unfaithful to native npc/humanoid_human_human_guard.png. Redraw faithful to the native sprite: brown studded leather jerkin with shoulder pads as the dominant torso mass, bare head with short hair, green trousers, a grey steel heater shield held out to the side, and the sword held diagonally across the body. No green tabard and no green shield; stay clearly distinct from elven-guard and caravan-guard at 48 px. This is a separately reviewed change of torso material, head treatment and shield colour/pose, not a colour-only correction or a retry note.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-ta1-2/human-guard/receipts/attempt-2.json",
+            "sha256": "e276f54005d6c5e35275b0391255bb3dbc8c5e46e3762ae28948ee9a135c375a"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-ta1-2/human-guard/imagegen-calls/call-2/call.json",
+            "sha256": "2d3dba30bd77f60fc97250319e30ca6a3a6122ce26c89823b447f7b41199e305"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-ta1/rework/coordinator-rework-human-guard.json",
+            "sha256": "02eacb22bd1baded7cac15d31c1d097df9ede7a9d6951bfd1c1c989b0849298e"
+          }
+        ]
+      }
+    }
+  ]
+}

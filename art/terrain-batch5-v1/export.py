@@ -68,8 +68,9 @@ def scorch_wall(mask):
 # ivory) with the native floor's large-panel seam layout; the walls are one
 # calm graphite block per cell (the native floor graphite) with a thin ivory
 # cap toward open north sides and the native banded face on open south sides.
-grain_a=ImageOps.grayscale(rgb(GFX/'korpul/floor-a-0-0.png'))
-grain_b=ImageOps.grayscale(rgb(GFX/'korpul/floor-b-0-0.png'))
+# Frozen pre-2026-10-01 Kor'Pul floors (the live floor got a warm hue finish).
+grain_a=ImageOps.grayscale(rgb(ROOT/'art/terrain-contrast-v1/frozen-inputs/korpul/floor-a-0-0.png'))
+grain_b=ImageOps.grayscale(rgb(ROOT/'art/terrain-contrast-v1/frozen-inputs/korpul/floor-b-0-0.png'))
 def calm(g,amount):
     # Keep only a soft stone grain: blur the reviewed texture, then pull its
     # contrast toward the mean so the panel reads smooth and machined.
@@ -115,10 +116,14 @@ def shertul_wall(mask):
 #   only fungal detail (softened mushroom stalks from the plain wall frieze);
 # - ladders: the native ladder bitmaps re-seated on the new floor exactly as
 #   the gloom suite builds them.
-# Deep Bellow keeps the unchanged gloom/plain suite.
-pit_floor_src=ImageOps.grayscale(rgb(GFX/'gloom/plain/floor0.png'))
-pit_wall_src=ImageOps.grayscale(rgb(GFX/'gloom/plain/wall-15-0.png'))
-pit_frieze=ImageOps.grayscale(rgb(GFX/'gloom/plain/wall-0-0.png'))
+# Deep Bellow uses the live gloom/plain suite.
+# The plain floor/wall tiles read here are frozen copies of the 2026-09-28
+# gloom plain tiles the accepted pit was built from; the 2026-09-30 gloom wall
+# rework (crisp walls, lifted floor) replaced the live plain tiles, and the
+# pit keeps its reviewed look.
+pit_floor_src=ImageOps.grayscale(rgb(HERE/'frozen-inputs/gloom-plain-floor0.png'))
+pit_wall_src=ImageOps.grayscale(rgb(HERE/'frozen-inputs/gloom-plain-wall-15-0.png'))
+pit_frieze=ImageOps.grayscale(rgb(HERE/'frozen-inputs/gloom-plain-wall-0-0.png'))
 def pit_floor():
     fine=pit_floor_src.filter(ImageFilter.GaussianBlur(1.4))
     broad=pit_floor_src.rotate(90).filter(ImageFilter.GaussianBlur(10))

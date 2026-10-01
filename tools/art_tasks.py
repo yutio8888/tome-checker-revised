@@ -111,7 +111,9 @@ def refinement_gate(asset, name, catalog):
     if set(refinement) != REFINEMENT_KEYS:
         raise ValueError('refinement needs exactly supersedes, previous_batch, '
                          'design_change_reason and evidence')
-    if refinement['supersedes'] != catalog[name]:
+    mapped_ids = catalog[name].split(';')
+    if refinement['supersedes'] not in mapped_ids or (len(mapped_ids) > 1
+            and asset['asset_id'] != refinement['supersedes']):
         raise ValueError(f'refinement must supersede the mapped token id {catalog[name]}')
     if not str(refinement['previous_batch']).strip():
         raise ValueError('refinement must name the batch whose attempt budget was spent')

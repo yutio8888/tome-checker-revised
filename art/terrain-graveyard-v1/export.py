@@ -11,7 +11,9 @@ S=128
 
 def source(path): return Image.open(ROOT/path).convert('RGB')
 grass=source('data/gfx/refined/grass0.png')
-stone=source('data/gfx/refined/korpul/wall-15-0.png')
+# Headstone material: frozen pre-2026-10-01 Kor'Pul brick; the coffin and
+# mausoleum base follows the live board road (korpul floor-a) around them.
+stone=source('art/terrain-contrast-v1/frozen-inputs/korpul/wall-15-0.png')
 road=source('data/gfx/refined/korpul/floor-a-0-0.png')
 
 def polygon_mask(points):
@@ -74,5 +76,5 @@ for kind in ('grave','coffin','coffin-open','mausoleum'):
         files[path.name]=hashlib.sha256(path.read_bytes()).hexdigest()
 (HERE/'export-manifest.json').write_text(json.dumps({'sources':{
     str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in
-    (ROOT/'data/gfx/refined/grass0.png',ROOT/'data/gfx/refined/korpul/wall-15-0.png',ROOT/'data/gfx/refined/korpul/floor-a-0-0.png')},
+    (ROOT/'data/gfx/refined/grass0.png',ROOT/'art/terrain-contrast-v1/frozen-inputs/korpul/wall-15-0.png',ROOT/'data/gfx/refined/korpul/floor-a-0-0.png')},
     'files':files,'imagegen_calls':0},indent=2)+'\n')

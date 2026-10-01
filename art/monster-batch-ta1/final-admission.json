@@ -1,0 +1,54 @@
+{
+  "accepted_ids": [
+    "apprentice-mage",
+    "pyromancer",
+    "cryomancer",
+    "geomancer",
+    "tempest",
+    "human-guard",
+    "derth-guard",
+    "last-hope-guard",
+    "halfling-guard",
+    "dwarven-guard",
+    "elvala-guard",
+    "slaver",
+    "enthralled-slave"
+  ],
+  "native": {},
+  "art_review": "accepted static 48/64/96 colour/grayscale family sheets with shipped siblings and real-floor sheets; no game launch",
+  "body_minimum": 65.0,
+  "descriptive_floor_baseline": 45.0,
+  "calls": 17,
+  "selected_masters": 13,
+  "waivers": [],
+  "recorded_masters": 17,
+  "refinements": [
+    {
+      "id": "pyromancer",
+      "from": "masters/pyromancer-v1.png",
+      "to": "masters/pyromancer-v2.png",
+      "reason": "masked-body luminance 61.57 < 65"
+    },
+    {
+      "id": "derth-guard",
+      "from": "masters/derth-guard-v1.png",
+      "to": "masters/derth-guard-v2.png",
+      "reason": "masked-body luminance 62.13 < 65"
+    },
+    {
+      "id": "human-guard",
+      "from": "masters/human-guard-v1.png",
+      "to": "masters/human-guard-v3.png",
+      "reason": "coordinator rework: v2 too close to shipped elven-guard and unfaithful to the native brown jerkin/grey steel shield"
+    }
+  ],
+  "coordinator_rework": {
+    "parent_commit": "dcb5c982",
+    "batch": "monster-batch-ta1-rework-1",
+    "reason": "human-guard v3 faithful brown studded leather jerkin, bare head, green trousers, out-held grey steel heater shield, diagonal sword; no green tabard",
+    "superseded_selected_masters": [
+      "masters/human-guard-v2.png"
+    ],
+    "additional_calls": 1
+  }
+}

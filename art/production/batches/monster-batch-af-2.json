@@ -1,0 +1,240 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-af-2",
+  "assets": [
+    {
+      "asset_id": "parasitic-horror",
+      "native_name": "parasitic horror",
+      "scope": "class a off-list pool; game/modules/tome/data/general/npcs/horror.lua:880",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 880,
+          "anchor": "name = \"parasitic horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 881,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved tabletop disc, camera, lighting only; do not copy creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_parasitic_horror.png",
+          "sha256": "b3847a744fa391c67c72a197da59005eb929712c17b4fb2cb378f091a9dcf937",
+          "role": "identity",
+          "note": "Inspected native identity and anatomy, [64, 128]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-af/refs/horrors.png",
+          "sha256": "37d6531e1dcd0e27d7adafe995d9c21eb7ac787a6382f21bb6d2e655627d709e",
+          "role": "family",
+          "note": "Shipped siblings row order: luminous-horror, oozing-horror, abyssal-horror, umbral-horror, bone-horror, sanguine-horror, dread, worm-that-walks, headless-horror. Compare shape; do not copy anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "One gigantic thick lamprey-like parasite, squat upright curved grub tube with its short tail tucked under, oversized upward-facing circular suction mouth containing concentric cream hooked teeth. Writhing lumpy olive-green flesh with broad pale yellow-green dorsal folds and individual under-skin swellings. Mouth is the unmistakable top focal point. No eyes, arms, legs, weapons or armour; fully contained compact C-shaped body. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Single upright thick lamprey tube and concentric suction mouth, not a many-worm mass, ooze puddle, radial nightmare maw, humanoid horror or winged serpent.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "NPC default-name image; nice_tile single body 64x128, display_h=2, display_y=-1;  Static evidence only; live separate.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-af-20261001/source-contracts.json",
+          "sha256": "79f3f3adb69a153d3add9b766b38db42af8fa2ea537f266c48b039471bfc2948"
+        }
+      ]
+    },
+    {
+      "asset_id": "lich",
+      "native_name": "lich",
+      "scope": "class a off-list pool; game/modules/tome/data/general/npcs/lich.lua:76",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/lich.lua",
+          "sha256": "39fa573c3793bc42f429288be32b0f108ace67543482134afe9b21ae6bc1dbfc",
+          "line": 76,
+          "anchor": "name = \"lich\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/lich.lua",
+          "sha256": "39fa573c3793bc42f429288be32b0f108ace67543482134afe9b21ae6bc1dbfc",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_LICH\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/lich.lua",
+          "sha256": "39fa573c3793bc42f429288be32b0f108ace67543482134afe9b21ae6bc1dbfc",
+          "line": 77,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved tabletop disc, camera, lighting only; do not copy creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_lich_lich.png",
+          "sha256": "3461fccee7c290c1a30c2bd2f93da879155a5713664ab6d0da2cc6079af83b50",
+          "role": "identity",
+          "note": "Inspected native identity and anatomy, [64, 128]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-af/refs/liches.png",
+          "sha256": "8b8b01d037111c01519c8a9c148c7fefb9dc4b4496d24b4364104f786d3e6e01",
+          "role": "family",
+          "note": "Shipped siblings row order: skeleton-magus, skeleton-mage, emperor-wight, barrow-wight, bone-horror, sanguine-horror, dread. Compare shape; do not copy anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A gaunt skeleton necromancer wearing a simple narrow burgundy robe with restrained gold piping and a low plain hood framing a bright ivory skull. One bent bony arm raises a small plain wand beside its face, other hand low. Lean forward spellcaster stance with narrow shoulders and visibly skeletal feet. Mid-light wine-red cloth on broad lit folds. No crown, no rank mark, no halo. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Narrow plain hooded robe and ONE small raised wand; ancient lich is broad ragged mantle with TWO extended skeletal casting hands; archlich is monumental armoured spiked regalia and blue cape; blood lich is unrobed blood anatomy.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "NPC default-name image; nice_tile single body 64x128, display_h=2, display_y=-1;  Static evidence only; live separate.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-af-20261001/source-contracts.json",
+          "sha256": "79f3f3adb69a153d3add9b766b38db42af8fa2ea537f266c48b039471bfc2948"
+        }
+      ]
+    },
+    {
+      "asset_id": "ancient-lich",
+      "native_name": "ancient lich",
+      "scope": "class a off-list pool; game/modules/tome/data/general/npcs/lich.lua:110",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/lich.lua",
+          "sha256": "39fa573c3793bc42f429288be32b0f108ace67543482134afe9b21ae6bc1dbfc",
+          "line": 110,
+          "anchor": "name = \"ancient lich\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/lich.lua",
+          "sha256": "39fa573c3793bc42f429288be32b0f108ace67543482134afe9b21ae6bc1dbfc",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_LICH\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/lich.lua",
+          "sha256": "39fa573c3793bc42f429288be32b0f108ace67543482134afe9b21ae6bc1dbfc",
+          "line": 111,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved tabletop disc, camera, lighting only; do not copy creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_lich_ancient_lich.png",
+          "sha256": "468434af1ee03b509a43e57e7986cadd8355639582755edc9b8a1b392d540f3d",
+          "role": "identity",
+          "note": "Inspected native identity and anatomy, [64, 128]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-af/refs/liches.png",
+          "sha256": "8b8b01d037111c01519c8a9c148c7fefb9dc4b4496d24b4364104f786d3e6e01",
+          "role": "family",
+          "note": "Shipped siblings row order: skeleton-magus, skeleton-mage, emperor-wight, barrow-wight, bone-horror, sanguine-horror, dread. Compare shape; do not copy anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An ancient skeletal sorcerer in a broad weathered moss-olive funerary mantle: low cowl around pale lavender-ivory bare skull, asymmetrical layered shredded cape panels sweeping inward, two long skeletal forearms extended forward with BOTH open casting hands. Heavy curved shawl collar, worn parchment cloth highlights and ivory finger masses. Stooped broad triangular mantle silhouette, no wand, no crown, no rank graphic. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Broad shredded asymmetrical shawl mantle and paired outstretched casting hands, versus lich narrow intact robe with raised wand, archlich upright spiked armour/blue cape and blood lich naked fluid humanoid.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "NPC default-name image; nice_tile single body 64x128, display_h=2, display_y=-1;  Static evidence only; live separate.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-af-20261001/source-contracts.json",
+          "sha256": "79f3f3adb69a153d3add9b766b38db42af8fa2ea537f266c48b039471bfc2948"
+        }
+      ]
+    }
+  ]
+}

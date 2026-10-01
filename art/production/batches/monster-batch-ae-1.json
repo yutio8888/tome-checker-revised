@@ -1,0 +1,198 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ae-1",
+  "assets": [
+    {
+      "asset_id": "champion-of-urh-rok",
+      "native_name": "champion of Urh'Rok",
+      "scope": "class a dungeon pool; game/modules/tome/data/general/npcs/major-demon.lua:204",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 204,
+          "anchor": "name = \"champion of Urh'Rok\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_MAJOR_DEMON\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 206,
+          "anchor": "resolvers.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved physical disc, camera and miniature lighting; do not copy the creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_champion_of_urh_rok.png",
+          "sha256": "8f9cb88285037acbc7e99ab1d701e44280fdcc01b1fcc2c29a879b5de063b407",
+          "role": "identity",
+          "note": "Native identity, [64, 128]: A massive compact armoured demonic humanoid, enclosed pale silver-steel felsteel plate, two broad swept horns, red visor and chest seams, enormous angular shoulder plates, a two-handed greatsword held vertically close against its chest. A heavy knight silhouette, no wings, no smoke, no bull head. Upper plate surfaces are bright ash-silver."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ae/refs/demons.png",
+          "sha256": "a96d013c459162518f610f444cfbaebbc2b6ecd810ab49b611319a07a5095209",
+          "role": "family",
+          "note": "Shipped siblings in row order: dolleg, uruivellas, thaurhereg, duathedlen, daelach, harkor-zun. Match tabletop language; do not copy their body or silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A massive compact armoured demonic humanoid, enclosed pale silver-steel felsteel plate, two broad swept horns, red visor and chest seams, enormous angular shoulder plates, a two-handed greatsword held vertically close against its chest. A heavy knight silhouette, no wings, no smoke, no bull head. Upper plate surfaces are bright ash-silver. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Champion is an enclosed silver armoured GREAT-SWORD KNIGHT; forge-giant is a burning smith with TWO HAMMERS; shipped demons are thorned brutes, a horned bull, lean shadow demon or smoke-flame warrior. Different body construction, posture and equipment, not a recolour.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light creature masses and broad pale upper-left highlights, with a thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "NPC.lua:33 default-name image; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. nice_tile{image=\"invis.png\",add_mos={{image=\"npc/demon_major_champion_of_urh_rok.png\",display_h=2,display_y=-1}}}; nicer_tiles off uses the same single native image; native_tall=true for non-unique tall entry. Exact static source contract, no game launch; see evidence/monster-batch-ae-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ae-20261001/source-contracts.json",
+          "sha256": "64b4bd57b941e15445ca9fb5b38cb143b457af1876056517922a4745115885c6"
+        }
+      ]
+    },
+    {
+      "asset_id": "forge-giant",
+      "native_name": "forge-giant",
+      "scope": "class a dungeon pool; game/modules/tome/data/general/npcs/major-demon.lua:249",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 249,
+          "anchor": "name = \"forge-giant\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_MAJOR_DEMON\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 251,
+          "anchor": "resolvers.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved physical disc, camera and miniature lighting; do not copy the creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_forge_giant.png",
+          "sha256": "e29fb33367dc678632b10a46ad189a5cf3014b19f72700df77f041b064b1e1a4",
+          "role": "identity",
+          "note": "Native identity, [64, 128]: A broad heavy burning demon giant smith with an exposed massive ochre-orange muscular torso, pale hot orange fissures, a short white-hot swept flame mane and small horns, iron-grey bracers and apron, a blocky forge HAMMER in EACH hand pulled close across its thighs. Compact hunched smith stance, two square hammer heads, no sword, no wings, no bull face. Fire stays on the figure; no floor flames or base glow."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ae/refs/demons.png",
+          "sha256": "a96d013c459162518f610f444cfbaebbc2b6ecd810ab49b611319a07a5095209",
+          "role": "family",
+          "note": "Shipped siblings in row order: dolleg, uruivellas, thaurhereg, duathedlen, daelach, harkor-zun. Match tabletop language; do not copy their body or silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A broad heavy burning demon giant smith with an exposed massive ochre-orange muscular torso, pale hot orange fissures, a short white-hot swept flame mane and small horns, iron-grey bracers and apron, a blocky forge HAMMER in EACH hand pulled close across its thighs. Compact hunched smith stance, two square hammer heads, no sword, no wings, no bull face. Fire stays on the figure; no floor flames or base glow. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "A broad exposed smith with TWO SQUARE HAMMERS and forge apron, versus the champion's enclosed plate knight and one greatsword, and versus shipped thorned demon brutes, Uruivellas's bull, lean Duathedlen and smoke-cloud Daelach. Anatomy, equipment and silhouette must separate it.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light creature masses and broad pale upper-left highlights, with a thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "NPC.lua:33 default-name image; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. nice_tile{image=\"invis.png\",add_mos={{image=\"npc/demon_major_forge_giant.png\",display_h=2,display_y=-1}}}; nicer_tiles off uses the same single native image; native_tall=true for non-unique tall entry. Exact static source contract, no game launch; see evidence/monster-batch-ae-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ae-20261001/source-contracts.json",
+          "sha256": "64b4bd57b941e15445ca9fb5b38cb143b457af1876056517922a4745115885c6"
+        }
+      ]
+    },
+    {
+      "asset_id": "hummerhorn",
+      "native_name": "hummerhorn",
+      "scope": "class a dungeon pool; game/modules/tome/data/general/npcs/swarm.lua:95",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/swarm.lua",
+          "sha256": "b306bfafdfd376d4cb28f6bcd7c385c52cfc4771a2c7b437aef02d8762265c8a",
+          "line": 95,
+          "anchor": "name = \"hummerhorn\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/swarm.lua",
+          "sha256": "b306bfafdfd376d4cb28f6bcd7c385c52cfc4771a2c7b437aef02d8762265c8a",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_INSECT\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved physical disc, camera and miniature lighting; do not copy the creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/hummerhorn.png",
+          "sha256": "c55d4c833778c0dc897989970db51dfde561558d304f180f55ebb0aa3774ab18",
+          "role": "identity",
+          "note": "Native identity, [64, 64]: ONE giant buzzing WASP, golden yellow and mid-brown banded long abdomen curled beneath its thorax, pointed venom stinger kept inside the disc, slender waist, six tucked legs, four pale ivory translucent-looking but opaque-painted folded insect wings, large amber compound eyes and short curved antennae. Side-diagonal hovering insect pose, a single wasp, not a swarm; pale upper planes."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ae/refs/insects.png",
+          "sha256": "32321f65770a5c1f1c22d7e7d4bc7a83ec7126243883dcfc1914b36c9b58b5a3",
+          "role": "family",
+          "note": "Shipped siblings in row order: hornet-swarm, giant-spider, weaver-young, weaver-queen, ritch-hunter, ritch-hive-mother-pool. Match tabletop language; do not copy their body or silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "ONE giant buzzing WASP, golden yellow and mid-brown banded long abdomen curled beneath its thorax, pointed venom stinger kept inside the disc, slender waist, six tucked legs, four pale ivory translucent-looking but opaque-painted folded insect wings, large amber compound eyes and short curved antennae. Side-diagonal hovering insect pose, a single wasp, not a swarm; pale upper planes. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "One big long-abdomen flying wasp with thin waist and folded wings; shipped hornet swarm is several insects, ritch hunter stands upright with scythe forelegs, and spiders are wingless eight-legged radial bodies.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light creature masses and broad pale upper-left highlights, with a thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "explicit image= on the leaf; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. no nice_tile or add_mos; flat single native image. Exact static source contract, no game launch; see evidence/monster-batch-ae-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ae-20261001/source-contracts.json",
+          "sha256": "64b4bd57b941e15445ca9fb5b38cb143b457af1876056517922a4745115885c6"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "nightmare-horror": 71.56,
+    "radiant-horror": 112.24,
+    "maelstrom": 107.31,
+    "parasitic-horror": 79.54,
+    "lich": 78.3,
+    "ancient-lich": 79.76,
+    "archlich": 74.79,
+    "blood-lich": 66.4,
+    "animated-blood": 81.01
+  },
+  "floors": {
+    "korpul stone A (dreadfell, vor-armoury)": 131.66,
+    "cave rock (ardhungol)": 130.64,
+    "underwater floor (lake-nur)": 129.4,
+    "rak-shor floor (rak-shor-pride)": 163.04,
+    "gothic stone (conclave-vault nearest)": 145.44,
+    "snow ground": 175.0,
+    "grass": 108.97,
+    "caldera": 96.54,
+    "burnt ground": 72.7,
+    "void floor": 163.25
+  },
+  "zone_floors": {
+    "nightmare-horror": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.66,
+      "cave rock (ardhungol)": 130.64,
+      "underwater floor (lake-nur)": 129.4
+    },
+    "radiant-horror": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.66,
+      "cave rock (ardhungol)": 130.64,
+      "underwater floor (lake-nur)": 129.4
+    },
+    "maelstrom": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.66,
+      "cave rock (ardhungol)": 130.64,
+      "underwater floor (lake-nur)": 129.4
+    },
+    "parasitic-horror": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.66,
+      "cave rock (ardhungol)": 130.64,
+      "underwater floor (lake-nur)": 129.4
+    },
+    "lich": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.66,
+      "cave rock (ardhungol)": 130.64,
+      "underwater floor (lake-nur)": 129.4
+    },
+    "ancient-lich": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.66,
+      "cave rock (ardhungol)": 130.64,
+      "underwater floor (lake-nur)": 129.4
+    },
+    "archlich": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.66,
+      "cave rock (ardhungol)": 130.64,
+      "underwater floor (lake-nur)": 129.4
+    },
+    "blood-lich": {
+      "korpul stone A (dreadfell, vor-armoury)": 131.66,
+      "cave rock (ardhungol)": 130.64,
+      "underwater floor (lake-nur)": 129.4
+    },
+    "animated-blood": {
+      "rak-shor floor (rak-shor-pride)": 163.04
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

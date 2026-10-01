@@ -1,0 +1,192 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ae-3",
+  "assets": [
+    {
+      "asset_id": "worm-that-walks",
+      "native_name": "worm that walks",
+      "scope": "class a dungeon pool; game/modules/tome/data/general/npcs/horror.lua:47",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 47,
+          "anchor": "name = \"worm that walks\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved physical disc, camera and miniature lighting; do not copy the creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_worm_that_walks.png",
+          "sha256": "6f82314d9ad3b62ea44ed474f7af1219096bb4b7f90d8a778c1c6c23d4a0a1f0",
+          "role": "identity",
+          "note": "Native identity, [64, 64]: A compact hooded humanoid mass of fat ivory and pale yellow-green MAGGOTS bursting from a torn mid-light sage-brown rotten robe, no solid human skin, face an empty hood filled with worms, two arm-shaped bundles of overlapping plump worms gripping two small bile-stained WARAXES pulled tight at the waist. Worms and ragged robe stay on the figure, no loose spill on the disc, fully opaque, large cream upper highlights."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ae/refs/horrors-wights.png",
+          "sha256": "1c222966fefc67ebd0c232c26fb554d7042486214de57e8d1eca2356cbabe36e",
+          "role": "family",
+          "note": "Shipped siblings in row order: forest-wight, grave-wight, barrow-wight, dread, dreadmaster, degenerated-ogric-mass. Match tabletop language; do not copy their body or silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A compact hooded humanoid mass of fat ivory and pale yellow-green MAGGOTS bursting from a torn mid-light sage-brown rotten robe, no solid human skin, face an empty hood filled with worms, two arm-shaped bundles of overlapping plump worms gripping two small bile-stained WARAXES pulled tight at the waist. Worms and ragged robe stay on the figure, no loose spill on the disc, fully opaque, large cream upper highlights. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Worm-that-walks is a ragged hood and worm-bundle arms with TWO AXES, headless horror is a bare headless long-limbed belly creature. Shipped wights are spectral humanoids, flesh golem has solid stitched flesh. Visible worms and robe silhouette, not a colour swap.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light creature masses and broad pale upper-left highlights, with a thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "NPC.lua:33 default-name image; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. no nice_tile or add_mos; flat single native image. Exact static source contract, no game launch; see evidence/monster-batch-ae-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ae-20261001/source-contracts.json",
+          "sha256": "64b4bd57b941e15445ca9fb5b38cb143b457af1876056517922a4745115885c6"
+        }
+      ]
+    },
+    {
+      "asset_id": "headless-horror",
+      "native_name": "headless horror",
+      "scope": "class a dungeon pool; game/modules/tome/data/general/npcs/horror.lua:196",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 196,
+          "anchor": "name = \"headless horror\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror.lua",
+          "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved physical disc, camera and miniature lighting; do not copy the creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_headless_horror.png",
+          "sha256": "c60628a7cd231e628f92ffb0f3338509aee0b7d69e9469b6de0382e73efb1e24",
+          "role": "identity",
+          "note": "Native identity, [64, 64]: A HEADLESS gangly humanoid horror, absolutely NO head, face, eyes, skull or horns above its shoulders. Huge distended round pale tan stomach below a visibly empty neck stump, long thin sinewy bent arms pulled inward on either side of its belly and short folded legs, pale ochre-tan flesh with ivory upper planes and mid-slate shadows. Bare skin, no robe, no weapons, no summoned eyes depicted, one compact crouched figure."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ae/refs/horrors-wights.png",
+          "sha256": "1c222966fefc67ebd0c232c26fb554d7042486214de57e8d1eca2356cbabe36e",
+          "role": "family",
+          "note": "Shipped siblings in row order: forest-wight, grave-wight, barrow-wight, dread, dreadmaster, degenerated-ogric-mass. Match tabletop language; do not copy their body or silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A HEADLESS gangly humanoid horror, absolutely NO head, face, eyes, skull or horns above its shoulders. Huge distended round pale tan stomach below a visibly empty neck stump, long thin sinewy bent arms pulled inward on either side of its belly and short folded legs, pale ochre-tan flesh with ivory upper planes and mid-slate shadows. Bare skin, no robe, no weapons, no summoned eyes depicted, one compact crouched figure. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Bare headless humanoid with empty neck stump, distended belly and bent gangly arms versus worm-that-walks hood, worms and paired axes; no spectral robe or golem stitches. The Arena HEADLESSHORROR identity keeps native art despite the same name and sprite.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light creature masses and broad pale upper-left highlights, with a thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "NPC.lua:33 default-name image; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. no nice_tile or add_mos; flat single native image. Exact static source contract, no game launch; see evidence/monster-batch-ae-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ae-20261001/source-contracts.json",
+          "sha256": "64b4bd57b941e15445ca9fb5b38cb143b457af1876056517922a4745115885c6"
+        }
+      ]
+    },
+    {
+      "asset_id": "storm-wyrm",
+      "native_name": "storm wyrm",
+      "scope": "class a dungeon pool; game/modules/tome/data/general/npcs/storm-drake.lua:85",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/storm-drake.lua",
+          "sha256": "3b5bb1be5fac8999d6635da9575de8b78e684e439f7b93e7cb95fc051df333db",
+          "line": 85,
+          "anchor": "name = \"storm wyrm\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/storm-drake.lua",
+          "sha256": "3b5bb1be5fac8999d6635da9575de8b78e684e439f7b93e7cb95fc051df333db",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_STORM_DRAKE\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/storm-drake.lua",
+          "sha256": "3b5bb1be5fac8999d6635da9575de8b78e684e439f7b93e7cb95fc051df333db",
+          "line": 87,
+          "anchor": "resolvers.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved physical disc, camera and miniature lighting; do not copy the creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_storm_storm_wyrm.png",
+          "sha256": "76ba0a2757b8decab2d8e594af4ac9c8ddae45202be540f19b9d29d4f5d473c9",
+          "role": "identity",
+          "note": "Native identity, [64, 128]: An old powerful lightning dragon, thick serpentine body curled into a tight horseshoe around a raised angular horned head, white-silver and mid-light electric blue scales, jagged forked lightning-shaped dorsal crest, TWO compact bat wings folded into triangular shoulder fins. Broad pearl-white upper planes; small lightning markings confined to the body, no electrical aura, no glow on disc."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ae/refs/dragons.png",
+          "sha256": "9258e12aa566ce9dc04e3abd426483a2a5eba2522b406dd7225377fa388a8a7a",
+          "role": "family",
+          "note": "Shipped siblings in row order: storm-drake, cold-drake, fire-wyrm, venom-wyrm, ice-wyrm, rantha. Match tabletop language; do not copy their body or silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An old powerful lightning dragon, thick serpentine body curled into a tight horseshoe around a raised angular horned head, white-silver and mid-light electric blue scales, jagged forked lightning-shaped dorsal crest, TWO compact bat wings folded into triangular shoulder fins. Broad pearl-white upper planes; small lightning markings confined to the body, no electrical aura, no glow on disc. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Storm WYRM has a thick horseshoe coil, tall horned neck and forked zigzag crest versus the shipped low crouching storm DRAKE; ice wyrm is a spiral with ice crystal spines, fire/venom wyrms have other head and crest structures. Spire dragon is a heavy wingless blade-armoured coil, blinkwyrm is a slender sinuous snake. Do not merely recolour an existing wyrm.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light creature masses and broad pale upper-left highlights, with a thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "NPC.lua:33 default-name image; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. nice_tile{image=\"invis.png\",add_mos={{image=\"npc/dragon_storm_storm_wyrm.png\",display_h=2,display_y=-1}}}; nicer_tiles off uses the same single native image; native_tall=true for non-unique tall entry. Exact static source contract, no game launch; see evidence/monster-batch-ae-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ae-20261001/source-contracts.json",
+          "sha256": "64b4bd57b941e15445ca9fb5b38cb143b457af1876056517922a4745115885c6"
+        }
+      ]
+    }
+  ]
+}

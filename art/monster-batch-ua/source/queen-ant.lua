@@ -1,0 +1,53 @@
+-- Verified leaf and inherited base; source hashes in source-contracts.json
+newEntity{ base = "BASE_NPC_ANT",
+	name = "Queen Ant", color=colors.VIOLET, unique=true, female = 1,
+	desc = _t"Queen of the ants, queen of the biting death!",
+	resolvers.nice_tile{image="invis.png", add_mos = {{image="npc/insect_ant_queen_ant.png", display_h=2, display_y=-1}}},
+	level_range = {25, nil}, exp_worth = 2,
+	rank = 3.5,
+	size_category = 3,
+	rarity = 50,
+	max_life = 230, life_rating=12,
+	combat_armor = 18, combat_def = 7,
+	resolvers.drops{chance=100, nb=12, {type="money"} },
+	resolvers.inscriptions(2, "infusion"),
+	make_escort = {
+		{type="insect", subtype="ant", number=resolvers.mbonus(5, 5)},
+	},
+	summon = {
+		{type="insect", subtype="ant", number=2, hasexp=false},
+	},
+	resolvers.talents{
+		[Talents.T_SLIME_SPIT]={base=3, every=5},
+		[Talents.T_BITE_POISON]={base=3, every=5},
+		[Talents.T_GRAB]={base=3, every=5},
+		[Talents.T_STUN]={base=3, every=5},
+		[Talents.T_ACIDIC_SPRAY]={base=3, every=10},
+		[Talents.T_ACIDIC_SKIN]={base=5, every=10},
+		[Talents.T_SUMMON]=1,
+	},
+
+	ai = "tactical",
+	ai_tactic = resolvers.tactic"melee",
+}
+-- INHERITED BASE
+newEntity{
+	define_as = "BASE_NPC_ANT",
+	type = "insect", subtype = "ant",
+	blood_color = colors.GREY,
+	display = "a", color=colors.WHITE,
+	body = { INVEN = 10 },
+	sound_moam = {"creatures/ants/ant_%d", 1, 2},
+	sound_die = {"creatures/ants/ant_die_%d", 1, 4},
+	autolevel = "warrior",
+	ai = "dumb_talented_simple", ai_state = { ai_move="move_complex", talent_in=1, },
+	stats = { str=12, dex=10, mag=3, con=13 },
+	energy = { mod=1 },
+	combat_armor = 1, combat_def = 1,
+	combat = { dam=resolvers.levelup(resolvers.rngavg(5,5), 1, 1), atk=15, apr=7, dammod={str=0.6}, sound="creatures/ants/ant_hit" },
+	infravision = 10,
+	max_life = resolvers.rngavg(10,20),
+	rank = 1,
+	size_category = 1,
+	not_power_source = {arcane=true, technique_ranged=true},
+}

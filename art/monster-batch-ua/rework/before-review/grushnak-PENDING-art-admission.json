@@ -1,0 +1,11 @@
+{
+  "status": "PENDING new authorized art task; native in UA",
+  "reason": "Two serial wrapper calls returned no image_path. Both rejected for provenance; no receipt or accepted master. No threshold failed or was edited. Cannot waive missing provenance.",
+  "calls": [
+    "art/production/handoffs/monster-batch-ua-4/grushnak/imagegen-calls/call-1/call.json",
+    "art/production/handoffs/monster-batch-ua-4/grushnak/imagegen-calls/call-2/call.json"
+  ],
+  "max_calls": 2,
+  "used_calls": 2,
+  "waiver_approved": false
+}

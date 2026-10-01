@@ -1,0 +1,65 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "high-sun-paladin-aeryn": 69.63,
+    "fallen-sun-paladin-aeryn": 67.88,
+    "caldizar": 94.25,
+    "chronolith-twin": 87.29,
+    "chronolith-clone": 87.5,
+    "temporal-defiler": 65.09,
+    "corrupted-daelach": 74.66,
+    "supreme-archmage-linaniil": 90.69,
+    "archmage-tarelion": 67.57
+  },
+  "floors": {
+    "shertul stone": 162.35,
+    "void": 163.25,
+    "gothic stone A": 145.44,
+    "korpul stone A": 131.66,
+    "sand": 110.23,
+    "town road A": 152.9,
+    "cave rock": 130.64,
+    "grass": 108.97,
+    "burnt ground": 72.7,
+    "snow ground": 175.0
+  },
+  "zone_floors": {
+    "high-sun-paladin-aeryn": {
+      "korpul stone A": 131.66,
+      "sand": 110.23
+    },
+    "fallen-sun-paladin-aeryn": {
+      "korpul stone A": 131.66
+    },
+    "caldizar": {
+      "shertul stone": 162.35,
+      "void": 163.25
+    },
+    "chronolith-twin": {
+      "void": 163.25,
+      "cave rock": 130.64
+    },
+    "chronolith-clone": {
+      "void": 163.25,
+      "cave rock": 130.64
+    },
+    "temporal-defiler": {
+      "void": 163.25,
+      "town road A": 152.9
+    },
+    "corrupted-daelach": {
+      "sand": 110.23,
+      "grass": 108.97
+    },
+    "supreme-archmage-linaniil": {
+      "gothic stone A": 145.44,
+      "town road A": 152.9
+    },
+    "archmage-tarelion": {
+      "gothic stone A": 145.44,
+      "town road A": 152.9
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

@@ -1,0 +1,93 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ub1-rework-3",
+  "assets": [
+    {
+      "asset_id": "chronolith-clone",
+      "native_name": "Chronolith Clone",
+      "scope": "UB-1 rework; game/modules/tome/data/zones/temporal-rift/npcs.lua:184",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/temporal-rift/npcs.lua",
+          "sha256": "f0f18f389196cc8fa4bf8f22988e9eed21547953297738c49f8bb4823899a993",
+          "line": 184,
+          "anchor": "name = \"Chronolith Clone\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_temporal.lua",
+          "sha256": "36c607d2da3de37f3a899a61091b4b0a748cc5d2d8e3c78c518e69c207e34403",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR_TEMPORAL\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_temporal_cronolith_clone.png",
+          "sha256": "619d82b773f4fd6975c6c7ee0ccc0f1024cd5259daf5307ea048c9a86b2b39bf",
+          "role": "identity",
+          "note": "Exact native body 64x128; match its portrait."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub1/refs/native-chronolith-pair.png",
+          "sha256": "46f29f50293ed152d21c7d25079e83f6a4127d263f79dee89d622880c7149b68",
+          "role": "family",
+          "note": "Native pair 2x nearest: the same character/creature in its two states."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A temporal horror, the SAME creature as the Chronolith Twin: a narrow upright body whose torso is a CREAM-BONE armour plate of stacked vertical rib ridges and segmented panels, blue-violet limbs, and a blue-violet elongated head with large glossy black insectile eyes. It has FOUR long thin curling blue-violet arms: the LEFT upper arm is raised high and curled inward across the head, the RIGHT upper arm is lowered and coiled across the belly, and the two lower arms curl outward and down; two short blue legs below the hem. This MIRRORED, closed arm arrangement contrasts the Twin's symmetric raised-arm fan. Behind and up-left of the body floats a FAINT DUPLICATED TEMPORAL AFTERIMAGE: an OPAQUE pale blue-grey echo of the same silhouette offset by about a fifth of the body height, drawn as a flat low-contrast ghost outline with a thin pale edge and no interior face or eye detail, clearly a temporal echo and not a second solid creature. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Same creature as the Twin but structurally distinguished: a mirrored/opposite arm layout (one arm curled across the head, one across the belly) plus a faint offset temporal afterimage behind it, versus the Twin's upright symmetric raised-arm fan. The arm layout and the echo outline must separate the pair at 48px; this is not a colour change. Both still differ from the temporal stalker's low dark blade mass.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Cream-bone torso plate with pale upper highlights, mid-light blue-violet limbs and head, black insectile eye points, and a pale desaturated blue-grey opaque afterimage echo.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. The disc is a NEUTRAL physical prop: render the charcoal-brown plate and its bronze-grey bevel at EXACTLY the style reference's own lightness, evenly all round, including the outer sixth ring band and the plate directly under and beside the creature. Add no contact shadow, glow, bounce light or colour spill onto the plate."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exactly one native-tall body: image=\"invis.png\" with one add_mos entry {image=npc/horror_temporal_cronolith_clone.png, display_h=2, display_y=-1}; unique=true admits it without a native_tall flag (Walrog/Kyless/Walrog precedent). No shader, moddable_tile, anim or add_displays anywhere in leaf/base. auto_classes, where present, only roll talents, never the drawn body. Coordinator-requested rework; see evidence/monster-batch-ub1-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub1-20261001/source-contracts.json",
+          "sha256": "de194706efbca841ca76782391ca8176477e057be5834457a9b1554f0bae47c6"
+        }
+      ],
+      "refinement": {
+        "supersedes": "chronolith-clone",
+        "previous_batch": "monster-batch-ub1",
+        "design_change_reason": "The first attempt collapsed the native six-'limbed' temporal horror into a cocoon/egg bundle that does not exist in the sprite. The design direction changes to paint the exact twin creature (cream bony torso plate, blue-violet body, curling blue arms) and separate it from the Twin by a mirrored arm arrangement plus a faint offset temporal afterimage, not by colour.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-ub1/superseded/chronolith-clone-v1.png",
+            "sha256": "2c672ba440181089f1d1da72864e9a037330b3c70ea734c1de96d20a05e0fe22"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-ub1-2/chronolith-clone/receipts/attempt-1.json",
+            "sha256": "4f6b4358e1d3df97683df83759d6c5f6a1d8d06007fdd0facd585309db3c7063"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ad-9",
+  "assets": [
+    {
+      "asset_id": "ritch-hunter",
+      "native_name": "ritch hunter",
+      "scope": "ritch-tunnels, eruan and ruined-dungeon pools plus the Arena (general/npcs/ritch.lua:66, insect/ritch, non-unique, no define_as, rank 2, base BASE_NPC_RITCH, default-name image); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ritch.lua",
+          "sha256": "c2353543ac61995c0371536ca897ec92fb2a49ce0e226f6f5933e738f272f0ad",
+          "line": 67,
+          "anchor": "name = \"ritch hunter\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ritch.lua",
+          "sha256": "c2353543ac61995c0371536ca897ec92fb2a49ce0e226f6f5933e738f272f0ad",
+          "line": 79,
+          "anchor": "T_FLAME"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ritch.lua",
+          "sha256": "c2353543ac61995c0371536ca897ec92fb2a49ce0e226f6f5933e738f272f0ad",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_RITCH\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/insect_ritch_ritch_hunter.png",
+          "sha256": "5587964f95d00ff5f489598fe17db9dad8ff530cb4b108df9f344160484b5d6b",
+          "role": "identity",
+          "note": "Native shape (64x64): a lean slate-blue wasp-like ritch with orange zig-zag stripes, a hooked horn crest and thin translucent wings. Keep the lean upright slate-indigo ritch with orange stripes and blade-like forelegs, drawn as ONE compact figure filling the disc, clearly not the orange flamespitter or the tan impaler."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ad/refs/ritches.png",
+          "sha256": "b390e538a808e4c23a039669444de36fcc9a41919349a99b1bf1df85a2b9d879",
+          "role": "family",
+          "note": "Four shipped ritch tokens (the flamespitter: an orange scorpion-like ritch with a flaming tail; the impaler: a tan ritch with a long spike; the chitinous ritch: a golden turtle-shelled ritch; the Ritch Great Hive Mother: a big brick-red clawed ritch): the RITCH LARVA is a plump pale BUTTER-YELLOW segmented GRUB curled into a C shape with tiny black legs and small head spikes, no claws; the RITCH HUNTER is a sleek SLATE-INDIGO wasp-like ritch with orange zig-zag stripes, a hooked horn crest and blade-like forelegs, upright and lean; the RITCH HIVE MOTHER is a large crimson-rust matriarch with big pincers, one huge amber compound eye and a swollen banded amber-and-black egg-laden ABDOMEN dragging behind; none of them is an orange scorpion, a tan spiked impaler, a golden turtle or the plain brick-red clawed Great Hive Mother."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A ritch hunter seen from a steep overhead three-quarter angle: a lean, upright WASP-LIKE RITCH standing tall on four thin jointed legs on the disc, slate-INDIGO chitin with bold ORANGE ZIG-ZAG STRIPES across the thorax and abdomen, a narrow head with a curved hooked HORN CREST and large amber compound eyes, two long BLADE-LIKE forelegs raised in front like scythes, two narrow pale blue-grey glassy wings held back along the body, a tapering striped abdomen; broad pale highlight planes on every upper-left plate and a thin bright rim light. Lean, blue, striped, scythe-armed and complete. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Ritches: the RITCH HUNTER is the LEAN UPRIGHT SLATE-INDIGO WASP-LIKE ritch with orange zig-zag stripes, a hooked horn crest, scythe forelegs and held-back wings (silhouette: a thin tall figure with two raised blades and a tapering tail; hue: slate-indigo chitin with orange stripes and amber eyes; value: mid-light). The shipped flamespitter is an orange scorpion-like ritch with a flaming tail, the impaler a tan ritch with a long spike, the chitinous ritch a golden turtle-shelled ritch and the larva a soft yellow grub: this must not be orange, tan or golden overall, must not be a low scorpion and must be lean and upright with blade forelegs.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas. LIGHTNESS REFINEMENT (the previous generation of this exact token passed the geometry gates but its chitin measured too dark against the charcoal disc): keep the same lean upright wasp-like ritch with scythe forelegs, hooked horn crest and held-back wings, but render the chitin in a clearly LIGHTER mid-tone steel-blue and cornflower-slate, as light as the copper-grey bevel of the disc or lighter, with big pale ice-blue and cream highlight planes on the thorax, head and every upper-left plate, bright saturated ORANGE zig-zag stripes, pale blue-white glassy wings, a bright pale RIM LIGHT along the whole upper-left outline and bright amber eyes; only the eye rims and leg joints are dark; no navy, deep indigo or black chitin anywhere; the figure fills a circle of about 0.62 of the disc radius, centred, still with a wide bare ring of plate; render the whole disc and its plate at exactly the style reference lightness. DISC CALIBRATION (the previous generation of this exact token had the disc plate LIGHTER than the style reference): keep the same lighter steel-blue and cornflower hunter with bright orange stripes, but render the disc, its outer ring band and the plate under and around the figure at exactly the style reference lightness, NOT lighter: the dark charcoal-brown plate stays as dark as the reference, evenly all round, with no glow, bounce light or pale spill from the pale wings or the pale highlights onto the plate.",
+        "palette": "Slate-indigo chitin, orange zig-zag stripes, amber eyes, pale blue-grey wings, a thin bright rim; nothing darker than mid slate-blue except the eye rims and leg joints; NO black chitin; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ritch hunter, define_as=None, type=insect/subtype=ritch, unique=False, native_tall=False); details and hashes in evidence/monster-batch-ad-20260930/source-contracts.json. base BASE_NPC_RITCH (insect/ritch, no image=, no shader); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; no equip, no sustains_at_birth, no auto_classes; Rotting Disease, Rush, Flame and Shriek are activated talents. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ad-20260930/source-contracts.json",
+          "sha256": "fb4815f3439287c0d34c0368fe774009c09353228bd77f5d4b1240785023bb74"
+        }
+      ]
+    }
+  ]
+}

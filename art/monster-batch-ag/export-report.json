@@ -1,0 +1,866 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "multi-hued-drake-hatchling",
+      "master": "masters/multi-hued-drake-hatchling-v1.png",
+      "sha256": "1a5335a370a02ae668d48de640cb277ce8ec262e8c74fe1dee2862c72e406d43",
+      "exports": [
+        {
+          "path": "sprites/48/multi-hued-drake-hatchling.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d2ff6bc3ecee6153ae304cc2432ba61adbc87845a6b9c50ef8d82d1d00f709fd"
+        },
+        {
+          "path": "sprites/64/multi-hued-drake-hatchling.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e1212fd6bdab9ac6a07494eaf4d353a48b882cda68eb1b9e117458a224ace4ac"
+        },
+        {
+          "path": "sprites/96/multi-hued-drake-hatchling.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "64ea3644e0d3065bc8a29a49ab1f3d0813294319e7b46ac9fd6b28168f6ceb4e"
+        },
+        {
+          "path": "sprites/128/multi-hued-drake-hatchling.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "674ebf8c0e7e3375cd0d4b285b431e40c47497ee3164e5a237d736197b70e4f4"
+        },
+        {
+          "path": "sprites/256/multi-hued-drake-hatchling.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.046512,
+            -13.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5bf43c098d8c136cbeaae9f74b8bc32157eafab64973fab3823e48bd634c3e31"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 3.3,
+        "max_sector_intrusion": 2.93,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "multi-hued-drake",
+      "master": "masters/multi-hued-drake-v1.png",
+      "sha256": "8d2f18fe4fc92cf49a07d4bc65a0a8fb9256158a3886835ef11cf062475d5112",
+      "exports": [
+        {
+          "path": "sprites/48/multi-hued-drake.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "223818e1bb911abb0996ae5a54cfb0faf8264d4033049fb921cacb08c21741cf"
+        },
+        {
+          "path": "sprites/64/multi-hued-drake.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d26ca56be402a7e6ea8914676dc1d54e7988ccc99800f04effe2d8c62192ede6"
+        },
+        {
+          "path": "sprites/96/multi-hued-drake.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6bfa4913d0863c549696392007d76bc8b0ebb73f4602e71af396458e95352172"
+        },
+        {
+          "path": "sprites/128/multi-hued-drake.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "10e958b113dd09e1f1c31d45adec8e5ebc51ee2478ffed38c0ba28a14a6320e3"
+        },
+        {
+          "path": "sprites/256/multi-hued-drake.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c58919a4dcd4ff84e70ca436697a0366d4b65f55c2bee3a3137e6e85bca59bd1"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -0.68,
+        "max_sector_intrusion": 2.64,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "greater-multi-hued-wyrm",
+      "master": "masters/greater-multi-hued-wyrm-v1.png",
+      "sha256": "3bfa0f694c51d3a40d24c395ea4a278b7b92d1dbcc1061265d2d27524ddd45fa",
+      "exports": [
+        {
+          "path": "sprites/48/greater-multi-hued-wyrm.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "de35e118cb2b3ea24566d369a93cbfd797fe36d6cd91b5d5fcad9b3754b5bcc4"
+        },
+        {
+          "path": "sprites/64/greater-multi-hued-wyrm.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c8239344a5cea94d04e55397413cc7329443d7a3778f8f3674be37f61b7acc42"
+        },
+        {
+          "path": "sprites/96/greater-multi-hued-wyrm.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f73a69376b5aa141947491867ca9a22b9c39164cd0430a097e02c055c9a81c65"
+        },
+        {
+          "path": "sprites/128/greater-multi-hued-wyrm.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ae7f40c8d33673b4137285c282806ddff248e7e08abe0581aa5ba074d69e4de7"
+        },
+        {
+          "path": "sprites/256/greater-multi-hued-wyrm.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1163,
+            1171
+          ],
+          "export_window": [
+            -10.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e926194022461dc96ec6b607c2b487dd5c84f454ab2607b1a15a549144b587c5"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.21,
+        "max_sector_intrusion": 2.94,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "shadow-claw",
+      "master": "masters/shadow-claw-v1.png",
+      "sha256": "71b2d56de251d78ec8dd03f833362124abbbb1ffdb6e91925baba376f01f2e6b",
+      "exports": [
+        {
+          "path": "sprites/48/shadow-claw.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1165,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f7b6dde361aed932a7cc8be96c16ce2d126661361a6b8c45e4a45bb7ac876516"
+        },
+        {
+          "path": "sprites/64/shadow-claw.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1165,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b7587ae89341f01412fad7536dffd2c92321f813732d98a7e0a6d292d5dd5f90"
+        },
+        {
+          "path": "sprites/96/shadow-claw.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1165,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cdf32e65fbb62db7991ff66c663110c864506c9e443a98abec263ebcae48a6a7"
+        },
+        {
+          "path": "sprites/128/shadow-claw.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1165,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "de9eb899354772a393e5a2d653eaf109e469f01de3bba54899fea81b415a6da0"
+        },
+        {
+          "path": "sprites/256/shadow-claw.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            75,
+            1165,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "737922cedb7e6793d29b170e4359f9c313f444a6164ef26a3aa4a3fc33d1a761"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.53,
+        "max_sector_intrusion": 6.5,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "shadow-caster",
+      "master": "masters/shadow-caster-v3.png",
+      "sha256": "e4210eca079d14a3b987308da56c5ad317a3b10c87629cdb63158484bdde0761",
+      "exports": [
+        {
+          "path": "sprites/48/shadow-caster.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -9.627907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e943da79438b8f13d07c6d120aa52ae0e9a26dde7eb9323fc6bdc18f67614aa5"
+        },
+        {
+          "path": "sprites/64/shadow-caster.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -9.627907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "44e6dca5b010d62eb1cc9e27c8f6d961a5bca2f348e3f25ba89a1a61e9525efe"
+        },
+        {
+          "path": "sprites/96/shadow-caster.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -9.627907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "da176ab7bad0337438514c06b8ce2f838c089c2dfbbe70b465fcc04d28e3b7ba"
+        },
+        {
+          "path": "sprites/128/shadow-caster.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -9.627907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d1d5f1deb6ebefe402ead802722c9afe0bda9aa5cc7e62fadcafe1e4ed33ea54"
+        },
+        {
+          "path": "sprites/256/shadow-caster.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1167,
+            1170
+          ],
+          "export_window": [
+            -9.627907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e242744a2b605c83a5d8bb0970699f2f139e5b69682b5690b2db2be7bc7e0555"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -4.78,
+        "max_sector_intrusion": 3.96,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "multi-hued-crystal",
+      "master": "masters/multi-hued-crystal-v1.png",
+      "sha256": "cd7a1445a68732d5c8f47c9ca2e221b0c950aec38c9929b7288a46bd0309b91f",
+      "exports": [
+        {
+          "path": "sprites/48/multi-hued-crystal.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            73,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -10.953488,
+            -16.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0d02c9c14c7cf7156436247eccef814061ace4096d00b8ca7063b6735638621e"
+        },
+        {
+          "path": "sprites/64/multi-hued-crystal.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            73,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -10.953488,
+            -16.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3fb97bc081c70cffff2be73eb4a52dd9d3473d9fa5ebc8fbee6a5f6da243c0fb"
+        },
+        {
+          "path": "sprites/96/multi-hued-crystal.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            73,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -10.953488,
+            -16.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f9b79b4c4a1f4a3616b5d40118180332d2eeaa806c13102251061800c19176c4"
+        },
+        {
+          "path": "sprites/128/multi-hued-crystal.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            73,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -10.953488,
+            -16.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "80242ef19d7a3f07d94199b58af1d8aaf2ad2675351d882dbd8b3cad6b24a34e"
+        },
+        {
+          "path": "sprites/256/multi-hued-crystal.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            73,
+            1170,
+            1172
+          ],
+          "export_window": [
+            -10.953488,
+            -16.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "88be094fb06943a9c0975870c988394bb1269c4ac4120fcbf58cd8d457df34bc"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.25,
+        "max_sector_intrusion": 3.99,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "shimmering-crystal",
+      "master": "masters/shimmering-crystal-v1.png",
+      "sha256": "9076a430c707e479ef871435015f4d608e93556567984787de3a19f4b7d43d82",
+      "exports": [
+        {
+          "path": "sprites/48/shimmering-crystal.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            75,
+            1171,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7e287afca6522af214edf209edf509f24f1276f1ebd3bbc4d991b481e1c004ff"
+        },
+        {
+          "path": "sprites/64/shimmering-crystal.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            75,
+            1171,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9fd763a32c3f10ab191aadc31ee92c9a582235c5b569a234c7114bc084bfccd1"
+        },
+        {
+          "path": "sprites/96/shimmering-crystal.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            75,
+            1171,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "16c278a725b893a59eddb0cf46458880586956f43848dbeef55ec7a7404b8300"
+        },
+        {
+          "path": "sprites/128/shimmering-crystal.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            75,
+            1171,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8c7423ea56c8313d24532b99a9ddc5bbe08d1b20b5095406a200d9c55db04372"
+        },
+        {
+          "path": "sprites/256/shimmering-crystal.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            83,
+            75,
+            1171,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "799e5fbb26a6dfd4ef7b8560125e8bd3e7f7a8982b50e9dba8bf093419536575"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 5.35,
+        "max_sector_intrusion": 2.65,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

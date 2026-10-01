@@ -1,0 +1,56 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "kra-tor": 77.14,
+    "khulmanar": 79.38,
+    "rungof": 92.36,
+    "grgglck": 74.53,
+    "queen-ant": 74.18,
+    "ak-gishil": 72.89,
+    "ninandra": 149.49,
+    "phoenix": 105.97,
+    "ukruk": 86.51,
+    "gorbat": 85.82,
+    "grushnak": 71.27,
+    "vor": 101.59
+  },
+  "floors": {
+    "korpul stone A (dreadfell, grushnak-pride)": 131.66,
+    "cave rock (ardhungol)": 130.64,
+    "gloomy (heart-gloom unpurified)": 96.92,
+    "dreamy (heart-gloom purified)": 139.61,
+    "gothic stone (vor-pride)": 145.44,
+    "snow ground": 175.0,
+    "grass": 108.97,
+    "bamboo hut (gorbat-pride)": 123.36,
+    "burnt ground": 72.7,
+    "slime (slime-tunnels context)": 127.06
+  },
+  "zone_floors": {
+    "kra-tor": {},
+    "khulmanar": {},
+    "rungof": {
+      "gloomy (heart-gloom unpurified)": 96.92,
+      "dreamy (heart-gloom purified)": 139.61,
+      "grass": 108.97
+    },
+    "grgglck": {},
+    "queen-ant": {},
+    "ak-gishil": {},
+    "ninandra": {},
+    "phoenix": {},
+    "ukruk": {},
+    "gorbat": {
+      "bamboo hut (gorbat-pride)": 123.36
+    },
+    "grushnak": {
+      "korpul stone A (dreadfell, grushnak-pride)": 131.66
+    },
+    "vor": {
+      "gothic stone (vor-pride)": 145.44,
+      "burnt ground": 72.7
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

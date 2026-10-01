@@ -1,0 +1,108 @@
+{
+ "schema": 1,
+ "batch_id": "heart-gloom-3",
+ "assets": [
+  {
+   "gate": "ready",
+   "gate_reason": "Rework of the accepted heart-gloom vegetation wall: connected wall masks were blurred smears of a side-view prop; identities and mechanics verified in evidence/heart-gloom-20260928/identity.md",
+   "max_attempts": 2,
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/heart-gloom-20260928/identity.md",
+     "sha256": "b43e13c065626c8709c23ab1b919ff1129fcfca5e07f12c27b8049c837c7393a"
+    }
+   ],
+   "asset_id": "gloomy-canopy",
+   "native_name": "UNDERGROUND_TREE vegetation wall top (gloomy)",
+   "kind": "terrain-floor",
+   "scope": "heart-gloom gloomy skin L1-L3 connected wall interior and Deep Bellow plain derivation",
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/grids/underground_gloomy.lua",
+     "sha256": "6e4e4430272562ac1049064c13c1d77f050b1f19f37e0d24521422bd9a16b57b",
+     "line": 63,
+     "anchor": "define_as = \"UNDERGROUND_TREE\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-gloom-v1/masters/gloomy-vegetation-v1.png",
+     "sha256": "8e7add096bf097860b31a1f2ba60896b4f1933af792f0e6490eb072213366630",
+     "role": "identity",
+     "note": "Accepted skin vegetation wall master: same mushroom cap material, colours and lighting, now seen from straight above"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-gothic-s10b/masters/gothic-wall-top-v1.png",
+     "sha256": "77b64f7142369c724df74fbd94934a5c54ecbde3574148638ac886c9925890c5",
+     "role": "style",
+     "note": "Accepted board wall-top convention: opaque full-bleed overhead material, edge to edge, no perspective side"
+    }
+   ],
+   "grid_contract": {
+    "movement": "Blocks with pass_tree only",
+    "sight": "Blocks",
+    "danger": "None",
+    "interaction": "Dig to UNDERGROUND_FLOOR",
+    "export": "Opaque full-bleed wall-top material; the exporter crops fixed windows per neighbour mask, adds cap rims on exposed sides and a stem face (from the existing vegetation master) on south edges toward open ground, 2 parities."
+   },
+   "prompt_fields": {
+    "subject": "The top of a dense fungal thicket wall seen from straight above: a tightly packed canopy of overlapping broad mushroom caps of mixed large, medium and small sizes covering the whole square, each cap a rounded lumpy disc with a crisp pale lit rim toward the upper left, speckled moss patches, and narrow near-black shadow crevices between caps; no ground shows through.",
+    "palette": "Dark plum-brown caps, moss olive patches, dull cream highlights only on cap rims; low-key and dark overall, sickly earth tones, upper-left light.",
+    "contrast": "At 48 pixels it must read as a dark solid blocking mass filling its cell, clearly darker and heavier than the flat cave floor; broad crisp cap shapes with sharp lit rims and deep dark crevices between caps, not fine noise, not blurry or painterly-soft.",
+    "composition": "Edge-to-edge overhead material filling the whole square with even density; caps are cut off by all four edges and continue beyond them; no border, gap, visible floor, cliff face, perspective side, stems, single centred object or cast shadow outside the caps.",
+    "mechanics": "Blocking vegetation wall top only. Paint no door, opening, path, stairs, hazard, creature, symbol or text."
+   }
+  },
+  {
+   "gate": "ready",
+   "gate_reason": "Rework of the accepted heart-gloom vegetation wall: connected wall masks were blurred smears of a side-view prop; identities and mechanics verified in evidence/heart-gloom-20260928/identity.md",
+   "max_attempts": 2,
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/heart-gloom-20260928/identity.md",
+     "sha256": "b43e13c065626c8709c23ab1b919ff1129fcfca5e07f12c27b8049c837c7393a"
+    }
+   ],
+   "asset_id": "dreamy-canopy",
+   "native_name": "UNDERGROUND_TREE vegetation wall top (dreamy)",
+   "kind": "terrain-floor",
+   "scope": "heart-gloom dreamy skin L1-L3 connected wall interior",
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/grids/underground_dreamy.lua",
+     "sha256": "7234585796d7e12f5cc5a5a9c36acbd4bf77bdc3c82d0ad488adf5d86db8f598",
+     "line": 66,
+     "anchor": "define_as = \"UNDERGROUND_TREE\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-gloom-v1/masters/dreamy-vegetation-v1.png",
+     "sha256": "ebde73d325d3725214d1084493d4c190c2ff4672eab169e470df26be6bc2182d",
+     "role": "identity",
+     "note": "Accepted skin vegetation wall master: same mushroom cap material, colours and lighting, now seen from straight above"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/terrain-gothic-s10b/masters/gothic-wall-top-v1.png",
+     "sha256": "77b64f7142369c724df74fbd94934a5c54ecbde3574148638ac886c9925890c5",
+     "role": "style",
+     "note": "Accepted board wall-top convention: opaque full-bleed overhead material, edge to edge, no perspective side"
+    }
+   ],
+   "grid_contract": {
+    "movement": "Blocks with pass_tree only",
+    "sight": "Blocks",
+    "danger": "None",
+    "interaction": "Dig to UNDERGROUND_FLOOR",
+    "export": "Opaque full-bleed wall-top material; the exporter crops fixed windows per neighbour mask, adds cap rims on exposed sides and a stem face (from the existing vegetation master) on south edges toward open ground, 2 parities."
+   },
+   "prompt_fields": {
+    "subject": "The top of a dense dreamlike fungal thicket wall seen from straight above: a tightly packed canopy of overlapping broad mushroom caps of mixed large, medium and small sizes covering the whole square, each cap a smooth rounded disc with a crisp pearl lit rim toward the upper left and soft iridescent sheen, and narrow deep indigo shadow crevices between caps; no ground shows through.",
+    "palette": "Muted violet and lilac caps with pale aqua and pearl rim highlights, deep indigo crevices; restrained glow, mid-dark overall so it stays darker than the pale blue-grey floor, upper-left light.",
+    "contrast": "At 48 pixels it must read as a dark solid blocking mass filling its cell, clearly darker and heavier than the flat cave floor; broad crisp cap shapes with sharp lit rims and deep dark crevices between caps, not fine noise, not blurry or painterly-soft.",
+    "composition": "Edge-to-edge overhead material filling the whole square with even density; caps are cut off by all four edges and continue beyond them; no border, gap, visible floor, cliff face, perspective side, stems, single centred object or cast shadow outside the caps.",
+    "mechanics": "Blocking vegetation wall top only. Paint no door, opening, path, stairs, hazard, creature, symbol or text."
+   }
+  }
+ ]
+}

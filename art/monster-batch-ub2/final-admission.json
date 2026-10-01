@@ -1,0 +1,45 @@
+{
+  "accepted_ids": [
+    "sun-paladin-guren",
+    "epoch",
+    "corrupted-oozemancer",
+    "zemekkys",
+    "blood-master",
+    "limmir-the-jeweler",
+    "protector-myssil",
+    "rak-shor-cultist",
+    "shady-cornac-man",
+    "tannen",
+    "ben-cruthdar-the-cursed"
+  ],
+  "art_ids": [
+    "sun-paladin-guren",
+    "epoch",
+    "corrupted-oozemancer",
+    "zemekkys",
+    "blood-master",
+    "limmir-the-jeweler",
+    "protector-myssil",
+    "rak-shor-cultist",
+    "shady-cornac-man",
+    "tannen"
+  ],
+  "wiring_only": [
+    "ben-cruthdar-the-cursed"
+  ],
+  "native": {},
+  "art_review": "static 48/64/96 colour/grayscale and real-floor review complete; native-sprite 2x column beside every UB-2 token; dedicated short-proportions sheet",
+  "body_minimum": 65.0,
+  "descriptive_floor_baseline": 45.0,
+  "calls": 15,
+  "waivers": [],
+  "outcomes": {
+    "recorded": 13,
+    "style-gate-rejected": 2
+  },
+  "rework": {
+    "zemekkys": "masters/zemekkys-rework-v1.png (first master 63.64 < 65; rework anchored on it, 98.67)",
+    "rak-shor-cultist": "masters/rak-shor-cultist-rework-v1.png (first master 49.89 < 65; rework anchored on it, 75.43)",
+    "sun-paladin-guren": "masters/sun-paladin-guren-rework-v1.png (coordinator redraw: cold gunmetal steel + gold halo/rim light, 80.74; v1 read as warm bronze-gold)"
+  }
+}

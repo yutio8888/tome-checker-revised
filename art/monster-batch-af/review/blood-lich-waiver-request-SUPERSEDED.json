@@ -1,0 +1,14 @@
+{
+  "status": "SUPERSEDED",
+  "approved": false,
+  "identity": "blood lich",
+  "id": "blood-lich",
+  "unchanged_body_floor": 65.0,
+  "measured_v1": 51.3,
+  "reason": "V1 passed plate/style but failed masked-body luminance. V2 call returned no path/image and provenance was rejected; max_attempts=2 exhausted.",
+  "request": "User review of the failed v1 body-readability result; no waiver is approved or applied. Current runtime retains native blood lich. Any later redesign requires a separately pinned refinement/design brief, not another call in this exhausted pack.",
+  "source": "art/production/handoffs/monster-batch-af-3/blood-lich/imagegen-calls/call-2/call.json",
+  "candidate": "art/monster-batch-af/superseded/blood-lich-v1.png",
+  "superseded_reason": "User explicitly withdrew the waiver route: missing image/path was infrastructure failure, authorized for serial retry. New blood lich passes unchanged 65 gate without a waiver.",
+  "original_status": "PENDING"
+}

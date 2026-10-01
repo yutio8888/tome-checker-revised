@@ -54,6 +54,10 @@ OUT_BZ = ADDON / 'evidence/monster-batch-z-live-20260930'
 OUT_BA = ADDON / 'evidence/monster-batch-aa-live-20260930'
 OUT_BB = ADDON / 'evidence/monster-batch-ab-live-20260930'
 OUT_BC = ADDON / 'evidence/monster-batch-ac-live-20260930'
+OUT_BD = ADDON / 'evidence/monster-batch-ad-live-20261001'
+OUT_BE = ADDON / 'evidence/monster-batch-ae-live-20261001'
+OUT_BF = ADDON / 'evidence/monster-batch-af-live-20261001'
+OUT_BUB = ADDON / 'evidence/monster-batch-ub1-live-20261001'
 OUT_U = ADDON / 'evidence/token-summons-20260929'
 
 A = ['Wrathroot', 'Snaproot', 'Minotaur of the Labyrinth', 'Sandworm Queen', 'Corrupted Sand Wyrm',
@@ -1931,6 +1935,372 @@ SCENES_BC = [
     ('mark-lineup-b-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-ac-flat-zh', LINEUP_BC_B, LINEUP_BC_POS_B, 'reveal')]),
 ]
 
+# Batch AD (2026-10-01, commit 935e50d2): 13 off-list dungeon-pool ids. Four tall native_tall bodies (duathedlen, daelach, snow cat, ice wyrm), nine flat.
+# The pool ritch hive mother (id ritch-hive-mother-pool) and the unique Ritch Great Hive Mother draw the same native PNG and each keeps its own token.
+# Checks: nicer_tiles OFF (duathedlen stays native, snow cat and ice wyrm still map), felines with Stealth active, a random-boss ice wyrm stays native.
+BD = ['dúathedlen', 'daelach', 'ice wyrm', 'snow cat', 'orc grand summoner', 'orc master wyrmic', 'orc mage-hunter', 'ritch larva', 'ritch hunter',
+      'ritch hive mother', 'panther', 'tiger', 'sabertooth tiger']
+TALL_BD = ['dúathedlen', 'daelach', 'ice wyrm', 'snow cat']
+FLAT_BD = [n for n in BD if n not in TALL_BD]
+EXPECT_BD = {'dúathedlen': 'duathedlen', 'ritch hive mother': 'ritch-hive-mother-pool'}
+PLACE_SRC_BD = {'dúathedlen': '/data/general/npcs/major-demon.lua', 'daelach': '/data/general/npcs/major-demon.lua',
+                'ice wyrm': '/data/general/npcs/cold-drake.lua', 'snow cat': '/data/general/npcs/feline.lua',
+                'orc grand summoner': '/data/general/npcs/orc-gorbat.lua', 'orc master wyrmic': '/data/general/npcs/orc-gorbat.lua',
+                'orc mage-hunter': '/data/general/npcs/orc-gorbat.lua', 'ritch larva': '/data/general/npcs/ritch.lua',
+                'ritch hunter': '/data/general/npcs/ritch.lua', 'ritch hive mother': '/data/general/npcs/ritch.lua',
+                'panther': '/data/general/npcs/feline.lua', 'tiger': '/data/general/npcs/feline.lua', 'sabertooth tiger': '/data/general/npcs/feline.lua'}
+PLACE_SRC_L.update(PLACE_SRC_BD)
+EXPECT.update({n: EXPECT_BD.get(n) or n.replace(' ', '-').lower() for n in BD})
+LINEUP_BD_A = [(n, PLACE_SRC_BD[n]) for n in TALL_BD]
+LINEUP_BD_B = [(n, PLACE_SRC_BD[n]) for n in FLAT_BD]
+LINEUP_BD_POS_A = LINEUP_BA_POS[:4]
+LINEUP_BD_POS_B = LINEUP_BA_POS[:8] + [(0, 3)]
+NICER_OFF_BD = [(n, PLACE_SRC_BD[n]) for n in ('dúathedlen', 'snow cat', 'ice wyrm')]
+
+SCENES_BD = [
+    ('gorbat-pride-L1', 'gorbat-pride', 1, {}, _bu('orc grand summoner') + _bu('orc master wyrmic') + _bu('orc mage-hunter')),
+    ('ritch-tunnels-L3', 'ritch-tunnels', 3, {}, _bu('ritch larva') + _bu('ritch hunter') + _bu('ritch hive mother') + _bu('Ritch Great Hive Mother')),
+    ('demon-plane-L1', 'demon-plane', 1, {}, _bu('dúathedlen') + _bu('daelach')),
+    ('shertul-fortress-L1', 'shertul-fortress', 1, {}, _bu('panther') + _bu('tiger') + _bu('sabertooth tiger') + _bu('snow cat') + [
+        ('stealth', 'panther'), ('stealth', 'tiger'), ('stealth', 'sabertooth tiger'), ('stealth', 'snow cat')]),
+    ('daikara-L1', 'daikara', 1, {}, _bu('ice wyrm') + [('midstart',), ('randboss', 'ice wyrm')]),
+    ('stealth-seen-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('stealth_seen', [(n, PLACE_SRC_BD[n]) for n in ('panther', 'tiger', 'sabertooth tiger', 'snow cat')])]),
+    ('nicer-off-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('nicer_off', NICER_OFF_BD)]),
+    ('mark-lineup-a-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-ad-tall', LINEUP_BD_A, LINEUP_BD_POS_A, 'reveal')]),
+    ('mark-lineup-b-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-ad-flat', LINEUP_BD_B, LINEUP_BD_POS_B, 'reveal')]),
+    # Run only with MLV_LOCALE=zh_hans (--only mark-lineup-a-zh-L1 mark-lineup-b-zh-L1 [other scenes]).
+    ('mark-lineup-a-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-ad-tall-zh', LINEUP_BD_A, LINEUP_BD_POS_A, 'reveal')]),
+    ('mark-lineup-b-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-ad-flat-zh', LINEUP_BD_B, LINEUP_BD_POS_B, 'reveal')]),
+]
+
+# Batch AE (2026-10-01, commits aa62033a + 2da92616): 12 off-list dungeon-pool ids, nine native_tall (champion of Urh'Rok, forge-giant, weaver matriarch,
+# patchwork troll, maulotaur, storm wyrm, spire dragon, blinkwyrm, emperor wight), three flat (hummerhorn, worm that walks, headless horror).
+# Checks: per-id 48/64/96 + toggle x2, en_US/zh_hans lineups, nicer_tiles OFF for all nine tall bodies (recorded), hummerhorn Multiply clone wears the token,
+# Arena HEADLESSHORROR (same name, define_as) stays native, renamed random-boss tall bodies (Crusher / Storm Terror) stay native, Burning Wake on the
+# forge-giant (native birth sustain) and force-learned on the champion keeps the token, and temporal clones (native makeParadoxClone) across the catalog.
+BE = ["champion of Urh'Rok", 'forge-giant', 'hummerhorn', 'weaver matriarch', 'patchwork troll', 'maulotaur', 'worm that walks', 'headless horror',
+      'storm wyrm', 'spire dragon', 'blinkwyrm', 'emperor wight']
+TALL_BE = ["champion of Urh'Rok", 'forge-giant', 'weaver matriarch', 'patchwork troll', 'maulotaur', 'storm wyrm', 'spire dragon', 'blinkwyrm', 'emperor wight']
+FLAT_BE = [n for n in BE if n not in TALL_BE]
+EXPECT_BE = {"champion of Urh'Rok": 'champion-of-urh-rok'}
+PLACE_SRC_BE = {"champion of Urh'Rok": '/data/general/npcs/major-demon.lua', 'forge-giant': '/data/general/npcs/major-demon.lua',
+                'hummerhorn': '/data/general/npcs/swarm.lua', 'weaver matriarch': '/data/general/npcs/spider.lua',
+                'patchwork troll': '/data/general/npcs/troll.lua', 'maulotaur': '/data/general/npcs/minotaur.lua',
+                'worm that walks': '/data/general/npcs/horror.lua', 'headless horror': '/data/general/npcs/horror.lua',
+                'storm wyrm': '/data/general/npcs/storm-drake.lua', 'spire dragon': '/data/general/npcs/wild-drake.lua',
+                'blinkwyrm': '/data/general/npcs/wild-drake.lua', 'emperor wight': '/data/general/npcs/wight.lua',
+                'Wrathroot': '/data/zones/old-forest/npcs.lua'}
+PLACE_SRC_L.update(PLACE_SRC_BE)
+EXPECT.update({n: EXPECT_BE.get(n) or n.replace(' ', '-').lower() for n in BE})
+LINEUP_BE_A = [(n, PLACE_SRC_BE[n]) for n in TALL_BE]
+LINEUP_BE_B = [(n, PLACE_SRC_BE[n]) for n in FLAT_BE]
+LINEUP_BE_POS_A = LINEUP_BA_POS[:8] + [(0, 3)]
+LINEUP_BE_POS_B = LINEUP_BA_POS[:3]
+NICER_OFF_BE = [(n, PLACE_SRC_BE[n]) for n in TALL_BE]
+# Temporal clone cases: (key, name, source, mode). 'target' places the actor then clones it; 'player' clones the hero.
+PARADOX_BE = [('ae-tall-maulotaur', 'maulotaur', PLACE_SRC_BE['maulotaur'], 'target'),
+              ('ae-flat-hummerhorn', 'hummerhorn', PLACE_SRC_BE['hummerhorn'], 'target'),
+              ('older-orc-berserker', 'orc berserker', '/data/general/npcs/orc-grushnak.lua', 'target'),
+              ('older-giant-spider', 'giant spider', '/data/general/npcs/spider.lua', 'target'),
+              ('unique-wrathroot', 'Wrathroot', PLACE_SRC_BE['Wrathroot'], 'target'),
+              ('player', None, None, 'player')]
+EXPECT.update({'orc berserker': 'orc-berserker', 'giant spider': 'giant-spider', 'Wrathroot': 'wrathroot'})
+PARADOX_DUR = 8
+_AE_SRC = {'forge-giant': 'forge-giant'}
+
+SCENES_BE = [
+    ('demon-plane-L1', 'demon-plane', 1, {}, _bu("champion of Urh'Rok") + _bu('forge-giant') + [
+        ('aura', 'forge-giant'), ('usetalent', "champion of Urh'Rok", 'T_BURNING_WAKE', 'learn'), ('sustain', "champion of Urh'Rok"),
+        ('midstart',), ('randboss', 'forge-giant', '#rng# the Crusher')]),
+    ('old-forest-L1', 'old-forest', 1, {}, _bu('hummerhorn') + [('multiply', 'hummerhorn')]),
+    ('daikara-L1', 'daikara', 1, {}, _bu('spire dragon') + _bu('blinkwyrm')),
+    ('gorbat-pride-L1', 'gorbat-pride', 1, {}, _bu('storm wyrm')),
+    ('randboss-storm-L9', 'dreadfell', 9, {}, [('midstart',), ('randboss', 'storm wyrm', '#rng# the Storm Terror')]),
+    ('ardhungol-L3', 'ardhungol', 3, {}, _bu('weaver matriarch')),
+    ('trollmire-L1', 'trollmire', 1, {}, _bu('patchwork troll') + _bu('maulotaur')),
+    ('lake-nur-L1', 'lake-nur', 1, {}, _bu('worm that walks') + _bu('headless horror') + [
+        ('native', 'headless horror', '/data/zones/arena/npcs.lua', 'HEADLESSHORROR', 'shot')]),
+    ('dreadfell-L9', 'dreadfell', 9, {}, _bu('emperor wight')),
+    ('nicer-off-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('nicer_off', NICER_OFF_BE, LINEUP_BA_POS[:9])]),
+    ('mark-lineup-a-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-ae-tall', LINEUP_BE_A, LINEUP_BE_POS_A, 'reveal')]),
+    ('mark-lineup-b-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-ae-flat', LINEUP_BE_B, LINEUP_BE_POS_B, 'reveal')]),
+    ('temporal-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('paradox', PARADOX_BE)]),
+    # Run only with MLV_LOCALE=zh_hans (--only mark-lineup-a-zh-L1 mark-lineup-b-zh-L1 temporal-zh-L1).
+    ('mark-lineup-a-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-ae-tall-zh', LINEUP_BE_A, LINEUP_BE_POS_A, 'reveal')]),
+    ('mark-lineup-b-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-ae-flat-zh', LINEUP_BE_B, LINEUP_BE_POS_B, 'reveal')]),
+    ('temporal-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('paradox', PARADOX_BE)]),
+]
+
+# Batch AF: archived a05a8e2f + 0b2b855f, nine tokens; dreaming horror stays native.
+BF = ['nightmare horror', 'radiant horror', 'maelstrom', 'parasitic horror',
+      'lich', 'ancient lich', 'archlich', 'blood lich', 'animated blood']
+TALL_BF = ['maelstrom', 'parasitic horror', 'lich', 'ancient lich', 'archlich', 'animated blood']
+PLACE_SRC_BF = {n: '/data/general/npcs/horror.lua' for n in BF[:4]}
+PLACE_SRC_BF.update({n: '/data/general/npcs/lich.lua' for n in BF[4:8]})
+PLACE_SRC_BF['animated blood'] = '/data/general/npcs/horror-undead.lua'
+PLACE_SRC_L.update(PLACE_SRC_BF)
+EXPECT.update({n: n.replace(' ', '-') for n in BF + ['luminous horror']})
+LINEUP_BF = [(n, PLACE_SRC_BF[n]) for n in BF]
+def _af_steps(n):
+    return [('natural_or_place', n, (48, 64, 96)), ('toggle', n, '-' + EXPECT[n]), ('toggle_again', n, '-' + EXPECT[n])]
+
+SCENES_BF = [
+    ('horrors-L1', 'mark-spellblaze', 1, {}, [('midstart',)] + sum((_af_steps(n) for n in BF[:4]), []) + [('af_effect', 'maelstrom')]),
+    ('liches-L1', 'mark-spellblaze', 1, {}, [('midstart',)] + sum((_af_steps(n) for n in BF[4:8]), []) +
+     [('lineup', 'af-lich-tiers', LINEUP_BF[4:8], [(-3, 1), (-1, 1), (1, 1), (3, 1)], 'reveal')]),
+    ('blood-L1', 'mark-spellblaze', 1, {}, [('midstart',)] + _af_steps('animated blood') + [('blood_edge',)]),
+    ('nicer-off-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('nicer_off', [(n, PLACE_SRC_BF[n]) for n in TALL_BF], LINEUP_BA_POS[:6])]),
+    ('lineup-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-af', LINEUP_BF, LINEUP_BE_POS_A, 'reveal')]),
+    ('siblings-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'af-radiant-luminous',
+     [('radiant horror', PLACE_SRC_BF['radiant horror']), ('luminous horror', '/data/general/npcs/horror.lua')], [(-1, 1), (1, 1)], 'reveal')]),
+    ('dreaming-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('native', 'dreaming horror', '/data/general/npcs/horror.lua', None, 'shot'), ('af_effect', 'dreaming horror')]),
+    ('maelstrom-effects-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('place', 'maelstrom', ()), ('af_effect', 'maelstrom')]),
+    ('temporal-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('paradox', [('af-tall-archlich', 'archlich', PLACE_SRC_BF['archlich'], 'target')])]),
+    ('blood-guard-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('blood_edge', 'measure-only')]),
+    # Run the following two scenes with MLV_LOCALE=zh_hans.
+    ('lineup-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'batch-af-zh', LINEUP_BF, LINEUP_BE_POS_A, 'reveal')]),
+    ('blood-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('blood_edge',)]),
+]
+
+# Batch AG: composite shadow identities and native quad_hue isolation.
+OUT_BG = ADDON / 'evidence/monster-batch-ag-live-20261001'
+BG = ['multi-hued drake hatchling', 'multi-hued drake', 'greater multi-hued wyrm',
+      'shadow claw', 'multi-hued crystal', 'shimmering crystal']
+AG_CASES = [(n, '/data/general/npcs/multihued-drake.lua', 'GREATER_MULTI_HUED_WYRM' if i == 2 else None, n.replace(' ', '-')) for i,n in enumerate(BG[:3])] + [
+    ('shadow claw', '/data/zones/keepsake-meadow/npcs.lua', 'SHADOW_CLAW', 'shadow-claw'),
+    ('shadow claw', '/data/zones/keepsake-meadow/npcs.lua', 'SHADOW_CASTER', 'shadow-caster'),
+    ('multi-hued crystal', '/data/general/npcs/crystal.lua', None, 'multi-hued-crystal'),
+    ('shimmering crystal', '/data/general/npcs/crystal.lua', None, 'shimmering-crystal')]
+AG_POS = [(-3,1),(-1,1),(1,1),(3,1),(-2,3),(0,3),(2,3)]
+SCENES_BG = [
+    ('lineup-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ag_cycle', True)]),
+    ('nicer-off-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ag_cycle', False)]),
+    ('negative-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ag_negative',)]),
+    ('temporal-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('paradox', [
+        ('ag-drake', 'multi-hued drake', '/data/general/npcs/multihued-drake.lua', 'target'),
+        ('ag-caster', 'shadow claw', '/data/zones/keepsake-meadow/npcs.lua', 'target:SHADOW_CASTER')])]),
+    ('blood-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('blood_edge',)]),
+    ('lineup-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ag_cycle', True)]),
+    ('blood-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('blood_edge',)]),
+]
+
+# Batch UB-1 (2026-10-01, commits c2c90eb2 + rework f4a77bae/aeecc5ea): nine
+# native-tall unique/boss bodies, one shared Caldizar token bound to CALDIZAR
+# and CALDIZAR_AOADS through the new define_as_alias field. Live checks: 48/64/96
+# identity + two off/on cycles per locale, single-body metadata, both Aeryn
+# define sites, both Caldizar define_as values, the twin/clone pair, the native
+# twin_take_hit link, Tarelion's {tall=true} shorthand and native negatives.
+OUT_BUB = ADDON / 'evidence/monster-batch-ub1-live-20261001'
+UB1 = ['High Sun Paladin Aeryn', 'Fallen Sun Paladin Aeryn', 'Caldizar', 'Chronolith Twin',
+       'Chronolith Clone', 'Temporal Defiler', 'Corrupted Daelach',
+       'Linaniil, Supreme Archmage of Angolwen', 'Archmage Tarelion']
+UB1_CASES = [
+    ('High Sun Paladin Aeryn', '/data/zones/high-peak/npcs.lua', 'HIGH_SUN_PALADIN_AERYN', 'high-sun-paladin-aeryn'),
+    ('Fallen Sun Paladin Aeryn', '/data/zones/high-peak/npcs.lua', 'FALLEN_SUN_PALADIN_AERYN', 'fallen-sun-paladin-aeryn'),
+    ('Caldizar', '/data/zones/shertul-fortress-caldizar/npcs.lua', 'CALDIZAR', 'caldizar'),
+    ('Chronolith Twin', '/data/zones/temporal-rift/npcs.lua', 'CHRONOLITH_TWIN', 'chronolith-twin'),
+    ('Chronolith Clone', '/data/zones/temporal-rift/npcs.lua', 'CHRONOLITH_CLONE', 'chronolith-clone'),
+    ('Temporal Defiler', '/data/zones/town-point-zero/npcs.lua', 'TEMPORAL_DEFILER', 'temporal-defiler'),
+    ('Corrupted Daelach', '/data/zones/valley-moon/npcs.lua', 'CORRUPTED_DAELACH', 'corrupted-daelach'),
+    ('Linaniil, Supreme Archmage of Angolwen', '/data/zones/town-angolwen/npcs.lua', 'SUPREME_ARCHMAGE_LINANIIL', 'supreme-archmage-linaniil'),
+    ('Archmage Tarelion', '/data/zones/town-angolwen/npcs.lua', 'TARELION', 'archmage-tarelion'),
+]
+# The same High Aeryn body is bound at a second native define site; the shared
+# Caldizar token is bound to the CALDIZAR_AOADS define_as of high-peak/npcs.lua.
+UB1_GATES = ('High Sun Paladin Aeryn', '/data/zones/town-gates-of-morning/npcs.lua', 'HIGH_SUN_PALADIN_AERYN', 'high-sun-paladin-aeryn')
+UB1_AOADS = ('Caldizar', '/data/zones/high-peak/npcs.lua', 'CALDIZAR_AOADS', 'caldizar')
+UB1_POS = [(-3, 1), (-1, 1), (1, 1), (3, 1), (-3, 3), (-1, 3), (1, 3), (3, 3), (-1, 5)]
+UB1_EXPECT = {'High Sun Paladin Aeryn': 'high-sun-paladin-aeryn',
+              'Fallen Sun Paladin Aeryn': 'fallen-sun-paladin-aeryn',
+              'Caldizar': 'caldizar', 'Chronolith Twin': 'chronolith-twin',
+              'Chronolith Clone': 'chronolith-clone', 'Temporal Defiler': 'temporal-defiler',
+              'Corrupted Daelach': 'corrupted-daelach',
+              'Linaniil, Supreme Archmage of Angolwen': 'supreme-archmage-linaniil',
+              'Archmage Tarelion': 'archmage-tarelion'}
+EXPECT.update(UB1_EXPECT)
+UB1_IMAGE = {'high-sun-paladin-aeryn': 'npc/humanoid_human_high_sun_paladin_aeryn.png',
+             'fallen-sun-paladin-aeryn': 'npc/humanoid_human_fallen_sun_paladin_aeryn.png',
+             'caldizar': 'npc/horror_sher_tul_caldizar.png',
+             'chronolith-twin': 'npc/horror_temporal_cronolith_twin.png',
+             'chronolith-clone': 'npc/horror_temporal_cronolith_clone.png',
+             'temporal-defiler': 'npc/horror_temporal_temporal_defiler.png',
+             'corrupted-daelach': 'npc/demon_major_corrupted_daelach.png',
+             'supreme-archmage-linaniil': 'npc/humanoid_human_linaniil_supreme_archmage.png',
+             'archmage-tarelion': 'npc/humanoid_shalore_archmage_tarelion.png'}
+
+SCENES_UB1 = [
+    ('lineup-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ub1_group', 'lineup'), ('ub1_meta', UB1), ('ub1_each',)]),
+    ('lineup-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ub1_group', 'lineup'), ('ub1_meta', UB1)]),
+    ('sites-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ub1_sites',)]),
+    ('siblings-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ub1_siblings',)]),
+    ('twin-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ub1_twin',)]),
+    ('nicer-off-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ub1_nicer',)]),
+    ('negative-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ub1_negative',)]),
+]
+
+# Batch UB-2 (2026-10-01, commits 98782cb2 + a1a5cee9 + Guren rework e55b5611):
+# ten flat 64x64 unique/boss bodies plus the wiring-only Ben Cruthdar, the
+# Cursed that reuses the ben-cruthdar-abomination token PNG. Live checks:
+# en_US/zh_hans lineups of all eleven at 48/64/96 with two off/on cycles,
+# natural spawns in their real zones where feasible, the Cursed and the
+# temporal-rift Abomination side by side (same PNG bytes, distinct identities),
+# Guren beside the shipped human sun-paladin, Epoch's native Multiply clone,
+# and native appearance negatives (anonymous Limmir, wrong/no define_as).
+OUT_BUB2 = ADDON / 'evidence/monster-batch-ub2-live-20261001'
+UB2 = ['Sun Paladin Guren', 'Epoch', 'Corrupted Oozemancer', 'Zemekkys, Grand Keeper of Reality',
+       'Blood Master', 'Limmir the Jeweler', 'Protector Myssil', "Rak'Shor Cultist",
+       'Shady cornac man', 'Tannen', 'Ben Cruthdar, the Cursed']
+UB2_CASES = [
+    ('Sun Paladin Guren', '/data/zones/eruan/npcs.lua', 'SUN_PALADIN_GUREN', 'sun-paladin-guren'),
+    ('Epoch', '/data/zones/paradox-plane/npcs.lua', 'EPOCH', 'epoch'),
+    ('Corrupted Oozemancer', '/data/zones/sludgenest/npcs.lua', 'CORRUPTED_OOZEMANCER', 'corrupted-oozemancer'),
+    ('Zemekkys, Grand Keeper of Reality', '/data/zones/town-point-zero/npcs.lua', 'ZEMEKKYS', 'zemekkys'),
+    ('Blood Master', '/data/zones/ring-of-blood/npcs.lua', 'RING_MASTER', 'blood-master'),
+    ('Limmir the Jeweler', '/data/zones/valley-moon/npcs.lua', 'LIMMIR', 'limmir-the-jeweler'),
+    ('Protector Myssil', '/data/zones/town-zigur/npcs.lua', 'PROTECTOR_MYSSIL', 'protector-myssil'),
+    ("Rak'Shor Cultist", '/data/zones/shadow-crypt/npcs.lua', 'CULTIST_RAK_SHOR', 'rak-shor-cultist'),
+    ('Shady cornac man', '/data/zones/town-derth/npcs.lua', 'ARENA_AGENT', 'shady-cornac-man'),
+    ('Tannen', '/data/zones/tannen-tower/npcs.lua', 'TANNEN', 'tannen'),
+    ('Ben Cruthdar, the Cursed', '/data/zones/town-lumberjack-village/npcs.lua', 'BEN_CRUTHDAR', 'ben-cruthdar-the-cursed'),
+]
+UB2_ABOM = ('Ben Cruthdar, the Abomination', '/data/zones/temporal-rift/npcs.lua', 'BEN_CRUTHDAR_ABOMINATION', 'ben-cruthdar-abomination')
+UB2_PALADIN = ('human sun-paladin', '/data/general/npcs/sunwall-town.lua', None, 'human-sun-paladin')
+# Real zone and level per identity: the survey enters the native zone first so a
+# natural spawn can be used; the zone npc list only supplies the prototype when
+# the unique is not generated there (recorded as `resolved`).
+UB2_ZONES = {
+    'Sun Paladin Guren': ('eruan', 1), 'Epoch': ('paradox-plane', 1),
+    'Corrupted Oozemancer': ('sludgenest', 1), 'Zemekkys, Grand Keeper of Reality': ('town-point-zero', 1),
+    'Blood Master': ('ring-of-blood', 1), 'Limmir the Jeweler': ('valley-moon', 1),
+    'Protector Myssil': ('town-zigur', 1), "Rak'Shor Cultist": ('shadow-crypt', 1),
+    'Shady cornac man': ('town-derth', 1), 'Tannen': ('tannen-tower', 1),
+    'Ben Cruthdar, the Cursed': ('town-lumberjack-village', 1),
+}
+EXPECT.update({n: tid for (n, _s, _d, tid) in UB2_CASES})
+EXPECT.update({UB2_ABOM[0]: UB2_ABOM[3], UB2_PALADIN[0]: UB2_PALADIN[3]})
+PLACE_SRC_L.update({n: s for (n, s, _d, _t) in UB2_CASES})
+PLACE_SRC_L.update({UB2_ABOM[0]: UB2_ABOM[1], UB2_PALADIN[0]: UB2_PALADIN[1]})
+# Eleven flat tokens around a mid-map hero (two rows of six/five).
+UB2_POS = [(-4, -2), (-2, -2), (0, -2), (2, -2), (4, -2), (-4, 1), (-2, 1), (0, 1), (2, 1), (4, 1), (0, 4)]
+UB2_IDS = {tid for (_n, _s, _d, tid) in UB2_CASES}
+SCENES_UB2 = [
+    ('natural-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ub2_natural',)]),
+    ('lineup-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ub2_group', 'lineup'), ('ub2_each',)]),
+    ('lineup-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ub2_group', 'lineup')]),
+    ('ben-cruthdar-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ub2_ben',)]),
+    ('guren-paladin-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ub2_guren',)]),
+    ('epoch-multiply-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ub2_epoch',)]),
+    ('negative-L1', 'town-gates-of-morning', 1, {}, [('ub2_negative',)]),
+]
+
+# Batch UA: fixed archived package only; native prototypes in paused fixture scenes.
+OUT_UA = ADDON / 'evidence/monster-batch-ua-live-20261001'
+UA_CASES = [
+    ("Kra'Tor the Gluttonous", '/data/general/npcs/orc.lua', None, 'kra-tor'),
+    ("Khulmanar, General of Urh'Rok", '/data/general/npcs/major-demon.lua', None, 'khulmanar'),
+    ('Rungof the Warg Titan', '/data/general/npcs/canine.lua', None, 'rungof'),
+    ('Grgglck the Devouring Darkness', '/data/general/npcs/horror.lua', None, 'grgglck'),
+    ('Queen Ant', '/data/general/npcs/ant.lua', None, 'queen-ant'),
+    ("Ak'Gishil", '/data/general/npcs/horror.lua', None, 'ak-gishil'),
+    ('Ninandra, the Great Weaver', '/data/general/npcs/spider.lua', None, 'ninandra'),
+    ('Phoenix', '/data/general/npcs/bird.lua', 'NPC_PHOENIX', 'phoenix'),
+    ('Ukruk the Fierce', '/data/zones/dreadfell-ambush/npcs.lua', 'UKRUK', 'ukruk'),
+    ('Gorbat, Supreme Wyrmic of the Pride', '/data/zones/gorbat-pride/npcs.lua', 'GORBAT', 'gorbat'),
+    ('Grushnak, Battlemaster of the Pride', '/data/zones/grushnak-pride/npcs.lua', 'GRUSHNAK', 'grushnak'),
+    ('Vor, Grand Geomancer of the Pride', '/data/zones/vor-pride/npcs.lua', 'VOR', 'vor'),
+]
+UA_POS = [(x,y) for y in (1,3,5) for x in (-3,-1,1,3)]
+UA_KIN = [('orc warrior','/data/general/npcs/orc.lua',None,'orc-warrior'),
+          ('Weaver Queen','/data/zones/unhallowed-morass/npcs.lua',None,'weaver-queen'),
+          ('nightmare horror','/data/general/npcs/horror.lua',None,'nightmare-horror'),
+          ('abyssal horror','/data/general/npcs/horror_aquatic.lua',None,'abyssal-horror'),
+          ('great wolf','/data/general/npcs/canine.lua',None,'great-wolf'),
+          ('warg','/data/general/npcs/canine.lua',None,'warg')]
+SCENES_UA = [
+    ('lineup-L1','mark-spellblaze',1,{},[('midstart',),('ua_group','lineup')]),
+    ('badge-L1','mark-spellblaze',1,{},[('midstart',),('ua_group','badge')]),
+    ('kin-L1','mark-spellblaze',1,{},[('midstart',),('ua_group','kin-orc'),('ua_group','kin-weaver'),('ua_group','kin-horror'),('ua_group','kin-warg')]),
+    ('prefix-L1','mark-spellblaze',1,{},[('midstart',),('ua_group','prefix')]),
+    ('negative-L1','mark-spellblaze',1,{},[('midstart',),('ua_negative',)]),
+    ('lineup-zh-L1','mark-spellblaze',1,{},[('midstart',),('ua_group','lineup')]),
+    ('prefix-zh-L1','mark-spellblaze',1,{},[('midstart',),('ua_group','prefix')]),
+]
+
+# Batch TA-1 (2026-10-01, commits dcb5c982 + 4dad5b9e): the first town-resident
+# batch, thirteen identities, four native-tall Angolwen mages. Live checks:
+# 48/64/96 identity + toggle x2 per id, en_US/zh_hans lineups of all thirteen,
+# the six guards on one 48px board beside elven/caravan guard, the four native
+# tall bodies (one token, nicer_tiles off round trip), the slaver's native
+# make_escort enthralled slaves, and appearance negatives (wrong type/subtype,
+# added shader, different-name PNG reuse).
+OUT_BTA = ADDON / 'evidence/monster-batch-ta1-live-20261001'
+TA1 = ['apprentice mage', 'pyromancer', 'cryomancer', 'geomancer', 'tempest',
+       'human guard', 'derth guard', 'last hope guard', 'halfling guard', 'dwarven guard', 'elvala guard',
+       'slaver', 'enthralled slave']
+TA1_MAGES = ['apprentice mage', 'pyromancer', 'cryomancer', 'geomancer', 'tempest']
+TA1_TALL = ['pyromancer', 'cryomancer', 'geomancer', 'tempest']
+TA1_GUARDS = ['human guard', 'derth guard', 'last hope guard', 'halfling guard', 'dwarven guard', 'elvala guard']
+PLACE_SRC_TA1 = {
+    'apprentice mage': '/data/zones/town-angolwen/npcs.lua', 'pyromancer': '/data/zones/town-angolwen/npcs.lua',
+    'cryomancer': '/data/zones/town-angolwen/npcs.lua', 'geomancer': '/data/zones/town-angolwen/npcs.lua',
+    'tempest': '/data/zones/town-angolwen/npcs.lua',
+    'human guard': '/data/general/npcs/sunwall-town.lua', 'derth guard': '/data/zones/town-derth/npcs.lua',
+    'last hope guard': '/data/zones/town-last-hope/npcs.lua', 'halfling guard': '/data/zones/town-last-hope/npcs.lua',
+    'dwarven guard': '/data/zones/town-iron-council/npcs.lua', 'elvala guard': '/data/zones/town-elvala/npcs.lua',
+    'slaver': '/data/zones/ring-of-blood/npcs.lua', 'enthralled slave': '/data/zones/ring-of-blood/npcs.lua',
+}
+PLACE_SRC_L.update(PLACE_SRC_TA1)
+EXPECT.update({n: n.replace(' ', '-') for n in TA1})
+TA1_LINEUP = [(n, PLACE_SRC_TA1[n]) for n in TA1]
+TA1_POS = [(-4, -3), (-2, -3), (0, -3), (2, -3), (4, -3), (-4, 0), (-2, 0), (0, 0), (2, 0), (4, 0), (-4, 3), (-2, 3), (0, 3)]
+TA1_MAGE_POS = [(-4, 0), (-2, 0), (0, 0), (2, 0), (4, 0)]
+TA1_GUARD_POS = [(-5, 0), (-3, 0), (-1, 0), (1, 0), (3, 0), (5, 0)]
+TA1_SIBLINGS = [('human guard', PLACE_SRC_TA1['human guard']),
+                ('elven guard', '/data/general/npcs/elven-warrior.lua'),
+                ('caravan guard', '/data/zones/keepsake-meadow/npcs.lua')]
+TA1_NEG_CASES = [
+    ('wrong-type', 'apprentice mage', PLACE_SRC_TA1['apprentice mage'], "a.type='vermin'"),
+    ('wrong-subtype', 'human guard', PLACE_SRC_TA1['human guard'], "a.subtype='orc'"),
+    ('added-shader', 'derth guard', PLACE_SRC_TA1['derth guard'], "a.shader='shadow_simulacrum'"),
+]
+# data/general/encounters/maj-eyal.lua creates a WorldNPC named "Novice mage"
+# with the apprentice-mage PNG (type humanoid/human); a faithful synthetic copy
+# of that body must stay native (different name, reused PNG).
+TA1_NOVICE_LUA = (
+    "local Map=require 'engine.Map';local p=game.player;"
+    "local q=require('mod.class.NPC').new({name='Novice mage',type='humanoid',subtype='human',image='npc/humanoid_human_apprentice_mage.png',display='@',faction='angolwen',max_life=80,life=80});"
+    "q:resolve();q:resolve(nil,true);local x,y=util.findFreeGrid(p.x+2,p.y+1,6,true,{[Map.ACTOR]=true});assert(x,'no free grid');"
+    "q._checker_live_placed=true;q.never_act=true;game.zone:addEntity(game.level,q,'actor',x,y);_G.TA1N=q;mb.refresh();mb.focus(x,y);"
+    "local r=mb.row(q);r.synthetic=true;return r")
+
+
+def _ta(n, tiles=(48, 64, 96)):
+    sfx = '-' + n.replace(' ', '-')
+    return [('natural_or_place', n, tiles), ('toggle', n, sfx), ('toggle_again', n, sfx)]
+
+
+SCENES_TA1 = [
+    ('angolwen-L1', 'town-angolwen', 1, {}, sum((_ta(n) for n in TA1_MAGES), []) + [
+        ('ta1_meta', TA1_TALL),
+        ('lineup', 'ta1-mages', [(n, PLACE_SRC_TA1[n]) for n in TA1_MAGES], TA1_MAGE_POS)]),
+    ('gates-of-morning-L1', 'town-gates-of-morning', 1, {}, _ta('human guard')),
+    ('derth-L1', 'town-derth', 1, {}, _ta('derth guard')),
+    ('last-hope-L1', 'town-last-hope', 1, {}, _ta('last hope guard') + _ta('halfling guard')),
+    ('iron-council-L1', 'town-iron-council', 1, {}, _ta('dwarven guard')),
+    ('elvala-L1', 'town-elvala', 1, {}, _ta('elvala guard')),
+    ('ring-of-blood-L1', 'ring-of-blood', 1, {}, _ta('slaver') + _ta('enthralled slave') + [('ta1_escort', 'slaver')]),
+    ('mark-lineup-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'ta1-all', TA1_LINEUP, TA1_POS)]),
+    ('mark-guards-L1', 'mark-spellblaze', 1, {}, [
+        ('midstart',),
+        ('lineup', 'ta1-guards', [(n, PLACE_SRC_TA1[n]) for n in TA1_GUARDS], TA1_GUARD_POS),
+        ('lineup', 'ta1-guard-siblings', TA1_SIBLINGS, [(-2, 0), (0, 0), (2, 0)])]),
+    ('mark-nicer-off-L1', 'mark-spellblaze', 1, {}, [
+        ('midstart',), ('nicer_off', [(n, PLACE_SRC_TA1[n]) for n in TA1_TALL], [(-4, 0), (-1, 0), (1, 0), (4, 0)])]),
+    ('mark-negative-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ta1_negative',)]),
+    # Run only with MLV_LOCALE=zh_hans (--only mark-lineup-zh-L1).
+    ('mark-lineup-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'ta1-all-zh', TA1_LINEUP, TA1_POS)]),
+]
+
 REACH_FALLBACK = True  # batch N: natural actor in a closed vault -> place from the native list, flagged natural_unreachable
 SUSTAIN_SNAP = ("local a=mb.byName(%s);pcall(function() a:updateModdableTile() end);mb.refresh();mb.focus(a.x,a.y);"
                 "local n=0;for _ in pairs(a.shader_auras or {}) do n=n+1 end;"
@@ -1958,6 +2328,8 @@ def digest(path):
 
 
 def lua_value(v):
+    if v is None:
+        return 'nil'
     if isinstance(v, bool):
         return 'true' if v else 'false'
     return json.dumps(v, ensure_ascii=False)
@@ -2058,7 +2430,7 @@ def run_scene(scene, bridge):
     record = {'label': label, 'zone': zone, 'level': level, 'opts': opts, 'steps': []}
     bridge.lua("assert(config.settings.cheat and config.settings.disable_all_connectivity and not profile.auth);"
                "assert(core.shader.active(4));ms.setup()")
-    names = '{' + ','.join(f'[{json.dumps(n, ensure_ascii=False)}]=true' for n in A + B + C + D + E + F + G + H + NATIVE + NATIVE_D + NATIVE_F + NATIVE_H + I + NATIVE_I + OOZES_SHIPPED + J + NATIVE_J + K + NATIVE_K + ['Grand Corruptor'] + L + NATIVE_L + M + NATIVE_M + N + NATIVE_N + O + NATIVE_O + P + NATIVE_P + Q + NATIVE_Q + R + NATIVE_R + S + NATIVE_S + T + NATIVE_T + BU + NATIVE_BU + BV + NATIVE_BV + BW + NATIVE_BW + BX + NATIVE_BX + BY + NATIVE_BY + BZ + NATIVE_BZ + BA + NATIVE_BA + BB + BC + NATIVE_BC + ['dread', 'swarming horror', 'minotaur', 'ritch flamespitter', 'giant spider'] + ['assassin', 'bandit', 'thief', 'rogue', 'fire drake'] + U + ['ghoul', 'gigantic sandworm tunneler']) + '}'
+    names = '{' + ','.join(f'[{json.dumps(n, ensure_ascii=False)}]=true' for n in A + B + C + D + E + F + G + H + NATIVE + NATIVE_D + NATIVE_F + NATIVE_H + I + NATIVE_I + OOZES_SHIPPED + J + NATIVE_J + K + NATIVE_K + ['Grand Corruptor'] + L + NATIVE_L + M + NATIVE_M + N + NATIVE_N + O + NATIVE_O + P + NATIVE_P + Q + NATIVE_Q + R + NATIVE_R + S + NATIVE_S + T + NATIVE_T + BU + NATIVE_BU + BV + NATIVE_BV + BW + NATIVE_BW + BX + NATIVE_BX + BY + NATIVE_BY + BZ + NATIVE_BZ + BA + NATIVE_BA + BB + BC + NATIVE_BC + BD + BE + BF + ['dread', 'swarming horror', 'minotaur', 'ritch flamespitter', 'giant spider'] + ['assassin', 'bandit', 'thief', 'rogue', 'fire drake'] + U + ['ghoul', 'gigantic sandworm tunneler'] + UB2 + [UB2_ABOM[0], UB2_PALADIN[0]]) + '}'
     record['enter'] = bridge.lua(f"return ms.enter({json.dumps(zone, ensure_ascii=False)},{level},{lua_opts(opts)})")
     record['census_targets'] = bridge.lua(f"return mb.find({names})")
     census = bridge.lua('return ms.actorCensus()')
@@ -2536,21 +2908,312 @@ def run_scene(scene, bridge):
                     "weather_particles=wp and #wp or 0,weather_def=wp and wp[1] and tostring(wp[1].def) or false,"
                     "weather_effects=config.settings.tome.weather_effects and true or false,tile=game.level.map.tile_w}")
                 entry['ok'] = all(f['rows'] and all(r[3] for r in f['rows']) for f in entry['frames']) and len(entry['frames']) == 4
+            elif kind == 'stealth_seen':
+                # Felines with T_STEALTH active AND detectable (temporary negative stealth power): the token must draw while the sustain is on.
+                roster = step[1]
+                entry['cleared'] = bridge.lua("return {n=mb.clearAround(6)}")
+                for (n, sp), (dx, dy) in zip(roster, [(-3, 1), (-1, 1), (1, 1), (3, 1)]):
+                    bridge.lua(f"return mb.place({json.dumps(n, ensure_ascii=False)},{json.dumps(sp)},{dx},{dy})")
+                bridge.lua("for _,a in pairs(game.level.entities) do if a._checker_live_placed and a~=game.player then "
+                           "if not a:isTalentActive('T_STEALTH') then pcall(function() a:forceUseTalent('T_STEALTH',{ignore_energy=true,ignore_cd=true,no_talent_fail=true,silent=true}) end) end;"
+                           "a._sl_boost=a:addTemporaryValue('stealth',-1000) end end;return true")
+                keep = CLEAN_VIEW
+                for frag in ("for _,a in ipairs(grp) do if a.stealth then a._checker_live_was_stealth=a.stealth;a.stealth=nil;a.inc_stealth=nil end end;",
+                             "for _,a in ipairs(grp) do if a:isTalentActive('T_STEALTH') then pcall(function() a:forceUseTalent('T_STEALTH',{ignore_energy=true,ignore_cd=true,no_talent_fail=true,silent=true}) end) end end;"):
+                    assert frag in keep
+                    keep = keep.replace(frag, '')
+                view = _set_vp(bridge.lua(keep % ("a._checker_live_placed", "p.x,p.y")))
+                entry['rows'] = bridge.lua("local o={};for _,r in ipairs(mb.find()) do if r.placed then local a=mb.byName(r.name);o[#o+1]={r.name,r.identify,r.rendered_token,r.can_see,a:isTalentActive('T_STEALTH') and true or false} end end;return o")
+                ps = bridge.shot(f'stealth-seen-{label}')
+                cp, box = group_crop(view, ps, f'stealth-seen-{label}', 1)
+                entry['shots'] = [{'file': rel(ps), 'sha256': digest(ps), 'crop': rel(cp)}]
+                entry['ok'] = len(entry['rows']) == len(roster) and all(r[3] and r[4] and r[1] == r[2] == EXPECT[r[0]] for r in entry['rows'])
+            elif kind == 'nicer_off':
+                # Fresh placements made while engine.Map.tiles.nicer_tiles is off (resolvers.nice_tile resolves at entity creation).
+                roster = step[1]
+                entry['cleared'] = bridge.lua("return {n=mb.clearAround(6)}")
+                entry['nicer_before'] = bridge.lua("return {v=require('engine.Map').tiles.nicer_tiles}")['v']
+                bridge.lua("require('engine.Map').tiles.nicer_tiles=false;return true")
+                try:
+                    entry['rows'] = [bridge.lua(f"local r=mb.place({json.dumps(n, ensure_ascii=False)},{json.dumps(sp)},{dx},{dy});r._fallback=true;return r")
+                                     for (n, sp), (dx, dy) in zip(roster, step[2] if len(step) > 2 else [(-4, 1), (0, 1), (4, 1)])]
+                    view = _set_vp(bridge.lua(CLEAN_VIEW % ("a._checker_live_placed", "p.x,p.y")))
+                    entry['nicer_during'] = bridge.lua("return {v=require('engine.Map').tiles.nicer_tiles}")['v']
+                    entry['view_rows'] = [[r['name'], r['identify'], r['rendered_token'], r['can_see'], r.get('image'), r['screen']] for r in view['rows']]
+                    ps = bridge.shot(f'nicer-off-{label}')
+                    cp, box = group_crop(view, ps, f'nicer-off-{label}', 1)
+                    entry['shots'] = [{'file': rel(ps), 'sha256': digest(ps), 'crop': rel(cp)}]
+                finally:
+                    bridge.lua("require('engine.Map').tiles.nicer_tiles=true;"
+                               "local rm={};for _,a in pairs(game.level.entities) do if a.x and a._checker_live_placed and a._fallback_marker==nil and a~=game.player then rm[#rm+1]=a end end;"
+                               "for _,a in ipairs(rm) do pcall(function() game.level.map:remove(a.x,a.y,require('engine.Map').ACTOR);game.level:removeEntity(a,true) end) end;"
+                               "mb.refresh();return {removed=#rm}")
+                entry['nicer_restored'] = bridge.lua("return {v=require('engine.Map').tiles.nicer_tiles}")['v']
+            elif kind == 'ua_group':
+                mode=step[1]
+                bridge.lua('mb.clearAround(8);_G.UAC={};return true')
+                cases=UA_CASES if mode in ('lineup','badge') else ([next(c for c in UA_CASES if c[3]==i) for i in ('grushnak','gorbat','ninandra','grgglck','rungof')]+UA_KIN if mode=='kin' else [next(c for c in UA_CASES if c[3]=='rungof')]*6)
+                positions=UA_POS
+                if mode.startswith('kin-'):
+                    ids={'kin-orc':['grushnak','orc-warrior','gorbat'],'kin-weaver':['ninandra','weaver-queen'],
+                         'kin-horror':['grgglck','nightmare-horror','abyssal-horror'],'kin-warg':['rungof','great-wolf','warg']}[mode]
+                    cases=[next(c for c in UA_CASES+UA_KIN if c[3]==tid) for tid in ids]
+                    positions=[(-2,1),(0,1),(2,1)] if len(cases)==3 else [(-1,1),(1,1)]
+                for index,((n,src,das,tid),(dx,dy)) in enumerate(zip(cases,positions)):
+                    bridge.lua(f"mb.place({lua_value(n)},{lua_value(src)},{dx},{dy},{lua_value(das)});local best;for _,a in pairs(game.level.entities) do if a._checker_live_placed and a.x and not a._ua_id then best=a end end;assert(best);best._ua_id={lua_value(tid)};UAC[#UAC+1]=best;return true")
+                    if mode=='prefix':
+                        # Execute the actual native Heart Gloom modifier in its native locale,
+                        # controlling only which of the three prefix choices is selected.
+                        bridge.lua("local a=UAC[#UAC];local text=fs.readAll('/data/zones/heart-gloom/npcs.lua');local first=assert(text:find('if not currentZone.is_purified then',1,true));local last=assert(text:find('load(\"/data/general/npcs/rodent.lua\"',first,true));local code=text:sub(first,last-1)..';return alter(1)';"
+                            +f"local env=setmetatable({{currentZone={{is_purified={'true' if index>=3 else 'false'}}},Talents=require('engine.interface.ActorTalents'),rng={{table=function(t) return t[1]:sub(1,2)=='T_' and t[1] or t[{index%3+1}] end}}}},{{__index=_G}});local f=assert(loadstring(code));setfenv(f,env);f()(a);mb.refresh();return mb.row(a)")
+                if mode=='badge':
+                    entry['before']=bridge.lua("local out={};for _,a in ipairs(UAC) do out[#out+1]=mb.row(a);a.rank=2 end;mb.refresh();return out")
+                snap="local out={};local Style=require 'mod.class.CheckerTokenStyle';for _,a in ipairs(UAC) do local r=mb.row(a);r.ua_id=a._ua_id;r.badge=Style.rankBadge(a.rank) or false;r.shader=a.shader or false;local d=a.replace_display;r.replacement_display_h=d and d.display_h or false;r.replacement_add_mos=d and d.add_mos or false;out[#out+1]=r end;return out"
+                entry['states']=[]
+                for enabled,roundno in (((True,0),(False,1),(True,1),(False,2),(True,2)) if mode=='lineup' else ((True,0),)):
+                    bridge.lua('mb.tokens('+('true' if enabled else 'false')+');return true')
+                    state={'enabled':enabled,'round':roundno,'frames':[]}
+                    for tile in (48,64,96):
+                        bridge.lua(f'mb.setTile({tile});return true')
+                        view=_set_vp(bridge.lua(CLEAN_VIEW % ('a._ua_id',GROUP_CENTER)))
+                        rows=bridge.lua(snap)
+                        name=f'ua-{mode}-{label}-r{roundno}-{"token" if enabled else "native"}-{tile}'
+                        ps=bridge.shot(name);cp,box=group_crop(view,ps,name,1)
+                        state['frames'].append({'tile':tile,'rows':rows,'view':view,'file':rel(ps),'crop':rel(cp),'crop_box':box,'sha256':digest(cp)})
+                    entry['states'].append(state)
+                bridge.lua('mb.setTile(64);return true')
+            elif kind == 'ua_negative':
+                entry['cases']=[]
+                cases=[(next(c for c in UA_CASES if c[3]==tid),das) for tid in ('grushnak','phoenix') for das in (None,'OTHER_BOSS')]
+                cases.append((('The Shade','/data/zones/ruins-kor-pul/npcs.lua','SHADE','the-shade-native'),'SHADE'))
+                for (n,src,das,tid),newdas in cases:
+                    bridge.lua(f'mb.clearAround(8);mb.place({lua_value(n)},{lua_value(src)},1,1,{lua_value(das)});_G.UAN=mb.byName({lua_value(n)});UAN.define_as={lua_value(newdas)};mb.refresh();return true')
+                    view=_set_vp(bridge.lua(CLEAN_VIEW % ('a==UAN',GROUP_CENTER)))
+                    r=bridge.lua('local r=mb.row(UAN);r.shader=UAN.shader or false;return r')
+                    name=f'ua-negative-{tid}-{newdas}-{label}'
+                    ps=bridge.shot(name);cp,box=group_crop(view,ps,name,1)
+                    entry['cases'].append({'id':tid,'define_as':newdas,'row':r,'view':view,'crop':rel(cp)})
+                c=next(c for c in UA_CASES if c[3]=='phoenix');n,src,das,tid=c
+                bridge.lua(f'mb.clearAround(8);mb.place({lua_value(n)},{lua_value(src)},1,1,{lua_value(das)});_G.UAN=mb.byName({lua_value(n)});return true')
+                entry['phoenix']=[]
+                for form,code in [('bird',''),('egg','UAN:setEffect(UAN.EFF_PHOENIX_EGG,10,{});'),('reborn','UAN:removeEffect(UAN.EFF_PHOENIX_EGG,true,true);')]:
+                    bridge.lua(code+'mb.refresh();return true')
+                    for tile in (48,64,96):
+                        bridge.lua(f'mb.setTile({tile});return true')
+                        view=_set_vp(bridge.lua(CLEAN_VIEW % ('a==UAN',GROUP_CENTER)))
+                        r=bridge.lua('return mb.row(UAN)')
+                        name=f'ua-phoenix-{form}-{label}-{tile}'
+                        ps=bridge.shot(name);cp,box=group_crop(view,ps,name,1)
+                        entry['phoenix'].append({'form':form,'tile':tile,'row':r,'view':view,'crop':rel(cp)})
+            elif kind == 'ag_cycle':
+                nicer = step[1]
+                bridge.lua("mb.clearAround(8);require('engine.Map').tiles.nicer_tiles=" + ('true' if nicer else 'false') + ";_G.AGC={};return true")
+                for (n,src,das,tid),(dx,dy) in zip(AG_CASES,AG_POS):
+                    bridge.lua(f"mb.place({lua_value(n)},{lua_value(src)},{dx},{dy},{lua_value(das)});local best;for _,a in pairs(game.level.entities) do if a._checker_live_placed and a.x and not a._ag_id then best=a end end;assert(best);best._ag_id={lua_value(tid)};best._checker_live_group=true;AGC[#AGC+1]=best;return true")
+                snap = "local out={};for _,a in ipairs(AGC) do local r=mb.row(a);r.ag_id=a._ag_id;r.shader=a.shader or false;r.shader_args=a.shader_args or false;r.replacement_shader=a.replace_display and a.replace_display.shader or false;r.replacement_display_h=a.replace_display and a.replace_display.display_h or false;out[#out+1]=r end;return out"
+                entry['nicer_tiles'] = bridge.lua("return {value=require('engine.Map').tiles.nicer_tiles}")['value']
+                entry['states'] = []
+                for enabled,roundno in ((True,0),(False,1),(True,1),(False,2),(True,2)):
+                    bridge.lua('mb.tokens(' + ('true' if enabled else 'false') + ');return true')
+                    state = {'enabled':enabled,'round':roundno,'rows':bridge.lua(snap),'frames':[]}
+                    # First off/on cycle includes 3 timed frames at every requested size.
+                    for tile in ((48,64,96) if roundno < 2 else (64,)):
+                        bridge.lua(f'mb.setTile({tile});return true')
+                        view = _set_vp(bridge.lua(CLEAN_VIEW % ('a._checker_live_group',GROUP_CENTER)))
+                        state.setdefault('views',[]).append(view)
+                        rows=bridge.lua(snap)
+                        for frame in range(3 if roundno < 2 else 1):
+                            name=f'ag-{label}-r{roundno}-{"token" if enabled else "native"}-{tile}-f{frame}'
+                            ps=bridge.shot(name)
+                            cp,box=group_crop(view,ps,name,1)
+                            subjects=[]
+                            from PIL import Image
+                            im=Image.open(ps).convert('RGB')
+                            for r in rows:
+                                x,y,t=r['screen']; body=im.crop((x,y,x+t,y+t))
+                                subjects.append({'id':r['ag_id'],'tile_sha256':hashlib.sha256(body.tobytes()).hexdigest()})
+                            state['frames'].append({'tile':tile,'frame':frame,'time_monotonic':time.monotonic(),'file':rel(ps),'crop':rel(cp),'crop_box':box,'subjects':subjects,'rows':rows})
+                    entry['states'].append(state)
+                bridge.lua('mb.setTile(64);return true')
+            elif kind == 'ag_negative':
+                entry['cases']=[]
+                for das in (None,'OTHER_SHADOW'):
+                    bridge.lua("mb.clearAround(8);mb.place('shadow claw','/data/zones/keepsake-meadow/npcs.lua',1,1,'SHADOW_CASTER');return true")
+                    r=bridge.lua("local a=mb.byName('shadow claw');a.define_as="+lua_value(das)+";game:checkerRefreshActor(a,'display');mb.refresh();return mb.row(a)")
+                    view=_set_vp(bridge.lua(CLEAN_VIEW % ('a._checker_live_placed',GROUP_CENTER)))
+                    ps=bridge.shot('ag-negative-'+str(das)+'-'+label);cp,box=group_crop(view,ps,'ag-negative-'+str(das)+'-'+label,1)
+                    entry['cases'].append({'define_as':das,'row':r,'view':view,'crop':rel(cp)})
+                bridge.lua("mb.clearAround(8);mb.place('dreaming horror','/data/general/npcs/horror.lua',1,1);return true")
+                r=bridge.lua("local a=mb.byName('dreaming horror');local r=mb.row(a);r.shader=a.shader or false;return r")
+                capture(bridge,'ag-dreaming-'+label,'dreaming horror',(48,64,96),entry)
+                entry['dreaming']=r
+                bridge.lua("mb.clearAround(8);mb.place('lich','/data/general/npcs/lich.lua',1,1);local p=game.player;local Map=require 'engine.Map';local x,y=util.findFreeGrid(p.x,p.y,3,true,{[Map.ACTOR]=true});local f=getfenv(p:getTalentFromId('T_AMBUSH_TRAP').action).summon_assassin;assert(type(f)=='function');local a=f(p,mb.byName('lich'),10,x,y);a.never_act=true;a._checker_live_placed=true;_G.AGASS=a;return true")
+                view=_set_vp(bridge.lua(CLEAN_VIEW % ('a==AGASS',GROUP_CENTER)))
+                entry['assassin']=bridge.lua("local r=mb.row(AGASS);r.shader=AGASS.shader or false;return r")
+                ps=bridge.shot('ag-assassin-'+label);cp,box=group_crop(view,ps,'ag-assassin-'+label,1)
+                entry['assassin_view']=view;entry['assassin_crop']=rel(cp)
+                entry['shader_negatives']=[]
+                for key,shader,args in (('quad-hue-args','quad_hue','{}'),('other-shader','shadow_simulacrum','nil')):
+                    bridge.lua("mb.clearAround(8);mb.place('multi-hued crystal','/data/general/npcs/crystal.lua',1,1);local a=mb.byName('multi-hued crystal');a.shader="+lua_value(shader)+";a.shader_args="+args+";mb.refresh();return true")
+                    view=_set_vp(bridge.lua(CLEAN_VIEW % ('a._checker_live_placed',GROUP_CENTER)))
+                    r=bridge.lua("local a=mb.byName('multi-hued crystal');local r=mb.row(a);r.shader=a.shader;r.shader_args=a.shader_args or false;return r")
+                    ps=bridge.shot('ag-'+key+'-'+label);cp,box=group_crop(view,ps,'ag-'+key+'-'+label,1)
+                    entry['shader_negatives'].append({'case':key,'row':r,'view':view,'crop':rel(cp)})
+                bridge.lua("mb.clearAround(8);mb.place('shadow claw','/data/zones/keepsake-meadow/npcs.lua',-1,1,'SHADOW_CLAW');mb.place('shadow claw','/data/zones/keepsake-meadow/npcs.lua',1,1,'SHADOW_CASTER');return true")
+                entry['shadow_pair']=[]
+                for tile in (48,64,96):
+                    bridge.lua(f'mb.setTile({tile});return true')
+                    view=_set_vp(bridge.lua(CLEAN_VIEW % ('a._checker_live_placed',GROUP_CENTER)))
+                    ps=bridge.shot(f'ag-shadow-pair-{label}-{tile}');cp,box=group_crop(view,ps,f'ag-shadow-pair-{label}-{tile}',1)
+                    entry['shadow_pair'].append({'tile':tile,'view':view,'crop':rel(cp)})
+                bridge.lua('mb.setTile(64);return true')
+            elif kind == 'af_effect':
+                # Read native actor effects; do not strip actor auras or particles.
+                q = json.dumps(step[1])
+                clean_view_actor(bridge, step[1])
+                entry['snap'] = bridge.lua(f"local a=mb.byName({q});local n=0;for _ in pairs(a.shader_auras or {{}}) do n=n+1 end;"
+                    "local t=a.replace_display or a;local au=0;local body={};for _,m in ipairs(t.add_mos or {}) do if m._isshaderaura then au=au+1 else body[#body+1]={image=m.image or false,display_h=m.display_h or false} end end;"
+                    "local particles=0;for _ in pairs(a.__particles or {}) do particles=particles+1 end;"
+                    "return {row=mb.row(a),actor_shader=a.shader or false,shader_auras=n,aura_entries=au,body_entries=body,"
+                    "snowparticle=a.snowparticle and true or false,snow_registered=a.__particles and a.__particles[a.snowparticle] and true or false,particles=particles}")
+                capture(bridge, 'af-effects-' + step[1].replace(' ', '-') + '-' + label, step[1], (48, 64, 96), entry)
+            elif kind == 'blood_edge':
+                # Execute the artifact's own special_on_hit proc on a genuinely bleeding target.
+                # Retry its unmodified 15% roll; do not substitute a constructed summon or alter RNG.
+                bridge.lua("return {n=mb.clearAround(6)}")
+                bridge.lua("return mb.place('lich','/data/general/npcs/lich.lua',1,1)")
+                entry['summon'] = bridge.lua(
+                    "local p=game.player;local target=mb.byName('lich');target.cut_immune=0;target:setEffect(target.EFF_CUT,10,{power=1,src=p});assert(target:hasEffect(target.EFF_CUT),'no cut');"
+                    "local list=game.zone.object_class:loadList('/data/general/objects/world-artifacts-far-east.lua',true,table.clone(game.zone.object_list));list.__real_type='object';local o=game.zone:makeEntityByName(game.level,list,'BLOODEDGE');assert(o,'no Blood-Edge');o:resolve();"
+                    "local before={};for _,a in pairs(game.level.entities) do before[a]=true end;local m;local tries=0;"
+                    "while not m and tries<100 do tries=tries+1;o.combat.special_on_hit.fct(o.combat,p,target);"
+                    "for _,a in pairs(game.level.entities) do if not before[a] and a.summoner==p and a.subtype=='blood' then m=a end end end;assert(m,'proc made no summon');"
+                    "m._checker_live_placed=true;m._checker_live_minion=true;m.never_act=true;mb.refresh();"
+                    "local r=mb.row(m);r.localized_name=m.name;r.display_name=m:getName();r.summoner=m.summoner==p;r.summon_time=m.summon_time;r.party_member=game.party:hasMember(m) and true or false;"
+                    "r.guards={ai=m.ai or false,ai_real=m.ai_real or false,ai_party=m.ai_state and m.ai_state.ai_party or false,autolevel=m.autolevel or false,"
+                    "summoner_gain_exp=m.summoner_gain_exp or false,negative_status_effect_immune=m.negative_status_effect_immune or false,max_vim=m.max_vim,"
+                    "exp_worth=m.exp_worth,silent_levelup=m.silent_levelup or false,life_rating=m.life_rating,body_keys={}};for k in pairs(m.add_mos[1]) do r.guards.body_keys[#r.guards.body_keys+1]=k end;"
+                    "r.tries=tries;r.artifact=o.define_as or false;r.target_cut=target:hasEffect(target.EFF_CUT) and true or false;return r")
+                if len(step) > 1 and step[1] == 'measure-only':
+                    entry['measurement_only'] = True
+                    record['steps'].append(entry)
+                    continue
+                entry['shots'] = []
+                for tile in (48, 64, 96):
+                    bridge.lua(f'mb.setTile({tile})')
+                    view = _set_vp(bridge.lua(CLEAN_VIEW % ('a._checker_live_minion', GROUP_CENTER)))
+                    entry.setdefault('views', []).append(view)
+                    ps = bridge.shot(f'blood-edge-{label}-{tile}')
+                    cp, box = group_crop(view, ps, f'blood-edge-{label}-{tile}', 1)
+                    entry['shots'].append({'tile': tile, 'file': rel(ps), 'sha256': digest(ps), 'crop': rel(cp), 'crop_box': box})
+                r = entry['summon']
+                entry['ok'] = r['identify'] == r['rendered_token'] == 'animated-blood' and r['summoner'] and r['party_member'] and all(
+                    len(v['rows']) == 1 and v['rows'][0]['can_see'] and v['rows'][0]['rendered_token'] == 'animated-blood' for v in entry['views'])
+                bridge.lua('mb.setTile(64)')
+            elif kind == 'multiply':
+                # Hummerhorn Multiply (talents/misc/npcs.lua:56, can_multiply clone): the native clone must wear the same token.
+                q = json.dumps(step[1], ensure_ascii=False)
+                entry['before'] = bridge.lua(f"local a=mb.byName({q});return {{can_multiply=a.can_multiply or false,knows=a:knowTalent('T_MULTIPLY') and true or false}}")
+                entry['cast'] = bridge.lua(
+                    f"local a=mb.byName({q});a._checker_live_group=true;if not a:knowTalent('T_MULTIPLY') then a:learnTalent('T_MULTIPLY',true,1) end;"
+                    "_G.MLV_BEFORE={};for _,e in pairs(game.level.entities) do _G.MLV_BEFORE[e]=true end;"
+                    "local ok,err=pcall(a.forceUseTalent,a,'T_MULTIPLY',{ignore_energy=true,ignore_cd=true,no_talent_fail=true,silent=true});"
+                    "local out={};for _,e in pairs(game.level.entities) do if not _G.MLV_BEFORE[e] and e.x then e._checker_live_placed=true;e._checker_live_minion=true;e.never_act=true;"
+                    "pcall(function() game:checkerRefreshActor(e,'display') end);out[#out+1]=e end end;"
+                    "mb.refresh();local rows={};for _,e in ipairs(out) do local r=mb.row(e);r.can_multiply=e.can_multiply or false;r.exp_worth=e.exp_worth;r.define_as_field=e.define_as or false;rows[#rows+1]=r end;"
+                    "return {ok=ok,err=tostring(err),rows=rows,parent=mb.row(a)}")
+                view = _set_vp(bridge.lua(CLEAN_VIEW % ("(a._checker_live_group or a._checker_live_minion)", GROUP_CENTER)))
+                ps = bridge.shot(f'multiply-{label}')
+                cp, box = group_crop(view, ps, f'multiply-{label}', 2)
+                view['crop_box'] = box
+                entry['view'] = view
+                entry['shots'] = [{'file': rel(ps), 'sha256': digest(ps), 'crop': rel(cp)}]
+                eid = EXPECT[step[1]]
+                crow = entry['cast']['rows']
+                entry['ok'] = bool(entry['cast']['ok']) and len(crow) >= 1 and all(r['identify'] == r['rendered_token'] == eid and r['explain'] == 'exact-identity' for r in crow) and len(view['rows']) == len(crow) + 1 and all(
+                    r['can_see'] and r['identify'] == r['rendered_token'] == eid for r in view['rows'])
+            elif kind == 'paradox':
+                # Native makeParadoxClone (talents/chronomancy/chronomancer.lua:240) the way the Anomaly Clone talent uses it (a nearby creature,
+                # clone added on a free grid); mode 'player' clones the hero as Timeline Threading does. Each case: shot with the clone, then the clone
+                # expires through the native NPC:actBase summon_time countdown and a second shot shows the survivor alone.
+                from PIL import Image
+                entry['cases'] = []
+                for key, nm, srcp, mode in step[1]:
+                    c = {'key': key, 'name': nm, 'mode': mode}
+                    try:
+                        bridge.lua("return {n=mb.clearAround(6)}")
+                        if mode.startswith('target'):
+                            c['target_placed'] = bridge.lua(f"return mb.place({json.dumps(nm, ensure_ascii=False)},{json.dumps(srcp) if srcp else 'nil'},1,1,{json.dumps(mode.split(':',1)[1]) if ':' in mode else 'nil'})")
+                            tget = f"mb.byName({json.dumps(nm, ensure_ascii=False)})"
+                        else:
+                            c['player_before'] = bridge.lua("return mb.row(game.player)")
+                            tget = "game.player"
+                        c['made'] = bridge.lua(
+                            f"local p=game.player;local Map=require 'engine.Map';local a={tget};assert(a,'no target');a._checker_live_group=true;"
+                            "local x,y=util.findFreeGrid(a.x,a.y,3,true,{[Map.ACTOR]=true});assert(x,'no grid');"
+                            f"local mpc=getfenv(game.player:getTalentFromId('T_ANOMALY_TEMPORAL_CLONE').doAction).makeParadoxClone;assert(type(mpc)=='function','no makeParadoxClone');local m=mpc(p,a,{PARADOX_DUR});assert(m,'no clone');m.ai_state={{talent_in=2,ally_compassion=10}};"
+                            "game.zone:addEntity(game.level,m,'actor',x,y);m._checker_live_placed=true;m._checker_live_minion=true;m._checker_live_clone=true;m.never_act=true;"
+                            "pcall(function() game:checkerRefreshActor(m,'display') end);mb.refresh();"
+                            "local r=mb.row(m);r.display_name=m:getName();r.summon_time=m.summon_time;r.summoner_is_target=(m.summoner==a);r.unique_field=m.unique or false;"
+                            "r.exp_worth=m.exp_worth;r.ai=m.ai;r.ai_real=m.ai_real;r.max_level=m.max_level;r.level=m.level;"
+                            "local t=mb.row(a);t.display_name=a:getName();return {clone=r,target=t}")
+                        view = _set_vp(bridge.lua(CLEAN_VIEW % ("(a._checker_live_group or a._checker_live_minion)", GROUP_CENTER)))
+                        c['view_rows'] = [[r['name'], r['identify'], r['rendered_token'], r['can_see'], r['screen']] for r in view['rows']]
+                        c['hero'] = view['hero']
+                        ps = bridge.shot(f'paradox-{key}-{label}')
+                        sc = [r['screen'] for r in view['rows']] + [view['hero']['screen']]
+                        tt = sc[0][2]
+                        im = Image.open(ps).convert('RGB')
+                        box = clamp_box((max(0, min(q[0] for q in sc) - tt), max(0, min(q[1] for q in sc) - tt),
+                                         min(im.width, max(q[0] for q in sc) + 2 * tt), min(im.height, max(q[1] for q in sc) + 2 * tt)))
+                        cp = CROPS / f'paradox-{key}-{label}-crop.png'
+                        CROPS.mkdir(parents=True, exist_ok=True)
+                        im.crop(box).save(cp)
+                        c['shots'] = [{'file': rel(ps), 'sha256': digest(ps), 'crop': rel(cp), 'crop_box': box}]
+                        c['expiry'] = bridge.lua(
+                            "local m;for _,e in pairs(game.level.entities) do if e._checker_live_clone and e.x and e.summon_time then m=e end end;assert(m,'no clone');"
+                            "local Map=require 'engine.Map';local n,st0=0,m.summon_time;local x,y=m.x,m.y;"
+                            "while not m.dead and n<40 do n=n+1;mod.class.NPC.actBase(m) end;"
+                            "mb.refresh();return {countdown_steps=n,summon_time_start=st0,dead=m.dead and true or false,dead_by_unsummon=m.dead_by_unsummon and true or false,"
+                            "on_map_after=(x and game.level.map(x,y,Map.ACTOR)==m) and true or false}")
+                        view2 = _set_vp(bridge.lua(CLEAN_VIEW % ("(a._checker_live_group or a._checker_live_minion)", GROUP_CENTER)))
+                        c['after_rows'] = [[r['name'], r['identify'], r['rendered_token'], r['can_see']] for r in view2['rows']]
+                        ps2 = bridge.shot(f'paradox-{key}-expired-{label}')
+                        sc2 = [r['screen'] for r in view2['rows']] + [view2['hero']['screen']]
+                        im2 = Image.open(ps2).convert('RGB')
+                        box2 = clamp_box((max(0, min(q[0] for q in sc2) - tt), max(0, min(q[1] for q in sc2) - tt),
+                                          min(im2.width, max(q[0] for q in sc2) + 2 * tt), min(im2.height, max(q[1] for q in sc2) + 2 * tt)))
+                        cp2 = CROPS / f'paradox-{key}-expired-{label}-crop.png'
+                        im2.crop(box2).save(cp2)
+                        c['shots'].append({'file': rel(ps2), 'sha256': digest(ps2), 'crop': rel(cp2), 'crop_box': box2})
+                        if mode == 'player':
+                            c['player_after'] = bridge.lua("return mb.row(game.player)")
+                    except Exception as exc:
+                        c['error'] = str(exc)[:1200]
+                        print('STEP ERROR paradox', key, str(exc)[:400], flush=True)
+                    entry['cases'].append(c)
             elif kind == 'randboss':
                 # Real GameState random_boss filter path (as the renegade-wyrmics vault): a non-unique native-tall wyrm stays native.
                 nm = json.dumps(step[1], ensure_ascii=False)
+                scheme = step[2] if len(step) > 2 else '#rng# the Flame Terror'
                 entry['cleared'] = bridge.lua("return {n=mb.clearAround(6)}")  # the small start room is otherwise full
                 entry['row'] = bridge.lua(
                     "local Map=require 'engine.Map';local p=game.player;"
-                    f"local m=game.zone:makeEntity(game.level,'actor',{{name={nm},random_boss={{name_scheme='#rng# the Flame Terror',nb_classes=1,rank=4,loot_quality='store',loot_quantity=1,ai_move='move_complex'}}}},nil,true);"
+                    f"local m=game.zone:makeEntity(game.level,'actor',{{name={nm},random_boss={{name_scheme={json.dumps(scheme)},nb_classes=1,rank=4,loot_quality='store',loot_quantity=1,ai_move='move_complex'}}}},nil,true);"
                     "assert(m and m.randboss,'no random boss');local mm=game.level.map;local x,y,bs;for cx=p.x-8,p.x+8 do for cy=p.y-6,p.y+6 do if cx>=1 and cy>=1 and cx<mm.w-1 and cy<mm.h-1 and (cx~=p.x or cy~=p.y) and not mm(cx,cy,Map.ACTOR) and not mm:checkEntity(cx,cy,Map.TERRAIN,'block_move',p) and mm.seens(cx,cy) then local d=(cx-p.x-3)^2+(cy-p.y-1)^2;if not bs or d<bs then x,y,bs=cx,cy,d end end end end;assert(x,'no free grid');"
                     "m._checker_live_placed=true;m.never_act=true;game.zone:addEntity(game.level,m,'actor',x,y);"
                     "pcall(function() p:resetCanSeeCache() end);mb.refresh();mb.focus(x,y);local r=mb.row(m);"
                     "r.randboss=m.randboss or false;r.unique=m.unique or false;r.define_as_field=m.define_as or false;r.rank=m.rank;return r")
                 row = entry['row']
+                rtag = step[1].replace(' ', '-')
+                if CLEAN:
+                    view = _set_vp(bridge.lua("local S;for _,a in pairs(game.level.entities) do if a.randboss and a._checker_live_placed then S=a end end;assert(S,'no random boss');" + CLEAN_VIEW % ("a==S", "S.x,S.y")))
+                    row = bridge.lua("local S;for _,a in pairs(game.level.entities) do if a.randboss and a._checker_live_placed then S=a end end;local r=mb.row(S);r.randboss=S.randboss or false;"
+                                     "r.unique=S.unique or false;r.rank=S.rank;r.can_see=game.player:canSee(S) and true or false;return r")
+                    entry['row'] = row
                 entry['native_ok'] = not row['rendered_token'] and not row['identify'] and not row['display_image']
-                ps = bridge.shot(f'randboss-fire-wyrm-{label}')
-                entry['shots'] = [{'file': rel(ps), 'sha256': digest(ps), 'crop': rel(crop(ps, row['screen'], f'randboss-fire-wyrm-{label}-crop', 3))}]
+                ps = bridge.shot(f'randboss-{rtag}-{label}')
+                entry['shots'] = [{'file': rel(ps), 'sha256': digest(ps), 'crop': rel(crop(ps, row['screen'], f'randboss-{rtag}-{label}-crop', 3))}]
             elif kind == 'escort':
                 # A fresh fire wyrm's own make_escort (added on tick end): the escort fire drakes wear the fire drake token.
                 nm = json.dumps(step[1], ensure_ascii=False)
@@ -2760,19 +3423,20 @@ def run_scene(scene, bridge):
                 # Second Native->Refined cycle (regression check for the
                 # native-tall shader-aura fix 32f4ec5): off, on, off, on.
                 actor = step[1]
+                sfx = step[2] if len(step) > 2 else ''
                 q = json.dumps(actor, ensure_ascii=False)
                 entry['off'] = bridge.lua(f"mb.tokens(false);local a=mb.byName({q});mb.focus(a.x,a.y);"
                                           "local rows={};for _,r in ipairs(mb.find()) do if r.rendered_token then rows[#rows+1]=r end end;"
                                           "return {enabled=game:checkerTokensEnabled(),row=mb.row(a),still_mapped=#rows}")
-                p1 = bridge.shot(f'toggle2-native-{label}')
+                p1 = bridge.shot(f'toggle2-native{sfx}-{label}')
                 entry['on'] = bridge.lua(f"mb.tokens(true);local a=mb.byName({q});mb.focus(a.x,a.y);"
                                          "return {enabled=game:checkerTokensEnabled(),row=mb.row(a)}")
                 time.sleep(3)
                 entry['on_later'] = bridge.lua(f"local a=mb.byName({q});mb.focus(a.x,a.y);return mb.row(a)")
-                p2 = bridge.shot(f'toggle2-refined-{label}')
+                p2 = bridge.shot(f'toggle2-refined{sfx}-{label}')
                 row = entry['on_later']
-                entry['shots'] = [{'file': rel(p1), 'sha256': digest(p1), 'crop': rel(crop(p1, row['screen'], f'toggle2-native-{label}-crop', 3))},
-                                  {'file': rel(p2), 'sha256': digest(p2), 'crop': rel(crop(p2, row['screen'], f'toggle2-refined-{label}-crop', 3))}]
+                entry['shots'] = [{'file': rel(p1), 'sha256': digest(p1), 'crop': rel(crop(p1, row['screen'], f'toggle2-native{sfx}-{label}-crop', 3))},
+                                  {'file': rel(p2), 'sha256': digest(p2), 'crop': rel(crop(p2, row['screen'], f'toggle2-refined{sfx}-{label}-crop', 3))}]
             elif kind == 'settle':
                 # Diagnostic: does the token survive after the actor has had
                 # time (real seconds, several frames) to settle? Records the
@@ -2946,6 +3610,375 @@ def run_scene(scene, bridge):
                     c = crop(p, (x, y, tt), f'{prefix}-lineup-placed-{label}-{t}-crop', 4)
                     entry['shots'].append({'tile': t, 'file': rel(p), 'sha256': digest(p), 'crop': rel(c)})
                 bridge.lua('mb.setTile(64)')
+            elif kind == 'ta1_meta':
+                # Tall-body metadata: the installed token replacement must be a
+                # single body (no non-aura add_mos), the actor shader nil and the
+                # identity exact. Machine record only; the draw-once judgement is
+                # a human crop review (a machine count cannot prove it).
+                names = '{' + ','.join(json.dumps(n, ensure_ascii=False) for n in step[1]) + '}'
+                entry['rows'] = bridge.lua(
+                    "local out={};local function L(t) local o={};for _,m in ipairs(t or {}) do o[#o+1]={image=m.image or false,display_h=m.display_h or false,display_y=m.display_y or false,display_w=m.display_w or false,aura=m._isshaderaura and true or false} end return o end;"
+                    "for _,n in ipairs(" + names + ") do local a=mb.byName(n);if a then local r=mb.row(a);"
+                    "r.replacement_display_h=a.replace_display and a.replace_display.display_h or false;"
+                    "r.replacement_display_y=a.replace_display and a.replace_display.display_y or false;"
+                    "r.replacement_display_image=a.replace_display and a.replace_display.image or false;"
+                    "r.replacement_add_mos=L(a.replace_display and a.replace_display.add_mos);"
+                    "r.own_image=a.image;r.own_add_mos=L(a.add_mos);r.shader=a.shader or false;r.shader_args=a.shader_args or false;out[#out+1]=r end end;return out")
+            elif kind == 'ta1_negative':
+                # Appearance negatives: the body changes, so exact identity must
+                # fail and native art remain. (1) wrong type, (2) wrong subtype,
+                # (3) added shader, (4) different name reusing an admitted PNG.
+                entry['cases'] = []
+                for key, name, src, mut in TA1_NEG_CASES:
+                    bridge.lua("mb.clearAround(8);return true")
+                    row = bridge.lua(
+                        f"local r=mb.place({json.dumps(name, ensure_ascii=False)},{json.dumps(src)},1,1);"
+                        f"local a=mb.byName({json.dumps(name, ensure_ascii=False)});{mut};"
+                        "pcall(function() game:checkerRefreshActor(a,'display') end);mb.refresh();"
+                        "local x=mb.row(a);x.shader=a.shader or false;x.shader_args=a.shader_args or false;return x")
+                    view = _set_vp(bridge.lua(CLEAN_VIEW % ('a._checker_live_placed', GROUP_CENTER)))
+                    ps = bridge.shot(f'ta1-negative-{key}-{label}')
+                    cp, box = group_crop(view, ps, f'ta1-negative-{key}-{label}', 1)
+                    entry['cases'].append({'key': key, 'name': name, 'row': row, 'view': view, 'crop': rel(cp)})
+                bridge.lua("mb.clearAround(8);return true")
+                row = bridge.lua(TA1_NOVICE_LUA)
+                view = _set_vp(bridge.lua(CLEAN_VIEW % ('a==_G.TA1N', GROUP_CENTER)))
+                ps = bridge.shot(f'ta1-negative-different-name-{label}')
+                cp, box = group_crop(view, ps, f'ta1-negative-different-name-{label}', 1)
+                entry['different_name'] = {'row': row, 'view': view, 'crop': rel(cp)}
+            elif kind == 'ta1_escort':
+                # The slaver's own native make_escort (ring-of-blood/npcs.lua:192)
+                # spawns two "enthralled slave" same-body copies on tick end; both
+                # must wear the enthralled-slave token through the exact path.
+                bridge.lua("return {n=mb.clearAround(8)}")
+                bridge.lua("_G.MLV_BEFORE={};for _,a in pairs(game.level.entities) do _G.MLV_BEFORE[a]=true end;return true")
+                entry['slaver'] = bridge.lua(f"return mb.place({json.dumps(step[1], ensure_ascii=False)},{json.dumps(PLACE_SRC_TA1['slaver'])},-2,1)")
+                esc = []
+                for _ in range(12):
+                    time.sleep(1)
+                    esc = bridge.lua(
+                        "local out={};for _,a in pairs(game.level.entities) do if not _G.MLV_BEFORE[a] and a.x and a.name=='enthralled slave' then "
+                        "a._checker_live_placed=true;a._checker_live_minion=true;a.never_act=true;pcall(function() game:checkerRefreshActor(a,'display') end);out[#out+1]=a end end;"
+                        "mb.refresh();local rows={};for _,a in ipairs(out) do local r=mb.row(a);r.define_as_field=a.define_as or false;r.master=(a.master==mb.byName('slaver')) and true or false;rows[#rows+1]=r end;return rows")
+                    if len(esc) >= 2:
+                        break
+                entry['escorts'] = esc
+                entry['ok'] = bool(esc) and all(r['identify'] == 'enthralled-slave' and r['rendered_token'] == 'enthralled-slave' for r in esc)
+                view = _set_vp(bridge.lua(CLEAN_VIEW % ("(a._checker_live_placed or a._checker_live_minion)", GROUP_CENTER)))
+                ps = bridge.shot(f'ta1-slaver-escort-{label}')
+                cp, box = group_crop(view, ps, f'ta1-slaver-escort-{label}', 2)
+                view['crop_box'] = box
+                entry['view'] = view
+                entry['shots'] = [{'file': rel(ps), 'sha256': digest(ps), 'crop': rel(cp)}]
+            elif kind == 'ub1_group':
+                # Nine native-tall uniques placed together; two off/on cycles.
+                mode = step[1]
+                bridge.lua('mb.clearAround(8);_G.UBC={};return true')
+                for index, ((n, src, das, tid), (dx, dy)) in enumerate(zip(UB1_CASES, UB1_POS)):
+                    bridge.lua(f"mb.place({lua_value(n)},{lua_value(src)},{dx},{dy},{lua_value(das)});local best;for _,a in pairs(game.level.entities) do if a._checker_live_placed and a.x and not a._ub1_id then best=a end end;assert(best);best._ub1_id={lua_value(tid)};best.invisible=nil;best.stealth=nil;best.inc_stealth=nil;UBC[#UBC+1]=best;return true")
+                snap = ("local out={};local Style=require 'mod.class.CheckerTokenStyle';"
+                        "for _,a in ipairs(UBC) do local r=mb.row(a);r.ub1_id=a._ub1_id;r.badge=Style.rankBadge(a.rank) or false;"
+                        "r.shader=a.shader or false;r.shader_args=a.shader_args or false;"
+                        "local d=a.replace_display;r.replacement_display_h=d and d.display_h or false;"
+                        "r.replacement_display_y=d and d.display_y or false;r.replacement_image=d and d.image or false;"
+                        "local n=0;for _,m in ipairs(d and d.add_mos or {}) do if not m._isshaderaura then n=n+1 end end;r.replacement_add_mos_count=n;out[#out+1]=r end;return out")
+                entry['states'] = []
+                for enabled, roundno in ((True, 0), (False, 1), (True, 1), (False, 2), (True, 2)):
+                    bridge.lua('mb.tokens(' + ('true' if enabled else 'false') + ');return true')
+                    state = {'enabled': enabled, 'round': roundno, 'frames': []}
+                    for tile in ((48, 64, 96) if roundno < 2 else (64,)):
+                        bridge.lua(f'mb.setTile({tile});return true')
+                        view = _set_vp(bridge.lua(CLEAN_VIEW % ('a._ub1_id', GROUP_CENTER)))
+                        rows = bridge.lua(snap)
+                        name = f'ub1-{mode}-{label}-r{roundno}-{"token" if enabled else "native"}-{tile}'
+                        ps = bridge.shot(name); cp, box = group_crop(view, ps, name, 1)
+                        state['frames'].append({'tile': tile, 'rows': rows, 'view': view, 'file': rel(ps), 'crop': rel(cp), 'crop_box': box, 'sha256': digest(cp)})
+                    entry['states'].append(state)
+                bridge.lua('mb.setTile(64);return true')
+            elif kind == 'ub1_meta':
+                # Single-body metadata: replacement display is one body (no
+                # non-aura add_mos) and the actor keeps its own native tall body.
+                names = '{' + ','.join(json.dumps(n, ensure_ascii=False) for n in step[1]) + '}'
+                entry['rows'] = bridge.lua(
+                    "local out={};local function L(t) local o={};for _,m in ipairs(t or {}) do o[#o+1]={image=m.image or false,display_h=m.display_h or false,display_y=m.display_y or false,display_w=m.display_w or false,aura=m._isshaderaura and true or false} end return o end;"
+                    "for _,n in ipairs(" + names + ") do local a=mb.byName(n);if a then local r=mb.row(a);"
+                    "r.replacement_display_h=a.replace_display and a.replace_display.display_h or false;"
+                    "r.replacement_display_y=a.replace_display and a.replace_display.display_y or false;"
+                    "r.replacement_display_image=a.replace_display and a.replace_display.image or false;"
+                    "r.replacement_add_mos=L(a.replace_display and a.replace_display.add_mos);"
+                    "r.own_image=a.image;r.own_add_mos=L(a.add_mos);r.shader=a.shader or false;r.shader_args=a.shader_args or false;out[#out+1]=r end end;return out")
+            elif kind == 'ub1_each':
+                # One identity at a time so each tall body can be inspected alone.
+                entry['items'] = []
+                for (n, src, das, tid) in UB1_CASES:
+                    bridge.lua("return {n=mb.clearAround(8)}")
+                    bridge.lua(f"mb.place({lua_value(n)},{lua_value(src)},0,1,{lua_value(das)});local a;for _,x in pairs(game.level.entities) do if x._checker_live_placed and x~=game.player then a=x end end;if a then a.invisible=nil;a.stealth=nil;a.inc_stealth=nil end;return true")
+                    frames = []
+                    for tile in (48, 64, 96):
+                        bridge.lua(f'mb.setTile({tile});return true')
+                        view = _set_vp(bridge.lua(CLEAN_VIEW % ('a._checker_live_placed', GROUP_CENTER)))
+                        r = bridge.lua("local a;for _,x in pairs(game.level.entities) do if x._checker_live_placed and x~=game.player then a=x end end;return mb.row(a)")
+                        name = f'ub1-each-{tid}-{label}-{tile}'
+                        ps = bridge.shot(name); cp, box = group_crop(view, ps, name, 2)
+                        frames.append({'tile': tile, 'row': r, 'view': view, 'file': rel(ps), 'crop': rel(cp), 'crop_box': box, 'sha256': digest(cp)})
+                    entry['items'].append({'id': tid, 'name': n, 'frames': frames})
+                bridge.lua('mb.setTile(64);return true')
+            elif kind in ('ub1_sites', 'ub1_siblings'):
+                # Both Aeryn define sites / both Caldizar define_as values, and
+                # the High-vs-Fallen / Twin-vs-Clone pairs side by side.
+                entry['groups'] = []
+                if kind == 'ub1_sites':
+                    pairs = [('aeryn-sites', [UB1_CASES[0], UB1_GATES]),
+                             ('caldizar-alias', [UB1_CASES[2], UB1_AOADS])]
+                else:
+                    pairs = [('aeryn', [UB1_CASES[0], UB1_CASES[1]]),
+                             ('chronolith', [UB1_CASES[3], UB1_CASES[4]])]
+                for key, cases in pairs:
+                    bridge.lua('mb.clearAround(8);_G.UBS={};return true')
+                    for index, ((n, src, das, tid), (dx, dy)) in enumerate(zip(cases, [(-2, 1), (2, 1)])):
+                        bridge.lua(f"mb.place({lua_value(n)},{lua_value(src)},{dx},{dy},{lua_value(das)});local best;for _,a in pairs(game.level.entities) do if a._checker_live_placed and a.x and a._ub1_ref==nil then best=a end end;assert(best);best._ub1_ref={index};best.invisible=nil;best.stealth=nil;best.inc_stealth=nil;UBS[#UBS+1]=best;return true")
+                    frames = []
+                    for tile in (48, 64, 96):
+                        bridge.lua(f'mb.setTile({tile});return true')
+                        view = _set_vp(bridge.lua(CLEAN_VIEW % ('a._ub1_ref ~= nil', GROUP_CENTER)))
+                        rows = bridge.lua("local out={};for _,a in ipairs(UBS) do local r=mb.row(a);r.ub1_ref=a._ub1_ref;out[#out+1]=r end;return out")
+                        name = f'ub1-{key}-{label}-{tile}'
+                        ps = bridge.shot(name); cp, box = group_crop(view, ps, name, 1)
+                        frames.append({'tile': tile, 'rows': rows, 'view': view, 'file': rel(ps), 'crop': rel(cp), 'crop_box': box, 'sha256': digest(cp)})
+                    entry['groups'].append({'key': key, 'cases': [[n, src, das, tid] for (n, src, das, tid) in cases], 'frames': frames})
+                bridge.lua('mb.setTile(64);return true')
+            elif kind == 'ub1_twin':
+                # Native zone.lua links the pair through `.brother`; the real
+                # twin_take_hit onTakeHit halves the damage and passes it on.
+                bridge.lua('mb.clearAround(8);_G.UBT={};return true')
+                for index, ((n, src, das, tid), (dx, dy)) in enumerate(zip([UB1_CASES[3], UB1_CASES[4]], [(-2, 1), (2, 1)])):
+                    bridge.lua(f"mb.place({lua_value(n)},{lua_value(src)},{dx},{dy},{lua_value(das)});local best;for _,a in pairs(game.level.entities) do if a._checker_live_placed and a.x and a._ub1_ref==nil then best=a end end;assert(best);best._ub1_ref={index};best.invisible=nil;best.stealth=nil;best.inc_stealth=nil;UBT[#UBT+1]=best;return true")
+                entry['link'] = bridge.lua("local t,c=UBT[1],UBT[2];t.brother=c;c.brother=t;return {linked=(t.brother==c and c.brother==t),twin_on_take_hit=t.onTakeHit~=nil,clone_on_take_hit=c.onTakeHit~=nil}")
+                entry['hit'] = bridge.lua("local t,c=UBT[1],UBT[2];local tl,cl=t.life,c.life;local dealt=t:takeHit(40,game.player);mb.refresh();local rt=mb.row(t);local rc=mb.row(c);return {twin_before=tl,clone_before=cl,twin_after=t.life,clone_after=c.life,dealt=dealt,twin=rt,clone=rc,brother_after=(t.brother==c and c.brother==t)}")
+                entry['frames'] = []
+                for tile in (48, 64, 96):
+                    bridge.lua(f'mb.setTile({tile});return true')
+                    view = _set_vp(bridge.lua(CLEAN_VIEW % ('a._ub1_ref ~= nil', GROUP_CENTER)))
+                    ps = bridge.shot(f'ub1-twin-{label}-{tile}'); cp, box = group_crop(view, ps, f'ub1-twin-{label}-{tile}', 1)
+                    entry['frames'].append({'tile': tile, 'view': view, 'file': rel(ps), 'crop': rel(cp), 'crop_box': box, 'sha256': digest(cp)})
+                bridge.lua('mb.setTile(64);return true')
+            elif kind == 'ub1_negative':
+                # Same-name actor with no or another define_as stays native; the
+                # CALDIZAR_AOADS define_as with a changed name or body stays native.
+                entry['cases'] = []
+                cases = [
+                    ('aeryn-no-define', 'High Sun Paladin Aeryn', '/data/zones/high-peak/npcs.lua', 'HIGH_SUN_PALADIN_AERYN', 'a.define_as=nil'),
+                    ('aeryn-other-define', 'High Sun Paladin Aeryn', '/data/zones/high-peak/npcs.lua', 'HIGH_SUN_PALADIN_AERYN', "a.define_as='OTHER_AERYN'"),
+                    ('caldizar-no-define', 'Caldizar', '/data/zones/shertul-fortress-caldizar/npcs.lua', 'CALDIZAR', 'a.define_as=nil'),
+                    ('caldizar-alias-rename', 'Caldizar', '/data/zones/high-peak/npcs.lua', 'CALDIZAR_AOADS', "a.name='Caldizar the Impostor'"),
+                    ('caldizar-alias-image', 'Caldizar', '/data/zones/high-peak/npcs.lua', 'CALDIZAR_AOADS', "a.add_mos[1].image='npc/horror_temporal_temporal_defiler.png'"),
+                    ('tarelion-shorthand-altered', 'Archmage Tarelion', '/data/zones/town-angolwen/npcs.lua', 'TARELION', 'a.add_mos[1].display_h=1'),
+                ]
+                for key, n, src, das, mut in cases:
+                    bridge.lua('mb.clearAround(8);return true')
+                    row = bridge.lua(
+                        f"local r=mb.place({lua_value(n)},{lua_value(src)},1,1,{lua_value(das)});"
+                        f"local a=mb.byName({lua_value(n)});assert(a,'no actor');{mut};"
+                        "pcall(function() game:checkerRefreshActor(a,'display') end);mb.refresh();return mb.row(a)")
+                    view = _set_vp(bridge.lua(CLEAN_VIEW % ('a._checker_live_placed', GROUP_CENTER)))
+                    ps = bridge.shot(f'ub1-negative-{key}-{label}')
+                    cp, box = group_crop(view, ps, f'ub1-negative-{key}-{label}', 1)
+                    entry['cases'].append({'key': key, 'name': n, 'define_as': das, 'mut': mut, 'row': row, 'view': view, 'crop': rel(cp)})
+            elif kind == 'ub1_nicer':
+                # nicer_tiles off -> fresh native bodies (some default-name files
+                # do not exist, so those stay native), then back on -> all map.
+                entry['nicer_before'] = bridge.lua("return {v=require('engine.Map').tiles.nicer_tiles}")['v']
+
+                def ub1_nicer_place():
+                    bridge.lua('mb.clearAround(8);_G.UBN={};return true')
+                    for (n, src, das, tid), (dx, dy) in zip(UB1_CASES, UB1_POS):
+                        bridge.lua(f"mb.place({lua_value(n)},{lua_value(src)},{dx},{dy},{lua_value(das)});local best;for _,a in pairs(game.level.entities) do if a._checker_live_placed and a.x and not a._ub1_id then best=a end end;assert(best);best._ub1_id={lua_value(tid)};best.invisible=nil;best.stealth=nil;best.inc_stealth=nil;UBN[#UBN+1]=best;return true")
+
+                def ub1_nicer_snap(tag):
+                    frames = []
+                    for tile in (48, 64, 96):
+                        bridge.lua(f'mb.setTile({tile});return true')
+                        view = _set_vp(bridge.lua(CLEAN_VIEW % ('a._ub1_id ~= nil', GROUP_CENTER)))
+                        rows = bridge.lua("local o={};for _,a in ipairs(UBN) do local r=mb.row(a);r.ub1_id=a._ub1_id;o[#o+1]=r end;return o")
+                        name = f'ub1-nicer-{tag}-{label}-{tile}'
+                        ps = bridge.shot(name); cp, box = group_crop(view, ps, name, 1)
+                        frames.append({'tile': tile, 'rows': rows, 'view': view, 'file': rel(ps), 'crop': rel(cp), 'crop_box': box, 'sha256': digest(cp)})
+                    return frames
+
+                bridge.lua("require('engine.Map').tiles.nicer_tiles=false;return true")
+                entry['nicer_during'] = bridge.lua("return {v=require('engine.Map').tiles.nicer_tiles}")['v']
+                ub1_nicer_place()
+                entry['off'] = ub1_nicer_snap('off')
+                bridge.lua("require('engine.Map').tiles.nicer_tiles=true;return true")
+                entry['nicer_restored'] = bridge.lua("return {v=require('engine.Map').tiles.nicer_tiles}")['v']
+                ub1_nicer_place()
+                entry['on'] = ub1_nicer_snap('on')
+                bridge.lua('mb.setTile(64);return true')
+            elif kind == 'ub2_natural':
+                # Enter each identity's real zone and prefer the natural spawn;
+                # fall back to the zone npc list and record which happened.
+                entry['items'] = []
+                for (n, src, das, tid) in UB2_CASES:
+                    zone, level = UB2_ZONES[n]
+                    it = {'id': tid, 'name': n, 'zone': zone, 'level': level, 'source': src}
+                    try:
+                        it['enter'] = bridge.lua(f"return ms.enter({lua_value(zone)},{level},nil)")
+                    except Exception as exc:
+                        it['error'] = 'enter: ' + str(exc)[:300]
+                        entry['items'].append(it)
+                        continue
+                    try:
+                        has = bridge.lua(f"local a=mb.byName({lua_value(n)});return {{found=a and not a._checker_live_placed or false}}")
+                        it['found_natural'] = bool(has['found'])
+                        if has['found']:
+                            reach = bridge.lua(f"local ok,err=pcall(mb.approach,{lua_value(n)});return {{ok=ok,err=tostring(err)}}")
+                            if reach['ok']:
+                                it['resolved'] = 'natural'
+                            else:
+                                it['natural_unreachable'] = reach['err'][:160]
+                                has['found'] = False
+                        if not has['found']:
+                            it['resolved'] = 'placed'
+                            it['row'] = bridge.lua(f"return mb.place({lua_value(n)},{lua_value(src)},1,1,{lua_value(das)})")
+                    except Exception as exc:
+                        it['error'] = 'place: ' + str(exc)[:300]
+                        entry['items'].append(it)
+                        continue
+                    frames = []
+                    for t in (48, 64, 96):
+                        bridge.lua(f'mb.setTile({t});return true')
+                        view = _set_vp(bridge.lua(CLEAN_VIEW % ('a==mb.byName(' + lua_value(n) + ')', GROUP_CENTER)))
+                        # A native NPC emote (e.g. Derth's arena agent) is not a UI
+                        # dialog; clear it so the subject tile is unobstructed.
+                        bridge.lua("for _,a in pairs(game.level.entities) do if a.__emote then pcall(function() require('mod.class.Actor').setEmote(a,nil) end) end end;local m=game.level.map;m:redisplay();m.changed=true;core.display.forceRedraw();return true")
+                        r = bridge.lua(f"local a=mb.byName({lua_value(n)});local x=mb.row(a);"
+                                       "x.can_see=game.player:canSee(a) and true or false;"
+                                       "x.seen=game.level.map.seens(a.x,a.y) and true or false;"
+                                       "x.badge=require('mod.class.CheckerTokenStyle').rankBadge(a.rank) or false;return x")
+                        name = f'ub2-natural-{tid}-{t}'
+                        ps = bridge.shot(name); cp = crop(ps, r['screen'], name + '-crop', 3)
+                        frames.append({'tile': t, 'row': r, 'view': view, 'file': rel(ps), 'sha256': digest(ps), 'crop': rel(cp)})
+                    bridge.lua('mb.setTile(64);return true')
+                    it['frames'] = frames
+                    entry['items'].append(it)
+            elif kind == 'ub2_group':
+                mode = step[1]
+                bridge.lua('mb.clearAround(8);_G.U2C={};return true')
+                for (n, src, das, tid), (dx, dy) in zip(UB2_CASES, UB2_POS):
+                    bridge.lua(f"mb.place({lua_value(n)},{lua_value(src)},{dx},{dy},{lua_value(das)});local best;for _,a in pairs(game.level.entities) do if a._checker_live_placed and a.x and not a._ub2_id then best=a end end;assert(best);best._ub2_id={lua_value(tid)};best.invisible=nil;best.stealth=nil;best.inc_stealth=nil;U2C[#U2C+1]=best;return true")
+                snap = ("local out={};local Style=require 'mod.class.CheckerTokenStyle';"
+                        "for _,a in ipairs(U2C) do local r=mb.row(a);r.ub2_id=a._ub2_id;r.badge=Style.rankBadge(a.rank) or false;"
+                        "r.shader=a.shader or false;r.shader_args=a.shader_args or false;"
+                        "r.replacement_image=a.replace_display and a.replace_display.image or false;out[#out+1]=r end;return out")
+                entry['states'] = []
+                for enabled, roundno in ((True, 0), (False, 1), (True, 1), (False, 2), (True, 2)):
+                    bridge.lua('mb.tokens(' + ('true' if enabled else 'false') + ');return true')
+                    state = {'enabled': enabled, 'round': roundno, 'frames': []}
+                    for tile in ((48, 64, 96) if roundno < 2 else (64,)):
+                        bridge.lua(f'mb.setTile({tile});return true')
+                        view = _set_vp(bridge.lua(CLEAN_VIEW % ('a._ub2_id', GROUP_CENTER)))
+                        rows = bridge.lua(snap)
+                        name = f'ub2-{mode}-{label}-r{roundno}-{"token" if enabled else "native"}-{tile}'
+                        ps = bridge.shot(name); cp, box = group_crop(view, ps, name, 1)
+                        state['frames'].append({'tile': tile, 'rows': rows, 'view': view, 'file': rel(ps), 'crop': rel(cp), 'crop_box': box, 'sha256': digest(cp)})
+                    entry['states'].append(state)
+                bridge.lua('mb.setTile(64);return true')
+            elif kind == 'ub2_each':
+                entry['items'] = []
+                for (n, src, das, tid) in UB2_CASES:
+                    bridge.lua("return {n=mb.clearAround(8)}")
+                    bridge.lua(f"mb.place({lua_value(n)},{lua_value(src)},0,1,{lua_value(das)});local a;for _,x in pairs(game.level.entities) do if x._checker_live_placed and x~=game.player then a=x end end;if a then a.invisible=nil;a.stealth=nil;a.inc_stealth=nil end;return true")
+                    frames = []
+                    for tile in (48, 64, 96):
+                        bridge.lua(f'mb.setTile({tile});return true')
+                        view = _set_vp(bridge.lua(CLEAN_VIEW % ('a._checker_live_placed', GROUP_CENTER)))
+                        r = bridge.lua("local a;for _,x in pairs(game.level.entities) do if x._checker_live_placed and x~=game.player then a=x end end;return mb.row(a)")
+                        name = f'ub2-each-{tid}-{label}-{tile}'
+                        ps = bridge.shot(name); cp, box = group_crop(view, ps, name, 2)
+                        frames.append({'tile': tile, 'row': r, 'view': view, 'file': rel(ps), 'crop': rel(cp), 'crop_box': box, 'sha256': digest(cp)})
+                    entry['items'].append({'id': tid, 'name': n, 'frames': frames})
+                bridge.lua('mb.setTile(64);return true')
+            elif kind == 'ub2_ben':
+                bridge.lua('mb.clearAround(8);_G.U2B={};return true')
+                for (n, src, das, tid), (dx, dy) in zip([UB2_CASES[-1], UB2_ABOM], [(-2, 1), (2, 1)]):
+                    bridge.lua(f"mb.place({lua_value(n)},{lua_value(src)},{dx},{dy},{lua_value(das)});local best;for _,a in pairs(game.level.entities) do if a._checker_live_placed and a.x and not a._ub2_ref then best=a end end;assert(best);best._ub2_ref={lua_value(tid)};best.invisible=nil;best.stealth=nil;best.inc_stealth=nil;U2B[#U2B+1]=best;return true")
+                entry['frames'] = []
+                for tile in (48, 64, 96):
+                    bridge.lua(f'mb.setTile({tile});return true')
+                    view = _set_vp(bridge.lua(CLEAN_VIEW % ('a._ub2_ref ~= nil', GROUP_CENTER)))
+                    rows = bridge.lua("local o={};for _,a in ipairs(U2B) do local r=mb.row(a);r.ub2_ref=a._ub2_ref;o[#o+1]=r end;return o")
+                    name = f'ub2-ben-{label}-{tile}'
+                    ps = bridge.shot(name); cp, box = group_crop(view, ps, name, 2)
+                    entry['frames'].append({'tile': tile, 'rows': rows, 'view': view, 'file': rel(ps), 'crop': rel(cp), 'crop_box': box, 'sha256': digest(cp)})
+                bridge.lua('mb.setTile(64);return true')
+            elif kind == 'ub2_guren':
+                bridge.lua('mb.clearAround(8);_G.U2G={};return true')
+                for (n, src, das, tid), (dx, dy) in zip([UB2_CASES[0], UB2_PALADIN], [(-2, 1), (2, 1)]):
+                    bridge.lua(f"mb.place({lua_value(n)},{lua_value(src)},{dx},{dy},{lua_value(das)});local best;for _,a in pairs(game.level.entities) do if a._checker_live_placed and a.x and not a._ub2_ref then best=a end end;assert(best);best._ub2_ref={lua_value(tid)};best.invisible=nil;best.stealth=nil;best.inc_stealth=nil;U2G[#U2G+1]=best;return true")
+                entry['frames'] = []
+                for tile in (48, 64, 96):
+                    bridge.lua(f'mb.setTile({tile});return true')
+                    view = _set_vp(bridge.lua(CLEAN_VIEW % ('a._ub2_ref ~= nil', GROUP_CENTER)))
+                    rows = bridge.lua("local o={};for _,a in ipairs(U2G) do local r=mb.row(a);r.ub2_ref=a._ub2_ref;o[#o+1]=r end;return o")
+                    name = f'ub2-guren-paladin-{label}-{tile}'
+                    ps = bridge.shot(name); cp, box = group_crop(view, ps, name, 2)
+                    entry['frames'].append({'tile': tile, 'rows': rows, 'view': view, 'file': rel(ps), 'crop': rel(cp), 'crop_box': box, 'sha256': digest(cp)})
+                bridge.lua('mb.setTile(64);return true')
+            elif kind == 'ub2_epoch':
+                n, src, das, tid = UB2_CASES[1]
+                bridge.lua('mb.clearAround(8);return true')
+                bridge.lua(f"return mb.place({lua_value(n)},{lua_value(src)},0,1,{lua_value(das)})")
+                entry['before'] = bridge.lua("local a=assert(mb.byName('Epoch'));return {row=mb.row(a),can_multiply=a.can_multiply,has_talent=a:knowTalent('T_MULTIPLY') and true or false}")
+                entry['use'] = bridge.lua(
+                    "local a=assert(mb.byName('Epoch'));assert(a.can_multiply,'no can_multiply');"
+                    "local before={};for _,x in pairs(game.level.entities) do before[x]=true end;"
+                    "local old=a.getTarget;a.getTarget=function() return a.x+1,a.y,nil end;"
+                    "local ok,err=pcall(a.forceUseTalent,a,'T_MULTIPLY',{ignore_energy=true,ignore_cd=true,no_talent_fail=true,silent=true});"
+                    "a.getTarget=old;local clone;for _,x in pairs(game.level.entities) do if not before[x] and x.x and x~=a then clone=x end end;"
+                    "a._ub2_epoch='original';if clone then clone._ub2_epoch='clone';clone.invisible=nil;clone.stealth=nil;clone.never_act=true end;"
+                    "mb.refresh();return {ok=ok,err=tostring(err),original=mb.row(a),clone=clone and mb.row(clone) or false,"
+                    "original_define_as=a.define_as or false,clone_define_as=clone and (clone.define_as or false) or false,"
+                    "original_multiply=a.can_multiply,clone_name=clone and clone.name or false}")
+                entry['frames'] = []
+                for tile in (48, 64, 96):
+                    bridge.lua(f'mb.setTile({tile});return true')
+                    view = _set_vp(bridge.lua(CLEAN_VIEW % ('a._ub2_epoch ~= nil', GROUP_CENTER)))
+                    rows = bridge.lua("local o={};for _,a in pairs(game.level.entities) do if a._ub2_epoch then local r=mb.row(a);r.ub2_epoch=a._ub2_epoch;o[#o+1]=r end end;return o")
+                    name = f'ub2-epoch-{label}-{tile}'
+                    ps = bridge.shot(name); cp, box = group_crop(view, ps, name, 2)
+                    entry['frames'].append({'tile': tile, 'rows': rows, 'view': view, 'file': rel(ps), 'crop': rel(cp), 'crop_box': box, 'sha256': digest(cp)})
+                bridge.lua('mb.setTile(64);return true')
+            elif kind == 'ub2_negative':
+                entry['cases'] = []
+                bridge.lua('mb.clearAround(8);return true')
+                anon = bridge.lua(
+                    "local Map=require 'engine.Map';local p=game.player;"
+                    "local q=require('mod.class.NPC').new({name='Limmir the Jeweler',type='humanoid',subtype='elf',"
+                    "image='npc/humanoid_elf_limmir_the_jeweler.png',display='@',faction='players',rank=3,unique=true,max_life=200,life=200});"
+                    "q:resolve();q:resolve(nil,true);local x,y=util.findFreeGrid(p.x+1,p.y+1,6,true,{[Map.ACTOR]=true});assert(x,'no free grid');"
+                    "q._checker_live_placed=true;q.never_act=true;game.zone:addEntity(game.level,q,'actor',x,y);q._ub2_neg='anonymous-limmir';"
+                    "mb.refresh();local r=mb.row(q);r.define_as_field=q.define_as or false;r.synthetic=true;return r")
+                view = _set_vp(bridge.lua(CLEAN_VIEW % ("a._ub2_neg=='anonymous-limmir'", GROUP_CENTER)))
+                ps = bridge.shot(f'ub2-negative-anonymous-limmir-{label}')
+                cp, box = group_crop(view, ps, f'ub2-negative-anonymous-limmir-{label}', 1)
+                entry['cases'].append({'key': 'anonymous-limmir', 'row': anon, 'view': view, 'crop': rel(cp)})
+                cases = [
+                    ('epoch-no-define', 'Epoch', UB2_CASES[1][1], 'EPOCH', 'a.define_as=nil'),
+                    ('corrupted-oozemancer-wrong-define', 'Corrupted Oozemancer', UB2_CASES[2][1], 'CORRUPTED_OOZEMANCER', "a.define_as='OTHER_OOZEMANCER'"),
+                    ('tannen-no-define', 'Tannen', UB2_CASES[9][1], 'TANNEN', 'a.define_as=nil'),
+                    ('zemekkys-other-define', 'Zemekkys, Grand Keeper of Reality', UB2_CASES[3][1], 'ZEMEKKYS', "a.define_as='OTHER_ZEMEKKYS'"),
+                ]
+                for key, n, src, das, mut in cases:
+                    bridge.lua('mb.clearAround(8);return true')
+                    row = bridge.lua(
+                        f"local r=mb.place({lua_value(n)},{lua_value(src)},1,1,{lua_value(das)});"
+                        f"local a=mb.byName({lua_value(n)});assert(a,'no actor');{mut};"
+                        "pcall(function() game:checkerRefreshActor(a,'display') end);mb.refresh();return mb.row(a)")
+                    view = _set_vp(bridge.lua(CLEAN_VIEW % ('a._checker_live_placed', GROUP_CENTER)))
+                    ps = bridge.shot(f'ub2-negative-{key}-{label}')
+                    cp, box = group_crop(view, ps, f'ub2-negative-{key}-{label}', 1)
+                    entry['cases'].append({'key': key, 'name': n, 'row': row, 'view': view, 'crop': rel(cp)})
+                bridge.lua('mb.setTile(64);return true')
         except Exception as exc:  # recorded, the scene continues
             entry['error'] = str(exc)[:1500]
             print('STEP ERROR', label, step, str(exc)[:400], flush=True)
@@ -3211,10 +4244,730 @@ def verify_ac(result):
             'lua_errors': lua_errors, 'step_errors': step_errors, 'failures': fails, 'pass': not fails}
 
 
+def verify_ad(result):
+    """Batch AD pass criteria: every expected id present in every check (never a subset)."""
+    sc = result['scenes']
+    fails, per = [], {}
+    tall = set(TALL_BD)
+
+    def steps(label, kind, name):
+        return [st for st in sc.get(label, {}).get('steps', []) if st['step'][:2] == [kind, name]]
+
+    where = {'orc grand summoner': 'gorbat-pride-L1', 'orc master wyrmic': 'gorbat-pride-L1', 'orc mage-hunter': 'gorbat-pride-L1',
+             'ritch larva': 'ritch-tunnels-L3', 'ritch hunter': 'ritch-tunnels-L3', 'ritch hive mother': 'ritch-tunnels-L3',
+             'Ritch Great Hive Mother': 'ritch-tunnels-L3', 'dúathedlen': 'demon-plane-L1', 'daelach': 'demon-plane-L1',
+             'panther': 'shertul-fortress-L1', 'tiger': 'shertul-fortress-L1', 'sabertooth tiger': 'shertul-fortress-L1',
+             'snow cat': 'shertul-fortress-L1', 'ice wyrm': 'daikara-L1'}
+    for n in BD + ['Ritch Great Hive Mother']:
+        tid = EXPECT[n]
+        lab = where[n]
+        rec = {'scene': lab}
+        got = steps(lab, 'natural_or_place', n)
+        shots = got[0].get('shots', []) if got else []
+        rec['source'] = got[0].get('resolved') if got else None
+        rec['tiles'] = [x['tile'] for x in shots]
+        ok = rec['tiles'] == [48, 64, 96] and all(
+            x['row']['identify'] == tid and x['row']['rendered_token'] == tid and x['row']['explain'] == 'exact-identity' and x['row']['can_see']
+            and x['row']['display_image'] and x['row']['display_image'].endswith('/' + tid + '.png') for x in shots)
+        t1, t2 = steps(lab, 'toggle', n), steps(lab, 'toggle_again', n)
+        tg = bool(t1 and t2) and t1[0]['off']['enabled'] is False and t1[0]['off']['still_mapped'] == 0 and not t1[0]['off']['row']['rendered_token'] \
+            and t1[0]['on']['row']['rendered_token'] == tid and t2[0]['off']['still_mapped'] == 0 and t2[0]['on_later']['rendered_token'] == tid
+        rec.update(draw_ok=bool(ok), toggle_ok=bool(tg), tall=n in tall)
+        if n in ('panther', 'tiger', 'sabertooth tiger', 'snow cat'):
+            st = steps(lab, 'stealth', n)
+            s0 = st[0] if st else {}
+            rec['stealth'] = {'active': bool(s0.get('stealthed', {}).get('stealth_active')), 'identify_while_stealthed': s0.get('stealthed', {}).get('identify'),
+                              'rendered_while_stealthed': s0.get('stealthed', {}).get('rendered_token'), 'player_can_see_stealthed': s0.get('stealthed', {}).get('player_can_see'),
+                              'hidden_can_see': s0.get('hidden', {}).get('player_can_see'), 'hidden_rendered': s0.get('hidden', {}).get('rendered_token'),
+                              'revealed_rendered': s0.get('revealed', {}).get('rendered_token')}
+            sok = rec['stealth']['active'] and rec['stealth']['identify_while_stealthed'] == tid and (not rec['stealth']['player_can_see_stealthed'] or rec['stealth']['rendered_while_stealthed'] == tid) \
+                and rec['stealth']['revealed_rendered'] == tid
+            rec['stealth_ok'] = bool(sok)
+            if not sok:
+                fails.append('stealth ' + n)
+        if not (ok and tg):
+            fails.append(n)
+        per[tid] = rec
+    neg = {}
+    p, u = EXPECT['ritch hive mother'], EXPECT['Ritch Great Hive Mother']
+    neg['pool_vs_unique_distinct'] = p != u and per[p]['draw_ok'] and per[u]['draw_ok']
+    nof = [x for x in sc.get('nicer-off-L1', {}).get('steps', []) if x['step'][0] == 'nicer_off']
+    nrows = {r[0]: r for r in (nof[0].get('view_rows', []) if nof else [])}
+    neg['nicer_off'] = {'duathedlen_native': bool(nrows.get('dúathedlen')) and nrows['dúathedlen'][1] is False and nrows['dúathedlen'][2] is False,
+                        'snow_cat_maps': bool(nrows.get('snow cat')) and nrows['snow cat'][1] == 'snow-cat' and nrows['snow cat'][2] == 'snow-cat',
+                        'ice_wyrm_maps': bool(nrows.get('ice wyrm')) and nrows['ice wyrm'][1] == 'ice-wyrm' and nrows['ice wyrm'][2] == 'ice-wyrm',
+                        'nicer_off_during': bool(nof) and nof[0].get('nicer_during') is False and nof[0].get('nicer_restored') is True and 'error' not in nof[0],
+                        'all_visible': bool(nrows) and all(r[3] for r in nrows.values())}
+    neg['nicer_off_ok'] = all(neg['nicer_off'].values())
+    rb = [x for x in sc.get('daikara-L1', {}).get('steps', []) if x['step'][:2] == ['randboss', 'ice wyrm']]
+    neg['randboss_ice_wyrm_native'] = bool(rb) and rb[0].get('native_ok') is True and bool(rb[0]['row'].get('randboss')) and 'error' not in rb[0] and bool(rb[0]['row'].get('can_see', True))
+    ss = [x for x in sc.get('stealth-seen-L1', {}).get('steps', []) if x['step'][0] == 'stealth_seen']
+    neg['stealth_active_and_seen_tokens_drawn'] = bool(ss) and ss[0].get('ok') is True and 'error' not in ss[0]
+    for k in ('pool_vs_unique_distinct', 'nicer_off_ok', 'randboss_ice_wyrm_native', 'stealth_active_and_seen_tokens_drawn'):
+        if not neg[k]:
+            fails.append('negative ' + k)
+    lin = {}
+    for lab, roster in (('mark-lineup-a-L1', TALL_BD), ('mark-lineup-b-L1', FLAT_BD), ('mark-lineup-a-zh-L1', TALL_BD), ('mark-lineup-b-zh-L1', FLAT_BD)):
+        st = [x for x in sc.get(lab, {}).get('steps', []) if x['step'][0] == 'lineup']
+        rows = st[0].get('rows_after', []) if st else []
+        by = {r[0]: r for r in rows}
+        ok = all(n in by and by[n][1] == EXPECT[n] and by[n][2] == EXPECT[n] for n in roster) and len(rows) == len(roster)
+        ok = ok and [x['tile'] for x in st[0]['shots']] == [48, 64, 96] and all(
+            x['all_inside_viewport'] and {r[0] for r in x['seen_rows']} == set(roster) and all(r[3] and r[1] == r[2] == EXPECT[r[0]] for r in x['seen_rows']) for x in st[0]['shots'])
+        lin[lab] = ok
+        if not ok:
+            fails.append(lab)
+    lua_errors = {lab: rec.get('lua_errors') for lab, rec in sc.items()}
+    step_errors = [(lab, x['step']) for lab, rec in sc.items() for x in rec.get('steps', []) if 'error' in x]
+    if any(lua_errors.values()) or step_errors:
+        fails.append('lua/step errors')
+    missing = [sc_[0] for sc_ in SCENES_BD if sc_[0] not in sc]
+    if missing:
+        fails.append('missing scenes: ' + ','.join(missing))
+    return {'per_id': per, 'negatives': neg, 'lineups': lin, 'lua_errors': lua_errors, 'step_errors': step_errors, 'failures': fails, 'pass': not fails}
+
+
+def verify_ae(result):
+    """Batch AE pass criteria: every expected id present in every check; contract-bound negatives; temporal clones."""
+    sc = result['scenes']
+    fails, per = [], {}
+    tall = set(TALL_BE)
+
+    def steps(label, kind, name):
+        return [st for st in sc.get(label, {}).get('steps', []) if st['step'][:2] == [kind, name]]
+
+    where = {"champion of Urh'Rok": 'demon-plane-L1', 'forge-giant': 'demon-plane-L1', 'hummerhorn': 'old-forest-L1', 'spire dragon': 'daikara-L1',
+             'blinkwyrm': 'daikara-L1', 'storm wyrm': 'gorbat-pride-L1', 'weaver matriarch': 'ardhungol-L3', 'patchwork troll': 'trollmire-L1',
+             'maulotaur': 'trollmire-L1', 'worm that walks': 'lake-nur-L1', 'headless horror': 'lake-nur-L1', 'emperor wight': 'dreadfell-L9'}
+    for n in BE:
+        tid = EXPECT[n]
+        lab = where[n]
+        rec = {'scene': lab}
+        got = steps(lab, 'natural_or_place', n)
+        shots = got[0].get('shots', []) if got else []
+        rec['source'] = got[0].get('resolved') if got else None
+        rec['tiles'] = [x['tile'] for x in shots]
+        ok = rec['tiles'] == [48, 64, 96] and all(
+            x['row']['identify'] == tid and x['row']['rendered_token'] == tid and x['row']['explain'] == 'exact-identity' and x['row']['can_see']
+            and x['row']['display_image'] and x['row']['display_image'].endswith('/' + tid + '.png') for x in shots)
+        t1, t2 = steps(lab, 'toggle', n), steps(lab, 'toggle_again', n)
+        tg = bool(t1 and t2) and t1[0]['off']['enabled'] is False and t1[0]['off']['still_mapped'] == 0 and not t1[0]['off']['row']['rendered_token'] \
+            and t1[0]['on']['row']['rendered_token'] == tid and t2[0]['off']['still_mapped'] == 0 and t2[0]['on_later']['rendered_token'] == tid
+        rec.update(draw_ok=bool(ok), toggle_ok=bool(tg), tall=n in tall)
+        if not (ok and tg):
+            fails.append(n)
+        per[tid] = rec
+    neg = {}
+    # Burning Wake: forge-giant native sustain; champion force-learned. Token must survive with the aura entries present.
+    au = [x for x in sc.get('demon-plane-L1', {}).get('steps', []) if x['step'][:2] == ['aura', 'forge-giant']]
+    aa = (au[0].get('after') or au[0].get('before')) if au else None
+    neg['forge_giant_burning_wake'] = {'wake_active': bool(aa and (aa.get('burning_wake') or au[0].get('activate', {}).get('ok'))),
+                                       'identify': aa['row']['identify'] if aa else None, 'rendered': aa['row']['rendered_token'] if aa else None,
+                                       'shader_auras': aa.get('shader_auras') if aa else None, 'aura_entries': aa.get('aura_entries') if aa else None,
+                                       'can_see': aa['row']['can_see'] if aa else None}
+    neg['forge_giant_burning_wake_ok'] = bool(aa) and neg['forge_giant_burning_wake']['identify'] == neg['forge_giant_burning_wake']['rendered'] == 'forge-giant' and neg['forge_giant_burning_wake']['wake_active']
+    ul = [x for x in sc.get('demon-plane-L1', {}).get('steps', []) if x['step'][:2] == ['usetalent', "champion of Urh'Rok"]]
+    ss = [x for x in sc.get('demon-plane-L1', {}).get('steps', []) if x['step'][:2] == ['sustain', "champion of Urh'Rok"]]
+    cs = ss[0]['snap'] if ss else None
+    neg['champion_burning_wake'] = {'use': ul[0].get('use') if ul else None, 'identify': cs['row']['identify'] if cs else None,
+                                    'rendered': cs['row']['rendered_token'] if cs else None, 'sustains': cs.get('sustains') if cs else None,
+                                    'shader_auras': cs.get('shader_auras') if cs else None, 'aura_entries': cs.get('aura_entries_in_display') if cs else None}
+    neg['champion_burning_wake_ok'] = bool(cs) and cs['row']['identify'] == cs['row']['rendered_token'] == 'champion-of-urh-rok' and 'T_BURNING_WAKE' in (cs.get('sustains') or [])
+    mu = [x for x in sc.get('old-forest-L1', {}).get('steps', []) if x['step'][:2] == ['multiply', 'hummerhorn']]
+    neg['hummerhorn_multiply_ok'] = bool(mu) and mu[0].get('ok') is True and 'error' not in mu[0]
+    neg['hummerhorn_multiply'] = {'rows': [[r['name'], r['identify'], r['rendered_token']] for r in mu[0]['cast']['rows']]} if mu and 'cast' in mu[0] else None
+    ar = [x for x in sc.get('lake-nur-L1', {}).get('steps', []) if x['step'][:2] == ['native', 'headless horror']]
+    neg['arena_headlesshorror_native'] = bool(ar) and ar[0].get('native_ok') is True and ar[0]['row'].get('define_as') == 'HEADLESSHORROR' and 'error' not in ar[0]
+    for lab, nm in (('demon-plane-L1', 'forge-giant'), ('randboss-storm-L9', 'storm wyrm')):
+        rb = [x for x in sc.get(lab, {}).get('steps', []) if x['step'][:2] == ['randboss', nm]]
+        neg['randboss_' + nm.replace(' ', '_') + '_native'] = bool(rb) and rb[0].get('native_ok') is True and bool(rb[0]['row'].get('randboss')) and 'error' not in rb[0] and bool(rb[0]['row'].get('can_see', True))
+    nof = [x for x in sc.get('nicer-off-L1', {}).get('steps', []) if x['step'][0] == 'nicer_off']
+    nrows = {r[0]: r for r in (nof[0].get('view_rows', []) if nof else [])}
+    neg['nicer_off_rows'] = {n: {'identify': nrows[n][1], 'rendered': nrows[n][2], 'can_see': nrows[n][3], 'image': nrows[n][4]} if n in nrows else None for n in TALL_BE}
+    neg['nicer_off_consistent'] = bool(nof) and all(n in nrows and nrows[n][1] == nrows[n][2] and nrows[n][3] for n in TALL_BE) and nof[0].get('nicer_during') is False \
+        and nof[0].get('nicer_restored') is True and 'error' not in nof[0]
+    for k in ('forge_giant_burning_wake_ok', 'champion_burning_wake_ok', 'hummerhorn_multiply_ok', 'arena_headlesshorror_native', 'randboss_forge-giant_native',
+              'randboss_storm_wyrm_native', 'nicer_off_consistent'):
+        if not neg.get(k):
+            fails.append('negative ' + k)
+    lin = {}
+    for lab, roster in (('mark-lineup-a-L1', TALL_BE), ('mark-lineup-b-L1', FLAT_BE), ('mark-lineup-a-zh-L1', TALL_BE), ('mark-lineup-b-zh-L1', FLAT_BE)):
+        st = [x for x in sc.get(lab, {}).get('steps', []) if x['step'][0] == 'lineup']
+        rows = st[0].get('rows_after', []) if st else []
+        by = {r[0]: r for r in rows}
+        ok = all(n in by and by[n][1] == EXPECT[n] and by[n][2] == EXPECT[n] for n in roster) and len(rows) == len(roster)
+        ok = ok and [x['tile'] for x in st[0]['shots']] == [48, 64, 96] and all(
+            x['all_inside_viewport'] and {r[0] for r in x['seen_rows']} >= set(roster) and all(r[3] for r in x['seen_rows']) and all(
+                r[1] == r[2] == EXPECT[r[0]] for r in x['seen_rows'] if r[0] in roster) for x in st[0]['shots'])
+        lin[lab] = ok
+        if not ok:
+            fails.append(lab)
+    temporal = {}
+    for lab in ('temporal-L1', 'temporal-zh-L1'):
+        st = [x for x in sc.get(lab, {}).get('steps', []) if x['step'][0] == 'paradox']
+        cases = {c['key']: c for c in (st[0].get('cases', []) if st else [])}
+        res = {}
+        for key, nm, _, mode in PARADOX_BE:
+            c = cases.get(key)
+            r = {'ok': False}
+            if c and 'error' not in c and 'made' in c:
+                cl, tg = c['made']['clone'], c['made']['target']
+                if key in ('ae-tall-maulotaur', 'ae-flat-hummerhorn', 'older-orc-berserker', 'older-giant-spider'):
+                    tid = EXPECT[nm]
+                    want_clone = tid if nm != 'giant spider' else tid
+                    r.update(clone_identify=cl['identify'], clone_rendered=cl['rendered_token'], clone_explain=cl['explain'], target_identify=tg['identify'],
+                             display_name=cl['display_name'], clone_can_see=cl['can_see'])
+                    r['ok'] = cl['identify'] == cl['rendered_token'] == tid and tg['identify'] == tg['rendered_token'] == tid and cl['can_see'] and tg['can_see']
+                elif key == 'unique-wrathroot':
+                    r.update(clone_identify=cl['identify'], clone_rendered=cl['rendered_token'], clone_explain=cl['explain'], target_identify=tg['identify'],
+                             display_name=cl['display_name'], clone_can_see=cl['can_see'])
+                    r['ok'] = cl['identify'] is False and cl['rendered_token'] is False and tg['identify'] == tg['rendered_token'] == 'wrathroot' and cl['can_see']
+                else:
+                    pb, pa = c.get('player_before', {}), c.get('player_after', {})
+                    r.update(clone_identify=cl['identify'], clone_rendered=cl['rendered_token'], clone_explain=cl['explain'], display_name=cl['display_name'],
+                             player_before=[pb.get('identify'), pb.get('rendered_token'), pb.get('display_image')], player_after=[pa.get('identify'), pa.get('rendered_token'), pa.get('display_image')])
+                    r['ok'] = cl['identify'] is False and cl['rendered_token'] is False and pb.get('rendered_token') == pa.get('rendered_token') and pb.get('display_image') == pa.get('display_image')
+                ex = c.get('expiry', {})
+                r['expiry'] = ex
+                r['expired_ok'] = bool(ex.get('dead')) and bool(ex.get('dead_by_unsummon')) and not ex.get('on_map_after')
+                if mode == 'target':
+                    after = {a[0]: a for a in c.get('after_rows', [])}
+                    r['survivor_still_ok'] = bool(after.get(nm)) and after[nm][1] == after[nm][2] and after[nm][1] == (EXPECT[nm] if nm else False) and after[nm][3]
+                    r['ok'] = r['ok'] and r['survivor_still_ok']
+                r['ok'] = r['ok'] and r['expired_ok']
+            else:
+                r['error'] = c.get('error') if c else 'case missing'
+            res[key] = r
+            if not r['ok']:
+                fails.append(f'temporal {lab} {key}')
+        temporal[lab] = res
+    lua_errors = {lab: rec.get('lua_errors') for lab, rec in sc.items()}
+    step_errors = [(lab, x['step']) for lab, rec in sc.items() for x in rec.get('steps', []) if 'error' in x]
+    if any(lua_errors.values()) or step_errors:
+        fails.append('lua/step errors')
+    required = [sc_[0] for sc_ in SCENES_BE]
+    missing = [l for l in required if l not in sc]
+    if missing:
+        fails.append('missing scenes: ' + ','.join(missing))
+    return {'per_id': per, 'negatives': neg, 'lineups': lin, 'temporal': temporal, 'lua_errors': lua_errors, 'step_errors': step_errors, 'failures': fails, 'pass': not fails}
+
+
+def verify_af(result):
+    """AF checks require complete sets; nicer-off explicitly records native fallbacks."""
+    sc, failures, per = result['scenes'], [], {}
+    def get(label, kind, name=None):
+        return [x for x in sc.get(label, {}).get('steps', []) if x['step'][0] == kind and (name is None or x['step'][1] == name)]
+    def exact(r, tid):
+        return r.get('identify') == r.get('rendered_token') == tid and r.get('can_see') and r.get('seen')
+    for n in BF:
+        lab = 'horrors-L1' if n in BF[:4] else 'liches-L1' if n in BF[4:8] else 'blood-L1'
+        tid = EXPECT[n]
+        st = get(lab, 'natural_or_place', n)
+        shots = st[0].get('shots', []) if st else []
+        draw = [x['tile'] for x in shots] == [48, 64, 96] and all(exact(x['row'], tid) and x['row']['explain'] == 'exact-identity' and
+            str(x['row'].get('display_image')).endswith('/' + tid + '.png') for x in shots)
+        t1, t2 = get(lab, 'toggle', n), get(lab, 'toggle_again', n)
+        toggle = bool(t1 and t2) and all(t[0].get('off', {}).get('enabled') is False and t[0]['off'].get('still_mapped') == 0 and
+            t[0]['off']['row'].get('rendered_token') is False and t[0].get('on', {}).get('row', {}).get('rendered_token') == tid for t in (t1,t2)) and t2[0].get('on_later', {}).get('rendered_token') == tid
+        per[tid] = {'scene': lab, 'source': st[0].get('resolved') if st else None, 'tiles': [x['tile'] for x in shots],
+                    'native_tall': n in TALL_BF, 'draw_ok': bool(draw), 'toggle_ok': bool(toggle)}
+        if not draw or not toggle: failures.append(n)
+    lineups = {}
+    for lab, roster, locale in [('lineup-L1', BF, 'en_US'), ('lineup-zh-L1', BF, 'zh_hans'),
+            ('siblings-L1', ['radiant horror','luminous horror'], 'en_US'), ('liches-L1', BF[4:8], 'en_US')]:
+        st = get(lab, 'lineup');shots = st[0].get('shots', []) if st else []
+        ok = [x['tile'] for x in shots] == [48,64,96] and all(x['all_inside_viewport'] and
+            {r[0] for r in x['seen_rows']} >= set(roster) and all(r[3] and r[1] == r[2] == EXPECT[r[0]] for r in x['seen_rows'] if r[0] in roster) for x in shots)
+        ok = ok and sc.get(lab, {}).get('launch', {}).get('locale') == locale
+        lineups[lab] = bool(ok)
+        if not ok: failures.append('lineup ' + lab)
+    nof = get('nicer-off-L1', 'nicer_off');rows = {r[0]: r for r in nof[0].get('view_rows', [])} if nof else {}
+    nicer = {n: {'identify': rows[n][1], 'rendered_token': rows[n][2], 'can_see': rows[n][3], 'image': rows[n][4]} if n in rows else None for n in TALL_BF}
+    # Default-name images match the two horrors and three liches. Animated blood's
+    # undead/blood default-name PNG is absent (documented source-contract fallback).
+    nicer_ok = bool(nof) and nof[0].get('nicer_during') is False and nof[0].get('nicer_restored') is True and all(
+        n in rows and rows[n][3] and rows[n][1] == rows[n][2] == (False if n == 'animated blood' else EXPECT[n]) for n in TALL_BF)
+    if not nicer_ok: failures.append('nicer-off contract')
+    specials = {}
+    for lab in ('blood-L1', 'blood-zh-L1'):
+        b = get(lab, 'blood_edge');r = b[0].get('summon', {}) if b else {}
+        ok = bool(b) and b[0].get('ok') is True and r.get('artifact') == 'BLOODEDGE' and r.get('target_cut') and r.get('summon_time') == 9
+        if lab == 'blood-zh-L1': ok = ok and r.get('localized_name') != 'animated blood' and sc[lab]['launch']['locale'] == 'zh_hans'
+        specials[lab] = bool(ok)
+        if not ok: failures.append('Blood-Edge ' + lab)
+    au = get('maelstrom-effects-L1', 'af_effect', 'maelstrom');a = au[0].get('snap', {}) if au else {}
+    specials['maelstrom_aura_particles'] = bool(a) and exact(a['row'], 'maelstrom') and a.get('shader_auras', 0) >= 1 and a.get('aura_entries', 0) >= 1 and a.get('snowparticle') and a.get('snow_registered') and a.get('particles', 0) >= 1 and not a.get('body_entries')
+    dh = get('dreaming-L1', 'af_effect', 'dreaming horror');d = dh[0].get('snap', {}) if dh else {}
+    specials['dreaming_native_shader'] = bool(d) and d['row']['identify'] is False and d['row']['rendered_token'] is False and d['actor_shader'] == 'shadow_simulacrum' and d['row']['can_see']
+    cl = get('temporal-L1','paradox');cases = cl[0].get('cases', []) if cl else []
+    c = cases[0] if cases else {};made=c.get('made', {})
+    specials['temporal_clone'] = bool(made) and exact(made['clone'],'archlich') and exact(made['target'],'archlich') and c.get('expiry', {}).get('dead_by_unsummon') and not c.get('expiry', {}).get('on_map_after')
+    for k in ('maelstrom_aura_particles','dreaming_native_shader','temporal_clone'):
+        if not specials[k]: failures.append(k)
+    errors = [(lab,x['step'],x['error']) for lab,rec in sc.items() for x in rec.get('steps',[]) if 'error' in x]
+    lua_errors = {lab:rec.get('lua_errors') for lab,rec in sc.items()}
+    missing = [s[0] for s in SCENES_BF if s[0] not in sc]
+    if errors or any(lua_errors.values()): failures.append('Lua/step errors')
+    if missing: failures.append('missing scenes: ' + ','.join(missing))
+    return {'per_id':per,'lineups':lineups,'nicer_off':nicer,'nicer_off_contract_ok':bool(nicer_ok),'specials':specials,
+            'step_errors':errors,'lua_errors':lua_errors,'failures':failures,'pass':not failures,
+            'visual_single_body_review':'pending: machine identity is not a draw-count proof'}
+
+
+def verify_ag(result):
+    """Complete AG identity, shader, toggle, locale, native and summon checks."""
+    scenes=result.get('scenes', {})
+    checks={}
+    def exact(row, tid):
+        return row.get('identify') == row.get('rendered_token') == tid and row.get('can_see') and row.get('seen')
+    ids={c[3] for c in AG_CASES}
+    cycles={}
+    for label,nicer in (('lineup-L1',True),('nicer-off-L1',False),('lineup-zh-L1',True)):
+        st=next((st for st in scenes.get(label,{}).get('steps',[]) if st['step'][0]=='ag_cycle'),{})
+        states=st.get('states',[])
+        good=len(states)==5 and not st.get('error') and st.get('nicer_tiles') is nicer and scenes.get(label,{}).get('launch',{}).get('locale') == ('zh_hans' if '-zh-' in label else 'en_US')
+        detail={}
+        for state in states:
+            rows=state['rows']
+            good=good and {r['ag_id'] for r in rows}==ids and len(rows)==7
+            if state['enabled']:
+                good=good and all(exact(r,r['ag_id']) for r in rows)
+            else:
+                good=good and all(not r['rendered_token'] and not r['display_image'] for r in rows)
+            for view in state['views']:
+                good=good and len(view['rows'])==7 and all(r['can_see'] and r['seen'] for r in view['rows'])
+            if state['round'] < 2:
+                for tile in (48,64,96):
+                    frames=[f for f in state['frames'] if f['tile']==tile]
+                    good=good and len(frames)==3
+                    if len(frames)!=3: continue
+                    for tid in sorted(ids):
+                        hashes=[next(a['tile_sha256'] for a in f['subjects'] if a['id']==tid) for f in frames]
+                        row=next(r for r in rows if r['ag_id']==tid)
+                        shader_expected='quad_hue' if tid in ('multi-hued-crystal','shimmering-crystal') or (not nicer and 'hued' in tid) else False
+                        key=f"r{state['round']}-{'token' if state['enabled'] else 'native'}-{tile}-{tid}"
+                        d={'shader':row['shader'],'shader_args':row['shader_args'],'unique_tile_frames':len(set(hashes)),
+                           'intervals_s':[round(frames[i+1]['time_monotonic']-frames[i]['time_monotonic'],3) for i in (0,1)]}
+                        detail[key]=d
+                        good=good and row['shader']==shader_expected and row['shader_args'] is False
+                        if state['enabled']:
+                            good=good and len(set(hashes))==1 and not row['replacement_shader']
+                        elif shader_expected:
+                            good=good and len(set(hashes))>1
+        checks[label]=bool(good);cycles[label]=detail
+    st=next((st for st in scenes.get('negative-L1',{}).get('steps',[]) if st['step'][0]=='ag_negative'),{})
+    checks['composite_negatives']=len(st.get('cases',[]))==2 and all(not c['row']['identify'] and not c['row']['rendered_token'] and all(r['can_see'] for r in c['view']['rows']) for c in st.get('cases',[]))
+    pair=st.get('shadow_pair',[])
+    checks['shadow_pair']=len(pair)==3 and all(len(p['view']['rows'])==2 and {r['define_as'] for r in p['view']['rows']}=={'SHADOW_CLAW','SHADOW_CASTER'} and all(exact(r,'shadow-caster' if r['define_as']=='SHADOW_CASTER' else 'shadow-claw') for r in p['view']['rows']) for p in pair)
+    ns=st.get('shader_negatives',[])
+    checks['strict_shader_contract']=len(ns)==2 and all(not n['row']['identify'] and not n['row']['rendered_token'] and n['row']['can_see'] for n in ns)
+    for name in ('dreaming','assassin'):
+        r=st.get(name,{})
+        checks[name+'_native']=bool(r) and not r['identify'] and not r['rendered_token'] and r['shader']=='shadow_simulacrum'
+    st=next((st for st in scenes.get('temporal-L1',{}).get('steps',[]) if st['step'][0]=='paradox'),{})
+    cases=st.get('cases',[])
+    checks['temporal']=len(cases)==2 and {c['key'] for c in cases}=={'ag-drake','ag-caster'} and all(not c.get('error') and exact(c['made']['target'],'shadow-caster' if c['key']=='ag-caster' else 'multi-hued-drake') and exact(c['made']['clone'],'shadow-caster' if c['key']=='ag-caster' else 'multi-hued-drake') and len(c['view_rows'])==2 and all(r[3] for r in c['view_rows']) and c['expiry']['dead_by_unsummon'] and not c['expiry']['on_map_after'] for c in cases)
+    for label in ('blood-L1','blood-zh-L1'):
+        st=next((st for st in scenes.get(label,{}).get('steps',[]) if st['step'][0]=='blood_edge'),{})
+        checks[label]=st.get('ok',False)
+    checks['no_lua_or_step_errors']=len(scenes)==7 and all(not sc.get('lua_errors') and all(not st.get('error') for st in sc['steps']) for sc in scenes.values())
+    return {'ok':all(checks.values()),'checks':checks,'cycles':cycles}
+
+
+def verify_ua(result):
+    """Require both real locales, all sizes/cycles and native appearance negatives."""
+    scenes=result.get('scenes',{})
+    def step(label,kind,mode=None):
+        return next((e for e in scenes.get(label,{}).get('steps',[]) if e['step'][0]==kind and (mode is None or e['step'][1]==mode)),{})
+    def exact(r):
+        return r['identify']==r['rendered_token']==r['ua_id'] and str(r['display_image']).endswith('/'+r['ua_id']+'.png')
+    checks={}
+    for label,locale in [('lineup-L1','en_US'),('lineup-zh-L1','zh_hans')]:
+        states=step(label,'ua_group','lineup').get('states',[])
+        checks[label]=[(st['enabled'],st['round']) for st in states]==[(True,0),(False,1),(True,1),(False,2),(True,2)] and scenes.get(label,{}).get('launch',{}).get('locale')==locale
+        for st in states:
+            frames=st.get('frames',[])
+            checks[label]=checks[label] and {f['tile'] for f in frames}=={48,64,96}
+            for f in frames:
+                rows=f['rows']
+                checks[label]=checks[label] and len(rows)==12 and {r['ua_id'] for r in rows}=={c[3] for c in UA_CASES}
+                checks[label]=checks[label] and all(r['can_see'] and r['seen'] for r in rows)
+                checks[label]=checks[label] and all(exact(r) if st['enabled'] else not r['rendered_token'] and not r['display_image'] for r in rows)
+        checks[label+'-rank']=bool(states) and all(r['badge']==('elite_boss' if r['rank']==5 else 'boss' if r['rank']==4 else 'unique') for st in states for f in st['frames'] for r in f['rows'])
+        checks[label+'-single-body']=bool(states) and all(0 < r['replacement_display_h'] <= 1 and all(m.get('_isshaderaura') for m in (r['replacement_add_mos'] or [])) for st in states if st['enabled'] for f in st['frames'] for r in f['rows'])
+    badge=step('badge-L1','ua_group','badge');states=badge.get('states',[])
+    checks['badge-independent']=len(badge.get('before',[]))==12 and len(states)==1 and all(exact(r) and not r['badge'] for f in states[0]['frames'] for r in f['rows']) and all(r['identify']==r['rendered_token'] for r in badge.get('before',[]))
+    for mode in ('kin-orc','kin-weaver','kin-horror','kin-warg'):
+        states=step('kin-L1','ua_group',mode).get('states',[])
+        checks[mode]=len(states)==1 and {f['tile'] for f in states[0]['frames']}=={48,64,96} and all(exact(r) and r['can_see'] and r['seen'] for f in states[0]['frames'] for r in f['rows'])
+    for label,locale in [('prefix-L1','en_US'),('prefix-zh-L1','zh_hans')]:
+        states=step(label,'ua_group','prefix').get('states',[])
+        checks[label]=len(states)==1 and scenes.get(label,{}).get('launch',{}).get('locale')==locale and {f['tile'] for f in states[0]['frames']}=={48,64,96}
+        checks[label]=checks[label] and all(len(f['rows'])==6 and len({r['name'] for r in f['rows']})==6 and all(exact(r) and r['can_see'] and r['seen'] for r in f['rows']) for f in states[0]['frames'])
+    neg=step('negative-L1','ua_negative');cases=neg.get('cases',[])
+    checks['same-name-negative']=len(cases)==5 and all(not c['row']['identify'] and not c['row']['rendered_token'] and not c['row']['display_image'] and c['view']['rows'][0]['can_see'] for c in cases)
+    checks['shade']=any(c['id']=='the-shade-native' and c['row']['shader']=='unique_glow' and not c['row']['rendered_token'] for c in cases)
+    forms=neg.get('phoenix',[])
+    checks['phoenix']=len(forms)==9 and all((not f['row']['identify'] and not f['row']['rendered_token'] and f['row']['image']=='object/egg_dragons_egg_06_64.png') if f['form']=='egg' else f['row']['identify']==f['row']['rendered_token']=='phoenix' for f in forms) and all(f['view']['rows'][0]['can_see'] and f['view']['rows'][0]['seen'] for f in forms)
+    required={s[0] for s in SCENES_UA}
+    checks['no-errors']=required.issubset(scenes) and all(scenes[k]['lua_errors']==0 and all(not e.get('error') for e in scenes[k]['steps']) for k in required)
+    return {'checks':checks,'all_ok':all(checks.values())}
+
+
+def verify_ta1(result):
+    """Batch TA-1: thirteen town residents, tall bodies, escort, negatives, both locales."""
+    sc, failures, per = result.get('scenes', {}), [], {}
+
+    def step(label, kind, prefix=None):
+        return [x for x in sc.get(label, {}).get('steps', [])
+                if x['step'][0] == kind and (prefix is None or x['step'][1:2] == [prefix])]
+
+    def exact(r, tid):
+        return (r.get('identify') == r.get('rendered_token') == tid and r.get('can_see')
+                and r.get('explain') == 'exact-identity' and str(r.get('display_image')).endswith('/' + tid + '.png'))
+
+    where = {'apprentice mage': 'angolwen-L1', 'pyromancer': 'angolwen-L1', 'cryomancer': 'angolwen-L1',
+             'geomancer': 'angolwen-L1', 'tempest': 'angolwen-L1', 'human guard': 'gates-of-morning-L1',
+             'derth guard': 'derth-L1', 'last hope guard': 'last-hope-L1', 'halfling guard': 'last-hope-L1',
+             'dwarven guard': 'iron-council-L1', 'elvala guard': 'elvala-L1',
+             'slaver': 'ring-of-blood-L1', 'enthralled slave': 'ring-of-blood-L1'}
+    for n in TA1:
+        tid, lab = EXPECT[n], where[n]
+        st = step(lab, 'natural_or_place', n)
+        shots = st[0].get('shots', []) if st else []
+        draw = [x['tile'] for x in shots] == [48, 64, 96] and all(exact(x['row'], tid) for x in shots)
+        t1, t2 = step(lab, 'toggle', n), step(lab, 'toggle_again', n)
+        tg = bool(t1 and t2) and all(
+            t[0].get('off', {}).get('enabled') is False and t[0]['off'].get('still_mapped') == 0
+            and t[0]['off']['row'].get('rendered_token') is False
+            and t[0].get('on', {}).get('row', {}).get('rendered_token') == tid for t in (t1, t2)) \
+            and t2[0].get('on_later', {}).get('rendered_token') == tid
+        per[tid] = {'scene': lab, 'source': st[0].get('resolved') if st else None, 'tiles': [x['tile'] for x in shots],
+                    'native_tall': n in TA1_TALL, 'draw_ok': bool(draw), 'toggle_ok': bool(tg)}
+        if not draw or not tg:
+            failures.append(n)
+    # Tall-body token metadata (one body; visual draw-once review is separate).
+    tm = step('angolwen-L1', 'ta1_meta')
+    tall_meta = {}
+    if tm:
+        for r in tm[0].get('rows', []):
+            if r['name'] in TA1_TALL:
+                tall_meta[r['name']] = {'identify': r['identify'], 'rendered': r['rendered_token'],
+                                        'replacement_display_h': r.get('replacement_display_h'),
+                                        'replacement_display_y': r.get('replacement_display_y'),
+                                        'replacement_add_mos': r.get('replacement_add_mos'),
+                                        'own_image': r.get('own_image'), 'own_add_mos': r.get('own_add_mos'),
+                                        'shader': r.get('shader')}
+    tall_ok = len(tall_meta) == len(TA1_TALL) and all(
+        v['identify'] == v['rendered'] == EXPECT[n] and not v['shader'] for n, v in tall_meta.items())
+    if not tall_ok:
+        failures.append('tall metadata')
+    # Combined thirteen lineups (en_US and zh_hans) plus the six-guard board.
+    lineups = {}
+    for lab, prefix, roster, locale in (('mark-lineup-L1', 'ta1-all', TA1, 'en_US'),
+                                        ('mark-lineup-zh-L1', 'ta1-all-zh', TA1, 'zh_hans'),
+                                        ('mark-guards-L1', 'ta1-guards', TA1_GUARDS, 'en_US')):
+        st = step(lab, 'lineup', prefix)
+        shots = st[0].get('shots', []) if st else []
+        ok = [x['tile'] for x in shots] == [48, 64, 96] and all(
+            x.get('all_inside_viewport') and {r[0] for r in x.get('seen_rows', [])} >= set(roster)
+            and all(r[3] and r[1] == r[2] == EXPECT[r[0]] for r in x.get('seen_rows', []) if r[0] in roster)
+            for x in shots)
+        ok = ok and sc.get(lab, {}).get('launch', {}).get('locale') == locale
+        lineups[lab] = bool(ok)
+        if not ok:
+            failures.append('lineup ' + lab)
+    sib = step('mark-guards-L1', 'lineup', 'ta1-guard-siblings')
+    sib_rows = sib[0].get('shots', [{}])[0].get('seen_rows', []) if sib else []
+    sib_ok = bool(sib) and {r[0] for r in sib_rows} >= {'human guard', 'elven guard', 'caravan guard'} and all(
+        r[3] and r[1] == r[2] for r in sib_rows)
+    lineups['mark-guard-siblings'] = bool(sib_ok)
+    if not sib_ok:
+        failures.append('guard siblings')
+    # native_tall bodies with nicer_tiles off (fresh placements) must still map.
+    nof = step('mark-nicer-off-L1', 'nicer_off')
+    nrows = {r[0]: r for r in (nof[0].get('view_rows', []) if nof else [])}
+    nicer = {n: {'identify': nrows[n][1], 'rendered': nrows[n][2], 'can_see': nrows[n][3], 'image': nrows[n][4]}
+             if n in nrows else None for n in TA1_TALL}
+    nicer_ok = bool(nof) and nof[0].get('nicer_during') is False and nof[0].get('nicer_restored') is True and all(
+        n in nrows and nrows[n][3] and nrows[n][1] == nrows[n][2] == EXPECT[n] for n in TA1_TALL)
+    if not nicer_ok:
+        failures.append('nicer-off')
+    # Slaver's native make_escort copies wear the enthralled-slave token.
+    es = step('ring-of-blood-L1', 'ta1_escort')
+    escort_ok = bool(es) and es[0].get('ok') is True and len(es[0].get('escorts', [])) >= 2
+    if not escort_ok:
+        failures.append('escort')
+    # Appearance negatives.
+    neg = step('mark-negative-L1', 'ta1_negative')
+    neg_ok = bool(neg) and len(neg[0].get('cases', [])) == 3 and all(
+        not c['row']['identify'] and not c['row']['rendered_token'] and not c['row']['display_image']
+        and c['view']['rows'][0]['can_see'] for c in neg[0].get('cases', []))
+    if neg and neg[0].get('cases'):
+        sh = next((c for c in neg[0]['cases'] if c['key'] == 'added-shader'), None)
+        neg_ok = neg_ok and bool(sh) and sh['row'].get('explain') == 'shader'
+    dn = neg[0].get('different_name') if neg else None
+    neg_ok = neg_ok and bool(dn) and not dn['row']['identify'] and not dn['row']['rendered_token']
+    if not neg_ok:
+        failures.append('negatives')
+    errors = [(lab, x.get('step'), x.get('error')) for lab, rec in sc.items() for x in rec.get('steps', []) if 'error' in x]
+    lua_errors = {lab: rec.get('lua_errors') for lab, rec in sc.items()}
+    missing = [s[0] for s in SCENES_TA1 if s[0] not in sc]
+    if errors or any(lua_errors.values()):
+        failures.append('Lua/step errors')
+    if missing:
+        failures.append('missing scenes: ' + ','.join(missing))
+    return {'per_id': per, 'tall_meta': tall_meta, 'tall_ok': bool(tall_ok), 'lineups': lineups,
+            'nicer_off': nicer, 'nicer_ok': bool(nicer_ok),
+            'escort': {'ok': bool(escort_ok),
+                       'rows': [[r['name'], r['identify'], r['rendered_token']] for r in (es[0]['escorts'] if es else [])]},
+            'negatives': (neg[0] if neg else None), 'step_errors': errors, 'lua_errors': lua_errors,
+            'failures': failures, 'pass': not failures,
+            'visual_single_body_review': 'pending: machine identity is not a draw-count proof'}
+
+
+def verify_ub1(result):
+    """Batch UB-1: nine native-tall uniques/bosses, both define sites and aliases,
+    the native twin link, Tarelion's shorthand, two toggle cycles and negatives."""
+    sc = result.get('scenes', {})
+    def step(label, kind, prefix=None):
+        return [x for x in sc.get(label, {}).get('steps', [])
+                if x['step'][0] == kind and (prefix is None or x['step'][1:2] == [prefix])]
+    def exact(r, tid):
+        return (r.get('identify') == r.get('rendered_token') == tid and r.get('can_see')
+                and r.get('seen') and r.get('explain') == 'exact-identity'
+                and str(r.get('display_image')).endswith('/' + tid + '.png'))
+    checks, detail = {}, {}
+    expected_badge = {3.5: 'unique', 4: 'boss', 5: 'elite_boss', 10: 'god'}
+    badges = {}
+    # 1. en_US + zh_hans lineups, two off/on cycles at 48/64/96.
+    for lab, locale in (('lineup-L1', 'en_US'), ('lineup-zh-L1', 'zh_hans')):
+        states = step(lab, 'ub1_group', 'lineup')
+        states = states[0].get('states', []) if states else []
+        ids = set(UB1_EXPECT.values())
+        ok = [(s['enabled'], s['round']) for s in states] == [(True, 0), (False, 1), (True, 1), (False, 2), (True, 2)]
+        ok = ok and sc.get(lab, {}).get('launch', {}).get('locale') == locale
+        sizes_ok = True
+        for s in states:
+            frames = s.get('frames', [])
+            sizes_ok = sizes_ok and ({f['tile'] for f in frames} == {48, 64, 96} if s['round'] < 2 else {f['tile'] for f in frames} == {64})
+            for f in frames:
+                rows = f['rows']
+                ok = ok and len(rows) == 9 and {r['ub1_id'] for r in rows} == ids
+                ok = ok and all(r['can_see'] and r['seen'] for r in rows)
+                if s['enabled']:
+                    ok = ok and all(exact(r, r['ub1_id']) for r in rows)
+                else:
+                    ok = ok and all(not r['rendered_token'] and not r['display_image'] for r in rows)
+                for r in rows:
+                    badges[r['ub1_id']] = {'rank': r.get('rank'), 'badge': r.get('badge')}
+        checks[lab] = bool(ok and sizes_ok)
+        checks[lab + '-single-body'] = bool(states) and all(
+            isinstance(r['replacement_display_h'], (int, float)) and 0 < r['replacement_display_h'] <= 1
+            and r['replacement_add_mos_count'] == 0
+            for s in states if s['enabled'] for f in s['frames'] for r in f['rows'])
+        checks[lab + '-badge'] = bool(states) and all(
+            r['badge'] == expected_badge.get(r['rank'], False)
+            for s in states for f in s['frames'] for r in f['rows'])
+    detail['rank_badges'] = badges
+    # 2. Tarelion's {tall=true} shorthand resolved to the verified tall body.
+    tm = (step('lineup-L1', 'ub1_meta') or [{}])[0].get('rows', [])
+    trow = next((r for r in tm if r['name'] == 'Archmage Tarelion'), {})
+    checks['tarelion'] = bool(trow) and trow.get('own_image') == 'invis.png' and any(
+        m['image'] == 'npc/humanoid_shalore_archmage_tarelion.png' and m['display_h'] == 2 and m['display_y'] == -1
+        for m in (trow.get('own_add_mos') or []))
+    # 3. Both native Aeryn define sites and both Caldizar define_as values.
+    groups = (step('sites-L1', 'ub1_sites') or [{}])[0].get('groups', [])
+    sites_ok = {g['key']: True for g in groups}
+    for g in groups:
+        for f in g['frames']:
+            by_ref = {r['ub1_ref']: r for r in f['rows']}
+            for i, (n, src, das, tid) in enumerate(g['cases']):
+                r = by_ref.get(i)
+                sites_ok[g['key']] = sites_ok.get(g['key'], True) and r is not None and exact(r, tid) \
+                    and r.get('define_as') == das
+    checks['aeryn-two-sites'] = bool(sites_ok.get('aeryn-sites'))
+    checks['caldizar-alias'] = bool(sites_ok.get('caldizar-alias'))
+    # 4. High vs Fallen Aeryn and Twin vs Clone side by side (48px included).
+    groups = (step('siblings-L1', 'ub1_siblings') or [{}])[0].get('groups', [])
+    sib = {g['key']: True for g in groups}
+    for g in groups:
+        for f in g['frames']:
+            by_ref = {r['ub1_ref']: r for r in f['rows']}
+            for i, (n, src, das, tid) in enumerate(g['cases']):
+                r = by_ref.get(i)
+                sib[g['key']] = sib.get(g['key'], True) and r is not None and exact(r, tid)
+            sib[g['key']] = sib.get(g['key'], True) and {r['name'] for r in f['rows']} == {c[0] for c in g['cases']}
+    checks['aeryn-siblings-48'] = bool(sib.get('aeryn')) and 48 in {f['tile'] for f in next((g for g in groups if g['key'] == 'aeryn'), {}).get('frames', [])}
+    checks['chronolith-siblings-48'] = bool(sib.get('chronolith')) and 48 in {f['tile'] for f in next((g for g in groups if g['key'] == 'chronolith'), {}).get('frames', [])}
+    # 5. The native twin_take_hit link propagates damage and both keep tokens.
+    tw = (step('twin-L1', 'ub1_twin') or [{}])[0]
+    link, hit = tw.get('link', {}), tw.get('hit', {})
+    checks['twin-link'] = bool(link.get('linked') and link.get('twin_on_take_hit') and link.get('clone_on_take_hit'))
+    checks['twin-damage'] = bool(
+        hit.get('twin_before', 0) > hit.get('twin_after', 0) and hit.get('clone_before', 0) > hit.get('clone_after', 0)
+        and hit.get('brother_after')
+        and exact(hit.get('twin', {}), 'chronolith-twin') and exact(hit.get('clone', {}), 'chronolith-clone'))
+    # 6. nicer_tiles off/on round trip: fresh placements while off keep the
+    #    native fallback where the default-name body differs from the catalog
+    #    image, and all nine map again after the flag is restored.
+    nn = (step('nicer-off-L1', 'ub1_nicer') or [{}])[0]
+    nic = {}
+    for f in nn.get('off', []):
+        for r in f['rows']:
+            img = r.get('image')
+            mapped = bool(r['identify'] == r['rendered_token'] == r['ub1_id'])
+            nic.setdefault(r['ub1_id'], {'native_image': img, 'catalog_image': UB1_IMAGE.get(r['ub1_id']), 'maps_off': mapped})
+    off_ok = all(v['maps_off'] == (v['native_image'] == v['catalog_image']) for v in nic.values())
+    on_ok = all(exact(r, r['ub1_id']) for f in nn.get('on', []) for r in f['rows'])
+    checks['nicer-off'] = bool(nn) and nn.get('nicer_before') is True and nn.get('nicer_during') is False \
+        and nn.get('nicer_restored') is True and off_ok and on_ok \
+        and all(len(f['rows']) == 9 for f in nn.get('off', []) + nn.get('on', [])) \
+        and {f['tile'] for f in nn.get('off', []) + nn.get('on', [])} == {48, 64, 96}
+    detail['nicer_off'] = nic
+    # 7. Native appearance negatives.
+    neg = (step('negative-L1', 'ub1_negative') or [{}])[0]
+    cases = neg.get('cases', [])
+    checks['negatives'] = len(cases) == 6 and all(
+        not c['row']['identify'] and not c['row']['rendered_token'] and not c['row']['display_image']
+        and c['view']['rows'] and c['view']['rows'][0]['can_see'] for c in cases)
+    # 8. Per-identity individual placement metadata (lineup-L1).
+    each = (step('lineup-L1', 'ub1_each') or [{}])[0].get('items', [])
+    checks['each-identity'] = len(each) == 9 and all(
+        len(it['frames']) == 3 and all(exact(fr['row'], it['id']) for fr in it['frames']) for it in each)
+    errors = [(lab, x.get('step'), x.get('error')) for lab, rec in sc.items() for x in rec.get('steps', []) if 'error' in x]
+    lua_errors = {lab: rec.get('lua_errors') for lab, rec in sc.items()}
+    missing = [s[0] for s in SCENES_UB1 if s[0] not in sc]
+    checks['no-errors'] = not missing and not errors and not any(lua_errors.values())
+    return {'checks': checks, 'rank_badges': badges, 'nicer_off': detail.get('nicer_off'),
+            'twin': {'link': link, 'hit': {k: v for k, v in hit.items() if k not in ('twin', 'clone')}},
+            'step_errors': errors, 'lua_errors': lua_errors, 'missing_scenes': missing,
+            'pass': all(checks.values())}
+
+
+def verify_ub2(result):
+    """Batch UB-2: eleven flat unique/boss tokens, natural spawns in their real
+    zones, the wiring-only Cursed/Abomination pair, Guren beside the shipped
+    human sun-paladin, Epoch's native Multiply clone and appearance negatives."""
+    sc = result.get('scenes', {})
+
+    def step(label, kind, prefix=None):
+        return [x for x in sc.get(label, {}).get('steps', [])
+                if x['step'][0] == kind and (prefix is None or x['step'][1:2] == [prefix])]
+
+    def exact(r, tid):
+        return (r.get('identify') == r.get('rendered_token') == tid and r.get('can_see')
+                and r.get('seen') and r.get('explain') == 'exact-identity'
+                and str(r.get('display_image')).endswith('/' + tid + '.png'))
+
+    checks, detail, badges = {}, {}, {}
+    expected_badge = {3.5: 'unique', 4: 'boss', 5: 'elite_boss', 10: 'god'}
+    ids = set(UB2_IDS)
+    # 1. en_US + zh_hans lineups, two off/on cycles at 48/64/96, badges.
+    for lab, locale in (('lineup-L1', 'en_US'), ('lineup-zh-L1', 'zh_hans')):
+        states = step(lab, 'ub2_group', 'lineup')
+        states = states[0].get('states', []) if states else []
+        ok = [(s['enabled'], s['round']) for s in states] == [(True, 0), (False, 1), (True, 1), (False, 2), (True, 2)]
+        ok = ok and sc.get(lab, {}).get('launch', {}).get('locale') == locale
+        for s in states:
+            frames = s.get('frames', [])
+            ok = ok and ({f['tile'] for f in frames} == {48, 64, 96} if s['round'] < 2 else {f['tile'] for f in frames} == {64})
+            for f in frames:
+                rows = f['rows']
+                ok = ok and len(rows) == 11 and {r['ub2_id'] for r in rows} == ids
+                ok = ok and all(r['can_see'] and r['seen'] for r in rows)
+                if s['enabled']:
+                    ok = ok and all(exact(r, r['ub2_id']) for r in rows)
+                else:
+                    ok = ok and all(not r['rendered_token'] and not r['display_image'] for r in rows)
+                for r in rows:
+                    badges[r['ub2_id']] = {'rank': r.get('rank'), 'badge': r.get('badge')}
+        checks[lab] = bool(ok)
+        checks[lab + '-badge'] = bool(states) and all(
+            r['badge'] == expected_badge.get(r['rank'], False)
+            for s in states for f in s['frames'] for r in f['rows'])
+        checks[lab + '-single-token'] = bool(states) and all(
+            r['replacement_image'] and str(r['replacement_image']).endswith('/' + r['ub2_id'] + '.png')
+            for s in states if s['enabled'] for f in s['frames'] for r in f['rows'])
+    detail['rank_badges'] = badges
+    # 2. Natural spawns in the real zones (or the recorded fallback).
+    items = (step('natural-L1', 'ub2_natural') or [{}])[0].get('items', [])
+    nat = {}
+    nat_ok = len(items) == 11
+    for it in items:
+        frames = it.get('frames', [])
+        good = it.get('resolved') in ('natural', 'placed') and [f['tile'] for f in frames] == [48, 64, 96] \
+            and all(exact(f['row'], it['id']) for f in frames) and not it.get('error')
+        nat[it['id']] = {'zone': it.get('zone'), 'resolved': it.get('resolved'),
+                         'natural_unreachable': it.get('natural_unreachable'), 'error': it.get('error'), 'ok': bool(good)}
+        nat_ok = nat_ok and good
+    checks['natural-spawns'] = bool(nat_ok)
+    detail['natural'] = nat
+    # 3. Ben Cruthdar, the Cursed and the Abomination side by side.
+    ben = (step('ben-cruthdar-L1', 'ub2_ben') or [{}])[0]
+    ben_frames = ben.get('frames', [])
+    ben_ids = {'ben-cruthdar-the-cursed', 'ben-cruthdar-abomination'}
+    checks['ben-pair'] = len(ben_frames) == 3 and [f['tile'] for f in ben_frames] == [48, 64, 96] and all(
+        {r['ub2_ref'] for r in f['rows']} == ben_ids and all(exact(r, r['ub2_ref']) for r in f['rows'])
+        for f in ben_frames)
+    try:
+        import zipfile
+        with zipfile.ZipFile(result['runtime_teaa']['path']) as z:
+            a = z.read('data/gfx/tokens/ben-cruthdar-abomination.png')
+            b = z.read('data/gfx/tokens/ben-cruthdar-the-cursed.png')
+        checks['ben-same-png'] = a == b
+        detail['ben_png_sha256'] = {'ben-cruthdar-abomination': hashlib.sha256(a).hexdigest(),
+                                    'ben-cruthdar-the-cursed': hashlib.sha256(b).hexdigest()}
+    except Exception as exc:  # recorded, not hidden
+        checks['ben-same-png'] = False
+        detail['ben_png_error'] = str(exc)[:200]
+    # 4. Guren beside the shipped human sun-paladin at 48px.
+    gp = (step('guren-paladin-L1', 'ub2_guren') or [{}])[0]
+    gp_frames = gp.get('frames', [])
+    gp_ids = {'sun-paladin-guren', 'human-sun-paladin'}
+    checks['guren-vs-paladin'] = len(gp_frames) == 3 and [f['tile'] for f in gp_frames] == [48, 64, 96] and all(
+        {r['ub2_ref'] for r in f['rows']} == gp_ids and all(exact(r, r['ub2_ref']) for r in f['rows'])
+        for f in gp_frames)
+    # 5. Epoch's native Multiply clone keeps the original token.
+    ep = (step('epoch-multiply-L1', 'ub2_epoch') or [{}])[0]
+    use = ep.get('use', {})
+    orig_rows = [next((r for r in f.get('rows', []) if r.get('ub2_epoch') == 'original'), {}) for f in ep.get('frames', [])]
+    checks['epoch-multiply'] = bool(use.get('ok')) and exact(use.get('original', {}), 'epoch') \
+        and bool(use.get('clone')) and ep.get('before', {}).get('row', {}).get('identify') == 'epoch' \
+        and len(orig_rows) == 3 and all(exact(r, 'epoch') for r in orig_rows)
+    detail['epoch_multiply'] = {'ok': use.get('ok'), 'err': use.get('err'),
+                                'original_define_as': use.get('original_define_as'),
+                                'clone_define_as': use.get('clone_define_as'),
+                                'clone_identify': (use.get('clone') or {}).get('identify'),
+                                'original_can_multiply_after': use.get('original_multiply')}
+    # 6. Native appearance negatives (anonymous Limmir + wrong/no define_as).
+    neg = (step('negative-L1', 'ub2_negative') or [{}])[0]
+    cases = neg.get('cases', [])
+    by_key = {c['key']: c for c in cases}
+
+    def native_case(c):
+        return (not c['row']['identify'] and not c['row']['rendered_token'] and not c['row']['display_image']
+                and c['view']['rows'] and c['view']['rows'][0]['can_see'])
+
+    boss_cases = [c for k, c in by_key.items() if k != 'anonymous-limmir']
+    checks['anonymous-limmir'] = 'anonymous-limmir' in by_key and native_case(by_key['anonymous-limmir'])
+    checks['boss-define-as-negatives'] = len(boss_cases) >= 2 and all(native_case(c) for c in boss_cases)
+    checks['negatives'] = checks['anonymous-limmir'] and checks['boss-define-as-negatives']
+    errors = [(lab, x.get('step'), x.get('error')) for lab, rec in sc.items() for x in rec.get('steps', []) if 'error' in x]
+    lua_errors = {lab: rec.get('lua_errors') for lab, rec in sc.items()}
+    missing = [s[0] for s in SCENES_UB2 if s[0] not in sc]
+    checks['no-errors'] = not missing and not errors and not any(lua_errors.values())
+    return {'checks': checks, 'rank_badges': badges, 'natural': detail.get('natural'),
+            'ben_png_sha256': detail.get('ben_png_sha256'), 'ben_png_error': detail.get('ben_png_error'),
+            'epoch_multiply': detail.get('epoch_multiply'),
+            'step_errors': errors, 'lua_errors': lua_errors, 'missing_scenes': missing,
+            'pass': all(checks.values())}
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--only', nargs='*')
-    parser.add_argument('--batch', choices=('ab', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'aa', 'ab', 'ac', 'legacy', 'summons', 'summons-zh'), default='legacy')
+    parser.add_argument('--batch', choices=('ab', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'aa', 'ab', 'ac', 'ad', 'ae', 'af', 'ag', 'ua', 'ta1', 'ub1', 'ub2', 'legacy', 'summons', 'summons-zh'), default='legacy')
     args = parser.parse_args()
     global OUT, SHOTS, CROPS, CLEAN
     scenes = SCENES
@@ -3302,6 +5055,50 @@ def main():
         CLEAN = True
         OUT, scenes = OUT_BC, SCENES_BC
         SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 'ad':
+        CLEAN = True
+        OUT, scenes = OUT_BD, SCENES_BD
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 'ae':
+        CLEAN = True
+        OUT, scenes = OUT_BE, SCENES_BE
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 'af':
+        if not os.environ.get('MLV_TEAA'):
+            parser.error('--batch af requires MLV_TEAA: never test loose product code')
+        CLEAN = True
+        OUT, scenes = OUT_BF, SCENES_BF
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 'ua':
+        if not os.environ.get('MLV_TEAA'):
+            parser.error('--batch ua requires MLV_TEAA: never test loose product code')
+        CLEAN = True
+        OUT, scenes = OUT_UA, SCENES_UA
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 'ag':
+        if not os.environ.get('MLV_TEAA'):
+            parser.error('--batch ag requires MLV_TEAA: never test loose product code')
+        CLEAN = True
+        OUT, scenes = OUT_BG, SCENES_BG
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 'ta1':
+        if not os.environ.get('MLV_TEAA'):
+            parser.error('--batch ta1 requires MLV_TEAA: never test loose product code')
+        CLEAN = True
+        OUT, scenes = OUT_BTA, SCENES_TA1
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 'ub1':
+        if not os.environ.get('MLV_TEAA'):
+            parser.error('--batch ub1 requires MLV_TEAA: never test loose product code')
+        CLEAN = True
+        OUT, scenes = OUT_BUB, SCENES_UB1
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 'ub2':
+        if not os.environ.get('MLV_TEAA'):
+            parser.error('--batch ub2 requires MLV_TEAA: never test loose product code')
+        CLEAN = True
+        OUT, scenes = OUT_BUB2, SCENES_UB2
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
     if args.batch == 'summons-zh':
         OUT, scenes = OUT_U, SCENES_ZH
         SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
@@ -3312,11 +5109,28 @@ def main():
     census_path = OUT / 'census.json'
     result = json.loads(census_path.read_text()) if census_path.exists() else {'scenes': {}}
     result['expected'] = EXPECT
+    if args.batch == 'ua':
+        result['expected_ua'] = [{'name': n, 'source': src, 'define_as': das, 'id': tid}
+                                 for n, src, das, tid in UA_CASES]
+    if args.batch == 'ag':
+        result['expected_ag'] = [{'name': n, 'source': src, 'define_as': das, 'id': tid}
+                                 for n, src, das, tid in AG_CASES]
+    if args.batch == 'ub2':
+        result['expected_ub2'] = [{'name': n, 'source': src, 'define_as': das, 'id': tid}
+                                  for n, src, das, tid in UB2_CASES + [UB2_ABOM, UB2_PALADIN]]
     if os.environ.get('MLV_TEAA'):
         result['runtime_teaa'] = {'path': os.environ['MLV_TEAA'], 'sha256': digest(os.environ['MLV_TEAA'])}
     result['scene_sha256'] = {'tests/live_monster_batch.lua': digest(ADDON / 'tests/live_monster_batch.lua'),
                               'tests/live_map_survey.lua': digest(ADDON / 'tests/live_map_survey.lua'),
                               'overload/mod/class/CheckerTokens.lua': digest(ADDON / 'overload/mod/class/CheckerTokens.lua')}
+    if args.batch in ('af', 'ag', 'ua', 'ta1', 'ub1', 'ub2'):
+        import zipfile
+        with zipfile.ZipFile(os.environ['MLV_TEAA']) as package:
+            result['tested_runtime_sha256'] = {
+                path: hashlib.sha256(package.read(path)).hexdigest()
+                for path in ('overload/mod/class/CheckerTokens.lua', 'superload/mod/class/Actor.lua')}
+        # The working-tree product file may be under concurrent edits; it is not tested.
+        result['scene_sha256'].pop('overload/mod/class/CheckerTokens.lua', None)
     for scene in scenes:
         label = scene[0]
         if args.only and label not in args.only:
@@ -3338,6 +5152,9 @@ def main():
             wait_ready(bridge, log_start)
             record = run_scene(scene, bridge)
             record['launch'] = {k: plan[k] for k in ('shaders', 'tiles', 'resolution', 'terrain', 'addons', 'fixture', 'tokens')}
+            if args.batch in ('af', 'ag', 'ua', 'ta1', 'ub1', 'ub2'):
+                record['launch']['locale'] = plan['locale']
+                record['launch']['teaa'] = plan['teaa']
             record['processes'] = {'game': meta['game'], 'xvfb': meta['xvfb'], 'display': meta['display']}
             text = LOG.read_bytes()[log_start:].decode('utf-8', 'replace')
             record['lua_errors'] = text.count('Lua Error')
@@ -3351,6 +5168,35 @@ def main():
             alive = [k for k in ('game', 'xvfb') if (Path('/proc') / str(meta[k]) / 'cmdline').exists()]
             sock = Path('/tmp/.X11-unix') / ('X' + meta['display'][1:])
             print('STOP', label, meta['game'], meta['xvfb'], 'alive=', alive, 'socket=', sock.exists(), flush=True)
+    if args.batch == 'ua':
+        result['batch_ua_verdict'] = verify_ua(result)
+        census_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n')
+    if args.batch == 'ag':
+        result['batch_ag_verdict'] = verify_ag(result)
+        census_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n')
+    if args.batch == 'ta1':
+        result['batch_ta1_verdict'] = verify_ta1(result)
+        census_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n')
+        print('VERDICT', json.dumps(result['batch_ta1_verdict'], ensure_ascii=False), flush=True)
+    if args.batch == 'ub1':
+        result['batch_ub1_verdict'] = verify_ub1(result)
+        census_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n')
+        print('VERDICT', json.dumps(result['batch_ub1_verdict'], ensure_ascii=False), flush=True)
+    if args.batch == 'ub2':
+        result['batch_ub2_verdict'] = verify_ub2(result)
+        census_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n')
+        print('VERDICT', json.dumps(result['batch_ub2_verdict'], ensure_ascii=False), flush=True)
+    if args.batch == 'af':
+        result['batch_af_verdict'] = verify_af(result)
+        census_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n')
+    if args.batch == 'ae':
+        result['batch_ae_verdict'] = verify_ae(result)
+        census_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n')
+        print('VERDICT', json.dumps(result['batch_ae_verdict'], ensure_ascii=False), flush=True)
+    if args.batch == 'ad':
+        result['batch_ad_verdict'] = verify_ad(result)
+        census_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n')
+        print('VERDICT', json.dumps(result['batch_ad_verdict'], ensure_ascii=False), flush=True)
     if args.batch == 'ac':
         result['batch_ac_verdict'] = verify_ac(result)
         census_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n')

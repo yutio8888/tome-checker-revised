@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ad-5",
+  "assets": [
+    {
+      "asset_id": "tiger",
+      "native_name": "tiger",
+      "scope": "dungeon pool (general/npcs/feline.lua:73, animal/feline, non-unique, no define_as, rank 2, base BASE_NPC_CAT, default-name image); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/feline.lua",
+          "sha256": "dea8cdb4378ddf062570cff9d7d44a78fd0f75e9ad5fbdc3e7d8779cb000e8d9",
+          "line": 74,
+          "anchor": "name = \"tiger\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/feline.lua",
+          "sha256": "dea8cdb4378ddf062570cff9d7d44a78fd0f75e9ad5fbdc3e7d8779cb000e8d9",
+          "line": 86,
+          "anchor": "T_SHADOW_DANCE"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/feline.lua",
+          "sha256": "dea8cdb4378ddf062570cff9d7d44a78fd0f75e9ad5fbdc3e7d8779cb000e8d9",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_CAT\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/feline.lua",
+          "sha256": "dea8cdb4378ddf062570cff9d7d44a78fd0f75e9ad5fbdc3e7d8779cb000e8d9",
+          "line": 36,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/animal_feline_tiger.png",
+          "sha256": "95cb295f67247104d467463379c04f1aad1651a8c4e10d9f40364ad1c0b21cfe",
+          "role": "identity",
+          "note": "Native shape (64x64): a golden-orange tiger with black stripes, low to the ground, white muzzle, mouth open. Keep the orange black-striped tiger with a white muzzle and open jaws, drawn as ONE compact figure filling the disc, in a mid-stride roaring pose with one forepaw raised and the tail curled up, clearly not the long low indigo panther."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ad/refs/felines.png",
+          "sha256": "e0002235512cdf1ae4c5c48400c0d09c8678fa711cbe0800dc83e4516f0eab9b",
+          "role": "family",
+          "note": "Six shipped animal tokens (Pumpkin: a fat orange tabby sitting front-on; the white wolf: a low white wolf; the dire wolf: a brown prowling wolf; the wolf, the polar bear and the great wolf): the four big cats are a set of distinct POSES as well as colours: the SNOW CAT sits in a tight round crouch with a thick ringed tail wrapped around its body, snow-white coat with grey rosettes; the PANTHER is a long low sleek stalking body stretched diagonally with an S-curved tail, indigo-blue coat; the TIGER is a mid-stride roaring orange-and-black striped cat with one forepaw raised and the tail curled up; the SABERTOOTH TIGER is a bulky heavy-shouldered ash-grey smilodon seen nearly head-on with two long ivory fangs and a short bobbed tail; none of them is a tabby sitting front-on, a wolf or a bear."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A tiger seen from a steep overhead three-quarter angle: a powerful TIGER caught in a mid-stride ROAR on the disc, head turned toward the viewer with the mouth wide open showing ivory fangs and a pink tongue, one front paw RAISED, bright GOLDEN-ORANGE coat with bold black tapered stripes, a white muzzle, white chest and belly, white cheek ruffs and white-ringed amber eyes, and a thick striped tail curled UP over the haunch; broad pale highlight planes on every upper-left surface and a thin bright rim light. Striped, roaring, raised-paw and complete. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Felines: the TIGER is the MID-STRIDE ROARING golden-orange black-striped cat with one raised paw and an upcurled tail (silhouette: a chunky forward-facing body with an open mouth, a raised paw and a curled tail; hue: golden-orange, black stripes and white; value: bright). The snow cat is a white rounded crouch, the panther a long low indigo stalker and the sabertooth a bulky grey fanged cat, and the shipped Pumpkin is a plain orange tabby sitting front-on: this must not be solid-coloured, must not be sitting and must roar with bold black stripes.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Golden-orange coat, bold black stripes, white muzzle, chest and cheek ruffs, ivory fangs, pink tongue, a thin bright rim; nothing darker than the stripes themselves; the disc stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=tiger, define_as=None, type=animal/subtype=feline, unique=False, native_tall=False); details and hashes in evidence/monster-batch-ad-20260930/source-contracts.json. base BASE_NPC_CAT (animal/feline, no image=, no shader; calls resolvers.sustains_at_birth()); NPC.lua:33 default-name image (npc/<type>_<subtype>_<name>.png) is the only image source: no image=, nice_tile, add_mos, moddable_tile, shader, anim or add_displays on the leaf or base; generic actor.image==entry.image single path; native sprite 64x64; Stealth is the only sustained talent at birth (hides the actor; no image or shader write for a non-moddable cat), Shadow Dance is activated; no equip, no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ad-20260930/source-contracts.json",
+          "sha256": "fb4815f3439287c0d34c0368fe774009c09353228bd77f5d4b1240785023bb74"
+        }
+      ]
+    }
+  ]
+}

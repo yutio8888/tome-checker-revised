@@ -1,0 +1,1358 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "sun-paladin-guren",
+      "master": "masters/sun-paladin-guren-rework-v1.png",
+      "sha256": "453c2c8dd53241596ee64df6dc11e81676779c815967b24154858037ea6456d9",
+      "exports": [
+        {
+          "path": "sprites/48/sun-paladin-guren.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -12.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f13506f3a8c4e7144ce2768d48798a8fee0b08ec8f272a227aa945f66b3c369a"
+        },
+        {
+          "path": "sprites/64/sun-paladin-guren.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -12.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5f24be9f6d91d63b45c761531bffb06eb220562eb568a14959dd0a00950befda"
+        },
+        {
+          "path": "sprites/96/sun-paladin-guren.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -12.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "211df3a882872206c6160206b0f76e9ca624759c7068d47540e05da3e27b5d6e"
+        },
+        {
+          "path": "sprites/128/sun-paladin-guren.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -12.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "336cc898c4fd584df7cad06b3d289fe6cf0af58e7e507397eafc95ab9b20f1ea"
+        },
+        {
+          "path": "sprites/256/sun-paladin-guren.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -12.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6f1482c3e82cdd2577601ee278168ab06611409f0c837c0c9cd8412746ba4861"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.47,
+        "max_sector_intrusion": 3.76,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "epoch",
+      "master": "masters/epoch-v1.png",
+      "sha256": "bffd74019041ed130e905115c55d55b7edbb1522fe75d63ac6ecc6d98a72519a",
+      "exports": [
+        {
+          "path": "sprites/48/epoch.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a7845472f7d9f4ec969e56025fa345709283db661e7c1acc218dfbe0e2028e82"
+        },
+        {
+          "path": "sprites/64/epoch.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "60bbb7ceba7658f77254d36c1639d4d136d3b2a76fd009c405c82a040e8c29ec"
+        },
+        {
+          "path": "sprites/96/epoch.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cfd630df3c6ec678e1171e04bc39f631e4e35100c522a96ade2157805942349d"
+        },
+        {
+          "path": "sprites/128/epoch.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7ac357bc1df3cd868a526ac3ee603e00d43275efc5caff21dced0d7d71dfccc2"
+        },
+        {
+          "path": "sprites/256/epoch.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "db0e901d1dfbd8c89456601552fc84f224fdfcc2aab997638ae0882b01088748"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.74,
+        "max_sector_intrusion": 2.52,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "corrupted-oozemancer",
+      "master": "masters/corrupted-oozemancer-v1.png",
+      "sha256": "62619fe64f2d66761c4fe543770136d09f373455afd70d31314ce4e69cf7fe8c",
+      "exports": [
+        {
+          "path": "sprites/48/corrupted-oozemancer.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b9d8eb6da05f1e919e144b532be696b7cbb1b5bfc7bf93cc2afc9886fda93da4"
+        },
+        {
+          "path": "sprites/64/corrupted-oozemancer.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "984b0b25fc3d66111a4a597bfee5722e7a6db9cea8c163ad5e427f86cae90db1"
+        },
+        {
+          "path": "sprites/96/corrupted-oozemancer.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "33437c0516cd96b1eeb253d10d6b8677b5411aaed8ea6a0a352e89478ab1c6e5"
+        },
+        {
+          "path": "sprites/128/corrupted-oozemancer.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c559bd61a273c475cbf23d07d5a7db0867c7dd98d4a33adf26015ab89294ff61"
+        },
+        {
+          "path": "sprites/256/corrupted-oozemancer.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1165,
+            1171
+          ],
+          "export_window": [
+            -10.209302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a8ae06344ad4be06dba794de767ab76cc13dedd761ee55f62d8ed37374455012"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.34,
+        "max_sector_intrusion": 8.86,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "zemekkys",
+      "master": "masters/zemekkys-rework-v1.png",
+      "sha256": "89893fc694b41261b43a6be3d7f4e248c65c86de7b0ba0fc8fd3760b403ebc83",
+      "exports": [
+        {
+          "path": "sprites/48/zemekkys.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            73,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.616279,
+            -16.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0e564695348f8abecdb41cfee78f2228d3bf1078b7adc82cec6b0c525c7de48f"
+        },
+        {
+          "path": "sprites/64/zemekkys.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            73,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.616279,
+            -16.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2ed2430f5bc5f10e8c0dcad781c73a3d94d9e9109bbb3591f2444420e5cf4cf6"
+        },
+        {
+          "path": "sprites/96/zemekkys.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            73,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.616279,
+            -16.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "42315ab3e6a1a8070118eaef0364a7567f9706211226f2fdc3c3263eb53eb32e"
+        },
+        {
+          "path": "sprites/128/zemekkys.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            73,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.616279,
+            -16.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6abca666c9b5671b12135735919d3854ec450f7d89505dc8da94a1bc2522120d"
+        },
+        {
+          "path": "sprites/256/zemekkys.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            73,
+            1167,
+            1174
+          ],
+          "export_window": [
+            -13.616279,
+            -16.616279,
+            1280.232558
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "05ddbb613c0cf649e45160bac0d79e3ed389d7222a6b34b617f3c8dc01840568"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 4.92,
+        "max_sector_intrusion": 2.94,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "blood-master",
+      "master": "masters/blood-master-v1.png",
+      "sha256": "1bf80b9253ba25f1f3f42b573cbb8267b16bd393faf1491809aac1bf4698145d",
+      "exports": [
+        {
+          "path": "sprites/48/blood-master.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1165,
+            1169
+          ],
+          "export_window": [
+            -8.965116,
+            -12.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0a95334c4b28200053f507eeee09d5c4f20c6e4b9946836b05a3803efb21dcbe"
+        },
+        {
+          "path": "sprites/64/blood-master.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1165,
+            1169
+          ],
+          "export_window": [
+            -8.965116,
+            -12.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3075a730ce4fb2de209c0eb80b38ac357bb5f6424a895eeab5f92bd952984b5c"
+        },
+        {
+          "path": "sprites/96/blood-master.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1165,
+            1169
+          ],
+          "export_window": [
+            -8.965116,
+            -12.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6d1d02298bd320001485f7e8e2691ee3805436a4e99cfac732f705e7f66b4fb7"
+        },
+        {
+          "path": "sprites/128/blood-master.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1165,
+            1169
+          ],
+          "export_window": [
+            -8.965116,
+            -12.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "67a830d711c8f0b8f39daa723b211fb4dc78e4d3ded16ee949cc29d576d5dc24"
+        },
+        {
+          "path": "sprites/256/blood-master.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            76,
+            1165,
+            1169
+          ],
+          "export_window": [
+            -8.965116,
+            -12.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0d3c530e1ecab048fcac553661923aa6fe7068ed972e37435d6b087674f14544"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -0.03,
+        "max_sector_intrusion": 1.29,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "limmir-the-jeweler",
+      "master": "masters/limmir-the-jeweler-v1.png",
+      "sha256": "7b7fb9227544192c80f09995e1144be4f55cb86241434d8551a4e95cc31b7d3b",
+      "exports": [
+        {
+          "path": "sprites/48/limmir-the-jeweler.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1170,
+            1173
+          ],
+          "export_window": [
+            -10.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "37e7e58f3b12eafeeb6b3ffe67844dc165431ced7491823d3dac63ccef766bf5"
+        },
+        {
+          "path": "sprites/64/limmir-the-jeweler.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1170,
+            1173
+          ],
+          "export_window": [
+            -10.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "cac971b11047ebe48c077d8c9d8fa28813e2f68d9232ea39fc1cc087c64f43ff"
+        },
+        {
+          "path": "sprites/96/limmir-the-jeweler.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1170,
+            1173
+          ],
+          "export_window": [
+            -10.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9d05c0c82d20b83b4fa372f6f1992f1559a2a292b46be4224e1766a2b1797739"
+        },
+        {
+          "path": "sprites/128/limmir-the-jeweler.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1170,
+            1173
+          ],
+          "export_window": [
+            -10.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bfa96ea51cc1529bb64aa81200ca09b25eb3e04f5780bf2694b012c81c37391b"
+        },
+        {
+          "path": "sprites/256/limmir-the-jeweler.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1170,
+            1173
+          ],
+          "export_window": [
+            -10.290698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4ae809489e94d00025f180631f93d55feb9afbca4645cdd6778ad3d45b124912"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 2.93,
+        "max_sector_intrusion": 3.85,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "protector-myssil",
+      "master": "masters/protector-myssil-v1.png",
+      "sha256": "85ccfa47f7d1d8fe1aea78771248e8e7a6e8c0f4b863b60e28b6c216274045bc",
+      "exports": [
+        {
+          "path": "sprites/48/protector-myssil.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1170,
+            1175
+          ],
+          "export_window": [
+            -11.453488,
+            -13.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7bf3d2d018e9ed0a2bd5c173e36a280f0a703c977c9d9cc04ad05f5ed89f7255"
+        },
+        {
+          "path": "sprites/64/protector-myssil.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1170,
+            1175
+          ],
+          "export_window": [
+            -11.453488,
+            -13.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "da68999f44b6a86c3756a31ecec925d250870047ca7e1beef153b48efa53b3ca"
+        },
+        {
+          "path": "sprites/96/protector-myssil.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1170,
+            1175
+          ],
+          "export_window": [
+            -11.453488,
+            -13.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9e4dc6870a55ab4f42705863f24065268701c98f8b160a268fb78de61e9ad939"
+        },
+        {
+          "path": "sprites/128/protector-myssil.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1170,
+            1175
+          ],
+          "export_window": [
+            -11.453488,
+            -13.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4c4e8dea039425e6440d2ba9273aeb814b04e6ef2a523f120e4ac4b0349a9a2c"
+        },
+        {
+          "path": "sprites/256/protector-myssil.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1170,
+            1175
+          ],
+          "export_window": [
+            -11.453488,
+            -13.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3695e9ce3b1c4cdef58bf26732d8b75c2674599c1576ae8a745e8038608ecaa8"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.26,
+        "max_sector_intrusion": 2.56,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "rak-shor-cultist",
+      "master": "masters/rak-shor-cultist-rework-v1.png",
+      "sha256": "739ac9e9560c7aa16f9fb6c99d755aa7a2978c69cc8ff6842a6f124e48e7762a",
+      "exports": [
+        {
+          "path": "sprites/48/rak-shor-cultist.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -10.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5de5da0c79c0364948fdb57a64f93514d3265cc34ef91ac16d42ce3f1832fec0"
+        },
+        {
+          "path": "sprites/64/rak-shor-cultist.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -10.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ea8e3b045f608ce2bc961200a82da8bb3f1ccdccb52d6ebfeb2c8dd83f25dd1a"
+        },
+        {
+          "path": "sprites/96/rak-shor-cultist.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -10.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d8f9c4e8911e24513869c1c95384797fb0643889afada1577f544d29f4a9d79f"
+        },
+        {
+          "path": "sprites/128/rak-shor-cultist.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -10.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "763fa860805b5c2d42c9aef891d8ab4bd8550c5ab80542d1fbaaefbb2ef61d4b"
+        },
+        {
+          "path": "sprites/256/rak-shor-cultist.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -10.709302,
+            -14.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "13fe43c980eb1d3611ac4c3c65ec118e77a6824125cfbb12d2146aa11486f734"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 7.36,
+        "max_sector_intrusion": 2.91,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "shady-cornac-man",
+      "master": "masters/shady-cornac-man-v1.png",
+      "sha256": "a055fa2fc96b5ea85208055f2819fb0afb8fbc1c0d4863811909692e521a6380",
+      "exports": [
+        {
+          "path": "sprites/48/shady-cornac-man.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            76,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -10.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "143d26371db8892100135b261dd3fa4203431d6834a037a11681be37b808733c"
+        },
+        {
+          "path": "sprites/64/shady-cornac-man.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            76,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -10.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8e42bad7807aca98e4b7993d9cede0056f25fdcc4cdc23e36757c26183a6ce11"
+        },
+        {
+          "path": "sprites/96/shady-cornac-man.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            76,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -10.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "56e8ccf0c5b2f761228b17c992879a9d3bdcd5a8cc960bd117e57935fa586ed8"
+        },
+        {
+          "path": "sprites/128/shady-cornac-man.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            76,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -10.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "71cfd0754cd30a183500da8706873b2db751f057eccf6ec72b161e55df908b1e"
+        },
+        {
+          "path": "sprites/256/shady-cornac-man.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            76,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -10.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e8d07fd396ccda3dd00e282d1215949110276790fb831e0733492edaf55c4330"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 3.68,
+        "max_sector_intrusion": 2.56,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "tannen",
+      "master": "masters/tannen-v1.png",
+      "sha256": "7d44245d0dbb7a146b6ddee48220967e3a7995f2a0906a06a02ff98287999d2d",
+      "exports": [
+        {
+          "path": "sprites/48/tannen.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e8060cb7f44f610b66cdb752eb5275523786e004693a0c4bf8e9b08acb0a9f68"
+        },
+        {
+          "path": "sprites/64/tannen.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "81fb312f3167ea03d203a4cf188beb10d6b9c258b06d24fa49b46dd75fe1eb45"
+        },
+        {
+          "path": "sprites/96/tannen.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8fe792e98aa26c97bd8a5159de871241a50b17920dd64fa4243ee176893cc251"
+        },
+        {
+          "path": "sprites/128/tannen.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "240766162bba621e4558bd392e067752ed71044f4c3a80af596f67d67ab33d2b"
+        },
+        {
+          "path": "sprites/256/tannen.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ab3d013d7dd3db82276147ae0daaa25918dd1dfbdd3fd54a23163ec336f4ce92"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.58,
+        "max_sector_intrusion": 2.25,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ben-cruthdar-the-cursed",
+      "master": "../monster-batch-j/masters/ben-cruthdar-abomination-v1.png",
+      "sha256": "9c386abff7fe42b46925a31c62cf8022a8f9e500600c39ffa7d8edddb5a30665",
+      "exports": [
+        {
+          "path": "sprites/48/ben-cruthdar-the-cursed.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6153223d1834a68ae96ded9713cebefc9824d5788922716e537bdaf22d067fc5"
+        },
+        {
+          "path": "sprites/64/ben-cruthdar-the-cursed.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d9893d45124e7b8198627e2b4d1b7911911a011d53245422dbe48424ed41043e"
+        },
+        {
+          "path": "sprites/96/ben-cruthdar-the-cursed.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1bbc11dd1c679d99fc00aab44fb28390d9c9c6228b405ce772b4e8872868bf9f"
+        },
+        {
+          "path": "sprites/128/ben-cruthdar-the-cursed.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7a347b1cecbb613f4b3cdda4a6b4c6882caf8212f7862ff7b04bb4fdf07860f9"
+        },
+        {
+          "path": "sprites/256/ben-cruthdar-the-cursed.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            76,
+            1164,
+            1171
+          ],
+          "export_window": [
+            -10.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "660c9252425fc504f32a6b897066fedf60d3435a812e21f7fc5d09ec324216ba"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 2.11,
+        "max_sector_intrusion": 12.97,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

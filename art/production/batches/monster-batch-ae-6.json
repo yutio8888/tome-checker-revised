@@ -1,0 +1,91 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ae-6",
+  "assets": [
+    {
+      "asset_id": "storm-wyrm",
+      "native_name": "storm wyrm",
+      "scope": "class a dungeon pool; game/modules/tome/data/general/npcs/storm-drake.lua:85",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/storm-drake.lua",
+          "sha256": "3b5bb1be5fac8999d6635da9575de8b78e684e439f7b93e7cb95fc051df333db",
+          "line": 85,
+          "anchor": "name = \"storm wyrm\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/storm-drake.lua",
+          "sha256": "3b5bb1be5fac8999d6635da9575de8b78e684e439f7b93e7cb95fc051df333db",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_STORM_DRAKE\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/storm-drake.lua",
+          "sha256": "3b5bb1be5fac8999d6635da9575de8b78e684e439f7b93e7cb95fc051df333db",
+          "line": 87,
+          "anchor": "resolvers.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved physical disc, camera and miniature lighting; do not copy the creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_storm_storm_wyrm.png",
+          "sha256": "76ba0a2757b8decab2d8e594af4ac9c8ddae45202be540f19b9d29d4f5d473c9",
+          "role": "identity",
+          "note": "Native 64x128 lightning dragon identity; preserve coiled great-wyrm anatomy, not the native pale palette. An ancient powerful STORM great wyrm, a thick muscular serpentine body in a compact open horseshoe coil, upright heavy neck and broad angular dragon head. Rich saturated INDIGO and VIOLET scales, broad medium-light lavender-violet upper planes, deep indigo only in narrow recesses. GOLDEN YELLOW belly plates and bright yellow-white forked lightning crackle painted along the scales, no ice blue or white body. TWO large blunt swept-back forked thunderbolt horns and TWO short broad fan-shaped folded shoulder wings with scalloped yellow-edged violet membranes. A low chunky zigzag dorsal ridge, NOT a forest of needle-shaped ice crystals. Keep horns and fan fins tight inside the compact rounded silhouette. Solid opaque painted miniature materials; lightning stays attached to the body, no electrical aura or light spill on disc."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ae/refs/dragons.png",
+          "sha256": "9258e12aa566ce9dc04e3abd426483a2a5eba2522b406dd7225377fa388a8a7a",
+          "role": "family",
+          "note": "Shipped siblings in row order: storm-drake, cold-drake, fire-wyrm, venom-wyrm, ice-wyrm, rantha. Match tabletop language; do not copy their body or silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An ancient powerful STORM great wyrm, a thick muscular serpentine body in a compact open horseshoe coil, upright heavy neck and broad angular dragon head. Rich saturated INDIGO and VIOLET scales, broad medium-light lavender-violet upper planes, deep indigo only in narrow recesses. GOLDEN YELLOW belly plates and bright yellow-white forked lightning crackle painted along the scales, no ice blue or white body. TWO large blunt swept-back forked thunderbolt horns and TWO short broad fan-shaped folded shoulder wings with scalloped yellow-edged violet membranes. A low chunky zigzag dorsal ridge, NOT a forest of needle-shaped ice crystals. Keep horns and fan fins tight inside the compact rounded silhouette. Solid opaque painted miniature materials; lightning stays attached to the body, no electrical aura or light spill on disc.",
+        "contrast": "Use the shipped storm-drake rich violet/indigo and yellow lightning family palette. Storm wyrm has an upright thick neck, open horseshoe coil, blunt forked thunderbolt horns and broad scalloped fan fins; shipped storm-drake is a low crouching bat-winged quadruped. Ice-wyrm and Rantha are pale cold dragons with long sharp crystal needles: do NOT copy their spiny outline, pale belly, blue-white scales or triangular ice wings. Change anatomy as well as palette.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature.",
+        "palette": "Saturated indigo/violet body with broad medium-light lavender-violet highlights and yellow-gold belly, horn edges and yellow-white lightning. Keep the creature clearly lighter than the plate at 48px without turning it pale blue or silver-white. Neutral charcoal disc and copper-grey bevel exactly matching the style reference; no glow, cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "NPC.lua:33 default-name image; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. nice_tile{image=\"invis.png\",add_mos={{image=\"npc/dragon_storm_storm_wyrm.png\",display_h=2,display_y=-1}}}; nicer_tiles off uses the same single native image; native_tall=true for non-unique tall entry. Exact static source contract, no game launch; see evidence/monster-batch-ae-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ae-20261001/source-contracts.json",
+          "sha256": "64b4bd57b941e15445ca9fb5b38cb143b457af1876056517922a4745115885c6"
+        }
+      ],
+      "refinement": {
+        "supersedes": "storm-wyrm",
+        "previous_batch": "monster-batch-ae-3",
+        "design_change_reason": "At 48/64px the pale ice-blue coiled serpent clashes with shipped ice-wyrm and Rantha. Redraw in shipped storm indigo/violet and yellow lightning palette with distinct horns and fins. Gates unchanged. The original numeric pass remains historical evidence; this is a separately reviewed design change with a new horn and fan-fin silhouette, not a palette-only retry.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-ae-3/storm-wyrm/receipts/attempt-1.json",
+            "sha256": "6c83a8a1678fa023277066d81fd03c0b0d0d1cd984c103638c249605f1edf771"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-ae-3/storm-wyrm/imagegen-calls/call-1/call.json",
+            "sha256": "1656cc6632c7b59ffb92c0a6c7f5b5c22b7e111b04ed68e34656d23949bee9f8"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/evidence/monster-batch-ae-storm-refinement-20261001/review-request.json",
+            "sha256": "538d405142cf723f5028bf4be10c4e8049df4a3789382b76444a6c0c95e18fd8"
+          }
+        ]
+      }
+    }
+  ]
+}

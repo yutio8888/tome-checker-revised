@@ -1,0 +1,306 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ad-1",
+  "assets": [
+    {
+      "asset_id": "duathedlen",
+      "native_name": "dúathedlen",
+      "scope": "dungeon pool (general/npcs/major-demon.lua:73, demon/major, non-unique, no define_as, rank 2, base BASE_NPC_MAJOR_DEMON, explicit tall nice_tile body); the only definition of this name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 74,
+          "anchor": "name = \"dúathedlen\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 75,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 91,
+          "anchor": "T_BLOOD_GRASP"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_MAJOR_DEMON\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_duathedlen.png",
+          "sha256": "aaf77c698b0a4ed19b2bfef33c350e2ce0b76ee10500100d7b2ed412aad803be",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): an almost black lean horned demon wreathed in a cloud of darkness, with two red eyes and red hands. Keep the lean horned shadow-demon with red eyes and red-lit hand, drawn as ONE compact figure filling the disc, no tall canvas, rendered in pale ash-lavender and slate-violet so it reads as a light shape on the dark disc, clearly not the red thorned demons."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ad/refs/major-demons.png",
+          "sha256": "9c795bdd880afb5a2dbcbe1c7c27d7b37d0da5e864e030bc3f09af9472f8d117",
+          "role": "family",
+          "note": "Six shipped major demon tokens (Dolleg: a red thorned demon; Uruivellas: a flame-wreathed horned bull; Thaurhereg: a thin red spiked demon; Kryl-Feijan; Lithfengel: a grey smoke ghost with red eyes; Harkor'Zun): the DUATHEDLEN is a lean horned demon made of pale ASH-LAVENDER and slate-violet shadow with glowing red eyes and red cracks, drifting ragged shadow tendrils and a red-lit open palm; the DAELACH is an armoured horned demon half-emerging from a rolling cloud of dark PLUM smoke veined with magenta and orange shadow-flame, a longsword in one hand and a waraxe in the other; neither is a red thorned demon, a flaming bull or a plain grey smoke ghost."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A duathedlen (darkness exiled) seen from a steep overhead three-quarter angle: a lean, tall-limbed HORNED DEMON standing in a slight hunch on the disc, its body made of pale ASH-LAVENDER and slate-violet shadow-flesh with a few glowing RED cracks across the chest and ribs, a narrow horned skull-like head with two swept-back curved horns and two glowing red eyes, long thin arms, one claw hand held forward with a small glowing RED orb of blood-light in the open palm, ragged drifting tendrils of pale grey-lilac shadow curling off the shoulders and hips (kept close to the body and pale, never dark smoke); broad pale highlight planes on every upper-left surface and a thin bright rim light. Horned, red-eyed, lavender and complete. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Major demons: the DUATHEDLEN is the LEAN HORNED SHADOW-DEMON of pale ash-lavender and slate-violet with red eyes, red cracks and a red-lit palm (silhouette: a thin upright figure with two curved horns, long arms and trailing shadow wisps; hue: ash-lavender, violet-grey and red accents; value: mid-light). The shipped Dolleg is a red thorned brute, Uruivellas a flame-wreathed bull, Thaurhereg a thin red spiked demon and Lithfengel a grey smoke ghost: this must not be red, must not be thorned, must not be a bull and must not be a formless smoke cloud.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Ash-lavender and slate-violet body, pale grey-lilac shadow wisps, glowing red eyes and red cracks, a thin bright rim; nothing darker than mid slate-violet except the eye sockets and cracks; NO black body, no black smoke; the red glow stays on the figure and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=dúathedlen, define_as=None, type=demon/subtype=major, unique=False, native_tall=True); details and hashes in evidence/monster-batch-ad-20260930/source-contracts.json. base BASE_NPC_MAJOR_DEMON (demon/major, no image=, no shader, resolvers.inscriptions(1, \"rune\") only picks runes); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/demon_major_duathedlen.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the single image is used); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true NOTE: the default-name image of this leaf would be npc/demon_major_d__athedlen.png (NPC.lua:33 replaces each byte of the UTF-8 u-acute with an underscore and no such PNG exists), so with nicer_tiles OFF the actor.image never equals the catalog image and the token is simply not applied (native behaviour stays); with nicer_tiles ON (the default) the explicit nice_tile body matches through the native-tall path; the leaf calls neither sustains_at_birth nor equip; Darkness and Blood Grasp are activated talents; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ad-20260930/source-contracts.json",
+          "sha256": "fb4815f3439287c0d34c0368fe774009c09353228bd77f5d4b1240785023bb74"
+        }
+      ]
+    },
+    {
+      "asset_id": "daelach",
+      "native_name": "daelach",
+      "scope": "dungeon pool (general/npcs/major-demon.lua:162, demon/major, non-unique, no define_as, rank 3, base BASE_NPC_MAJOR_DEMON, explicit tall nice_tile body); the only definition of this name (the unique Corrupted Daelach of valley-moon is a different name, define_as and PNG and is not part of this batch)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 163,
+          "anchor": "name = \"daelach\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 164,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 199,
+          "anchor": "T_TWILIGHT_SURGE"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 181,
+          "anchor": "resolvers.equip"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+          "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_MAJOR_DEMON\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_daelach.png",
+          "sha256": "539abeae90792c970a342d3f3a5117e543d1814d6c2ecba2fc2ed4cd00ac8f63",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a tall billowing cloud of black smoke and dark fire with no visible body. Keep the billowing shadow-flame cloud, but draw it as ONE compact mass filling the disc with an armoured horned demon half-emerging from it carrying a longsword and a waraxe (the demon holds the two weapons it really wields), rendered in plum-violet and lavender smoke with bright magenta and orange shadow-flame, clearly not the grey smoke ghost or the red demons."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ad/refs/major-demons.png",
+          "sha256": "9c795bdd880afb5a2dbcbe1c7c27d7b37d0da5e864e030bc3f09af9472f8d117",
+          "role": "family",
+          "note": "Six shipped major demon tokens (Dolleg: a red thorned demon; Uruivellas: a flame-wreathed horned bull; Thaurhereg: a thin red spiked demon; Kryl-Feijan; Lithfengel: a grey smoke ghost with red eyes; Harkor'Zun): the DUATHEDLEN is a lean horned demon made of pale ASH-LAVENDER and slate-violet shadow with glowing red eyes and red cracks, drifting ragged shadow tendrils and a red-lit open palm; the DAELACH is an armoured horned demon half-emerging from a rolling cloud of dark PLUM smoke veined with magenta and orange shadow-flame, a longsword in one hand and a waraxe in the other; neither is a red thorned demon, a flaming bull or a plain grey smoke ghost."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A daelach (shadow flame) seen from a steep overhead three-quarter angle: a rolling compact CLOUD of PLUM-VIOLET and lavender smoke hovering over the disc, veined with bright MAGENTA and ember-ORANGE shadow-flame flickering along its edges, and emerging from the front of the cloud a broad-shouldered ARMOURED HORNED DEMON torso in dark-violet plate with pale lavender highlights, two thick curved horns, two burning orange eyes, a bright steel LONGSWORD in one hand and a bright steel WARAXE in the other, both held in close; broad pale highlight planes on every upper-left surface and a thin bright rim light. Smoking, horned, armed and complete. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Major demons: the DAELACH is the ROLLING PLUM SMOKE-AND-FLAME CLOUD with a horned armoured demon and two weapons half-emerging (silhouette: a rounded cloud mass with a horned head and a blade on each side; hue: plum-violet, lavender, magenta and orange flame; value: mid-light). The shipped Lithfengel is a thin grey smoke ghost with red eyes, Dolleg and Thaurhereg red brutes and Uruivellas a flaming bull: this must not be grey, must not be a bare ghost and must show the armoured demon with sword and axe.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Plum-violet and lavender smoke, pale lavender plate highlights, magenta and ember-orange flame edges, steel weapons, orange eyes, a thin bright rim; nothing darker than mid plum except the eye sockets and seams; NO black smoke mass, no black armour; the flame glow stays on the figure and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=daelach, define_as=None, type=demon/subtype=major, unique=False, native_tall=True); details and hashes in evidence/monster-batch-ad-20260930/source-contracts.json. base BASE_NPC_MAJOR_DEMON (demon/major, no image=, no shader); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/demon_major_daelach.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the single image is used); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; resolvers.equip a longsword and a waraxe (equipment only, no moddable_tile); the leaf has no sustains_at_birth of its own and its talents are activated or passive; no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ad-20260930/source-contracts.json",
+          "sha256": "fb4815f3439287c0d34c0368fe774009c09353228bd77f5d4b1240785023bb74"
+        }
+      ]
+    },
+    {
+      "asset_id": "ice-wyrm",
+      "native_name": "ice wyrm",
+      "scope": "dungeon pool (general/npcs/cold-drake.lua:89, dragon/cold, non-unique, no define_as, rank 3, base BASE_NPC_COLD_DRAKE, explicit tall nice_tile body); the only definition of this name; the vaults frost-dragon-lair, sleeping-dragons and renegade-wyrmics pick it by name/random_filter (the same leaf)",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/cold-drake.lua",
+          "sha256": "60153bdad6955f2773d8db30457e717c480cf794e7d0793ff027a994dcb0bff4",
+          "line": 90,
+          "anchor": "name = \"ice wyrm\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/cold-drake.lua",
+          "sha256": "60153bdad6955f2773d8db30457e717c480cf794e7d0793ff027a994dcb0bff4",
+          "line": 92,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/cold-drake.lua",
+          "sha256": "60153bdad6955f2773d8db30457e717c480cf794e7d0793ff027a994dcb0bff4",
+          "line": 117,
+          "anchor": "T_ICE_BREATH"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/cold-drake.lua",
+          "sha256": "60153bdad6955f2773d8db30457e717c480cf794e7d0793ff027a994dcb0bff4",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_COLD_DRAKE\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_cold_ice_wyrm.png",
+          "sha256": "c2f414a5ff66a68ab457ce5b5a27ea6c429000baca9e2b65b8481c68cfecec07",
+          "role": "identity",
+          "note": "Native shape (64x128, tall): a large deep-blue serpentine wyrm with big spread bat wings, a horned head and a coiled body. Keep the big blue wyrm with horned head and wings, drawn as ONE compact coiled figure filling the disc, no tall canvas, wings folded tight, in silver-white and cobalt with pale ice-crystal spines, clearly not the teal cold drake."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ad/refs/wyrms.png",
+          "sha256": "254d651bc540c49d0379f8498737db4001a7803d0529dcbce7fc80dc727b867b",
+          "role": "family",
+          "note": "Six shipped dragon tokens (the cold drake: a teal-blue crouching drake; the fire wyrm: a red serpentine coiled wyrm; the venom wyrm: a green coiled wyrm; Rantha the Worm: a grey-blue winged worm; the storm drake and the fire drake): the ICE WYRM is a serpentine wyrm coiled into a compact spiral under a raised horned head, silver-white and deep cobalt scales, a crest of translucent-pale ice-crystal spines down the neck and back, the two bat-like wings folded tight against the body; it is not a crouching teal drake, not a red or green coiled wyrm and not a grey-blue worm."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An ice wyrm seen from a steep overhead three-quarter angle: a serpentine ICE WYRM coiled into a compact SPIRAL on the disc with its long horned head raised at the front, SILVER-WHITE belly plates and deep COBALT-BLUE scales on the back, a ridge of translucent PALE ICE-CRYSTAL SPINES running down the neck and back, two large curved horns swept back, pale blue glowing eyes, both bat-like wings FOLDED TIGHT against its flanks with pale blue membranes and white frost-rimed wing fingers, clawed forelegs gripping the coil, a thin wisp of white frost breath at the open jaws kept close; broad pale highlight planes on every upper-left surface and a thin bright rim light. Coiled, crystalled, horned and complete. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Dragons: the ICE WYRM is the COILED SERPENTINE silver-white and cobalt wyrm with ice-crystal spines, swept horns and tightly folded wings (silhouette: a spiral coil topped by a raised horned head with a crest of spikes; hue: silver-white, cobalt blue and pale ice-blue; value: light with mid-blue scales). The shipped cold drake is a crouching teal-blue drake with open wings, the fire wyrm a red coil, the venom wyrm a green coil and Rantha a grey-blue winged worm: this must not be teal, must not crouch on four legs with open wings and must carry a crystalline spine crest.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Silver-white plates, cobalt-blue scales, pale translucent ice-blue crystals, pale blue eyes and wing membranes, a thin bright rim; nothing darker than mid cobalt except the eye sockets and scale seams; NO navy-black body; the frost stays on the figure and must not tint the disc, which stays neutral charcoal at reference lightness. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=ice wyrm, define_as=None, type=dragon/subtype=cold, unique=False, native_tall=True); details and hashes in evidence/monster-batch-ad-20260930/source-contracts.json. base BASE_NPC_COLD_DRAKE (dragon/cold, no image=, no shader); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/dragon_cold_ice_wyrm.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the single image is used); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true; no equip, no sustains_at_birth; Ice Claw and Ice Breath are activated and Icy Skin is a sustained defensive buff (temporary values and particles); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ad-20260930/source-contracts.json",
+          "sha256": "fb4815f3439287c0d34c0368fe774009c09353228bd77f5d4b1240785023bb74"
+        }
+      ]
+    },
+    {
+      "asset_id": "snow-cat",
+      "native_name": "snow cat",
+      "scope": "dungeon pool (general/npcs/feline.lua:40, animal/feline, non-unique, no define_as, rank 2, base BASE_NPC_CAT, explicit tall nice_tile body); the only definition of this name; the vaults forest-ruined-building3 and snake-pit pick it by name",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/feline.lua",
+          "sha256": "dea8cdb4378ddf062570cff9d7d44a78fd0f75e9ad5fbdc3e7d8779cb000e8d9",
+          "line": 41,
+          "anchor": "name = \"snow cat\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/feline.lua",
+          "sha256": "dea8cdb4378ddf062570cff9d7d44a78fd0f75e9ad5fbdc3e7d8779cb000e8d9",
+          "line": 42,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/feline.lua",
+          "sha256": "dea8cdb4378ddf062570cff9d7d44a78fd0f75e9ad5fbdc3e7d8779cb000e8d9",
+          "line": 53,
+          "anchor": "T_LETHALITY"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/feline.lua",
+          "sha256": "dea8cdb4378ddf062570cff9d7d44a78fd0f75e9ad5fbdc3e7d8779cb000e8d9",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_CAT\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/feline.lua",
+          "sha256": "dea8cdb4378ddf062570cff9d7d44a78fd0f75e9ad5fbdc3e7d8779cb000e8d9",
+          "line": 36,
+          "anchor": "resolvers.sustains_at_birth()"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, lighting and camera; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/animal_feline_snow_cat.png",
+          "sha256": "04b8fa7bc88a061b75751140a231e746070e68c1e83bc502daed75373127f9a7",
+          "role": "identity",
+          "note": "Native shape (64x128, tall canvas): a snow-white and grey rosette-coated large cat crouched low with a bushy ringed tail and amber eyes. Keep the snow leopard: pale grey-white coat with darker grey rosette spots and a thick ringed tail, drawn as ONE compact round crouching figure filling the disc, no tall canvas, clearly not a white wolf or a tabby."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ad/refs/felines.png",
+          "sha256": "e0002235512cdf1ae4c5c48400c0d09c8678fa711cbe0800dc83e4516f0eab9b",
+          "role": "family",
+          "note": "Six shipped animal tokens (Pumpkin: a fat orange tabby sitting front-on; the white wolf: a low white wolf; the dire wolf: a brown prowling wolf; the wolf, the polar bear and the great wolf): the four big cats are a set of distinct POSES as well as colours: the SNOW CAT sits in a tight round crouch with a thick ringed tail wrapped around its body, snow-white coat with grey rosettes; the PANTHER is a long low sleek stalking body stretched diagonally with an S-curved tail, indigo-blue coat; the TIGER is a mid-stride roaring orange-and-black striped cat with one forepaw raised and the tail curled up; the SABERTOOTH TIGER is a bulky heavy-shouldered ash-grey smilodon seen nearly head-on with two long ivory fangs and a short bobbed tail; none of them is a tabby sitting front-on, a wolf or a bear."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A snow cat seen from a steep overhead three-quarter angle: a large SNOW LEOPARD sitting in a tight ROUND CROUCH on the disc, dense thick pale grey-white fur with clear DARK-GREY ROSETTE spots on the back and flanks, a broad round head turned toward the viewer with white cheek ruffs, pale AMBER eyes and a pink nose, small rounded ears, big fluffy forepaws tucked under the chest, and a thick bushy TAIL with dark grey rings wrapped around the front of the body; broad pale highlight planes on every upper-left surface and a thin bright rim light. Round, rosetted, ringed-tail and complete. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Felines: the SNOW CAT is the ROUND CROUCHING snow leopard with grey rosettes, cheek ruffs and a thick ringed tail wrapped around its body (silhouette: a compact rounded mound with a round head and a wrapped tail; hue: pale grey-white with dark grey rosettes and amber eyes; value: very light). The other three big cats are a long low stalking panther, a mid-stride roaring tiger and a bulky fanged sabertooth, and the shipped Pumpkin is a fat orange tabby sitting front-on and the white wolf a low white wolf: this must not be orange, must not be a wolf and must not be long and stalking.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. Draw the whole creature as ONE compact upright figure filling the disc; never a tall canvas.",
+        "palette": "Pale grey-white fur, dark grey rosettes and tail rings, pink nose, amber eyes, a thin bright rim; nothing darker than mid grey except the rosettes and eye slits; the disc stays neutral charcoal at reference lightness, not lightened under the white fur. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified directly against game/modules/tome source (name=snow cat, define_as=None, type=animal/subtype=feline, unique=False, native_tall=True); details and hashes in evidence/monster-batch-ad-20260930/source-contracts.json. base BASE_NPC_CAT (animal/feline, no image=, no shader; calls resolvers.sustains_at_birth()); resolvers.nice_tile{image=\"invis.png\", add_mos={{image=\"npc/animal_feline_snow_cat.png\", display_h=2, display_y=-1}}} names the tall PNG explicitly (keys image/display_h/display_y only; with nicer_tiles off nice_tile is a no-op and the single image is used); no moddable_tile, shader, anim or add_displays; native sprite 64x128; non-unique with no define_as, so the catalog entry carries native_tall=true. The native source line sets nice_tile image=\"invis.png\" only as the tall-body mechanism (the same as dolleg, uruivellas and thaurhereg): with nicer_tiles on the body is the add_mos entry; with nicer_tiles off the default-name image animal_feline_snow_cat.png is used directly, and both paths are covered; Stealth is the only sustained talent (hides the actor, no image or shader write for a non-moddable cat; the matcher already rejects an actor carrying a shader); no auto_classes. Exact catalog entry only, never a whole-subtype mapping.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ad-20260930/source-contracts.json",
+          "sha256": "fb4815f3439287c0d34c0368fe774009c09353228bd77f5d4b1240785023bb74"
+        }
+      ]
+    }
+  ]
+}

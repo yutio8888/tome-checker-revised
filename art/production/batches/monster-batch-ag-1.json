@@ -1,0 +1,246 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ag-1",
+  "assets": [
+    {
+      "asset_id": "multi-hued-drake-hatchling",
+      "native_name": "multi-hued drake hatchling",
+      "scope": "class a off-list pool; game/modules/tome/data/general/npcs/multihued-drake.lua:47",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/multihued-drake.lua",
+          "sha256": "4e38173b9121c9d1b1cc33edf157f5e743d39a720af43ba9fb65aef1ce6f3d1a",
+          "line": 47,
+          "anchor": "name = \"multi-hued drake hatchling\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/multihued-drake.lua",
+          "sha256": "4e38173b9121c9d1b1cc33edf157f5e743d39a720af43ba9fb65aef1ce6f3d1a",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_MULTIHUED_DRAKE\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/multihued-drake.lua",
+          "sha256": "4e38173b9121c9d1b1cc33edf157f5e743d39a720af43ba9fb65aef1ce6f3d1a",
+          "line": 26,
+          "anchor": "shader = \"quad_hue\""
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved tabletop disc, camera, lighting only; do not copy creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_multihued_multi_hued_drake_hatchling.png",
+          "sha256": "791a3b0d94741226dfdd525755f14b0d3ef9243c9207935bbd4c87bd189a8be3",
+          "role": "identity",
+          "note": "Inspected native identity and anatomy, [64, 64]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ag/refs/multihued.png",
+          "sha256": "ef10a59fb358ea30afa858e71930c6012a00301235623346a30b7ae8b60caa73",
+          "role": "family",
+          "note": "Shipped siblings row order: fire-drake-hatchling, cold-drake-hatchling, storm-drake-hatchling, fire-drake, storm-drake, venom-drake, fire-wyrm, ice-wyrm, storm-wyrm. Compare shape; do not copy anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A small young multi-hued drake hatchling sitting up on its haunches, chubby round body, short stubby wings half raised, big round head topped by a wide SPREAD FAN-SHAPED FRILL of many thin upright spines like a crest fan, tail curled forward around its feet. Its scales are an opalescent HARLEQUIN MOSAIC of distinct patches: coral red, leaf green, sky blue, violet and gold, each patch mid-light with pale pearly highlights, iridescent sheen on the frill. Pale cream belly plates, small bright eyes. One baby dragon, no breath effect. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Hatchling: small seated chubby baby with a WIDE SPINED HEAD FAN and mosaic patchwork scales of many colours; shipped fire/cold/storm/venom hatchlings are single-colour, crest-less or serpentine; the multi-hued drake adult is a heavy roaring quadruped with swept fin-wings and the greater wyrm a towering winged coil.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "NPC.lua:33 default-name image; flat single image 64x64. Actor shader quad_hue (no shader_args) only with nicer_tiles off; base nice_tile sets shader=false otherwise. Exact native_shader=\"quad_hue\" allow-list entry. Static evidence only; live separate.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ag-20261001/source-contracts.json",
+          "sha256": "d252989a9bb7046bc033bafdad4168fe96164de52793d09961cd91060d8a46d6"
+        }
+      ]
+    },
+    {
+      "asset_id": "multi-hued-drake",
+      "native_name": "multi-hued drake",
+      "scope": "class a off-list pool; game/modules/tome/data/general/npcs/multihued-drake.lua:68",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/multihued-drake.lua",
+          "sha256": "4e38173b9121c9d1b1cc33edf157f5e743d39a720af43ba9fb65aef1ce6f3d1a",
+          "line": 68,
+          "anchor": "name = \"multi-hued drake\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/multihued-drake.lua",
+          "sha256": "4e38173b9121c9d1b1cc33edf157f5e743d39a720af43ba9fb65aef1ce6f3d1a",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_MULTIHUED_DRAKE\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/multihued-drake.lua",
+          "sha256": "4e38173b9121c9d1b1cc33edf157f5e743d39a720af43ba9fb65aef1ce6f3d1a",
+          "line": 26,
+          "anchor": "shader = \"quad_hue\""
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved tabletop disc, camera, lighting only; do not copy creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_multihued_multi_hued_drake.png",
+          "sha256": "1f4c17ab402853ee4ca405b6ee25553ea57d53679677dfddc3cc39b6443f5126",
+          "role": "identity",
+          "note": "Inspected native identity and anatomy, [64, 64]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ag/refs/multihued.png",
+          "sha256": "ef10a59fb358ea30afa858e71930c6012a00301235623346a30b7ae8b60caa73",
+          "role": "family",
+          "note": "Shipped siblings row order: fire-drake-hatchling, cold-drake-hatchling, storm-drake-hatchling, fire-drake, storm-drake, venom-drake, fire-wyrm, ice-wyrm, storm-wyrm. Compare shape; do not copy anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A mature heavy multi-hued drake crouched low on four thick legs, broad barrel body, head thrust forward with jaws WIDE OPEN in a roar showing a pale throat, a crown of several swept-back horns and spines, two large swept-back FIN-LIKE WINGS folded tight along the back with membranes divided into separate colour panels. Pearl-white base hide covered in a HARLEQUIN MOSAIC of coral red, emerald green, cobalt blue and violet scale patches, all mid-light with broad pearly highlights. No breath effect. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Adult drake: heavy low four-legged roaring body with swept panelled fin-wings and pearl hide with multicolour patches; differs from the seated fan-crested hatchling and the upright coiled greater wyrm by posture and build, and from shipped fire/storm/cold/venom/sand drakes by the many-coloured panelled wings, open roar and patchwork, not only hue.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "NPC.lua:33 default-name image; flat single image 64x64. Actor shader quad_hue (no shader_args) only with nicer_tiles off; base nice_tile sets shader=false otherwise. Exact native_shader=\"quad_hue\" allow-list entry. Static evidence only; live separate.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ag-20261001/source-contracts.json",
+          "sha256": "d252989a9bb7046bc033bafdad4168fe96164de52793d09961cd91060d8a46d6"
+        }
+      ]
+    },
+    {
+      "asset_id": "greater-multi-hued-wyrm",
+      "native_name": "greater multi-hued wyrm",
+      "scope": "class a off-list pool; game/modules/tome/data/general/npcs/multihued-drake.lua:99",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/multihued-drake.lua",
+          "sha256": "4e38173b9121c9d1b1cc33edf157f5e743d39a720af43ba9fb65aef1ce6f3d1a",
+          "line": 99,
+          "anchor": "name = \"greater multi-hued wyrm\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/multihued-drake.lua",
+          "sha256": "4e38173b9121c9d1b1cc33edf157f5e743d39a720af43ba9fb65aef1ce6f3d1a",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_MULTIHUED_DRAKE\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/multihued-drake.lua",
+          "sha256": "4e38173b9121c9d1b1cc33edf157f5e743d39a720af43ba9fb65aef1ce6f3d1a",
+          "line": 100,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/multihued-drake.lua",
+          "sha256": "4e38173b9121c9d1b1cc33edf157f5e743d39a720af43ba9fb65aef1ce6f3d1a",
+          "line": 26,
+          "anchor": "shader = \"quad_hue\""
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved tabletop disc, camera, lighting only; do not copy creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_multihued_greater_multi_hued_wyrm.png",
+          "sha256": "1fd808ab7bec607fa4093b7ab67c2c1203d5338ee37c8bc615bd9a15fa6ee8f8",
+          "role": "identity",
+          "note": "Inspected native identity and anatomy, [64, 128]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ag/refs/multihued.png",
+          "sha256": "ef10a59fb358ea30afa858e71930c6012a00301235623346a30b7ae8b60caa73",
+          "role": "family",
+          "note": "Shipped siblings row order: fire-drake-hatchling, cold-drake-hatchling, storm-drake-hatchling, fire-drake, storm-drake, venom-drake, fire-wyrm, ice-wyrm, storm-wyrm. Compare shape; do not copy anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An old powerful greater multi-hued wyrm REARING UPRIGHT: long serpentine neck raised in an S-curve over a coiled heavy body, horned head with a beak-like snout turned sideways, and two HUGE upright bat WINGS raised high behind it and folded close together like a tall fan, wing ribs radiating with separate membrane panels in coral red, green, blue, violet and gold. Deep sapphire-blue hide (mid-light, never black) mottled with a mosaic of iridescent colour patches, broad pearly highlights on neck and coils. Compact vertical silhouette, tail tucked in the coil. No breath effect. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Greater wyrm: towering upright neck plus a tall fan of raised panelled wings above a heavy coil; shipped fire/venom/ice/storm wyrms are wingless or small-winged horizontal coils of one colour; the multi-hued drake crouches on four legs, the hatchling sits small with a head fan.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "NPC.lua:33 default-name image; nicer_tiles on: invis.png + one body {image=PNG,display_h=2,display_y=-1} (native_tall); nicer_tiles off: the same PNG as a single image. Actor shader quad_hue (no shader_args) only with nicer_tiles off; base nice_tile sets shader=false otherwise. Exact native_shader=\"quad_hue\" allow-list entry. Static evidence only; live separate.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ag-20261001/source-contracts.json",
+          "sha256": "d252989a9bb7046bc033bafdad4168fe96164de52793d09961cd91060d8a46d6"
+        }
+      ]
+    }
+  ]
+}

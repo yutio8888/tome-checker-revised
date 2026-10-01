@@ -1,0 +1,119 @@
+{
+  "master": "art/monster-batch-ua/masters/grgglck-v2.png",
+  "sha256": "f438cd71e5b20cc03536962b30008134ef78121c90b5ba85c0e74e1240ab61c1",
+  "body_luminance": 74.53,
+  "unchanged_body_minimum": 65.0,
+  "body_passed": true,
+  "style_gate": {
+    "asset_id": "grgglck",
+    "token": {
+      "path": "/workspace/t-engine4/game/addons/tome-checker-revised/art/monster-batch-ua/rework/candidates/grgglck-v2/128.png",
+      "sha256": "12267cdffdc484704a44d550247fefeb2a63b979150e4f8a8ab6af84b61223fa",
+      "sector_medians": [
+        71.76,
+        72.8,
+        69.04,
+        71.13,
+        69.78,
+        70.02,
+        75.07,
+        77.39
+      ],
+      "sector_offsets": [
+        -0.33,
+        1.64,
+        4.38,
+        8.16,
+        4.57,
+        2.97,
+        0.74,
+        0.97
+      ],
+      "base_drift": 2.3,
+      "max_sector_intrusion": 5.86,
+      "max_opaque_radius": 0.8596,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ring_samples": [
+        298,
+        303,
+        298,
+        303,
+        298,
+        303,
+        298,
+        303
+      ]
+    },
+    "master": {
+      "path": "art/monster-batch-ua/masters/grgglck-v2.png",
+      "sha256": "f438cd71e5b20cc03536962b30008134ef78121c90b5ba85c0e74e1240ab61c1",
+      "format": "PNG",
+      "mode": "RGBA",
+      "native_alpha_channel": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    "findings": [
+      {
+        "check": "master_native_alpha",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255",
+        "mode": "RGBA",
+        "alpha_min": 0,
+        "alpha_max": 255
+      },
+      {
+        "check": "disc_overflow",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u6700\u5927\u4e0d\u900f\u660e\u534a\u5f84 0.860\uff08\u4e0a\u9650 0.867\uff09",
+        "value": 0.8596,
+        "limit": 0.867
+      },
+      {
+        "check": "base_drift",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u5e95\u76d8\u504f\u79fb\u4e2d\u4f4d +2.30\uff08\u5bb9\u5dee \u00b18\uff09",
+        "value": 2.3,
+        "limit": 8.0
+      },
+      {
+        "check": "subject_intrusion",
+        "level": "warning",
+        "ok": true,
+        "detail": "\u5355\u6247\u533a\u76f8\u5bf9\u672c\u6b3e\u4e2d\u4f4d\u6700\u5927\u4e0a\u504f +5.86\uff08\u5bb9\u5dee +20\uff09",
+        "value": 5.86,
+        "limit": 20.0
+      },
+      {
+        "check": "corner_alpha",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]",
+        "value": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "blocking": [],
+    "warnings": [],
+    "grandfathered": false,
+    "waived": false,
+    "notes": [],
+    "passed": true
+  }
+}

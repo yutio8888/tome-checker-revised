@@ -1,0 +1,20 @@
+# Pack 5: tiger call 1 (pack 2) returned no image path (codex reported no output; provenance-rejected, nothing stored). Same brief re-run once (second call for this asset).
+A.append(dict(next(a for a in A if a['id'] == 'tiger' and a['pack'] == 2), pack=5))
+
+# Pack 6: orc-mage-hunter call 1 (pack 3) returned no image path (provenance-rejected, nothing stored). Same brief re-run once (second call for this asset).
+A.append(dict(next(a for a in A if a['id'] == 'orc-mage-hunter' and a['pack'] == 3), pack=6))
+
+# Pack 7 (review of the 128px exports before shipping): panther pack-2 export passed every geometry and drift gate but its masked body luminance is 59.32, under the shipped floor of 65 (dark indigo coat on the dark disc). Second and last call for this asset: same stalking panther, rendered clearly lighter.
+PANTHER_LIFT = " LIGHTNESS REFINEMENT (the previous generation of this exact token passed the geometry gates but its coat measured too dark against the charcoal disc): keep the same long low stalking panther with the S-curved tail and lifted paw, but render the whole coat in a clearly LIGHTER mid-tone periwinkle-blue and cool slate-lilac, about as light as the copper-grey bevel of the disc or lighter, with big pale lavender-white highlight planes covering the whole back, shoulder, haunch and head top, a bright pale RIM LIGHT along the entire upper-left outline, light lavender paw pads, and bright yellow-green eyes; only the nostril, mouth line and eye slits are dark; no deep indigo, navy or black anywhere on the coat; the cat fills a circle of about 0.62 of the disc radius, centred; render the whole disc and its plate at exactly the style reference lightness."
+_pn = next(a for a in A if a['id'] == 'panther' and a['pack'] == 2)
+A.append(dict(_pn, pack=7, comp=_pn['comp'] + PANTHER_LIFT))
+
+# Pack 8 (same review): ritch hunter pack-4 export passed the geometry and drift gates but its masked body luminance is 61.31 (< 65): slate-indigo chitin on the dark disc. Second and last call for this asset: same lean wasp-like hunter, rendered lighter.
+HUNTER_LIFT = " LIGHTNESS REFINEMENT (the previous generation of this exact token passed the geometry gates but its chitin measured too dark against the charcoal disc): keep the same lean upright wasp-like ritch with scythe forelegs, hooked horn crest and held-back wings, but render the chitin in a clearly LIGHTER mid-tone steel-blue and cornflower-slate, as light as the copper-grey bevel of the disc or lighter, with big pale ice-blue and cream highlight planes on the thorax, head and every upper-left plate, bright saturated ORANGE zig-zag stripes, pale blue-white glassy wings, a bright pale RIM LIGHT along the whole upper-left outline and bright amber eyes; only the eye rims and leg joints are dark; no navy, deep indigo or black chitin anywhere; the figure fills a circle of about 0.62 of the disc radius, centred, still with a wide bare ring of plate; render the whole disc and its plate at exactly the style reference lightness."
+_rh = next(a for a in A if a['id'] == 'ritch-hunter' and a['pack'] == 4)
+A.append(dict(_rh, pack=8, comp=_rh['comp'] + HUNTER_LIFT))
+
+# Pack 9: ritch-hunter call 2 (pack 8) rendered the lighter steel-blue hunter well but failed the base_drift gate (+8.77, tolerance +-8): the whole disc plate came out LIGHTER than the style reference. Third and last call for this asset: same lighter hunter, with the plate held at reference lightness.
+HUNTER_DISC = " DISC CALIBRATION (the previous generation of this exact token had the disc plate LIGHTER than the style reference): keep the same lighter steel-blue and cornflower hunter with bright orange stripes, but render the disc, its outer ring band and the plate under and around the figure at exactly the style reference lightness, NOT lighter: the dark charcoal-brown plate stays as dark as the reference, evenly all round, with no glow, bounce light or pale spill from the pale wings or the pale highlights onto the plate."
+_rh2 = next(a for a in A if a['id'] == 'ritch-hunter' and a['pack'] == 8)
+A.append(dict(_rh2, pack=9, comp=_rh2['comp'] + HUNTER_DISC))

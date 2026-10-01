@@ -1,0 +1,23 @@
+{
+  "authority": "Coordinator review of commit dcb5c982 (2026-10-01, this task)",
+  "accepted_previous": [
+    "apprentice-mage",
+    "pyromancer",
+    "cryomancer",
+    "geomancer",
+    "tempest",
+    "derth-guard",
+    "last-hope-guard",
+    "halfling-guard",
+    "dwarven-guard",
+    "elvala-guard",
+    "slaver",
+    "enthralled-slave"
+  ],
+  "rework": {
+    "human-guard": "Rejected v2 read almost identical to the shipped elven-guard token (green tunic/tabard, green shield, upright sword) and was unfaithful to native npc/humanoid_human_human_guard.png. Redraw faithful to the native sprite: brown studded leather jerkin with shoulder pads as the dominant torso mass, bare head with short hair, green trousers, a grey steel heater shield held out to the side, and the sword held diagonally across the body. No green tabard and no green shield; stay clearly distinct from elven-guard and caravan-guard at 48 px."
+  },
+  "no_game_launch": true,
+  "body_floor": 65.0,
+  "disc_and_style_gates": "unchanged"
+}

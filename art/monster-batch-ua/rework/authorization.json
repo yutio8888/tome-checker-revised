@@ -1,0 +1,12 @@
+{
+  "parent_commit": "ca46845540e7e627277f10853c3fb948b6f36613",
+  "identities": [
+    "grushnak",
+    "ninandra",
+    "grgglck",
+    "rungof"
+  ],
+  "coordinator_instruction": "REWORK same task. Provenance/no-path failures are infrastructure RETRY, not a reason to hold native. Retry until admitted, strictly serial. Unchanged gates; refinement on gate failure.",
+  "original_provenance_rejections": 2,
+  "budget_policy": "Original handoffs/receipts remain immutable. Original v1 art uses its prepared external-review refinement. Fresh Grushnak handoff is explicitly authorized by this coordinator redesign, not an unapproved budget reset. Additional retries, if needed, preserve full linked call history; no infrastructure failure forces native."
+}

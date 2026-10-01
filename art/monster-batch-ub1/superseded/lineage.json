@@ -1,0 +1,38 @@
+{
+  "assets": {
+    "fallen-sun-paladin-aeryn": {
+      "accepted": "art/monster-batch-ub1/masters/fallen-sun-paladin-aeryn-rework-v4.png",
+      "accepted_sha256": "7a2d0df6904af411f0a26b87828664df7eb119ce63141f677871bdb1af39cf9c",
+      "retained": [
+        {
+          "path": "art/monster-batch-ub1/superseded/fallen-sun-paladin-aeryn-v1.png",
+          "sha256": "f84f05a0e667c0bb928e2601a13cab6837df661065588f0d754b8a15b5797af0"
+        },
+        {
+          "path": "art/monster-batch-ub1/superseded/fallen-sun-paladin-aeryn-rework-v1.png",
+          "sha256": "8b82c7a6d2d2be22a615ce0a64f38d51a49ff6d043eb7b1ddbdeb0cc8df9b2b9"
+        },
+        {
+          "path": "art/monster-batch-ub1/superseded/fallen-sun-paladin-aeryn-rework-v2.png",
+          "sha256": "e5a1dda59b0ebc7b69f73b1e6761cced4e831c01b2e0995a90cd3b039e33de9f"
+        },
+        {
+          "path": "art/monster-batch-ub1/superseded/fallen-sun-paladin-aeryn-rework-v3.png",
+          "sha256": "e1886d583c0f58855ed11ed6f94351cba502fa8a941b5a0884ab92d196bc1091"
+        }
+      ],
+      "history": "v1 dark (49.1) -> value rework-v1 dark (61.4) -> bright silver rework-v2 (82.0), rejected by the coordinator as a silver clone of High -> coordinator rework attempt-1 (v3, 47.4) still too dark -> attempt-2 (v4) dark blood-stained plate carried by a crimson aura, point-down two-handed greatsword, lum 67.9 accepted. No threshold or floor changed, no waiver."
+    },
+    "chronolith-clone": {
+      "accepted": "art/monster-batch-ub1/masters/chronolith-clone-rework-v1.png",
+      "accepted_sha256": "23fef000634fa02fbaa16a48de273734f54785cc25e48a3eea25b8dbabd244b1",
+      "retained": [
+        {
+          "path": "art/monster-batch-ub1/superseded/chronolith-clone-v1.png",
+          "sha256": "2c672ba440181089f1d1da72864e9a037330b3c70ea734c1de96d20a05e0fe22"
+        }
+      ],
+      "history": "v1 cocoon bundle rejected by the coordinator as not the native creature -> rework paints the exact twin creature (cream bony torso plate, blue-violet body/arms) with a mirrored arm layout and a faint offset temporal afterimage; lum 87.5 accepted."
+    }
+  }
+}

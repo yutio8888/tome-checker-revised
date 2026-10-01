@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ae-2",
+  "assets": [
+    {
+      "asset_id": "weaver-matriarch",
+      "native_name": "weaver matriarch",
+      "scope": "class a dungeon pool; game/modules/tome/data/general/npcs/spider.lua:293",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 293,
+          "anchor": "name = \"weaver matriarch\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_SPIDER\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/spider.lua",
+          "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+          "line": 294,
+          "anchor": "resolvers.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved physical disc, camera and miniature lighting; do not copy the creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_weaver_matriarch.png",
+          "sha256": "0359276abb3184fe86584a789bb177b9dd7688342bee75b24fd676dc71c20c8b",
+          "role": "identity",
+          "note": "Native identity, [64, 128]: A large female arachnid, low broad eight-legged spider with a bulbous oval abdomen, a smaller thorax prominently patterned in YELLOW and WHITE, mid-light cobalt and cornflower blue chitin, pale blue-white highlight planes. Legs folded inward into a compact radial basket with every tip inside the disc. No humanoid torso, no wings, no web effect, no eggs or babies. Fully opaque painted miniature."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ae/refs/insects.png",
+          "sha256": "32321f65770a5c1f1c22d7e7d4bc7a83ec7126243883dcfc1914b36c9b58b5a3",
+          "role": "family",
+          "note": "Shipped siblings in row order: hornet-swarm, giant-spider, weaver-young, weaver-queen, ritch-hunter, ritch-hive-mother-pool. Match tabletop language; do not copy their body or silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A large female arachnid, low broad eight-legged spider with a bulbous oval abdomen, a smaller thorax prominently patterned in YELLOW and WHITE, mid-light cobalt and cornflower blue chitin, pale blue-white highlight planes. Legs folded inward into a compact radial basket with every tip inside the disc. No humanoid torso, no wings, no web effect, no eggs or babies. Fully opaque painted miniature. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Broad low eight-legged blue matriarch with conspicuous yellow-white thorax pattern and bulbous oval abdomen; weaver young is smaller/slender, weaver queen has a different shape, giant spider lacks the matriarch's bold pattern. Different proportions and marking layout.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light creature masses and broad pale upper-left highlights, with a thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "NPC.lua:33 default-name image; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. nice_tile{image=\"invis.png\",add_mos={{image=\"npc/spiderkin_spider_weaver_matriarch.png\",display_h=2,display_y=-1}}}; nicer_tiles off uses the same single native image; native_tall=true for non-unique tall entry. Exact static source contract, no game launch; see evidence/monster-batch-ae-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ae-20261001/source-contracts.json",
+          "sha256": "64b4bd57b941e15445ca9fb5b38cb143b457af1876056517922a4745115885c6"
+        }
+      ]
+    },
+    {
+      "asset_id": "patchwork-troll",
+      "native_name": "patchwork troll",
+      "scope": "class a dungeon pool; game/modules/tome/data/general/npcs/troll.lua:115",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/troll.lua",
+          "sha256": "17a39268830f8e408b329082d3915f2573f05dd3e0d3e298546135d4e290c51f",
+          "line": 115,
+          "anchor": "name = \"patchwork troll\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/troll.lua",
+          "sha256": "17a39268830f8e408b329082d3915f2573f05dd3e0d3e298546135d4e290c51f",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_TROLL\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/troll.lua",
+          "sha256": "17a39268830f8e408b329082d3915f2573f05dd3e0d3e298546135d4e290c51f",
+          "line": 117,
+          "anchor": "resolvers.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved physical disc, camera and miniature lighting; do not copy the creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_troll_patchwork_troll.png",
+          "sha256": "0698c3a2000e5ce45cc5a072aba2b25bd43231fd8f8683a8070a8ff6595e6907",
+          "role": "identity",
+          "note": "Native identity, [64, 128]: A hulking asymmetrical troll CONSTRUCT stitched from mismatched troll parts, one swollen pale moss-green arm and one bulky lavender-grey arm, broad pale scarred belly with thick visible stitch seams, small piggy tusked head sunk between uneven shoulders, shattered sword and spear pieces embedded in its back and shoulders kept short, squat bent-knee pose with huge fists close in. Not an undead skeleton; mismatched skin patches are mid-light and bright upper-facing planes."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ae/refs/giants.png",
+          "sha256": "cb9bbd73cab6e8a7b529c5a0003d078b212c77703ada5df18f91d458f290dd7d",
+          "role": "family",
+          "note": "Shipped siblings in row order: forest-troll, stone-troll, mountain-troll, minotaur, minotaur-maze, horned-horror. Match tabletop language; do not copy their body or silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A hulking asymmetrical troll CONSTRUCT stitched from mismatched troll parts, one swollen pale moss-green arm and one bulky lavender-grey arm, broad pale scarred belly with thick visible stitch seams, small piggy tusked head sunk between uneven shoulders, shattered sword and spear pieces embedded in its back and shoulders kept short, squat bent-knee pose with huge fists close in. Not an undead skeleton; mismatched skin patches are mid-light and bright upper-facing planes. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Patchwork has uneven anatomy, stitch seams, mismatched arms and embedded broken weapon pieces; shipped forest, stone and mountain trolls are coherent natural bodies, not stitched constructs.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light creature masses and broad pale upper-left highlights, with a thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "NPC.lua:33 default-name image; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. nice_tile{tall=1} expands to invis.png plus one body {image=e.image,display_h=2,display_y=-1}; nicer_tiles off uses the same single native image; native_tall=true for non-unique tall entry. Exact static source contract, no game launch; see evidence/monster-batch-ae-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ae-20261001/source-contracts.json",
+          "sha256": "64b4bd57b941e15445ca9fb5b38cb143b457af1876056517922a4745115885c6"
+        }
+      ]
+    },
+    {
+      "asset_id": "maulotaur",
+      "native_name": "maulotaur",
+      "scope": "class a dungeon pool; game/modules/tome/data/general/npcs/minotaur.lua:75",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/minotaur.lua",
+          "sha256": "34691f4bede79d93c97cbbef130e56c7c4f8a821f7a64fe53134bcf63aa032c0",
+          "line": 75,
+          "anchor": "name = \"maulotaur\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/minotaur.lua",
+          "sha256": "34691f4bede79d93c97cbbef130e56c7c4f8a821f7a64fe53134bcf63aa032c0",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_MINOTAUR\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/minotaur.lua",
+          "sha256": "34691f4bede79d93c97cbbef130e56c7c4f8a821f7a64fe53134bcf63aa032c0",
+          "line": 76,
+          "anchor": "resolvers.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved physical disc, camera and miniature lighting; do not copy the creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_minotaur_maulotaur.png",
+          "sha256": "0a2e52daf7013d547e8c82e577e3fd735ce0d88b24a4ef05fd5c16e8c35e04ee",
+          "role": "identity",
+          "note": "Native identity, [64, 128]: A belligerent bull-headed minotaur with massive swept ivory horns, pale slate-blue fur, broad barrel chest, copper and silver segmented shoulder guards and belt, gripping a large square-headed two-handed GREATMAUL diagonally across the torso. One compact muscular upright bull fighter; no axe, no fire aura, pale silver-blue facing planes and bright ivory muzzle."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ae/refs/giants.png",
+          "sha256": "cb9bbd73cab6e8a7b529c5a0003d078b212c77703ada5df18f91d458f290dd7d",
+          "role": "family",
+          "note": "Shipped siblings in row order: forest-troll, stone-troll, mountain-troll, minotaur, minotaur-maze, horned-horror. Match tabletop language; do not copy their body or silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A belligerent bull-headed minotaur with massive swept ivory horns, pale slate-blue fur, broad barrel chest, copper and silver segmented shoulder guards and belt, gripping a large square-headed two-handed GREATMAUL diagonally across the torso. One compact muscular upright bull fighter; no axe, no fire aura, pale silver-blue facing planes and bright ivory muzzle. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "A blue-grey hammer-wielding bull, distinctive square greatmaul and angled guarded stance; shipped minotaur carries an axe, labyrinth boss has its own equipment and horned horror is not a bull. Weapon geometry and pose, not colour alone.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light creature masses and broad pale upper-left highlights, with a thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "NPC.lua:33 default-name image; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. nice_tile{image=\"invis.png\",add_mos={{image=\"npc/giant_minotaur_maulotaur.png\",display_h=2,display_y=-1}}}; nicer_tiles off uses the same single native image; native_tall=true for non-unique tall entry. Exact static source contract, no game launch; see evidence/monster-batch-ae-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ae-20261001/source-contracts.json",
+          "sha256": "64b4bd57b941e15445ca9fb5b38cb143b457af1876056517922a4745115885c6"
+        }
+      ]
+    }
+  ]
+}

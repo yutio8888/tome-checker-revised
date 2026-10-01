@@ -67,8 +67,13 @@ def build():
         shipped = sorted((GFX / 'korpul').glob('*.png'))
         rendered = [p for p in shipped if (work / 'ref' / p.name).is_file()]
         assert len(rendered) == 196, len(rendered)
+        # The live floor/brick/door tiles later received the 2026-10-01 hue
+        # finish (art/terrain-contrast-v1/korpul.py, run after this script);
+        # their assembler output is pinned by the frozen baseline copies.
+        frozen = ROOT / 'art/terrain-contrast-v1/frozen-inputs/korpul'
         for p in rendered:
-            assert sha(p) == sha(work / 'ref' / p.name), p.name
+            base = frozen / p.name if (frozen / p.name).is_file() else p
+            assert sha(base) == sha(work / 'ref' / p.name), p.name
         # 2. Recoloured wall material masters, everything else untouched.
         masters = work / 'masters'
         shutil.copytree(MASTERS, masters)

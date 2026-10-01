@@ -1,0 +1,186 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ub2-1",
+  "assets": [
+    {
+      "asset_id": "sun-paladin-guren",
+      "native_name": "Sun Paladin Guren",
+      "scope": "UB-2 flat unique/boss; game/modules/tome/data/zones/eruan/npcs.lua:32",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/eruan/npcs.lua",
+          "sha256": "4499e968c36e77d9d3620f2b1ed96fd34e158c5d27e7724c429040465ab2f8ee",
+          "line": 32,
+          "anchor": "name = \"Sun Paladin Guren\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_sun_paladin_guren.png",
+          "sha256": "15b53f6a32890549a256e95c8e45d4e3b770ab4633448d1dd2ec75d887d4cc52",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]. Paint this clothing, armour, held items and silhouette."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub2/refs/sun-paladins.png",
+          "sha256": "0e5b4ac4fdd862bacc2e6ea361b6910a0b3b0a0693fe8dd14f03a30fb364cdba",
+          "role": "family",
+          "note": "Shipped siblings row order: human-sun-paladin, high-sun-paladin-rodmour, aluin-the-fallen, argoniel, elandar. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A lean human knight in cool polished silver-grey steel FULL PLATE with a warm faint gold under-glow in the recesses and dark leather straps at the joints; a closed knight's helm with a low crest ridge and a narrow dark visor slit, pale skin showing at the jaw; a round sun-emblem shield held on the LEFT forearm, showing a gold rayed-sun device on a steel field; a long straight sword lowered across the body in the RIGHT hand, blade angled down to the lower right; both feet planted. Full-height upright armoured silhouette; broad pale upper-left plates and a thin bright rim on every steel face. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Structurally outranks the shipped human-sun-paladin token: that token is a bulky GOLD paladin with an oversized round sun-disc and a forward war-hammer, while Guren is cool silver-grey plate with a long straight sword, a modest round heater shield and a low CRESTED helm. Also differs from the white-gold cape-and-mace Rodmour and from the broad dark Aluin knight by the crest and sword. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "default image name from class/NPC.lua:33 (npc/humanoid_human_sun_paladin_guren.png); flat 64x64 body. No shader, moddable_tile, anim, add_displays, textures, add_mos or nice_tile anywhere in leaf/base. auto_classes / sustains_at_birth, where present, only roll talents or enable native sustains and never write the drawn body. Static source contract only; see evidence/monster-batch-ub2-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub2-20261001/source-contracts.json",
+          "sha256": "40c54882833d53c9b54227ccfc217ac7d995f8f233651315c9748326ce4600c0"
+        }
+      ]
+    },
+    {
+      "asset_id": "epoch",
+      "native_name": "Epoch",
+      "scope": "UB-2 flat unique/boss; game/modules/tome/data/zones/paradox-plane/npcs.lua:28",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/paradox-plane/npcs.lua",
+          "sha256": "a9d14b63b18e2a46c95c149047816a2747a4ab4ff5c66320ef774dcbe749820b",
+          "line": 28,
+          "anchor": "name = \"Epoch\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_temporal_epoch.png",
+          "sha256": "0fb91119efb106e7e1e7988365019a1c0642cc337d4db47f53e3c609f09ef43b",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]. Paint this clothing, armour, held items and silhouette."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub2/refs/temporal.png",
+          "sha256": "a2b64aa57bdf5e9273e37840e0c26a568a97315621b4b3ff9aca15a4d743aa74",
+          "role": "family",
+          "note": "Shipped siblings row order: telugoroth, greater-telugoroth, teluvorta, greater-teluvorta, temporal-stalker, temporal-defiler, chronolith-twin, chronolith-clone. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A dense roiling VERTICAL column of raw temporal energy: a bright cobalt-blue core shot through with irregular electric-yellow lightning arcs and crackling forked tendrils that curl outward, with ragged wispy edges and small dark negative gaps inside the mass. NO limbs, NO face, NO eyes, NO segmentation: a chaotic upright blue-and-yellow storm with a faint violet fringe. Paint the blue and yellow as solid opaque material with broad bright faces. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Epoch is a vertical chaotic blue-and-yellow energy storm with no limbs, eyes or segmentation, versus the shipped telugoroth/teluvorta tokens (curled segmented iridescent worms with visible eyes), the low dark blade-like temporal-stalker and the six-armed robed chronolith pair. Its chaotic column silhouette is the structural cue, not the colour alone. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "default image name from class/NPC.lua:33 (npc/elemental_temporal_epoch.png); flat 64x64 body. No shader, moddable_tile, anim, add_displays, textures, add_mos or nice_tile anywhere in leaf/base. auto_classes / sustains_at_birth, where present, only roll talents or enable native sustains and never write the drawn body. Static source contract only; see evidence/monster-batch-ub2-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub2-20261001/source-contracts.json",
+          "sha256": "40c54882833d53c9b54227ccfc217ac7d995f8f233651315c9748326ce4600c0"
+        }
+      ]
+    },
+    {
+      "asset_id": "corrupted-oozemancer",
+      "native_name": "Corrupted Oozemancer",
+      "scope": "UB-2 flat unique/boss; game/modules/tome/data/zones/sludgenest/npcs.lua:28",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/sludgenest/npcs.lua",
+          "sha256": "0c974dc966babae5bed4fb28421d9305e0958e5b431555c69ca129557b7c893a",
+          "line": 28,
+          "anchor": "name = \"Corrupted Oozemancer\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_troll_corrupted_oozemancer.png",
+          "sha256": "cc6f01fbf95a383fe1c6ecfeeb250630334070a4447cedfeb5fc7016615b50bd",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]. Paint this clothing, armour, held items and silhouette."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub2/refs/trolls.png",
+          "sha256": "aba5f022804c9d3bd4043cfd41fbae89e5b81e2da9ee5f08d002469424afb733",
+          "role": "family",
+          "note": "Shipped siblings row order: forest-troll, stone-troll, cave-troll, mountain-troll, mountain-troll-thunderer, patchwork-troll, shax. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A massive HUNCHED green blight-troll: very broad powerful shoulders, a thick torso, heavy muscular arms held out to the sides ending in long pale claws, short thick legs, and a low bald head thrust forward with two small glowing red eyes and a wide toothy underbite. The hide is mottled sickly mid-green with lighter mossy patches and dark ooze streaks; every large mass is painted MID-LIGHT with broad pale upper-left highlights so the body stays clearly lighter than the disc. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Structurally distinct from the shipped troll tokens: the Oozemancer is a broad hunched forward-thrusting green blight-troll with a low red-eyed head and out-held clawed arms, versus the upright bulky bronze/brown mountain-troll and forest-troll tokens, the small shax and the stitched patchwork-troll. It is not a recolour of any of them. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "default image name from class/NPC.lua:33 (npc/giant_troll_corrupted_oozemancer.png); flat 64x64 body. No shader, moddable_tile, anim, add_displays, textures, add_mos or nice_tile anywhere in leaf/base. auto_classes / sustains_at_birth, where present, only roll talents or enable native sustains and never write the drawn body. Static source contract only; see evidence/monster-batch-ub2-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub2-20261001/source-contracts.json",
+          "sha256": "40c54882833d53c9b54227ccfc217ac7d995f8f233651315c9748326ce4600c0"
+        }
+      ]
+    }
+  ]
+}

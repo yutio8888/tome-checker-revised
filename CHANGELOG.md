@@ -1,5 +1,15 @@
 # Changes
 
+## 0.6.32 — 2026-10-01
+
+- 怪物 Batch AD、AE、AF、AG、UA、TA-1、UB-1、UB-2（棋子目录 376→**462** 款，共 86 款，本版无新增地形区域）。名单外地城常见怪（AD／AE／AF，如 dúathedlen、daelach、forge giant、storm wyrm、各档 lich 与恐魔）、特殊情况（AG：同名 shadow claw 一对、multi-hued drake 系与水晶）、首领（UA：Kra'Tor、Khulmanar、Rungof、Grgglck、Queen Ant、Ak'Gishil、Ninandra、Phoenix、Ukruk、Gorbat、Grushnak、Vor）、城镇居民（TA-1：Angolwen 四位高图法师与学徒、六种守卫、Ring of Blood 的 slaver 与 enthralled slave）、唯一怪（UB-1：High／Fallen Sun Paladin Aeryn、Caldizar、Chronolith Twin／Clone、Temporal Defiler、Corrupted Daelach、Linaniil、Archmage Tarelion；UB-2：Sun Paladin Guren、Epoch、Corrupted Oozemancer、Zemekkys、Blood Master、Limmir、Protector Myssil、Rak'Shor Cultist、Shady cornac man、Tannen，以及复用憎恶棋子的 Ben Cruthdar, the Cursed）。多款高大原生图只画一枚棋子；所有新棋子均以原版贴图为准重绘并在 48 px 下与同族区分。
+- 召唤别名：野性天赋蜘蛛体、void shard、orc spirit、邪恶子嗣（Vilespawn）、Risen Ghoul、walking corpse 与 Blood-Edge 神器召唤的 animated blood 按身份换棋子；别名只认原生构造函数产出的真实召唤字段，唯一怪与带 `define_as` 的演员保持原版。Vilespawn 与 animated blood 的匹配改用固定的 blight 100／nature -100 抗性对（而不是会随等级增长的 max_vim）。
+- 时空复制：时空法师的悖论分身（makeParadoxClone，含异常目标）现在覆盖全目录的非唯一条目，复制体戴被复制身体的棋子，唯一怪保持原版。
+- 修复：调试「地图全开」与魔法探图类效果（magic map、检测）揭示的棋盘石质格此前会保持空白，现在会立即重建。
+- 地形可读性（不新增区域）：黑暗之心与深渊咆哮的菌林墙改为清晰俯视墙顶并分离地板／墙（gloomy／plain ΔE 由约 6–8 提升到约 28）；沙虫巢穴、迷宫与闪光洞穴墙增加亮唇／接触暗边；Kor'Pul 与 Kor'Pul-dark 在不改任何明度门限的前提下改用暖地板／冷砖色相分离（ΔE 约 10→28）。
+- 语言：地形设置说明 73 个区域／城镇名再次对照 `mod-tome.lua`，全部命中，无修正。
+- 外测指南（新建 `docs/external-test-v0632/`）更新。正式归档、安装冒烟与测试见 [0.6.32 证据](evidence/runtime-v0632/README.md)。
+
 ## 0.6.31 — 2026-09-30
 
 - 怪物 Batch Z–AC（棋子目录 323→**376** 款，共 53 款，无新增地形）：Z（black mamba、强盗首领、球蛛编织者、精英精灵战士、究极泰鲁戈洛斯、强化泰鲁沃塔、符文骨巨人、虚空恐魔、群生恐魔、贪婪恐魔、盗贼工兵、火焰巨龙）、AA（究极法罗、兽人狂战士、挖掘魔首领、北极熊、anaconda、究极泰鲁沃塔、necrotic abomination、bone／sanguine horror、barrow wight、ogre warmaster、dreadmaster）、AB（entrenched／boiling horror、兽人召唤师、巨型木乃伊、暗影之刃、精英兽人斗士／狂战士、猛毒巨龙、敌方炼金傀儡、虫群巢穴、森林巨魔野法师、究极西弗格罗斯）、AC（Aletta Soultorn、ruin banshee、Filio Flightfond、高阶兽人烈焰／冰霜术士、Glacial Legion、Arch Zephyr、Rotting Titan、Heavy Sentinel、Void Spectre、oozing／abyssal／umbral horror、ungolmor、吸血鬼领主、degenerated ogric mass、ogric abomination）。其中多款为 native-tall（高大原生图），只画一枚棋子。

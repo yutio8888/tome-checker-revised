@@ -1,0 +1,89 @@
+{
+  "scope": "All four generated rework masters, individual 48/64/96 previews, colour/grayscale shipped-sibling family sheets, before/after colour sheet, and both enlarged floor panels opened and accepted statically.",
+  "reviewer_model": "gpt-6.1-sol",
+  "review_scale": [
+    48,
+    64,
+    96
+  ],
+  "candidates": {
+    "grushnak-v1": {
+      "style_passed": true,
+      "body_luminance": 71.27,
+      "observed": "Green exposed arms and face, low notched blade spanning the body, stepped blackened chest and shoulder-spike comb. Distinct from shield Ukruk, winged Gorbat, obese KraTor, hammer golbug and horned skull massok."
+    },
+    "ninandra-v2": {
+      "style_passed": true,
+      "body_luminance": 149.49,
+      "observed": "Swollen round pearl dome dominates body, raised web ribs, attached crown spines and close silk-spoke fan. Front legs form prominent arches framing small head; no ordinary pointed/oval weaver abdomen."
+    },
+    "grgglck-v2": {
+      "style_passed": true,
+      "body_luminance": 74.53,
+      "observed": "Dominant open black-violet aperture, pale thick lip and huge tooth ring; six separate radial hooked tentacles with negative wedges. No pile or overlap. Maw is materially larger than shipped nightmare/abyssal mouths."
+    },
+    "rungof-v2": {
+      "style_passed": true,
+      "body_luminance": 92.36,
+      "observed": "High arched shoulder hump bigger than head, thick spine ridge and slab-like scarred hide plates, iron collar and attached chain; distinct silhouette and body masses beside ordinary wolves."
+    }
+  },
+  "game_launched": false,
+  "sheets": [
+    {
+      "path": "art/monster-batch-ua/review/beast-bosses-color-48-64-96.png",
+      "sha256": "5ea98a0c422a432c6654e58a8ef333c7e459b3bb0a3735647244a35f53fe2470",
+      "opened": true
+    },
+    {
+      "path": "art/monster-batch-ua/review/beast-bosses-grayscale-48-64-96.png",
+      "sha256": "eafcbaec4e2167ae10fc3aec63f268e6085e01803a5a1b19cfd9750ee94abbbd",
+      "opened": true
+    },
+    {
+      "path": "art/monster-batch-ua/review/floor-readability-48-x2-b.png",
+      "sha256": "8d21023fd29666e1399e6df7e56d6d890ac016b994ebed08fd020b93a743edce",
+      "opened": true
+    },
+    {
+      "path": "art/monster-batch-ua/review/floor-readability-48-x2.png",
+      "sha256": "5926ee6ba9f3a442632d9af9960d578708d1ad9af4413af3881fde0975457236",
+      "opened": true
+    },
+    {
+      "path": "art/monster-batch-ua/review/horror-demon-bosses-color-48-64-96.png",
+      "sha256": "b10d4f53e1f2f3ae29fbb63de52d7b9c528960d8df1270e76a8a576082928ad2",
+      "opened": true
+    },
+    {
+      "path": "art/monster-batch-ua/review/horror-demon-bosses-grayscale-48-64-96.png",
+      "sha256": "82a418b5153dfb6073e452f13a8a89b5fbfc411d44185dab62d04be29be8ba8a",
+      "opened": true
+    },
+    {
+      "path": "art/monster-batch-ua/review/insect-bosses-color-48-64-96.png",
+      "sha256": "0ab677a188144b970efc04fc65d926f2b6d6580617d0f78149214e02f2a61270",
+      "opened": true
+    },
+    {
+      "path": "art/monster-batch-ua/review/insect-bosses-grayscale-48-64-96.png",
+      "sha256": "64cfd1a7b0608577a58c5605c00d90323a518f42af1adf86e7fd391a53e8dc01",
+      "opened": true
+    },
+    {
+      "path": "art/monster-batch-ua/review/orc-bosses-color-48-64-96.png",
+      "sha256": "db93dd2e5022dc99d7798024b6ef7c51fc57e88bae5ff45446edde9f1dfb1e9f",
+      "opened": true
+    },
+    {
+      "path": "art/monster-batch-ua/review/orc-bosses-grayscale-48-64-96.png",
+      "sha256": "d8a8cc5d933e1672f8b878953b2be2270f531132883cf6befcb24ccaefc9b9ad",
+      "opened": true
+    },
+    {
+      "path": "art/monster-batch-ua/review/rework-before-after-color-48-64-96.png",
+      "sha256": "dcf92fa15d542487866322eafc99e46ab15e805ffd5868614118c59aa1e41ae6",
+      "opened": true
+    }
+  ]
+}

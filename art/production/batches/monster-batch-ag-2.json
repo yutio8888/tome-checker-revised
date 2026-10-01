@@ -1,0 +1,162 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ag-2",
+  "assets": [
+    {
+      "asset_id": "shadow-claw",
+      "native_name": "shadow claw",
+      "scope": "class a off-list pool; game/modules/tome/data/zones/keepsake-meadow/npcs.lua:171",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 171,
+          "anchor": "define_as = \"SHADOW_CLAW\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 132,
+          "anchor": "define_as = \"BASE_SHADOW\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+          "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+          "line": 172,
+          "anchor": "name = \"shadow claw\""
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved tabletop disc, camera, lighting only; do not copy creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/shadow-claw.png",
+          "sha256": "a4fc102eb564c6bb05a3d0284376ce57141810ffccaddeeb06e89accc9b21384",
+          "role": "identity",
+          "note": "Inspected native identity and anatomy, [64, 64]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ag/refs/shadows.png",
+          "sha256": "5dfb5feab206cf8e1455566bdd393fe3d91250eade4086d423079c86c1cf9bf4",
+          "role": "family",
+          "note": "Shipped siblings row order: shadow-stalker, dread, umbral-horror. Compare shape; do not copy anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A shadow, almost humanoid in shape, swimming through the air: a smoky lean torso and small featureless head leaning forward, no legs, the lower body trailing into a short curled wisp of smoke kept on the figure. TWO ENORMOUS long curved scythe-like CLAWS extend forward and outward from its arms, glossy MAGENTA-ROSE claws curving back inward so their tips stay well inside the disc. Smoke body rendered as solid sculpted ash-lavender and slate-grey volumes, mid-light, with a pale silver rim; bright pink-magenta claws. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Shadow claw: legless forward-lunging smoke torso with two huge curved magenta scythe claws; shadow caster is an upright hooded psionic figure with concentric rings around its head; shipped shadow stalker is a crouched smoke humanoid with short claws.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "explicit image= on the leaf; flat single image 64x64.  Name \"shadow claw\" is shared by SHADOW_CLAW and SHADOW_CASTER: composite name+define_as identity (shared_name=true). Static evidence only; live separate.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ag-20261001/source-contracts.json",
+          "sha256": "d252989a9bb7046bc033bafdad4168fe96164de52793d09961cd91060d8a46d6"
+        }
+      ]
+    },
+    {
+      "asset_id": "multi-hued-crystal",
+      "native_name": "multi-hued crystal",
+      "scope": "class a off-list pool; game/modules/tome/data/general/npcs/crystal.lua:153",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/crystal.lua",
+          "sha256": "d6cdbfe8d69dc00a9167ec1c348469f915103835ee7485534f8e0086982decc2",
+          "line": 153,
+          "anchor": "name = \"multi-hued crystal\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/crystal.lua",
+          "sha256": "d6cdbfe8d69dc00a9167ec1c348469f915103835ee7485534f8e0086982decc2",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_CRYSTAL\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/crystal.lua",
+          "sha256": "d6cdbfe8d69dc00a9167ec1c348469f915103835ee7485534f8e0086982decc2",
+          "line": 154,
+          "anchor": "shader = \"quad_hue\""
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved tabletop disc, camera, lighting only; do not copy creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/crystal_violet.png",
+          "sha256": "0f8e21ea3537d2f75394dfe8ed390219b1cc578d458ff3475b9dc027426634df",
+          "role": "identity",
+          "note": "Inspected native identity and anatomy, [64, 64]"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ag/refs/crystals.png",
+          "sha256": "8855f70f357ad77a2ec00c3e8e70a0bb1a9ab1380437ae7636256c0bd925d8ff",
+          "role": "family",
+          "note": "Shipped siblings row order: white-crystal, red-crystal, blue-crystal, crimson-crystal, black-crystal, giant-crystal-rat. Compare shape; do not copy anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A formation of multi-hued crystal shaped as an ARCH: several long thin crystal shards bent into a low hooped arch like a crystal bridge or spider legs, standing on splayed pointed shard feet, with shorter shards bristling from the top of the arch. Clear pale violet crystal whose facets are split by PRISMATIC RAINBOW bands, red, orange, green, cyan, blue and violet refraction stripes running along each shard, bright white glints. Open hollow silhouette, not a solid cluster. No light beams on the disc. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Multi-hued crystal: open arched bridge of bent thin shards with rainbow refraction bands; shimmering crystal is a squat rounded dome with three small orbs; shipped white/red/blue/crimson/black crystals are solid upright prism clusters of a single colour.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "explicit image= on the leaf; flat single image 64x64. Actor shader quad_hue (no shader_args) in every tile mode. Exact native_shader=\"quad_hue\" allow-list entry. Static evidence only; live separate.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ag-20261001/source-contracts.json",
+          "sha256": "d252989a9bb7046bc033bafdad4168fe96164de52793d09961cd91060d8a46d6"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "accepted_ids": [
+    "high-sun-paladin-aeryn",
+    "fallen-sun-paladin-aeryn",
+    "caldizar",
+    "chronolith-twin",
+    "chronolith-clone",
+    "temporal-defiler",
+    "corrupted-daelach",
+    "supreme-archmage-linaniil",
+    "archmage-tarelion"
+  ],
+  "native": {},
+  "art_review": "static 48/64/96 colour/grayscale and real-floor review complete; native-sprite column added",
+  "body_minimum": 65.0,
+  "descriptive_floor_baseline": 45.0,
+  "calls": 16,
+  "outcomes": {
+    "recorded": 14,
+    "style-gate-rejected": 1,
+    "provenance-rejected": 1
+  },
+  "selected_masters": 9,
+  "waivers": [],
+  "shared_token": {
+    "id": "caldizar",
+    "define_as": [
+      "CALDIZAR",
+      "CALDIZAR_AOADS"
+    ],
+    "note": "one byte-identical shared artwork bound to both define sites"
+  },
+  "rework": {
+    "fallen-sun-paladin-aeryn": "masters/fallen-sun-paladin-aeryn-rework-v4.png (coordinator rework; point-down two-handed, crimson aura, lum 67.9)",
+    "chronolith-clone": "masters/chronolith-clone-rework-v1.png (coordinator rework; twin creature + mirrored arms + afterimage, lum 87.5)"
+  }
+}

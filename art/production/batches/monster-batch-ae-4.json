@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ae-4",
+  "assets": [
+    {
+      "asset_id": "spire-dragon",
+      "native_name": "spire dragon",
+      "scope": "class a dungeon pool; game/modules/tome/data/general/npcs/wild-drake.lua:47",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/wild-drake.lua",
+          "sha256": "27d7ee2645e16e215330830d5fc20e51036b435f72785e8efb6572c90b7bbba5",
+          "line": 47,
+          "anchor": "name = \"spire dragon\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/wild-drake.lua",
+          "sha256": "27d7ee2645e16e215330830d5fc20e51036b435f72785e8efb6572c90b7bbba5",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_WILD_DRAKE\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/wild-drake.lua",
+          "sha256": "27d7ee2645e16e215330830d5fc20e51036b435f72785e8efb6572c90b7bbba5",
+          "line": 49,
+          "anchor": "resolvers.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved physical disc, camera and miniature lighting; do not copy the creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_wild_spire_dragon.png",
+          "sha256": "27fb92ec8f7a0852757f9288703960389259268971879cc1c9ac63d763c2be9a",
+          "role": "identity",
+          "note": "Native identity, [64, 128]: A monstrous patient heavily armoured WINGLESS coiled wyrm, stocky circular coil, broad wedge dragon head held low over the coil, hide covered in large pale stone-grey blade plates and stacked jagged SPIRES and crests, bone-ivory blade ridges and pale slate steel scales, short heavy claws tucked beside its coil. A dense jagged fortress-like silhouette; no wings, no lightning, no ice crystals, fully opaque."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ae/refs/dragons.png",
+          "sha256": "9258e12aa566ce9dc04e3abd426483a2a5eba2522b406dd7225377fa388a8a7a",
+          "role": "family",
+          "note": "Shipped siblings in row order: storm-drake, cold-drake, fire-wyrm, venom-wyrm, ice-wyrm, rantha. Match tabletop language; do not copy their body or silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A monstrous patient heavily armoured WINGLESS coiled wyrm, stocky circular coil, broad wedge dragon head held low over the coil, hide covered in large pale stone-grey blade plates and stacked jagged SPIRES and crests, bone-ivory blade ridges and pale slate steel scales, short heavy claws tucked beside its coil. A dense jagged fortress-like silhouette; no wings, no lightning, no ice crystals, fully opaque. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "A heavy low wingless armoured blade-and-spire coil, unlike storm wyrm's raised neck and two folded wings, blinkwyrm's lean high S curve, and ice wyrm's pointed crystal crest. Big blade armour and head proportions distinguish the body beyond colour.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light creature masses and broad pale upper-left highlights, with a thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "NPC.lua:33 default-name image; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. nice_tile{image=\"invis.png\",add_mos={{image=\"npc/dragon_wild_spire_dragon.png\",display_h=2,display_y=-1}}}; nicer_tiles off uses the same single native image; native_tall=true for non-unique tall entry. Exact static source contract, no game launch; see evidence/monster-batch-ae-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ae-20261001/source-contracts.json",
+          "sha256": "64b4bd57b941e15445ca9fb5b38cb143b457af1876056517922a4745115885c6"
+        }
+      ]
+    },
+    {
+      "asset_id": "blinkwyrm",
+      "native_name": "blinkwyrm",
+      "scope": "class a dungeon pool; game/modules/tome/data/general/npcs/wild-drake.lua:76",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/wild-drake.lua",
+          "sha256": "27d7ee2645e16e215330830d5fc20e51036b435f72785e8efb6572c90b7bbba5",
+          "line": 76,
+          "anchor": "name = \"blinkwyrm\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/wild-drake.lua",
+          "sha256": "27d7ee2645e16e215330830d5fc20e51036b435f72785e8efb6572c90b7bbba5",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_WILD_DRAKE\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/wild-drake.lua",
+          "sha256": "27d7ee2645e16e215330830d5fc20e51036b435f72785e8efb6572c90b7bbba5",
+          "line": 78,
+          "anchor": "resolvers.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved physical disc, camera and miniature lighting; do not copy the creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_wild_blinkwyrm.png",
+          "sha256": "3053712bd4ab86ddb4fbc49c164fd44e2a6b2eda92426e0306b1e36264af1d86",
+          "role": "identity",
+          "note": "Native identity, [64, 128]: A slender shifting snake-like dragon, elegant compact S-shaped body curled upright in two overlapping bends, small narrow dragon head raised and turned sideways, smooth pale golden-cream and lavender pearl scales with broad light upper planes, two small swept ivory horns, delicate short fins rather than large wings, thin tail curled inward. Fully SOLID opaque miniature: no fading, duplicates, afterimages, portal or teleport effect."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ae/refs/dragons.png",
+          "sha256": "9258e12aa566ce9dc04e3abd426483a2a5eba2522b406dd7225377fa388a8a7a",
+          "role": "family",
+          "note": "Shipped siblings in row order: storm-drake, cold-drake, fire-wyrm, venom-wyrm, ice-wyrm, rantha. Match tabletop language; do not copy their body or silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A slender shifting snake-like dragon, elegant compact S-shaped body curled upright in two overlapping bends, small narrow dragon head raised and turned sideways, smooth pale golden-cream and lavender pearl scales with broad light upper planes, two small swept ivory horns, delicate short fins rather than large wings, thin tail curled inward. Fully SOLID opaque miniature: no fading, duplicates, afterimages, portal or teleport effect. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Lean smooth snake-like high S curve with small head and short fins, versus spire dragon's squat broad jagged blade-armour coil, storm wyrm's thick horseshoe and wing triangles, and shipped fire/venom/ice wyrm coils. Different anatomy, pose, scale texture, not colour alone.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light creature masses and broad pale upper-left highlights, with a thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "NPC.lua:33 default-name image; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. nice_tile{image=\"invis.png\",add_mos={{image=\"npc/dragon_wild_blinkwyrm.png\",display_h=2,display_y=-1}}}; nicer_tiles off uses the same single native image; native_tall=true for non-unique tall entry. Exact static source contract, no game launch; see evidence/monster-batch-ae-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ae-20261001/source-contracts.json",
+          "sha256": "64b4bd57b941e15445ca9fb5b38cb143b457af1876056517922a4745115885c6"
+        }
+      ]
+    },
+    {
+      "asset_id": "emperor-wight",
+      "native_name": "emperor wight",
+      "scope": "class a dungeon pool; game/modules/tome/data/general/npcs/wight.lua:107",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/wight.lua",
+          "sha256": "f322a98363c5f9f2106c7abf3ca0f64cf55a4d8b3e051181da775e20fddb938d",
+          "line": 107,
+          "anchor": "name = \"emperor wight\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/wight.lua",
+          "sha256": "f322a98363c5f9f2106c7abf3ca0f64cf55a4d8b3e051181da775e20fddb938d",
+          "line": 31,
+          "anchor": "define_as = \"BASE_NPC_WIGHT\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/wight.lua",
+          "sha256": "f322a98363c5f9f2106c7abf3ca0f64cf55a4d8b3e051181da775e20fddb938d",
+          "line": 108,
+          "anchor": "resolvers.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved physical disc, camera and miniature lighting; do not copy the creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/emperor_wight.png",
+          "sha256": "93df3942d546f0a8b5a18cd0143f5182082213c05e91f05e5ce5222e091aeb97",
+          "role": "identity",
+          "note": "Native identity, [64, 128]: A powerful unearthly humanoid wight, a compact upright undead warrior with pale ivory skull-like face and red eyes, antique GOLD funerary plate and broad gold shoulder guards over a ragged pale ochre-brown mantle, one raised short curved silver SWORD kept tight above its shoulder, other claw hand drawn inward, torn robe hem fully inside the disc. Fully opaque material, no transparency, no crown, no rank emblem, no aura. Broad cream-gold highlight planes along shoulders and armour, bright ivory face and hands."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ae/refs/horrors-wights.png",
+          "sha256": "1c222966fefc67ebd0c232c26fb554d7042486214de57e8d1eca2356cbabe36e",
+          "role": "family",
+          "note": "Shipped siblings in row order: forest-wight, grave-wight, barrow-wight, dread, dreadmaster, degenerated-ogric-mass. Match tabletop language; do not copy their body or silhouette."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A powerful unearthly humanoid wight, a compact upright undead warrior with pale ivory skull-like face and red eyes, antique GOLD funerary plate and broad gold shoulder guards over a ragged pale ochre-brown mantle, one raised short curved silver SWORD kept tight above its shoulder, other claw hand drawn inward, torn robe hem fully inside the disc. Fully opaque material, no transparency, no crown, no rank emblem, no aura. Broad cream-gold highlight planes along shoulders and armour, bright ivory face and hands. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Emperor is a gold-armoured ragged undead sword warrior with pale skull face and a raised curved sword, not forest wight's green apparition, grave wight's slim spectre, barrow wight's blue-grey armour and front-held weapon, a black dread, or a hood full of maggots. Gold shoulder armour, raised curved sword, ragged mantle and head shape distinguish the identity without a crown or UI badge.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light creature masses and broad pale upper-left highlights, with a thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 1,
+      "gate": "ready",
+      "gate_reason": "explicit image= on the leaf; no shader, moddable_tile, anim or add_displays on leaf/base; no auto_classes. nice_tile{image=\"invis.png\",add_mos={{image=\"npc/emperor_wight.png\",display_h=2,display_y=-1}}}; nicer_tiles off uses the same single native image; native_tall=true for non-unique tall entry. Exact static source contract, no game launch; see evidence/monster-batch-ae-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ae-20261001/source-contracts.json",
+          "sha256": "64b4bd57b941e15445ca9fb5b38cb143b457af1876056517922a4745115885c6"
+        }
+      ]
+    }
+  ]
+}

@@ -15,3 +15,29 @@ Parity is applied to each completed tile at the established forest-suite multipl
 `plain/` is a third, neutral stone and muted fungus palette for The Deep Bellow. `export.py` derives it deterministically from the already selected `gloomy-floor`, `gloomy-creep`, and `gloomy-vegetation` masters (SHA256 respectively `98984bb24e0466a1796fa3e913f9fe78e6e123adddf5c201f391675932cd5836`, `4431a3dcf430143b4e81674728deb5e971c2f855bca3ccb52ab62d3fe281db48`, `8e7add096bf097860b31a1f2ba60896b4f1933af792f0e6490eb072213366630`). The original masters remain unchanged; full generator parameters, paths, and output hashes are in `export.py` and `export-manifest.json`. No ImageGen call was made.
 
 72 new 128px runtime PNGs: two each of floor, 16 creep masks, 16 cell-filling vegetation wall masks, and three ladders. All 36 parity pairs pass the unchanged 10% gate; minimum is **10.92%** (`ladder-world`). The 64px review sheet's third row shows the plain palette: [48px](review/contact-48.png), [64px](review/contact-64.png), [96px](review/contact-96.png). Walls are fully opaque; source-image mean brightness is floor 79.41, exposed wall 59.54, interior wall 65.64. In the shader-on natural-FOV L1 capture, paired lit floor/wall medians were 67.21/52.02 (wall 22.6% darker). No new threshold or per-asset waiver was used. The game source's `underground.lua` imports `underground_gloomy.lua`; the plain palette changes only display, not identity or gameplay.
+
+# Wall rework: crisp canopy walls and floor/wall separation (2026-09-30)
+
+User report: "黑暗之心这张图的墙看起来有点模糊" (Heart of the Gloom walls look blurry). A playtest follow-up from the coordinator: in gloomy and plain maps walkable floor and blocking wall were too close in colour (mean CIELAB ΔE floor0/wall-15-0 below 8 for gloomy and plain); target ΔE ≈ 25 with a visible value step.
+
+**Root cause (blur).** The first `vegetation_wall()` squeezed the whole side-view vegetation prop (a 3/4 view of one mushroom wall segment, with transparent gaps) into every wall cell, pasted 18px edge strips stretched from 20px/92px source bands toward each wall neighbour, and then blended every cell with three or four wall neighbours with a `GaussianBlur(9)` copy (46% for masks 7/11/13/14, **78% for mask 15**). Mask 15, the fully enclosed cell, is by far the most common wall cell (live L1 census: 55–75% of all wall cells on the sampled levels), so the wall mass was essentially a blurred smear; masks 0–6 only looked crisp because they were the unblurred prop. The same function built the plain (Deep Bellow) skin. The pit family (`gloom/pit`, Orc Breeding Pit) is a separate, intentionally near-uniform calm wall built by `art/terrain-batch5-v1/export.py`; it is unchanged.
+
+**Root cause (separation).** The blurred walls averaged to nearly the floor's value (gloomy wall 57–65 vs floor 68.6 mean grey; plain 60–66 vs 79.4); underground the engine draws walls and remembered floor in the same dim state, so in the live remembered view gloomy floor and wall medians were 34.4 vs 32.4.
+
+**Change.**
+- Two new ImageGen wall-top masters (`handoffs/heart-gloom-3`, `terrain-floor` kind, opaque full-bleed, straight-down view of a packed mushroom-cap canopy), one per skin; plain derives from the gloomy canopy with the existing `plain()` recolour. **2 calls** (gpt-6.1-sol, ephemeral, one at a time), both recorded on the first attempt, no repair, no waiver.
+- `vegetation_wall()` follows the accepted gothic/crystal wall language: a fixed 400px master window per mask/parity resized to 128px (Lanczos + light unsharp, no blur), levelled to a per-skin wall value (`WALL_TARGET` gloomy 40, dreamy 76, plain 40 mean grey before parity). Open north/west sides get a thin lit lip, an open east side a shaded edge, and an open south side the only vertical face: a 34px aspect-correct band of trunks cut from the accepted side-view vegetation master, under an overhang shadow with a contact shadow. Cells with three or four wall neighbours use the calmest master windows (lowest broad-value variance, non-overlapping), so the two-parity diagonal repetition of enclosed walls does not read as stripes. Parity 1 of each mask is levelled to parity 0 before the unchanged 0.895 step.
+- Floor and creep share one gain per skin (`FLOOR_GAIN` gloomy 1.42, dreamy 1.06, plain 1.32), so the floor/creep relation, creep edge masks and the parity ratio are unchanged; ladders sit on the lifted floor. Mean grey floor0: gloomy 68.6 → 96.9, dreamy 132.2 → 139.6, plain 79.4 → 104.5; walls (all masks, parity 0) gloomy 39–42, dreamy 68–78, plain 39–42.
+- File names, mask bits (N=1 E=2 S=4 W=8), the parity contract and the runtime code are unchanged.
+
+Mean CIELAB ΔE (whole tile, per-pixel Lab averaged), floor vs wall-15, parity 0/1:
+
+| skin | before | after |
+| --- | --- | --- |
+| gloomy | 7.7 / 7.0 (L* 29.1 vs 27.2) | **27.9 / 25.2** (L* 41.0 vs 15.8) |
+| dreamy | 16.0 / 14.6 (L* 55.4 vs 42.6) | **28.5 / 27.3** (L* 58.3 vs 31.5) |
+| plain | 6.0 / 5.5 (L* 33.7 vs 27.8) | **28.7 / 26.6** (L* 44.1 vs 15.7) |
+
+Creep vs wall-15 after: gloomy 30.2/27.3, dreamy 14.7/14.9, plain 23.8/22.0 (before 8.3/7.6, 6.5/6.0, 2.7/2.5).
+
+`art/terrain-batch5-v1/export.py` built the pit from the old plain `floor0`, `wall-15-0` and `wall-0-0`; those exact files are frozen under `art/terrain-batch5-v1/frozen-inputs/` (same SHA-256 as before) and the batch 5 re-export is byte-identical for all 106 of its runtime files. Live evidence: `evidence/gloom-walls-20260930/README.md`.

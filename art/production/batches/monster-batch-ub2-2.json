@@ -1,0 +1,192 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ub2-2",
+  "assets": [
+    {
+      "asset_id": "zemekkys",
+      "native_name": "Zemekkys, Grand Keeper of Reality",
+      "scope": "UB-2 flat unique/boss; game/modules/tome/data/zones/town-point-zero/npcs.lua:131",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/town-point-zero/npcs.lua",
+          "sha256": "c55eda50b11fec8bb9e4f161f192bcd616c3feac5ea0b72d7bfa8a3d68cf6034",
+          "line": 131,
+          "anchor": "name = \"Zemekkys, Grand Keeper of Reality\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-point-zero/npcs.lua",
+          "sha256": "c55eda50b11fec8bb9e4f161f192bcd616c3feac5ea0b72d7bfa8a3d68cf6034",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_POINT_ZERO_TOWN\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_elf_high_chronomancer_zemekkys.png",
+          "sha256": "706d63187c4943bc5e702ad9a8911046ad2233c656d08b175235128170571409",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]. Paint this clothing, armour, held items and silhouette."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub2/refs/elf-story.png",
+          "sha256": "987c6ba4d56dee579f35481a05c4c3fd2ded1f6429a54cb7e922860417f36f10",
+          "role": "family",
+          "note": "Shipped siblings row order: fillarel-aldaren, companion-archer, kryl-feijan-acolyte, elven-mage, elven-corruptor, archmage-tarelion. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A pale shalore elf man with short pale-blond hair and a calm face, BARE HEAD (no hat, no hood): a layered deep-sapphire-blue robe with a broad CHEVRON-patterned blue shoulder mantle/scarf over a lighter blue tunic, a small pale badge on the left chest, a brown leather belt, loose blue trousers and brown boots; bare forearms and EMPTY relaxed hands at his sides, no staff and no weapon. Compact upright stance, mid-light blue masses with broad pale upper-left highlight planes. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Structurally distinct from the shipped elven-mage (purple hooded bearded caster), the blue armoured sword-carrying Rhaloren Inquisitor and the grey hooded Necromancer: Zemekkys is a BARE-HEADED unarmoured shalore in a layered blue robe with a chevron mantle and empty hands, no hat and no staff. The blue robe is not enough by itself; the chevron mantle, bare head and empty hands are the cues. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "explicit image=\"npc/humanoid_elf_high_chronomancer_zemekkys.png\"; flat 64x64 body. No shader, moddable_tile, anim, add_displays, textures, add_mos or nice_tile anywhere in leaf/base. auto_classes / sustains_at_birth, where present, only roll talents or enable native sustains and never write the drawn body. Static source contract only; see evidence/monster-batch-ub2-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub2-20261001/source-contracts.json",
+          "sha256": "40c54882833d53c9b54227ccfc217ac7d995f8f233651315c9748326ce4600c0"
+        }
+      ]
+    },
+    {
+      "asset_id": "blood-master",
+      "native_name": "Blood Master",
+      "scope": "UB-2 flat unique/boss; game/modules/tome/data/zones/ring-of-blood/npcs.lua:26",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/ring-of-blood/npcs.lua",
+          "sha256": "8b6652cf403977b1a01a63df2b799130cd2e80f9a07dfdb4103b4c3ee82d0920",
+          "line": 26,
+          "anchor": "name = \"Blood Master\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_yaech_blood_master.png",
+          "sha256": "c933a815324ff0c46506edcacc93c18526679b6dddb153d2da92db3475827736",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]. Paint this clothing, armour, held items and silhouette."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub2/refs/yaech.png",
+          "sha256": "a267263e8c7b268f80f464e357f7c0c15797c58e3ab3ca50745251dc8da8ee52",
+          "role": "family",
+          "note": "Shipped siblings row order: murgol, yaech-diver, yaech-hunter, yaech-mindslayer, yaech-psion, slaver. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A small STOUT white-furred yaech standing upright on two legs: a large rounded head with two huge bulging red-rimmed eyes and a small mouth, short ice-white fur over a stocky body, an ornate gold-and-bronze shoulder-and-chest harness, and a heavy RED-BLADED greatsword gripped in one raised hand, blade angled up across the body; a few pale ice-blue wisps beside the head. Every fur mass is painted bright white and ice-blue, clearly lighter than the disc. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Structurally distinct from the shipped yaech tokens: the Blood Master is the only white-furred, weapon-wielding bipedal yaech with huge red-rimmed eyes and a red greatsword, versus the blue-grey crowned trident Murgol, the round bubble-trailing yaech-diver and the robed yaech psions. The upright sword line and the white fur are the cues, not colour alone. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "default image name from class/NPC.lua:33 (npc/humanoid_yaech_blood_master.png); flat 64x64 body. No shader, moddable_tile, anim, add_displays, textures, add_mos or nice_tile anywhere in leaf/base. auto_classes / sustains_at_birth, where present, only roll talents or enable native sustains and never write the drawn body. Static source contract only; see evidence/monster-batch-ub2-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub2-20261001/source-contracts.json",
+          "sha256": "40c54882833d53c9b54227ccfc217ac7d995f8f233651315c9748326ce4600c0"
+        }
+      ]
+    },
+    {
+      "asset_id": "limmir-the-jeweler",
+      "native_name": "Limmir the Jeweler",
+      "scope": "UB-2 flat unique/boss; game/modules/tome/data/zones/valley-moon/npcs.lua:79",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/valley-moon/npcs.lua",
+          "sha256": "9666a7b631d072504f5a2f11f2405c3e7eb85782509b8f7236529ccb97bbea9e",
+          "line": 79,
+          "anchor": "name = \"Limmir the Jeweler\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_elf_limmir_the_jeweler.png",
+          "sha256": "77dc7b75c3a79faf61ea853f59f1db7160d7634935e0d7f7892ef09d8caee7db",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]. Paint this clothing, armour, held items and silhouette."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub2/refs/elf-story.png",
+          "sha256": "987c6ba4d56dee579f35481a05c4c3fd2ded1f6429a54cb7e922860417f36f10",
+          "role": "family",
+          "note": "Shipped siblings row order: fillarel-aldaren, companion-archer, kryl-feijan-acolyte, elven-mage, elven-corruptor, archmage-tarelion. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An elven man with long dark hair and a calm face, wearing a pale sage-green and cream tunic with gold trim and cuffs, a brown belt, dark olive trousers and brown boots; he holds one hand raised to shoulder height cradling a small bright GLOWING RED GEM, the other hand resting at his hip. No armour, no staff, no weapon, no hat. Slender upright figure, cream and sage mid-light masses with a broad pale upper-left highlight. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Structurally distinct from the shipped elf tokens: Limmir is a plainly dressed UNARMED elf defined by the small raised glowing RED GEM and the cream-and-sage tunic, versus the white-robed staff-carrying Fillarel, the armoured companion-archer and the corrupt elf casters. The raised gem hand is the cue. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "default image name from class/NPC.lua:33 (npc/humanoid_elf_limmir_the_jeweler.png); flat 64x64 body. No shader, moddable_tile, anim, add_displays, textures, add_mos or nice_tile anywhere in leaf/base. auto_classes / sustains_at_birth, where present, only roll talents or enable native sustains and never write the drawn body. Static source contract only; see evidence/monster-batch-ub2-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub2-20261001/source-contracts.json",
+          "sha256": "40c54882833d53c9b54227ccfc217ac7d995f8f233651315c9748326ce4600c0"
+        }
+      ]
+    }
+  ]
+}

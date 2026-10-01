@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ub2-3",
+  "assets": [
+    {
+      "asset_id": "protector-myssil",
+      "native_name": "Protector Myssil",
+      "scope": "UB-2 flat unique/boss; game/modules/tome/data/zones/town-zigur/npcs.lua:75",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/town-zigur/npcs.lua",
+          "sha256": "2431e511bbbf5fae3abaec0f3f4695143a51b2b3e3374d895645a11c8e5395f9",
+          "line": 75,
+          "anchor": "name = \"Protector Myssil\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ziguranth.lua",
+          "sha256": "92bd30799ea28f5243a88043275df3f58880da06e8b579f58a14d7ac4f4212e4",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_ZIGURANTH\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_halfling_protector_myssil.png",
+          "sha256": "263128c8a6937e2b0f56e8e2c51943d0d65d2854326eb716d1b2ce66e3532512",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]. Paint this clothing, armour, held items and silhouette."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub2/refs/short-proportions.png",
+          "sha256": "a81af10fe8fc01b510de12bd0391b6d68b34decca12f8f956f7ab83f3abae924",
+          "role": "family",
+          "note": "Shipped siblings row order: celia, the-possessed, halfling-guard, human-sun-paladin, burb-snow-giant-champion. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A SHORT STOCKY halfling woman, clearly shorter and broader in proportion than a human, encased in dark gunmetal steel plate with a CLOSED helm (narrow dark visor slit) and warm brass trim accents on the pauldrons and faulds; she grips a greatsword almost as tall as she is diagonally across her body, point down to the lower left, BOTH hands on the hilt. Heavy low compact silhouette. The armour is MID-GREY gunmetal with broad pale upper-left highlight planes and light brass trim, never a black mass. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Must not read as a recoloured human. Myssil is defined by SHORT STOCKY halfling proportions plus an oversized greatsword held diagonally across the body, versus the tall human Celia and The Possessed tokens and the compact gold human-sun-paladin. The dark steel is carried by broad mid-grey highlights and brass trim, never black. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "default image name from class/NPC.lua:33 (npc/humanoid_halfling_protector_myssil.png); flat 64x64 body. No shader, moddable_tile, anim, add_displays, textures, add_mos or nice_tile anywhere in leaf/base. auto_classes / sustains_at_birth, where present, only roll talents or enable native sustains and never write the drawn body. Static source contract only; see evidence/monster-batch-ub2-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub2-20261001/source-contracts.json",
+          "sha256": "40c54882833d53c9b54227ccfc217ac7d995f8f233651315c9748326ce4600c0"
+        }
+      ]
+    },
+    {
+      "asset_id": "rak-shor-cultist",
+      "native_name": "Rak'Shor Cultist",
+      "scope": "UB-2 flat unique/boss; game/modules/tome/data/zones/shadow-crypt/npcs.lua:28",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/shadow-crypt/npcs.lua",
+          "sha256": "d34013f5339f6dcd194bf34c392d7179f252d99506664eabcb1c935f4096e0bd",
+          "line": 28,
+          "anchor": "name = \"Rak'Shor Cultist\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/orc-rak-shor.lua",
+          "sha256": "c4875efb25a55eac7f55ca07b7d20f7602722458e70a3dfa6fcbad80207d7192",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ORC_RAK_SHOR\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_rak_shor_cultist.png",
+          "sha256": "c64585c158a294e11770fc73488acde077d7f9fb111c7b0179da54036d95c1f6",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]. Paint this clothing, armour, held items and silhouette."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub2/refs/orc-casters.png",
+          "sha256": "79248aeb3f51775af18b3403ad451023960e55353b24396715f6f591aa9bce77",
+          "role": "family",
+          "note": "Shipped siblings row order: orc-necromancer, rak-shor, ukruk, warmaster-gnarg, golbug, orc-high-pyromancer, orc-high-cryomancer, orc-summoner. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An old gaunt orc with mottled mid-green skin and a bald head, wearing a dark maroon-brown HOODED robe with rust-orange trim along the hood edge and hem; the hood is raised and the face is shadowed but visible, with small pale eyes and a jutting jaw; both arms spread downward and outward with long bare clawed hands. NO crown, NO armour, NO staff. Hunched caster stance; the maroon robe carries broad mid-light rust highlights so it never collapses into black. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Structurally distinct from the shipped orc caster tokens: the Cultist is an unarmoured, uncrowned, staff-less hooded maroon-robed orc with a raised hood and out-held EMPTY hands, versus the blue-hooded staff orc-necromancer, the gold-crowned regal rak-shor, the blue robed orc-corruptor and the armoured ukruk. The raised hood and empty hands are the cues. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "default image name from class/NPC.lua:33 (npc/humanoid_orc_rak_shor_cultist.png); flat 64x64 body. No shader, moddable_tile, anim, add_displays, textures, add_mos or nice_tile anywhere in leaf/base. auto_classes / sustains_at_birth, where present, only roll talents or enable native sustains and never write the drawn body. Static source contract only; see evidence/monster-batch-ub2-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub2-20261001/source-contracts.json",
+          "sha256": "40c54882833d53c9b54227ccfc217ac7d995f8f233651315c9748326ce4600c0"
+        }
+      ]
+    },
+    {
+      "asset_id": "shady-cornac-man",
+      "native_name": "Shady cornac man",
+      "scope": "UB-2 flat unique/boss; game/modules/tome/data/zones/town-derth/npcs.lua:103",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/town-derth/npcs.lua",
+          "sha256": "f67f0488dad78fc614dbc5eafaf2139641825a2a937824468b5096767842d704",
+          "line": 103,
+          "anchor": "name = \"Shady cornac man\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-derth/npcs.lua",
+          "sha256": "f67f0488dad78fc614dbc5eafaf2139641825a2a937824468b5096767842d704",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_DERTH_TOWN\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_shady_cornac_man.png",
+          "sha256": "bd8ff86a4c68d7bf15a8d126aed7cc84103a2e0b9a742d1187ea0078ef5df1cf",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]. Paint this clothing, armour, held items and silhouette."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ub2/refs/human-story.png",
+          "sha256": "8e3e72b0f79899377692afcbacb231577ae549ce8a4909dca405a60eefd1686e",
+          "role": "family",
+          "note": "Shipped siblings row order: necromancer, assassin-lord, subject-z, the-possessed, celia, harno, urkis. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A broad-shouldered human man with dark hair and a pale face, BARE HEAD (no hood up), wearing a dark TEAL-BLUE cloak draped over both shoulders, a pale grey-white VERTICALLY-STRIPED tunic, a brown belt, dark brown trousers and boots; one hand rests near his hip as if on a sword hilt. Heavier set than a gaunt caster. Paint the cloak mid-teal and the tunic light so the whole figure stays clearly lighter than the disc, with broad pale upper-left highlights. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Structurally distinct from the shipped necromancer and assassin-lord: the Shady cornac man is a broad, BARE-HEADED, heavy-shouldered man in a teal cloak and pale striped tunic with a hand at his hip, versus the gaunt grey hooded Necromancer and the dark masked Assassin Lord. The teal cloak and open face are the cues. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature. DARK-SUBJECT DISCIPLINE (the native art of this creature is almost black; earlier near-black tokens were rejected at 48px): render it in MID-LIGHT slate and ash values, never black, at least as light as the copper-grey bevel of the disc and clearly lighter than the charcoal plate, with a thin bright pale RIM LIGHT along the whole upper-left outline and bright accent patches (named in the brief) so that the silhouette reads as a light shape on the dark disc at 48 pixels.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "default image name from class/NPC.lua:33 (npc/humanoid_human_shady_cornac_man.png); flat 64x64 body. No shader, moddable_tile, anim, add_displays, textures, add_mos or nice_tile anywhere in leaf/base. auto_classes / sustains_at_birth, where present, only roll talents or enable native sustains and never write the drawn body. Static source contract only; see evidence/monster-batch-ub2-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ub2-20261001/source-contracts.json",
+          "sha256": "40c54882833d53c9b54227ccfc217ac7d995f8f233651315c9748326ce4600c0"
+        }
+      ]
+    }
+  ]
+}

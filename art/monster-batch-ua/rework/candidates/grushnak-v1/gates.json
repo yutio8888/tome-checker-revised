@@ -1,0 +1,119 @@
+{
+  "master": "art/monster-batch-ua/masters/grushnak-v1.png",
+  "sha256": "3a1a9f961a93ba2d8c20940096e2555499da8a979000d666d20391841c6e1d8b",
+  "body_luminance": 71.27,
+  "unchanged_body_minimum": 65.0,
+  "body_passed": true,
+  "style_gate": {
+    "asset_id": "grushnak",
+    "token": {
+      "path": "/workspace/t-engine4/game/addons/tome-checker-revised/art/monster-batch-ua/rework/candidates/grushnak-v1/128.png",
+      "sha256": "bad16e4b858b25bb9d70f65fdc88acc8924e857bab408186f46fc9c7804b5c78",
+      "sector_medians": [
+        66.72,
+        65.53,
+        64.27,
+        62.42,
+        59.94,
+        66.23,
+        73.6,
+        71.61
+      ],
+      "sector_offsets": [
+        -5.37,
+        -5.63,
+        -0.39,
+        -0.55,
+        -5.27,
+        -0.81,
+        -0.73,
+        -4.81
+      ],
+      "base_drift": -2.81,
+      "max_sector_intrusion": 2.43,
+      "max_opaque_radius": 0.8585,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ring_samples": [
+        298,
+        303,
+        298,
+        303,
+        298,
+        303,
+        298,
+        303
+      ]
+    },
+    "master": {
+      "path": "art/monster-batch-ua/masters/grushnak-v1.png",
+      "sha256": "3a1a9f961a93ba2d8c20940096e2555499da8a979000d666d20391841c6e1d8b",
+      "format": "PNG",
+      "mode": "RGBA",
+      "native_alpha_channel": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    "findings": [
+      {
+        "check": "master_native_alpha",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255",
+        "mode": "RGBA",
+        "alpha_min": 0,
+        "alpha_max": 255
+      },
+      {
+        "check": "disc_overflow",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u6700\u5927\u4e0d\u900f\u660e\u534a\u5f84 0.859\uff08\u4e0a\u9650 0.867\uff09",
+        "value": 0.8585,
+        "limit": 0.867
+      },
+      {
+        "check": "base_drift",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u5e95\u76d8\u504f\u79fb\u4e2d\u4f4d -2.81\uff08\u5bb9\u5dee \u00b18\uff09",
+        "value": -2.81,
+        "limit": 8.0
+      },
+      {
+        "check": "subject_intrusion",
+        "level": "warning",
+        "ok": true,
+        "detail": "\u5355\u6247\u533a\u76f8\u5bf9\u672c\u6b3e\u4e2d\u4f4d\u6700\u5927\u4e0a\u504f +2.43\uff08\u5bb9\u5dee +20\uff09",
+        "value": 2.43,
+        "limit": 20.0
+      },
+      {
+        "check": "corner_alpha",
+        "level": "blocking",
+        "ok": true,
+        "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]",
+        "value": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "blocking": [],
+    "warnings": [],
+    "grandfathered": false,
+    "waived": false,
+    "notes": [],
+    "passed": true
+  }
+}

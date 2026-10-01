@@ -222,7 +222,8 @@ for p in (0,1):
 # from the parity-0 source.
 CONCLAVE=[]
 for mask in range(16):
-    brick=rgb(GFX/f'korpul/wall-{mask}-0.png')
+    # Frozen pre-2026-10-01 Kor'Pul brick (the live brick got a cool hue finish).
+    brick=rgb(ROOT/'art/terrain-contrast-v1/frozen-inputs/korpul'/f'wall-{mask}-0.png')
     r,g,b=brick.split()
     cool=Image.merge('RGB',(r.point(lambda v:int(v*.52)),g.point(lambda v:int(v*.55)),b.point(lambda v:int(v*.62))))
     for p in (0,1):

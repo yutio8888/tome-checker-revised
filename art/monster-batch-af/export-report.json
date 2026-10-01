@@ -1,0 +1,1112 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "nightmare-horror",
+      "master": "masters/nightmare-horror-v1.png",
+      "sha256": "035d6661335ba9abdf052d81ee0ba4512dd80a7e91d3e4c4dfcf47d58392058d",
+      "exports": [
+        {
+          "path": "sprites/48/nightmare-horror.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -13.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d91d975084a4cdf2e6f34b1288895d9b43f28297dcd82ebc526f079ff22adf94"
+        },
+        {
+          "path": "sprites/64/nightmare-horror.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -13.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ba207141409c37d7a0efd67f29285541bda45705c846536b1c1d1ba5c996963a"
+        },
+        {
+          "path": "sprites/96/nightmare-horror.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -13.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0f31bdde74c9e18c7b512196ba7e148a02a2f5b8bdfc031e4eef7d4a0e105a5c"
+        },
+        {
+          "path": "sprites/128/nightmare-horror.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -13.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "42e54601cf443d535b944e1ff0c7d22e0ecaba743b4470e6fed820eae9e16ddc"
+        },
+        {
+          "path": "sprites/256/nightmare-horror.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -13.372093,
+            -14.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6f33c3ad25172184e0cc63bb35a837b514d59e245b18f118d895ee9c46bca197"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.38,
+        "max_sector_intrusion": 2.46,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "radiant-horror",
+      "master": "masters/radiant-horror-v2.png",
+      "sha256": "d008b4bbaaffedd8c9451ea05329ed0506247ff82877de745a9871cadeea4f03",
+      "exports": [
+        {
+          "path": "sprites/48/radiant-horror.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "eca8e7d7030af4847608fb15cffa1d164c4ae5e427aec649799e2260589bfdcd"
+        },
+        {
+          "path": "sprites/64/radiant-horror.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4bcdc259a3ddcdf1b61fdaeb991a9dd6eada3bd196eeab087d14a0586ee945c0"
+        },
+        {
+          "path": "sprites/96/radiant-horror.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "32062dd4b2a6ee7cc45a24ea400ad3b2292e58338a407bbc9036fc54cf3b2897"
+        },
+        {
+          "path": "sprites/128/radiant-horror.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "aee03b14a780ee88d1164c52c41170e359507b5b7b3d4f7d07b5a9429c89ce23"
+        },
+        {
+          "path": "sprites/256/radiant-horror.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            75,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.127907,
+            -14.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2675481ad64a0d0e9c814c765ef06a3714cbf540534ec2278a510c65303c3fe9"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 4.15,
+        "max_sector_intrusion": 6.01,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "maelstrom",
+      "master": "masters/maelstrom-v1.png",
+      "sha256": "7249543066997c2b366f72251ce6c19e3408ef57214fc19b589e7dd65f0b7b10",
+      "exports": [
+        {
+          "path": "sprites/48/maelstrom.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1168,
+            1174
+          ],
+          "export_window": [
+            -10.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "acac3cc106cf9752b8d05296168841ec1643122e33671dd7d30f6af591055ee1"
+        },
+        {
+          "path": "sprites/64/maelstrom.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1168,
+            1174
+          ],
+          "export_window": [
+            -10.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d977a32d970cf078ecc8307d48606bebc32c5c72571ec5c17e76e5c97e83caf7"
+        },
+        {
+          "path": "sprites/96/maelstrom.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1168,
+            1174
+          ],
+          "export_window": [
+            -10.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "857072c1a17d6c36310a9858c3eb9891fbff77a50e1dc96cb20c3be2ae6151d7"
+        },
+        {
+          "path": "sprites/128/maelstrom.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1168,
+            1174
+          ],
+          "export_window": [
+            -10.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "37b23f3fe5ce0300cec0808de9c6d411e122bce58cb184a9714a27b3723da19e"
+        },
+        {
+          "path": "sprites/256/maelstrom.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            76,
+            1168,
+            1174
+          ],
+          "export_window": [
+            -10.872093,
+            -13.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "257d678c062b63b715d4e9b37f963e3220ec09c8865db983650008d6a52c316e"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.77,
+        "max_sector_intrusion": 1.22,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "parasitic-horror",
+      "master": "masters/parasitic-horror-v1.png",
+      "sha256": "2c1fd364d21dc144957cd2ea76affc141f81adbbed1b03771e294ef0c7951dbd",
+      "exports": [
+        {
+          "path": "sprites/48/parasitic-horror.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1168,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b790916abebf68025150170b99faadb5ee84f4e8fee4964547f074cfd58c9246"
+        },
+        {
+          "path": "sprites/64/parasitic-horror.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1168,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "27827c42fba7eec24baf6a2337e1eb7bc427a41e8829e281d9c9b524be745458"
+        },
+        {
+          "path": "sprites/96/parasitic-horror.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1168,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a5f2942eed9ae37fe0dbee9a963f72759cb79fa37ae9c4c71150b03399da0ab6"
+        },
+        {
+          "path": "sprites/128/parasitic-horror.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1168,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "16bc5751562d39cca2835ee88ba0d46695631b3570efcfabc6537a80bc73e582"
+        },
+        {
+          "path": "sprites/256/parasitic-horror.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1168,
+            1171
+          ],
+          "export_window": [
+            -9.627907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "88faeb9f36ef9d507848c3ca3649231db7262991f1f4fc71470710f38232678d"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -3.35,
+        "max_sector_intrusion": 2.65,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "lich",
+      "master": "masters/lich-v2.png",
+      "sha256": "24a95815055147f3ab5b67863f8c7d3bb6c8ba784d2bf239668eb10b069b45ed",
+      "exports": [
+        {
+          "path": "sprites/48/lich.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1170,
+            1174
+          ],
+          "export_window": [
+            -11.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b43c4041fa9bb5aadea2c52d24d399cd149bcaa2fa57db75af04467000adff0c"
+        },
+        {
+          "path": "sprites/64/lich.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1170,
+            1174
+          ],
+          "export_window": [
+            -11.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3d224e804537258c9d81b58bb7d5e6f5a746291f232111b0383bec79d96f5b54"
+        },
+        {
+          "path": "sprites/96/lich.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1170,
+            1174
+          ],
+          "export_window": [
+            -11.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f2d1676aff23b7326ad5f3ce7dddd0953d131effed70e9ebf0efb16f017abdbc"
+        },
+        {
+          "path": "sprites/128/lich.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1170,
+            1174
+          ],
+          "export_window": [
+            -11.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e5967c0b85a89c68ddee125959d88287dae703650ca9e62f7d57251f5d4d943e"
+        },
+        {
+          "path": "sprites/256/lich.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1170,
+            1174
+          ],
+          "export_window": [
+            -11.534884,
+            -15.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "69147d32b4e07d8d6872f1326f125b85a6d77dab7bcded379fa2d1dc15c76f69"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 5.6,
+        "max_sector_intrusion": 2.77,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "ancient-lich",
+      "master": "masters/ancient-lich-v1.png",
+      "sha256": "d1dd2c9b85b3755aa7d56e95f106c87b76c79dec4e7001bc54802f75955473d7",
+      "exports": [
+        {
+          "path": "sprites/48/ancient-lich.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "38fb50e21fbea98289e34a1c7774df7ff5eceb56132002893a323de2630bcd22"
+        },
+        {
+          "path": "sprites/64/ancient-lich.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "77991f4e85b07cd77289baada4c0a01532d9b3afa7ea0a4baa77e1dbdeb60080"
+        },
+        {
+          "path": "sprites/96/ancient-lich.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "4e8249535480e31578173e270cd268e37d700622cd7e3ce2373c5357eac8ebc8"
+        },
+        {
+          "path": "sprites/128/ancient-lich.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7caa80f932c0c831931dd16ebe2c4d50b301816bb5a69616a4bc2f8f03258782"
+        },
+        {
+          "path": "sprites/256/ancient-lich.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            74,
+            1166,
+            1171
+          ],
+          "export_window": [
+            -11.290698,
+            -15.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "41daafc41547d4f6a4c77c2febff497c08224238eebd2defda72c51d5a1d766b"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 3.31,
+        "max_sector_intrusion": 2.24,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "archlich",
+      "master": "masters/archlich-v1.png",
+      "sha256": "d790f0fb46bb7bf0892dae194033cba6909b9f77f36ed8866ba813b6522c1a1a",
+      "exports": [
+        {
+          "path": "sprites/48/archlich.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            78,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -10.046512,
+            -11.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fa44bf8f17ad90a4b71af1038b1b0aad5ed22dab2e4a5f0a0206e59b04e2a065"
+        },
+        {
+          "path": "sprites/64/archlich.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            78,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -10.046512,
+            -11.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "32c6aa8bf03660038f035b6c8499e1a78be21b2615146af6dfa24177cb178b27"
+        },
+        {
+          "path": "sprites/96/archlich.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            78,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -10.046512,
+            -11.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6f1efec716139aceec2e7e7d6d29e283223df386a0d8f86d05d36625458728d5"
+        },
+        {
+          "path": "sprites/128/archlich.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            78,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -10.046512,
+            -11.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "69893cd551fde1ee510ea0c1d03ad3ead99ef7fd1d46930f6c106f80963b7b00"
+        },
+        {
+          "path": "sprites/256/archlich.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            78,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -10.046512,
+            -11.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e52b7791ec057feeb2dd3855b3f8a3262c39f942326f68704055c0a55d2df140"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.41,
+        "max_sector_intrusion": 3.67,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "blood-lich",
+      "master": "masters/blood-lich-v3.png",
+      "sha256": "fd9d118ae47c6a25b61b731dc1b3e2aaced138f4f965611ccad84f583e9ee3f1",
+      "exports": [
+        {
+          "path": "sprites/48/blood-lich.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1162,
+            1172
+          ],
+          "export_window": [
+            -10.627907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "56b06138cd46ebc07c2ea9232cf73afa36d5184e35398b9edc434b292788a53a"
+        },
+        {
+          "path": "sprites/64/blood-lich.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1162,
+            1172
+          ],
+          "export_window": [
+            -10.627907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a9747ed9381b6a1fe32ae58d52ff2e5dc8249f181039c88ba3f215705b6d53fa"
+        },
+        {
+          "path": "sprites/96/blood-lich.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1162,
+            1172
+          ],
+          "export_window": [
+            -10.627907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a6d98fe6427bcd4349b1e9f3c8db7d68a40788a86e608be8b0f61704d58155e9"
+        },
+        {
+          "path": "sprites/128/blood-lich.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1162,
+            1172
+          ],
+          "export_window": [
+            -10.627907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d27ea8bdeb0b3f973878347af028a9128586da531fb6b59b7fca486b9996dc0f"
+        },
+        {
+          "path": "sprites/256/blood-lich.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            77,
+            1162,
+            1172
+          ],
+          "export_window": [
+            -10.627907,
+            -12.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "08386daf526f4b1c8b6f0f0c2b5c04488e6ac830ca0427ea47d730026863e920"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -1.91,
+        "max_sector_intrusion": 2.6,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "animated-blood",
+      "master": "masters/animated-blood-v2.png",
+      "sha256": "76fd2eefe774aafc9d553c5b6a5c5b7e79e687962332486e2d6d459640436875",
+      "exports": [
+        {
+          "path": "sprites/48/animated-blood.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1165,
+            1172
+          ],
+          "export_window": [
+            -12.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "48c9f1422e976fce87d18f4f3b48581dd82b7441f1b35b6890bcc5838ba5b0c9"
+        },
+        {
+          "path": "sprites/64/animated-blood.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1165,
+            1172
+          ],
+          "export_window": [
+            -12.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2c024c3c61553e10ae41ef9b3efe029b201b197767a12acc956c845f2df49ef0"
+        },
+        {
+          "path": "sprites/96/animated-blood.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1165,
+            1172
+          ],
+          "export_window": [
+            -12.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "b6add748ff33ea06eea7238949fb32142a7a3058291249be65e308ff1e138dc8"
+        },
+        {
+          "path": "sprites/128/animated-blood.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1165,
+            1172
+          ],
+          "export_window": [
+            -12.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "126f01900d2e928320a04b4d076de27006b5be5d8cc2d71f9286ee8060cdac76"
+        },
+        {
+          "path": "sprites/256/animated-blood.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1165,
+            1172
+          ],
+          "export_window": [
+            -12.209302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "09ad9c6cd466e4f762d1b37c4bcb05864bee00abc674af101dd5e60fa4a652af"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 0.62,
+        "max_sector_intrusion": 1.25,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

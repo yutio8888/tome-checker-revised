@@ -71,6 +71,26 @@ for _,entry in ipairs(Tokens.catalog) do
  local a=actor(entry);game.level.entities[#game.level.entities+1]=a
  equal(game:checkerRefreshActor(a),entry.id,'no cheat/demo/zone gate '..entry.id)
 end
+-- AG: actor shaders never leak onto the fresh replacement Entity or the
+-- tactical overlay. Switching off restores the actor without editing shader.
+for _, id in ipairs({'multi-hued-drake-hatchling','multi-hued-drake','greater-multi-hued-wyrm','multi-hued-crystal','shimmering-crystal'}) do
+ local a=actor(Tokens.by_id[id]);a.shader='quad_hue'
+ equal(game:checkerRefreshActor(a),id,'AG install exact shader body '..id)
+ equal(a.replace_display.shader,nil,'AG neutral token Entity has no native shader '..id)
+ equal(a.replace_display.shader_args,nil,'AG token Entity has no shader arguments '..id)
+ equal(a.shader,'quad_hue','AG install preserves actor shader '..id)
+ equal(a.shader_args,nil,'AG install preserves actor arguments '..id)
+ a.shader_args={}
+ equal(game:checkerRefreshActor(a),nil,'AG changed shader args restore native '..id)
+ equal(a.replace_display,nil,'AG changed shader args remove token '..id)
+ a.shader_args=nil
+ equal(game:checkerRefreshActor(a),id,'AG restored shader contract rebuilds token '..id)
+ game:checkerSetTokensEnabled(false)
+ equal(game:checkerRefreshActor(a),nil,'AG disabled restores native '..id)
+ equal(a.replace_display,nil,'AG disabled releases display '..id)
+ equal(a.shader,'quad_hue','AG native fallback still has shader '..id)
+ game:checkerSetTokensEnabled(true)
+end
 -- A mapped key without reviewed art stays native; the demo hero is never a
 -- production fallback, even for the exact Cornac Berserker it depicts.
 equal(game:checkerRefreshActor(player),nil,'mapped key without art keeps native player')

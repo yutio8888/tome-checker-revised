@@ -1,0 +1,88 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "assets": {
+    "apprentice-mage": 69.68,
+    "pyromancer": 87.94,
+    "cryomancer": 68.8,
+    "geomancer": 65.88,
+    "tempest": 68.78,
+    "human-guard": 67.43,
+    "derth-guard": 83.89,
+    "last-hope-guard": 104.72,
+    "halfling-guard": 70.44,
+    "dwarven-guard": 72.4,
+    "elvala-guard": 71.26,
+    "slaver": 82.35,
+    "enthralled-slave": 80.4
+  },
+  "floors": {
+    "town road A": 152.9,
+    "town fields A": 113.14,
+    "grass": 108.97,
+    "sand (Gates of Morning)": 110.23,
+    "snow ground": 175.0,
+    "gothic stone A": 145.44,
+    "korpul stone A": 131.66,
+    "cave rock": 130.64,
+    "gloomy (Heart of the Gloom)": 96.92,
+    "burnt ground": 72.7
+  },
+  "zone_floors": {
+    "apprentice-mage": {
+      "town road A": 152.9,
+      "town fields A": 113.14,
+      "gothic stone A": 145.44
+    },
+    "human-guard": {
+      "town road A": 152.9,
+      "town fields A": 113.14,
+      "sand (Gates of Morning)": 110.23
+    },
+    "pyromancer": {
+      "town fields A": 113.14,
+      "gothic stone A": 145.44
+    },
+    "cryomancer": {
+      "town fields A": 113.14,
+      "snow ground": 175.0
+    },
+    "geomancer": {
+      "town fields A": 113.14,
+      "korpul stone A": 131.66
+    },
+    "tempest": {
+      "town fields A": 113.14,
+      "gloomy (Heart of the Gloom)": 96.92
+    },
+    "derth-guard": {
+      "town fields A": 113.14,
+      "grass": 108.97
+    },
+    "last-hope-guard": {
+      "town road A": 152.9,
+      "burnt ground": 72.7
+    },
+    "halfling-guard": {
+      "town road A": 152.9,
+      "grass": 108.97
+    },
+    "dwarven-guard": {
+      "gothic stone A": 145.44,
+      "korpul stone A": 131.66
+    },
+    "elvala-guard": {
+      "town road A": 152.9,
+      "sand (Gates of Morning)": 110.23
+    },
+    "slaver": {
+      "cave rock": 130.64,
+      "burnt ground": 72.7
+    },
+    "enthralled-slave": {
+      "town road A": 152.9,
+      "cave rock": 130.64
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

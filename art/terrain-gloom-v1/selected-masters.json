@@ -82,5 +82,29 @@
         "waived": false
       }
     }
+  },
+  "gloomy-canopy": {
+    "source": "masters/gloomy-canopy-v1.png",
+    "sha256": "19a276ccce5ed4c75222c77acc1e56389338928b48a367c7a51340edb5d921fb",
+    "handoff": "art/production/handoffs/heart-gloom-3/gloomy-canopy",
+    "gate": {
+      "floor_opaque": {
+        "ok": true,
+        "waived": false
+      }
+    },
+    "role": "wall-top canopy for all 16 wall masks (2026-09-30 rework); also the plain (Deep Bellow) wall top via plain() recolour"
+  },
+  "dreamy-canopy": {
+    "source": "masters/dreamy-canopy-v1.png",
+    "sha256": "646dcc7bf85bccbed76e5d4e8b5f3eb250cfd9f1fd95acba7ecdedd3abc9e84f",
+    "handoff": "art/production/handoffs/heart-gloom-3/dreamy-canopy",
+    "gate": {
+      "floor_opaque": {
+        "ok": true,
+        "waived": false
+      }
+    },
+    "role": "wall-top canopy for all 16 wall masks (2026-09-30 rework); purified skin"
   }
 }

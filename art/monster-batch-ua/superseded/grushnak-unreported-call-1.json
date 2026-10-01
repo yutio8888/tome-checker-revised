@@ -1,0 +1,14 @@
+{
+  "status": "REJECTED provenance; no reported path, no receipt, never runtime artwork",
+  "call": "art/production/handoffs/monster-batch-ua-4/grushnak/imagegen-calls/call-1/call.json",
+  "retained": [
+    {
+      "original": "~/.codex/generated_images/01a0f57d-4c3f-7aa2-bd14-a5fd56c2dd67/exec-a143d32a-67a3-4a2f-9886-cf7c9753b2e5.png",
+      "retained": "art/monster-batch-ua/superseded/grushnak-unreported-call-1-1.png",
+      "sha256": "147b7e43a2d260468f793398052a81df27b8493a26c6de637451711861d48e89",
+      "admitted": false
+    }
+  ],
+  "retry": "Same pack, same brief, one remaining call of max_attempts=2; no new pack or budget reset",
+  "call_sha256": "49e79d8c230c8cc5cd87a8a8e8df144680edad963307961416f9b73924a43f9e"
+}
