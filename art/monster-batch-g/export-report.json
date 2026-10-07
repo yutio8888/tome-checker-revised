@@ -249,8 +249,8 @@
     },
     {
       "id": "dremling",
-      "master": "masters/dremling-v2.png",
-      "sha256": "46a88abf6ff3314d204df60e66739abcff130f23e3a27c0f648e45714b6d26bc",
+      "master": "masters/dremling-v3.png",
+      "sha256": "7bf8e12d32045867b8e0d1fc9c53e20edf78c5447287ce9cfc43175c3998b473",
       "exports": [
         {
           "path": "sprites/48/dremling.png",
@@ -258,18 +258,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            89,
-            76,
-            1164,
+            88,
+            74,
+            1163,
             1172
           ],
           "export_window": [
-            -10.709302,
-            -13.209302,
-            1274.418605
+            -12.872093,
+            -15.372093,
+            1276.744186
           ],
           "target_occupancy": 0.86,
-          "sha256": "f260511a7c6b7eed34e3d6983a36b97c9049c5c48e32c230448b009b9b15ef76"
+          "sha256": "d51193e95c5499aca152b20449615fed08f9153d45eef6b8970fadf097c817e3"
         },
         {
           "path": "sprites/64/dremling.png",
@@ -277,18 +277,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            89,
-            76,
-            1164,
+            88,
+            74,
+            1163,
             1172
           ],
           "export_window": [
-            -10.709302,
-            -13.209302,
-            1274.418605
+            -12.872093,
+            -15.372093,
+            1276.744186
           ],
           "target_occupancy": 0.86,
-          "sha256": "766d8c0b6ce5e26c96fa703b907c955804d4bcaaa2adacd6b72565300ac39e76"
+          "sha256": "8ac4fdfb684a87d0355397463bf0dc8f69314e7fbef607596b801f15c6fb174e"
         },
         {
           "path": "sprites/96/dremling.png",
@@ -296,18 +296,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            89,
-            76,
-            1164,
+            88,
+            74,
+            1163,
             1172
           ],
           "export_window": [
-            -10.709302,
-            -13.209302,
-            1274.418605
+            -12.872093,
+            -15.372093,
+            1276.744186
           ],
           "target_occupancy": 0.86,
-          "sha256": "6396bfdea2e4648ff818cefd70b9d994144422b22b424ad65c74d0622c2bfab6"
+          "sha256": "8e52f18bc36092ababc972bdb2786813ee3f459e0e5d7dde7673dc49f7acfd4d"
         },
         {
           "path": "sprites/128/dremling.png",
@@ -315,18 +315,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            89,
-            76,
-            1164,
+            88,
+            74,
+            1163,
             1172
           ],
           "export_window": [
-            -10.709302,
-            -13.209302,
-            1274.418605
+            -12.872093,
+            -15.372093,
+            1276.744186
           ],
           "target_occupancy": 0.86,
-          "sha256": "ed834025fbc4a036013bbfc8c9c7af87b1126248003022416ca9f7b407f7481d"
+          "sha256": "75836259bff89724cb42b1f6bdfcfb174ebb77851d1a0f491c949c7b8e1c1a1c"
         },
         {
           "path": "sprites/256/dremling.png",
@@ -334,18 +334,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            89,
-            76,
-            1164,
+            88,
+            74,
+            1163,
             1172
           ],
           "export_window": [
-            -10.709302,
-            -13.209302,
-            1274.418605
+            -12.872093,
+            -15.372093,
+            1276.744186
           ],
           "target_occupancy": 0.86,
-          "sha256": "1c8c176a6e27bd1ef230b52635e7d1e55aa6a96c0b82a11cf6b8f06aee4257ec"
+          "sha256": "ff85b174f77e8f877317a28e6e5183af456e251f8df076825cb14cf527e3c092"
         }
       ],
       "style_gate": {
@@ -359,9 +359,9 @@
           74.33,
           76.42
         ],
-        "base_drift": 3.37,
-        "max_sector_intrusion": 4.35,
-        "max_opaque_radius": 0.8599,
+        "base_drift": -3.64,
+        "max_sector_intrusion": 3.01,
+        "max_opaque_radius": 0.8585,
         "blocking": [],
         "warnings": [],
         "grandfathered": false,

@@ -22,7 +22,7 @@ SHIPPED = {
     'the-dreaming-one': 'the-dreaming-one-v1',
     'weaver-queen': 'weaver-queen-v1',
     'murgol': 'murgol-v2',
-    'lady-nashva': 'lady-nashva-v2',
+    'lady-nashva': 'lady-nashva-v3',
     'the-possessed': 'the-possessed-v2',
     'subject-z': 'subject-z-v3',
     'grand-corruptor': 'grand-corruptor-v2',

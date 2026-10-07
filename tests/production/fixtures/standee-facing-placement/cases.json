@@ -1,0 +1,372 @@
+[
+  {
+    "id": "ogre-guard",
+    "direction": "left",
+    "mask": "ogre-guard-left.png",
+    "quad": [
+      31.5375,
+      51.219,
+      112.4625,
+      132.144
+    ],
+    "tile": 48,
+    "score": {
+      "pass": true,
+      "bbox": [
+        49,
+        51,
+        93,
+        132
+      ],
+      "quad": [
+        31.5375,
+        51.219,
+        112.4625,
+        132.144
+      ],
+      "contained": true,
+      "bottom_error_px": -0.14400000000000546
+    },
+    "source_evidence": "token-standee-batch2-20261004",
+    "source_scene": "standee-facing-ogre-L1",
+    "source_sha256": {
+      "crops/standee-facing-aura-ogre-guard-left-off-crop.png": "74f90153ddd5f71c69f248f3faa7b72bcc52f807f75ea9d6aac8c8ce996dc685",
+      "crops/standee-facing-aura-ogre-guard-left-on-1-crop.png": "badb88c5c1bf699148b6fafcf15f15f4120f3b7af8c623adb706839b93f00d3f",
+      "crops/standee-facing-aura-ogre-guard-left-on-2-crop.png": "eef3e7d99c1c57d4944a0d46e4b87529d906204f9ed061a7d50315621327ad25",
+      "crops/standee-facing-aura-ogre-guard-left-on-3-crop.png": "be27b6e69aecf329020b7fa1b206d5585fc96b410122bccc517cec54dc667335"
+    }
+  },
+  {
+    "id": "ogre-guard",
+    "direction": "right",
+    "mask": "ogre-guard-right.png",
+    "quad": [
+      31.5375,
+      51.219,
+      112.4625,
+      132.144
+    ],
+    "tile": 48,
+    "score": {
+      "pass": true,
+      "bbox": [
+        51,
+        51,
+        94,
+        132
+      ],
+      "quad": [
+        31.5375,
+        51.219,
+        112.4625,
+        132.144
+      ],
+      "contained": true,
+      "bottom_error_px": -0.14400000000000546
+    },
+    "source_evidence": "token-standee-batch2-20261004",
+    "source_scene": "standee-facing-ogre-L1",
+    "source_sha256": {
+      "crops/standee-facing-aura-ogre-guard-right-off-crop.png": "09d145d13289a0cb6d25f64d22c29f591e6c4a5b4decee14f5b328b6dbf1ff27",
+      "crops/standee-facing-aura-ogre-guard-right-on-1-crop.png": "22073189e337560a087a38fe1cb4217ac0ae79dc77992d6075c1e4141fde6014",
+      "crops/standee-facing-aura-ogre-guard-right-on-2-crop.png": "9b3f4d523183370363863b87bcc414d0245588696c7fa1dae33978373ef192f6",
+      "crops/standee-facing-aura-ogre-guard-right-on-3-crop.png": "06685f2a61eb0eebf3546b118d4112bdbdbd05bb8f10bfc389a5861d7c7b22dc"
+    }
+  },
+  {
+    "id": "norgos-guardian",
+    "direction": "left",
+    "mask": "norgos-guardian-left.png",
+    "quad": [
+      48.00000000000001,
+      36.14399999999999,
+      96.00000000000001,
+      132.144
+    ],
+    "tile": 48,
+    "score": {
+      "pass": true,
+      "bbox": [
+        53,
+        36,
+        90,
+        132
+      ],
+      "quad": [
+        48.00000000000001,
+        36.14399999999999,
+        96.00000000000001,
+        132.144
+      ],
+      "contained": true,
+      "bottom_error_px": -0.14400000000000546
+    },
+    "source_evidence": "token-standee-batch2-20261004",
+    "source_scene": "standee-facing-new-tall-L1",
+    "source_sha256": {
+      "crops/standee-facing-aura-norgos-guardian-left-off-crop.png": "5954f33badb10f4feb47d291abe5974bad685c6ec93a69a74f9835fe61567e96",
+      "crops/standee-facing-aura-norgos-guardian-left-on-1-crop.png": "ceeb8ed91cf4a82696e229f8f52d8630648be4f37dee291c424e9032d469540e",
+      "crops/standee-facing-aura-norgos-guardian-left-on-2-crop.png": "ca21447096390db440747c2225609998c78256a21569ba1587fbf9a59b896290",
+      "crops/standee-facing-aura-norgos-guardian-left-on-3-crop.png": "835deea9b12c5f569962c8e43e91b3e32272d226bd5d59ab8d5e853370298980"
+    }
+  },
+  {
+    "id": "norgos-guardian",
+    "direction": "right",
+    "mask": "norgos-guardian-right.png",
+    "quad": [
+      48.00000000000001,
+      36.14399999999999,
+      96.00000000000001,
+      132.144
+    ],
+    "tile": 48,
+    "score": {
+      "pass": true,
+      "bbox": [
+        54,
+        40,
+        91,
+        132
+      ],
+      "quad": [
+        48.00000000000001,
+        36.14399999999999,
+        96.00000000000001,
+        132.144
+      ],
+      "contained": true,
+      "bottom_error_px": -0.14400000000000546
+    },
+    "source_evidence": "token-standee-batch2-20261004",
+    "source_scene": "standee-facing-new-tall-L1",
+    "source_sha256": {
+      "crops/standee-facing-aura-norgos-guardian-right-off-crop.png": "5c505c4f22d6492b3815bcbee985f0ef18fd1d6a38fc1af6a8dd07ede0413f0e",
+      "crops/standee-facing-aura-norgos-guardian-right-on-1-crop.png": "f82dde6004aea500506c8935e7b7eec71ed9fa71cfa584aa8d29bca3640c7dfd",
+      "crops/standee-facing-aura-norgos-guardian-right-on-2-crop.png": "019946f52966baec3f6036e268518cc274b2a52884c951c27d36e356289aaa61",
+      "crops/standee-facing-aura-norgos-guardian-right-on-3-crop.png": "a8bf152f4f496ad846997527f8ea9d9012c4125a43da75147017268bc5528ede"
+    }
+  },
+  {
+    "id": "corrupted-daelach",
+    "direction": "left",
+    "mask": "corrupted-daelach-left.png",
+    "quad": [
+      45.0,
+      24.14399999999999,
+      99.0,
+      132.144
+    ],
+    "tile": 48,
+    "score": {
+      "pass": true,
+      "bbox": [
+        49,
+        24,
+        95,
+        132
+      ],
+      "quad": [
+        45.0,
+        24.14399999999999,
+        99.0,
+        132.144
+      ],
+      "contained": true,
+      "bottom_error_px": -0.14400000000000546
+    },
+    "source_evidence": "token-standee-batch2-20261004",
+    "source_scene": "standee-facing-L1",
+    "source_sha256": {
+      "crops/standee-facing-aura-corrupted-daelach-left-off-crop.png": "fd06353c7883a52b47547c510e0aad51bcd85d5ffa03966e619d4d28ac2f6a49",
+      "crops/standee-facing-aura-corrupted-daelach-left-on-1-crop.png": "4701d164d026a6209f04665d6387f052ee73eb114601674edcd0f85d473404ed",
+      "crops/standee-facing-aura-corrupted-daelach-left-on-2-crop.png": "ea0fd6eb2bbca0d0f03e14f0a42dc3fc5dd96774ac5add62816a00f4fe25d81b",
+      "crops/standee-facing-aura-corrupted-daelach-left-on-3-crop.png": "048fb5153a605ca9a4309805fa4b128337d901fdbd44169fb7cfb7d2f9aaad10"
+    }
+  },
+  {
+    "id": "corrupted-daelach",
+    "direction": "right",
+    "mask": "corrupted-daelach-right.png",
+    "quad": [
+      45.0,
+      24.14399999999999,
+      99.0,
+      132.144
+    ],
+    "tile": 48,
+    "score": {
+      "pass": true,
+      "bbox": [
+        49,
+        24,
+        94,
+        132
+      ],
+      "quad": [
+        45.0,
+        24.14399999999999,
+        99.0,
+        132.144
+      ],
+      "contained": true,
+      "bottom_error_px": -0.14400000000000546
+    },
+    "source_evidence": "token-standee-batch2-20261004",
+    "source_scene": "standee-facing-L1",
+    "source_sha256": {
+      "crops/standee-facing-aura-corrupted-daelach-right-off-crop.png": "81dda745cf01e404c5bd221e3678830f889d9dbb6347563f2c264effe0bc8be1",
+      "crops/standee-facing-aura-corrupted-daelach-right-on-1-crop.png": "570367a87b72f350ece65cec8507aff41e05974893e1b539dfc8a8d39ca759ab",
+      "crops/standee-facing-aura-corrupted-daelach-right-on-2-crop.png": "b2f56c76d92993b2b3fa885b8219660aea9616fb3096a6768cdc8d694c9853fa",
+      "crops/standee-facing-aura-corrupted-daelach-right-on-3-crop.png": "dd739459e255b07d8270c2dae4f8acbd0640ac4607722f471bd5efa89600ed3b"
+    }
+  },
+  {
+    "id": "heavy-bone-giant",
+    "direction": "left",
+    "mask": "heavy-bone-giant-left.png",
+    "quad": [
+      45.0,
+      24.14399999999999,
+      99.0,
+      132.144
+    ],
+    "tile": 48,
+    "score": {
+      "pass": true,
+      "bbox": [
+        46,
+        29,
+        98,
+        132
+      ],
+      "quad": [
+        45.0,
+        24.14399999999999,
+        99.0,
+        132.144
+      ],
+      "contained": true,
+      "bottom_error_px": -0.14400000000000546
+    },
+    "source_evidence": "token-standee-auraregion-20261004",
+    "source_scene": "standee-facing-L1",
+    "source_sha256": {
+      "crops/standee-facing-aura-heavy-bone-giant-left-off-crop.png": "201072da61cbff5cc370ca795c5552a8689dfcef9e33d39b351d2b0f6dedd026",
+      "crops/standee-facing-aura-heavy-bone-giant-left-on-1-crop.png": "4913e489ccee102205059d2f756934a7c3b6b8f4611100d1f9e6d0355ed0d31d",
+      "crops/standee-facing-aura-heavy-bone-giant-left-on-2-crop.png": "fcddb08225937fd2e363a692f549cb54337d9d99c3ba9f066de35c53ac326fc0",
+      "crops/standee-facing-aura-heavy-bone-giant-left-on-3-crop.png": "6663458fe212af37129b1d3f35bc6a61bb41445d3e1ccf8a676d0a95ce99c4a0"
+    }
+  },
+  {
+    "id": "heavy-bone-giant",
+    "direction": "right",
+    "mask": "heavy-bone-giant-right.png",
+    "quad": [
+      45.0,
+      24.14399999999999,
+      99.0,
+      132.144
+    ],
+    "tile": 48,
+    "score": {
+      "pass": true,
+      "bbox": [
+        46,
+        29,
+        98,
+        132
+      ],
+      "quad": [
+        45.0,
+        24.14399999999999,
+        99.0,
+        132.144
+      ],
+      "contained": true,
+      "bottom_error_px": -0.14400000000000546
+    },
+    "source_evidence": "token-standee-auraregion-20261004",
+    "source_scene": "standee-facing-L1",
+    "source_sha256": {
+      "crops/standee-facing-aura-heavy-bone-giant-right-off-crop.png": "6549f503f73dc4a644f3c9ced833ef85cc80f9c2720f51e36d61239d09cf2345",
+      "crops/standee-facing-aura-heavy-bone-giant-right-on-1-crop.png": "3cd460feb7be9c3979a1310b0e062432cd9fc469172d1035657894689cac8ac1",
+      "crops/standee-facing-aura-heavy-bone-giant-right-on-2-crop.png": "57b3d91c284d573c20fa54be44580878eb7933023c245226e8f714e2637203b7",
+      "crops/standee-facing-aura-heavy-bone-giant-right-on-3-crop.png": "5c2590bfb49f50421299e197ebe161adb5d757569aca1bb3e70ecded6bff16ac"
+    }
+  },
+  {
+    "id": "rantha",
+    "direction": "left",
+    "mask": "rantha-left.png",
+    "quad": [
+      45.0,
+      24.14399999999999,
+      99.0,
+      132.144
+    ],
+    "tile": 48,
+    "score": {
+      "pass": true,
+      "bbox": [
+        46,
+        24,
+        98,
+        132
+      ],
+      "quad": [
+        45.0,
+        24.14399999999999,
+        99.0,
+        132.144
+      ],
+      "contained": true,
+      "bottom_error_px": -0.14400000000000546
+    },
+    "source_evidence": "token-standee-batch3-20261005",
+    "source_scene": "standee-facing-L1",
+    "source_sha256": {
+      "crops/standee-facing-aura-rantha-left-off-crop.png": "2332dac1649653d224e33863a1485f65edabfe0b2f1a01e4daaec81c3c8f0ac3",
+      "crops/standee-facing-aura-rantha-left-on-1-crop.png": "72821a38d5b43b66a0d54c61b67ed315dd1b509b04bb31b610091812cf910c36",
+      "crops/standee-facing-aura-rantha-left-on-2-crop.png": "1bb686199202d6b4742ffa625e12df50a3a83ca24d57b75347cf525874f7d32a",
+      "crops/standee-facing-aura-rantha-left-on-3-crop.png": "04f8bfb5301a2e9fa34773e52d8f32a9f07eed102073c98cf13d56d7bbb1a5b7"
+    }
+  },
+  {
+    "id": "rantha",
+    "direction": "right",
+    "mask": "rantha-right.png",
+    "quad": [
+      45.0,
+      24.14399999999999,
+      99.0,
+      132.144
+    ],
+    "tile": 48,
+    "score": {
+      "pass": true,
+      "bbox": [
+        47,
+        24,
+        97,
+        132
+      ],
+      "quad": [
+        45.0,
+        24.14399999999999,
+        99.0,
+        132.144
+      ],
+      "contained": true,
+      "bottom_error_px": -0.14400000000000546
+    },
+    "source_evidence": "token-standee-batch3-20261005",
+    "source_scene": "standee-facing-L1",
+    "source_sha256": {
+      "crops/standee-facing-aura-rantha-right-off-crop.png": "b90d90ff8fa4080c471ca04f848114cfa6e4a87c3dea6e3ea3beae63ced32e15",
+      "crops/standee-facing-aura-rantha-right-on-1-crop.png": "f2c7e807504247ff8e0773d0a8925393c3b015ccf3a0d9dafd6ded61c7f4c3b8",
+      "crops/standee-facing-aura-rantha-right-on-2-crop.png": "c342cc83f68c981df0c7e1e660ad0ef769347976b4818176f7649ed1925b25c7",
+      "crops/standee-facing-aura-rantha-right-on-3-crop.png": "a4d90f78a7487f7ea42c0d4e9118b56c50bc0dfe68ef37335379d445f01f9ebb"
+    }
+  }
+]

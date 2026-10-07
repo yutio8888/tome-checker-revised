@@ -48,7 +48,10 @@ def arguments(argv=None):
                              'Default: Human:Cornac:Male:Berserker')
     parser.add_argument('--terrain', choices=('vanilla', 'blockout', 'refined'), help='Default: refined with tokens; vanilla without tokens')
     parser.add_argument('--shaders', action='store_true', help='Enable shaders in the isolated test fixture')
-    parser.add_argument('--tiles', type=int, choices=(48, 64, 96), default=64)
+    # Native presets 16/32/48/64 plus Custom 96/128 (GraphicMode.lua offers
+    # 64/48/32/16 and Custom 10-128). The fixture writes tome.gfx.size as
+    # "<n>x<n>", which is exactly what the engine parses.
+    parser.add_argument('--tiles', type=int, choices=(16, 32, 48, 64, 96, 128), default=64)
     parser.add_argument('--resolution', choices=('1920x1080', '1366x768'), default='1920x1080')
     parser.add_argument('--locale', choices=('en_US', 'zh_hans', 'zh_hant'), default='en_US')
     parser.add_argument('--teaa', action='append', default=[], metavar='ADDON=PATH',

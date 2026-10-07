@@ -1,0 +1,242 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch2-demons",
+ "assets": [
+  {
+   "asset_id": "dolleg",
+   "native_name": "dolleg",
+   "scope": "Standee batch 2 (18 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+     "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+     "line": 50,
+     "anchor": "newEntity{ base = \"BASE_NPC_MAJOR_DEMON\","
+    }
+   ],
+   "desc": "A monstrous demon, covered in acidic thorns.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/dolleg.png",
+     "sha256": "1a62073ace24c95776c26d80790d2e52d0977d6de17fa9a5d43b726b2a3c7795",
+     "role": "style",
+     "note": "The shipped flat dolleg token: copy its matte painted miniature finish, colours, outfit and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_dolleg.png",
+     "sha256": "2fff30455dc41f7ab9d7c21a4a0afd888eceaf403e51e4ba7062f99bac6c96ad",
+     "role": "identity",
+     "note": "Native dolleg sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/thaurhereg.png",
+     "sha256": "98a2c392986578220229794a4cda79c0d3db2fb0edd608fd38d73dbaa99383dc",
+     "role": "family",
+     "note": "Thaurhereg in this batch is the sibling demon this one must stay clearly distinct from: its skin is smooth heavy flesh with flowing blood patterns and a crown of horns, with no acid thorns."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_dolleg.png",
+     "sha256": "2fff30455dc41f7ab9d7c21a4a0afd888eceaf403e51e4ba7062f99bac6c96ad"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/dolleg.png",
+     "sha256": "1a62073ace24c95776c26d80790d2e52d0977d6de17fa9a5d43b726b2a3c7795"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "dolleg: a monstrous demon with a broad red-brown muscular body, a heavy weathered horned face, and thick dark-red acidic thorns and spines bristling over its back, shoulders and forearms, each thorn tipped with a drip of bright acid yellow-green; short thick legs, clawed hands and a thick tail. Match the shipped flat token's red-brown hide with the acid-green thorn tips.",
+    "contrast": "Taller than wide and solid: stand at full height with the thorns bristling close over the shoulders and back, arms low, and the short legs planted; the body is broad-chested but never thin. It differs from thaurhereg (smooth flowing blood patterns on the skin) and uruivellas (a golden bull-headed body wreathed in fire) by the knotty acidic thorn growths. No acid spray, glow or particles.",
+    "composition": "Full body, upright standing front three-quarter view, arms held low and close, feet planted, the horned head at the top of the frame. Overall height about 1.5 to 1.7 times the width; nothing above the head.",
+    "palette": "red-brown hide, darker red-black thorns, bright acid yellow-green thorn tips, dark horns and claws."
+   }
+  },
+  {
+   "asset_id": "duathedlen",
+   "native_name": "d\\195\\186athedlen",
+   "scope": "Standee batch 2 (18 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+     "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+     "line": 73,
+     "anchor": "newEntity{ base = \"BASE_NPC_MAJOR_DEMON\","
+    }
+   ],
+   "desc": "Under a shroud of darkness you discern an evil shape.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/duathedlen.png",
+     "sha256": "1a1cf9fc967bf71f930357d488e598020719da222209fcfe7c5a7d61e77e877b",
+     "role": "style",
+     "note": "The shipped flat duathedlen token: copy its matte painted miniature finish, colours, outfit and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_duathedlen.png",
+     "sha256": "aaf77c698b0a4ed19b2bfef33c350e2ce0b76ee10500100d7b2ed412aad803be",
+     "role": "identity",
+     "note": "Native duathedlen sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/daelach.png",
+     "sha256": "c9fedc9a42f365505f582e8acc29d38ab48a021e4390f9de32252dd288f3aa67",
+     "role": "family",
+     "note": "The shipped daelach token shares this dark fire-demon body plan, so it is the token this one must stay clearly distinct from; do not copy its shapeless cloud-of-darkness silhouette or its spread wings."
+    }
+   ],
+   "contrast_dimensions": [
+    "value",
+    "silhouette"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_duathedlen.png",
+     "sha256": "aaf77c698b0a4ed19b2bfef33c350e2ce0b76ee10500100d7b2ed412aad803be"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/duathedlen.png",
+     "sha256": "1a1cf9fc967bf71f930357d488e598020719da222209fcfe7c5a7d61e77e877b"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "duathedlen: a solid evil demon wreathed in darkness, with a clearly readable grey-violet armoured body and limbs beneath a thick heavy shroud of black shadow that drapes the shoulders, head and back like a ragged cloak; two small glowing red eyes shine from the dark face, and the shadow cloak ends in a few short curling shadow tendrils at the hem, not thin lines. Match the shipped flat token's grey-violet shell, red eyes and dense dark shroud.",
+    "contrast": "Taller than wide and above all SOLID, never a thin black line: the shadow is a thick opaque cloak with a clear outer edge, and the grey-violet body, arms and legs remain visible and bulky inside it, so it reads as a large dark shape even on a dark floor. It differs from daelach (a shapeless cloud of fiery darkness) by the firm humanoid body and the heavy cloak. No smoke wisps, sparks or floating particles.",
+    "composition": "Full body, upright standing front three-quarter view, the dark cloak hanging close around the body, feet planted, the glowing red eyes at the top of the body with the shadow hood just above. Overall height about 1.5 to 1.7 times the width.",
+    "palette": "deep grey-violet armour plates, near-black thick shadow cloak with a firm edge, glowing red eyes."
+   }
+  },
+  {
+   "asset_id": "thaurhereg",
+   "native_name": "thaurhereg",
+   "scope": "Standee batch 2 (18 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+     "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+     "line": 128,
+     "anchor": "newEntity{ base = \"BASE_NPC_MAJOR_DEMON\","
+    }
+   ],
+   "desc": "This terrible demon is covered in blood, which flows *on* its skin in ever-changing patterns that disturb you simply when looking at it.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/thaurhereg.png",
+     "sha256": "98a2c392986578220229794a4cda79c0d3db2fb0edd608fd38d73dbaa99383dc",
+     "role": "style",
+     "note": "The shipped flat thaurhereg token: copy its matte painted miniature finish, colours, outfit and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_thaurhereg.png",
+     "sha256": "c0b8efb037ffbb4d74ae4c80b0eb7500e404db9ccc97284af9fb1a8010c0995a",
+     "role": "identity",
+     "note": "Native thaurhereg sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/dolleg.png",
+     "sha256": "1a62073ace24c95776c26d80790d2e52d0977d6de17fa9a5d43b726b2a3c7795",
+     "role": "family",
+     "note": "The dolleg in this batch is the sibling demon this one must stay clearly distinct from: it bristles with acid thorns tipped yellow-green, with no flowing blood patterns and no fire."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_thaurhereg.png",
+     "sha256": "c0b8efb037ffbb4d74ae4c80b0eb7500e404db9ccc97284af9fb1a8010c0995a"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/thaurhereg.png",
+     "sha256": "98a2c392986578220229794a4cda79c0d3db2fb0edd608fd38d73dbaa99383dc"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "thaurhereg: a terrible towering demon of thick red flesh entirely covered in dark blood that flows across the skin in vivid ever-changing branching patterns; a cluster of many curved horns crowns the head, the face is broad and roaring, the chest and arms are heavy and muscular, with long clawed fingers and digitigrade legs. Match the shipped flat token's blood-red skin with darker flowing blood patterns and the cluster of horns.",
+    "contrast": "Taller than wide and heavy: stand at full height with the clawed arms held low and close and the horn cluster above the head, the whole body thick and solid. It differs from dolleg (bristling acid thorns with yellow-green tips) and uruivellas (a golden bull head wreathed in fire) by the wet blood patterns flowing over smooth heavy flesh. No blood spray, drips, glow or particles.",
+    "composition": "Full body, upright standing front three-quarter view, arms low and close, clawed hands open, feet planted, the horn cluster at the top of the frame. Overall height about 1.6 to 1.8 times the width; nothing above the horns.",
+    "palette": "deep blood-red flesh, darker red-black flowing blood patterns, dark bone horns and claws."
+   }
+  },
+  {
+   "asset_id": "uruivellas",
+   "native_name": "uruivellas",
+   "scope": "Standee batch 2 (18 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+     "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+     "line": 95,
+     "anchor": "newEntity{ base = \"BASE_NPC_MAJOR_DEMON\","
+    }
+   ],
+   "desc": "This demon would look like a minotaur, if a minotaur had a fiery aura surrounding it and horns all over its body.\nOh, and it is twice as big, too.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/uruivellas.png",
+     "sha256": "1d72e7c78f444ebae91e9db7cd3f116aa50f4eb327e9c17e2dc3e303f022cb73",
+     "role": "style",
+     "note": "The shipped flat uruivellas token: copy its matte painted miniature finish, colours, outfit and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_uruivellas.png",
+     "sha256": "7ca0bc7381214e52b01ab03f8c0700e2c96ac07595285f1739c22eeaeab25923",
+     "role": "identity",
+     "note": "Native uruivellas sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/minotaur-maze.png",
+     "sha256": "4bc862c807accae2bea681a99521f27a6beef2c6c9ac6156b58df9a8e675e705",
+     "role": "family",
+     "note": "The shipped Minotaur of the Labyrinth shares this bull-headed body plan, so it is the token this one must stay clearly distinct from; do not copy its pose, its brown fur or its huge axe."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_uruivellas.png",
+     "sha256": "7ca0bc7381214e52b01ab03f8c0700e2c96ac07595285f1739c22eeaeab25923"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/uruivellas.png",
+     "sha256": "1d72e7c78f444ebae91e9db7cd3f116aa50f4eb327e9c17e2dc3e303f022cb73"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "uruivellas: a demon that looks like an enormous bull-headed minotaur, twice the usual size, with a thick tan-gold hide and heavy chest, a bull's muzzle and a crown of curved bull horns, smaller horn spikes studding the shoulders, back and knuckles, hooved legs and a tail; a mane of orange fire rises from the crown and shoulders around the head. Match the shipped flat token's golden-tan bull body with orange fire and the native sprite's bull horns.",
+    "contrast": "Taller than wide: stand at full height with the heavy arms held close and low, the fire confined to a tight mane above the head and shoulders so it adds height but not width. It differs from minotaur-maze (brown-furred and holding a great axe) and from thaurhereg (blood-patterned skin, no fire) by the golden bull body, the horns all over and the fiery mane. The mane above the head is not part of the body.",
+    "composition": "Full body, upright standing front three-quarter view, hooved feet planted, heavy fists low, the bull-horned head at the top of the body with the orange fire mane allowed above it. Overall height about 1.5 to 1.7 times the width.",
+    "palette": "tan-gold hide, darker gold-brown shading, grey-white bull horns and hooves, orange and yellow fire mane."
+   }
+  }
+ ]
+}

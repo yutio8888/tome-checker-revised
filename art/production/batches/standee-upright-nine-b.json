@@ -1,0 +1,234 @@
+{
+ "schema": 1,
+ "batch_id": "standee-upright-nine-b",
+ "assets": [
+  {
+   "asset_id": "shardskin",
+   "native_name": "Shardskin",
+   "scope": "R36 upright standee coverage; second artwork used only for the standee layer at <=48px cells. Flat token, master and manifest mapping unchanged.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "At the new 1.0-cell standee width cap the R33 flat cut-out is width-bound and renders only about one cell tall, reading as the flat token rather than an upright standee.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/old-forest/npcs.lua",
+     "sha256": "6d7918b8d3808f8fc74739a990d3b0b6dbc4906668439672f2f783a86baf0121",
+     "line": 43,
+     "anchor": "define_as = \"SHARDSKIN\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/shardskin.png",
+     "sha256": "244536fe3bbd2d97720a467ee0d4a061b803bfd446babfe56a9df84e37dd9515",
+     "role": "style",
+     "note": "The shipped flat Shardskin token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/immovable_crystal_golden_crystal.png",
+     "sha256": "cc664dda8b82717fa1e3aec083d38982d11576402ea9b7883f199cf4b18c36b2",
+     "role": "identity",
+     "note": "Native Shardskin sprite: keep the same species, gear, colours and markings, converted to a true upright standing/rearing composition."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/white-crystal.png",
+     "sha256": "b96516975f001c057e058e0e8c875022ba92670b302ec6c3f49d6cedeb00510e",
+     "role": "family",
+     "note": "The nearest mapped family token. It shares this creature's body plan or palette, so it is the token this one must stay clearly distinct from; do not copy its pose."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-j-20260929/source-contracts.json",
+     "sha256": "f3b0d7b9e65b2c18c6416b37aae96e1dee28c95e6f4f57ed619039699ef6e83b"
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/immovable_crystal_golden_crystal.png",
+     "sha256": "cc664dda8b82717fa1e3aec083d38982d11576402ea9b7883f199cf4b18c36b2"
+    }
+   ],
+   "prompt_fields": {
+    "subject": "Shardskin: a great golden crystal formation grown into a living creature, a cluster of tall faceted amber-gold crystal shards with a brighter inner core and a few hovering splinters. Keep the native golden-amber colour and the faceted crystal anatomy.",
+    "contrast": "Taller than wide: a tall cluster whose central shard rises well above the rest, with the smaller shards stacked along it. Do not flatten the cluster into a low wide mound.",
+    "composition": "Full body, a tall standing crystal cluster seen from a front three-quarter angle, tallest shard at the top, smaller shards rising in a stepped spire. Overall height to width about 1.7 to 1.",
+    "palette": "amber and honey gold crystal with pale warm highlights and darker umber facets."
+   }
+  },
+  {
+   "asset_id": "subject-z",
+   "native_name": "Subject Z",
+   "scope": "R36 upright standee coverage; second artwork used only for the standee layer at <=48px cells. Flat token, master and manifest mapping unchanged.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "At the new 1.0-cell standee width cap the R33 flat cut-out is width-bound and renders only about one cell tall, reading as the flat token rather than an upright standee.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/halfling-ruins/npcs.lua",
+     "sha256": "a4e8724a977e6421c5860514589265d9cdca949565429524bea42c400294d0c3",
+     "line": 26,
+     "anchor": "define_as=\"SUBJECT_Z\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/subject-z.png",
+     "sha256": "ac773ced7b2d0b6a0933725c15dca491db1d7eae1b65e661e986ea759f07fb85",
+     "role": "style",
+     "note": "The shipped flat Subject Z token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_subject_z.png",
+     "sha256": "49c23bee091ddfa07dc9430758ef413d50d764c16405362cdb57477324a6bd86",
+     "role": "identity",
+     "note": "Native Subject Z sprite: keep the same species, gear, colours and markings, converted to a true upright standing/rearing composition."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/human-guard.png",
+     "sha256": "56f00426aaefc026f8907a7df62115f5fb28c6133e57a95cdbdc9ab2cf2908fe",
+     "role": "family",
+     "note": "The nearest mapped family token. It shares this creature's body plan or palette, so it is the token this one must stay clearly distinct from; do not copy its pose."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-j-20260929/source-contracts.json",
+     "sha256": "f3b0d7b9e65b2c18c6416b37aae96e1dee28c95e6f4f57ed619039699ef6e83b"
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_subject_z.png",
+     "sha256": "49c23bee091ddfa07dc9430758ef413d50d764c16405362cdb57477324a6bd86"
+    }
+   ],
+   "prompt_fields": {
+    "subject": "Subject Z: a lean human assassin in a pale linen shirt and brown trousers, dark hair tied back, holding a curved dagger in each hand. Keep the native shirt and trousers colours, the daggers and the bare-armed pose.",
+    "contrast": "Taller than wide: stand upright and narrow, daggers held blade-up beside the shoulders or crossed at the chest, not spread wide. Do not open the arms into a low star.",
+    "composition": "Full body, upright standing front three-quarter view, both daggers raised, feet together under the body, head at the top of the frame. Overall height to width about 2 to 1.",
+    "palette": "cream linen shirt, brown trousers, dark hair, steel daggers with dark grips."
+   }
+  },
+  {
+   "asset_id": "ogre-guard",
+   "native_name": "ogre guard",
+   "scope": "R36 upright standee coverage; second artwork used only for the standee layer at <=48px cells. Flat token, master and manifest mapping unchanged.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "At the new 1.0-cell standee width cap the R33 flat cut-out is width-bound and renders only about one cell tall, reading as the flat token rather than an upright standee.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/ogre.lua",
+     "sha256": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+     "line": 46,
+     "anchor": "name = \"ogre guard\", color=colors.LIGHT_GREY"
+    }
+   ],
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ogre-guard.png",
+     "sha256": "7ad41b65d9e1bb90aaf4a6ae104a3d7d3b2decb47332452d34b9d1fdb9c5a189",
+     "role": "style",
+     "note": "The shipped flat ogre guard token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ogre_ogre_guard.png",
+     "sha256": "72e897d0b5bc864263286e9839860c135ceaecae3f84a1ab10052d853fbf8694",
+     "role": "identity",
+     "note": "Native ogre guard sprite: keep the same species, gear, colours and markings, converted to a true upright standing/rearing composition."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/mountain-troll.png",
+     "sha256": "d504478622f30e7cf7bc806e47b91684da5919a0574ec1d0956487852a1c2f16",
+     "role": "family",
+     "note": "The nearest mapped family token. It shares this creature's body plan or palette, so it is the token this one must stay clearly distinct from; do not copy its pose."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-p-20260929/source-contracts.json",
+     "sha256": "3eb4cdb07da21fc9292934f54d928caa0b1dbe86aeff6b6877e103ba4cf2f182"
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ogre_ogre_guard.png",
+     "sha256": "72e897d0b5bc864263286e9839860c135ceaecae3f84a1ab10052d853fbf8694"
+    }
+   ],
+   "prompt_fields": {
+    "subject": "ogre guard: a hulking grey-skinned ogre with a heavy round belly, small tusked head, a leather belt and a large stone-headed hammer. Keep the native pale blue-grey skin, brown leather and the same hammer.",
+    "contrast": "Taller than wide: stand at full height with the hammer resting on one shoulder or held up at one side. Do not crouch or splay the arms low.",
+    "composition": "Full body, upright standing three-quarter view, hammer head up, feet apart, small head near the top of the frame. Overall height to width about 1.6 to 1.",
+    "palette": "pale blue-grey ogre skin, brown leather belt and straps, grey stone hammer head, dark wooden haft."
+   }
+  },
+  {
+   "asset_id": "snow-giant",
+   "native_name": "snow giant",
+   "scope": "R36 upright standee coverage; second artwork used only for the standee layer at <=48px cells. Flat token, master and manifest mapping unchanged.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "At the new 1.0-cell standee width cap the R33 flat cut-out is width-bound and renders only about one cell tall, reading as the flat token rather than an upright standee.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/snow-giant.lua",
+     "sha256": "0d1acc9131e7c4691f3c5213bbf33b8f5c13bb2c1e9de93c53dfd10cac6eb042",
+     "line": 52,
+     "anchor": "name = \"snow giant\", color=colors.WHITE"
+    }
+   ],
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/snow-giant.png",
+     "sha256": "7c8cd34d093bf3a84a6d6eb6ba23600e1b35a034c6095cce310c4cfd6afff2a7",
+     "role": "style",
+     "note": "The shipped flat snow giant token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ice_snow_giant.png",
+     "sha256": "803903d03efc516a1bfb6c892a3206c700ca7158e59953438ebaa4f5e4b89125",
+     "role": "identity",
+     "note": "Native snow giant sprite: keep the same species, gear, colours and markings, converted to a true upright standing/rearing composition."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/bone-giant.png",
+     "sha256": "3eee42a71202ccf33d759498396d02a6ae5661101e7381010ef71f5602e70c56",
+     "role": "family",
+     "note": "The nearest mapped family token. It shares this creature's body plan or palette, so it is the token this one must stay clearly distinct from; do not copy its pose."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-p-20260929/source-contracts.json",
+     "sha256": "3eb4cdb07da21fc9292934f54d928caa0b1dbe86aeff6b6877e103ba4cf2f182"
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ice_snow_giant.png",
+     "sha256": "803903d03efc516a1bfb6c892a3206c700ca7158e59953438ebaa4f5e4b89125"
+    }
+   ],
+   "prompt_fields": {
+    "subject": "snow giant: a towering pale ice-blue giant in a fur-trimmed leather kilt, with heavy arms, a bald head and a long beard of ice. Keep the native cold blue-white skin and the fur-trimmed belt.",
+    "contrast": "Taller than wide: stand at full height, arms hanging heavy but close, shoulders up. Do not crouch or stoop.",
+    "composition": "Full body, upright standing front three-quarter view, legs long and straight, head near the top of the frame. Overall height to width about 2 to 1.",
+    "palette": "cold blue-white skin, dark grey fur trim, brown leather, pale ice highlights."
+   }
+  }
+ ]
+}

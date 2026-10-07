@@ -1,0 +1,242 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch3-dragons-2",
+ "assets": [
+  {
+   "asset_id": "varsha",
+   "native_name": "Varsha the Writhing",
+   "scope": "Standee batch 3 (13 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched. Reused dragon-family composition: rearing on the hind legs with the chest lifted, the wings folded tight or held in a narrow vertical V, never spread wide, and the tail curled close; the on-screen body height may land around 1.2-1.75 cells because of the 1.0-cell width cap, which is accepted.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/daikara/npcs.lua",
+     "sha256": "c4d6d6b6387719554eb81b4eccb6abe0722bd435860d06d56dafcc778e8019ca",
+     "line": 96,
+     "anchor": "newEntity{ define_as = \"VARSHA_THE_WRITHING\","
+    }
+   ],
+   "desc": "Claws and teeth. Fire and death. Dragons are not all extinct it seems...",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/varsha.png",
+     "sha256": "3592b2a7bbab3e4e4ecaa1dcebe7103e18abc91ece8440314f3f124b2d515f77",
+     "role": "style",
+     "note": "The shipped flat Varsha the Writhing token: copy its matte painted miniature finish, colours, value structure and identity. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_fire_varsha_the_writhing.png",
+     "sha256": "1b9088e3f79f55b6c80471a32423f4c9c35f0a0eafa6e84690a3876d746dd795",
+     "role": "identity",
+     "note": "Native Varsha the Writhing sprite: identity cue only. Keep the same species, colour pattern and markings, converted to a true upright composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/fire-wyrm.png",
+     "sha256": "a7a4c15e6abae44d4735dfffad4f1b90ef5690d5edb04e5636ca707a952eb0bd",
+     "role": "family",
+     "note": "The fire wyrm in this family is the sibling dragon this one must stay clearly distinct from: it raises a long slender neck with swept-back horns and a heavy plated chest."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_fire_varsha_the_writhing.png",
+     "sha256": "1b9088e3f79f55b6c80471a32423f4c9c35f0a0eafa6e84690a3876d746dd795"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/varsha.png",
+     "sha256": "3592b2a7bbab3e4e4ecaa1dcebe7103e18abc91ece8440314f3f124b2d515f77"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Varsha the Writhing: a heavy-set ancient volcanic fire dragon REARING upright on its hind legs with the chest lifted and the forelimbs tucked in; THICK copper-red armoured scales over a warm cream-gold ribbed belly, a SHORT THICK neck carrying the head LOW and thrust FORWARD BELOW the shoulder line, a blunt heavy snout and only SHORT stubby horns, with serrated blade-like heavy wing edges. ONE wing is raised HALF-VERTICALLY behind the back like a furled banner, the other wing folds tight along the flank, and the tail curls close behind the feet. Match the shipped flat token's copper-red thick scales, cream belly and heavy build.",
+    "contrast": "Height dominates width: the short neck keeps the head below the shoulders while the chest and body fill the frame, the single half-raised wing points UP behind the back rather than sideways, the other wing hugs the flank and the tail tucks in, so the silhouette stays about 1 to 1.6 tall to wide. It differs from the fire wyrm's long raised slender neck, from Rantha's two very long horns and icy dorsal sail, and from the storm wyrm's high up-looking head and fan crest. No flames, embers, smoke or breath.",
+    "composition": "Full body, upright REARING three-quarter view on the hind legs, chest lifted, the head lowered forward below the shoulder line, one wing half-raised vertically behind the back, the other folded to the flank, tail curled close. Overall height about 1.5 to 1.7 times the width; the half-raised wing is part of the body, nothing else above the head.",
+    "palette": "deep copper-red and rust-orange thick scales with dark umber shadow, warm cream-gold ribbed belly, dull bone short horns and claws, darker maroon wing membranes."
+   }
+  },
+  {
+   "asset_id": "ice-wyrm",
+   "native_name": "ice wyrm",
+   "scope": "Standee batch 3 (13 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched. Reused dragon-family composition: rearing on the hind legs with the chest lifted, the wings folded tight or held in a narrow vertical V, never spread wide, and the tail curled close; the on-screen body height may land around 1.2-1.75 cells because of the 1.0-cell width cap, which is accepted.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/cold-drake.lua",
+     "sha256": "60153bdad6955f2773d8db30457e717c480cf794e7d0793ff027a994dcb0bff4",
+     "line": 89,
+     "anchor": "newEntity{ base = \"BASE_NPC_COLD_DRAKE\","
+    }
+   ],
+   "desc": "An old and powerful cold drake, armed with deadly breath and nasty claws.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ice-wyrm.png",
+     "sha256": "787f4af9b7c461ca48a0b62a6dfef216f548471c08370175b77b2a33229bfd98",
+     "role": "style",
+     "note": "The shipped flat ice wyrm token: copy its matte painted miniature finish, colours, value structure and identity. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_cold_ice_wyrm.png",
+     "sha256": "c2f414a5ff66a68ab457ce5b5a27ea6c429000baca9e2b65b8481c68cfecec07",
+     "role": "identity",
+     "note": "Native ice wyrm sprite: identity cue only. Keep the same species, colour pattern and markings, converted to a true upright composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/rantha.png",
+     "sha256": "fbe545dd28909b1fbcfa98e80728e26c8c17ab57656d1e342e2443259244ba44",
+     "role": "family",
+     "note": "Rantha the Worm in this family is the sibling dragon this one must stay clearly distinct from: it is a TALL hunched frost wyrm with two very long horns and a long jagged icy dorsal sail."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_cold_ice_wyrm.png",
+     "sha256": "c2f414a5ff66a68ab457ce5b5a27ea6c429000baca9e2b65b8481c68cfecec07"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ice-wyrm.png",
+     "sha256": "787f4af9b7c461ca48a0b62a6dfef216f548471c08370175b77b2a33229bfd98"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "ice wyrm: a compact ancient cold dragon in a CROUCHED rearing stance, hips low and hind legs bent, the chest lifted; pale blue-white armoured scales over a silver-cream ribbed belly, a COMPACT neck tucked and arched DOWN with the head held low, a JAGGED ICE-CRYSTAL CROWN of sharp shards around the skull and a compact collar of overlapping ice-plate neck armour, wings folded tight along the flanks and a short tail curled close. Match the shipped flat token's blue-white ice scales, silver belly and frosty crowned head.",
+    "contrast": "Low and crouched rather than tall: the bent hind legs and lowered hips compress the body, the neck arches DOWN so the head sits low, and the folded wings and short tail stay inside the body outline, so the silhouette stays about 1 to 1.6 tall to wide. It differs from Rantha's TALL hunched pose, its two very long horns and its long dorsal sail; the ice wyrm is compact with a jagged crystal crown and no back sail. No frost mist, snow, ice shards or breath.",
+    "composition": "Full body, crouched REARING three-quarter view with low hips and bent legs, chest lifted, the neck tucked and arched down with the crowned head low, wings folded tight, tail curled close. Overall height about 1.4 to 1.7 times the width; the ice crown is part of the body, nothing else above the head.",
+    "palette": "pale blue-white and pale steel-blue armoured scales, silver-cream ribbed belly, translucent white-blue ice-crystal crown, dull blue-grey claws, faint darker blue shadow."
+   }
+  },
+  {
+   "asset_id": "storm-wyrm",
+   "native_name": "storm wyrm",
+   "scope": "Standee batch 3 (13 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched. Reused dragon-family composition: rearing on the hind legs with the chest lifted, the wings folded tight or held in a narrow vertical V, never spread wide, and the tail curled close; the on-screen body height may land around 1.2-1.75 cells because of the 1.0-cell width cap, which is accepted.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/storm-drake.lua",
+     "sha256": "3b5bb1be5fac8999d6635da9575de8b78e684e439f7b93e7cb95fc051df333db",
+     "line": 84,
+     "anchor": "newEntity{ base = \"BASE_NPC_STORM_DRAKE\","
+    }
+   ],
+   "desc": "An old and powerful storm drake, armed with deadly breath and nasty claws.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/storm-wyrm.png",
+     "sha256": "0b5b007ae68b894dd4f47a1c8a6bfe6356a5c47815000caed05d6b16c6d7b796",
+     "role": "style",
+     "note": "The shipped flat storm wyrm token: copy its matte painted miniature finish, colours, value structure and identity. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_storm_storm_wyrm.png",
+     "sha256": "76ba0a2757b8decab2d8e594af4ac9c8ddae45202be540f19b9d29d4f5d473c9",
+     "role": "identity",
+     "note": "Native storm wyrm sprite: identity cue only. Keep the same species, colour pattern and markings, converted to a true upright composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ice-wyrm.png",
+     "sha256": "787f4af9b7c461ca48a0b62a6dfef216f548471c08370175b77b2a33229bfd98",
+     "role": "family",
+     "note": "The ice wyrm in this family is the sibling dragon this one must stay clearly distinct from: it is a compact crouched ice dragon with a jagged ice crown and a down-arched neck."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_storm_storm_wyrm.png",
+     "sha256": "76ba0a2757b8decab2d8e594af4ac9c8ddae45202be540f19b9d29d4f5d473c9"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/storm-wyrm.png",
+     "sha256": "0b5b007ae68b894dd4f47a1c8a6bfe6356a5c47815000caed05d6b16c6d7b796"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "storm wyrm: an ancient storm dragon REARING upright on its hind legs with the chest lifted and the forelimbs tucked in; deep purple and violet armoured scales over a bright GOLD ribbed belly, the head RAISED HIGH and tilted UP to look at the sky, crowned by a broad FAN-SHAPED CREST of spines, both wings LIFTED UP vertically behind the back and held in a NARROW V, and a thick tail curled close behind the feet. Match the shipped flat token's purple-gold storm dragon scales and gold belly.",
+    "contrast": "Tall and narrow: the raised up-looking head and the two wings held in a narrow vertical V make a distinct upright wedge, while the legs and curled tail stay close, so the silhouette stays about 1 to 1.6 tall to wide with the wings NOT spread sideways. It differs from Rantha's forward two long horns and icy sail, from the fire wyrm's long forward neck, and from the ice wyrm's crouch and ice crown. No lightning, arcs, sparks or particles.",
+    "composition": "Full body, upright REARING three-quarter view, chest lifted, the head raised high and tilted up with the fan crest at the top, both wings lifted up behind in a narrow vertical V, tail curled close. Overall height about 1.5 to 1.8 times the width; the crest and upraised wings are part of the body, nothing else above the head.",
+    "palette": "deep violet-purple and indigo scales with darker blue-violet shadow, bright gold ribbed belly and throat, pale lilac crest and wing-rib highlights, dark purple wing membranes."
+   }
+  },
+  {
+   "asset_id": "venom-wyrm",
+   "native_name": "venom wyrm",
+   "scope": "Standee batch 3 (13 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched. Reused dragon-family composition: rearing on the hind legs with the chest lifted, the wings folded tight or held in a narrow vertical V, never spread wide, and the tail curled close; the on-screen body height may land around 1.2-1.75 cells because of the 1.0-cell width cap, which is accepted.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/venom-drake.lua",
+     "sha256": "7a42f9049d69eed172d9b20e48eaf6beea98a59b341e28ac76f19db07e3c3bbb",
+     "line": 84,
+     "anchor": "newEntity{ base = \"BASE_NPC_VENOM_DRAKE\","
+    }
+   ],
+   "desc": "An old and powerful corrosive venom drake, armed with deadly breath and nasty claws.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/venom-wyrm.png",
+     "sha256": "2ef0aaad90b49c894c5812019c73bc7f8fe0d443c91f2e4f9ec79edc7c3161f4",
+     "role": "style",
+     "note": "The shipped flat venom wyrm token: copy its matte painted miniature finish, colours, value structure and identity. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_venom_venom_wyrm.png",
+     "sha256": "06a65283e783f4a299175b4151c0e279bab53c592837b532c709e2427c0df1f5",
+     "role": "identity",
+     "note": "Native venom wyrm sprite: identity cue only. Keep the same species, colour pattern and markings, converted to a true upright composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/fire-wyrm.png",
+     "sha256": "a7a4c15e6abae44d4735dfffad4f1b90ef5690d5edb04e5636ca707a952eb0bd",
+     "role": "family",
+     "note": "The fire wyrm in this family is the sibling dragon this one must stay clearly distinct from: it raises a long slender neck with swept-back horns and a heavy plated chest."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_venom_venom_wyrm.png",
+     "sha256": "06a65283e783f4a299175b4151c0e279bab53c592837b532c709e2427c0df1f5"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/venom-wyrm.png",
+     "sha256": "2ef0aaad90b49c894c5812019c73bc7f8fe0d443c91f2e4f9ec79edc7c3161f4"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "venom wyrm: an ancient corrosive venom dragon REARING upright on its hind legs with the chest lifted; sickly yellow-green and olive armoured scales over a pale yellow-cream ribbed belly, a LONG DOWN-CURVED neck with the head held LOW and HOOKED forward, a HEAVY protruding lower jaw, and a row of spiny quill-like mane spikes running down the back of the neck and spine; wings folded tight along the flanks and the tail WRAPPED AROUND IN FRONT of the legs. Match the shipped flat token's yellow-green venom scales, cream belly and spiny lowered head.",
+    "contrast": "The down-curved hooked neck keeps the head low and forward while the body rears, and the tail crosses IN FRONT of the legs, giving a distinct hooked C silhouette; folded wings and the swept mane stay within the body outline, so the silhouette stays about 1 to 1.6 tall to wide. It differs from the fire wyrm's raised slender neck, from the storm wyrm's high up-looking head, and from the greater multi-hued wyrm's twist. No venom drips, acid, mist or breath.",
+    "composition": "Full body, upright REARING three-quarter view, chest lifted, the long neck curved down with the heavy-jawed head low and hooked forward, spiny mane along the neck, wings folded tight, the tail wrapped in front of the legs. Overall height about 1.5 to 1.7 times the width; the mane spikes are body, nothing else above the head.",
+    "palette": "sickly yellow-green and olive scales with dark green shadow, pale yellow-cream ribbed belly, dull bone quills and claws, darker green wing membranes."
+   }
+  }
+ ]
+}

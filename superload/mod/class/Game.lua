@@ -102,7 +102,27 @@ function _M:checkerRefreshActor(e,context)
    id=Tokens.identify(e,state and state.display,allow_player_identity)
   end
  end
- if state and state.id==id then return id end
+ local entry=id and Tokens.by_id[id] or nil
+ local tile_w=self.level and self.level.map and self.level.map.tile_w
+ local tile_ok=tile_w and tile_w<=Tokens.layer_max_cell and true or false
+ -- Standees are size-independent over the ordinary gate but must not render
+ -- below M.standee_min_cell (16px and small custom sizes keep the flat token).
+ local standee_tile_ok=Tokens.standeeTileAllowed(tile_w)
+ -- Standee wins over the ordinary R32 layer when the actor is eligible and the
+ -- tile is large enough; the ordinary R32 layer keeps its own <=48px cell gate,
+ -- so this branch is the only place the two switches could be conflated.
+ local use_standee=false
+ local layer=nil
+ if id then
+  if Tokens.standeeEligible(e,entry) and standee_tile_ok then
+   layer=Tokens.layerImage(id);use_standee=layer~=nil
+  elseif tile_ok and Tokens.layeredId(id) then
+   layer=Tokens.layerImage(id)
+  end
+ end
+ local use_layer=layer and true or false
+ if state and state.id==id and (state.layered and true or false)==use_layer
+  and (state.standee and true or false)==use_standee then return id end
  -- true only when a token was installed just before this call (regardless of
  -- whether a different id is about to replace it below).
  local had_token=state~=nil
@@ -125,9 +145,14 @@ function _M:checkerRefreshActor(e,context)
    end
    if not next(e.add_mos) then e.add_mos=nil end
   end
-  local image=PlayerTokens.isPlayerId(id) and PlayerTokens.image(id) or Tokens.image(id)
+  local image=use_layer and Tokens.layerDisc()
+   or (PlayerTokens.isPlayerId(id) and PlayerTokens.image(id) or Tokens.image(id))
   local display=Entity.new{image=image,display='@',color={255,255,255},display_on_seen=true}
-  e.replace_display=display;e._checker_token={id=id,display=display,original=original}
+  e.replace_display=display
+  e._checker_token={id=id,display=display,original=original,layered=use_layer,
+   layer_id=use_layer and id or nil,standee=use_standee,
+   layer_box=use_standee and Tokens.layerGeometry(id) or nil,
+   layer_aura=use_standee and Tokens.layerAuraGeometry(id) or nil}
   e._checker_player_rebuild=nil
   -- The fresh Entity's add_mos starts empty; rebuild any active aura onto it.
   if not empty(e.shader_auras) then rebuildAura(self,e,context) end

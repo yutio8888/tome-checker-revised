@@ -91,7 +91,7 @@ BASELINE_PROVENANCE = {
         '重算须由人核对 `baseline --recompute` 的输出后手工改常量，'
         '并在此处更新日期、样本数与 manifest 哈希。新增资产不触发重算。'
     ),
-    'exclusions': '以下划线开头的 UI 遮罩（_relation-* / _shield-* / _badge-* / _health-band / _player-inner）不是生物美术，不参与基线。',
+    'exclusions': '以下划线开头的 UI 遮罩（_relation-* / _player-inner / _badge-*）不是生物美术，不参与基线。',
 }
 
 # --------------------------------------------------------------------------

@@ -88,7 +88,7 @@ class MonsterBatchEWaiverTests(unittest.TestCase):
         # forgiveness; they must never need monster-batch-e.json (or any
         # other trusted file) to pass.
         for asset_id, master_name in (
-            ('lady-zoisla', 'lady-zoisla-v2'),
+            ('lady-zoisla', 'lady-zoisla-v3'),
             ('brotoq', 'brotoq-v2'),
             ('the-mouth', 'the-mouth-v1'),
             ('the-abomination', 'the-abomination-v2'),

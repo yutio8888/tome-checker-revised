@@ -1,0 +1,183 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch4-trolls",
+ "assets": [
+  {
+   "asset_id": "prox",
+   "native_name": "Prox the Mighty",
+   "scope": "Standee batch 4 (6 optional final ids: 3 Trollmire trolls, the Chronolith pair, onilug). Second artwork used only for the upright standee layer at <=48px / ~1.0-cell cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. The flat 128px token, its master and the manifest mapping are untouched. These creatures are only about 1.016-1.0625 cells tall, so the figure must FILL its height and stay stocky: body width:height about 1:1 to 1:1.3, and the whole art about 1.4 times as tall as wide so it still passes the standee upright-aspect gate; do not thin the creature out to look taller.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/trollmire/npcs.lua",
+     "sha256": "c8ec847929ebae259c9b3524121f71008ae553f1b6ec2043b2a169c6303ebe44",
+     "line": 46,
+     "anchor": "newEntity{ define_as = \"TROLL_PROX\","
+    }
+   ],
+   "desc": "A huge troll, he might move slowly but he does look dangerous nonetheless.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/prox.png",
+     "sha256": "1efb487e858d0f7f585eea20388e84c05ba854576941e84bcd424e69b6af118d",
+     "role": "style",
+     "note": "The shipped flat Prox the Mighty token: copy its matte painted miniature finish, colours, value structure and identity. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_troll_prox_the_mighty.png",
+     "sha256": "1fa15919e25e3f79e8f9c2752f89c6859d71037c535a6332c2d11fa2845d8f6b",
+     "role": "identity",
+     "note": "Native Prox the Mighty sprite: identity cue only. Keep the same species, colour pattern, markings, limbs and held items, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/production/batches/standee-batch4-trolls-family.png",
+     "sha256": "9d84d79357c361742cb35678f5a445c6ca8777f42ae194330ac89e2a9e14f195",
+     "role": "family",
+     "note": "The three Trollmire troll bosses side by side (left to right: prox, bill, shax). This one must differ from BOTH siblings by more than colour, using the skin, body shape, stance and held item summarized in the identity brief; do not copy a sibling."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_troll_prox_the_mighty.png",
+     "sha256": "1fa15919e25e3f79e8f9c2752f89c6859d71037c535a6332c2d11fa2845d8f6b"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/prox.png",
+     "sha256": "1efb487e858d0f7f585eea20388e84c05ba854576941e84bcd424e69b6af118d"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Prox the Mighty: a huge, hulking stone-age troll standing with a heavy forward hunch, thick-bodied with massive rounded shoulders, a short thick neck and a broad blunt forward-thrust head; warm olive-brown and grey-brown leathery hide with darker mottled patches and a paler tan belly, matching the shipped flat token's brown-olive troll; a rough dark-brown leather strap/loincloth across the hips; long heavy arms ending in big knuckly fists, one fist gripping a chunky rough-hewn grey STONE CLUB held LOW with its head down beside the leg. Match the shipped flat token's body mass, brown tones and heavy fists.",
+    "contrast": "Broad and heavy but clearly taller than it is wide: stand him up straight from a slight forward hunch, with both feet close together and the long arms tucked in close beside the body so the fists and the club stay within the body's width; the whole silhouette is about 1.4 to 1.55 times as tall as its widest point, and nothing rises above the head. Differs from the sibling trolls by MORE than colour: from Bill (pale blue-grey skin, broad clean chest, tree trunk hugged across the body) and from Shax (wet grey-green skin, hunched low with long down-reaching webbed arms). It is brown and forward-leaning with a rough stone club. No ground, no shadow, no water, no scenery, no particles.",
+    "composition": "Full body, standing upright with a heavy forward hunch but tall, both heavy feet close together at the bottom of the frame, the broad head and big shoulders at the top. The long heavy arms hang down close beside the body with the fists near the thighs, one gripping the rough stone club held low and angled down against the leg so it adds almost no width. Broad and heavy but the total silhouette is clearly taller than wide, about 1.4 to 1.55 times as tall as its widest point. Nothing above the head.",
+    "palette": "warm olive-brown and grey-brown leathery hide with darker mottled shadow, a paler tan belly and chest, dark brown hairless scalp, a dark brown leather hip strap, a weathered grey stone club."
+   }
+  },
+  {
+   "asset_id": "bill",
+   "native_name": "Bill the Stone Troll",
+   "scope": "Standee batch 4 (6 optional final ids: 3 Trollmire trolls, the Chronolith pair, onilug). Second artwork used only for the upright standee layer at <=48px / ~1.0-cell cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. The flat 128px token, its master and the manifest mapping are untouched. These creatures are only about 1.016-1.0625 cells tall, so the figure must FILL its height and stay stocky: body width:height about 1:1 to 1:1.3, and the whole art about 1.4 times as tall as wide so it still passes the standee upright-aspect gate; do not thin the creature out to look taller.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/trollmire/npcs.lua",
+     "sha256": "c8ec847929ebae259c9b3524121f71008ae553f1b6ec2043b2a169c6303ebe44",
+     "line": 179,
+     "anchor": "newEntity{ define_as = \"TROLL_BILL\","
+    }
+   ],
+   "desc": "Big, brawny, powerful and with a taste for Halfling.\nHe is wielding a small tree trunk and lumbering toward you.\nThis is the troll the notes spoke about, no doubt.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/bill.png",
+     "sha256": "41543243196311517082c546e74b5502b8edbd8a7aab9646547ff3aa19cf91da",
+     "role": "style",
+     "note": "The shipped flat Bill the Stone Troll token: copy its matte painted miniature finish, colours, value structure and identity. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/troll_bill.png",
+     "sha256": "bb9c171e7980680df6bfb6ca6c50a9d61f5256df70ba7e882931b4b754c9ea1f",
+     "role": "identity",
+     "note": "Native Bill the Stone Troll sprite: identity cue only. Keep the same species, colour pattern, markings, limbs and held items, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/production/batches/standee-batch4-trolls-family.png",
+     "sha256": "9d84d79357c361742cb35678f5a445c6ca8777f42ae194330ac89e2a9e14f195",
+     "role": "family",
+     "note": "The three Trollmire troll bosses side by side (left to right: prox, bill, shax). This one must differ from BOTH siblings by more than colour, using the skin, body shape, stance and held item summarized in the identity brief; do not copy a sibling."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/troll_bill.png",
+     "sha256": "bb9c171e7980680df6bfb6ca6c50a9d61f5256df70ba7e882931b4b754c9ea1f"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/bill.png",
+     "sha256": "41543243196311517082c546e74b5502b8edbd8a7aab9646547ff3aa19cf91da"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Bill the Stone Troll: a huge, brawny, broad-chested troll with pale blue-grey stone-like skin, a lighter grey chest and belly and darker blue-grey shadow, a wide grinning face with long pointed ears and small tusks, matching the shipped flat token; a dark grey-brown leather loincloth; both thick arms HUGGING a big rough-barked BROWN TREE TRUNK held LOW and diagonally across the front of the body, the trunk's broken top stopping at about chin height (below the top of the head) and its thick base beside the knee, the trunk and forearms staying inside the body's width. Match the shipped flat token's pale grey-blue troll skin, heavy rounded muscles and wooden trunk.",
+    "contrast": "Broad and heavy, but the whole silhouette is clearly taller than it is wide: stand him up straight with both feet close together and hug the trunk tight against the chest so the arms and trunk add almost no width; the figure is about 1.45 to 1.6 times as tall as its widest point, and nothing rises above the head. Differs by MORE than colour from Prox (warm olive-brown, deep forward lean, rough stone club held low) and Shax (wet grey-green, crouched with long webbed arms). No ground, no shadow, no scenery, no particles.",
+    "composition": "Full body, standing upright and tall for a troll, both big feet close together at the bottom of the frame, the broad grey head high at the top. Both thick arms hug the tree trunk tight against the chest, the trunk crossing the body diagonally and close to it, its broken top at about chin height and its lower end by the knee; the trunk and forearms stay within the body's width. The figure is broad and heavy but the total silhouette is clearly taller than wide, about 1.45 to 1.6 times as tall as its widest point. Nothing above the head.",
+    "palette": "pale blue-grey stone-troll skin with darker blue-grey shadow and a lighter grey chest and belly, a dark grey-brown leather loincloth, a rough warm brown bark trunk with paler broken wood at the ends."
+   }
+  },
+  {
+   "asset_id": "shax",
+   "native_name": "Shax the Slimy",
+   "scope": "Standee batch 4 (6 optional final ids: 3 Trollmire trolls, the Chronolith pair, onilug). Second artwork used only for the upright standee layer at <=48px / ~1.0-cell cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. The flat 128px token, its master and the manifest mapping are untouched. These creatures are only about 1.016-1.0625 cells tall, so the figure must FILL its height and stay stocky: body width:height about 1:1 to 1:1.3, and the whole art about 1.4 times as tall as wide so it still passes the standee upright-aspect gate; do not thin the creature out to look taller.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/trollmire/npcs.lua",
+     "sha256": "c8ec847929ebae259c9b3524121f71008ae553f1b6ec2043b2a169c6303ebe44",
+     "line": 112,
+     "anchor": "newEntity{ define_as = \"TROLL_SHAX\","
+    }
+   ],
+   "desc": "A huge troll, he seems to be adapted to aquatic life.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/shax.png",
+     "sha256": "e7eea887ab9eabe238c11bb2e593bd734b13ebcb8ecaeb5da16c1fedbc122f2f",
+     "role": "style",
+     "note": "The shipped flat Shax the Slimy token: copy its matte painted miniature finish, colours, value structure and identity. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_troll_shax_the_slimy.png",
+     "sha256": "5432a74b23f3a41e6e62868fd519190c890e7db9d3462fcd360cd5a200b532c6",
+     "role": "identity",
+     "note": "Native Shax the Slimy sprite: identity cue only. Keep the same species, colour pattern, markings, limbs and held items, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/art/production/batches/standee-batch4-trolls-family.png",
+     "sha256": "9d84d79357c361742cb35678f5a445c6ca8777f42ae194330ac89e2a9e14f195",
+     "role": "family",
+     "note": "The three Trollmire troll bosses side by side (left to right: prox, bill, shax). This one must differ from BOTH siblings by more than colour, using the skin, body shape, stance and held item summarized in the identity brief; do not copy a sibling."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_troll_shax_the_slimy.png",
+     "sha256": "5432a74b23f3a41e6e62868fd519190c890e7db9d3462fcd360cd5a200b532c6"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/shax.png",
+     "sha256": "e7eea887ab9eabe238c11bb2e593bd734b13ebcb8ecaeb5da16c1fedbc122f2f"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Shax the Slimy: a huge aquatic troll in a low hunched stance on bent knees, wet glossy grey-green skin covered in heavy folds and wrinkles, a fish-like face with a wide flat head and gill slits and a dark green weed-like mane/beard, long arms reaching down close beside the legs, and big webbed hands and webbed feet, matching the shipped flat token's wet olive-green troll; a short rough brown wooden club gripped low and angled down beside the leg. Match the shipped flat token's hunched aquatic troll shape, skin folds and webbing.",
+    "contrast": "Low-slung but still clearly TALLER than wide: stand him more upright on the bent knees with both webbed feet close together and the long arms hanging straight down close against the thighs, and keep the wet hair/beard close to the head and neck so nothing spreads sideways; the silhouette is about 1.45 to 1.6 times as tall as its widest point, nothing above the head. Differs by MORE than colour from Prox (warm brown, standing hunched, rough stone club) and Bill (pale blue-grey, broad-chested, hugging a tree trunk): Shax has wet grey-green folded skin, a fish/gill face, webbed limbs and long down-reaching arms. No water, no ground, no shadow, no drips, no particles.",
+    "composition": "Full body, standing in a low hunched aquatic stance with bent knees but an upright torso, both webbed feet close together at the bottom of the frame, the long arms hanging straight down close against the thighs and the wet flat head at the top with the hair/beard held close to the neck. The short wooden club is gripped low and angled down against the leg. Clearly taller than wide, about 1.45 to 1.6 times as tall as its widest point. Nothing above the head.",
+    "palette": "wet grey-green and olive aquatic-troll skin with darker green folds and shadow, a paler grey-green belly and throat, dark green seaweed hair, a dull brown wooden club."
+   }
+  }
+ ]
+}

@@ -7,9 +7,9 @@
   "status": "generated-static-reviewed-runtime-pending",
   "prompt": "Use case: precise-object-edit\nAsset type: one transparent PNG full-body creature miniature, readable at 48/64/96px in a tabletop RPG.\nPrimary request: replace the creature in Image 1 with a WHITE WOLF while keeping the shared neutral circular disc and painted-miniature art language. Image 1 is the style/base edit target only, not the desired pose. Image 2 is the ordinary grey wolf as a contrast reference: the new white wolf must not copy its downward-left walking pose. Image 3 is the native white-wolf sprite for identity.\nSubject: exactly one complete muscular northern WHITE WOLF, thick cold-white fur with broad cool pale-grey shadow planes, dark charcoal nose and small natural eyes. Matte animal fur, not snow, ice, light or magical energy.\nPose and large silhouette: a clearly SIDE-TURNING BOUND to the RIGHT, viewed from a steep overhead three-quarter angle. The curved torso runs left to right rather than toward the viewer. Put the narrow canine head and muzzle on the right-middle/lower-right of the disc, nose pointing right and slightly down. One foreleg reaches forward to the right and the other is lifted and bent; the two powerful hindlegs are gathered beneath the left half of the body. Show all four anatomically coherent paws. The thick tail sweeps inward in a broad curve on the left of the rump. Preserve a visible open space between the paired forelegs and between chest and hindleg, making a light, angular leaping silhouette instead of a low creeping rectangle or frontal paw-brace. The wolf is one full-bodied miniature, not a cropped head or portrait.\nFamily distinction: read as a large light cold-white mass with a sideways springing arch, unlike Image 2's pale-grey diagonal walk and Image 1's dark frontal stance. Broad white flank and shoulder planes must remain recognizable at 48px; restrained shadow planes separate legs and torso. No dark back saddle and no giant face that hides the body. Ears remain pointed, muzzle canine, no fox, bear or lion proportions.\nShared base and framing: square 1024x1024 canvas; centred, nearly circular neutral dark grey-brown thin disc at approximately 86% of canvas width, thin subdued bronze-grey bevel, identical tabletop finish to Image 1. Creature fills about 80–86% of disc diameter with an exposed disc strip around every fur tip, ear, tail and paw. All anatomy remains inside the round base. Top-right 23% by 18% of canvas contains no face or critical identity feature; draw no guide or badge.\nSoft upper-left illumination, muted matte painted resin with sculpted fur planes and restrained brush texture; only tiny contact shading within the disc. No uniform luminous outline, no bloom.\nBackdrop: genuine native transparent alpha outside the disc, clean antialiased edge. No scene and no cast shadow outside the base.\nAvoid: glow, ice crystals, snow piles, breath cloud, fog, halos, scenery, coloured faction rim, rank, crowns, HP, shields, text, numbers, icons, watermark, collar, armour, weapons, extra animals, black/white backdrop, checkerboard. Exactly one wolf and one neutral base; a single asset, not a sheet.",
   "references": [
-    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v3/masters/great-wolf-v3.png",
-    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/wolf-v2.png",
-    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/canine_ww.png"
+    "<workspace>/game/addons/tome-checker-revised/art/monsters-v3/masters/great-wolf-v3.png",
+    "<workspace>/game/addons/tome-checker-revised/art/monsters-v1/masters/wolf-v2.png",
+    "<workspace>/game/modules/tome/data/gfx/shockbolt/npc/canine_ww.png"
   ],
   "reference_roles": [
     "Style/base edit target; retain neutral tabletop base, camera, material and lighting; replace creature and stance.",
@@ -60,9 +60,9 @@
   },
   "selection": "recommended-for-runtime-test",
   "reference_sha256": {
-    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v3/masters/great-wolf-v3.png": "056af1ffe8c4769ff974886175078cbd58fff2baa879e2834f1ec9b90310d9de",
-    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/wolf-v2.png": "01ea31cefef4dfb786c8e2bd060c51e8be61a692e68c471dbaf5b51a4e8ec342",
-    "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/canine_ww.png": "49f3a6fabe5d6f9dbf617b4b989c59ff83e17b425c5f980a21ba3e7b64934647"
+    "<workspace>/game/addons/tome-checker-revised/art/monsters-v3/masters/great-wolf-v3.png": "056af1ffe8c4769ff974886175078cbd58fff2baa879e2834f1ec9b90310d9de",
+    "<workspace>/game/addons/tome-checker-revised/art/monsters-v1/masters/wolf-v2.png": "01ea31cefef4dfb786c8e2bd060c51e8be61a692e68c471dbaf5b51a4e8ec342",
+    "<workspace>/game/modules/tome/data/gfx/shockbolt/npc/canine_ww.png": "49f3a6fabe5d6f9dbf617b4b989c59ff83e17b425c5f980a21ba3e7b64934647"
   },
   "review": {
     "observations": [

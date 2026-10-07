@@ -4575,7 +4575,7 @@ local names_ad = {["duathedlen"]="d\195\186athedlen", ["daelach"]="daelach", ["o
 	["sabertooth-tiger"]="sabertooth tiger", ["ice-wyrm"]="ice wyrm"}
 local tall_ad = {["duathedlen"]=true, ["daelach"]=true, ["snow-cat"]=true, ["ice-wyrm"]=true}
 equal(#batch_ad, 13, "batch AD has thirteen identities")
-equal(#Tokens.catalog, 462, "the catalog holds 376 + 13 AD + 12 AE + 9 AF + 7 AG + 12 UA + 13 TA-1 + 9 UB-1 + 10 UB-2 + 1 UB-2 wiring identity")
+equal(#Tokens.catalog, 476, "the catalog holds 376 + 13 AD + 12 AE + 9 AF + 7 AG + 12 UA + 13 TA-1 + 9 UB-1 + 10 UB-2 + 1 UB-2 wiring + 13 TA-2 + 1 TA-2 wiring identity")
 for _, id in ipairs(batch_ad) do
 	local entry = Tokens.by_id[id]
 	if entry == nil then error("batch AD catalog entry missing: "..id) end
@@ -5698,6 +5698,94 @@ end
 -- Rank badges stay an independent layer, as UA/TA-1/UB-1.
 local UB2Style=dofile(here..'../overload/mod/class/CheckerTokenStyle.lua')
 for _,r in ipairs({{3.5,'unique'},{4,'boss'},{5,'elite_boss'}}) do equal(UB2Style.rankBadge(r[1]),r[2],'UB2 rank layer stays independent '..r[1]) end
+end
+
+-- TA-2: second town-resident batch. Thirteen new non-unique bodies with no
+-- define_as (two native-tall nice_tile bodies) plus the wiring-only elven
+-- archer, whose byte-identical native PNG already backs the companion-archer
+-- token.
+do
+local ta2_ids = {"human-citizen","halfling-citizen","human-farmer","halfling-gardener","lumberjack","halfling-slinger","dwarven-earthwarden","yeek-mindslayer","yeek-psionic","thalore-hunter","thalore-wilder","elven-sun-mage","shalore-rune-master","elven-archer"}
+local ta2_tall = {["yeek-mindslayer"]=true,["thalore-wilder"]=true}
+local ta2_sub = {["halfling-citizen"]="halfling",["halfling-gardener"]="halfling",["halfling-slinger"]="halfling",["dwarven-earthwarden"]="dwarf",["yeek-mindslayer"]="yeek",["yeek-psionic"]="yeek",["thalore-hunter"]="thalore",["thalore-wilder"]="thalore",["elven-sun-mage"]="elf",["shalore-rune-master"]="shalore",["elven-archer"]="elf"}
+for _,id in ipairs(ta2_ids) do
+ local entry=Tokens.by_id[id]
+ equal(entry~=nil,true,'TA2 catalog entry '..id)
+ equal(entry.unique,nil,'TA2 non-unique entry '..id)
+ equal(entry.define_as,nil,'TA2 no define_as '..id)
+ equal(entry.native_tall,ta2_tall[id] or nil,'TA2 native_tall flag '..id)
+ equal(entry.type,'humanoid','TA2 type '..id)
+ equal(entry.subtype,ta2_sub[id] or 'human','TA2 subtype '..id)
+ equal(entry.native_shader,nil,'TA2 no native shader '..id)
+ equal(entry.urh_rok_form,nil,'TA2 no urh_rok_form '..id)
+ equal(entry.shared_name,nil,'TA2 no shared name '..id)
+ local a=actor(entry)
+ equal(Tokens.identify(a),id,'TA2 exact identity '..id)
+ a.define_as='WRONG_TA2';equal(Tokens.identify(a),nil,'TA2 any define_as native '..id)
+ a.define_as=nil
+ a.unique=true;equal(Tokens.identify(a),nil,'TA2 unique marker native '..id);a.unique=nil
+ a.shader='x';equal(Tokens.identify(a),nil,'TA2 actor shader native '..id);a.shader=nil
+ a.moddable_tile='humanoid';equal(Tokens.identify(a),nil,'TA2 paper doll native '..id);a.moddable_tile=nil
+ a.anim='run';equal(Tokens.identify(a),nil,'TA2 animation native '..id);a.anim=nil
+ a.add_displays={{image='x.png'}};equal(Tokens.identify(a),nil,'TA2 add-displays native '..id);a.add_displays=nil
+ a.image='npc/other.png';equal(Tokens.identify(a),nil,'TA2 changed body native '..id);a.image=entry.image
+ local renamed=actor(entry);renamed.name='Unknown '..entry.name;equal(Tokens.identify(renamed),nil,'TA2 renamed native '..id)
+ local changed=actor(entry);changed.type='undead';equal(Tokens.identify(changed),nil,'TA2 changed type native '..id)
+ local mixed=actor(entry);mixed.add_mos={{image='unknown-overlay.png'}};equal(Tokens.identify(mixed),nil,'TA2 extra overlay native '..id)
+end
+-- Native-tall entries need the exact nice_tile body; aura bookkeeping is ignored.
+for _,id in ipairs({"yeek-mindslayer","thalore-wilder"}) do
+ local e=Tokens.by_id[id]
+ local t=actor(e);t.image='invis.png';t.add_mos={{image=e.image,display_h=2,display_y=-1}}
+ equal(Tokens.identify(t),id,'TA2 native-tall body '..id)
+ local bad=copy(t);bad.add_mos[1].display_h=1;equal(Tokens.identify(bad),nil,'TA2 native-tall altered native '..id)
+ local aura=copy(t);aura.add_mos[#aura.add_mos+1]={_isshaderaura=true,image='x.png'}
+ equal(Tokens.identify(aura),id,'TA2 native-tall aura bookkeeping ignored '..id)
+end
+-- Wayist yeek mindslayer summon (talents/misc/races.lua) wears the same token.
+do
+ local e=Tokens.by_id['yeek-mindslayer']
+ local summon={name='yeek mindslayer',type='humanoid',subtype='yeek',image='invis.png',
+   add_mos={{image=e.image,display_h=2,display_y=-1}},summoner={},ai='summoned',summon_time=5}
+ equal(Tokens.identify(summon),'yeek-mindslayer','TA2 wayist mindslayer summon')
+end
+-- Anomaly copies of human farmer / halfling gardener wear the same token; the
+-- different-name 'shalore scribe' stays native.
+do
+ equal(Tokens.identify({name='human farmer',type='humanoid',subtype='human',image='npc/humanoid_human_human_farmer.png'}),'human-farmer','TA2 anomaly farmer')
+ equal(Tokens.identify({name='halfling gardener',type='humanoid',subtype='halfling',image='npc/humanoid_halfling_halfling_gardener.png'}),'halfling-gardener','TA2 anomaly gardener')
+ equal(Tokens.identify({name='shalore scribe',type='humanoid',subtype='shalore',image='npc/humanoid_shalore_shalore_rune_master.png'}),nil,'TA2 shalore scribe stays native')
+end
+-- The Arena halfling slinger carries define_as="SLINGER" and stays native; the
+-- Derth resident (no define_as) wears the token.
+do
+ local resident=Tokens.by_id['halfling-slinger']
+ equal(Tokens.identify({name='halfling slinger',type='humanoid',subtype='halfling',image=resident.image,define_as='SLINGER'}),nil,'TA2 arena SLINGER stays native')
+ equal(Tokens.identify({name='halfling slinger',type='humanoid',subtype='halfling',image=resident.image}),'halfling-slinger','TA2 Derth resident slinger')
+end
+-- lumberjack: the defined_as typo means no runtime define_as (name+type/subtype match).
+do
+ local lj=Tokens.by_id['lumberjack']
+ equal(Tokens.identify({name='lumberjack',type='humanoid',subtype='human',image=lj.image}),'lumberjack','TA2 lumberjack without define_as')
+ equal(Tokens.identify({name='lumberjack',type='humanoid',subtype='human',image=lj.image,define_as='LUMBERJACK'}),nil,'TA2 lumberjack with a real define_as stays native')
+end
+-- Different-name PNG reuses stay native.
+do
+ equal(Tokens.identify({name='gem crafter',type='humanoid',subtype='yeek',image='npc/humanoid_yeek_yeek_psionic.png'}),nil,'TA2 gem crafter stays native')
+end
+-- elven archer is wiring-only: byte-identical native PNG to companion-archer,
+-- reusing the companion token; the companion entry lookup is unchanged.
+do
+ local ea=Tokens.by_id['elven-archer']
+ local ca=Tokens.by_id['companion-archer']
+ equal(ea.image,ca.image,'TA2 elven archer and companion archer share the native PNG')
+ equal(Tokens.identify({name='elven archer',type='humanoid',subtype='elf',image=ea.image}),'elven-archer','TA2 elven archer exact')
+ equal(Tokens.identify({name='elven archer',type='humanoid',subtype='thalore',image=ea.image,define_as='BERETHH_ARCHER'}),nil,'TA2 elven archer cannot take the companion define_as')
+ equal(Tokens.identify({name='Companion Archer',type='humanoid',subtype='thalore',image=ca.image,define_as='BERETHH_ARCHER'}),'companion-archer','TA2 companion archer lookup unchanged')
+end
+-- Rank badges stay an independent layer, as UA/TA-1/UB-1/UB-2.
+local TA2Style=dofile(here..'../overload/mod/class/CheckerTokenStyle.lua')
+for _,r in ipairs({{3.5,'unique'},{4,'boss'},{5,'elite_boss'}}) do equal(TA2Style.rankBadge(r[1]),r[2],'TA2 rank layer stays independent '..r[1]) end
 end
 
 

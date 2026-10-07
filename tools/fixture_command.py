@@ -6,7 +6,11 @@ command=' '.join(sys.argv[1:])
 assert command in ('stage','toggle','audit','mode vanilla','mode blockout','mode refined','tokens on','tokens off','zoom 48','zoom 64','zoom 96','aura subtle','aura moderate') or command.startswith('shot '), 'stage | tokens on/off | mode vanilla/blockout/refined | aura subtle/moderate | zoom 48/64/96 | shot NAME'
 p=home/'checker-command.txt'
 assert not p.exists(), 'Previous command still pending'
-p.write_text(command)
+# Publish only a complete command: the engine polls this file every frame.
+# Direct write_text can expose an empty file and lose the command on a nil read.
+pending = p.with_name('.checker-command.pending')
+pending.write_text(command)
+pending.replace(p)
 for _ in range(100):
     if not p.exists():break
     time.sleep(.1)

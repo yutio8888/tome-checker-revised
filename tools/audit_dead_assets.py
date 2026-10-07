@@ -519,6 +519,36 @@ for badge in pairs(badges) do print('badge\\t'..badge) end
     return tokens, sorted(relations), sorted(badges)
 
 
+def layered_token_paths():
+    """Derive the layered trial files from the runtime module itself.
+
+    Every catalog id that resolves to a layer is reachable, plus the shared
+    disc. This covers both the R32 1.25x ordinary layers (128px canvas, only
+    the <=48px cell trial) and the R38 standee layers (256px canvas, every
+    tile size); `layerImage` is flag-independent on purpose. If both switches
+    are off the module reports none and this tool treats the layer files as
+    dead, which is the honest answer.
+    """
+    out = lua(f"""
+local Tokens=assert(loadfile('{TOKENS.relative_to(ROOT)}'))()
+for id in pairs(Tokens.by_id) do
+ local layer=Tokens.layerImage(id)
+ if layer then print('layer\\t'..layer) end
+ local aura=Tokens.layerAuraImage(id)
+ if aura then print('layer\\t'..aura) end
+end
+local disc=Tokens.layerDisc()
+if disc then print('layer\\t'..disc) end
+""")
+    layers = set()
+    for line in out.splitlines():
+        kind, value = line.split('\t')
+        if kind != 'layer':
+            raise AuditError(f'unexpected layered harness output: {line!r}')
+        layers.add(value)
+    return layers
+
+
 def player_token_paths():
     """Run CheckerPlayerTokens.lua for real over the real player-token manifest.
 
@@ -612,6 +642,7 @@ def audit():
     tokens, relations, badges = token_paths()
     masks = overlay_masks(relations, badges)
     player_tokens = player_token_paths()
+    layered_tokens = layered_token_paths()
 
     reachable = {}
     for mode, paths in forest.items():
@@ -705,6 +736,8 @@ def audit():
         reachable.setdefault(to_relative(path), set()).add('token:overlay-mask')
     for path in player_tokens:
         reachable.setdefault(to_relative(path), set()).add('token:player')
+    for path in layered_tokens:
+        reachable.setdefault(to_relative(path), set()).add('token:layered')
     # Both persisted styles can reach each procedural aura mask.
     aura_source = TERRAIN.read_text()
     aura_block = aura_source.split('local auraEffects={', 1)[1].split('\n}', 1)[0]

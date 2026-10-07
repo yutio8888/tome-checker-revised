@@ -1,0 +1,171 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch3-others",
+ "assets": [
+  {
+   "asset_id": "temporal-defiler",
+   "native_name": "Temporal Defiler",
+   "scope": "Standee batch 3 (13 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched. Reused dragon-family composition: rearing on the hind legs with the chest lifted, the wings folded tight or held in a narrow vertical V, never spread wide, and the tail curled close; the on-screen body height may land around 1.2-1.75 cells because of the 1.0-cell width cap, which is accepted.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/town-point-zero/npcs.lua",
+     "sha256": "c55eda50b11fec8bb9e4f161f192bcd616c3feac5ea0b72d7bfa8a3d68cf6034",
+     "line": 202,
+     "anchor": "newEntity{ define_as = \"TEMPORAL_DEFILER\","
+    }
+   ],
+   "desc": "A huge, slender, metallic monstrosity with long claws in place of fingers, and razor-sharp teeth. It seems to seek something here.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/temporal-defiler.png",
+     "sha256": "737044a46850867df5386ea7e907ca092df66eadc2ddeee2308c3aac471b14a7",
+     "role": "style",
+     "note": "The shipped flat Temporal Defiler token: copy its matte painted miniature finish, colours, value structure and identity. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_temporal_temporal_defiler.png",
+     "sha256": "206c35afda8819be0cf6c9f826438ed3d187d0c653a6ebe7cfb2401152f5092c",
+     "role": "identity",
+     "note": "Native Temporal Defiler sprite: identity cue only. Keep the same species, colour pattern and markings, converted to a true upright composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/onilug.png",
+     "sha256": "9ab0daff54f8950819ab4a3563cfdc641fcd53e4ab8ce00467ada32eb5a1cb2c",
+     "role": "family",
+     "note": "The shipped onilug token is a gaunt grey fleshy humanoid; the Temporal Defiler must not be a thin grey line like it: keep the polished purple-silver metal torso solid and its scythe blades folded close."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_temporal_temporal_defiler.png",
+     "sha256": "206c35afda8819be0cf6c9f826438ed3d187d0c653a6ebe7cfb2401152f5092c"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/temporal-defiler.png",
+     "sha256": "737044a46850867df5386ea7e907ca092df66eadc2ddeee2308c3aac471b14a7"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Temporal Defiler: a huge lanky metallic humanoid with a clearly SOLID armoured torso and long thin limbs, polished steel and violet-silver metal plates over its lean body, an angular head with a fanged jaw and glowing violet eyes, long clawed fingers in place of hands and long scythe-like arm blades, standing upright with the arms held close. Match the shipped flat token's purple-and-silver metallic body and clawed scythe arms.",
+    "contrast": "Lanky but never a thin line: the torso and shoulders must have real width and visible armour volume, the arms are folded close to the body and the blades point down rather than out, so the silhouette stays about 1.2 to 1.5 tall to wide and clearly readable. It differs from the gaunt grey fleshy onilug by the polished purple-silver metal body, the scythe arm blades and the fanged head. No aura, glow or particles beyond thin arm energy lines.",
+    "composition": "Full body, upright standing three-quarter view, solid armoured torso, long limbs and clawed scythe arms kept close to the body, standing on two feet, the head at the top of the frame. Overall height about 1.4 to 1.7 times the width; the head is the top, nothing above it.",
+    "palette": "polished violet-silver and steel metal plates with darker gunmetal joints, pale silver highlights, glowing violet eyes, thin violet energy lines along the arms, no other glow."
+   }
+  },
+  {
+   "asset_id": "arch-zephyr",
+   "native_name": "Arch Zephyr",
+   "scope": "Standee batch 3 (13 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched. Reused dragon-family composition: rearing on the hind legs with the chest lifted, the wings folded tight or held in a narrow vertical V, never spread wide, and the tail curled close; the on-screen body height may land around 1.2-1.75 cells because of the 1.0-cell width cap, which is accepted.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+     "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+     "line": 304,
+     "anchor": "newEntity{ base = \"BASE_NPC_VAMPIRE\", unique=true, define_as=\"ARCH_ZEPHYR\","
+    }
+   ],
+   "desc": "The robes of this ancient vampire billow with intense winds. Bolts of lightning arc along its body. In its hand it holds a bow, electricity streaking across it.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/arch-zephyr.png",
+     "sha256": "d0cc81baaddf3a7387ba08b3795ac885c3e7f553d4aee4ac8290a9f08ba6e48c",
+     "role": "style",
+     "note": "The shipped flat Arch Zephyr token: copy its matte painted miniature finish, colours, value structure and identity. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_vampire_arch_zephyr.png",
+     "sha256": "3388a4c070f19e5210b411d1886b60ab5291c8c261348877d5a02caaf7d793a8",
+     "role": "identity",
+     "note": "Native Arch Zephyr sprite: identity cue only. Keep the same species, colour pattern and markings, converted to a true upright composition; it is not a pose or proportion specification."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_vampire_arch_zephyr.png",
+     "sha256": "3388a4c070f19e5210b411d1886b60ab5291c8c261348877d5a02caaf7d793a8"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/arch-zephyr.png",
+     "sha256": "d0cc81baaddf3a7387ba08b3795ac885c3e7f553d4aee4ac8290a9f08ba6e48c"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Arch Zephyr: an ancient aristocratic vampire standing upright in flowing silver-white robes that are GATHERED and fall VERTICALLY, a high collar, a pale gaunt face with sharp fangs and white hair, holding a strung BOW in one hand with the arrow held close; the wind blows the robe straight up and down the body rather than out to the sides. Match the shipped flat token's silver-white robe, pale vampire face and bow.",
+    "contrast": "Tall and narrow: the robe and cloak are gathered into a vertical column, the bow is held close against the body and the arms stay near the torso, so the silhouette stays about 1.2 to 1.6 tall to wide. It differs from other robed undead by the silver-white vertical wind robe and the held bow. Lightning arcs and wind sparks are NOT part of the body; do not draw bolts, arcs or glow.",
+    "composition": "Full body, upright standing front three-quarter view, the silver robe gathered vertically, one hand holding the bow close to the body, the pale fanged head at the top. Overall height about 1.4 to 1.7 times the width; keep the bow tip at or below the head so nothing else rises above it.",
+    "palette": "silver-white and pale grey flowing robes with cool blue-grey shadow, pale ashen skin, white hair, dark eyes, a simple dark wood and pale-bone bow."
+   }
+  },
+  {
+   "asset_id": "ak-gishil",
+   "native_name": "Ak'Gishil",
+   "scope": "Standee batch 3 (13 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched. Reused dragon-family composition: rearing on the hind legs with the chest lifted, the wings folded tight or held in a narrow vertical V, never spread wide, and the tail curled close; the on-screen body height may land around 1.2-1.75 cells because of the 1.0-cell width cap, which is accepted.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/horror.lua",
+     "sha256": "59fb5c3d04db48cfa87a1b3fd51565c915a8a8573b5e72459177694a8541e77c",
+     "line": 1063,
+     "anchor": "newEntity{ base = \"BASE_NPC_HORROR\","
+    }
+   ],
+   "desc": "This Blade Horror has been infused with intense temporal magic, causing its power to increase dramatically. Rifts in space open around it constantly, summoning and banishing blades before vanishing as quickly as they appear.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ak-gishil.png",
+     "sha256": "6c87bcbc325ddc67f7c81f12ac0a9a4e3a72e6f4c59a4bf0ed79e35f8bf229d5",
+     "role": "style",
+     "note": "The shipped flat Ak'Gishil token: copy its matte painted miniature finish, colours, value structure and identity. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_ak_gishil.png",
+     "sha256": "e1f9d23c2a525c2f1281f9e2542fa8c01bb10f0a518be8a1ca6cb6b611c8844e",
+     "role": "identity",
+     "note": "Native Ak'Gishil sprite: identity cue only. Keep the same species, colour pattern and markings, converted to a true upright composition; it is not a pose or proportion specification."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_eldritch_ak_gishil.png",
+     "sha256": "e1f9d23c2a525c2f1281f9e2542fa8c01bb10f0a518be8a1ca6cb6b611c8844e"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ak-gishil.png",
+     "sha256": "6c87bcbc325ddc67f7c81f12ac0a9a4e3a72e6f4c59a4bf0ed79e35f8bf229d5"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Ak'Gishil: a blade horror standing UPRIGHT with a clear central armoured torso, its body built of layered silver-grey steel blades and plates folding around a dark core, a smooth horned head with glowing red eyes, two long CURVED BLADE ARMS held folded down and close along the body, and several thin floating swords hovering close beside the arms (they are NOT part of the body). Match the shipped flat token's silver-grey bladed body and red eyes.",
+    "contrast": "Upright and compact: the central torso is a solid readable mass, the curved blade arms fold down close to the flanks and any floating swords stay tight beside the body, so the silhouette stays about 1.2 to 1.6 tall to wide. It differs from the black shadowy native sprite by the silver-grey polished steel required by the shipped token. No thick smoke and no wide spread of blades.",
+    "composition": "Full body, upright standing three-quarter view with a clear central torso, blade arms folded close, a few floating swords kept close beside the body, the horned head at the top of the frame. Overall height about 1.3 to 1.6 times the width; keep any floating sword beside rather than above the head.",
+    "palette": "polished silver-grey and pale steel blades with darker gunmetal shadow, a dark inner core, glowing red eyes, no other colour."
+   }
+  }
+ ]
+}

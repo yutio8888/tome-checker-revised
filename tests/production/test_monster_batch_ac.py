@@ -4,15 +4,21 @@ Flightfond, orc high pyromancer, orc high cryomancer, Glacial Legion, Arch Zephy
 Rotting Titan, Heavy Sentinel, Void Spectre, oozing horror, abyssal horror,
 ungolmor, umbral horror, vampire lord, degenerated ogric mass, ogric
 abomination). All pass the style gate with no waiver and every masked body
-luminance is at least 65 (floor unchanged). Four are non-unique native_tall
-bodies, five are unique tall bodies, eight are 64x64 single images (two of them
-unique); six bind a define_as.
+luminance is at least 65 (floor unchanged), except abyssal horror, which was
+deliberately repainted pitch-black on 2026-10-04 (v2, one pair of deep red eyes)
+to match its own desc; its readability is asserted by measured body darkness
+against the superseded bright v1 rather than the retired luminance floor. Four
+are non-unique native_tall bodies, five are unique tall bodies, eight are 64x64
+single images (two of them unique); six bind a define_as.
 """
 import importlib.util
 import json
+import math
 import re
 import unittest
 from pathlib import Path
+
+from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -24,6 +30,7 @@ IDS = ['aletta-soultorn', 'ruin-banshee', 'filio-flightfond', 'orc-high-pyromanc
        'heavy-sentinel', 'void-spectre', 'oozing-horror', 'abyssal-horror', 'ungolmor', 'umbral-horror', 'vampire-lord', 'degenerated-ogric-mass', 'ogric-abomination']
 SHIPPED = {i: i + '-v1' for i in IDS}
 SHIPPED['vampire-lord'] = 'vampire-lord-v2'  # v1 (pack 8) passed every numeric gate but was a small dull mustard mass at 48px (masked luminance 70.4); v1 is kept under superseded/
+SHIPPED['abyssal-horror'] = 'abyssal-horror-v2'  # user decision 2026-10-04: pitch-black single-red-eye-pair repaint matching the desc; v1 (bright blue-violet, multi-eyed) is kept under superseded/
 NAMES = {i: i.replace('-', ' ') for i in IDS}
 NAMES.update({'aletta-soultorn': 'Aletta Soultorn', 'filio-flightfond': 'Filio Flightfond', 'glacial-legion': 'Glacial Legion', 'arch-zephyr': 'Arch Zephyr',
               'rotting-titan': 'Rotting Titan', 'heavy-sentinel': 'Heavy Sentinel', 'void-spectre': 'Void Spectre'})
@@ -102,7 +109,36 @@ class MonsterBatchACShippedTests(unittest.TestCase):
         lum = json.loads((ROOT / 'art/monster-batch-ac/review/luminance.json').read_text())
         self.assertEqual(lum['floor_minimum_for_body'], FLOOR)
         for asset_id in SHIPPED:
+            if asset_id == 'abyssal-horror':
+                # Deliberate 2026-10-04 black repaint; the historical v1 luminance
+                # record no longer describes the shipped token (see the test below).
+                continue
             self.assertGreaterEqual(lum['assets'][asset_id], 65.0, asset_id)
+
+    def test_abyssal_horror_repaint_is_darker_than_the_superseded_token(self):
+        # User decision 2026-10-04: the shipped v1 was a bright blue-violet
+        # multi-eyed tentacle blob that contradicted abyssal horror's own desc
+        # ('This pitch black form is shrouded in darkness. All you can make out
+        # are a pair of deep red eyes, hidden behind a mass of tentacles.').
+        # The v2 repaint is pitch-black with exactly one pair of deep red eyes;
+        # readability comes from internal sheen and a cool rim, not a bright body.
+        def body_luminance(path):
+            image = Image.open(path).convert('RGBA')
+            size = image.width
+            values = []
+            for y in range(size):
+                for x in range(size):
+                    r, g, b, a = image.getpixel((x, y))
+                    if a >= 180 and math.hypot(x + .5 - size / 2, y + .5 - size / 2) <= 0.55 * size / 2:
+                        values.append(0.299 * r + 0.587 * g + 0.114 * b)
+            return sum(values) / len(values)
+        new = ROOT / 'art/monster-batch-ac/sprites/128/abyssal-horror.png'
+        old = ROOT / 'art/monster-batch-ac/superseded/abyssal-horror-v1-runtime-128.png'
+        self.assertTrue(old.is_file(), 'the superseded bright token must be kept for provenance')
+        self.assertNotEqual(new.read_bytes(), old.read_bytes())
+        self.assertLess(body_luminance(new), body_luminance(old) - 20)
+        selection = json.loads((ROOT / 'art/monster-batch-ac/selected-masters.json').read_text())
+        self.assertEqual(selection['abyssal-horror'], 'masters/abyssal-horror-v2.png')
 
     def test_review_sheets_exist(self):
         review = ROOT / 'art/monster-batch-ac/review'

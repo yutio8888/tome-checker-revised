@@ -133,9 +133,9 @@ G0＋G1共18张地形母版。与M1的8款及最多2款暗体定向返修合计2
 ## 8. 依据与可复查材料
 
 - 当前运行时：[`Game.lua`](../../superload/mod/class/Game.lua)、[`CheckerTokens.lua`](../../overload/mod/class/CheckerTokens.lua)、[`hooks/load.lua`](../../hooks/load.lua)。
-- 原生地形：[forest.lua](/workspace/t-engine4/game/modules/tome/data/general/grids/forest.lua:60)、[basic.lua](/workspace/t-engine4/game/modules/tome/data/general/grids/basic.lua:169)、[water.lua](/workspace/t-engine4/game/modules/tome/data/general/grids/water.lua:136)、[Grid:block_move](/workspace/t-engine4/game/modules/tome/class/Grid.lua:52)、[sand.lua](/workspace/t-engine4/game/modules/tome/data/general/grids/sand.lua:42)。
-- 特殊区域：[Heart of the Gloom改名](/workspace/t-engine4/game/modules/tome/data/zones/heart-gloom/npcs.lua:24)、[Daikara岩浆覆盖](/workspace/t-engine4/game/modules/tome/data/zones/daikara/grids.lua:22)、[巨大掘洞虫](/workspace/t-engine4/game/modules/tome/data/zones/sandworm-lair/npcs.lua:57)。
-- 原生下一批：[skeleton.lua](/workspace/t-engine4/game/modules/tome/data/general/npcs/skeleton.lua:60)、[molds.lua](/workspace/t-engine4/game/modules/tome/data/general/npcs/molds.lua:49)。
+- 原生地形：[forest.lua](<workspace>/game/modules/tome/data/general/grids/forest.lua:60)、[basic.lua](<workspace>/game/modules/tome/data/general/grids/basic.lua:169)、[water.lua](<workspace>/game/modules/tome/data/general/grids/water.lua:136)、[Grid:block_move](<workspace>/game/modules/tome/class/Grid.lua:52)、[sand.lua](<workspace>/game/modules/tome/data/general/grids/sand.lua:42)。
+- 特殊区域：[Heart of the Gloom改名](<workspace>/game/modules/tome/data/zones/heart-gloom/npcs.lua:24)、[Daikara岩浆覆盖](<workspace>/game/modules/tome/data/zones/daikara/grids.lua:22)、[巨大掘洞虫](<workspace>/game/modules/tome/data/zones/sandworm-lair/npcs.lua:57)。
+- 原生下一批：[skeleton.lua](<workspace>/game/modules/tome/data/general/npcs/skeleton.lua:60)、[molds.lua](<workspace>/game/modules/tome/data/general/npcs/molds.lua:49)。
 - [source-audit.json](source-audit.json)、[family-loads.csv](family-loads.csv)保存源码路径、行号、hash、条件分支以及统计边界；[monster-backlog.csv](monster-backlog.csv)与[terrain-backlog.csv](terrain-backlog.csv)给出批次任务。
 - [VARIANTS.md](VARIANTS.md)、[zone-variants.csv](zone-variants.csv)、[variant-monster-backlog.csv](variant-monster-backlog.csv)、[variant-room-backlog.csv](variant-room-backlog.csv)补充20种布局、独特怪及条件房间任务；[variant-source-audit.json](variant-source-audit.json)保存本轮核对源码hash。
-- 既有[全资产盘点](/workspace/t-engine4/documentation/board-visual-audit-2026-09-26/report.md)可作长期规模参考。本方案范围为常见怪物与作战地形，没有把纸娃娃、HUD重做、全量技能图标或全DLC纳入上述母版预算。
+- 既有[全资产盘点](<workspace>/documentation/board-visual-audit-2026-09-26/report.md)可作长期规模参考。本方案范围为常见怪物与作战地形，没有把纸娃娃、HUD重做、全量技能图标或全DLC纳入上述母版预算。

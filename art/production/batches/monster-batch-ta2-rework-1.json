@@ -1,0 +1,114 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ta2-rework-1",
+  "assets": [
+    {
+      "asset_id": "thalore-hunter",
+      "native_name": "thalore hunter",
+      "scope": "TA-2 rework pack (body value below the unchanged 65 floor); game/modules/tome/data/zones/town-shatur/npcs.lua:51",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/town-shatur/npcs.lua",
+          "sha256": "0f0f5f0ac81f650aa87858c9dac68cf0dcdd00d31c8a78beb57d8dc05ebca302",
+          "line": 51,
+          "anchor": "name = \"thalore hunter\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-shatur/npcs.lua",
+          "sha256": "0f0f5f0ac81f650aa87858c9dac68cf0dcdd00d31c8a78beb57d8dc05ebca302",
+          "line": 23,
+          "anchor": "define_as = \"BASE_NPC_ELVALA_TOWN\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/arena-unlock/npcs.lua",
+          "sha256": "7f0f5aaf462fe7e84e9a5a3674f0cf2397af827fa630d4311ae0771f4f1f47de",
+          "line": 71,
+          "anchor": "define_as = \"SLINGER\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/chronomancy/anomalies.lua",
+          "sha256": "cc36f9e9f4aaec5230730e339ec389d2185f125afad3bd5fc061d2a0631aca25",
+          "line": 586,
+          "anchor": "m.name = _t\"human farmer\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/chronomancy/anomalies.lua",
+          "sha256": "cc36f9e9f4aaec5230730e339ec389d2185f125afad3bd5fc061d2a0631aca25",
+          "line": 593,
+          "anchor": "m.name = _t\"halfling gardener\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/chronomancy/anomalies.lua",
+          "sha256": "cc36f9e9f4aaec5230730e339ec389d2185f125afad3bd5fc061d2a0631aca25",
+          "line": 600,
+          "anchor": "m.name = _t\"shalore scribe\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/misc/races.lua",
+          "sha256": "958b207fd24723fa3b1613c62048b19012df2e24e9b82152eb1ef2485a88aed1",
+          "line": 990,
+          "anchor": "name = _t\"yeek mindslayer\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-lumberjack-village/npcs.lua",
+          "sha256": "9d22e739f7eaf9ef6ff64ac34b3c44fe7a3fdf89aca3ad414a13af75ddf5bf8a",
+          "line": 70,
+          "anchor": "defined_as = \"LUMBERJACK\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ta2/masters/thalore-hunter-v1.png",
+          "sha256": "f51d61c80ff0c81ffd4553b40d01872e1da0521b95fe1c9f037612ba434e3da4",
+          "role": "identity",
+          "note": "First-attempt master of this same identity: keep its design, pose, camera and composition; correct only the body value."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ta2/refs/thalore.png",
+          "sha256": "3be293a7ac71b2c1c3ad2c7c212516275bb0715de65a3872acff4fb2c02a3824",
+          "role": "family",
+          "note": "Shipped siblings; stay structurally distinct, do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A green-clad THALORE elf with a pointed LEAF-GREEN HOOD and pointed ears, in the SAME pose and gear as the identity reference master: a leaf-green tunic and leather bracers, both arms DRAWING a wooden longbow with a nocked arrow, a quiver of white-fletched arrows over the shoulder, green leggings and brown boots, alert wide archer stance. Keep the exact pose, camera, composition and gear of the identity reference. Raise the whole body to clearly LIGHTER value: a bright spring-green / yellow-green tunic and hood with broad pale yellow-green highlight planes on every upper-left surface, light tan leather and a pale wood bow, a light face, and a thin bright pale rim along the outline, so the figure reads as a light green shape on the dark disc at 48px. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Identity is unchanged from the first master: a pointed green hood, a drawn bow and a quiver, versus the gold-armoured vertical-bow elven archer/companion-archer and the cloaked berethh. Only the body value is corrected upward; the disc must stay at the style reference's own lightness.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature.",
+        "palette": "Bright mid-light spring-green and yellow-green body masses with broad upper-left highlights and a thin bright rim. Light tan leather and a pale wood bow.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. The disc is a NEUTRAL physical prop and must NOT be darkened with the creature: render the charcoal-brown plate and its bronze-grey bevel at EXACTLY the style reference's own lightness, evenly all round, including the outer sixth ring band and the plate directly under and beside the creature. Add no contact shadow, glow, bounce light or colour spill onto the plate; only the creature's own surfaces get the lighter values."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "default image name from class/NPC.lua:33 (npc/humanoid_thalore_thalore_hunter.png); flat 64x64 body. No shader, moddable_tile, anim, add_displays or textures anywhere in leaf/base; no auto_classes body writes. Rework after the first master measured 64.27 (< 65); see evidence/monster-batch-ta2-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ta2-20261001/source-contracts.json",
+          "sha256": "30291e790faad136743370bc037edc42327fad6513c7deefaf86086c87fbea22"
+        }
+      ]
+    }
+  ]
+}

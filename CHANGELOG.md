@@ -1,5 +1,14 @@
 # Changes
 
+## 0.6.33 — 2026-10-06
+
+- 怪物 Batch TA-2：目录 462→**476**，新增 human citizen、halfling citizen、human farmer、halfling gardener、lumberjack、halfling slinger、dwarven earthwarden、yeek mindslayer、yeek psionic、thalore hunter、thalore wilder、elven sun-mage、shalore rune master；elven archer 仅接线复用已有 companion archer 棋子。未核准身份与外观继续保持原版。
+- **59 款立绘棋子默认开启**：已核准高大生物在 24px 及以上地格竖立在底座上，16px 自动回退平面棋子。高度按原生身体并排除武器与特效，宽度最多一格；不会随等级或体型增益切换。没有独立立绘设置，关闭「怪物棋子」会恢复原版。普通 1.25× 小地格分层试验默认关闭，19 款普通层文件保留；旧两格首领试验由当前按身份计算的立绘方案取代。
+- 生命圆弧与护盾圆弧改为**原生战术血条和原生护盾粒子**，阵营圆环保持完整；血条沿用游戏战术显示与侧边／底边选项，关闭战术显示时不画血条。这是实际出货行为，已取代旧生命环语义。
+- 立绘 shader 光环使用 SQUARE／TALL 透明纹理和精确几何变换，生物绘制在光环后，等级角标和血条在上方；恢复原生前景粒子顺序与多光环更新。棋子朝向默认固定，可选择「跟随移动」沿用原生水平翻转，立绘与光环一起对齐。
+- 外测 ZIP 搭配现成 **Board HUD 0.2.8**：修复 Classic 中文左栏资源标签截断及属性行末位数字。本轮未重建或修改 HUD。
+- 安装归档冒烟、干净源码门禁和包校验见 [runtime-v0633](evidence/runtime-v0633/README.md)。
+
 ## 0.6.32 — 2026-10-01
 
 - 怪物 Batch AD、AE、AF、AG、UA、TA-1、UB-1、UB-2（棋子目录 376→**462** 款，共 86 款，本版无新增地形区域）。名单外地城常见怪（AD／AE／AF，如 dúathedlen、daelach、forge giant、storm wyrm、各档 lich 与恐魔）、特殊情况（AG：同名 shadow claw 一对、multi-hued drake 系与水晶）、首领（UA：Kra'Tor、Khulmanar、Rungof、Grgglck、Queen Ant、Ak'Gishil、Ninandra、Phoenix、Ukruk、Gorbat、Grushnak、Vor）、城镇居民（TA-1：Angolwen 四位高图法师与学徒、六种守卫、Ring of Blood 的 slaver 与 enthralled slave）、唯一怪（UB-1：High／Fallen Sun Paladin Aeryn、Caldizar、Chronolith Twin／Clone、Temporal Defiler、Corrupted Daelach、Linaniil、Archmage Tarelion；UB-2：Sun Paladin Guren、Epoch、Corrupted Oozemancer、Zemekkys、Blood Master、Limmir、Protector Myssil、Rak'Shor Cultist、Shady cornac man、Tannen，以及复用憎恶棋子的 Ben Cruthdar, the Cursed）。多款高大原生图只画一枚棋子；所有新棋子均以原版贴图为准重绘并在 48 px 下与同族区分。

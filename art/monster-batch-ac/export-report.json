@@ -1356,8 +1356,8 @@
     },
     {
       "id": "abyssal-horror",
-      "master": "masters/abyssal-horror-v1.png",
-      "sha256": "431cf25f1b6c92955e867711bad3ffc98e53a27de58c505f5894a7444bcc2194",
+      "master": "masters/abyssal-horror-v2.png",
+      "sha256": "26cbc4cf5a774a48c12e9ab3fcd199659cee3058fd312694eb5618e382ecf2b0",
       "exports": [
         {
           "path": "sprites/48/abyssal-horror.png",
@@ -1365,18 +1365,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            85,
-            76,
-            1170,
-            1173
+            84,
+            75,
+            1169,
+            1174
           ],
           "export_window": [
-            -10.290698,
-            -13.290698,
-            1275.581395
+            -12.453488,
+            -14.453488,
+            1277.906977
           ],
           "target_occupancy": 0.86,
-          "sha256": "a4ae58d28e4cfd9ab0c15cf1f88f25e8c4d1fe8552dd5e3e07f5c90a06bd1899"
+          "sha256": "7b0c7b60035531e618082b9026ef1a11a7c6bed34e0712b5c072a9f3683cde56"
         },
         {
           "path": "sprites/64/abyssal-horror.png",
@@ -1384,18 +1384,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            85,
-            76,
-            1170,
-            1173
+            84,
+            75,
+            1169,
+            1174
           ],
           "export_window": [
-            -10.290698,
-            -13.290698,
-            1275.581395
+            -12.453488,
+            -14.453488,
+            1277.906977
           ],
           "target_occupancy": 0.86,
-          "sha256": "3be9172bdcb60d863b2502d851a1b7ecb8ddcf1b501c868f0ecc69106f25dbc3"
+          "sha256": "72b06d72f376434a8f22a4d5c40483d0d7a84588cdead23ffc36be1d9a206ebd"
         },
         {
           "path": "sprites/96/abyssal-horror.png",
@@ -1403,18 +1403,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            85,
-            76,
-            1170,
-            1173
+            84,
+            75,
+            1169,
+            1174
           ],
           "export_window": [
-            -10.290698,
-            -13.290698,
-            1275.581395
+            -12.453488,
+            -14.453488,
+            1277.906977
           ],
           "target_occupancy": 0.86,
-          "sha256": "35a9d395e004476cfcea6da4378fd96933890660506ab173af524512f2ce7e60"
+          "sha256": "b9f75123e574c38009d2e063df7d42cb717c0cc5947bdc8b00fb7b75c174f5a7"
         },
         {
           "path": "sprites/128/abyssal-horror.png",
@@ -1422,18 +1422,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            85,
-            76,
-            1170,
-            1173
+            84,
+            75,
+            1169,
+            1174
           ],
           "export_window": [
-            -10.290698,
-            -13.290698,
-            1275.581395
+            -12.453488,
+            -14.453488,
+            1277.906977
           ],
           "target_occupancy": 0.86,
-          "sha256": "968b99711a73941ba448d7b2aa6612666e7035544655b1bc04867939b224a728"
+          "sha256": "3b0c251e8b86c63f5ec555c4e5db272870c985081b1a61d569bf790d2b21a679"
         },
         {
           "path": "sprites/256/abyssal-horror.png",
@@ -1441,18 +1441,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            85,
-            76,
-            1170,
-            1173
+            84,
+            75,
+            1169,
+            1174
           ],
           "export_window": [
-            -10.290698,
-            -13.290698,
-            1275.581395
+            -12.453488,
+            -14.453488,
+            1277.906977
           ],
           "target_occupancy": 0.86,
-          "sha256": "c97d1aadaef2e76f7a96b1cf5c5ffa32d70575590bb5337fe59e3bd98285a655"
+          "sha256": "97d7a4acf948cdce89bb647dde00b5dc5df34c01ae5365183303bc8e3944d6fc"
         }
       ],
       "style_gate": {
@@ -1466,9 +1466,9 @@
           74.33,
           76.42
         ],
-        "base_drift": -0.47,
-        "max_sector_intrusion": 4.03,
-        "max_opaque_radius": 0.8596,
+        "base_drift": -2.63,
+        "max_sector_intrusion": 5.19,
+        "max_opaque_radius": 0.8576,
         "blocking": [],
         "warnings": [],
         "grandfathered": false,

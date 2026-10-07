@@ -324,8 +324,18 @@ def verify_provenance(reported: str, before: set[str], started: float) -> dict:
         'resolved_path': None,
     }
     if not reported:
-        info['reason'] = 'codex 未返回产物路径'
-        return info
+        # The built-in tool sometimes writes the file but codex never echoes the
+        # path back. If exactly one new exec-<uuid>.png appeared during the call,
+        # that file is the artifact: same trusted directory, same call window.
+        # More than one new file is ambiguous and still rejected.
+        if len(fresh) == 1:
+            reported = fresh[0]
+            info['path_source'] = 'fresh-file fallback (codex did not report the path)'
+        else:
+            info['reason'] = 'codex 未返回产物路径，且本次调用期间新文件数不是 1'
+            return info
+    else:
+        info['path_source'] = 'reported by codex'
     resolved = Path(os.path.expanduser(reported)).resolve()
     info['resolved_path'] = str(resolved)
     if not resolved.is_relative_to(GENERATED_ROOT.resolve()):
@@ -536,10 +546,76 @@ def terrain_gate(master: Path, kind: str, asset_id: str) -> dict:
     }
 
 
+# Standee masters have no disc geometry: they are full-body upright creatures on
+# a transparent field. The disc checks (base_drift, disc_overflow, export
+# occupancy, the frozen 8-sector base lightness) are meaningless here, so the
+# gate checks what the standee actually has to be: native alpha, transparent
+# corners, a non-trivial bbox inset from the edges, and a composition clearly
+# taller than wide. The aspect floor is a blocking design requirement, not a
+# silhouette-quality verdict; a human still opens every sheet.
+STANDEE_MIN_ASPECT = 1.4
+
+
+def standee_gate(master: Path, asset_id: str) -> dict:
+    """Transparent full-body standee master: upright aspect + clean alpha."""
+    from PIL import Image
+
+    with Image.open(master) as image:
+        w, h = image.size
+        native_alpha = image.mode in ('RGBA', 'LA', 'PA') or (
+            image.mode == 'P' and 'transparency' in image.info)
+        alpha = image.convert('RGBA').getchannel('A')
+        extrema = alpha.getextrema()
+        corners = [alpha.getpixel(p) for p in ((0, 0), (w - 1, 0), (0, h - 1), (w - 1, h - 1))]
+
+    findings = []
+
+    def add(check, ok, detail, **extra):
+        findings.append({'check': check, 'level': 'blocking', 'ok': ok, 'detail': detail, **extra})
+
+    add('master_native_alpha',
+        native_alpha and extrema[0] == 0 and extrema[1] >= check_token_style.MASTER_ALPHA_MAX_FLOOR,
+        f'standee 母版 mode={image.mode} alpha={extrema[0]}..{extrema[1]}（须原生 RGBA/LA/PA、'
+        f'跨 0–{check_token_style.MASTER_ALPHA_MAX_FLOOR}+）')
+    add('corner_alpha', all(c <= CORNER_ALPHA_MAX for c in corners),
+        f'四角 alpha {corners}（须 ≤{CORNER_ALPHA_MAX}，不得有假背景）')
+    bbox = alpha.point(lambda a: 255 if a >= 128 else 0).getbbox()
+    if bbox is None:
+        add('nontrivial_bbox', False, '整张立绘母版透明，没有可见主体')
+    else:
+        # The image tool frames a full-body figure close to the canvas edge, so
+        # the pad is deliberately small (2px): it only catches a body that is
+        # actually flush with / cut by the border. Framing quality is judged by
+        # the human review sheet, not by this number.
+        pad = 2.0
+        add('not_edge_touching',
+            bbox[0] >= pad and bbox[2] <= w - pad
+            and bbox[1] >= pad and bbox[3] <= h - pad,
+            f'不透明包围盒 {bbox}，须距左右/上下 ≥{pad:.0f}px（不得触边或裁切身体）')
+        bw, bh = bbox[2] - bbox[0], bbox[3] - bbox[1]
+        aspect = bh / bw if bw else 0
+        add('upright_aspect', aspect >= STANDEE_MIN_ASPECT,
+            f'不透明包围盒 {bw}x{bh}，高/宽={aspect:.2f}（须 ≥{STANDEE_MIN_ASPECT} 的直立高构图；'
+            '横躺/圆盘式构图直接拒收）', value=round(aspect, 3))
+
+    blocking = [f for f in findings if f['level'] == 'blocking' and not f['ok']]
+    return {
+        'kind': 'standee',
+        'findings': findings,
+        'blocking': [f['check'] for f in blocking],
+        'warnings': [],
+        'passed': not blocking,
+        'export_stats': None,
+        'export_path': None,
+    }
+
+
 def gate_master(master: Path, kind: str, asset_id: str, out_png: Path) -> dict:
     """按资产 kind 分流：怪物/玩家棋子走圆盘门控，地形道具/地板走 terrain_gate。"""
     if kind in ('terrain-prop', 'terrain-floor'):
         return terrain_gate(master, kind, asset_id)
+    if kind == 'standee':
+        return standee_gate(master, asset_id)
     return export_and_gate(master, asset_id, out_png)
 
 
@@ -790,6 +866,7 @@ def run_chain(state: dict, attempt: int, request_path: Path, saved: Path | None,
             staged = scratch_dir / f"{asset['asset_id']}-attempt{attempt}.png"
             shutil.copyfile(original, staged)
             is_terrain = asset['kind'] in ('terrain-prop', 'terrain-floor')
+            is_flat = asset['kind'] in ('terrain-prop', 'terrain-floor', 'standee')
             try:
                 gate_result = gate_master(staged, asset['kind'], asset['asset_id'],
                                           call_dir / f'export-{EXPORT_SIZE}.png')
@@ -797,9 +874,11 @@ def run_chain(state: dict, attempt: int, request_path: Path, saved: Path | None,
                     WrapperError, OSError) as exc:
                 record['gate_passed'] = False
                 stop('export-or-measure-failed', f'128px 导出或度量失败：{exc}')
-            if is_terrain:
+            if is_flat:
                 record['style_gate'] = {
-                    'gate': 'terrain_gate (ACCEPTANCE A1/A2/A8; 棋子圆盘门控不适用于无底盘的地形构件)',
+                    'gate': ('terrain_gate (ACCEPTANCE A1/A2/A8; 棋子圆盘门控不适用于无底盘的地形构件)'
+                             if is_terrain else
+                             'standee_gate (native alpha/corners + upright aspect; 圆盘几何不适用)'),
                     'findings': gate_result['findings'],
                     'blocking': gate_result['blocking'],
                     'warnings': gate_result['warnings'],
@@ -825,7 +904,8 @@ def run_chain(state: dict, attempt: int, request_path: Path, saved: Path | None,
                 print(f"WARN {asset['asset_id']}: {warning}", file=sys.stderr)
             if not gate_result['passed']:
                 repairable = attempt < asset['max_attempts'] and 1 in receipts(pack)
-                gate_label = '地形母版门控' if is_terrain else '棋子风格门控'
+                gate_label = ('地形母版门控' if is_terrain else
+                              '立绘母版门控' if asset['kind'] == 'standee' else '棋子风格门控')
                 stop('style-gate-rejected',
                      f'{gate_label}不通过：{blocking_details(gate_result)}。未入库。'
                      + ('可用 `repair` 子命令发起一次定向返修（会消耗最后一次调用配额）。'
@@ -917,12 +997,13 @@ def cmd_repair(args) -> dict:
 
     # 重新实测首轮母版，不依赖上一次运行留下的内存状态。
     is_terrain = asset['kind'] in ('terrain-prop', 'terrain-floor')
+    is_flat = asset['kind'] in ('terrain-prop', 'terrain-floor', 'standee')
     with tempfile.TemporaryDirectory(prefix='run-imagegen-gate-') as scratch:
         gate_result = gate_master(master, asset['kind'], asset['asset_id'],
                                   Path(scratch) / 'attempt-1-128.png')
     review = synthesize_review(state, gate_result)
 
-    if is_terrain:
+    if is_flat:
         first_attempt_gate = {'blocking': gate_result['blocking'], 'warnings': gate_result['warnings']}
     else:
         first_attempt_gate = {
@@ -995,6 +1076,64 @@ def cmd_status(args) -> dict:
     }
 
 
+def cmd_recover(args) -> dict:
+    """Re-gate and record an already-generated artifact whose earlier rejection
+    came from a wrapper bug (provenance path not echoed, or a gate threshold that
+    was later corrected). It does NOT run codex again and does NOT add a call:
+    that would waste the subscription on an image we already own. Refuses once a
+    receipt exists, refuses a call that is already recorded, and re-checks the
+    artifact with the current gate before recording. The recovery reason and the
+    prior rejection are written into the call ledger."""
+    state = load_pack(args.pack)
+    pack, asset = state['pack'], state['asset']
+    if receipts(pack):
+        raise WrapperError('任务包已有回执；recover 只用于还没有入库回执的已发起调用。')
+    if not str(args.reason).strip():
+        raise WrapperError('recover 必须写明恢复原因（原拒绝为何是工具缺陷）。')
+    call = ledger_dir(pack) / args.call
+    if not call.is_dir():
+        raise WrapperError(f'没有这次调用的记账目录：{call}')
+    record = json.loads((call / 'call.json').read_text())
+    if record.get('asset_id') != asset['asset_id']:
+        raise WrapperError('记账调用的 asset_id 与任务包不一致。')
+    previous = record.get('outcome')
+    if previous == 'recorded' or previous == 'recovered-recorded':
+        raise WrapperError('该调用已经入库，拒绝重复 recover。')
+    provenance = record.get('provenance') or {}
+    original = provenance.get('resolved_path')
+    fresh = provenance.get('new_files_during_call') or []
+    if not original and len(fresh) == 1:
+        original = fresh[0]
+    if not original:
+        raise WrapperError('这次调用没有可恢复的产物路径。')
+    original = Path(original).resolve()
+    if (not original.is_relative_to(GENERATED_ROOT.resolve())
+            or not GENERATED_NAME.fullmatch(original.name) or not original.is_file()):
+        raise WrapperError(f'产物不在可信溯源目录或已不存在：{original}')
+    with tempfile.TemporaryDirectory(prefix='run-imagegen-recover-') as scratch:
+        gate_result = gate_master(original, asset['kind'], asset['asset_id'],
+                                  Path(scratch) / f'export-{EXPORT_SIZE}.png')
+    if not gate_result['passed']:
+        raise WrapperError(f'恢复失败：当前门控仍不通过：{blocking_details(gate_result)}')
+    target = args.saved if args.saved.is_absolute() else (ROOT / args.saved)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(original, target)
+    try:
+        receipt = art_tasks.record(pack, original, target, 1)
+    except (ValueError, KeyError, OSError) as exc:
+        raise WrapperError(f'art_tasks.py record 拒收：{exc}')
+    record.update(outcome='recovered-recorded', recovery={
+        'reason': args.reason,
+        'previous_outcome': previous,
+        'previous_failure': record.get('failure'),
+        'saved_output_path': receipt['saved_output_path'],
+        'timestamp': now(),
+    })
+    write_ledger(pack, call, record)
+    return {'mode': 'recover', 'pack': rel_to_root(pack), 'call': rel_to_root(call),
+            'original': str(original), 'receipt': receipt, 'gate_passed': True}
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -1030,6 +1169,13 @@ def main(argv=None) -> int:
     sta = commands.add_parser('status', help='看任务包的回执、返修与调用预算')
     sta.add_argument('pack', type=Path)
     sta.set_defaults(func=cmd_status)
+
+    rec = commands.add_parser('recover', help='门控/溯源缺陷后重新门控并入库已生成的产物（不重新调用 codex）')
+    rec.add_argument('pack', type=Path)
+    rec.add_argument('--call', required=True, help='记账目录名，如 call-1')
+    rec.add_argument('--saved', type=Path, required=True)
+    rec.add_argument('--reason', required=True, help='原拒绝为何是工具缺陷')
+    rec.set_defaults(func=cmd_recover, request=None, no_record=False, attempt=None)
 
     args = parser.parse_args(argv)
     try:

@@ -1,0 +1,124 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch3-fire",
+ "assets": [
+  {
+   "asset_id": "ultimate-faeros",
+   "native_name": "ultimate faeros",
+   "scope": "Standee batch 3 (13 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched. Reused dragon-family composition: rearing on the hind legs with the chest lifted, the wings folded tight or held in a narrow vertical V, never spread wide, and the tail curled close; the on-screen body height may land around 1.2-1.75 cells because of the 1.0-cell width cap, which is accepted.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/faeros.lua",
+     "sha256": "8828674803648a338924a957c0f76b0fbbf43c0259b2c7a412a7f2ddfb9cfb42",
+     "line": 86,
+     "anchor": "newEntity{ base = \"BASE_NPC_FAEROS\","
+    }
+   ],
+   "desc": "Faeros are highly intelligent fire elementals, rarely seen outside volcanoes. They are probably not native to this world.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ultimate-faeros.png",
+     "sha256": "d055a5376dbead27e1a3f3ebc65b3df09768008b9e2371e5e160f68c9e5ec3cf",
+     "role": "style",
+     "note": "The shipped flat ultimate faeros token: copy its matte painted miniature finish, colours, value structure and identity. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_fire_ultimate_faeros.png",
+     "sha256": "478a5bfd2359859fbb0cdd3e1f537f805a44c9f32ca36c7f5f100a9324c32055",
+     "role": "identity",
+     "note": "Native ultimate faeros sprite: identity cue only. Keep the same species, colour pattern and markings, converted to a true upright composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/fyrk.png",
+     "sha256": "6dacd202be43cb34c4396fda3e590f5d0b7a5d8dbd33f6d7ad326cfeb857f59b",
+     "role": "family",
+     "note": "Fyrk in this family is the sibling fire elemental this one must stay clearly distinct from: it is broad-shouldered with big clenched fists and a low centre of gravity."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_fire_ultimate_faeros.png",
+     "sha256": "478a5bfd2359859fbb0cdd3e1f537f805a44c9f32ca36c7f5f100a9324c32055"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ultimate-faeros.png",
+     "sha256": "d055a5376dbead27e1a3f3ebc65b3df09768008b9e2371e5e160f68c9e5ec3cf"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "ultimate faeros: a tall fire elemental whose whole body IS living flame, REARING upright as a narrow coherent column of fire with a flame-shaped head, two long flame arms raised with OPEN HANDS, and a tapering flame tail running down to a point where the legs would be; the flames form one clear body silhouette with a readable head and shoulders, in bright orange, red and yellow with a white-hot core. Match the shipped flat token's orange-red-yellow flame figure and its raised arms.",
+    "contrast": "Narrow and upright: the flame body is a vertical tapering column, the arms are raised close beside the head and the flame tail tapers straight down, so the silhouette stays clearly taller than wide (about 1.4 to 1.8). It differs from Fyrk, which is a broader, heavier flame figure with wide shoulders, big fists and a low centre of gravity; the ultimate faeros is slender with open raised hands. The flame is the body; no armour, no solid legs, no weapon.",
+    "composition": "Full body, upright rearing flame figure seen three-quarter, two flame arms raised with open hands beside the head, the body tapering to a single flame-tail tip at the bottom. Overall height about 1.5 to 1.8 times the width; the flame crown of the head is part of the body.",
+    "palette": "bright orange and red flame with a yellow and white-hot inner core, deeper red at the flame edges, deep amber shadow, no ash or smoke."
+   }
+  },
+  {
+   "asset_id": "fyrk",
+   "native_name": "Fyrk, Faeros High Guard",
+   "scope": "Standee batch 3 (13 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched. Reused dragon-family composition: rearing on the hind legs with the chest lifted, the wings folded tight or held in a narrow vertical V, never spread wide, and the tail curled close; the on-screen body height may land around 1.2-1.75 cells because of the 1.0-cell width cap, which is accepted.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/charred-scar/npcs.lua",
+     "sha256": "870f0a44be585b992883d7353760e9b362df10daf674e1b042d4edf6ddfdcb87",
+     "line": 271,
+     "anchor": "newEntity{ base = \"BASE_NPC_FAEROS\", define_as = \"FYRK\","
+    }
+   ],
+   "desc": "Faeros are highly intelligent fire elementals, rarely seen outside volcanoes. They are probably not native to this world.\nThis one looks even nastier and looks toward you with what seems to be disdain. Flames swirl all around him.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/fyrk.png",
+     "sha256": "6dacd202be43cb34c4396fda3e590f5d0b7a5d8dbd33f6d7ad326cfeb857f59b",
+     "role": "style",
+     "note": "The shipped flat Fyrk, Faeros High Guard token: copy its matte painted miniature finish, colours, value structure and identity. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_fire_fyrk__faeros_high_guard.png",
+     "sha256": "a74868d0cfc78ee5c47bb4dc43b5a3fc3435d2636ac86259a65a89da422c3bd2",
+     "role": "identity",
+     "note": "Native Fyrk, Faeros High Guard sprite: identity cue only. Keep the same species, colour pattern and markings, converted to a true upright composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ultimate-faeros.png",
+     "sha256": "d055a5376dbead27e1a3f3ebc65b3df09768008b9e2371e5e160f68c9e5ec3cf",
+     "role": "family",
+     "note": "The ultimate faeros in this family is the sibling fire elemental this one must stay clearly distinct from: it is a slim flame column with raised open hands and a tapering flame tail."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_fire_fyrk__faeros_high_guard.png",
+     "sha256": "a74868d0cfc78ee5c47bb4dc43b5a3fc3435d2636ac86259a65a89da422c3bd2"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/fyrk.png",
+     "sha256": "6dacd202be43cb34c4396fda3e590f5d0b7a5d8dbd33f6d7ad326cfeb857f59b"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Fyrk, Faeros High Guard: a huge fire elemental whose whole body IS flame, standing UPRIGHT as a broad-shouldered brute with two massive CLENCHED FISTS at its sides, thick flame arms, a heavy low centre of gravity and a HIGH roaring FLAME CROWN rising from the head; the head, chest and shoulders form one coherent solid fire body, and the legs are two stubby flame columns, in rich orange, red and gold with a yellow core. Match the shipped flat token's broad flame guard with its raised head flame.",
+    "contrast": "Heavy and broad: the wide shoulders, big fists and low stance make a squat blocky silhouette clearly heavier than the slim raised-hand ultimate faeros, while still taller than wide (about 1.4 to 1.6). It differs from the ultimate faeros by the broad shoulders, clenched fists, low centre of gravity and the high flame crown. The flame, including the head crown, is the body; no armour, no weapon, no solid legs.",
+    "composition": "Full body, upright standing three-quarter flame figure, broad shoulders, two clenched fists at the sides, stubby flame legs, a high flame crown above the head. Overall height about 1.4 to 1.6 times the width; the head flame is part of the body.",
+    "palette": "rich orange, red and gold flame with a bright yellow core, deeper red at the edges, warm amber highlights, no smoke."
+   }
+  }
+ ]
+}

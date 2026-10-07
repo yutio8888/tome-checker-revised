@@ -42,7 +42,7 @@ local Actor=compile(read(root..'superload/mod/class/Actor.lua'),env)
 local body={onSeen=function(self,v) self.seen=v end,flipX=function() end}
 local display={}
 local a=setmetatable({name='rogue',type='humanoid',subtype='human',__is_actor=true,stealth=20,
- faction='enemies',life=100,max_life=100,rank=2,size_category=3,_mo=body,replace_display=display,
+ faction='enemies',life=100,max_life=100,rank=4,size_category=3,_mo=body,replace_display=display,
  _checker_token={id='rogue',display=display,scale=style.scale(3,64)},attr=function(self,k) return self[k] end},{__index=Actor})
 local mos={};a:getMapObjects(map.tiles,mos,10)
 local overlay=assert(mos[11]);eq(a._checker_token.overlay_active,true,'real overlay installed')

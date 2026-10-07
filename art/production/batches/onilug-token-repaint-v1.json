@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "batch_id": "onilug-token-repaint-v1",
+  "assets": [
+    {
+      "asset_id": "onilug",
+      "native_name": "onilug",
+      "scope": "valley-moon-caverns, demon-plane (demon/minor, non-unique, no define_as, resolvers.nice_tile{tall=1} shorthand on the leaf, no image=); the {tall=1} shorthand was live-confirmed for xhaiak/shiaak (batch G, evidence/monster-live-f-20260929) and the naga nereid (batch L live, evidence/monster-batch-l-live-20260929): it resolves to invis.png + add_mos{display_h=2, display_y=-1} of the disk-formula PNG FLAT TOKEN REPAINT after the survey decision of 2026-10-04: the shipped flat token (art/monster-batch-o/masters/onilug-v2.png) is broad and bulky with short legs, contradicting the same definition's desc ('A gaunt vaguely humanoid shape featuring unadorned grey leathery skin. Its arms and legs seem somehow too long and it stands tall, projecting an ominous shadow even in darkness.'). The repaint keeps the pose, equipment, disc and camera and makes the body gaunt and over-long-limbed. Old master under art/monster-batch-o/superseded/onilug-v2.png and old runtime under .../onilug-v2-runtime-128.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/minor-demon.lua",
+          "sha256": "80520f8ae1b87b97ea599207de45fdf3703b00ca0e48c100b653dafb735f2050",
+          "line": 92,
+          "anchor": "name = \"onilug\", color=colors.GREY"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/minor-demon.lua",
+          "sha256": "80520f8ae1b87b97ea599207de45fdf3703b00ca0e48c100b653dafb735f2050",
+          "line": 95,
+          "anchor": "resolvers.nice_tile{tall=1}"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, light, camera and matte miniature finish; do not copy its creature. Match this disc's own lightness EXACTLY -- do not darken it further."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_minor_onilug.png",
+          "sha256": "857c2efdded0b39bbb52ba28e4813b6034d99cef8824eaa8e1e69f2ada1e1402",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a gaunt, very tall thin grey leathery humanoid with over-long arms and legs, a small head with glowing red eyes and dark spiky hair or horns. Keep the gaunt, long-limbed silhouette; do NOT copy the broad bulky short-legged body of the superseded flat token."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-o/superseded/onilug-v2.png",
+          "sha256": "a4f2756a3693b97b3fb110517afa2439973c6ac0dfe8b8c76443c8165c3aabc6",
+          "role": "family",
+          "note": "The SUPERSEDED onilug flat token for this same identity: pose family, upright stance, equipment, disc and camera are correct and must be kept, but its broad bulky torso and short legs are the exact defect -- the desc requires a gaunt, tall, over-long-limbed body. Change only the body proportions to thin and over-long; keep everything else."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An onilug seen from a steep overhead three-quarter angle: a GAUNT, very tall and LANKY vaguely humanoid demon with unadorned GREY leathery skin. Its arms and legs are exaggeratedly LONG and THIN -- spindly over-long limbs with big spread clawed hands and long clawed feet, narrow sloping shoulders, a hollow narrow torso with a sunken chest, visible ribs and a thin waist -- and it stands tall and upright, projecting a long ominous shadow even in darkness. A small bald grey head with dim horns, a thin muzzle and bright glowing deep-red eyes. No armour and no bulky masses anywhere. In one long-fingered hand it holds a short pale-bone staff topped with a violet crystal; the other long hand is open with hooked claws. No wings. Gaunt, towering, thin and complete.",
+        "contrast": "Minor demons: the shipped water imp is a small blue-teal imp, the wretchling an olive-lime squat pouncer, the draebor a shaggy pale imp holding a shield. The onilug is the TALL GAUNT GREY-MAUVE upright staff-bearer with over-long thin limbs and glowing red eyes (silhouette: narrow tall figure with very long thin limbs and a vertical staff; hue: grey-mauve with red eyes and a violet crystal; value: mid-light). This repaint reverses the superseded v2, which was broad, bulky and short-legged -- the desc says 'A gaunt vaguely humanoid shape ... Its arms and legs seem somehow too long and it stands tall, projecting an ominous shadow even in darkness.'",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Calibration from the previous generation of this exact token: it was drawn as a very thin, faint, narrow column with a hair-thin staff, only about a third of the disc wide, unreadable at 48px. This time change the pose to a broad, bold, hunched silhouette: shoulders wide and rolled forward, the head thrust forward, both long arms hanging out and away from the body to each side with big spread clawed hands, one hand gripping a short THICK pale-bone staff held diagonally across the body, and the legs planted wide. The figure is heavy and clearly lit and fills about three quarters of the disc radius around the disc centre in BOTH width and height.",
+        "palette": "Unadorned GREY leathery skin in a mid-light value with broad pale bone-grey highlight planes along the long thin limbs and grey-mauve shadow planes in the hollow torso, pale-bone staff, small violet crystal, bright deep-red eyes; nothing darker than mid grey except the eye sockets and a few rib lines; no broad bulky colour masses and no armour. The crystal and eyes must not glow onto or tint the disc. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Identity re-verified against game/modules/tome data: name=\"onilug\", color=colors.GREY, type=demon/subtype=minor, non-unique, resolvers.nice_tile{tall=1} shorthand on the leaf defining a 64x128 tall body, with the desc on the same definition. The shipped flat token is already mapped, so this repaint carries the required refinement brief: it supersedes the mapped onilug token, names the spent monster-batch-o-7 pack, states the design-direction correction (broad bulky short-legged -> gaunt over-long-limbed, per the desc) and pins the earlier receipt and superseded art. Flat token size (128px), RGBA and manifest wiring are unchanged; only the artwork is repainted.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-o-20260929/source-contracts.json",
+          "sha256": "d8d01218f85afa424e662a8f08ea1dcfac1dc6aef902034dbb35f6b53f4b494b"
+        }
+      ],
+      "refinement": {
+        "supersedes": "onilug",
+        "previous_batch": "monster-batch-o-7",
+        "design_change_reason": "The shipped flat token is broad and bulky with short legs, which contradicts onilug's own desc: 'A gaunt vaguely humanoid shape featuring unadorned grey leathery skin. Its arms and legs seem somehow too long and it stands tall, projecting an ominous shadow even in darkness.' The survey of 2026-10-04 flagged the bulky short-legged body as a desc conflict. This repaint keeps the onilug's upright minor-demon pose family, staff, disc and camera, and changes the body to a gaunt, very tall, thin silhouette with spindly over-long arms and legs and a hollow narrow torso. It is a flat-token repaint only; wiring and the manifest id are unchanged.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-o/superseded/onilug-v2.png",
+            "sha256": "a4f2756a3693b97b3fb110517afa2439973c6ac0dfe8b8c76443c8165c3aabc6"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-o/superseded/onilug-v2-runtime-128.png",
+            "sha256": "134c4a8bb060b091266a3625406262a32e147709e707d2d057259fc39dc50e6c"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-o-7/onilug/receipts/attempt-1.json",
+            "sha256": "5aa923237289cac3132dabced17499b352e22820dd523255f8bfe28899322279"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-o-7/onilug/imagegen-calls/call-1/call.json",
+            "sha256": "032d229d49c29ee5f12d77e0f234069d78cc84bc1868d728534a765d669ff3bf"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -18,7 +18,7 @@ from audit_completion import current_catalog
 ROOT = Path(__file__).resolve().parents[1]
 WORKSPACE = ROOT.parents[2]
 TEMPLATES = ROOT / 'art/production/templates'
-KINDS = {'creature', 'terrain-floor', 'terrain-prop', 'player'}
+KINDS = {'creature', 'terrain-floor', 'terrain-prop', 'player', 'standee'}
 
 # 实测口径（2026-09-28，F1 地形批次前 3 次真实 ImageGen 调用）：三次互不相关的
 # 调用（bog-tree-a 两次、bog-tree-b 一次）都在同一个角留下 alpha=1 而不是 0，读
@@ -209,7 +209,7 @@ def validate(manifest):
                 raise ValueError('ready requires reviewed resolved actor/grid evidence')
             for evidence in asset['render_evidence']:
                 pinned(evidence)
-        if asset['kind'] in ('creature', 'player'):
+        if asset['kind'] in ('creature', 'player', 'standee'):
             dimensions = set(asset.get('contrast_dimensions', []))
             if not dimensions <= {'silhouette', 'value', 'hue'} or len(dimensions) < 2:
                 raise ValueError('family separation needs at least two design dimensions')
@@ -267,7 +267,13 @@ def inspect_png(path, kind):
     with Image.open(path) as image:
         if image.format != 'PNG':
             raise ValueError('master is not PNG')
-        if image.width != image.height or image.width < 512:
+        if kind == 'standee':
+            # A full-body standee is naturally portrait; require only that the
+            # short side is a usable resolution, not a square canvas.
+            if image.width < 512 or image.height < 512:
+                raise ValueError('standee master must be at least 512px on the short side; '
+                                 'record actual resolution')
+        elif image.width != image.height or image.width < 512:
             raise ValueError('master must be square and >= 512px; record actual resolution')
         # Native alpha must exist in the stored file, not be manufactured by
         # convert('RGBA'). ImageGen on this host returns a plain RGB PNG when

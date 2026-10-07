@@ -987,8 +987,8 @@
     },
     {
       "id": "ogre-mauler",
-      "master": "masters/ogre-mauler-v1.png",
-      "sha256": "171e4cf0ceb29b3d4f25de381fcf14f6396421f2b130dacc3a1bc74acb8b8a53",
+      "master": "masters/ogre-mauler-v2.png",
+      "sha256": "e71d829acfcd92875ecf011ec9ac6acab2bb8476775cc04f854d6c5ec49d6322",
       "exports": [
         {
           "path": "sprites/48/ogre-mauler.png",
@@ -996,18 +996,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            85,
-            73,
+            84,
+            74,
             1170,
-            1173
+            1175
           ],
           "export_window": [
-            -12.034884,
-            -16.534884,
-            1279.069767
+            -13.116279,
+            -15.616279,
+            1280.232558
           ],
           "target_occupancy": 0.86,
-          "sha256": "dd9ccc17ba8d1b2dac71f1fd62979725a323eb469492012c000544559df56b3e"
+          "sha256": "d8eb3853103cc2ab9e8dab850a260dc13a6a1ac2c4e62fb187e09417b7f13169"
         },
         {
           "path": "sprites/64/ogre-mauler.png",
@@ -1015,18 +1015,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            85,
-            73,
+            84,
+            74,
             1170,
-            1173
+            1175
           ],
           "export_window": [
-            -12.034884,
-            -16.534884,
-            1279.069767
+            -13.116279,
+            -15.616279,
+            1280.232558
           ],
           "target_occupancy": 0.86,
-          "sha256": "a04a72594227cc05ee92283765863e3749bdbe37beefe1abe7bc827dfe2f4fbc"
+          "sha256": "1395f5892493e2ea5f11a0a47201cac9a6a52c6ccc65a5ced865250b6cf9df85"
         },
         {
           "path": "sprites/96/ogre-mauler.png",
@@ -1034,18 +1034,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            85,
-            73,
+            84,
+            74,
             1170,
-            1173
+            1175
           ],
           "export_window": [
-            -12.034884,
-            -16.534884,
-            1279.069767
+            -13.116279,
+            -15.616279,
+            1280.232558
           ],
           "target_occupancy": 0.86,
-          "sha256": "a229d4e551c086c07ecdbd7d4b8bff68911f271d522391e923f0333d30f269f0"
+          "sha256": "1dd36da9b75f85ee19cf4fe4cb78680ab567913d216ae36c11bc881c52175e54"
         },
         {
           "path": "sprites/128/ogre-mauler.png",
@@ -1053,18 +1053,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            85,
-            73,
+            84,
+            74,
             1170,
-            1173
+            1175
           ],
           "export_window": [
-            -12.034884,
-            -16.534884,
-            1279.069767
+            -13.116279,
+            -15.616279,
+            1280.232558
           ],
           "target_occupancy": 0.86,
-          "sha256": "469eaddd8a38fb5f82ce4e118a9bfca962880f4e92fdcc2ce0a8b718c1d75e21"
+          "sha256": "518c4d9eefacbc647f1341311858060fc52d30413ca37e5023de0b37c8a9767b"
         },
         {
           "path": "sprites/256/ogre-mauler.png",
@@ -1072,18 +1072,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            85,
-            73,
+            84,
+            74,
             1170,
-            1173
+            1175
           ],
           "export_window": [
-            -12.034884,
-            -16.534884,
-            1279.069767
+            -13.116279,
+            -15.616279,
+            1280.232558
           ],
           "target_occupancy": 0.86,
-          "sha256": "2cefda28132d836d612e41f3b9ac4324db5843d9be0b596ca2f4ccf82500470e"
+          "sha256": "1ee782f222166b010ab129931089cea2e08632c8d9b32c1db28bdc9230c093fd"
         }
       ],
       "style_gate": {
@@ -1097,9 +1097,9 @@
           74.33,
           76.42
         ],
-        "base_drift": -4.56,
-        "max_sector_intrusion": 7.62,
-        "max_opaque_radius": 0.8585,
+        "base_drift": -6.12,
+        "max_sector_intrusion": 8.5,
+        "max_opaque_radius": 0.8576,
         "blocking": [],
         "warnings": [],
         "grandfathered": false,

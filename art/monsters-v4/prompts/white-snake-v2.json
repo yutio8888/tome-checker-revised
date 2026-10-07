@@ -7,7 +7,7 @@
   "status": "generated-static-reviewed-runtime-pending",
   "prompt": "Use case: precise-object-edit\nAsset type: corrected transparent PNG large white snake tabletop miniature.\nPrimary request: make ONE TARGETED ANATOMY REPAIR to Image 1: restore one unambiguous continuous head-to-tail snake, preserving the existing ivory-white identity, open S pose, head, disc, style, camera and lighting.\nImage 1 is the edit target. Its upper body end currently terminates as a blunt thick rounded stump, and a disconnected extra tail-like segment appears at the lower-right near the rim. Correct both parts of this one tail-continuity defect.\nRequired continuous anatomy: trace the single body from the unchanged head on the left, down through the lower broad bend, upward along the right side, through the upper bend, and END IN ONE GRADUALLY TAPERING TAIL AT THE UPPER-RIGHT. Reshape the final upper-body segment so it progressively narrows from the upper bend to a thin clear natural tail tip near the 2 o'clock area, safely inside the base. The taper must be long and gradual; no stump, cut end, second head or bulbous cap. REMOVE the entire extra narrow white segment at the LOWER-RIGHT near 4–5 o'clock and restore the ordinary dark disc surface there. There must be exactly ONE head and ONE tail, both joined by one continuous body. The head-to-tail path must be visually traceable without unexplained crossing or branching.\nKeep the loose OPEN S silhouette and its two broad negative-space openings, not a closed ring. Preserve the existing low head facing left, small forked tongue, matte ivory scales, creamy belly planes, natural dark eye, body thickness through the main lower bend, neutral thin dark grey-brown near-circular base with subdued bronze-grey bevel, soft upper-left lighting and small contact shadows. Retain the high downward three-quarter painted miniature style.\nAll extremities including tongue and the corrected tail must remain inside the disc. No critical facial feature in the top-right badge reserve. Square image, target 1024x1024 if supported. Preserve real native transparent alpha outside the disc and a clean edge; no backdrop and no external cast shadow.\nDo not add horns, wings, fins, hood, feet, rattle, extra snake, extra body segment, scene, text, UI, faction colour, rank, glow or border marks. Change only the tail-continuity defect; do not redesign the head, palette or base.",
   "references": [
-    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v4/masters/white-snake-v1.png"
+    "<workspace>/game/addons/tome-checker-revised/art/monsters-v4/masters/white-snake-v1.png"
   ],
   "reference_roles": [
     "Rejected v1 edit target; repair only tail/body continuity while preserving identity, open S, base, material, angle and lighting."
@@ -59,7 +59,7 @@
   },
   "selection": "recommended-for-runtime-test",
   "reference_sha256": {
-    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v4/masters/white-snake-v1.png": "a7628d132d695ea65a91b768ca17026e8bec3aeaf86be97ff42148f478638728"
+    "<workspace>/game/addons/tome-checker-revised/art/monsters-v4/masters/white-snake-v1.png": "a7628d132d695ea65a91b768ca17026e8bec3aeaf86be97ff42148f478638728"
   },
   "review": {
     "observations": [

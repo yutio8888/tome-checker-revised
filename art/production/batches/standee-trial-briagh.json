@@ -1,0 +1,65 @@
+{
+ "schema": 1,
+ "batch_id": "standee-trial-briagh",
+ "assets": [
+  {
+   "asset_id": "briagh",
+   "native_name": "Briagh, Great Sand Wyrm",
+   "scope": "Standee art TRIAL (one id, briagh), user-requested and optional. Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. The flat 128px token, its master and the manifest mapping are untouched. Composition from the batch-3 survey (G4 REPORT.zh-CN.md): a thick neck rearing up in an S-curve, the head and crest readable at 48px, the lower body coiled TIGHT at the base; NO legs and NO wings. Because the coil is wide and the 1.0-cell width cap applies, the expected on-screen body height is about 1.35-1.55 cells even though the height is 1.734375.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/briagh-lair/npcs.lua",
+     "sha256": "ef59f452ed465ff85ba3c77bf0c40c32d8dbba33d85ab3dad5fdfe3334dbbe95",
+     "line": 25,
+     "anchor": "newEntity{ define_as = \"BRIAGH\","
+    }
+   ],
+   "desc": "A towering sand drake stands before you. This wingless worm is mighty and could easily crush you.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/briagh.png",
+     "sha256": "18bfc085dcf7ab610c774a8f4d089cda530eb43c99ed70fc6f305d42a15e6178",
+     "role": "style",
+     "note": "The shipped flat Briagh, Great Sand Wyrm token: copy its matte painted miniature finish, colours, value structure and identity (golden sand scales, violet-purple head crest, tightly coiled base). Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_sand_briagh__great_sand_wyrm.png",
+     "sha256": "8824294688041f0f1b593bb61e22b51d09e416f850fbf5f37896f03a123f4829",
+     "role": "identity",
+     "note": "Native Briagh sprite: identity cue only. Keep the same golden sand-wyrm species, colour pattern, head, crest/frill and markings, converted to a true upright S-curved composition with a tightly coiled base; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/rantha.png",
+     "sha256": "fbe545dd28909b1fbcfa98e80728e26c8c17ab57656d1e342e2443259244ba44",
+     "role": "family",
+     "note": "The batch-3 dragons this one must NOT resemble: Rantha the Worm and the fire wyrm are both drawn REARING on their HIND LEGS with the chest lifted and the WINGS FOLDED tight against the body. Briagh is a legless, wingless great sand wyrm: a vertical serpent with a thick S-curved neck and a tightly coiled base, with absolutely NO legs, NO hind legs and NO wings anywhere."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_sand_briagh__great_sand_wyrm.png",
+     "sha256": "8824294688041f0f1b593bb61e22b51d09e416f850fbf5f37896f03a123f4829"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/briagh.png",
+     "sha256": "18bfc085dcf7ab610c774a8f4d089cda530eb43c99ed70fc6f305d42a15e6178"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Briagh, Great Sand Wyrm: a towering WINGLESS, LEGLESS great sand wyrm built from a single thick serpentine body, matching the shipped flat token. A THICK neck rears straight up in a gentle S-curve, carrying the head and a fan-like frilled CREST at the very top; the head is a blunt draconic wyrm head with a heavy jaw, small brow spikes and a violet-purple frilled crest/head-fan, and the whole head and crest read clearly at 48px. The lower body coils TIGHT into a compact spiral at the base, resting on its own coils. Warm golden-amber sand-dragon scales with darker ochre-brown shadow and a pale cream ribbed belly/throat; a violet-purple frilled crest with magenta-violet membrane, exactly like the shipped flat token's purple crest on golden sand scales. NO legs, NO hind legs, NO forelimbs, NO wings - only the serpentine body. Match the shipped flat token's golden sand-wyrm body, purple crest and coiled base.",
+    "contrast": "A clearly taller-than-wide vertical serpent: the thick neck rises as one column and the coiled base stays TIGHT and narrow, close to the neck's own width, so the whole figure is about 1.45 to 1.6 times as tall as its widest point. It differs from ALL seven batch-3 dragons (and specifically from Rantha the frost wyrm and the fire wyrm, both drawn rearing on HIND LEGS with FOLDED WINGS) by being a legless, wingless WORM: no legs, no hind legs, no wings, no chest lifted on limbs; just a coiled serpent base under an S-curved neck. No sand blast, no breath, no dust, no embers, no particles, no ground.",
+    "composition": "Full body, upright, shown in three-quarter view: the thick neck rises in a smooth S-curve to the crest-topped head at the top of the frame, and the torso coils TIGHTLY at the bottom of the frame in a compact spiral so the coil is tall rather than wide. The figure is about 1.45 to 1.6 times as tall as its widest point; the head and violet crest are the highest part, and nothing else rises above them. The coil is compact and gathered under the body, not spread out sideways.",
+    "palette": "warm golden and amber sand-dragon scales with darker ochre-brown and olive shadow, paler golden highlights on the upper surfaces, a pale cream ribbed belly and throat plates, a violet-purple frilled head crest with magenta-violet membrane edges, small dull bone-ivory brow spikes and fangs."
+   }
+  }
+ ]
+}

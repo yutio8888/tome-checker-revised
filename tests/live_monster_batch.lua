@@ -35,6 +35,7 @@ local function row(a)
 	return {name=a.name or '?',define_as=a.define_as or false,unique=a.unique and tostring(a.unique) or false,
 		type=a.type or false,subtype=a.subtype or false,image=a.image or false,add_mos=mosSummary(a.add_mos),
 		moddable_tile=a.moddable_tile or false,rank=a.rank or false,faction=a.faction or false,
+		size_category=a.size_category or false,
 		reaction=game.player:reactionToward(a),
 		identify=id or false,explain=reason or false,
 		rendered_token=state and state.id or false,
@@ -171,6 +172,61 @@ function M.tokens(enabled)
 	guard();game:checkerSetTokensEnabled(enabled);refresh()
 end
 
+-- Exact-cell helpers for packed layouts (the R33 standee crowd needs actors
+-- directly above/below each other). freeAt/clearBox are read-only/removal;
+-- placeAt asserts the cell is free so a broken layout fails loudly.
+function M.freeAt(x,y)
+	local m=game.level.map
+	return x>=0 and y>=0 and x<m.w and y<m.h and free(x,y) and m.seens(x,y) and true or false
+end
+
+function M.clearBox(x0,y0,x1,y1)
+	local rm={}
+	for _,a in pairs(game.level.entities) do
+		if a~=game.player and a.x and a.x>=x0 and a.x<=x1 and a.y>=y0 and a.y<=y1 then rm[#rm+1]=a end
+	end
+	for _,a in ipairs(rm) do game.level.map:remove(a.x,a.y,Map.ACTOR);game.level:removeEntity(a,true) end
+	refresh()
+	return #rm
+end
+
+-- Find a w x h block of free, visible cells centred as close to (cx,cy) as
+-- possible; returns its centre or nil.
+function M.freeBlock(cx,cy,w,h)
+	local best,bd
+	for x=cx-8,cx+8 do for y=cy-6,cy+6 do
+		local ok=true
+		for dx=-math.floor(w/2),math.ceil(w/2)-1 do for dy=-math.floor(h/2),math.ceil(h/2)-1 do
+			if not M.freeAt(x+dx,y+dy) then ok=false break end
+		end if not ok then break end end
+		if ok then local d=(x-cx)^2+(y-cy)^2;if not bd or d<bd then best,bd={x,y},d end end
+	end end
+	return best
+end
+
+function M.placeAt(name,source,x,y,define_as)
+	guard()
+	local proto
+	if source then
+		local had=rawget(_G,'currentZone');if not had then rawset(_G,'currentZone',setmetatable({is_invaded=true},{__index=game.zone})) end
+		local okl,list=pcall(function() return game.zone.npc_class:loadList(source,true) end)
+		if not had then rawset(_G,'currentZone',nil) end
+		assert(okl,list)
+		for _,p in pairs(list) do if type(p)=='table' and p.name==name and (not define_as or p.define_as==define_as) then proto=p break end end
+	else
+		for _,p in pairs(game.zone.npc_list) do if type(p)=='table' and p.name==name and (not define_as or p.define_as==define_as) then proto=p break end end
+	end
+	assert(proto,'no native prototype '..name)
+	assert(M.freeAt(x,y),'cell not free/visible for '..name..' at '..x..','..y)
+	local a=game.zone:finishEntity(game.level,'actor',proto)
+	a._checker_live_placed=true
+	a.seen_by=nil
+	a.never_act=true
+	game.zone:addEntity(game.level,a,'actor',x,y)
+	refresh()
+	return row(a)
+end
+
 function M.focus(x,y)
 	local m=game.level.map
 	m.clean_fov=true;game.player:playerFOV()
@@ -182,6 +238,28 @@ function M.setTile(tile)
 	game:setResolution('1920x1080 Windowed',true)
 	config.settings.tome.gfx.size=tile..'x'..tile;game:setupDisplayMode(false)
 	refresh()
+end
+
+-- R40 top-edge: make the named actor's own row the first visible map row. The
+-- R39 attempt set m.my directly and then called redisplay(), which re-applied
+-- checkMapViewBounded and clamped my back to the map bottom; the actor never
+-- reached the top row. Move the actor to the highest free visible cell first,
+-- then center and setScroll so the bounded my can equal its row (it cannot
+-- scroll higher: the actor is on the top free row). Returns the geometry.
+function M.forceTop(name)
+	local a=assert(byName(name),name)
+	local m=game.level.map
+	local best,bx
+	for y=0,m.h-1 do for x=0,m.w-1 do if free(x,y) and m.seens(x,y) then best,bx=y,x break end end
+		if best then break end end
+	assert(best,'no visible free cell for the top row')
+	if a.x~=bx or a.y~=best then a:move(bx,best,true) end
+	m:centerViewAround(a.x,a.y)
+	m:setScroll(math.max(0,math.min(a.x,m.w-m.viewport.mwidth)),best)
+	m:redisplay();m.changed=true;game.paused=true;core.display.forceRedraw()
+	return {x=a.x,y=a.y,mx=m.mx,my=m.my,tile_w=m.tile_w,tile_h=m.tile_h,
+		display_x=m.display_x,display_y=m.display_y,same_row=(m.my==a.y) and true or false,
+		viewport_top=m.display_y,top_free_row=best}
 end
 
 -- Half the named actor's life so the health arc is partial.

@@ -1,0 +1,1727 @@
+{
+  "method": "ImageGen masters; native alpha; mechanical bbox placement and alpha-weighted area downsampling",
+  "assets": [
+    {
+      "id": "human-citizen",
+      "master": "masters/human-citizen-v1.png",
+      "sha256": "c49b8dd746e997a64b1671c85dd15d99c0ab07915eb06e286f15f72cf8743475",
+      "exports": [
+        {
+          "path": "sprites/48/human-citizen.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1169,
+            1171
+          ],
+          "export_window": [
+            -9.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "35a670de168c2c49a0c0aa95098d572355f4f211fb6dd377005145125f2cad4b"
+        },
+        {
+          "path": "sprites/64/human-citizen.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1169,
+            1171
+          ],
+          "export_window": [
+            -9.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "13df2b3e6e29018bf17c492bda83f15571299124e823aa3b60be88601fa7d0ae"
+        },
+        {
+          "path": "sprites/96/human-citizen.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1169,
+            1171
+          ],
+          "export_window": [
+            -9.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "05bed157720fe2f9e72c0b7ffc2a58b6798e5f5239304bdc041ca79e62d98d55"
+        },
+        {
+          "path": "sprites/128/human-citizen.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1169,
+            1171
+          ],
+          "export_window": [
+            -9.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "428271872ab7011587cdf69a22b8679037607c6ccbe2a354772182050e4b7a16"
+        },
+        {
+          "path": "sprites/256/human-citizen.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            76,
+            1169,
+            1171
+          ],
+          "export_window": [
+            -9.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "15a0073585085c1373383cf6ca5c5ef1373ab34b0a9bd5c484e7e7a3447e9cf3"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 5.76,
+        "max_sector_intrusion": 2.29,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "halfling-citizen",
+      "master": "masters/halfling-citizen-v1.png",
+      "sha256": "f5d04631babc0b523fecbb7b3a649121b4ad145859e2dc6ed804c2db0d91c821",
+      "exports": [
+        {
+          "path": "sprites/48/halfling-citizen.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -12.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3c9890468d80ce06942bbdd128c227d2cabf72af293677a5d90518e304f9e9a8"
+        },
+        {
+          "path": "sprites/64/halfling-citizen.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -12.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e10c38b5a5d5fea3ad69c9cd56707f239177609d7b1d1a7b2c65816fe48e7a4e"
+        },
+        {
+          "path": "sprites/96/halfling-citizen.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -12.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "61a67ae634bb630b3d707ab1ffa278cad9fa1881c5ccd042f8544f18a57cdcf7"
+        },
+        {
+          "path": "sprites/128/halfling-citizen.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -12.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2df7b3ce40d2b016c044d98eccf79001cebe0b9213fe43266a9555dcd9e718df"
+        },
+        {
+          "path": "sprites/256/halfling-citizen.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1166,
+            1174
+          ],
+          "export_window": [
+            -12.453488,
+            -14.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d92b58d5e917e24d3354e154423b34c87a7cddab65907ce67f82d6d8b42e0ff8"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 5.21,
+        "max_sector_intrusion": 2.54,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "human-farmer",
+      "master": "masters/human-farmer-v1.png",
+      "sha256": "e00fc40eeacbe7a7a303205d704770863356c0d1c6ba62ac304beb5a04e7d59b",
+      "exports": [
+        {
+          "path": "sprites/48/human-farmer.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1167,
+            1172
+          ],
+          "export_window": [
+            -11.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d0784bcc058f2bd923bb8c6868586ec5138174b2cc37d6e24a8cbd4234281e0a"
+        },
+        {
+          "path": "sprites/64/human-farmer.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1167,
+            1172
+          ],
+          "export_window": [
+            -11.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "764ae2a3551e66ba10b2d9f10c85c9404afeb3c9c0b627bd41c2429dcda404e8"
+        },
+        {
+          "path": "sprites/96/human-farmer.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1167,
+            1172
+          ],
+          "export_window": [
+            -11.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9643f8d19ebf6d4eb790e2f8de0af764f5c6b28a4640fb83aefccdc853fe20d7"
+        },
+        {
+          "path": "sprites/128/human-farmer.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1167,
+            1172
+          ],
+          "export_window": [
+            -11.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ad4c778c8d1d47ce3e13f7f6f427f7d86a48e797fa040243be822f7ab18b933b"
+        },
+        {
+          "path": "sprites/256/human-farmer.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            74,
+            1167,
+            1172
+          ],
+          "export_window": [
+            -11.872093,
+            -15.372093,
+            1276.744186
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8435374cb6ddbcbad19ee452272f2a61c5fe6915aa72f2fd4843d9173909a837"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -2.63,
+        "max_sector_intrusion": 3.08,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "halfling-gardener",
+      "master": "masters/halfling-gardener-v1.png",
+      "sha256": "5a29e9173be3cfeec0cdc81b62477b74617c04f31469187029a1693fcc4ed7af",
+      "exports": [
+        {
+          "path": "sprites/48/halfling-gardener.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            77,
+            1163,
+            1170
+          ],
+          "export_window": [
+            -9.465116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c4583bf6f8ff9046a2bf73de61b79c707da0266020600e1b93c6cf97f0fd7293"
+        },
+        {
+          "path": "sprites/64/halfling-gardener.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            77,
+            1163,
+            1170
+          ],
+          "export_window": [
+            -9.465116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d8111d87d5153893145b0664915c2506a60b09f1487a777cf5e122eb74f7dd2e"
+        },
+        {
+          "path": "sprites/96/halfling-gardener.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            77,
+            1163,
+            1170
+          ],
+          "export_window": [
+            -9.465116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a0157d8f4bf805980c7f60c747362cec40f2720943ec657a44232b388833dbb1"
+        },
+        {
+          "path": "sprites/128/halfling-gardener.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            77,
+            1163,
+            1170
+          ],
+          "export_window": [
+            -9.465116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "e7c9dd8aa13fa7f5c893d90b90a55dae7d76bfe7f84c6e672aa58cf38ef55742"
+        },
+        {
+          "path": "sprites/256/halfling-gardener.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            77,
+            1163,
+            1170
+          ],
+          "export_window": [
+            -9.465116,
+            -11.965116,
+            1270.930233
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "aa668e47d3230d794289743d5937fa16256e41e233885823d6fa97350ec7e102"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 2.4,
+        "max_sector_intrusion": 2.67,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "lumberjack",
+      "master": "masters/lumberjack-v1.png",
+      "sha256": "97ebd71777f8b303743b63fc308f9d0313ec0cfa5cb11706f5d16e5e8fdf97f5",
+      "exports": [
+        {
+          "path": "sprites/48/lumberjack.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1167,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9c4667b0b7ea27090ea14a88204512df94e86aa7e74db93ee4e34611b8986c3d"
+        },
+        {
+          "path": "sprites/64/lumberjack.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1167,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d0f33d48917d9fee26009586d6370b3a90cab664c4f49594df90a830cfe00e9d"
+        },
+        {
+          "path": "sprites/96/lumberjack.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1167,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "aae748863bd136d79bd1f9f6bd15dfba39f1aca820e999fd41c366d9309db55e"
+        },
+        {
+          "path": "sprites/128/lumberjack.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1167,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "1b57980b5063179dd5fdc7316deee7d9134467f61778c5f0a0128eadfd18e23d"
+        },
+        {
+          "path": "sprites/256/lumberjack.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            86,
+            75,
+            1167,
+            1172
+          ],
+          "export_window": [
+            -11.290698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "bbb4004cd7c7ea2168282073bf30fcc6bf95ad7d15d4f3ce13cf0eb908bf2f30"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 4.4,
+        "max_sector_intrusion": 1.87,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "halfling-slinger",
+      "master": "masters/halfling-slinger-v1.png",
+      "sha256": "65098a3265dc52be7c73d62e94a559a8ba64de6ffc1bca08e591efec9b3ccd9e",
+      "exports": [
+        {
+          "path": "sprites/48/halfling-slinger.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            82,
+            76,
+            1171,
+            1172
+          ],
+          "export_window": [
+            -10.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ded23ec01a01e3558d5fa115ed40008273e55e1056299eab52663db327394294"
+        },
+        {
+          "path": "sprites/64/halfling-slinger.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            82,
+            76,
+            1171,
+            1172
+          ],
+          "export_window": [
+            -10.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "164c038fa2a632d962b97ea311b7d558d51262ef3fccec1dfdc2fae87787a1a0"
+        },
+        {
+          "path": "sprites/96/halfling-slinger.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            82,
+            76,
+            1171,
+            1172
+          ],
+          "export_window": [
+            -10.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "73879b676db837af2931b3a13e7a100678adc967ebb4d94822b74143392d02cc"
+        },
+        {
+          "path": "sprites/128/halfling-slinger.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            82,
+            76,
+            1171,
+            1172
+          ],
+          "export_window": [
+            -10.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "da447558f2accd9c6bba7e1b1a3057eb197e525221461aeb302f1fafdfd3ccc6"
+        },
+        {
+          "path": "sprites/256/halfling-slinger.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            82,
+            76,
+            1171,
+            1172
+          ],
+          "export_window": [
+            -10.709302,
+            -13.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "376dffe71b08e074522120fdf7e930a92671046f9e347a3071b532b2c1ffb811"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 2.59,
+        "max_sector_intrusion": 2.16,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "dwarven-earthwarden",
+      "master": "masters/dwarven-earthwarden-v1.png",
+      "sha256": "b4ef40ed335f94aa0d3ee2eb4fc56f9b743e86000f30a80092b11e60c04b4f4c",
+      "exports": [
+        {
+          "path": "sprites/48/dwarven-earthwarden.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.209302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "575f49143543b599d8bbc91310969fd7e829a546ca5e9dc59c838fbb9e42a46a"
+        },
+        {
+          "path": "sprites/64/dwarven-earthwarden.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.209302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "437a9acc72f33c84c5400480b86c2fb081694da1b05da89354dee778a69ba6b3"
+        },
+        {
+          "path": "sprites/96/dwarven-earthwarden.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.209302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3ebfcdf4d447acfb7f1dada794dfb3bd0926ac50608ac98fde1655a2064e2c08"
+        },
+        {
+          "path": "sprites/128/dwarven-earthwarden.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.209302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "8cb8468656be5c228995cdeaeea41ee298ae77edebcba75c050dfdf6eb53d6a7"
+        },
+        {
+          "path": "sprites/256/dwarven-earthwarden.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            88,
+            77,
+            1164,
+            1173
+          ],
+          "export_window": [
+            -11.209302,
+            -12.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "962fabfc351f75651d5f1b2cffc51ab516abc01fa575a812c89a1ed136a100b0"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 2.4,
+        "max_sector_intrusion": 3.45,
+        "max_opaque_radius": 0.8599,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "yeek-mindslayer",
+      "master": "masters/yeek-mindslayer-v1.png",
+      "sha256": "376fbd0a33361b6f38f44e6bfd4f3d802ca21a21927398391f78a5de9156e1c5",
+      "exports": [
+        {
+          "path": "sprites/48/yeek-mindslayer.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6c71e51a029d026f5be8af9552b4f5c88e44abddd41a449371b87971648c8aee"
+        },
+        {
+          "path": "sprites/64/yeek-mindslayer.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "57708e12c2d275a5b91776db6ffc20394fd596c1647118d0274c872343a61e53"
+        },
+        {
+          "path": "sprites/96/yeek-mindslayer.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c774d6f0350a3a241dcc5509990d7cce34387531eb6c8077448024227166d542"
+        },
+        {
+          "path": "sprites/128/yeek-mindslayer.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "909bfed3baa0a5888dd8b980ccee6f430c3411a1ca12853b1c4e8ea9ad370e5a"
+        },
+        {
+          "path": "sprites/256/yeek-mindslayer.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            76,
+            1167,
+            1173
+          ],
+          "export_window": [
+            -11.790698,
+            -13.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5e447cb4349c42bf9c6a3479e6b6cb31f72264f95aafd89744c8717acc7e782c"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.34,
+        "max_sector_intrusion": 2.33,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "yeek-psionic",
+      "master": "masters/yeek-psionic-v1.png",
+      "sha256": "78961f512c11fdf1d8879ef32c3022b71187a1284bc19ff6b56d61fdd129bb36",
+      "exports": [
+        {
+          "path": "sprites/48/yeek-psionic.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -12.790698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2c13f6c4c9b79f62576ae04edf6f378ccc5108d36dcedf918cd041e58db25ba8"
+        },
+        {
+          "path": "sprites/64/yeek-psionic.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -12.790698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "00357a49cb67cc208664d9a8aee8b21d04b230a218b37184e6237bbee8966663"
+        },
+        {
+          "path": "sprites/96/yeek-psionic.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -12.790698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d1ac0fbec8308940b39493e06008c51ebf21018538cd670e8fa0f7facea15cb8"
+        },
+        {
+          "path": "sprites/128/yeek-psionic.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -12.790698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f44bf536122438a76ed5c585aff38161c237396f206dfacad4326660025c0b91"
+        },
+        {
+          "path": "sprites/256/yeek-psionic.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            87,
+            75,
+            1163,
+            1172
+          ],
+          "export_window": [
+            -12.790698,
+            -14.290698,
+            1275.581395
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f46c9c15b15485ec879ba5fb89ca950f645c9fe4603daf4dcdfd84aebc25d3bc"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 3.97,
+        "max_sector_intrusion": 2.11,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "thalore-hunter",
+      "master": "masters/thalore-hunter-rework-v1.png",
+      "sha256": "7adafe8a35474413e08e02cf18b18e7df88bfa078f15666f3ef18ff5c8c28725",
+      "exports": [
+        {
+          "path": "sprites/48/thalore-hunter.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            73,
+            1168,
+            1173
+          ],
+          "export_window": [
+            -13.534884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6b9bdb89362c115782c7c01589343b870b93fdc06ab55a3654cc8b283f8ba0bb"
+        },
+        {
+          "path": "sprites/64/thalore-hunter.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            73,
+            1168,
+            1173
+          ],
+          "export_window": [
+            -13.534884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d8c072685615f7d70e733c19df187fbc8bc4fed575bd33b4e563c64b5e01682d"
+        },
+        {
+          "path": "sprites/96/thalore-hunter.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            73,
+            1168,
+            1173
+          ],
+          "export_window": [
+            -13.534884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "768d7661cb42b8e82697806b7006555c268589a8c4f57d9dfb4b2403aacb9b4d"
+        },
+        {
+          "path": "sprites/128/thalore-hunter.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            73,
+            1168,
+            1173
+          ],
+          "export_window": [
+            -13.534884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "3b7c25b3c4a7b1703b0f064110fde78268b634ee787aaaf32e73c30eb1f87cbe"
+        },
+        {
+          "path": "sprites/256/thalore-hunter.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            84,
+            73,
+            1168,
+            1173
+          ],
+          "export_window": [
+            -13.534884,
+            -16.534884,
+            1279.069767
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d7541bfa14713bb8c6722c482b03ba61aeade1c7b192a8908212e89ba5527aa0"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 6.21,
+        "max_sector_intrusion": 2.96,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "thalore-wilder",
+      "master": "masters/thalore-wilder-v1.png",
+      "sha256": "b58e628689314e9b24032e94753a68efb329f6950425a05843c96890045950d8",
+      "exports": [
+        {
+          "path": "sprites/48/thalore-wilder.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.709302,
+            -15.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2c39f312e3c4e4b25de6c24520e92f3c32f6a19255d333789fcad8e4b9a25a93"
+        },
+        {
+          "path": "sprites/64/thalore-wilder.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.709302,
+            -15.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "73e0fa703cbe81959dcdcffd94cd677f3a39cf2b9e10fa907bc8f6b2739e5d52"
+        },
+        {
+          "path": "sprites/96/thalore-wilder.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.709302,
+            -15.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "0aff9ef89e0c4a9fd95c807337e2f8e1b690b3420e1bb73e917d84cd564649c1"
+        },
+        {
+          "path": "sprites/128/thalore-wilder.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.709302,
+            -15.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "63ba7d41c5ce7117f217ef4368b56fec28b2776f549ddd9057e17496921d1b0a"
+        },
+        {
+          "path": "sprites/256/thalore-wilder.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            74,
+            1164,
+            1170
+          ],
+          "export_window": [
+            -10.709302,
+            -15.209302,
+            1274.418605
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d97d7c6f0834a1c8871479148c93c114d7d559f01741558a48366c9668e8f37b"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": -0.23,
+        "max_sector_intrusion": 1.19,
+        "max_opaque_radius": 0.8585,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "elven-sun-mage",
+      "master": "masters/elven-sun-mage-v1.png",
+      "sha256": "1232a1f8e7b3bcd62d6ab38dafb6d33cdd1ab019268d5b5c6ec8335c0aafa348",
+      "exports": [
+        {
+          "path": "sprites/48/elven-sun-mage.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            76,
+            1161,
+            1171
+          ],
+          "export_window": [
+            -11.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "d1be30d69203dcb526620fae22f00347af17c10de771169a19efa0bc96c65077"
+        },
+        {
+          "path": "sprites/64/elven-sun-mage.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            76,
+            1161,
+            1171
+          ],
+          "export_window": [
+            -11.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "81728ee9efd4989b1ef8ddc09ceaef98f375c9301b9389b9fd1b9d0569e2fea4"
+        },
+        {
+          "path": "sprites/96/elven-sun-mage.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            76,
+            1161,
+            1171
+          ],
+          "export_window": [
+            -11.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "6f9ca78d5f6457d0f88aa311ed69d7376ad599c2e9ded470350ebdf5e2d76a76"
+        },
+        {
+          "path": "sprites/128/elven-sun-mage.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            76,
+            1161,
+            1171
+          ],
+          "export_window": [
+            -11.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2d94a96834053ad75c19859b3a08d7eab1b1f939e05e91540e376ae2885f9716"
+        },
+        {
+          "path": "sprites/256/elven-sun-mage.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            90,
+            76,
+            1161,
+            1171
+          ],
+          "export_window": [
+            -11.127907,
+            -13.127907,
+            1273.255814
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f04f5006e6df655ab318307ec4d212271b02d35ea52a2d1c1c0711076cfdc898"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 1.54,
+        "max_sector_intrusion": 2.13,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "shalore-rune-master",
+      "master": "masters/shalore-rune-master-v1.png",
+      "sha256": "6de2d4933a9ee06278223de484b716290e1bdbd93f26435ac57a03d9ed0a60c9",
+      "exports": [
+        {
+          "path": "sprites/48/shalore-rune-master.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            73,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -14.453488,
+            -16.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "ff37838c4d71e1ae4e900bf15e88e6b30f9d173b42fe83a13bf22c2cc47dfd4e"
+        },
+        {
+          "path": "sprites/64/shalore-rune-master.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            73,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -14.453488,
+            -16.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "668ee79fd514bb25e59b9a0926b6ba503d48106d50a5e28997297f0dc4065906"
+        },
+        {
+          "path": "sprites/96/shalore-rune-master.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            73,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -14.453488,
+            -16.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "54c64e6154f81c5cc7dd6e5f7353b48c331d08f969a21915a09fd801a4849bca"
+        },
+        {
+          "path": "sprites/128/shalore-rune-master.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            73,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -14.453488,
+            -16.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a0e100ba89995ca2aa05083bc49fbdb762899dfd541899106814c503ad644308"
+        },
+        {
+          "path": "sprites/256/shalore-rune-master.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            85,
+            73,
+            1164,
+            1172
+          ],
+          "export_window": [
+            -14.453488,
+            -16.453488,
+            1277.906977
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "7f6fa525196eacd605848cbc15dddb7f0dd23acaa9edb5d25d464fa502f165d1"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 7.03,
+        "max_sector_intrusion": 0.7,
+        "max_opaque_radius": 0.8576,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    },
+    {
+      "id": "elven-archer",
+      "master": "../monster-batch-s/masters/companion-archer-v1.png",
+      "sha256": "007d300ecb6ff3956cfd5a9e9b7bb81b53ccd2494a20243c22f941c49122bdca",
+      "exports": [
+        {
+          "path": "sprites/48/elven-archer.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            79,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -9.046512,
+            -10.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "f9b8d57eaf9d646d946fe56364571ee86ee2e8825c88eb7dded53746fd14dd18"
+        },
+        {
+          "path": "sprites/64/elven-archer.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            79,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -9.046512,
+            -10.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "877bbec2fc489379c94334135ed914f918e02107bdaffae745820b094dd7db20"
+        },
+        {
+          "path": "sprites/96/elven-archer.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            79,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -9.046512,
+            -10.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "fab966290ae87310a61d7def285aef606a654fd0d6ddd4df2e694ec54e056da1"
+        },
+        {
+          "path": "sprites/128/elven-archer.png",
+          "size": 128,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            79,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -9.046512,
+            -10.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "504827acc3421c92990f7dda49a405217b7c75e1f297890eaf2e80a69ffc78fe"
+        },
+        {
+          "path": "sprites/256/elven-archer.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            89,
+            79,
+            1165,
+            1173
+          ],
+          "export_window": [
+            -9.046512,
+            -10.046512,
+            1272.093023
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "5a3301da65b8ed487490be89c0d882f4185dcd0db05bd73baa597c5ff7728945"
+        }
+      ],
+      "style_gate": {
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
+        ],
+        "base_drift": 5.46,
+        "max_sector_intrusion": 0.82,
+        "max_opaque_radius": 0.8596,
+        "blocking": [],
+        "warnings": [],
+        "grandfathered": false,
+        "waived": false,
+        "passed": true,
+        "advisory_downgrade": false
+      }
+    }
+  ]
+}

@@ -6,7 +6,7 @@
   "status": "generated-reviewed-candidate",
   "prompt": "Use case: precise-object-edit. Edit this exact wolf miniature image with ONE targeted correction: make the WOLF alone about 12% smaller and center it comfortably within the existing round base, so the entire silhouette including the upper back, tail, ears and all paws is wholly inside the circular outer edge and a continuous strip of visible base surrounds it. Keep the base size, shape, thin rim, color and position unchanged. Keep the same wolf identity, anatomy, pose, fur colors, hand-painted carved style, steep overhead angle, lighting and resolution. Do not redesign the wolf. Preserve genuine transparent alpha outside the base. Do not add any background, pattern, scenery, external shadow, markings, colored rings, text or extra objects. Only reduce the wolf and its contact shadow within the existing unchanged base; this is a contained tabletop token.",
   "references": [
-    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/wolf-v1.png"
+    "<workspace>/game/addons/tome-checker-revised/art/monsters-v1/masters/wolf-v1.png"
   ],
   "reference_roles": [
     "edit target; keep style and base, reduce subject to remain inside base"

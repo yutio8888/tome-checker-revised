@@ -1,0 +1,183 @@
+{
+  "schema": 1,
+  "batch_id": "standee-batch2-others",
+  "assets": [
+    {
+      "asset_id": "horned-horror",
+      "native_name": "Horned Horror",
+      "scope": "Standee batch 2 (18 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+      "kind": "standee",
+      "gate": "ready",
+      "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+      "max_attempts": 2,
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/maze/npcs.lua",
+          "sha256": "f07231a5244764f2896978554836c032d56a19d06a56dc7c8528181e5a813c71",
+          "line": 47,
+          "anchor": "newEntity{ define_as = \"HORNED_HORROR\","
+        }
+      ],
+      "desc": "Some horrible power has twisted this brutish minotaur into something altogether more terrifying. Huge tentacles undulate from its back as it clenches and unclenches its powerful fists.",
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/horned-horror.png",
+          "sha256": "61b3a2c07f94bb3df97a4a1e561084c1997e87c053da11186496fc401a5b6f29",
+          "role": "style",
+          "note": "The shipped flat horned-horror token: copy its matte painted miniature finish, colours, outfit and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_horner_horror.png",
+          "sha256": "86e53e1cf65fe20d2108ee0b89c304a90a0a11b7cc35b3970ca1f4092c8de923",
+          "role": "identity",
+          "note": "Native horned-horror sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/minotaur-maze.png",
+          "sha256": "4bc862c807accae2bea681a99521f27a6beef2c6c9ac6156b58df9a8e675e705",
+          "role": "family",
+          "note": "The shipped Minotaur of the Labyrinth shares this bull-headed body plan, so it is the token this one must stay clearly distinct from; do not copy its pose, its brown fur or its huge axe."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "hue"
+      ],
+      "render_evidence": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_horner_horror.png",
+          "sha256": "86e53e1cf65fe20d2108ee0b89c304a90a0a11b7cc35b3970ca1f4092c8de923"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/horned-horror.png",
+          "sha256": "61b3a2c07f94bb3df97a4a1e561084c1997e87c053da11186496fc401a5b6f29"
+        }
+      ],
+      "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+      "prompt_fields": {
+        "subject": "Horned Horror: a brutish bull-headed brute twisted by dark power, with a heavy horned minotaur skull, a thick dark purple-grey hide, huge clenched fists sheathed in pale blue-grey frost-rimed plates, heavy hooved legs, and a cluster of thick dark violet tentacles rising and curling from its upper back. Match the shipped flat token's dark purple-grey hide, purple back tentacles and pale fists.",
+        "contrast": "Taller than wide: stand at full height with both fists clenched close to the chest and the back tentacles curled up and in, not spread sideways. It differs from the shipped Minotaur of the Labyrinth by the tentacled back, the clenched empty fists instead of a huge axe, and the dark violet hide. No aura, glow or particles.",
+        "composition": "Full body, upright standing front three-quarter view, both fists clenched near the chest, feet planted, the horned head at the top of the body with the curled back tentacles allowed to rise behind the shoulders. Overall height about 1.5 to 1.7 times the width. Frame the whole figure with clear empty transparent margin on all four sides: the highest tentacle, horn and fist and the lowest hoof must sit fully inside the canvas with visible space beyond them, and no part of the body, tentacle or gear may touch or cross the canvas edge.",
+        "palette": "dark purple-grey hide, dark violet back tentacles, pale blue-grey frost-rimed fists, dark horns, dark hooves."
+      }
+    },
+    {
+      "asset_id": "xhaiak-arachnomancer",
+      "native_name": "xhaiak arachnomancer",
+      "scope": "Standee batch 2 (18 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+      "kind": "standee",
+      "gate": "ready",
+      "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+      "max_attempts": 2,
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/ardhungol/npcs.lua",
+          "sha256": "93033ee5cc7294cd4a86ca1762153b67b0c4d61df92d1391786d54642fa81dc2",
+          "line": 76,
+          "anchor": "newEntity{ base = \"BASE_NPC_SPIDER\","
+        }
+      ],
+      "desc": "A strange looking humanoid spiderkin, its body half covered by a light flowing robe. It looks like tiny spiders are crawling on his skin.",
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/xhaiak-arachnomancer.png",
+          "sha256": "fca4def55f1d2d675f6e79024671a386e332d50e2ec50f0a05090d9810177d74",
+          "role": "style",
+          "note": "The shipped flat xhaiak-arachnomancer token: copy its matte painted miniature finish, colours, outfit and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_xhaiak_xhaiak_arachnomancer.png",
+          "sha256": "d6e87c9f11f162bf65808098d68542ac4560f84149103a790a877b75da4a084c",
+          "role": "identity",
+          "note": "Native xhaiak-arachnomancer sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/shiaak-venomblade.png",
+          "sha256": "9aabc52a17f8bde5842fec08047838815814ab87d7ac542bc0b16c0460824ffe",
+          "role": "family",
+          "note": "The shipped shiaak-venomblade token shares this spiderkin body plan, so it is the token this one must stay clearly distinct from; do not copy its pose, its weapons or its armour."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "render_evidence": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_xhaiak_xhaiak_arachnomancer.png",
+          "sha256": "d6e87c9f11f162bf65808098d68542ac4560f84149103a790a877b75da4a084c"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/xhaiak-arachnomancer.png",
+          "sha256": "fca4def55f1d2d675f6e79024671a386e332d50e2ec50f0a05090d9810177d74"
+        }
+      ],
+      "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+      "prompt_fields": {
+        "subject": "xhaiak arachnomancer: a humanoid spiderkin with a black chitinous spidery body, four thin black chitin-plated arms and two pairs of spindly spider legs raised close to the torso, several small red eyes in a dark face, and a light grey flowing half-robe draped over one shoulder and across the hips leaving the other side of the body bare; tiny black spiders crawl on the exposed skin. Match the shipped flat token's black spiderkin body, grey draped robe and slender spidery limbs.",
+        "contrast": "Taller than wide: the raised spidery legs and the two extra arms are held up close beside the head and torso, not spread sideways, so the silhouette stays narrow and tall. It differs from the shipped spider tokens by the humanoid torso under the light robe and by the black chitin. No web, no swarm of spiders leaving the body, no glow or particles.",
+        "composition": "Full body, upright standing front three-quarter view, the four arms and raised spidery legs held close, the light robe draped over one side, feet planted, the raised limbs at the top of the frame. Overall height about 1.6 to 1.8 times the width; nothing above the raised limbs.",
+        "palette": "glossy black chitin, dark grey skin, pale grey flowing robe, small red eyes."
+      }
+    },
+    {
+      "asset_id": "rotting-titan",
+      "native_name": "Rotting Titan",
+      "scope": "Standee batch 2 (18 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+      "kind": "standee",
+      "gate": "ready",
+      "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+      "max_attempts": 2,
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+          "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+          "line": 119,
+          "anchor": "newEntity{ base = \"BASE_NPC_GHOUL\", define_as = \"ROTTING_TITAN\","
+        }
+      ],
+      "desc": "This gigantic mass of flesh and stone moves slowly, the ground rumbling with each step it takes. Its body seems to constantly pulsate and reform. Massive stones at the end of each limb form massive blunt weapons.",
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/rotting-titan.png",
+          "sha256": "7544e08d7bd78917a1ada4fa1c1f6e10c20930830668791ed540d628a537eaec",
+          "role": "style",
+          "note": "The shipped flat rotting-titan token: copy its matte painted miniature finish, colours, outfit and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_ghoul_rotting_titan.png",
+          "sha256": "d625c602cd1ddc63e082f71439acdedda6708462214a7c3cf4fe5868c1c62020",
+          "role": "identity",
+          "note": "Native rotting-titan sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/umber-hulk.png",
+          "sha256": "bdef0e625a49a184b9993975ca584ec216675e7fbfdf3b1b22ec17f5559bd266",
+          "role": "family",
+          "note": "The shipped umber-hulk token shares this huge flesh-and-stone body plan, so it is the token this one must stay clearly distinct from; do not copy its pose or its colour."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "hue"
+      ],
+      "render_evidence": [
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_ghoul_rotting_titan.png",
+          "sha256": "d625c602cd1ddc63e082f71439acdedda6708462214a7c3cf4fe5868c1c62020"
+        },
+        {
+          "path": "game/addons/tome-checker-revised/data/gfx/tokens/rotting-titan.png",
+          "sha256": "7544e08d7bd78917a1ada4fa1c1f6e10c20930830668791ed540d628a537eaec"
+        }
+      ],
+      "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+      "prompt_fields": {
+        "subject": "Rotting Titan: a gigantic shambling humanoid of rotting grey-green flesh fused with great slabs of grey stone, a lumpy pulseless body, a blunt heavy head with a broken face, and huge arms that end not in hands but in massive blunt boulders of stone; thick legs and stone-shod feet. Match the shipped flat token's grey-green rotting flesh, grey stone masses and heavy blunt limbs.",
+        "contrast": "Taller than wide: stand fully upright with the two stone-fist arms held low and close to the body, so the huge mass reads as a tall column instead of a wide squat lump. It differs from golem constructs by the rotting flesh mixed with the stone and from the bone giants by having soft flesh. No dripping ichor, flies, mist or particles.",
+        "composition": "Full body, upright standing front three-quarter view, both massive stone-fist arms hanging low and close, feet planted, the broken head at the top of the frame. Overall height about 1.6 to 1.8 times the width; nothing above the head.",
+        "palette": "grey-green rotting flesh, mossy olive patches, grey stone slabs and boulder fists, dark wounds."
+      }
+    }
+  ]
+}

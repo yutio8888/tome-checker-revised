@@ -2,14 +2,16 @@
 whose only miss is base_drift and which ships under the reviewer-approved
 trusted waiver art/production/waivers/monster-batch-g.json.
 
-xhaiak arachnomancer, shiaak venomblade (lighter v2), dremling (pale-stone v2
-after the batch-F dark-on-dark rejection), Pale Drake, The Master (lighter v2),
+xhaiak arachnomancer, shiaak venomblade (lighter v2), dremling (black-skinned
+pale-scabrous v3 repaint of 2026-10-04, reversing the pale-stone v2 that had
+followed the batch-F dark-on-dark rejection), Pale Drake, The Master (lighter v2),
 Fillarel Aldaren, Krogar, Spellblaze Crystal, Rhaloren Inquisitor (v2 after a
 disc-overflow repair), Harno and Lithfengel (v2) pass every style-gate check.
 """
 import hashlib
 import importlib.util
 import json
+import math
 import tempfile
 import unittest
 from pathlib import Path
@@ -25,7 +27,7 @@ spec.loader.exec_module(style)
 SHIPPED = {
     'xhaiak-arachnomancer': 'xhaiak-arachnomancer-v1',
     'shiaak-venomblade': 'shiaak-venomblade-v2',
-    'dremling': 'dremling-v2',
+    'dremling': 'dremling-v3',
     'pale-drake': 'pale-drake-v1',
     'fillarel-aldaren': 'fillarel-aldaren-v1',
     'krogar': 'krogar-v1',
@@ -65,10 +67,29 @@ class MonsterBatchGShippedTests(unittest.TestCase):
             export = (ROOT / f'art/monster-batch-g/sprites/128/{asset_id}.png').read_bytes()
             self.assertEqual(runtime, export, asset_id)
 
-    def test_dremling_is_clearly_lighter_than_the_rejected_draft(self):
-        review = json.loads((ROOT / 'art/monster-batch-g/review/luminance.json').read_text())['assets']
-        self.assertGreater(review['dremling NEW (v2)'], review['dremling OLD (rejected)'] * 2)
-        self.assertGreater(review['dremling NEW (v2)'], 80)
+    def test_dremling_repaint_is_darker_than_the_superseded_pale_token(self):
+        # User decision 2026-10-04: the shipped pale-stone v2 (which held an axe)
+        # was reversed to a black-skinned, pale-scabrous, weaponless repaint that
+        # matches dremling's own desc and the accepted standee. The shipped token
+        # must be the new v3 master and measurably darker in the masked-body
+        # region than the superseded v2 token kept for provenance.
+        def body_luminance(path):
+            image = Image.open(path).convert('RGBA')
+            size = image.width
+            values = []
+            for y in range(size):
+                for x in range(size):
+                    r, g, b, a = image.getpixel((x, y))
+                    if a >= 180 and math.hypot(x + .5 - size / 2, y + .5 - size / 2) <= 0.55 * size / 2:
+                        values.append(0.299 * r + 0.587 * g + 0.114 * b)
+            return sum(values) / len(values)
+        new = ROOT / 'art/monster-batch-g/sprites/128/dremling.png'
+        old = ROOT / 'art/monster-batch-g/superseded/dremling-v2-runtime-128.png'
+        self.assertTrue(old.is_file(), 'the superseded pale token must be kept for provenance')
+        self.assertNotEqual(new.read_bytes(), old.read_bytes())
+        self.assertLess(body_luminance(new), body_luminance(old) - 20)
+        selection = json.loads((ROOT / 'art/monster-batch-g/selected-masters.json').read_text())
+        self.assertEqual(selection['dremling'], 'masters/dremling-v3.png')
 
     def test_superseded_dark_drafts_are_not_selected(self):
         selection = json.loads((ROOT / 'art/monster-batch-g/selected-masters.json').read_text())

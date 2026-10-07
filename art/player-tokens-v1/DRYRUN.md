@@ -13,8 +13,8 @@ Total planned calls if all four packages execute with zero repairs: 14. Ceiling 
 - Saved target (if executed): `art/player-tokens-v1/masters/player-human-male-v1.png`
 - Budget: 2 max attempts, 0 used, 2 left
 - References (in order):
-  - `/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
-  - `/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/player/human_male/base_01.png` (sha256 `fee7e9005cfcd08d…`)
+  - `<workspace>/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
+  - `<workspace>/game/modules/tome/data/gfx/shockbolt/player/human_male/base_01.png` (sha256 `fee7e9005cfcd08d…`)
 
 <details><summary>Full prompt (verbatim IMAGE BRIEF sent to the model)</summary>
 
@@ -46,8 +46,8 @@ Image 2: identity — Native unequipped paper-doll base body (skin-tone option 1
 - Saved target (if executed): `art/player-tokens-v1/masters/player-human-female-v1.png`
 - Budget: 2 max attempts, 0 used, 2 left
 - References (in order):
-  - `/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
-  - `/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/player/human_female/base_01.png` (sha256 `17b861e6a8837812…`)
+  - `<workspace>/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
+  - `<workspace>/game/modules/tome/data/gfx/shockbolt/player/human_female/base_01.png` (sha256 `17b861e6a8837812…`)
 
 <details><summary>Full prompt (verbatim IMAGE BRIEF sent to the model)</summary>
 
@@ -79,8 +79,8 @@ Image 2: identity — Native unequipped paper-doll base body (skin-tone option 1
 - Saved target (if executed): `art/player-tokens-v1/masters/player-elf-male-v1.png`
 - Budget: 2 max attempts, 0 used, 2 left
 - References (in order):
-  - `/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
-  - `/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/player/elf_male/base_01.png` (sha256 `3e1e472e3d74a215…`)
+  - `<workspace>/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
+  - `<workspace>/game/modules/tome/data/gfx/shockbolt/player/elf_male/base_01.png` (sha256 `3e1e472e3d74a215…`)
 
 <details><summary>Full prompt (verbatim IMAGE BRIEF sent to the model)</summary>
 
@@ -112,8 +112,8 @@ Image 2: identity — Native unequipped paper-doll base body (skin-tone option 1
 - Saved target (if executed): `art/player-tokens-v1/masters/player-elf-female-v1.png`
 - Budget: 2 max attempts, 0 used, 2 left
 - References (in order):
-  - `/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
-  - `/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/player/elf_female/base_01.png` (sha256 `1e523a43b96516c3…`)
+  - `<workspace>/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
+  - `<workspace>/game/modules/tome/data/gfx/shockbolt/player/elf_female/base_01.png` (sha256 `1e523a43b96516c3…`)
 
 <details><summary>Full prompt (verbatim IMAGE BRIEF sent to the model)</summary>
 
@@ -148,8 +148,8 @@ Image 2: identity — Native unequipped paper-doll base body (skin-tone option 1
 - Saved target (if executed): `art/player-tokens-v1/masters/player-dwarf-male-v1.png`
 - Budget: 2 max attempts, 0 used, 2 left
 - References (in order):
-  - `/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
-  - `/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/player/dwarf_male/base_01.png` (sha256 `8dfa4af19147f66e…`)
+  - `<workspace>/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
+  - `<workspace>/game/modules/tome/data/gfx/shockbolt/player/dwarf_male/base_01.png` (sha256 `8dfa4af19147f66e…`)
 
 <details><summary>Full prompt (verbatim IMAGE BRIEF sent to the model)</summary>
 
@@ -181,8 +181,8 @@ Image 2: identity — Native unequipped paper-doll base body (skin-tone option 1
 - Saved target (if executed): `art/player-tokens-v1/masters/player-dwarf-female-v1.png`
 - Budget: 2 max attempts, 0 used, 2 left
 - References (in order):
-  - `/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
-  - `/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/player/dwarf_female/base_01.png` (sha256 `9e8614199cca66e0…`)
+  - `<workspace>/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
+  - `<workspace>/game/modules/tome/data/gfx/shockbolt/player/dwarf_female/base_01.png` (sha256 `9e8614199cca66e0…`)
 
 <details><summary>Full prompt (verbatim IMAGE BRIEF sent to the model)</summary>
 
@@ -214,8 +214,8 @@ Image 2: identity — Native unequipped paper-doll base body (skin-tone option 1
 - Saved target (if executed): `art/player-tokens-v1/masters/player-halfling-male-v1.png`
 - Budget: 2 max attempts, 0 used, 2 left
 - References (in order):
-  - `/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
-  - `/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/player/halfling_male/base_01.png` (sha256 `1aa1ba5302c445f5…`)
+  - `<workspace>/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
+  - `<workspace>/game/modules/tome/data/gfx/shockbolt/player/halfling_male/base_01.png` (sha256 `1aa1ba5302c445f5…`)
 
 <details><summary>Full prompt (verbatim IMAGE BRIEF sent to the model)</summary>
 
@@ -247,8 +247,8 @@ Image 2: identity — Native unequipped paper-doll base body (skin-tone option 1
 - Saved target (if executed): `art/player-tokens-v1/masters/player-halfling-female-v1.png`
 - Budget: 2 max attempts, 0 used, 2 left
 - References (in order):
-  - `/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
-  - `/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/player/halfling_female/base_01.png` (sha256 `1cdaa823506a4b4d…`)
+  - `<workspace>/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
+  - `<workspace>/game/modules/tome/data/gfx/shockbolt/player/halfling_female/base_01.png` (sha256 `1cdaa823506a4b4d…`)
 
 <details><summary>Full prompt (verbatim IMAGE BRIEF sent to the model)</summary>
 
@@ -283,8 +283,8 @@ Image 2: identity — Native unequipped paper-doll base body (skin-tone option 1
 - Saved target (if executed): `art/player-tokens-v1/masters/player-ogre-male-v1.png`
 - Budget: 2 max attempts, 0 used, 2 left
 - References (in order):
-  - `/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
-  - `/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/player/ogre_male/base_01.png` (sha256 `ec76b88528ea4619…`)
+  - `<workspace>/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
+  - `<workspace>/game/modules/tome/data/gfx/shockbolt/player/ogre_male/base_01.png` (sha256 `ec76b88528ea4619…`)
 
 <details><summary>Full prompt (verbatim IMAGE BRIEF sent to the model)</summary>
 
@@ -316,8 +316,8 @@ Image 2: identity — Native unequipped paper-doll base body (skin-tone option 1
 - Saved target (if executed): `art/player-tokens-v1/masters/player-ogre-female-v1.png`
 - Budget: 2 max attempts, 0 used, 2 left
 - References (in order):
-  - `/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
-  - `/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/player/ogre_female/base_01.png` (sha256 `6b2df71180258170…`)
+  - `<workspace>/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
+  - `<workspace>/game/modules/tome/data/gfx/shockbolt/player/ogre_female/base_01.png` (sha256 `6b2df71180258170…`)
 
 <details><summary>Full prompt (verbatim IMAGE BRIEF sent to the model)</summary>
 
@@ -349,8 +349,8 @@ Image 2: identity — Native unequipped paper-doll base body (skin-tone option 1
 - Saved target (if executed): `art/player-tokens-v1/masters/player-yeek-v1.png`
 - Budget: 2 max attempts, 0 used, 2 left
 - References (in order):
-  - `/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
-  - `/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/player/yeek/base_01.png` (sha256 `8585dfafe06fa75b…`)
+  - `<workspace>/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
+  - `<workspace>/game/modules/tome/data/gfx/shockbolt/player/yeek/base_01.png` (sha256 `8585dfafe06fa75b…`)
 
 <details><summary>Full prompt (verbatim IMAGE BRIEF sent to the model)</summary>
 
@@ -385,8 +385,8 @@ Image 2: identity — Native unequipped paper-doll base body (skin-tone option 1
 - Saved target (if executed): `art/player-tokens-v1/masters/player-ghoul-v1.png`
 - Budget: 2 max attempts, 0 used, 2 left
 - References (in order):
-  - `/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
-  - `/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/player/ghoul/base_01.png` (sha256 `2cb59444fe90353e…`)
+  - `<workspace>/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
+  - `<workspace>/game/modules/tome/data/gfx/shockbolt/player/ghoul/base_01.png` (sha256 `2cb59444fe90353e…`)
 
 <details><summary>Full prompt (verbatim IMAGE BRIEF sent to the model)</summary>
 
@@ -418,8 +418,8 @@ Image 2: identity — Native unequipped paper-doll base body (skin-tone option 1
 - Saved target (if executed): `art/player-tokens-v1/masters/player-skeleton-v1.png`
 - Budget: 2 max attempts, 0 used, 2 left
 - References (in order):
-  - `/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
-  - `/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/player/skeleton/base_01.png` (sha256 `eb72fb03da6537c1…`)
+  - `<workspace>/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
+  - `<workspace>/game/modules/tome/data/gfx/shockbolt/player/skeleton/base_01.png` (sha256 `eb72fb03da6537c1…`)
 
 <details><summary>Full prompt (verbatim IMAGE BRIEF sent to the model)</summary>
 
@@ -451,8 +451,8 @@ Image 2: identity — Native unequipped paper-doll base body (skin-tone option 1
 - Saved target (if executed): `art/player-tokens-v1/masters/player-runic-golem-v1.png`
 - Budget: 2 max attempts, 0 used, 2 left
 - References (in order):
-  - `/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
-  - `/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/player/runic_golem/base_01.png` (sha256 `07e83128d99d3276…`)
+  - `<workspace>/game/addons/tome-checker-revised/art/monsters-v6/masters/bandit-v1.png` (sha256 `a571c4618354fd68…`)
+  - `<workspace>/game/modules/tome/data/gfx/shockbolt/player/runic_golem/base_01.png` (sha256 `07e83128d99d3276…`)
 
 <details><summary>Full prompt (verbatim IMAGE BRIEF sent to the model)</summary>
 

@@ -1,0 +1,65 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch3-ice-wyrm-fix",
+ "assets": [
+  {
+   "asset_id": "ice-wyrm",
+   "native_name": "ice wyrm",
+   "scope": "Standee batch 3 dragon family, ice wyrm corrected second attempt. Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below. The 1.0-cell width cap applies; the body must still be clearly taller than wide (gate aspect >= 1.4), so the wyrm is fully upright on its hind legs.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The first attempt rendered a crouched quadruped sitting on all fours (aspect 1.21) and was rejected by the standee upright-aspect gate. This corrected version demands a fully upright rearing stance on the two hind legs only, body vertical, forelimbs off the ground.",
+   "max_attempts": 1,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/cold-drake.lua",
+     "sha256": "60153bdad6955f2773d8db30457e717c480cf794e7d0793ff027a994dcb0bff4",
+     "line": 89,
+     "anchor": "newEntity{ base = \"BASE_NPC_COLD_DRAKE\","
+    }
+   ],
+   "desc": "An old and powerful cold drake, armed with deadly breath and nasty claws.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ice-wyrm.png",
+     "sha256": "787f4af9b7c461ca48a0b62a6dfef216f548471c08370175b77b2a33229bfd98",
+     "role": "style",
+     "note": "The shipped flat ice wyrm token: copy its matte painted miniature finish, colours, value structure and identity. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_cold_ice_wyrm.png",
+     "sha256": "c2f414a5ff66a68ab457ce5b5a27ea6c429000baca9e2b65b8481c68cfecec07",
+     "role": "identity",
+     "note": "Native ice wyrm sprite: identity cue only. Keep the same species, colour pattern and markings, converted to a true upright rearing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/rantha.png",
+     "sha256": "fbe545dd28909b1fbcfa98e80728e26c8c17ab57656d1e342e2443259244ba44",
+     "role": "family",
+     "note": "Rantha the Worm in this family is the sibling dragon this one must stay clearly distinct from: it is a TALL hunched frost wyrm with two very long horns and a long jagged icy dorsal sail."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_cold_ice_wyrm.png",
+     "sha256": "c2f414a5ff66a68ab457ce5b5a27ea6c429000baca9e2b65b8481c68cfecec07"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ice-wyrm.png",
+     "sha256": "787f4af9b7c461ca48a0b62a6dfef216f548471c08370175b77b2a33229bfd98"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "ice wyrm: a compact ancient cold dragon REARING fully UPRIGHT on its two HIND LEGS ONLY, the body raised vertically and the bent hind legs beneath it, while the short forelimbs are lifted CLEAR of the ground and tucked to the chest - it is never sitting and never resting on all fours; pale blue-white armoured scales over a silver-cream ribbed belly, a COMPACT neck tucked and arched DOWN with the head held low, a JAGGED ICE-CRYSTAL CROWN of sharp shards around the skull and a compact collar of overlapping ice-plate neck armour, wings folded tight along the flanks and a short tail curled close. Match the shipped flat token's blue-white ice scales, silver belly and frosty crowned head.",
+    "contrast": "Compact but fully UPRIGHT on the hind legs only, like the other rearing dragons, never sitting on all fours: the body rises vertically with the bent hind legs under it and both forelimbs off the ground, so the whole figure is clearly taller than wide (about 1.5 to 1.8 times as tall as wide). The neck arches DOWN so the head sits low, and the folded wings and short tail stay inside the body outline. It differs from Rantha's TALL hunched pose, its two very long horns and its long dorsal sail; the ice wyrm is compact with a jagged crystal crown and no back sail. No frost mist, snow, ice shards or breath.",
+    "composition": "Full body, fully upright REARING three-quarter view standing on the two hind legs with the body vertical and the forelimbs lifted off the ground and tucked to the chest, the neck tucked and arched down with the crowned head low, wings folded tight, tail curled close. Overall height about 1.5 to 1.8 times the width; the ice crown is part of the body, nothing else above the head.",
+    "palette": "pale blue-white and pale steel-blue armoured scales, silver-cream ribbed belly, translucent white-blue ice-crystal crown, dull blue-grey claws, faint darker blue shadow."
+   }
+  }
+ ]
+}

@@ -14,7 +14,10 @@ command = home / 'board-test-command.txt'
 result = home / 'board-test-result.txt'
 assert not command.exists(), 'Previous debug command remains pending'
 result.unlink(missing_ok=True)
-command.write_text(sys.argv[1])
+# The audit reader must never observe a partially written Lua command.
+pending = command.with_name('.board-test-command.pending')
+pending.write_text(sys.argv[1])
+pending.replace(command)
 subprocess.run([sys.executable, str(Path(__file__).with_name('fixture_command.py')), 'audit'], check=True)
 deadline = time.monotonic() + 45
 while time.monotonic() < deadline:

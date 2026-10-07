@@ -7,7 +7,7 @@
   "status": "rejected-extra-wing-on-one-midge",
   "prompt": "Use case: precise-object-edit\nAsset type: corrected transparent PNG midge-swarm tabletop miniature.\nPrimary request: make one targeted anatomy correction to Image 1, preserving the seven insects, their slender bodies, their positions, the loose open-centre swarm arrangement, neutral disc, materials, camera, colours and lighting.\nCorrection: EACH of the SEVEN midges must visibly have ONE COMPLETE PAIR OF WINGS attached to its thorax: one narrow wing on the left and one narrow wing on the right. Fourteen wings total. Currently most insects show only a single obvious wing; add or reveal the missing partner. Adjust wing angles slightly only where necessary so both wings can be seen from this high downward camera. Two translucent smoky-silver veined wing planes per insect must be connected to the same thorax, and separated enough to read as a paired insect silhouette, not a single leaf. Preserve the upper-left insect's already-visible wing pair as a useful example of paired attachment. Keep wings proportionate to the slender body; do not create butterfly wings.\nInvariants: exactly seven midges with complete narrow grey-brown abdomens, small insect heads, antennae and six coherent legs; no extra insect, bee, wasp, fluffy yellow body or stripe. Keep the same overall open-centre layout, disc diameter, thin dark grey-brown disc, subdued bronze-grey bevel, hand-painted sculpted miniature finish, upper-left soft lighting, small internal shadows and view angle. Do not move an insect outside the disc or crop any wing, leg or antenna.\nPreserve genuine native alpha outside the disc. Square image, target 1024x1024 if supported, clean antialiased edge. No background, scene, extra shadows, text, icons, faction rings, coloured rims, rank, HP, glow, guides or watermark.\nOnly correct missing or hidden wing partners; do not redesign the other artwork.",
   "references": [
-    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v1.png"
+    "<workspace>/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v1.png"
   ],
   "reference_roles": [
     "Rejected v1 edit target; add/reveal each missing wing partner while preserving seven bodies, open grouping, base, light and material."
@@ -60,7 +60,7 @@
   },
   "selection": "rejected-keep-for-provenance",
   "reference_sha256": {
-    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v1.png": "f9be4138ccf7cc2553ff571fbf05c3cf38730830d60eb06a414bb0333831e1ed"
+    "<workspace>/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v1.png": "f9be4138ccf7cc2553ff571fbf05c3cf38730830d60eb06a414bb0333831e1ed"
   },
   "review": {
     "observations": [

@@ -1,0 +1,65 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch1-repaints-v3",
+ "assets": [
+  {
+   "asset_id": "snow-giant-thunderer",
+   "native_name": "snow giant thunderer",
+   "scope": "Standee batch 1 repaint. The first snow-giant-thunderer standee was reviewed and REJECTED: at 48px it was nearly identical to the SHIPPED snow-giant standee (bald head, white beard, grey-blue skin, maul held low at the side) and differed only by a fur mantle. The rejected draft is archived under art/token-layers/snow-giant-thunderer/standee/superseded/master-v1.png. This second artwork is used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The first standee draft was rejected for family distinction: its bald, white-bearded, grey-blue silhouette with a low-hanging maul read as the shipped snow-giant standee at 48px, not as a separate family variant. A reworked upright standee with a hooded fur mantle, a ringed braided beard and a maul raised across the chest is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/snow-giant.lua",
+     "sha256": "0d1acc9131e7c4691f3c5213bbf33b8f5c13bb2c1e9de93c53dfd10cac6eb042",
+     "line": 64,
+     "anchor": "name = \"snow giant thunderer\""
+    }
+   ],
+   "desc": "A towering creature, humanoid but huge. It wields a giant maul and does not look friendly. Lightning crackles over its body.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/snow-giant-thunderer.png",
+     "sha256": "3c76bf0d6ff81747f1e4c4cd59c8d31feb0685846e5f306303677b3e8b16ba45",
+     "role": "style",
+     "note": "The shipped flat snow-giant-thunderer token: copy its matte painted miniature finish, colours and value structure - pale blue-grey skin, white beard, heavy fur mantle and dark storm-blue tunic. Ignore its top-down camera, its lightning and its physical disc entirely - the standee has no disc and no lightning."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ice_snow_giant_thunderer.png",
+     "sha256": "1e30f11c0f377888b834f6a569242435841dfec80342d687803a4d78101b19f4",
+     "role": "identity",
+     "note": "Native snow-giant-thunderer sprite: identity cue only. It shows the dark hooded mantle over the head, the white beard, the dark tunic and boots. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/snow-giant.png",
+     "sha256": "7c8cd34d093bf3a84a6d6eb6ba23600e1b35a034c6095cce310c4cfd6afff2a7",
+     "role": "family",
+     "note": "The shipped generic snow giant token is the silhouette this one currently collapses into; it is bare-headed with a low-hanging maul. Do not copy its pose, gear or silhouette - the thunderer must read as a different shape in the same family."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ice_snow_giant_thunderer.png",
+     "sha256": "1e30f11c0f377888b834f6a569242435841dfec80342d687803a4d78101b19f4"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/snow-giant-thunderer.png",
+     "sha256": "3c76bf0d6ff81747f1e4c4cd59c8d31feb0685846e5f306303677b3e8b16ba45"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "snow giant thunderer: a towering pale blue-grey snow giant standing upright in a heavy hooded fur mantle, the thick pale-grey fur-lined hood pulled up over the head and framing a fierce face with a long white beard braided into a plait bound with several dark copper and iron rings; he wears a dark storm-blue leather tunic with a diagonal strap and a broad studded belt, with fur-trimmed boots, and both hands grip a heavy rune-etched maul raised diagonally across the chest, its copper-banded dark haft crossing the torso and its chiselled grey stone head lifted beside the shoulder. Match the shipped flat token's pale blue-grey skin, white beard, heavy fur mantle and dark blue-black tunic.",
+    "contrast": "Upright and clearly taller than wide, with the maul kept close across the chest so the stone head sits beside the shoulder instead of out to the side. The raised hood and the diagonal maul make a different silhouette from the bare-headed shipped snow giant, which holds its maul low at the hip; it also differs from the chieftain (horned helm, maul on shoulder) and the boulder thrower (tan skin, boulder overhead). No lightning, sparks, glow, aura or particles anywhere: the storm theme is carried only by the fur hood, the braided ringed beard and the rune-etched copper-banded maul.",
+    "composition": "Full body, upright standing front three-quarter view, both hands on the maul shaft raised diagonally across the chest, the fur-hooded head at the top of the frame, feet planted. Overall height to width about 1.7 to 1, with nothing above the head.",
+    "palette": "pale blue-grey skin, white braided beard, pale grey-white fur hood lining over a dark grey-brown fur mantle, storm-blue-black leather tunic with dull copper and iron fittings, grey stone maul head etched with dark runes on a copper-banded dark wooden haft."
+   }
+  }
+ ]
+}

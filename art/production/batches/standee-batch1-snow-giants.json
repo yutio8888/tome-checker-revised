@@ -1,0 +1,248 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch1-snow-giants",
+ "assets": [
+  {
+   "asset_id": "burb-snow-giant-champion",
+   "native_name": "Burb the snow giant champion",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/snow-giant.lua",
+     "sha256": "0d1acc9131e7c4691f3c5213bbf33b8f5c13bb2c1e9de93c53dfd10cac6eb042",
+     "line": 111,
+     "anchor": "name = \"Burb the snow giant champion\""
+    },
+    {
+     "path": "game/modules/tome/data/general/npcs/snow-giant.lua",
+     "sha256": "0d1acc9131e7c4691f3c5213bbf33b8f5c13bb2c1e9de93c53dfd10cac6eb042",
+     "line": 110,
+     "anchor": "define_as = \"BURB_SNOW_GIANT\""
+    }
+   ],
+   "desc": "A maddened, enraged snow giant that towers over his comrades. You've heard legends mentioning this particular monstrosity; they say that when he's not rampaging around frothing at the mouth, he sits, almost childlike, engraving stories and mysterious patterns on any flat stone surface he can find.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/burb-snow-giant-champion.png",
+     "sha256": "300287abfbbb04ccebc1cb5c7003b2275918c761d8c8b5db0880d9709c44a9b3",
+     "role": "style",
+     "note": "The shipped flat burb-snow-giant-champion token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ice_burb_the_snow_giant_champion.png",
+     "sha256": "721935d2e489941b1b28ccf07937314ae40cee5ab6ac6323a4a086f09dd1d7df",
+     "role": "identity",
+     "note": "Native burb-snow-giant-champion sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/snow-giant.png",
+     "sha256": "7c8cd34d093bf3a84a6d6eb6ba23600e1b35a034c6095cce310c4cfd6afff2a7",
+     "role": "family",
+     "note": "The shipped generic snow giant token shares this body plan and palette, so it is the token this one must stay clearly distinct from; do not copy its pose, gear or silhouette."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ice_burb_the_snow_giant_champion.png",
+     "sha256": "721935d2e489941b1b28ccf07937314ae40cee5ab6ac6323a4a086f09dd1d7df"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/burb-snow-giant-champion.png",
+     "sha256": "300287abfbbb04ccebc1cb5c7003b2275918c761d8c8b5db0880d9709c44a9b3"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Burb the snow giant champion: a huge, enraged snow giant with blue-grey skin and a matted white beard, wearing a heavy fur-trimmed tunic and a great curved-horned iron helm, massive shoulders and clenched fists, a snarling frothing face. Match the shipped token's pale blue-grey skin, white fur and dark horned helm.",
+    "contrast": "Taller than wide and the broadest of the snow giants: stand at full height with the shoulders hunched in rage and both fists clenched close to the body. No lightning, sparks, glow or aura of any kind; the helm horns stay within the head silhouette.",
+    "composition": "Full body, upright standing front three-quarter view, both fists clenched, feet planted, the horned helm at the top of the frame. Overall height to width about 1.6 to 1.",
+    "palette": "pale blue-grey skin, white beard and fur trim, dark grey-brown iron helm and boots."
+   }
+  },
+  {
+   "asset_id": "snow-giant-chieftain",
+   "native_name": "snow giant chieftain",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/snow-giant.lua",
+     "sha256": "0d1acc9131e7c4691f3c5213bbf33b8f5c13bb2c1e9de93c53dfd10cac6eb042",
+     "line": 89,
+     "anchor": "name = \"snow giant chieftain\""
+    }
+   ],
+   "desc": "A towering creature, humanoid but huge. It wields a giant maul and does not look friendly.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/snow-giant-chieftain.png",
+     "sha256": "6cea6826620090a5c6008a7908d79a5b96571a195a611e58b8caebbe5ee32817",
+     "role": "style",
+     "note": "The shipped flat snow-giant-chieftain token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ice_snow_giant_chieftain.png",
+     "sha256": "18661c89e1030313394c0671b3081c867a1b4a28cadb57198df260602164fa6a",
+     "role": "identity",
+     "note": "Native snow-giant-chieftain sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/snow-giant.png",
+     "sha256": "7c8cd34d093bf3a84a6d6eb6ba23600e1b35a034c6095cce310c4cfd6afff2a7",
+     "role": "family",
+     "note": "The shipped generic snow giant token shares this body plan and palette, so it is the token this one must stay clearly distinct from; do not copy its pose, gear or silhouette."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ice_snow_giant_chieftain.png",
+     "sha256": "18661c89e1030313394c0671b3081c867a1b4a28cadb57198df260602164fa6a"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/snow-giant-chieftain.png",
+     "sha256": "6cea6826620090a5c6008a7908d79a5b96571a195a611e58b8caebbe5ee32817"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "snow giant chieftain: a towering snow giant leader with pale blue-grey skin, a thick white beard, a horned iron helm and fur-trimmed hide armour, raising a huge two-handed stone maul. Match the shipped token's blue-grey skin, dark hide and the big maul of the native sprite.",
+    "contrast": "Taller than wide: stand at full height and keep the maul close, held diagonally across the body or raised over one shoulder so the shaft does not stick out sideways at the legs. It differs from the plain snow giant, which holds its hammer down at the side, by the horned chieftain helm and the raised two-handed maul.",
+    "composition": "Full body, upright standing three-quarter view, both hands on the maul shaft, feet planted, the helmed head at the top of the body with the maul head allowed to rise above it. Overall height to width about 1.6 to 1.",
+    "palette": "pale blue-grey skin, white beard, dark iron helm, brown-grey hide with white fur trim, grey stone maul head on a dark wooden haft."
+   }
+  },
+  {
+   "asset_id": "snow-giant-boulder-thrower",
+   "native_name": "snow giant boulder thrower",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/snow-giant.lua",
+     "sha256": "0d1acc9131e7c4691f3c5213bbf33b8f5c13bb2c1e9de93c53dfd10cac6eb042",
+     "line": 77,
+     "anchor": "name = \"snow giant boulder thrower\""
+    }
+   ],
+   "desc": "A towering creature, humanoid but huge. It wields a giant maul and does not look friendly.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/snow-giant-boulder-thrower.png",
+     "sha256": "4099f8c2fa8e86731ab67c14e834ea85b6a07c5459491b3d4d6aa627daa8cadf",
+     "role": "style",
+     "note": "The shipped flat snow-giant-boulder-thrower token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ice_snow_giant_boulder_thrower.png",
+     "sha256": "b1f5e779aedd1dfabdd0b9e5cd495949c8179093d826e55a7acbb622e8356ae4",
+     "role": "identity",
+     "note": "Native snow-giant-boulder-thrower sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/snow-giant.png",
+     "sha256": "7c8cd34d093bf3a84a6d6eb6ba23600e1b35a034c6095cce310c4cfd6afff2a7",
+     "role": "family",
+     "note": "The shipped generic snow giant token shares this body plan and palette, so it is the token this one must stay clearly distinct from; do not copy its pose, gear or silhouette."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ice_snow_giant_boulder_thrower.png",
+     "sha256": "b1f5e779aedd1dfabdd0b9e5cd495949c8179093d826e55a7acbb622e8356ae4"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/snow-giant-boulder-thrower.png",
+     "sha256": "4099f8c2fa8e86731ab67c14e834ea85b6a07c5459491b3d4d6aa627daa8cadf"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "snow giant boulder thrower: a towering snow giant in a leather harness and fur kilt with pale blue-grey skin, both arms lifted straight overhead to steady a huge rough granite boulder. Match the shipped token's tan and blue-grey colouring and the raised-boulder pose of the native sprite.",
+    "contrast": "Taller than wide: the body stands at full height with the arms vertical and the boulder directly above the head, adding height but no width. Keep the elbows in; do not spread the arms.",
+    "composition": "Full body, upright standing front view, both arms raised overhead holding one big boulder, feet planted, the head just below the boulder. Overall height to width about 1.7 to 1, with the boulder allowed above the head.",
+    "palette": "pale blue-grey skin, brown leather harness and fur kilt, grey-brown granite boulder."
+   }
+  },
+  {
+   "asset_id": "snow-giant-thunderer",
+   "native_name": "snow giant thunderer",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/snow-giant.lua",
+     "sha256": "0d1acc9131e7c4691f3c5213bbf33b8f5c13bb2c1e9de93c53dfd10cac6eb042",
+     "line": 64,
+     "anchor": "name = \"snow giant thunderer\""
+    }
+   ],
+   "desc": "A towering creature, humanoid but huge. It wields a giant maul and does not look friendly. Lightning crackles over its body.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/snow-giant-thunderer.png",
+     "sha256": "3c76bf0d6ff81747f1e4c4cd59c8d31feb0685846e5f306303677b3e8b16ba45",
+     "role": "style",
+     "note": "The shipped flat snow-giant-thunderer token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ice_snow_giant_thunderer.png",
+     "sha256": "1e30f11c0f377888b834f6a569242435841dfec80342d687803a4d78101b19f4",
+     "role": "identity",
+     "note": "Native snow-giant-thunderer sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/snow-giant.png",
+     "sha256": "7c8cd34d093bf3a84a6d6eb6ba23600e1b35a034c6095cce310c4cfd6afff2a7",
+     "role": "family",
+     "note": "The shipped generic snow giant token shares this body plan and palette, so it is the token this one must stay clearly distinct from; do not copy its pose, gear or silhouette."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ice_snow_giant_thunderer.png",
+     "sha256": "1e30f11c0f377888b834f6a569242435841dfec80342d687803a4d78101b19f4"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/snow-giant-thunderer.png",
+     "sha256": "3c76bf0d6ff81747f1e4c4cd59c8d31feb0685846e5f306303677b3e8b16ba45"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "snow giant thunderer: a towering bald snow giant with a short white beard, a heavy fur mantle over the shoulders and a single huge stone maul gripped in both hands, pale blue-grey skin. Match the shipped token's pale blue skin and the maul of the native sprite.",
+    "contrast": "Taller than wide: stand at full height holding the maul diagonally across the front of the body, both hands on the shaft, the stone head low beside one boot so it stays inside the body width. No lightning, sparks, glow or aura anywhere; it differs from the chieftain by the fur mantle, the bare head instead of a horned helm, and the low across-body grip.",
+    "composition": "Full body, upright standing front three-quarter view, maul diagonal across the body with its head near the ground, feet apart, bare head at the top of the frame. Overall height to width about 1.7 to 1.",
+    "palette": "pale blue-grey skin, white beard, dark grey-brown fur mantle, grey stone maul head on a wooden haft."
+   }
+  }
+ ]
+}

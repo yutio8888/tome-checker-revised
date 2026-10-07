@@ -3,8 +3,8 @@
   "assets": [
     {
       "id": "lady-zoisla",
-      "master": "masters/lady-zoisla-v2.png",
-      "sha256": "61f37bf107960a47222e37a3f275b840979aae5c2a2259c7e4f127f7685c86f6",
+      "master": "masters/lady-zoisla-v3.png",
+      "sha256": "ac65327d641219676f9ab1b3a621e06d30569b9f01160995a90cee708212cf1f",
       "exports": [
         {
           "path": "sprites/48/lady-zoisla.png",
@@ -12,18 +12,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            86,
-            76,
+            85,
+            73,
             1167,
-            1170
+            1174
           ],
           "export_window": [
-            -9.546512,
-            -13.046512,
-            1272.093023
+            -14.116279,
+            -16.616279,
+            1280.232558
           ],
           "target_occupancy": 0.86,
-          "sha256": "aef3b0b856b71782f0d4e7797c8cda3155aa43c7b379d7762d94e3c1e19f22f1"
+          "sha256": "83de633bee2297fe0c7bed739eee7d2b7a0e7c9f6ac250898866075a1f322507"
         },
         {
           "path": "sprites/64/lady-zoisla.png",
@@ -31,18 +31,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            86,
-            76,
+            85,
+            73,
             1167,
-            1170
+            1174
           ],
           "export_window": [
-            -9.546512,
-            -13.046512,
-            1272.093023
+            -14.116279,
+            -16.616279,
+            1280.232558
           ],
           "target_occupancy": 0.86,
-          "sha256": "4ae1666a52a06e73acaeeb5a803fd8de19c7a44a2df3c6596f0bd7a4a70690b7"
+          "sha256": "1b4a674f9d28875985f7595e703192d8d3487599fb990806192ebba22250ab4b"
         },
         {
           "path": "sprites/96/lady-zoisla.png",
@@ -50,18 +50,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            86,
-            76,
+            85,
+            73,
             1167,
-            1170
+            1174
           ],
           "export_window": [
-            -9.546512,
-            -13.046512,
-            1272.093023
+            -14.116279,
+            -16.616279,
+            1280.232558
           ],
           "target_occupancy": 0.86,
-          "sha256": "12fb65b36fff112f1300cfa69256c11f0e54fed76ec4d07a5625b32db9358e63"
+          "sha256": "ab7513a38197fc8999acf0f2736d4f2baf971a57a8f8d23b09e65bb9621a67aa"
         },
         {
           "path": "sprites/128/lady-zoisla.png",
@@ -69,18 +69,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            86,
-            76,
+            85,
+            73,
             1167,
-            1170
+            1174
           ],
           "export_window": [
-            -9.546512,
-            -13.046512,
-            1272.093023
+            -14.116279,
+            -16.616279,
+            1280.232558
           ],
           "target_occupancy": 0.86,
-          "sha256": "e687d2733faf44a22c78e2acd1a46824974c96eca10ddac6b78acd4603298d2b"
+          "sha256": "2851c85b50362063ffc231913ecb02eaa7a1f1b7743436072e295239cff0f49a"
         },
         {
           "path": "sprites/256/lady-zoisla.png",
@@ -88,18 +88,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            86,
-            76,
+            85,
+            73,
             1167,
-            1170
+            1174
           ],
           "export_window": [
-            -9.546512,
-            -13.046512,
-            1272.093023
+            -14.116279,
+            -16.616279,
+            1280.232558
           ],
           "target_occupancy": 0.86,
-          "sha256": "07456e4f412977e69c8fb94e680498aabb9bbe703b41d89950ff249b21376893"
+          "sha256": "3c939dadfbf08f8d1f699429f881493f45e55b76630ad81e6b22db3446e0e31d"
         }
       ],
       "style_gate": {
@@ -113,9 +113,9 @@
           74.33,
           76.42
         ],
-        "base_drift": -5.11,
-        "max_sector_intrusion": 0.26,
-        "max_opaque_radius": 0.8599,
+        "base_drift": -5.78,
+        "max_sector_intrusion": 3.37,
+        "max_opaque_radius": 0.8576,
         "blocking": [],
         "warnings": [],
         "grandfathered": false,

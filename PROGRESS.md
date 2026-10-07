@@ -1,6 +1,271 @@
 # 当前进度与续接入口
 
-更新时间：2026-10-01。接续开发先读本文；已验证交付、历史结果与未完成范围分别记录。
+更新时间：2026-10-06。接续开发先读本文；已验证交付、历史结果与未完成范围分别记录。
+
+## 当前交付：0.6.33（2026-10-06；开发侧外测包）
+
+- 源码版本提交 `199e0feb`。怪物目录 **476** 身份，**59** 立绘默认开启（>=24px，16px平面回退），无独立玩家立绘开关。普通1.25×分层试验默认关闭；生命／盾弧已改原生战术血条／盾粒子，阵营环保持完整，实际行为优先于旧AGENTS环语义。朝向默认固定，可选native；SQUARE/TALL光环与身体按精确几何对齐，rank/front-particle修复已纳入。
+- 外测ZIP明确交付，搭配现成Board HUD **0.2.8**，HUD仓库未改未重建。dist TEAA SHA `3fcadf2e18c1a2fbecb98a3fa48841c9ef0cb95c5842c4808e94dfcc4cb13843`（76,182,229B）；外测ZIP SHA `ec148ace6f5b2bb12b40d33a3409672df423d36de31328735f25ae1f03dceebb`（76,280,710B）；all-STORED SHA `f21aa51b14d8943e67a20fca28b0ccda89d48c84cc4324fa507d3199b2e84e7a`（76,743,191B）；HUD SHA `f2f5e587b3210e68ffb63475b67c591cb4fd059e523ab7846c2c82456cc1794f`（60,310B）。路径与完整证据见[runtime-v0633](evidence/runtime-v0633/README.md)。
+- 干净git archive＋REAL engines/modules：23Lua、614production、dead-assets、151standee-height、scoped cached diff全部PASS。2594members source/dist/stored一致，2564PNG STORED；ZIP内HUD与现成dist字节一致，无禁入内容。
+- 两包归档安装8独立cold scenes：英／简中48/64crowd（含batch1–4与Briagh）、64px snow giant body_of_fire/essence、16pxflat、TA-2、ordinary flat、巨魔沼泽地形、Classic简中HUD。两包安装SHA逐场读取确认，0Lua/step errors，127裁切逐张打开；8game/Xvfb对仅按记录PID与cmdline停止。无产品失败，无公共推送/标签/GitHub操作。
+- 地形设置73地名简繁均官方匹配，无locale修正／新设置文本；新指南纠正6旧别名。staged/paused与animated aura区分明确，不声称完整save loading或连续战斗；立绘会遮挡上排，既有R52/R53历史失败与INFORMATIVE限制仍保留。后续运动包未实现。
+
+## R53 final Briagh：58 → 59 validated（2026-10-06）
+
+- Coordinator接受Briagh。R53c uniform lighting/precondition完成：native thunderstorm event设shown=.3、关闭map light；旧midstart只恢复lit/remembered，不恢复tint。固定patch直接调用native event的diagnostic再现attenuation，Briagh/order/clearAround不改变tint。旧event flag未记录，历史归因明确保留inference限制。具体数值、源文件、state及sheet见[R53 final evidence](evidence/token-standee-briagh-20261006/README.md)。
+- 每actor baseline及native FOV后统一shown1/lite3/seen1；关daynight/smooth-FOV，移除随机lighting callback/effect并记录。R52 floor注册meanRGB69.926432291667，±10%；三baseline及ON/NATIVE首尾frame均须裸floor且在range，否则INVALID(lighting)，不计pass/fail。旧五FAIL、counts、crops、sheets及R53b diagnosis保留history。Threshold、15-frame/test floor、geometry/regions不改；target cadence0.3s，endpoint lighting query latency及actual intervals记录。
+- R53d final source10426eb0 clean-archive TEAA重新cold：whole14-actor aura+dedicatedForge；七facing保留R53c。另cold12case dim scene为纯INFORMATIVE，不计gate。84/84 aura；1101/1101 counted、26 INFORMATIVE，VALID，missing[]。15个未受影响的R53cold regression scene（含zh_hans/16px）保留；所有fresh sheets已逐张打开。Briagh asym0.257123<0.30，无new eligible subject；既有five qualifying facing按原SNR≥3规则，Bill/Norgos统一INFORMATIVE。
+- Native-tall1.734375、BODY_TOP18（whole head/crest）、不width-bind、on-screen1.734375cells；TALL128×256 auraquad1.1171875×2.234375；32/48/64 body PASS，dragon crowd部分遮后排，不称无遮挡。
+- REAL clean archive gates：23Lua/614production、dead none、151height、59scale(1e-9)/art+0.5headroom/diagonal/raster、scoped cached diff PASS。58旧layers/auras、702旧layer PNG、2562 R52packagePNG全byte-identical。Lightfix仅tools/tests/evidence，runtime payload2594entries不变，R53d仅重建clean-HEAD验证TEAA以固定capture provenance，payload不变。
+- Installed test TEAA0.6.32=76,182,229bytes，R52+92,973；2564PNG STORED；clean source/installed全entry byte一致。无normal save/chat/imagegen/version bump/CHANGELOG/release。源commit bdea9b8d、a9f15040、62396336；evidence commit1cc2e615，final clean-archive HEAD1cc2e615 gates全PASS（audit commit见Git）。
+
+- R53d review fixes：aura label统一INVALID(lighting)，effect frame1/15 floor validity；dim reference21.126302±10%独立SHA/crop，Bill+snow giant×twoeffects×32/48/64仅INFORMATIVE。无double tint；native body underlay与addon floor underlay/white overdraw及alpha blend让threshold12 mask受contrast影响。提出single-body compositor供coordinator决定，runtime不改。[review diagnosis](evidence/token-standee-briagh-20261006/review-fixes/aura-lighting-cause.md)。Source10426eb0；fresh主scene不再来自bdea。
+
+- R53d evidence commit b3ac5976 clean archive：23Lua/614production及所有static/dead/height gates PASS；安装TEAA SHA c6c03f38…、2594entries与final archive逐字节一致；35 fresh sheets逐张打开，78 retained byte-identical，1146floor parity。Source10426eb0；audit-only commit见Git。[final gates](evidence/token-standee-briagh-20261006/review-fixes/final-gates.json)。
+
+## R52 review ACCEPT WITH FIXES：52 → 58 validated（2026-10-06）
+
+- Any facing subject with shipped static aura asymmetry < 0.30 is INFORMATIVE, regardless of raw outcome, and counts neither as pass nor fail. Each batch facing verdict rests on its pre-selected qualifying subject (>= 0.30); R52 subject is Onilug. Raw metrics/checks and history remain intact.
+- saved fresh capture labels/assertions re-score approved：1021/1021 counted PASS，26 INFORMATIVE（Norgos raw13/13、Bill raw12/13）；raw1046/1047和Bill sign FAIL历史不改。5 qualifying facing PASS，R52 Onilug预选subject通过；78 aura/全部regressions PASS，0Lua/step errors，23 scenes VALID。
+- native own/upper flip新增左右crop margin equality loud assertion，7actors全48/48。static test独立aura continuous bbox centre，固定六new及Norgos fractions tolerance1e-6。Onilug BODY_TOP27保留，比review alpha>8 row26低1px≈0.004813cell，为保留既有fringe下body contour；staff不计，全部PNG/geometry不改。
+- clean archive aeb6960f gates：REAL engines/modules，23Lua/603production、dead none/151heights/58scale/headroom/diagonal/raster全PASS，scoped cached diff PASS；runtime byte审计见R52 README。只tools/tests/evidence/docs变更，不重建既有0.6.32 validation TEAA。此前raw-failure阻塞标签由本次uniform INFORMATIVE规则supersede，raw历史不变。
+
+## R52 历史：fresh capture后旧labelling，superseded by review（2026-10-06）
+
+- 用户按推荐批准三规则：whole-region strict15-frame median，ratio[0.6,1.5]/geometry不改；所有mirror排除实际badge/life-bar及mirror boxes，margin/sign不改；shipped alpha>8 XOR/body-axis fraction最高new≥0.30选Onilug0.792349（review≈0.81），Bill0.128135不eligible。band/still前三帧、height15/None0、Essence仅64、quad/headroom/scale/diagonal/raster及scene pause规则不改。
+- fresh16 cold scenes：全部78 aura、7 facing（prior5+Bill+Onilug）及rank/crowd/flat/zh_hans/open/repaint/sequential；保留7个不受影响regression scene，完整23 scenes 1046/1047 PASS，1 FAIL，0 Lua/step errors、VALID、无missing。所有sheet已打开；原Bill ratio32=.584137/64=.593797及negative facing FAIL全部历史frames保留，旧facing SNR1.916388判NOT DECIDABLE、不称PASS。fresh Bill ratios见README及完整78-row表；仅fresh capture可supersede。
+- fresh Bill SNR1.890188为NOT DECIDABLE，raw12/13：gain0.056738、frames0.020270/−0.012755/0.011765，every-frame-positive FAIL；排除实际badge/life-bar+mirror432px，body ratios0.429/0.268、quad placement均PASS。Onilug SNR4.281372/gain0.274/noise0.168/排除270px，13/13PASS；未改sign/margin、未retry。Bill所有fresh ratios过0.6，minimum0.605738，仅高0.005738；78/78aura VALID/PASS。
+- 所有6 body32/48/64/48contact/troll crowd先前PASS保持；Onilug BODY_TOP27不计staff，其余18且Twin arms是body；native-tall height1.015625–1.0625，全部不width-bind、SQUARE1.581139²cells。58layers/auras及全部700layer-related source/runtimePNG hash byte-identical，既有52/R51全部2550PNG identity延续。
+- clean archive REAL engines/modules过23Lua/600production、dead none/151heights/58geometry/raster；test floor不降。installed clean4974832e TEAA0.6.32=76,089,256bytes，R51+501,818，2592entries/2562PNG STORED，payload同原build；final evidence HEAD再归档/gates/build。76历史/当前自启动process核实停止。不升版/CHANGELOG/release/imagegen/normal saves/chat。详见[R52 final证据](evidence/token-standee-batch4-20261006/README.md)。
+
+- 完整evidence HEAD7b5d0f47 clean archive复验23Lua/600production和全部static gates PASS；TEAA76,089,256bytes、payload与fresh installed6e73c28d…逐条一致，差异仅ZIP timestamps。final audit docs提交后再对最终HEAD clean归档/gates/build；Bill NOT DECIDABLE/raw sign FAIL仍保留，不能声称全部raw gates通过。
+
+## R52 历史source wiring：52 → 58；原live FAIL保留（2026-10-06）
+
+- 六个batch4全部native-tall且height>1；Clone采用a6b58fdf attempt2。Onilug BODY_TOP=27（staff不计body，art top18差9px），其余18；全部不width-bind、SQUARE aura1.58113883008419²cells。18 actor-size/54 OFF/ON/NATIVE、48contact及troll crowd均人工PASS；16px含六新id flat3/3、cold zh_hans2/2。
+- 完整22 cold scenes、1031/1034 checks PASS、3真实FAIL、0 Lua/step errors、scene VALID且无missing。既有72 aura cases及五facing actors13/13全PASS；其余crowd/rank/open/repaint/sequential/top/wide及batch1/2/3均完成。Forge innate为无threshold的visual diagnostic。所有final sheets打开并记录hash，全部44个自启动game/Xvfb核实已停止。
+- Bill Essence whole-aura ratio32=0.584137、64=0.593797<0.6（48=0.784654）；所有required15-frame height PASS，essence仅64判height。Bill facing12/13：fixed0px、body mirror0.474/0.268、quad placement PASS且bottom−0.144px；gain−0.028、frames−0.034/−0.067/−0.058、mirrorIoU0.750529<plain0.767343、noise0.204、SNR1.916388。SNR<3仅marginN/A不豁免sign。保留first valid sample全部frames和diagnosis，未改threshold/重采替换，**不能宣称validated58**；图像/census不能证明精确runtime defect原因。
+- clean archive HEAD REAL engines/modules过23Lua/590production、dead/151height及全部58scale/headroom/diagonal/raster gates。现有52layers/auras、227旧source/runtimePNG及R51全部2550PNG bytes不变。
+- clean HEAD a775db0a installed validation TEAA0.6.32=76,089,256bytes，R51+501,818；2592entries/2562PNG STORED，source/installed一致，SHA256 e1cb346eeb1cf3451961f374d94c533f04abd24190079ad76c46e87643f18f7c。不升版、不CHANGELOG、不release。后续tools/tests/docs不改变payload；final HEAD重新归档审计。详见[R52证据](evidence/token-standee-batch4-20261006/README.md)。
+
+历史R52 archive audit（移自无关旧section）：Final complete-evidence HEAD `0f7d4577` archive gates:23 Lua/590 production, dead-assets/151 heights and all58 geometry/raster PASS; TEAA payload identical to installed live build. The audit commit only records these results; final read-only HEAD verification is kept in R52-scratch.
+
+## R51 independent review：ACCEPT WITH FIXES落实（2026-10-05）
+
+- aura height None帧按0高度计入完整15-frame median，不再丢弃；9None+6tall FAIL、2None+13tall PASS，native missing band也为0；原fixtures保留。已保存72×30=2160 rows中None=0，全部height结果和941checks完整verdict逐项一致，无需live重跑。
+- 测试独立固定52 standee ids并与runtime set equality；open/flat pause由coordinator批准，因token/style/rings/arcs无time-based drawing，realaura/facing保持unpaused且有static test。README明确前三帧still/aura-moves窗口由约1.6s变为约0.6s（0.3s cadence）。
+- 工具/测试/文档修正不触碰runtime payload；final-HEAD validation TEAA hash采用下方及README一致的7992bf91构建。其它构建仅ZIP timestamps不同、entries相同，无需重建TEAA。6af84840 clean archive REAL engines/modules复验23Lua/586production及全部dead/height/scale/headroom/diagonal/raster gates PASS；runtime2580entries与保留TEAA完全相同、245PNG hash不变。本audit提交后再验final HEAD，threshold/test floor不改。
+
+## R51 final：39 → 52 validated（2026-10-05）
+
+- 完整census 20scenes、941/941 PASS、0 Lua/step errors；接受的72/72 fresh aura、5/5 facing保持不变，16px fallback、zh_hans、crowd/rank均通过。open/repaint/sequential/top/wide/batch2/batch1全部cold PASS，所有sheet已打开。
+- 旧open16=50px位于flat ogre外的native scene corner，tokens-disabled同样可见。native burnt-tree wind控制在固定flag下OFF34/38、NATIVE39/44，pause后0/0；原随机terrain UID/variant未保存，精确来源不作确认。统一native API清理22actors，移除blood mage2+corruptor1 particles、0shader aura，residual0；冻结native animation，finally恢复。open16 whole-crop严格0changes，旧FAIL保留history，runtime/threshold未改。
+- repaint初次fixture footprint预检不足（5×4 vs ±3columns），修成7×4且保留native placement断言；失败setup留history，继续其余全部scene后cold重跑4/4。四新增tests，clean archive REAL engines/modules过23Lua/582production及dead/151height/1e-9/headroom/diagonal/raster gates。
+- 245 layer/aura PNG字节不变，原39identity延续；validation TEAA 0.6.32为75,587,438bytes，R50+1,164,412，2580entries/2550PNG STORED，clean archive source与installed payload逐条验证。不升版、不改CHANGELOG、不release。详见[R51 final证据](evidence/token-standee-batch3-20261005/README.md)。final-HEAD 7992bf91 validation TEAA SHA256 e6967acf1e1d5d6852d475b307d63a490e264e6352a4f10c8f860cd7f1f953b8，README一致；其它evidence/live builds仅ZIP timestamps不同，entries及其它ZIP entry metadata完全相同。以下是当时记录的历史失败与过程，已由final有效cold census supersede。
+
+## R51d 历史：scene-isolation跟进（2026-10-05）
+
+- 旧open16的50px来自ogre范围外的原生场景corner，tokens-disabled NATIVE同样可见。自然actor census该附近无actor；burnt-tree wind overhang是有支持的解释，旧随机terrain实体/variant未保存，不能声称精确恢复。native tree control在原坐标/80×64 crop中OFF固定flag仍变34/38px、tokens-disabled变39/44，pause后二者0/0；cold未隔离两次均0，不声称每次map都复现50。[诊断、source/控制与边界](evidence/token-standee-batch3-20261005/open-diagnosis/README.md)。
+- 2d8946fa以native APIs统一清理所有actor idle particles及shader-aura effects/sustains，且沿用pauseAnims冻结terrain shader tick，finally恢复动画。有效open冷启动22actor统一记录，移除blood mage2+corruptor1共3particles、0shader aura、residual0；open3/3，16px whole crop恰0changes，原50FAIL留history。runtime rendering/PNG/threshold未改。
+- repaint首次fixture setup失败：布局偏移±3却freeBlock只预检5×4，giant spider落在未预检右端。cd70da01按完整offset覆盖扩大该预检为7×4，保留placeAt free/visible断言及全部layout/门禁。4新增tests验证清理/异常恢复及完整footprint；clean archive源过23Lua/582production与全部audit。六后续scene继续运行，未因setup错误停止，完成后只以有效cold census结算。
+
+## R51 历史：approved完整aura/facing重采；open16失败（2026-10-05）
+
+- ba55562a落实用户“按推荐”：shared AURA_HEIGHT_FRAMES=15，所有actor/effect/32/48/64统一15ON/15NATIVE，0.3s；k、essence仅64高度、ratio/band/still前三帧及baseline3不改。facing绝对y centroid仅diagnostic，改为installed Style quad±1px内且bottom差≤1px；x≤6、两向dy差≤2、SNR/mirror/moment不改。8tests按批准fixtures覆盖；d1b37772去掉timed screenshot多余dialog round-trip以修正采样间隔，不改scene cleanup。
+- fresh冷启动72unique aura case全部VALID/PASS、全部15ON/NATIVE；五actor facing各13/13通过，所有bottom error−0.144px。Celia Body of Fire32/48/64高度0.495919、native0.0625、k0.300；仅fresh完整6case supersede旧FAIL，旧0.277及全部失败frames保存在history/pre-approved-rules，diagnostic没有复用。Rantha SNR7.355634，y−16.272831/−16.480368现在仅diagnostic，placement通过；Norgos SNR2.532566、margin N/A，其它gate通过。
+- 独立16px flat3/3（含Rantha）、zh_hans2/2、rank13/13、crowd10/10通过；中文UI及所有36新sheet已打开。当前14scene均0Lua/step errors。**后续open scene `open-16-flat`真实FAIL：80×64 OFF/ON crop有50changed pixels，门限必须0；bbox[71,55,80,64)在右下边缘，ogre standee/layered/box均false。原因未确定；未重采、未排除边缘、未改阈值。driver立即退出2并停止后续六scene（repaint/sequential/top/wide/batch2/batch1）。R51仍是39→52源码接入，不能标final52验证交付。**
+- 所有新game/Xvfb对均由processes.json、cmdline及STOP记录核实停止；245source/runtime layer/aura PNG逐字节不变、原39identity延续。d1b37772 clean archive、REAL engines/modules copies过23Lua/578production、dead none/151height/1e-9/headroom/diagonal/raster。validation TEAA75,587,438bytes，R50+1,164,412，2580payload、2550PNG STORED；最终证据HEAD再作clean gates/package审计，无升版/CHANGELOG/release。完整数字见[R51证据](evidence/token-standee-batch3-20261005/README.md)、[新blocker](evidence/token-standee-batch3-20261005/validation/approved-blocker.json)。
+
+- bc58699d证据HEAD clean archive复验23Lua/578production及全部audit通过；验证TEAA SHA256 800489069d825e481df58cfbf6d721ab3fd4b487d074fb9223bf9ec4488d2d46，payload与installed e2f6a8e8…完全相同（ZIP元数据可不同）。本审计提交后最终HEAD再在scratch归档检查/构建；真实stop仍是open16=50≠0。
+
+## R51 历史：approved规则已实现；fresh recapture待完成（2026-10-05）
+
+- 用户“按推荐”批准统一15-frame height median及quad placement；ba55562a接入AURA_HEIGHT_FRAMES=15共享contract，ON/NATIVE均15、0.3s；k及essence仅64、ratio/band/stillness前三帧、baseline3均不变。vertical绝对centroid仅diagnostic；bbox在Style quad±1px内且bottom差≤1px；x≤6、dy差≤2、mirror/SNR/moment不变。8新增tests包含2/15 pass、8/15 fail、count error、poisoned frames4–15不进入其它门禁，以及位移/old-disc/top反例和5actor双方向记录mask通过。
+- clean archive ba55562a、real engines/modules copies通过23Lua/578production、dead none、151heights及geometry/raster。旧Celia/Rantha FAIL与全部相关frames保存在history/pre-approved-rules；diagnostic不作为gate输入，只有fresh完整重采才可supersede。当前未宣称52验证交付。
+
+## R51 coordinator diagnostic（2026-10-05）：Celia FAIL保留；Rantha facing另有真实alignment FAIL
+
+- 438644c4保存五组DIAGNOSTIC ONLY：Celia body_of_fire32/48、ogre-guard32、rantha32、corrupted-daelach32，各15frames；原生cleanup与3baseline规则不变，全部VALID（drift0/0、残粒0/0/0）。实际request间隔0.300012–0.311685s；未改gate/threshold/detector/gate frame count。[分布及逐帧数据](evidence/token-standee-batch3-20261005/diagnostic/README.md)。
+- Celia32 min/median/max/std=0.245919/0.402169/0.495919/0.083853，14/15frames≥0.300，consecutive triples最低0.308419、13/13≥0.300；Celia48=0.204252/0.495919/0.495919/0.095278，13/15、triples最低0.225085、12/13。仅说明该sample有时变，不判定旧FAIL原因；原0.277<0.300 FAIL保留、等待coordinator。
+- Celia art row18是staff tip，body row35是头顶；flame gate以staff art top测，不以body。差0.116456281格、32/48px下3.726601/5.589901px。5diagnostic sheets及source layer全已打开。
+- 新asymmetric Rantha48px native facing完成12/13，SNR6.734737适用mirror gate；gain0.399、noise0.162、三frame gain0.396/0.343/0.353，mirror IoU0.843972>plain0.314459，mirror通过。但alignment左y=−16.013631902超过原|y|≤16门限，真实FAIL；右y−15.827641975，x1.369120654/−3.525205761。保留frames，未重采/改规则。两facing sheets已打开。
+- 按R51 real-gate stop规则driver停止，16px/zh_hans仍未启动。7新龙crowd此前已完成不重采。新diagnostic/facing均0Lua/step errors；原aura/body census内容未改，Celia FAIL不改；全census542/683、15missing、pass=false。两个新自启game/Xvfb pairs均验证/proc后停止，无普通存档/在线chat操作。52仍只源码接入，已验证交付39。
+
+- clean archive HEAD438644c4、real engines/modules copies复验23Lua、570production、dead none、151heights及geometry/raster门禁全过；runtime/detectors/builders、原39creature/aura hash再次核对不变。[followup gate log](evidence/token-standee-batch3-20261005/validation/gates-followup.log)。
+
+## R51 接入39→52源码完成；实机Celia32px真实门禁失败，未完成验证交付（2026-10-05；未升版）
+
+- 626b2d9d接入批次3全部13 accepted master；standee_ids39→52，layer_file_ids70（storm-wyrm与19ordinary重叠）。全部原生高、Style高度>1；BODY_TOP均18/256。Varsha/venom-wyrm宽帽后实机quad身体1.71875格，其余到cap；11TALL/2SQUARE。exact-affine builder与art+0.5共享余量未改。
+- 原39runtime/source creature layers与39runtime/source aura PNG逐字节不变；storm-wyrm原ordinary128px层升级为256px立绘，不属原39。13独立RGBa/EXTENT oracle bbox与shipped alpha>8 bbox完全一致，±1.5px/weak-edge规则不变。
+- acafbe99扩展原生13身份/scene/crowd，16px加入Rantha；旧unwired wide fallback对象venom-wyrm已接入，改用同高度且未接入的Briagh，不删门禁。clean HEAD用real engines/modules copies：23Lua、570production、dead none、151heights通过；1e-9/0.5headroom/diagonal/raster门禁全过。
+- batch3独立冷启动16/16checks、0Lua/step errors；39actor-size records、117OFF/ON/NATIVE crops，13个1x/3x sheets、48contact及相邻7龙crowd均已打开。脚/焰尾落盘、width与无crop clipping、32px可辨通过；全部侵入上格，前排venom/multi-hued部分遮挡后排Varsha/ice，不能称无遮挡。Snaproot NATIVE白矩形、ON无，未诊断原因；Fyrk/Zephyr/Ak保留innate effects的视觉对照不是aura baseline。
+- clean acafbe99验证TEAA75,587,438bytes，比R50最新74,423,026增加1,164,412；2580source/archive entries一致，2550PNG全部STORED，installed hash一致。仅验证、不升版/CHANGELOG/release。**Rantha/Arch Zephyr两effect×32/48/64全部12case VALID/PASS；扩展旧actor regression已评分48case中47PASS，Celia Body of Fire32px真实FAIL（median0.277<k0.300；ratio0.831、band17/17/18，baseline漂移/残粒0、still0）后按用户规则停止后续live。未重采/改threshold，原Celia PNG/geometry未改。52仅源码接入、验证交付仍39**。[R51证据](evidence/token-standee-batch3-20261005/README.md)。
+
+- 独立fixture command publication nil-read导致forge essence32 native setup timeout，独立记录1step error、0engine Lua Error；7fe86cb8将两个command writer改为atomic rename，静态验证，不宣称修复后实机已通过。不是Celia失败原因：Celia先已完整保存且baseline VALID。native facing、16px、zh_hans及其余regression未启动；census pass=false、530/671、16missing scenes。失败及全部已保存frames保留，六aura sheets及annotated failure sheet均已打开。两个自启game/Xvfb pairs全部停止，无普通存档/在线chat操作；未降门限/test floor。
+
+- 最终证据HEAD6d58e919再次clean archive验证：23Lua/570production、dead none、151heights及全部静态geometry/oracle通过；最终验证TEAA75,587,438bytes、2580payload entries与已安装实机包一致（ZIP元数据hash可不同），原39runtime/source creature/aura再次逐字节核对不变。停止条件仍为Celia真实height失败；未启动追加live。
+
+## R50k ACCEPT低优先级跟进完成（2026-10-05；未升版）
+
+- ff1b69fc恢复owned shader chain原生粒子顺序：back在body MO，front在last MO且不画boss ornament；Lua覆盖rank2/3.2/3.5/4、每emitter一次draw/check/shift及native fallback。fc3f1b7b增加独立PIL RGBa/EXTENT oracle，全部39的alpha>8 bbox与shipped aura完全一致；±1.5px containment不变，超过1.5px inward仅source boundary max≤16允许。horned-horror left inset2.416px，source max9，output8/7/5，明确uniform断言；不改PNG/geometry。
+- rare3.2 native createRandomBoss wolf和unique3.5 Burb，32/48/64 ON均0，NATIVE分别38/93/162、52/117/190px；rank4 Norgos ON0、NATIVE84/196/323。48px Norgos shield→Body of Fire三帧，ON/native front emitter均由last MO callback绘制、蓝盾在橙焰上；ornament ON0/0/0、NATIVE40/42/41。只覆盖记录setup顺序，不夸大全部activation order/自然combat；4张新sheet已打开。
+- established aura cold scene全部10actor×2effect×32/48/64×3frames复跑，60case VALID/PASS，原771checks继续通过；额外30rank/front checks通过，0engine Lua/step errors（一次fixture command transport nil-read恢复后同进程继续，详见证据），自启进程均停；全部更新aura三帧sheet已打开。essence64-only gate对旧rune-spinner48px0.285<k0.300是load-bearing，README显式保留diagnostic说明。
+- clean HEAD验证包74,423,026bytes（R49+1,706,077），payload与实机一致；39source/runtime layers及2525runtime PNG hash不变。real engines/modules copies，23Lua/570production tests、dead asset none、151height entries及scoped diff通过，证据finalHEAD再构建/检查。无version bump/CHANGELOG/release；[跟进证据](evidence/token-standee-batch2-20261004/review-followups/README.md)。
+
+## R50 原生白框诊断（2026-10-05；无代码改动）
+
+- Xhaiak arachnomancer与Rotting Titan均在addon完全未加载的vanilla48px冷启动出现own-cell白矩形；loaded/NATIVE同样出现，ON无白框。三cold run同fixture、Classic native HUD/无Board HUD、vanilla terrain、shader开、1920×1080/en_US；全部0Lua error，自启PID均停。
+- native定义均invis.png+1×2 add_mos；RGBA透明角white RGB/alpha0有效，fixture/runtime原生PNG与source hash一致。Xhaiak无particles、两者无actor shader/shader_auras；不是checker overlay。普通边缘filtering不足以解释整格白底；精确native compositor/SDL/GL原因尚未隔离，不虚称premult bug。按用户分支记录native/vanilla issue，不改addon/engine/PNG。
+- [a/b/c六crop、完整screenshots、1x/3x comparison与census](evidence/token-standee-batch2-20261004/native-box-diagnosis/README.md)已人工打开；当时Norgos facing FAIL/门禁/frames不变；后续approved applicability重判见下节，全部runtime PNG/layers hash不变。证据提交后clean finalHEAD门禁复跑，real engines/modules copies；未升版/CHANGELOG/release。
+
+## R50 final：立绘21→39验证完成，771/771通过（2026-10-05；未升版、验证包）
+
+- 用户2026-10-05“按推荐”批准mirror gain applicability：SNR=|L XOR mirror(L)|/(noise·|L|)，仅SNR≥3.0或conditional moment lopsided时适用原gain≥0.10且>noise+0.05；其它记N/A，但必须aggregate及每帧gain>0、mirrored IoU更高、native body own/upper mirror、aura alignment全部过。b144fb48实现pure helper+8tests，未改threshold/detector/geometry。
+- Norgos原saved48px Body of Fire frames重判 **PASS，margin N/A**；SNR2.340249，582/1067px，noise0.233，gain0.124，frames0.092/0.100/0.044，IoU0.728882>0.634221，own/upper MAD ratio0.528/0.211，alignment0.8px/0.2px，全条件通过。原0.124<0.283依旧记录diagnostic，原771-check FAIL census历史留档；无重采/换subject。其它9组历史/当前three-frame PASS仍applicable且PASS（R45noise0→∞；其余SNR4.342–5.648）。
+- 当前17scene **771/771，pass=true，0Lua/step errors**，全部60aura VALID/PASS。39standees即21→39验证交付；18id OFF/ON/NATIVE32/48/64共54records/162crops，36张1x/3x、全18contact、crowd、16px flat、zh_hans、Daelach/ogre facing及其它regression均已完成，所有sheet已打开。feet/disc、crop clipping、width、32px readability通过；row-above overlap明确记录，crowd中rotting-titan部分遮wrathroot，viewport顶边裁切仍可能，不夸大自然combat/full-save验证。
+- forge native sustain-off隔离Burning Wake一次，6/6PASS，12baseline零漂移/残粒；其余54case108baseline shader数0沿用。innate Burning Wake48px ungated对齐无可见clipping。用户批准essence仅64px高度gate，32/48高度diagnostic；k/band/ratio/median/still不变。native white-box三state诊断确认vanilla也出现，无addon/engine/PNG修复。
+- 39source+39runtime creature layers与d2141b72 hash一致，2525runtime PNG不变；0.5headroom、13S→T（28TALL/11SQUARE）与旧21aura identity声明退休不变。39affine1e-9、headroom/diagonal；A/B exclusive-right centre1px、flat53均维持。
+- clean finalHEAD archive验证TEAA74,423,036bytes，R49+1,706,087，2555entries/source byte一致、2525PNG ZIP_STORED、payload与实机安装包一致；仅验证，不升版/CHANGELOG/release。real engines/modules copies门禁23Lua、569production tests、dead-assets none、151heights通过，最终证据HEAD再跑；scoped diff检查，无暂存。
+- [当前R50证据](evidence/token-standee-batch2-20261004/README.md)、[census](evidence/token-standee-batch2-20261004/census.json)、[全部facing SNR重判](evidence/token-standee-batch2-20261004/validation/facing-applicability-rescore.json)。此前源/证据提交保持；本次b144fb48 applicability后最终证据提交，保留用户决策与失败历史。
+
+## R49 光环完整区域门禁与实体火苗带（2026-10-04；未升版、仅验证用打包）
+
+- 用户决定（2026-10-04）："PRIMARY aura gate: count aura pixels by difference in the WHOLE region above the actor's own cell top." R48/R48b 与 GPT-6.1-Sol 只读诊断均确认 TALL 路径无缺陷；旧上格漏掉头顶火苗（最大影响）和侧溢，立绘身体占上格更大也是实际视觉差异。本轮只改测量，**未改纹理、shader、运行时几何、版本或 CHANGELOG**。
+- 主区域：`tools/run_monster_live_validation.py:aura_score_region`，下界为演员自身格顶，上界为 ON 光环四边形／原生精灵四边形中较高的顶；横向包含自身列 ±0.5 格及两个四边形宽度，像素边界向外取整。由 ON 实机几何计算一次，NATIVE 复用同一固定区域，18 项区域一致断言全过。差分阈值仍 **12**，三帧计数取中位、仍除以 `reach_ratio`，主门禁仍 **[0.6,1.5]**；旧上格归一比保留在 `aura_upper_diagnostic`，不再作门禁。
+- 三演员 × 两效果 × 32/48/64：完整区域归一比 **18/18 通过，0.841–1.165**。heavy-bone-giant 暖焰 32px **0.977**，旧上格诊断 **0.565**；旧 32px 失败由用户选定的区域修正解决。逐演员／效果／尺寸完整比值、上下格差别、`k` 和三帧火苗带宽度见 [R49 证据表](evidence/token-standee-auraregion-20261004/README.md)。
+- `k=max(0.3格,0.6×原生火苗过顶高度)` 对所有演员生效；火苗顶必须有 **N=3 连续差分像素**，无单像素回退。另要求立绘艺术顶之上的行在至少 **2/3 帧**有该实体带。N 的依据：R48 保存的 18 张 ON 首帧首个实体顶连续宽 **4–20px**、过顶最大带宽 **12–44px**，3px 保留动画尖端收缩余量并排除单像素尖峰／离散斑点。本轮过顶带宽 **14–49px**，18 项均 **3/3 帧**；`k` 全部 **0.300**，ON 实体火苗高度 **0.317–0.409 格**，全过。新增四个单元检查覆盖三个真实演员几何、TALL 32px 边界、原生更高／宽四边形、单像素与离散噪点拒绝。
+- 实机：**12 个完成的独立冷启动**（11 en_US + `standee-crowd-zh-L1` zh_hans），shader 开、**1920×1080**、安装 TEAA；完整 census **287/287、pass=true、0 Lua Error、0 step error**。包含光环真实动画三帧、拥挤／单放／重绘／顺序效果、heavy-bone-giant 和 ogre-guard 朝向、顶行、宽体、16px 回退和 batch-1 回归。两个条件矩门禁均 **N/A**（平均偏移未同时达到 2px），其它朝向门禁全过；不得据此声称必须翻转分支已触发。四张最终接触／区域标注表均已打开人工审阅。
+- 验证包：由干净 `git archive HEAD` **`eb2f36a3`** 经 `tools/package_runtime.py` 构建 `tome-checker-revised-0.6.32.teaa`，SHA256 **`d8f2c9fb953157981f3fe404ecd2977fc4ee0025c46b093cf453d77d1bedee60`**，**72,716,949 字节**；2519 个条目逐项与归档源字节相同，2489 个 PNG 全为 ZIP_STORED；安装包哈希相同。仅验证用包在 R49 scratch 中，不是新版外部发布。
+- 门禁：使用 R48 的原生 engines/modules/src **实目录硬链接**布局，在 `eb2f36a3` 干净归档隔离副本运行：非 live／非 lifecycle Lua **23** 个、生产测试 **543** 项全过，死资产零，`build_standee_heights --check` **151 id up to date**；各提交的 scoped `git diff --cached --check` 通过。初次 symlink 布局导致 5 failure／8 error，属路径防逃逸检查触发的无效测试设置，已用硬链接纠正；证据日志 EOF 空行也已按用户要求清理，未删检查或改门限。
+- 过程透明性：首个 heavy-bone-giant 朝向尝试遇到 fixture bridge 的 nil-command 错误并超时，未形成有效朝向门禁结果；保留失败记录／日志，完全相同场景冷启动重跑通过。清理时中断的后续启动亦单独记录。有效 census 不含这两次未完成尝试；共 **14 次启动的记录 PID** 经 `/proc` 检查全部已停止，未触碰正常存档、未发在线聊天。
+- 提交：**`eb2f36a3`**（区域／实体带测量与 `tests/production/test_aura_region.py`）、**`c52db9e7`**（实机、四张审阅表、包字节与门禁证据）、**`131737a4`**（R48 README 限制项：引用用户决定并标记已解决）。证据：[token-standee-auraregion-20261004](evidence/token-standee-auraregion-20261004/README.md)。
+- 限制：隔离 fixture 的暂停／摆放场景；光环和朝向采样动画保持运行，静态 OFF/ON 比较暂停动画；未验证自然连续战斗或完整存档读取，只覆盖两种命名真实 shader 光环。R48 的历史数值保留，当前状态以本节和 R49 census 为准。
+- 已知窄边距（S1 复查记录）：ogre-guard `essence_of_the_dead` 32px 的 `k` 余量约 **0.5px**（中位行 40 通过、41 则失败）；heavy-bone-giant 朝向右向均值 **−1.94px**，逼近 **2px** 条件矩门限。任一项日后失败时先看图像再判回归。
+
+## R48 TALL 光环诊断、条件矩门禁与三演员光环覆盖（2026-10-04；未升版、未打包）
+
+- 本轮补完 R47 审查项（item 4 TALL 单元测试、item 5 措辞与源码钉、item 6 R46 附录、item 7 身体轮廓接触表、用户决定 1–3 高度／能量体豁免、item D R47 诚实性），并完成阻塞项 A–C：TALL 光环弱化诊断、`k` 检查非空下限、条件矩门禁与三演员光环场景。
+- item A 诊断（heavy-bone-giant，1.077×2.154、128×256、`reach_ratio` 0.997）：**不是几何／纹理缺陷**。忠实移植 `awesomeaura.frag`＋`build_sdm_ex` 的模拟显示 TALL 上格火苗 984px、原生 923px，比值 **1.066**（48/64 亦 1.07–1.09），纹理对角线并未让火苗变小。真实原因是**实心立绘挡住身后光环**：光环挂在 display body 上、立绘在 overlay `z+1` 画在其上（`checkerStandeeAura`/`getMapObjects`），故上格只测到身体轮廓外的可见光晕；原生精灵上格有 **28.1%** 半透明像素（立绘仅 6.6%），原生光环从半透处透出、抬高了参照。模拟的 TALL 可见光晕 **298px** 与实测 ON 帧 0 的 316px／3 帧中位 301px 吻合。另叠加两点：TALL 四边形顶比上格高 **0.401 格**（火苗余量落到上格再上一格），以及门禁只归一化“进入上格”而不含身体遮挡（ogre-guard 原始比 0.564–0.665、靠 `reach_ratio` 0.7105 归一后 0.79–0.94 通过；TALL 的 `reach_ratio` 0.997 使原始缺口暴露）。**结论：属既定设计下的固有结果，交用户决定；门限与 R46 TALL 规则均未改。** 诊断数字与标注图见 [token-standee-tallaura-20261004](evidence/token-standee-tallaura-20261004/README.md) 的 `sheets/tall-aura-diagnosis.png`／`-sim32.png`。
+- R49 更正主因：**评分上格之外的头顶火苗未被计入**（最大影响），立绘遮挡为第二因；R48 的“属固有结果”判断据此更新（见 R49 节）。
+- item A `k` 下限：`native_cells=0`（精灵填满画布、原生火苗被裁）时旧 `k=0.6×0` 失效；新增 `AURA_FLAME_ABOVE_TOP_FLOOR_CELLS=0.3`，即要求 ON 火苗顶达到 TALL 预留 `AURA_HEADROOM_CELLS=0.4` 的 75%。实测 ON 顶 0.394–0.409 格，18 格全过；有真实原生顶的精灵（snow-giant k=0.188、ogre-guard k=0.234）规则不变。
+- item A 运行时纹理尺寸（`game.log` 的 `==SDM` 读回，已入 census）：TALL 光环 **128×256**（`sdm_double=false`）、方形立绘光环 **256×256**、原生 1×2 光环 **64×128**、平图盘 **128×128→128×256**。
+- item B 条件矩门禁：恢复 R46 的整掩码一阶矩符号检查，但改为**条件式**——当左右两方向 `|moment|/N` 均 ≥2px（明显偏斜）时符号必须翻转，否则记录 **N/A**（`metrics['facing-aura-moment-gate']`）。恢复 R46 的 ogre-guard 原生朝向场景（`standee-facing-ogre-L1`），与 heavy-bone-giant 并列；两张场景的裁切文件名加演员 slug，避免互相覆盖。实测 heavy-bone-giant 矩 −769／−3062、均值 −0.380／−1.486；ogre-guard 矩 −474／+1739、均值 −0.412／+1.488：两者均未达 2px，门禁 **N/A**（ogre 符号仍翻转，若触发则满足）。逐帧镜像增益 heavy-bone-giant **0.318／0.340／0.328**、ogre-guard **0.318／0.353／0.369**（并集 0.386／0.407，噪声 0.149／0.181）；固定朝向逐像素相同。
+- item C 光环覆盖：`standee-aura-L1` 改为三演员、逐个单独摆放（`mb.clearAround` 间隔）：heavy-bone-giant（TALL）、snow-giant（方形、`body_top==alpha top`）、ogre-guard（方形、`body_top 38≠alpha top 18`）。18 格归一化比中 **17 格在 [0.6,1.5]**，唯一例外为 TALL 暖焰 32px（0.563，见 item A）；snow-giant 0.934–1.080、ogre-guard 0.794–0.936。逐演员 applied／off-applied-none／aura-moves／creature-still／follows-standee／base-invis／native-keeps-aura 全部通过。覆盖接触表见证据 `sheets/aura-upper-coverage.png`。
+- 实机（干净 `git archive HEAD`（`c4ad3307`）TEAA `tome-checker-revised-0.6.32.teaa` SHA256 `59fccf4d…e67f0`，**72,716,949** 字节；shader 开、1920×1080）：12 场景（11 en_US + `standee-crowd-zh-L1` zh_hans），**0 Lua Error、0 step error**，**251** 项断言 **250** 通过；唯一失败项 `aura-heavy-bone-giant-body_of_fire-32-upper-on-vs-native`＝0.563＜0.6，`pass=false`（原因同 R47，门限不改）。本轮 census 由**工作树**实机脚本产出，其 item A–C 改动随后以 `c99b35a7` 提交；TEAA 由 `c4ad3307` 的干净归档构建，两者分别说明。
+- 门禁（`git archive HEAD` 隔离副本）：非 live 纯 Lua **23** 个脚本、生产测试 **539** 项、死资产审计零、`build_standee_heights --check` 通过、暂存 diff 检查通过。
+- 证据：[token-standee-tallaura-20261004](evidence/token-standee-tallaura-20261004/README.md)。
+- 限制：暂停摆放场景，未验证自然连续战斗／整局读档；只验证两种真实 shader 光环；条件矩门禁在两个演员上均为 N/A，未触发必须翻转分支；TALL 暖焰 32px 低于固定门限，属固有原因、交用户决定。
+
+## R47 首批立绘接入（17 id，出货立绘 4 → 21）（2026-10-04；未升版、未打包）
+
+- 提交 `b5af9892`（接入 17 id：256px 立绘层、POT 光环、几何、BODY_TOP、测试）、`d8663ecd`（实机脚本：把 17 id 加入 `R39_STANDS`，新增 `standee-batch1` 场景，光环／朝向改用 heavy bone giant）、`65dcac41`（证据与 PROGRESS）、`370e106b`（fix：平图行空位、R47 原生朝向光环门禁）。`M.layer_file_ids` = **40**（19 普通 + 21 立绘）。
+- 接入的 17 个 id：heavy-bone-giant、runed-bone-giant、eternal-bone-giant、atamathon、heavy-sentinel、burb-snow-giant-champion、archlich、snow-giant-chieftain、snow-giant-boulder-thrower、snow-giant-thunderer、minotaur-maze、champion-of-urh-rok、ogre-warmaster、celia、dremling、forge-giant、healer-astelrid。全部原生高、`Style.standeeHeight` > 1.0（1.3125–1.75）。dremling 按用户决定保留黑皮立绘（与其 desc 一致），平图以后重绘。
+- BODY_TOP（256px 层坐标，头顶之上有武器／火焰时才设）：archlich 26（杖，冠顶 y=26）、snow-giant-chieftain 38（锤，角顶 y=38）、snow-giant-boulder-thrower 43（石在举拳之上，拳顶 y=43）、celia 35（杖，头顶 y=35）、forge-giant 40（头焰非身体，角尖 y=40）、healer-astelrid 44（棍，头顶 y=44）；其余 11 个默认 alpha 顶。**snow-giant-thunderer 经查无需条目**：兜帽顶 y=18 高于锤头 y=21。每 id 的 body_top／alpha top 线稿见证据 `sheets/body-top/`。
+- 宽度上限：17 个 id **全部不触顶**，屏幕上身体高度等于 cap（1.3125–1.75），无 <1.15 的返修项。
+- 光环形状按 R46 规则：`H=max(body+0.4, art+0.05)`，`H·√2≤2.6` 为方形 256×256，否则 1:2、128×256。本批 **9 个 TALL**（heavy-bone-giant、runed-bone-giant、atamathon、heavy-sentinel、burb、archlich、chieftain、boulder-thrower、minotaur-maze）／**8 个方形**（eternal-bone-giant、thunderer、champion-of-urh-rok、ogre-warmaster、celia、dremling、forge-giant、healer-astelrid）；TALL 分支首次有真实 id。四边形 w×h 与对角线逐 id 见证据 README。
+- 层字节：`data/gfx/tokens-layer/` 原有 **28** 个 PNG（含 4 个出货立绘的层与光环）重跑工具后逐字节不变；17 个 master 均带原生 alpha，**未跑 BiRefNet**；仅 `data/token-layer-geometry.lua` 与 `art/token-layers/geometry.json` 新增 17 条。3x 暗／亮底逐张检查：无光环、无破洞、无裁切（石、杖、锤、棍、头焰完整）。
+- 实机（干净 `git archive HEAD`（`d8663ecd`）TEAA `tome-checker-revised-0.6.32.teaa` SHA256 `1f3177aae63c99bda5d2590758be2ef7973fda444717df8d40b7921cf506d4ec`，**72,716,670** 字节，较 R46 的 71,041,789 字节 **+1,674,881** 字节／+1.60 MiB，全部 2489 个 PNG 为 ZIP_STORED）：shader 开、1920×1080，10 场景 en_US + `standee-crowd-zh-L1` zh_hans，**0** `Lua Error`。
+- 实机覆盖：17 个 id 全部按已验证的原生定义（通用／区域 npcs.lua，unique 带 `define_as`）生成并识别为自身，逐 id 在 32/48/64 出 OFF/ON/NATIVE 的 3 格宽×4 格高中心裁切（51 条，cap 1.0–1.75、`drawn<=cap`；脚在盘上、无裁切、32px 可辨为**人工看图判定，无机器断言**）；48px 相邻 7 个新立绘拥挤场景；16px 平图回退含 heavy-bone-giant；R43 回归场景（拥挤／单放／重绘／顶行／宽体／顺序）及 zh_hans 全通过。本轮 census 由一份尚未提交的实机脚本改动产出：17 id 加入 `R39_STANDS` 与 `standee-batch1` 场景随后才随 `d8663ecd` 提交；TEAA 由 `d8663ecd` 的干净归档构建。
+- 光环（TALL 新 id heavy bone giant，1.75，128×256）：`reach_ratio` 0.997，上格归一化 ON/NATIVE——body_of_fire 32/48/64 = **0.558**／0.617／0.666，essence_of_the_dead = 0.640／0.671／0.678；多数在 [0.6,1.5]，**唯一失败项是 body_of_fire 32px（0.558 < 0.6）**，故 `census.json` 的 `batch_standee_verdict.pass=false`。R47 原文“原生光环四边形约 2×2（面积 4）”的解释**错误**：原生精灵为 64×128（1×2、面积 2），本 TALL 四边形 1.077×2.154 更大、对角线 2.408。真实原因见 R48 证据 `token-standee-tallaura-20261004`：TALL 四边形顶端比上格高约 0.4 格，火苗余量落在上格再上一格；且立绘上半身比原生精灵更宽实、遮住侧向火苗。**未改门限、未改 R46 TALL 规则**。火苗过顶、applied、动画移动、creature-still≤1px、follows-standee、base-invis、native-keeps-aura 全部通过。
+- 原生朝向（同一 TALL id + 光环）：固定朝向两帧逐像素相同，原生自身格／上格翻转比 **0.249**／**0.139**（≤0.7）；光环按 `2a−1−x` 绕生物 bbox 中心镜像，asym 1314px、gain **0.380**、同向帧间 IoU 0.859（噪声 0.141），水平 1.2px、方向间竖直 0.8px。全掩码一阶矩符号未翻转（−697／−2554，作为指标保留，不作为 R47 门禁）。
+- 门禁（`git archive HEAD` 隔离副本）：非 live 纯 Lua **23** 个脚本、生产测试 **538** 项（新增 TALL 真实 id 覆盖项）、死资产审计零、`build_standee_heights --check` 通过、暂存 diff 检查通过。`tests/token_standee.lua` 的光环居中比较由 `< factor` 改为**含上界** `<= factor*(1+1e-9)`（文档注释的 1 texture px 边界）：healer-astelrid 的光环艺术轴恰为 1.0 texture px 偏差、必须含端点才通过，ravenous-horror 本也落在同一边界，未改其它门限。
+- 证据：[token-standee-batch1-20261004](evidence/token-standee-batch1-20261004/README.md)（`census.json`、`sheets/body-top/`、`sheets/cutout-dark-light/`、`sheets/contact-48-on-native.png`）。
+- 限制：暂停摆放场景，未验证自然连续战斗／整局读档；只验证两种真实 shader 光环；TALL 光环 32px 暖焰归一化比值低于门限（见上）；全掩码光环矩符号未翻转。
+
+## R46 立绘实体顶测量、方形／1:2 光环纹理与真实动画镜像（2026-10-04；未升版、未打包）
+
+- 提交 `2d565b58`（item 1：ninandra 头部辉光覆盖 1.140625 并重生成光环）、`06ae0439`（item 2：可复现 solid top 与边缘高度扫描）、`c4101e88`（item 3：保留三个能量体）、`57925dcf`（item 4：方形／1:2 POT 光环纹理）、`bb8422ce`（item 5：逐 id 双门禁与四 id 地板）、`a4d38727`（item 6：原生进入上格从第 64 行起算）、`9af81a35` + `826ddcd2`（item 7：动画运行下的镜像、`2a−1−x` 翻转、bbox 中心）、`23371db6`（item 8：`S<64` 颜色标志测试）。用户规则新增：半透明边缘（辉光／雾／斑点／镂空）的实体顶 = **第一行至少 6 个 alpha>128 像素**（solid top），可复现。
+- 用户决定 1：ninandra 出货立绘不豁免。原生精灵第 30-37 行是半透明白辉光，alpha>128 顶 y=38，`(126−38+1)/64−0.25 =` **1.140625**；光环 PNG 与几何重生（aura top 61/body_top 62 → 71/71），256px 层 PNG 不变。
+- 用户决定 2：`solid_top` 入工具（`tools/build_standee_heights.py:89`，`--solid` 于 `:270`）。weaver-queen 1.28125 → **1.234375**（顶 y=33）、duathedlen 1.28125 → **1.265625**（顶 y=31）、onilug 1.03125 → **1.015625**（顶 y=47）、archmage-tarelion 1.0 不变（顶 y=49→0.96875 被夹到平图）、ninandra 保持 1.140625（solid 顶 y=39 低 1/64，在 >1/64 报告阈值内）。扫描（`tools/sweep_standee_tops.py`）报告 **74** 个 solid top 与有效高度差 >1/64 的 id：全部保留（40 个为普通头／角／发轮廓、19 个已有 override、12 个 R45 已判定颜色标志、3 个能量体）；完整 74 行见证据 README。
+- 用户决定 3：greater-telugoroth 1.1875、ultimate-telugoroth 1.609375（desc: blurred form）与 daelach 1.71875（desc: cloud of fiery darkness）的辉光就是身体，保留派生高度；理由入 docs 与 `test_standee_heights.py:211`。
+- 用户决定 4：光环形状。`H = max(body+0.4, art+0.05)`。`H·√2 ≤ 2.6` 时为方形 `S = max(H, √2.5)`，256×256（不变）；否则 1:2，`h = max(H, 2.0)`、`w = h/2`，128×256 POT，`sdm_double=false`。纹理纵横比等于四边形纵横比；`standeeAuraQuad(box, canvas_w, canvas_h, height)` 返回 `dx,dy,w,h`；`Actor.checkerStandeeAura` 传 canvas_w/canvas_h 并设 `display_w/display_h`；`layerAuraGeometry` 回填两字段。四个出货立绘**均为方形**（H 1.478–1.806），重生成后 **28** 张层／光环 PNG 逐字节不变，仅几何新增 canvas_w/canvas_h；合成 TALL（body=1.75, art=2.10）为 w=1.075、h=2.15、对角线 2.404。
+- 用户决定 5（审查修复）：`standee_ids` 每个 id 断言 `standeeRule` 与 `standeeEligible` 为真；显式四 id 地板；`test_standee_heights.py` 的自指相等改为真实检查。
+- 用户决定 6：`native_into = (64 − ntop)/64`，`ntop` 跳过孤立像素（每行至少 3 个 alpha>8）。实测 snow-giant ntop=20、native_into **0.6875**（旧 0.6562），ogre-guard ntop=25、**0.6094**（旧 0.6719）；reach_ratio 0.9502／0.7105；归一化比 0.815–1.013，全在 [0.6,1.5]。
+- 用户决定 7：facing 光环捕获不再暂停动画（3 帧/方向，~0.3s），翻转用 `2a−1−x`，`centroid` 改 `bbox centre`（生物为 alpha 盒中心，光环仍为像素质心），对齐用 3 帧并集。镜像：asym **1190**px、gain **0.403**、同向帧间 IoU 中位 **0.812**（噪声 **0.188**，余量 +0.215）、水平矩 −536/+1799、水平 1.5px、竖直方向差 0.3px；阈值未改。
+- 门禁（`git archive HEAD` 隔离副本）：非 live 纯 Lua 全部通过、生产测试 **537** 项、死资产审计零、`build_standee_heights --check` 通过、暂存 diff 检查通过；CheckerTokenStyle 与 AG Actor.lua 的源码合同钉按有意变更重冻结。
+- 实机（干净 `git archive HEAD`（`23371db6`）TEAA `tome-checker-revised-0.6.32.teaa` SHA256 `1f20ff51…e50851`，shader 开、1920×1080，10 个场景 32/48/64，9 en_US + 1 zh_hans）：**0** `Lua Error`，`pass: true`（**168** 项断言）。证据见 [token-standee-shape-20261004](evidence/token-standee-shape-20261004/README.md)。
+- 限制：暂停摆放场景，未验证自然连续战斗／整局读档；只验证两种真实 shader 光环；TALL 纹理仅单元测试与合成几何，实机未见（当前无高立绘）；solid-top 扫描的 40 个“身体轮廓”未逐个重开（R45 已开过 12 个颜色标志 id）。
+
+## R45 光环“进入上格”归一化、非对称镜像、稀疏边缘高度与扫描修正（2026-10-03；未升版、未打包）
+
+- 提交 `f7eaeb07`（item 4：四个稀疏边缘高度 + 颜色扫描修正）、`66c859c9`（item 4 fix：CheckerTokenStyle 源码钉重冻结）、`80dd929e`（item 3：测试读取立绘表与 √2.5 精确断言）、`df21d3e5`（item 1：进入上格归一化光环门禁与 3 帧中位 k）、`9f9a9e98`（item 5：BODY_TOP 规则注释）、`cbd91b22` + `4ab842fe`（item 2：非对称区镜像）、本证据提交。用户规则新增：**稀疏或半透明边缘（鬃毛、斑点、雾、暗影、暖光）不算身体，按粒子处理**；BODY 仍为头／角／盔／发／抬起的手臂、翅膀与鳍；武器、法杖、法球、粒子、碎屑、火焰、闪电、光晕排除。
+- 身体高度（旧 → 新，均按原生 alpha>8 底边与 alpha>128 实体顶边）：archmage-tarelion 1.09375 → **1.0 平图**（41-46 行暖光排除，发顶 y=47）、duathedlen 1.40625 → **1.28125**（暗影排除，实体头顶 y=30）、onilug 1.125 → **1.03125**（暗影排除，尖刺顶 y=46）、weaver-queen 1.59375 → **1.28125**（稀疏鬃毛／斑点排除，实体顶 y=30）。计数：原生高图 **151**、覆盖 **46**、最终平图 **52**。
+- 光环：`reach_ratio` 改为“ON 立绘顶端进入上格的距离 ÷ 原生 alpha 顶端进入上格的距离”。脚在格心 + `standee_feet×disc` = **0.753** 格（格顶下方），故 `on_into = on_reach − 0.753`；原生按 `display_h=2/display_y=-1` 绘制，基座在格底，`native_into = native_reach − 1.0`。实测 snow-giant **0.9954**、ogre-guard **0.6444**，单一门禁 `ratio/reach_ratio ∈ [0.6,1.5]` 不变；本次归一化实测 0.848–1.033（R44 为 0.743–1.181）。`k` 改取 3 帧 NATIVE 火苗顶行的中位数（ON 亦然），全部通过。
+- 镜像：场景改用**非对称的 ogre-guard（锤子）**；每方向 3 帧，噪声基线 = 同方向帧间 `1 − IoU`；翻转轴为生物自身身体轴（creature centroid x），仅在非对称区 `asym = L xor flip(L)` 上计分 `gain = (|R∩flip(L)∩asym| − |R∩L∩asym|)/|asym|`。实测 `asym=1024`、`gain=0.335`、帧间 IoU=1.0（夹具暂停动画，噪声基线 0.0，余量 +0.285），水平矩 −946→+2314 变号；竖直方向差容差从 ≤6px 恢复为 **≤2px**（实测 0.3px），水平 ≤6px（实测 2.2px）。
+- 颜色扫描（`tools/sweep_standee_tops.py`）：保留 R44 前三行透明顶检查，亮／暖色检查扩到 8 行，低饱和阈值 `S<64`（可标出 burb 的 (155,194,212) 闪电，S=57），新增 **fog** 标志（alpha>8 顶与 alpha>128 顶相差 ≥6px）。在仍用派生高度的 id 中标出 **23** 个，均为 R44 已逐个看过的能量体／平图／叶片身体，无新 id；逐个判定见 [证据](evidence/token-standee-mirror-20261003/README.md)。
+- 门禁（`git archive HEAD` 隔离副本）：非 live 纯 Lua **23** 个脚本、生产测试 **533** 项、死资产审计零、`build_standee_heights --check` 通过、暂存 diff 检查通过。
+- 实机（干净 `git archive HEAD`（`cbd91b22`）TEAA `tome-checker-revised-0.6.32.teaa` SHA256 `2ac08f65…dd4f0b`，shader 开、1920×1080，10 个场景 32/48/64，en_US + zh_hans 各一）：**0** `Lua Error`，`pass: true`（**168** 项断言）。证据见 [token-standee-mirror-20261003](evidence/token-standee-mirror-20261003/README.md)。
+- 更正 R44：旧 `reach_ratio` 用脚到顶总高，使小身体的原始下限≈0.426（0.4 门限复活）；镜像旧检查只比裁切中线整掩码 IoU，增益仅 +0.055；颜色扫描漏掉半透明边缘；archmage-tarelion／duathedlen／onilug／weaver-queen 的“身体顶端”理由不实。
+- 限制：暂停摆放场景，未验证自然连续战斗／整局读档；只验证两种真实 shader 光环；镜像场景暂停动画，3 帧相同、噪声基线为 0，未测自然运动下的光环帧。
+
+## R44 光环几何归一化门禁、镜像 IoU 与身体高度复核（2026-10-03；未升版、未打包）
+
+- 提交 `4f131bac`（item 3：高度重测与颜色扫描）、`ba1f36af`（item 4：`AURA_MIN_QUAD_CELLS` 推导、测试公式、孤儿裁切）、`15c1bc5b`（item 1：几何归一化光环门禁与火苗过顶检查）、`d299d1aa`（item 2：镜像 IoU）、本证据提交。用户规则不变：高度 = `clamp(native BODY bbox 高度 − 0.25, 1.0, 1.75)`；身体 = 头／角／头盔／头发／抬起的手臂、翅膀与鳍；武器、法杖、法球、粒子、碎屑、火焰、闪电与光晕均排除，forge-giant 的头顶火焰不算身体（用户决定）。
+- 头部顶端约定统一为 `(bottom − head_top + 1)/64 − 0.25`，值与该行 y 一致。重测（旧 → 新）：snow-giant-thunderer 1.34375 → **1.40625**（头顶 y=20）、burb-snow-giant-champion 派生 1.65625 → **1.53125**（暗角 y=13）、forge-giant 1.40625 → **1.328125**（头顶 y=27）、ogre-guard 1.0625 → **1.078125**（头顶 y=43，光环 PNG 与几何重生）、celia 1.375 → **1.390625**（头顶 y=23）、xhaiak-arachnomancer 1.421875 → **1.4375**（肢顶 y=20）、snow-giant-boulder-thrower 1.453125 → **1.484375**（臂顶 y=15）；ogre-rune-spinner 仍为 1.296875，仅改为“抬起的手臂是身体；漩涡排除”。覆盖数 37 → **42**，最终平图仍 **51**，原生高图 **151**。
+- 颜色扫描（`tools/sweep_standee_tops.py`，检透明顶、亮光晕、暖火焰、脱离团块）在仍用派生高度的 id 中标出 32 个；其中 5 个是身体之外的实体效果并新增覆盖：burb（闪电）、gigantic-gravity-worm 1.40625、gigantic-sandworm-tunneler 1.40625（闪电）、heavy-sentinel 1.546875（骷髅上方橙光）、uruivellas 1.296875（角上方火焰光环，desc 明写 fiery aura）。其余 27 个为能量体自身或柔和体表（fire elemental、vortex、foliage、darkness shroud 等）或已是平图，保留派生高度；逐个判定见 [证据](evidence/token-standee-gates-20261003/README.md)。
+- 光环：删除按演员硬编码的 `AURA_RATIO_FLOOR`（0.4 是看到失败后加的）。改为每立绘同一门禁 `ratio / reach_ratio ∈ [0.6, 1.5]`：`ratio` 为上格 ON/NATIVE 中位像素差，`reach_ratio` 为 ON 立绘脚到 alpha 顶的静态高度（几何表 + `Style.standeeHeight`）除以原生 64×128 alpha 顶高度，写入普查 `aura_reach`。另加绝对检查：ON 光环差分掩码最高行须比立绘顶高至少 `k = 0.6 ×`（NATIVE 捕获中火苗高出原生顶的高度）；两者均记录于 `aura_flame`。归一化后实测 snow-giant 1.003–1.181、ogre-guard 0.743–0.942；k 检查全部通过。
+- 镜像：R43 的质心检查无法区分贴中线的镜像。改用光环差分掩码 IoU：`IoU(flip(left), right)=0.759 ≥ 0.7` 且 `> IoU(left, right)+0.05`（增益 +0.055）；“贴合”容差由 48px 收紧为水平 6px／方向间竖直差 6px（火焰上升最多 16px），实测水平 0.5px、竖直 13.3/13.4px。上格身体镜像比值 0.524，距 0.7 阈值 0.176，已在普查与证据中如实记录。
+- `AURA_MIN_QUAD_CELLS` 改为由原生 1×2 对角线推导：`sqrt(5)/sqrt(2)=sqrt(2.5)=1.5811388`；旧 1.65 无出处。四个立绘对角线 2.236–2.554 格，全在 2.2–2.6 内。`tests/token_standee.lua` 现在解析工具常量并断言精确公式 `quad = max(body+0.4, art+0.05, AURA_MIN)`，并恢复对顶部留白的上界；生产测试新增文档 FINAL 值与 `Style.standeeHeight` 的逐 id 对比。
+- 门禁（`git archive HEAD` 隔离副本）：非 live 纯 Lua **23** 个脚本、生产测试 **533** 项、死资产审计零、`build_standee_heights --check` 通过、暂存 diff 检查通过。
+- 实机（干净 `git archive HEAD`（`ba1f36af`）TEAA `9a97a5dc…52bee90`，shader 开、1920×1080，10 个场景 32/48/64，en_US + zh_hans 各一）：**0** `Lua Error`，`pass: true`（167 项断言）。证据见 [token-standee-gates-20261003](evidence/token-standee-gates-20261003/README.md)。
+- 更正 R43：`creature-still` 是看到失败后从 8 提到 16；0.4 机身门限是看到失败后加的；ogre-guard/celia 的手工头顶 y 差一（已按 `+1` 约定重算）；“光环已镜像”未被旧断言证明（旧断言只比质心）。
+- 限制：暂停摆放场景，未验证自然连续战斗／整局读档；只验证两种真实 shader 光环；镜像 IoU 增益 +0.055 仅略高于 +0.05 门限；镜像接受亚像素偏移（非像素相等）。
+
+## R43 立绘身体高度、覆盖修正与更严格实机断言（2026-10-03；未升版、未打包）
+
+- 提交 `929170be`（item 1：kra-tor 平图、ogre-guard 身体高度）、`141a4e72`（item 2：其余高度覆盖）、`ba24a8fc`（item 3：原生尺寸光环下限与对角线区间）、`56b3a295` + `b4c95eb6` + `80590933` + `52a8358a`（item 4：实机断言与观测光环比值记录）、本证据提交。用户规则不变：高度 = `clamp(原生 BODY bbox 高度 − 0.25, 1.0, 1.75)`，头部／角／头盔／头发／抬起的手臂、翅膀与鳍算身体，武器、法杖、法球、粒子、碎屑不算。
+- 出货立绘改为 **4 个**：ninandra、ogre-guard、snow-giant、ravenous-horror。`kra-tor` 原生 alpha 顶（y=38）是斧刃、头顶 y=55-56，身体约 1 格，覆盖 **1.0** 平图：退出 `standee_ids`，其立绘层与 R42 光环移入 `art/token-layers/archive-flat-body/kra-tor/`，平图 token 不变。`ogre-guard` 覆盖 1.359375 → **1.0625**（锤子与 1px 浮点；头顶 y=43），光环 PNG 与几何重生。`ravenous-horror` 保持 **1.25**，理由记为“鳍是身体（desc: spined fins）”。
+- 覆盖修正（旧 → 新，均为 1/64）：snow-giant-boulder-thrower 1.25 → **1.453125**；xhaiak-arachnomancer 1.25 → **1.421875**；celia 1.171875 → **1.375**；boiling-horror 1.2 → **1.0 平图**；ogre-warmaster 覆盖移除（尖盔即 alpha 顶，保留 derived **1.390625**）；naga-tidecaller 1.0 → **1.078125**；ogre-rune-spinner 1.3 → **1.296875**；snow-giant-thunderer 1.35 → **1.34375**；forge-giant 1.4 → **1.40625**。总计 **151** 个原生高图、**37** 个覆盖、**51** 个最终平图（final 1.0）。
+- 光环：`AURA_MIN_QUAD_CELLS=1.65` 让小身体也保持原生尺寸火焰；四个立绘对角线 2.331–2.546 格（全在 2.2–2.6 目标内）。上格 ON/NATIVE 中位比：snow-giant 0.80–0.98、ogre-guard 0.46–0.67（小型身体如实偏低，ogre-guard 的机身下限记为 0.4，原生尺寸的 snow-giant 仍为 0.6）。
+- 测试改用生产查表 `Style.standeeHeight(id)`，覆盖值真正被测；对角线区间恢复为目标 2.2–2.6。
+- 更强实机断言：原生朝向镜像**分别**在自身格与上方身体格上断言；朝向场景开启光环并断言光环差分质心相对身体质心镜像（≤2px）且贴合身体；`creature-still` 用 `|ON−OFF|` 掩码剔除光环像素、覆盖上方身体格，门限为数据依据的绝对值 16px（实测最大 4px）。
+- 门禁（`git archive HEAD` 隔离副本）：非 live 纯 Lua **23** 个脚本、生产测试 **531** 项、死资产审计零、`build_standee_heights --check` 通过、暂存 diff 检查通过。
+- 实机（干净 `git archive HEAD` TEAA `a62e3545…691a11e`，shader 开、1920×1080，10 个场景 32/48/64，en_US + zh_hans 各一）：**0** `Lua Error`，`pass: true`（155 项断言）。证据见 [token-standee-caps-20261003](evidence/token-standee-caps-20261003/README.md)。
+- 更正 R42 记录：ogre-guard 真实 drawn 身高 1.236 → 1.359（非表内 1.293 → 1.422）；“五立绘对角线全在 2.2–2.6”不实（kra-tor 2.185）；`creature_frames` 混入光环像素；“kra-tor 斧已排除”不实。
+- 限制：暂停摆放场景，未验证自然连续战斗／整局读档；只验证两种真实 shader 光环；镜像断言接受亚像素偏移（非像素相等）。
+
+## R42 立绘：身体高度、原生尺寸光环与真实原生朝向断言（2026-10-02；未升版、未打包）
+
+- 提交 `0213db74`（fix 1）、`0d82417d`（fix 2+3）、`41f36a8a`（fix 4）、`725eb011`（fix 5）、`d3098163`（fix 5b）、`48c473af`（fix 5b 收尾）、`21e1b6d1`（证据）。用户决定：抬起的**手臂和翅膀算身体**；立绘按 `body_top`（身体盒）缩放；武器、法杖、法球、粒子、碎屑不算。
+- 光环：R41 把光环纹理四边各补 128px，SDM 按纹理对角线归一化，火焰约为原生 2 倍。改为主要在 `body_top` 上方留 0.4 格；五个立绘的光环四边形对角线 2.19–2.61 格。每个效果的“上格计数”改为 NATIVE 的 **0.6–1.5 倍**区间（实测 0.84–1.07）；`body_of_fire` 与 `essence_of_the_dead` 分开、各自真实生效。
+- `body_top`：`tools/build_token_layers.py` 的 `BODY_TOP`（kra-tor 48、ogre-guard 38，其余默认 alpha 顶）写入 `data/token-layer-geometry.lua`；`standeeQuad` 按脚到 `body_top` 缩放到高度上限，武器可越出，宽度仍 ≤1 格。kra-tor 身体 0.985→1.141 格，ogre-guard 1.293→1.422 格，ninandra／ravenous-horror／snow-giant 不变。
+- 高度表：`docs/standee-body-review.md` 收录 **151** 个原生高图 id（derived／final／reason），**37** 个手工覆盖、50 个 1.0 平图；`tools/build_standee_heights.py --review` 遇未知 id 报错。R41 记录的“39 个覆盖”与“已排除武器／法杖／法球”不实，`body_of_fire` 场景实际应用的是 `essence_of_the_dead`，均已更正。
+- 原生朝向：R41 生产代码本就会镜像。R42 fix 5 的像素“镜像”断言把整张裁切连同静态背景一起翻转，又把 `clamp_box` 的角点当成宽高，因而恒失败；据此得出的“R41 从不镜像”结论错误。fix 5b 改为只比较朝向改变过的像素（差异掩码，排除静态背景）并加 1.5px 模糊容差；实机 `pass: true`。R42 草稿“只在 overlay 路径镜像”的前提（引擎会翻转回调绘制）经固定引擎探针证伪（引擎翻转只动底盘 204px，`state.body_flip` 在 overlay 与 body 两条路径都移动生物，二者不抵消），已回退，生产代码保持 R41。
+- 门禁（`git archive HEAD` 隔离副本）：非 live 纯 Lua **23** 个脚本、生产测试 **531** 项、死资产审计零、暂存 diff 检查通过。
+- 实机（干净 `git archive HEAD` 构建的 TEAA `e479f622…a43552`，成员内容 hash `4a0923c4…cb20d2`，与当前 HEAD 相同）：shader 开、1920×1080，10 个场景 32/48/64，en_US + zh_hans 各一，**0** `Lua Error`，`pass: true`。证据见 [token-standee-body-20261002](evidence/token-standee-body-20261002/README.md)。
+- 限制：暂停摆放场景，未验证自然连续战斗／整局读档；只验证两种真实 shader 光环；镜像断言接受亚像素偏移（非像素相等）。
+
+## 两格首领立绘 R33（2026-10-01；未升版、未打包）
+
+- 用户决定的“方案甲”已实现：≤48px 时 rank≥3.5 的首领在自身格子内保留 .92 圆盘、.035 细阵营环、徽记与**原生战术血条**，只把 BiRefNet 抠出的生物层放大为 ~1.85 格高（宽上限 ~1.3 格，脚底锚在圆盘中心 + .55 半径），向上伸入上一格，遮挡规则与原生 `display_h=2/display_y=-1` 高图一致；非首领高图（ogre guard、snow giant、bone giant、ravenous horror）由显式试验表收录。R32 分层默认关闭（`M.layer_trial=false`），立绘独立开关 `M.standee_trial` 默认开启；64/96px 与关旗逐像素不变。最终资格规则集中在 `M.standeeRule` 一个函数（现为 rank≥3.5 + 演示表），改一行即可切到 native_tall／两者。
+- 13 款立绘（9 首领 + 4 非首领高图）用同一 R30 BiRefNet venv 与 R32 抠图规则生成；4x 棋盘／中棕检查无光环、破洞；逐款判定见证据 README，本轮**无需重新生成立绘**。`tools/build_token_layers.py` 读 `M.layer_file_ids`（不再断言开关），并新出每层 alpha bbox 清单 `data/token-layer-geometry.lua`。
+- 绘制：`superload/mod/class/Actor.lua:279-306` 从 overlay pass（原生 shader-aura 之后）画立绘且**不裁到本格**；引擎按 z→行由上而下绘制，故立绘压住上一行、下一行随后压住其脚部。`CheckerTokenStyle.lua:114-131` 持有几何，`Game.lua:109-149` 做逐演员判定。
+- 门禁（`git archive HEAD` 隔离副本）：非 live Lua **22** 个脚本、生产测试 **516** 项、死资产审计零、暂存 diff 检查全过；UA/AG 两处命名被改运行文件的源码合同钉按有意变更重冻结。
+- 实机（隔离夹具，干净 HEAD 构建的 TEAA `676a561b…2de4b`，shader 开、1920×1080，en_US + zh_hans）：7 个场景、0 `Lua Error`、`pass: true`。48px 拥挤场景（19 演员，含竖排高图与“高图正上方”的首领）与单人场景的关／开、以及同场景 tokens-off 原生对照；墙下、可视顶行、50% 血 + 护盾 + 徽记、玩家相邻、凤凰火焰 A/B；64/96 关／开逐像素相同 (`changed_pixels=0`)。裁切人工逐张打开；证据见 [token-boss-tall-20261001](evidence/token-boss-tall-20261001/README.md)。
+- 限制：暂停摆放场景，未验证自然连续战斗／整局读档；顶行立绘可越出地图视口到背景，但 UI 在地图之后绘制；立绘高图肖像为离线合成，实机裁切为准。
+
+## HUD 0.2.8 单独发布（2026-10-01）
+
+- 用户要求 HUD 单独发布，暂不建 GitHub 仓库。`../tome-board-hud` 提交 `c97e0eb`、`627e2fc`、`78c7b52`，README 提交 `e6081d9`；运行时只比 `ef57223` 多了版本号改动。
+- `dist/tome-board-hud-0.2.8.teaa`：SHA256 `f2f5e587b3210e68ffb63475b67c591cb4fd059e523ab7846c2c82456cc1794f`，60,310 字节，16 个成员逐字节匹配源码，无 PNG。
+- 实机：生产 TEAA 冷启动 4 次，Lua 错误均为 0。覆盖 Classic 简体 1080p、Classic 繁体 1366×768、Classic 英文 1080p、Board 简体 1080p。证据见该仓库 `docs/validation/0.2.8.md`。
+- 组合外测 ZIP 尚未重建，仍含 HUD 0.2.7；下次棋子发布时一并更新。
+
+## 1.25× 分层小批量试验（R32，2026-10-01；未升版、未打包）
+
+- 提交 `ef9b5ef3`、`407a8564`。20 款棋子在 ≤48px 时，用 BiRefNet 抠出的生物层叠在标准空盘上，开关为 `M.layer_trial`，默认开启。64/96px 逐像素不变。
+- 实机效果提升有限：生物略大，但压住了圆环。用户已改选平面 .92 底盘（见下节）；分层是否保留，或只给首领用（两格立绘 R33），待用户看过实机结果后决定。证据见 `evidence/token-layers-trial-20261001/`。
+
+## 原生战术血条与棋子 .92 几何（2026-10-01；未升版、未打包）
+
+- 用户决定：棋子不再自画生命弧与护盾环；生命改用引擎原生战术血条，护盾恢复原生粒子。平面棋子随之放大到 .92 格圆盘 + .035 格细阵营环（外缘 .955 格，48px 留 1-2px 邻格间隙）；此为**有意的几何合同变更**，不是门限调整。
+- 改动（提交 `d706c4a1`）：`CheckerTokenStyle` 新增 `M.native_life_bar` / `nativeLifeFraction` / `nativeBarMode` / `nativeLifeBar`（逐行对应 `game/modules/tome/class/Actor.lua:1017-1036`、`1104-1121`、`1198-1229`、`1303-1308`），`token_diameter=.92`、`ring_lane=.035`、`geometry`；`superload/mod/class/Actor.lua` 环画在 body 层、徽记+原生血条在 overlay 顶层并按**格子原点与格子尺寸**落位，护盾粒子不再隐藏；`prepare_runtime_art.py` 的 `_relation-*` 遮罩迁到 .955 画布，删除 `_health-band`/`_shield-*`/`_relation-edge-*` 及运行 PNG；`CheckerRankColor` 预览、README、设置说明与简繁 locale 同步；`art_occupancy` 仍 .86。
+- 测试：新增 `tests/native_lifebar.lua`（解析原生 Actor.lua 钉住几何/四档阈值/RGB/alpha）、`tests/token_geometry.lua` 与 `tests/production/test_token_geometry.py`（钉住 .92/.035/.955、遮罩半径、删除件）；`tests/display_callback.lua` 取代 `shield_callback.lua`；删除 `shield_style.lua`、`ring_direction.lua`、`radial_health.lua`、`live_shields.lua`。AG/UA 源码合同钉与 UA unchanged-baseline 的遮罩哈希已按有意变更重冻结。
+- 门禁（`git archive HEAD` 隔离副本）：非 live 纯 Lua **21** 个脚本、生产测试 **514** 项、死资产审计零、暂存 diff 检查全过。
+- 实机（隔离夹具，干净副本 TEAA `c4a82a89755a862af51736db4f15241f2332eac13b98eb3723094e02a2eb7fc7`，shader 开、1920×1080，48/64/96，en_US）：四档血条在 64px 小框-底部/侧边、大战术框（`always_target='old'`）三种模式的带色采样 30/30 命中；无 `always_target` 棋子与原生都无血条；48px 分层 wolf 1.25× 与 native-tall greater multi-hued wyrm 单格棋子正常；带护盾怪无珍珠白护盾环且原生蓝色粒子可见（含分层 wolf）。证据见 [native-lifebar-live-20261001](evidence/native-lifebar-live-20261001/README.md)。
+- 追加（同一 R34 交付，提交 `08fc946b`）：R32 phoenix 已复现并修复。48px 直接 A/B（`M.layer_trial` 运行时切换 + `checkerRefreshVisuals`，OFF/ON 各 3 帧）显示：引擎把原生 shader-aura add_mos（凤凰 body_of_fire/burning_wake）链接在 token body 上并在 body display callback **之后**绘制；分层时该 aura add_mo 的 image 是空的 `_disc.png`（`game/modules/tome/class/Actor.lua:4262-4272`），于是盖住了 body callback 先画的 1.25× 生物。修复：有 overlay 时把 `checkerLayerCreature` 移到 overlay pass（chained aura 之后、徽记/血条之前），无 overlay 时才留在 body pass；只动分层路径。粒子表 OFF/ON 相同（front 空、back 1 个 toback 发射器、add_mos 3）。`tests/token_layers.lua` 增加 pass 拆分漂移测试。
+- 追加（同一 R34 交付）：从干净 HEAD 构建的同一 TEAA `8bb753e3…` 分别 zh_hans / zh_hant 冷启动（64px 小框-底部）；游戏选项→棋子颜色中“敌方圆环”与“恢复默认颜色”两行说明为新的简／繁文本（证据 `locale-help-sheet.png`），并各自出四档血条裁切（`barsheet-zh-hans-64-small-bottom.png`、`barsheet-zh-hant-64-small-bottom.png`）。
+- 限制：采集为暂停摆放场景，未验证自然连续战斗、整局跨进程读档与其他游戏版本；native 边框贴图压在原生血条上导致 ON/OFF 整格不会逐像素相同（棋子按决定不画边框）。
 
 ## 当前交付：0.6.32 —— 怪物 Batch AD–UB2（462 款）、召唤别名／时空复制与地形可读性发布（2026-10-01；按本任务要求不推送、不建 GitHub release）
 
@@ -320,7 +585,7 @@ ImageGen **17／28 次**（`gpt-6.1-sol`＋`--ephemeral`，逐次串行，只用
 
 - 逐项核对 11 名守关怪和 Trollmire 洪水池的六种 aquatic_critter；giant eel／dragon turtle 已覆盖，squid／ink squid 被原生池排除。heart-gloom 六种已知前缀复用精确鼠／狼身份；只有完全匹配的基础身份、图像、类型和显示合同通过。Ancient dragon turtle 只开放其精确非 unique 高体合同。
 - ImageGen 前台单图共 **21/26** 次；13 款候选中 10 款选中（6 款原门限通过、4 款按母版与 128px 导出双 SHA256 的单资产底盘明度豁免），运行目录现为 **64** 款。Shax、Horned Horror、Norgos Guardian 两次调用后仍不合格，保持原生图。共享门限不变；完整调用、失败、选图及 48／64／96px 彩色／灰度审图见 [美术记录](art/monster-batch-a/REVIEW.md)。
-- 本轮**没有启动游戏或夹具**；守关怪、Heart of the Gloom 改名、古龙龟高体及洪水池水生怪的实机 shader／分辨率／可见性检查仍待评审执行。纯 Lua 13 脚本、生产 Python 测试 70 项、死资产审计及源码差分检查为离线门禁；尚未进行 TEAA 安装验证。外部中文报告见 `/workspace/t-engine4/tmp/codex-monA/REPORT.md`。
+- 本轮**没有启动游戏或夹具**；守关怪、Heart of the Gloom 改名、古龙龟高体及洪水池水生怪的实机 shader／分辨率／可见性检查仍待评审执行。纯 Lua 13 脚本、生产 Python 测试 70 项、死资产审计及源码差分检查为离线门禁；尚未进行 TEAA 安装验证。外部中文报告见 `<workspace>/tmp/codex-monA/REPORT.md`。
 
 ## 虚空／时空地形三地区（2026-09-29；已提交 `c19e080`，纳入 0.6.23）
 
@@ -829,4 +1094,4 @@ ImageGen **17／28 次**（`gpt-6.1-sol`＋`--ephemeral`，逐次串行，只用
 
 - 原生源码核对 11 名目标：Shax、Horned Horror、Guardian Norgos 与两名显式单图骷髅（弓箭手、重甲战士）接入为精确候选，运行目录从 64 增至 **69** 款；skeleton magus、skeleton assassin、ghoul、ghast、ghoulking 缺显式 `image=`，不推断外观，保持原生。
 - ImageGen 前台单图 **10/24** 次；六款候选中三款原门限通过、三款 Shax／Horned Horror／Guardian Norgos 以母版及 128px 双 SHA256 锁定的底盘明度豁免经评审 2026-09-29 批准。全局门限未变；skeleton master archer 首稿与普通弓箭手几乎同形同色，缺少原生版的黑金重甲区分，评审拒收并撤回映射，保持原生（二稿 0.881 圆盘越界亦拒收）；待重做。[审图与调用](art/monster-batch-b/REVIEW.md)。
-- **本轮没有启动游戏或夹具。** 纯 Lua 11 脚本、地形 Lua 两脚本、生产 Python 71 项、死资产审计及源码差分检查通过；实机 shader／多尺寸／可见性与 TEAA 安装仍待验证。外部中文报告 `/workspace/t-engine4/tmp/codex-monB/REPORT.md`。
+- **本轮没有启动游戏或夹具。** 纯 Lua 11 脚本、地形 Lua 两脚本、生产 Python 71 项、死资产审计及源码差分检查通过；实机 shader／多尺寸／可见性与 TEAA 安装仍待验证。外部中文报告 `<workspace>/tmp/codex-monB/REPORT.md`。

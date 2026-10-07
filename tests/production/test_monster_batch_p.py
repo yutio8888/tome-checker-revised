@@ -18,7 +18,7 @@ SHIPPED = {
     'snow-giant': 'snow-giant-v2', 'snow-giant-thunderer': 'snow-giant-thunderer-v1',
     'snow-giant-boulder-thrower': 'snow-giant-boulder-thrower-v2', 'snow-giant-chieftain': 'snow-giant-chieftain-v1',
     'minotaur': 'minotaur-v3', 'mountain-troll': 'mountain-troll-v1', 'mountain-troll-thunderer': 'mountain-troll-thunderer-v1',
-    'ogre-guard': 'ogre-guard-v1', 'ogre-mauler': 'ogre-mauler-v1', 'ogre-rune-spinner': 'ogre-rune-spinner-v1',
+    'ogre-guard': 'ogre-guard-v1', 'ogre-mauler': 'ogre-mauler-v2', 'ogre-rune-spinner': 'ogre-rune-spinner-v1',
     'ogre-pounder': 'ogre-pounder-v1', 'healer-astelrid': 'healer-astelrid-v1',
 }
 NAMES = {
@@ -44,7 +44,7 @@ TALL = ('snow-giant', 'snow-giant-thunderer', 'snow-giant-boulder-thrower', 'sno
         'ogre-guard', 'ogre-mauler', 'ogre-rune-spinner', 'ogre-pounder')
 # Native sprite is 64x128 for every tall body (Astelrid included); the trolls are 64x64.
 NATIVE_TALL_SPRITE = TALL + ('healer-astelrid',)
-SUPERSEDED = {'minotaur': 'minotaur-v1'}
+SUPERSEDED = {'minotaur': 'minotaur-v1', 'ogre-mauler': 'ogre-mauler-v1'}
 FLOOR = 45.0
 
 

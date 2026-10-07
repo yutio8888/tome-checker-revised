@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "batch_id": "abyssal-horror-token-repaint-v1",
+  "assets": [
+    {
+      "asset_id": "abyssal-horror",
+      "native_name": "abyssal horror",
+      "scope": "lake-nur pool (general/npcs/horror_aquatic.lua:192, horror/aquatic, non-unique, no define_as, rank 3, base BASE_NPC_HORROR_AQUATIC, nice_tile tall body); the only definition of this name. FLAT TOKEN REPAINT after the survey decision of 2026-10-04: the shipped flat token (art/monster-batch-ac/masters/abyssal-horror-v1.png) is a bright blue-violet many-eyed tentacle blob whose own reference note even said 'instead of black' -- it contradicts the creature's own desc ('This pitch black form is shrouded in darkness. All you can make out are a pair of deep red eyes, hidden behind a mass of tentacles.'). This repaint restores the desc: a pitch-black mass of tentacles with exactly one pair of deep red eyes hidden in it. Flat-token size/canvas/format and the manifest mapping are unchanged; only the pixels are repainted. Old master under art/monster-batch-ac/superseded/abyssal-horror-v1.png and old runtime under .../abyssal-horror-v1-runtime-128.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 193,
+          "anchor": "name = \"abyssal horror\", color=colors.BLACK,"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 194,
+          "anchor": "desc = _t\"This pitch black form is shrouded in darkness."
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 195,
+          "anchor": "resolvers.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+          "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_HORROR_AQUATIC\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, light, camera and matte miniature finish; do not copy its creature. Match this disc's own lightness EXACTLY -- do not darken it further."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_aquatic_abyssal_horror.png",
+          "sha256": "76c45c6cdf6fefd9a3d50d60f73ede217da23b4c3196b2e2dbd7ec53fef0de27",
+          "role": "identity",
+          "note": "abyssal horror's actual native sprite (64x128 tall): a pitch-BLACK heaving mass of long tentacles with a SINGLE PAIR of deep red eyes hidden inside. Keep this silhouette and black value; do NOT copy the bright blue-violet colour or the many glowing eyes of the superseded flat token."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ac/superseded/abyssal-horror-v1.png",
+          "sha256": "431cf25f1b6c92955e867711bad3ffc98e53a27de58c505f5894a7444bcc2194",
+          "role": "family",
+          "note": "The SUPERSEDED flat token for this same identity: pose family, tentacle mass composition, disc and camera are correct and must be kept, but its bright blue-violet body colour and its cluster of many glowing pink/red eyes are the exact defect. Change ONLY the body colour to pitch black and the eyes to a single deep-red pair -- keep everything else."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A heaving, writhing MASS OF LONG TENTACLES coiled into one compact round heap, seen from a steep overhead three-quarter angle. The whole mass is PITCH BLACK -- a deep near-black ink-violet to charcoal, a real painted wet surface, not a flat silhouette -- with soft dark-violet and deep slate-teal sheen on the upper-left curves of the thickest tentacles and a thin cool blue-grey rim light along the upper-left outline so the mound reads as one crisp shape at 48/64/96 px. Deep between the coils glows a SINGLE PAIR of small deep-red eyes; there are EXACTLY TWO red eyes and NO other eyes, no eye clusters, no pink or orange glints anywhere. Faint pale-grey sucker rows are barely glimpsed in shadow under a few tentacles, but the mass stays overwhelmingly black and shrouded in darkness.",
+        "contrast": "Fifth aquatic-horror silhouette among the shipped horror tokens (entrenched horror = limestone pillar in a teal tentacle wreath; ravenous horror = fanged fish head; horned horror = purple horned beast; weirdling beast = purple-pink tentacled beast): abyssal horror must stay a heaving black tentacle mound. This repaint deliberately REVERSES the superseded bright blue-violet multi-eyed token: abyssal horror is PITCH BLACK with only ONE PAIR of deep red eyes, exactly as its own desc says ('This pitch black form is shrouded in darkness. All you can make out are a pair of deep red eyes, hidden behind a mass of tentacles.'). It stays legible not by a bright body but by wet dark-violet sheen and a thin cool rim on a black mass -- never a bright blue or purple body and never a cluster of many glowing eyes.",
+        "composition": "One compact complete tentacle mound on a single circular tabletop disc, steep overhead three-quarter camera; visible clean neutral base ring on every side. Keep the whole mound -- every tentacle tip, coil and cast shadow -- as one rounded mass well inside the inner three quarters of the disc radius, leaving a wide bare ring of base plate on every side; no tentacle tip or cast shadow may reach the outer sixth of the disc radius or cross the disc edge. Render the neutral disc -- including the whole outer-sixth ring band and the area under the black mound -- at EXACTLY the style reference's own brightness and colour: do NOT darken the disc for contrast, and apply no darkening bias, warm cast, glow, bounce light, gradient, vignette or contact shadow to the disc anywhere. DARK-SUBJECT DISCIPLINE: the near-black mound needs wet deep-violet sheen on its upper-left facing coils and a thin bright cool-grey rim light along its upper-left outline so the silhouette reads as a light-edged shape on the dark disc at 48/64/96 px -- not a flat featureless blob and not tiny glowing outlines. Do not brighten the body to compensate for the dark disc.",
+        "palette": "Deep near-black ink-violet and charcoal for the whole tentacle mass (clearly black even though it is a real painted wet surface, not a flat silhouette), with deep slate-teal and dark-violet sheen on the upper-left facing coils, a thin cool blue-grey rim light along the upper-left outline, barely visible pale-grey sucker rows deep in shadow, and EXACTLY ONE PAIR of small deep-red eyes glowing softly from inside the coils; no other eyes, no pink, no orange, no bright blue or purple body colour and no warpaint. Dry neutral charcoal-brown disc with restrained copper-grey bevel at exactly the style reference's own lightness -- unmodified, no extra darkening bias applied for contrast."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Identity re-verified against game/modules/tome data: name=\"abyssal horror\", color=colors.BLACK, type horror / subtype aquatic, unique=false, rank 3, base BASE_NPC_HORROR_AQUATIC, nice_tile invis.png + add_mos{image=npc/horror_aquatic_abyssal_horror.png, display_h=2, display_y=-1}, with the desc on the same definition. The shipped flat token is already mapped, so this repaint carries the required refinement brief: it supersedes the mapped abyssal-horror token, names the spent monster-batch-ac-4 pack, states the design-direction reversal (bright blue-violet many-eyed -> pitch-black single red-eyed pair to match the desc) and pins the earlier receipt and superseded art. Flat token size (128px), RGBA and manifest wiring are unchanged; only the artwork is repainted.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ac-20260930/source-contracts.json",
+          "sha256": "0155579f71ccada52cfda4bc5e67f586f964f8c3f7b3980125e483481bc96d25"
+        }
+      ],
+      "refinement": {
+        "supersedes": "abyssal-horror",
+        "previous_batch": "monster-batch-ac-4",
+        "design_change_reason": "The shipped flat token was deliberately designed AWAY from black (its own reference note said 'instead of black') to a bright blue-violet mass with a cluster of many glowing eyes, because an earlier review treated dark-on-dark as the risk. That directly contradicts abyssal horror's own desc: 'This pitch black form is shrouded in darkness. All you can make out are a pair of deep red eyes, hidden behind a mass of tentacles.' The user decision of 2026-10-04 reverses the design direction: the token must be pitch black with exactly ONE PAIR of deep red eyes, keeping the same tentacle-mass pose, disc and composition. Readability now comes from internal wet sheen and a thin cool rim on the black mass, not from a bright body. This is a flat-token repaint only; wiring and the manifest id are unchanged.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-ac/superseded/abyssal-horror-v1.png",
+            "sha256": "431cf25f1b6c92955e867711bad3ffc98e53a27de58c505f5894a7444bcc2194"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-ac/superseded/abyssal-horror-v1-runtime-128.png",
+            "sha256": "968b99711a73941ba448d7b2aa6612666e7035544655b1bc04867939b224a728"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-ac-4/abyssal-horror/receipts/attempt-1.json",
+            "sha256": "985282cc5bd8da84e001e7b6546fcd8d3f803fd464f9191e4382d5c3db7b4531"
+          }
+        ]
+      }
+    }
+  ]
+}

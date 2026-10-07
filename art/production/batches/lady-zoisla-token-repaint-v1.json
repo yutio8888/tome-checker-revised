@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "batch_id": "lady-zoisla-token-repaint-v1",
+  "assets": [
+    {
+      "asset_id": "lady-zoisla",
+      "native_name": "Lady Zoisla the Tidebringer",
+      "scope": "slazish-fen zone-finale boss; exact identity only, no rarity field, no live fixture. Third attempt via a fresh handoff (monster-batch-e-1b) after monster-batch-e-1's 2-call budget was exhausted on disc_overflow + base_drift (see receipts and call.json in art/production/handoffs/monster-batch-e-1/lady-zoisla/). FLAT TOKEN REPAINT after the survey decision of 2026-10-04: the shipped flat token (art/monster-batch-e/masters/lady-zoisla-v2.png) has a bright gold-red tail, contradicting the same definition's desc ('Her dark tail is coiled tight, making her look short...'). The repaint keeps the pose, twin weapons, tight coil and disc and darkens the tail. Old master under art/monster-batch-e/superseded/lady-zoisla-v2.png and old runtime under .../lady-zoisla-v2-runtime-128.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/slazish-fen/npcs.lua",
+          "sha256": "59faab1fda3ad11fc2bca557f3152df86cad9dbe1bbce63d69d5c7828b99a4a5",
+          "line": 118,
+          "anchor": "name = \"Lady Zoisla the Tidebringer\","
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, light, camera and matte miniature finish; do not copy its creature. Match this disc's own lightness EXACTLY -- do not darken it further."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_naga_lady_zoisla_the_tidebringer.png",
+          "sha256": "280e7ff79642e3cfaf7c581ac762f86b7a20175bc4b15d879c6bc362ac34c896",
+          "role": "identity",
+          "note": "Native species shape and anatomy (64x128 tall): a naga sorceress with a humanoid torso, dark hair and a long DARK serpent tail coiled beneath her plus twin weapons. The native tail is dark; do NOT copy the bright gold-red tail of the superseded flat token."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-e/superseded/lady-zoisla-v2.png",
+          "sha256": "61f37bf107960a47222e37a3f275b840979aae5c2a2259c7e4f127f7685c86f6",
+          "role": "family",
+          "note": "The SUPERSEDED lady zoisla flat token for this same identity: pose family, twin-weapon composition, tightly coiled tail and camera are correct and must be kept, but its bright gold-red tail is the exact defect -- the desc requires a dark tail. Change only the tail colour/value to a deep near-black blue-green; keep everything else."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Lady Zoisla the Tidebringer seen from a steep overhead three-quarter angle: a regal naga sorceress whose humanoid torso rises from a long serpent tail. Her tail is DARK -- a deep near-black midnight blue-green, almost charcoal, with only subtle cold blue-grey highlights and a slightly paler grey-blue underside -- and it is coiled TIGHT and compact directly beneath her so she looks short rather than sprawled. Deep violet-black hair falls past bare shoulders; one hand holds a barbed trident-spear and the other a carved driftwood staff, both angled inward and held no taller than head height; a calm, confident stare from dark eyes. Sun-weathered olive-tan skin on the torso. No water on the base, no glow. Regal, dark and complete.",
+        "contrast": "Nagas: LADY ZOISLA is the DARK-TAILED naga sorceress with twin weapons held close to the body and her tail coiled tight so she reads short. This repaint reverses the superseded v2, whose tail was bright gold-red; the desc says 'Her dark tail is coiled tight, making her look short'. The shipped myrmidon has a blue tail and a trident, the tidewarden is brown with a shield, the nereid is yellow-tailed, nashva teal-tailed, slasul sea-green with a pearl, the tidecaller grey robed: this must have a clearly DARK tail, never a warm gold or red one.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Compact-pose correction (measured twice on this exact identity): two earlier passes both bled past the disc edge (max opaque radius 0.969 and 0.947 against a 0.867 limit) because the trident and staff were held fully upright, nearly as tall as the canvas, with tips reaching the very top of the disc, and the coiled tail spread wide left-right near the bottom edge. This pass: hold both the trident and the staff angled inward and no taller than the top of her head plus a small margin -- crossed slightly in front of the body rather than raised straight up -- and coil the tail into a tighter, rounder knot centred under the torso rather than spreading corner to corner. Leave a clearly visible bare disc margin on all four sides, the same width as the style reference's margin around Prox. Base-plate discipline: the first pass measured base_drift -9.23 after an \"8 units darker\" request (close to accurate, slightly over); the second (edit) pass asked to brighten back by 9 units and overshot to +52.61 (a much larger swing than requested, consistent with edit passes over-correcting). This is a fresh generation, not an edit: render the neutral disc -- including the whole outer-sixth ring band -- only about 4 RGB luminance units darker than the style reference's disc appears at first read, a much smaller and more conservative undershoot than earlier attempts. Do not darken the creature itself to compensate. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere.",
+        "palette": "Deep near-black midnight blue-green serpent scales for the whole tail, almost charcoal, with only subtle cool blue-grey highlight planes and a slightly paler grey-blue underside; sun-weathered olive-tan skin on the humanoid torso, deep violet-black hair, dull iron trident head, aged driftwood staff, dark eyes. The tail is the darkest large mass and must read as dark against the neutral disc -- no warm gold, red or copper scale colour, no glow and no water pooling on the base. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the tail so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Identity re-verified against game/modules/tome data: name=\"Lady Zoisla the Tidebringer\", define_as=ZOISLA, type/unique per the slazish-fen zone-finale definition, nice_tile{image=\"invis.png\", add_mos={image=\"npc/humanoid_naga_lady_zoisla_the_tidebringer.png\", display_h=2, display_y=-1}}, with the desc on the same definition. The shipped flat token is already mapped, so this repaint carries the required refinement brief: it supersedes the mapped lady zoisla token, names the spent monster-batch-e-1b pack, states the design-direction correction (bright gold-red tail -> dark tail, per the desc) and pins the earlier receipt and superseded art. Flat token size (128px), RGBA and manifest wiring are unchanged; only the artwork is repainted.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-e-20260929/source-contracts.json",
+          "sha256": "92455671765a820311ccffdac736c667beaae5b4bb497924bd674f8ca0cb7fdf"
+        }
+      ],
+      "refinement": {
+        "supersedes": "lady-zoisla",
+        "previous_batch": "monster-batch-e-1b",
+        "design_change_reason": "The shipped flat token has a bright gold-red serpent tail, which contradicts lady zoisla's own desc: 'Her dark tail is coiled tight, making her look short, but her calm and confident stare assure you that she will not be easily overcome.' The survey of 2026-10-04 flagged the red-gold tail as a desc conflict. This repaint keeps the naga pose family, twin weapons, tight coil, disc and camera, and changes only the tail to a deep near-black midnight blue-green with a dark paler underside. It is a flat-token repaint only; wiring and the manifest id are unchanged.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-e/superseded/lady-zoisla-v2.png",
+            "sha256": "61f37bf107960a47222e37a3f275b840979aae5c2a2259c7e4f127f7685c86f6"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-e/superseded/lady-zoisla-v2-runtime-128.png",
+            "sha256": "e687d2733faf44a22c78e2acd1a46824974c96eca10ddac6b78acd4603298d2b"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-e-1b/lady-zoisla/receipts/attempt-1.json",
+            "sha256": "97da8aa93275916d1ec946a13404ddeb1895d684687ad58227a30ec22692441e"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-e-1b/lady-zoisla/imagegen-calls/call-1/call.json",
+            "sha256": "ec510fb37037fe209cc6c0a6bf2f57426f49ba2ca036ed98e0d65201e1641cb1"
+          }
+        ]
+      }
+    }
+  ]
+}

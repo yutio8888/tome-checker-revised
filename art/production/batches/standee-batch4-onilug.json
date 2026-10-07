@@ -1,0 +1,66 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch4-onilug",
+ "assets": [
+  {
+   "asset_id": "onilug",
+   "native_name": "onilug",
+   "scope": "Standee batch 4 (6 optional final ids: 3 Trollmire trolls, the Chronolith pair, onilug). Second artwork used only for the upright standee layer at <=48px / ~1.0-cell cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. The flat 128px token, its master and the manifest mapping are untouched. These creatures are only about 1.016-1.0625 cells tall, so the figure must FILL its height and stay stocky: body width:height about 1:1 to 1:1.3, and the whole art about 1.4 times as tall as wide so it still passes the standee upright-aspect gate; do not thin the creature out to look taller.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/minor-demon.lua",
+     "sha256": "80520f8ae1b87b97ea599207de45fdf3703b00ca0e48c100b653dafb735f2050",
+     "line": 91,
+     "anchor": "newEntity{ base = \"BASE_NPC_DEMON\","
+    }
+   ],
+   "desc": "A gaunt vaguely humanoid shape featuring unadorned grey leathery skin. Its arms and legs seem somehow too long and it stands tall, projecting an ominous shadow even in darkness.\nIts glowing red eyes shine with both cruelty and a deep frightening intellect.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/onilug.png",
+     "sha256": "9ab0daff54f8950819ab4a3563cfdc641fcd53e4ab8ce00467ada32eb5a1cb2c",
+     "role": "style",
+     "note": "The shipped flat onilug token: copy its matte painted miniature finish, colours, value structure and identity. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_minor_onilug.png",
+     "sha256": "857c2efdded0b39bbb52ba28e4813b6034d99cef8824eaa8e1e69f2ada1e1402",
+     "role": "identity",
+     "note": "Native onilug sprite: identity cue only. Keep the same species, colour pattern, markings, limbs and held items, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/dolleg.png",
+     "sha256": "1a62073ace24c95776c26d80790d2e52d0977d6de17fa9a5d43b726b2a3c7795",
+     "role": "family",
+     "note": "Other shipped minor demons this one must differ from by more than colour, for example the spiked red dolleg: onilug is a gaunt grey leathery humanoid with over-long limbs, red eyes and a violet-crystal bone staff."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_minor_onilug.png",
+     "sha256": "857c2efdded0b39bbb52ba28e4813b6034d99cef8824eaa8e1e69f2ada1e1402"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/onilug.png",
+     "sha256": "9ab0daff54f8950819ab4a3563cfdc641fcd53e4ab8ce00467ada32eb5a1cb2c"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "onilug: a gaunt, tall vaguely-humanoid minor demon with unadorned grey leathery skin, matching the shipped flat token (the new accepted one): a narrow long torso, over-long thin arms and legs, long clawed fingers, a small horned/fanged head with two glowing red eyes; one hand grips a violet-crystal-topped BONE STAFF whose crystalline head rises just above the head. Keep readable thickness at the shoulders, elbows, hips, knees and forearms so the joints and torso do not vanish at small size.",
+    "contrast": "A tall, thin, elongated silhouette: the body is about 1.2 to 1.35 times as tall as it is wide and the over-long arms hang beside the hips without spreading. The bone staff is held close to the body; if its violet crystal rises above the head, that part is NOT body. Differs from the shipped minor demons (for example the spiked red dolleg) by the grey leathery skin, red eyes and the bone staff. No glow, no aura, no magic, no particles; the staff crystal is a solid violet mineral.",
+    "composition": "Full body, standing upright and very tall and narrow, both long thin legs close together at the bottom of the frame, the small head at the top, the over-long arms hanging straight down close to the sides so they do not widen the figure. The bone staff is held close to one side with its violet crystal just at the top of the head. The figure is about 1.5 to 1.7 times as tall as it is wide. Nothing but the staff top above the head.",
+    "palette": "cold grey and grey-brown leathery hide with darker shadow in the joints, a slightly paler narrow belly, a dull ivory bone staff, a solid violet crystal, small glowing red eyes."
+   }
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "batch_id": "snaproot-token-repaint-v1",
+  "assets": [
+    {
+      "asset_id": "snaproot",
+      "native_name": "Snaproot",
+      "scope": "old-forest; exact identity only; live check pending FLAT TOKEN REPAINT after the audit decision of 2026-10-04: the shipped flat token (art/monster-batch-a/masters/snaproot-v2.png) has warm mid-brown bark (lit-bark top-30% luminance of the central subject ~102.5), contradicting the same definition's desc ('This ancient Treant's bark is scorched almost black.'; native sprite ~39.5). The repaint keeps the branch/root pose and treant face and darkens only the bark. Old master under art/monster-batch-a/superseded/snaproot-v2.png and old runtime under .../snaproot-v2-runtime-128.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/old-forest/npcs.lua",
+          "sha256": "6d7918b8d3808f8fc74739a990d3b0b6dbc4906668439672f2f783a86baf0121",
+          "line": 158,
+          "anchor": "Snaproot"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, light, camera and matte miniature finish; do not copy its creature. Match this disc's own lightness EXACTLY -- do not darken it further."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_treant_snaproot.png",
+          "sha256": "e4a0f09178e210765f3e764cdc91b4136366398bc91a7ff79a0228802167e1ac",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a charred near-black ancient treant with a forked branch/root body, a gnarled face and dead branches. Keep this dark scorched bark and the branch/root pose; the shipped superseded flat token's warm mid-brown bark is the exact defect."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-a/superseded/snaproot-v2.png",
+          "sha256": "b4ead81254c4dbaf2ef07a5aa0917b375522ea56d4608976ae38a21218accfe5",
+          "role": "family",
+          "note": "The SUPERSEDED snaproot flat token for this same identity: branch/root pose, treant face, disc and camera are correct and must be kept, but its warm mid-brown bark is the exact defect -- the desc says the bark is 'scorched almost black'. Change only the bark colour and value to near-black charcoal with pale ash-grey charred edges and cracks; keep everything else."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value"
+      ],
+      "prompt_fields": {
+        "subject": "Snaproot, an ancient treant, seen from a steep overhead three-quarter angle: a massive gnarled humanoid tree-creature. Its bark is SCORCHED ALMOST BLACK -- dead charcoal black, not brown -- with pale ash-grey charred edges, cracks and splits along every branch, root and trunk, and a very faint dull ember glow deep inside a few cracks. A carved, angry treant face with hollow dark eyes and a jagged mouth in the trunk. Long thick charred branch-arms raised and a spreading root-mass of gnarled roots as legs, exactly the branch/root pose of the shipped token. Dead blackened branches with no green leaves. Complete, ancient, charred.",
+        "contrast": "Treants and plants: the shipped Wrathroot is a pale drooping willow, the forest troll is green-brown, the Venus flytrap is bright green and red; Snaproot is the DARKEST black-charred forked treant with pale ash-grey crack highlights (value: near-black with pale grey edges; hue: charcoal black; silhouette: forked branch/root mass). This repaint reverses the superseded token's warm mid-brown bark; the desc says 'This ancient Treant's bark is scorched almost black.' Keep the pale ash-grey edges and cracks bright enough that the black bark stays readable at 48px on the dark disc.",
+        "composition": "One complete creature centered on one circular disc, steep overhead three-quarter view; all limbs, horns, tail and equipment inside inner five-sixths of disc radius, clear outer band.",
+        "palette": "Scorched near-black charcoal bark over the whole body with pale ash-grey charred edges, cracks and split planes -- a stark value contrast, not brown. Only a very faint, dim ember-orange glow deep inside a few cracks, kept small so the bark still reads as black. No warm brown bark, no green foliage, no bright glow spill onto the disc. Dry neutral charcoal disc with restrained copper-grey bevel; the pale ash-grey edges keep the black body from merging with the disc."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Identity re-verified against game/modules/tome data: name=\"Snaproot\", define_as=SNAPROOT, type=giant/subtype=treant, unique=true, nice_tile{image=\"invis.png\", add_mos={{image=\"npc/giant_treant_snaproot.png\", display_h=2, display_y=-1}}}, with the desc on the same definition. The shipped flat token is already mapped, so this repaint carries the required refinement brief: it supersedes the mapped snaproot token, names the spent monster-batch-a-1 pack, states the design-direction correction (warm mid-brown bark -> scorched near-black charcoal, per the desc) and pins the earlier receipt and superseded art. Flat token size (128px), RGBA and manifest wiring are unchanged; only the artwork is repainted.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-a-20260929/source-contracts.json",
+          "sha256": "81db38a2e4a6fd3ada89165add84694221c3849f329de8ddc9342cc547d219bb"
+        }
+      ],
+      "refinement": {
+        "supersedes": "snaproot",
+        "previous_batch": "monster-batch-a-1",
+        "design_change_reason": "The shipped flat token has warm mid-brown bark, which contradicts snaproot's own desc: 'This ancient Treant's bark is scorched almost black. It sees humanity as a scourge, to be purged.' The audit of 2026-10-04 measured the token's lit-bark top-30% luminance at 102.5 against the native sprite's near-black 39.5. This repaint keeps the branch/root pose, treant face, disc and camera, and changes only the bark to a scorched near-black charcoal with pale ash-grey charred edges and cracks. It is a flat-token repaint only; wiring and the manifest id are unchanged.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-a/superseded/snaproot-v2.png",
+            "sha256": "b4ead81254c4dbaf2ef07a5aa0917b375522ea56d4608976ae38a21218accfe5"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-a/superseded/snaproot-v2-runtime-128.png",
+            "sha256": "0ec85d13c6f399ddf57058a1cdbd6ca24b035d6f95fa8070b3f5bb656484d04b"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-a-1/snaproot/receipts/attempt-2.json",
+            "sha256": "e1183c6b4c6dc3a34861466aadf0c80e678e0706781de89e5928e2c7786df2db"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-a-1/snaproot/imagegen-calls/call-2/call.json",
+            "sha256": "9ea11fe16df7219607f8e3ccb14269b045f488ff78acb77e58504fcad95d229f"
+          }
+        ]
+      }
+    }
+  ]
+}

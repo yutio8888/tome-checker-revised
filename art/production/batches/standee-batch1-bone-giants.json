@@ -1,0 +1,183 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch1-bone-giants",
+ "assets": [
+  {
+   "asset_id": "heavy-bone-giant",
+   "native_name": "heavy bone giant",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+     "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+     "line": 86,
+     "anchor": "name = \"heavy bone giant\""
+    }
+   ],
+   "desc": "A towering creature, made from the bones of hundreds of dead bodies. It is covered by an unholy aura.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/heavy-bone-giant.png",
+     "sha256": "9a4243d76d509d6836d2addda957d7651c079ea1f6e8cf25ff19bf70b14d16b2",
+     "role": "style",
+     "note": "The shipped flat heavy-bone-giant token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_heavy_bone_giant.png",
+     "sha256": "54cf4ac5c97fdcfcd06c337f1451599f1f55f4eba4875592993a448be1cacf2c",
+     "role": "identity",
+     "note": "Native heavy-bone-giant sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/bone-giant.png",
+     "sha256": "3eee42a71202ccf33d759498396d02a6ae5661101e7381010ef71f5602e70c56",
+     "role": "family",
+     "note": "The shipped generic bone giant token shares this skeleton body plan, so it is the token this one must stay clearly distinct from; do not copy its pose or proportion."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_heavy_bone_giant.png",
+     "sha256": "54cf4ac5c97fdcfcd06c337f1451599f1f55f4eba4875592993a448be1cacf2c"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/heavy-bone-giant.png",
+     "sha256": "9a4243d76d509d6836d2addda957d7651c079ea1f6e8cf25ff19bf70b14d16b2"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "heavy bone giant: a towering giant skeleton built from the thickest, densest bones of many dead bodies, with a heavy reinforced ribcage, thick armoured bone plates on the shoulders and forearms, a broad hornless skull with hollow sockets and heavy legs. Match the shipped token's pale aged bone-white and light-umber bone colouring and the native sprite's massive build.",
+    "contrast": "Taller than wide: stand at full height with the bulk coming from thick bones and heavy plates rather than width; keep both arms close to the torso and no weapon held out sideways.",
+    "composition": "Full body, upright standing front three-quarter view, heavy bone fists hanging at the sides, feet planted, skull near the top of the frame. Overall height to width about 1.6 to 1 and the body itself about 1.5 to 1.8 tall to wide.",
+    "palette": "aged bone-white and light-umber bone, dark cracks and hollows, faint cold blue-grey shadow inside the eye sockets and joints."
+   }
+  },
+  {
+   "asset_id": "runed-bone-giant",
+   "native_name": "runed bone giant",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+     "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+     "line": 98,
+     "anchor": "name = \"runed bone giant\""
+    }
+   ],
+   "desc": "A towering creature, made from the bones of hundreds of dead bodies, rune-etched and infused with hateful sorceries.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/runed-bone-giant.png",
+     "sha256": "6e69580625b341fd7db7fa0c8d34025911a354f5487eb2ca4f81e9d8273fae0d",
+     "role": "style",
+     "note": "The shipped flat runed-bone-giant token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_runed_bone_giant.png",
+     "sha256": "c17376f3dd43aae746302b2b4bdcbbf88bca26e6a7dbee35b8c62a7b04620d29",
+     "role": "identity",
+     "note": "Native runed-bone-giant sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/bone-giant.png",
+     "sha256": "3eee42a71202ccf33d759498396d02a6ae5661101e7381010ef71f5602e70c56",
+     "role": "family",
+     "note": "The shipped generic bone giant token shares this skeleton body plan, so it is the token this one must stay clearly distinct from; do not copy its pose or proportion."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_runed_bone_giant.png",
+     "sha256": "c17376f3dd43aae746302b2b4bdcbbf88bca26e6a7dbee35b8c62a7b04620d29"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/runed-bone-giant.png",
+     "sha256": "6e69580625b341fd7db7fa0c8d34025911a354f5487eb2ca4f81e9d8273fae0d"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "runed bone giant: a towering giant skeleton etched from skull to shin with glowing blood-red magical runes, leaner and more arcane than its kin, with long clawed bone fingers and a rune-carved skull. Match the shipped token's bone-white bones and the bright red rune marks of the native sprite.",
+    "contrast": "Taller than wide and leaner than the other bone giants: stand tall with the runes as the brightest marks on the body. The runes are flat glowing marks carved into the bone; do not draw a halo, smoke, particles, aura or lightning.",
+    "composition": "Full body, upright standing front three-quarter view, arms held a little away from the sides to show the etched forearms, feet planted, skull near the top of the frame. Overall height to width about 1.7 to 1.",
+    "palette": "pale bone-white with deep red glowing runes, dark red-brown recesses, the rune glow confined to the bone surface."
+   }
+  },
+  {
+   "asset_id": "eternal-bone-giant",
+   "native_name": "eternal bone giant",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+     "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+     "line": 72,
+     "anchor": "name = \"eternal bone giant\""
+    }
+   ],
+   "desc": "A towering creature, made from the bones of hundreds of dead bodies. It is covered by an unholy aura.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/eternal-bone-giant.png",
+     "sha256": "2baa7b2bdd6070113a65e69961f24070918c8c6fd08d41666579f9922ad3d5ab",
+     "role": "style",
+     "note": "The shipped flat eternal-bone-giant token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_eternal_bone_giant.png",
+     "sha256": "15c7f16dd09d83b8eac30febd091844eb2965a8bb1be33d16e8ece28df032986",
+     "role": "identity",
+     "note": "Native eternal-bone-giant sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/bone-giant.png",
+     "sha256": "3eee42a71202ccf33d759498396d02a6ae5661101e7381010ef71f5602e70c56",
+     "role": "family",
+     "note": "The shipped generic bone giant token shares this skeleton body plan, so it is the token this one must stay clearly distinct from; do not copy its pose or proportion."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_eternal_bone_giant.png",
+     "sha256": "15c7f16dd09d83b8eac30febd091844eb2965a8bb1be33d16e8ece28df032986"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/eternal-bone-giant.png",
+     "sha256": "2baa7b2bdd6070113a65e69961f24070918c8c6fd08d41666579f9922ad3d5ab"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "eternal bone giant: a towering, ancient giant skeleton of many fused skeletons, greyer and more weathered than its kin, with a slender elongated frame, cracked and pitted bones, a narrow hornless skull and long thin arms. Match the shipped token's cool grey bone and the native sprite's gaunt silhouette.",
+    "contrast": "Taller than wide and the thinnest of the bone giants: stand with a long straight spine and narrow shoulders. It differs from the heavy bone giant by being thin rather than massive, and from the runed one by carrying no red runes.",
+    "composition": "Full body, upright standing front view, long slender limbs held close to the body, feet planted, skull near the top of the frame. Overall height to width about 1.8 to 1.",
+    "palette": "cool grey weathered bone, dark cracks, pale chalky highlights, dim blue-grey hollows."
+   }
+  }
+ ]
+}

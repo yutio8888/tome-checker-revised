@@ -7,8 +7,8 @@
   "status": "generated-static-reviewed-with-runtime-supplement",
   "prompt": "Use case: precise-object-edit\nAsset type: corrected transparent PNG midge-swarm tabletop miniature.\nPrimary request: fix ONLY the insect at the RIGHT-MIDDLE of Image 1, near the 3 o'clock side of the base. Keep every other pixel region as close as possible. Image 1 is the edit target. Image 2 is an earlier version, supporting reference only for that right-middle insect's narrow segmented ABDOMEN.\nThe right-middle insect in Image 1 currently has three leaf-like wings and no clearly readable abdomen. Remove ONLY its extra wing projecting toward LOWER-RIGHT. Restore a slender dark grey-brown segmented abdomen extending diagonally down-right from its round thorax, tapering to a small natural tip, as that same insect's body did in Image 2. Keep its TWO upper wings, one sweeping upper-left and one sweeping upper-right, as the SINGLE ATTACHED WING PAIR. End state for this one insect: one head with two antennae, one round thorax, one long narrow segmented abdomen, six legs, and exactly TWO wings, never three. Both wings attach to the thorax, not to the face or abdomen.\nDo not modify the six other midges: each already has its intended pair of wings. Do not add or remove insects. Preserve all seven positions, the loose open-centre grouping, their slender non-striped dark bodies, smoke-silver wings, and the entire dark grey-brown round base with thin neutral bronze-grey bevel. Preserve the high downward three-quarter camera, matte hand-painted sculpted style, soft upper-left light and internal contact shadows.\nAll insect parts stay inside the base. Preserve real native alpha outside the base; no background or outside shadow. Square image, target 1024x1024 if supported. No text, guide, arrow, circle, UI, faction colour, rank, glow, scenery or watermark.\nThis is a single local anatomy repair on the right-middle insect, not a redesign of the swarm.",
   "references": [
-    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v2.png",
-    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v1.png"
+    "<workspace>/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v2.png",
+    "<workspace>/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v1.png"
   ],
   "reference_roles": [
     "Edit target; repair only right-middle insect's third wing and missing readable abdomen.",
@@ -62,8 +62,8 @@
   },
   "selection": "static-approved-runtime-integration-candidate",
   "reference_sha256": {
-    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v2.png": "cee466d4078cba56ae6f9802024ff92a8c5123e542ee8927e62e1866e7db30e8",
-    "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v1.png": "f9be4138ccf7cc2553ff571fbf05c3cf38730830d60eb06a414bb0333831e1ed"
+    "<workspace>/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v2.png": "cee466d4078cba56ae6f9802024ff92a8c5123e542ee8927e62e1866e7db30e8",
+    "<workspace>/game/addons/tome-checker-revised/art/monsters-v4/masters/midge-swarm-v1.png": "f9be4138ccf7cc2553ff571fbf05c3cf38730830d60eb06a414bb0333831e1ed"
   },
   "review": {
     "observations": [

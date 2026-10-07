@@ -1,0 +1,95 @@
+{
+  "schema": 1,
+  "batch_id": "ogre-mauler-token-repaint-v1",
+  "assets": [
+    {
+      "asset_id": "ogre-mauler",
+      "native_name": "ogre mauler",
+      "scope": "ogre.lua (giant/ogre, non-unique, no define_as, resolvers.nice_tile{tall=1}); crypt-kryl-feijan (ogre[fn] loader) and Arena; rarity 2, rank 2, greatmaul; Warshout Berserker FLAT TOKEN REPAINT after the user decision of 2026-10-05: the shipped flat token (art/monster-batch-p/masters/ogre-mauler-v1.png) shows a raised gold gauntlet/fist with no weapon, but the game equips a greatmaul (game/modules/tome/data/general/npcs/ogre.lua:95) and the same definition's desc is 'Crush! Destroy! Maim!' (ogre.lua:88); the accepted standee (art/token-layers/ogre-mauler/standee/master-v1.png) holds a big two-handed maul. The repaint keeps the crouched pose family, brick-red skin, wild dark red hair, brown loincloth, disc and camera, and replaces only the gauntlet with a heavy two-handed iron-banded stone greatmaul like the standee's. Old master under art/monster-batch-p/superseded/ogre-mauler-v1.png and old runtime under .../ogre-mauler-v1-runtime-128.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/ogre.lua",
+          "sha256": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+          "line": 87,
+          "anchor": "name = \"ogre mauler\", color=colors.LIGHT_UMBER"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/ogre.lua",
+          "sha256": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+          "line": 89,
+          "anchor": "resolvers.nice_tile{tall=1}"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, light, camera and matte miniature finish; do not copy its creature. Match this disc's own lightness EXACTLY -- do not darken it further."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ogre_ogre_mauler.png",
+          "sha256": "c99cd9d4fd476e22cfa115b27ed039e7e17787ce30628d35db9b568a8d975851",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a crouching red-brown muscular ogre with wild dark red hair, a snarling tusked mouth and a gold-gauntleted hand. Keep the brick-red skin, wild dark red hair, bare scarred chest and brown loincloth; the shipped superseded flat token's raised gold gauntlet with no weapon is the exact defect -- the NPC equips a greatmaul (ogre.lua:95) and the accepted standee holds a big two-handed maul."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-p/superseded/ogre-mauler-v1.png",
+          "sha256": "171e4cf0ceb29b3d4f25de381fcf14f6396421f2b130dacc3a1bc74acb8b8a53",
+          "role": "family",
+          "note": "The SUPERSEDED ogre mauler flat token for this same identity: crouched pose family, brick-red skin, wild dark red hair, bare scarred chest, brown loincloth, disc and camera are correct and must be kept, but its raised gold gauntlet/fist with no maul is the exact defect -- the NPC equips a greatmaul (game/modules/tome/data/general/npcs/ogre.lua:95) and the accepted standee holds a big two-handed maul. Replace only the gauntlet/fist with the two-handed maul; keep everything else."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "An ogre mauler seen from a steep overhead three-quarter angle: a huge hunched furious muscular human-shaped ogre with brick-red skin and lighter orange highlights, a snarling open mouth with two lower tusks, wild dark red hair, bare scarred chest and back, a ragged brown loincloth. BOTH hands grip the long dark wooden shaft of a massive TWO-HANDED MAUL: a heavy squared iron-banded stone head, NOT a gold gauntlet, NOT a bare fist and NOT a hand wearing any glove. Exactly the shipped flat token's crouched pose family, disc and steep overhead camera, but with the raised gold-gauntleted fist replaced by the two-handed maul held across the body, its long shaft diagonal and its heavy head low beside one knee. Enraged, brutal and complete.",
+        "contrast": "Four ogres share this body: the MAULER is the BRICK-RED enraged brute wielding a heavy two-handed iron-banded stone maul in BOTH hands (silhouette: crouched wide, maul shaft diagonal with its heavy head low; hue: brick red with dull iron grey; value: mid). The guard is tan with blue trousers, an armoured shoulder and a one-handed hammer; the rune-spinner is orange with runes and fire; the pounder is a blue grappler with arms spread wide. This repaint reverses the superseded token's raised gold gauntlet and missing weapon: the NPC equips a greatmaul (game/modules/tome/data/general/npcs/ogre.lua:95) and the accepted standee holds a big two-handed maul. Keep the maul clearly a two-handed weapon, not a one-handed hammer, so the mauler still reads apart from the ogre-guard.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. This is a huge giant, but on the tabletop disc it is drawn COMPACT: hunched forward with rolled shoulders, bent knees and elbows kept in close, the weapon held short and close to the body, so the whole figure is a broad chunky mass that fills the inner three quarters of the disc yet never reaches the outer sixth ring band. Do not draw a tall standing figure that would run off the disc; the feet and the head both stay well inside the disc.",
+        "palette": "Brick-red skin with lighter orange highlight planes, dark red hair, brown loincloth, small ivory tusks; the maul is a heavy squared stone/iron head with dull grey iron bands on a dark brown wooden shaft. No gold gauntlet and no gold glove anywhere. The rest of the creature keeps the shipped token's brick-red value structure. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Identity re-verified against game/modules/tome data: name=\"ogre mauler\", color=colors.LIGHT_UMBER (game/modules/tome/data/general/npcs/ogre.lua:87), desc=_t[[Crush! Destroy! Maim!]] (ogre.lua:88), resolvers.nice_tile{tall=1} (ogre.lua:89), base BASE_NPC_OGRE, and resolvers.equip{{type=\"weapon\", subtype=\"greatmaul\", ...}} (ogre.lua:95); native sprite giant_ogre_ogre_mauler.png 64x128. The shipped flat token is already mapped, so this repaint carries the required refinement brief: it supersedes the mapped ogre mauler token, names the spent monster-batch-p-3 pack, states the design-direction correction (raised gold gauntlet with no weapon -> heavy two-handed iron-banded stone greatmaul, per the greatmaul equipment line and the accepted standee) and pins the earlier receipt and superseded art. Flat token size (128px), RGBA and manifest wiring are unchanged; only the artwork is repainted.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-p-20260929/source-contracts.json",
+          "sha256": "3eb4cdb07da21fc9292934f54d928caa0b1dbe86aeff6b6877e103ba4cf2f182"
+        }
+      ],
+      "refinement": {
+        "supersedes": "ogre-mauler",
+        "previous_batch": "monster-batch-p-3",
+        "design_change_reason": "The shipped flat token shows a raised gold gauntlet/fist and holds no weapon, contradicting the ogre mauler's own equipment: resolvers.equip{{type=\"weapon\", subtype=\"greatmaul\"...}} at game/modules/tome/data/general/npcs/ogre.lua:95, with desc 'Crush! Destroy! Maim!' at ogre.lua:88. The accepted standee for the same identity holds a big two-handed maul. This repaint keeps the crouched pose family, brick-red skin, wild dark red hair, brown loincloth, disc and camera, and replaces only the gauntlet with a heavy two-handed iron-banded stone greatmaul like the standee's. It is a flat-token repaint only; wiring and the manifest id are unchanged.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-p/superseded/ogre-mauler-v1.png",
+            "sha256": "171e4cf0ceb29b3d4f25de381fcf14f6396421f2b130dacc3a1bc74acb8b8a53"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-p/superseded/ogre-mauler-v1-runtime-128.png",
+            "sha256": "469eaddd8a38fb5f82ce4e118a9bfca962880f4e92fdcc2ce0a8b718c1d75e21"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-p-3/ogre-mauler/receipts/attempt-1.json",
+            "sha256": "8093c34d1e43fbd0dc59258a0d50dee3e3d420fd1b69d7d830dc17b9a60c272a"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-p-3/ogre-mauler/imagegen-calls/call-1/call.json",
+            "sha256": "aa365f29c51e8e3f42b2cee20f13c729e1cf8394a76ff58c30fa22e7476c84d9"
+          }
+        ]
+      }
+    }
+  ]
+}

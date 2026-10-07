@@ -1,0 +1,268 @@
+{
+ "schema": 1,
+ "batch_id": "standee-upright-v1",
+ "assets": [
+  {
+   "asset_id": "rungof",
+   "native_name": "Rungof the Warg Titan",
+   "scope": "Unique boss in the R33 standee set. Second artwork used only for the upright standee layer at <=48px cells; the flat 128px token, its master and the manifest mapping are unchanged.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "R33 cut-out is a near-square top-down warg that becomes a wide low disc once the standee width cap is 1.0 cell; a genuinely upright rearing warg is required.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/canine.lua",
+     "sha256": "edbbc6bd1d02c92bf53b569e210e26cfb4eb25ecba1b077f90697f390cab5e7a",
+     "line": 145,
+     "anchor": "name = \"Rungof the Warg Titan\""
+    },
+    {
+     "path": "game/modules/tome/data/general/npcs/canine.lua",
+     "sha256": "edbbc6bd1d02c92bf53b569e210e26cfb4eb25ecba1b077f90697f390cab5e7a",
+     "line": 25,
+     "anchor": "define_as = \"BASE_NPC_CANINE\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/rungof.png",
+     "sha256": "7707a7076e509c7fbddb94416a4cc409700a8bc43e15aeb844b9197a890e9d3d",
+     "role": "style",
+     "note": "The shipped flat Rungof token: copy its matte painted miniature finish, fur value structure and upper-left light. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/canine_rungof.png",
+     "sha256": "78fff8d92740131cb86697522d6bb5086ecd05a91c0da36fc7176de4f3cfbeb0",
+     "role": "identity",
+     "note": "Native Rungof sprite: the giant shaggy warg, its grey-brown coat, darker mane and pale underbelly. Same species and markings, converted to a true upright rearing pose."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/warg.png",
+     "sha256": "3891d495c890686880c3f7d119a21dae0af87819dd62356d167375d9a26c1230",
+     "role": "family",
+     "note": "The mapped warg. It shares the wolf body plan and cool grey-brown coat, so it is the token Rungof must stay clearly distinct from; do not copy its low four-legged pose."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "prompt_fields": {
+    "subject": "Rungof the Warg Titan: a huge shaggy warg (giant wolf) grown to boss size, with heavy maned shoulders, a broad wolf head and bared bone fangs, long powerful limbs, thick claws and a long bushy tail. Keep the native grey-brown coat, the dark umber mane over neck and shoulders, and the pale chest and underbelly.",
+    "contrast": "Taller than wide: rear up on the two hind legs, or brace in a high three-quarter brace with the forelegs lifted and the chest high. Keep the dark mane against a pale chest for a strong value read. Do not pose it lying flat or with the body stretched sideways.",
+    "composition": "Full body, upright rearing side/three-quarter view, head and fangs near the top of the frame, both forelegs raised clear of the chest, tail low behind the body. Overall height to width about 1.7 to 1.",
+    "palette": "cool grey-brown fur, dark umber mane, bone-white fangs and claws, muted leather harness straps."
+   },
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-ua-20261001/source-contracts.json",
+     "sha256": "b6c9fdda1e56d3b6b4bf53aafe00787697121e5831f5df8c1f9960c3f855d814"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-z-20260930/source-contracts.json",
+     "sha256": "0ee69e14bae435695fed2f0346b4e3622faad0626483479b2f22750f6c633596"
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/canine_rungof.png",
+     "sha256": "78fff8d92740131cb86697522d6bb5086ecd05a91c0da36fc7176de4f3cfbeb0"
+    }
+   ]
+  },
+  {
+   "asset_id": "ninandra",
+   "native_name": "Ninandra, the Great Weaver",
+   "scope": "Unique spider boss in the R33 standee set. Second artwork used only for the upright standee layer at <=48px cells; flat token and mapping unchanged.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "R33 cut-out is a spider spread as a flat disc; at 1.0 cell width cap it reads as a small round blob, not an upright creature.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/spider.lua",
+     "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+     "line": 327,
+     "anchor": "name = \"Ninandra, the Great Weaver\""
+    },
+    {
+     "path": "game/modules/tome/data/general/npcs/spider.lua",
+     "sha256": "4c4a3bab29639167ca6a4d95ba4c0b6ba4a0164600ea40736376e268dc1457aa",
+     "line": 23,
+     "anchor": "define_as = \"BASE_NPC_SPIDER\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ninandra.png",
+     "sha256": "19d88989971e66ca19cecce3247109de461637e24a70ec62450ad8927522be53",
+     "role": "style",
+     "note": "The shipped flat Ninandra token: copy its matte painted miniature finish, the violet-black chitin and its pale markings. Ignore its top-down disc layout."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_ninandra_the_great_weaver.png",
+     "sha256": "cc7e9441efea0c62d455f790468d20cc1269f67a49e5f5870530fca838906703",
+     "role": "identity",
+     "note": "Native Ninandra sprite: the great spider queen with eight long jointed legs, a pale-marked dark abdomen and multiple eyes. Keep the exact species and markings, converted to a tall rearing pose."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/weaver-queen.png",
+     "sha256": "39f935a31e7e84f9068461d0288b87c7cbc184483d81dd9b22eae6c678a8ea86",
+     "role": "family",
+     "note": "The mapped weaver queen spider. It shares the spider family and dark chitin, so it is the token Ninandra must stay distinct from; do not copy its low spread posture."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "prompt_fields": {
+    "subject": "Ninandra, the Great Weaver: a colossal spider queen with a bulbous dark violet-black abdomen carrying pale cream markings, a smaller cephalothorax with a cluster of glowing eyes and chelicerae, and eight long jointed bristled legs. Keep the native violet-black chitin and the same pale dorsal markings and leg count.",
+    "contrast": "Taller than wide: rear up on the two hind legs with the six forelegs raised and spread upward, chelicerae high, or use a high front three-quarter view that still reads tall. Do not show the classic flat spread spider disc.",
+    "composition": "Full body, rearing spider seen from a slightly high front three-quarter angle, abdomen low behind, forelegs raised above the head, all eight legs visible. Overall height to width about 1.7 to 1.",
+    "palette": "violet-black chitin, pale cream markings, warm amber eye glints, dark grey leg joints."
+   },
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-ua-20261001/source-contracts.json",
+     "sha256": "b6c9fdda1e56d3b6b4bf53aafe00787697121e5831f5df8c1f9960c3f855d814"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-z-20260930/source-contracts.json",
+     "sha256": "0ee69e14bae435695fed2f0346b4e3622faad0626483479b2f22750f6c633596"
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/spiderkin_spider_ninandra_the_great_weaver.png",
+     "sha256": "cc7e9441efea0c62d455f790468d20cc1269f67a49e5f5870530fca838906703"
+    }
+   ]
+  },
+  {
+   "asset_id": "ravenous-horror",
+   "native_name": "ravenous horror",
+   "scope": "Non-boss native-tall demonstration monster admitted by the explicit trial id list. Second artwork used only for the upright standee layer at <=48px cells; flat token and mapping unchanged.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "R33 cut-out is an aquatic horror lying sideways as a wide fish; at 1.0 cell width cap it is a short horizontal blob. R33's own review had already flagged the tail-anchored silhouette.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/horror_aquatic.lua",
+     "sha256": "784e2c5a2dd5c766e4882fd5140159782f68fd41168f28706523562c9dd7b1f8",
+     "line": 115,
+     "anchor": "name = \"ravenous horror\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ravenous-horror.png",
+     "sha256": "873038eeb8ef068b9bbea4735e2ee91200ba1dc069264d6d96a5f7c8f2882008",
+     "role": "style",
+     "note": "The shipped flat ravenous horror token: copy its matte painted finish and its cold wet blue-grey flesh. Ignore its top-down disc layout."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_aquatic_ravenous_horror.png",
+     "sha256": "bc30d60a88b181b4a92e86a5fbae211ba85fbfd8fe01510b14c82d05e1800d24",
+     "role": "identity",
+     "note": "Native ravenous horror sprite: the huge aquatic horror, a predatory fish-like body with a wide tooth-filled maw, spiny fins and a long tail. Keep the same anatomy and cold blue-grey colour, converted to an upright lunging pose."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/oozing-horror.png",
+     "sha256": "98d8871fde580e8f4f29cc9aff392a59c90555f6f15a258ecfa3858214d5a339",
+     "role": "family",
+     "note": "The mapped oozing horror. It shares the horror family dark palette, so it is the token this one must stay distinct from; do not copy its amorphous blob shape."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "prompt_fields": {
+    "subject": "ravenous horror: a colossal aquatic horror shaped like a predatory fish, with a huge gaping maw full of long teeth at the front, cold wet blue-grey hide, spiny dorsal and pectoral fins and a long muscular tail. Keep the native anatomy, fin layout and cold blue-grey flesh tone.",
+    "contrast": "Taller than wide: lunge upward with the body near vertical and the open maw at the top, tail below. Do not lay the fish horizontally or show it swimming sideways.",
+    "composition": "Full body, upright lunging aquatic horror seen from a front three-quarter angle, maw open at the top, spiny fins flared, long tail curving down behind. Overall height to width about 1.7 to 1.",
+    "palette": "cold blue-grey hide, pale bone teeth, darker fin membranes, faint wet highlights."
+   },
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-ua-20261001/source-contracts.json",
+     "sha256": "b6c9fdda1e56d3b6b4bf53aafe00787697121e5831f5df8c1f9960c3f855d814"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-z-20260930/source-contracts.json",
+     "sha256": "0ee69e14bae435695fed2f0346b4e3622faad0626483479b2f22750f6c633596"
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_aquatic_ravenous_horror.png",
+     "sha256": "bc30d60a88b181b4a92e86a5fbae211ba85fbfd8fe01510b14c82d05e1800d24"
+    }
+   ]
+  },
+  {
+   "asset_id": "kra-tor",
+   "native_name": "Kra'Tor the Gluttonous",
+   "scope": "Unique orc boss in the R33 standee set. Second artwork used only for the upright standee layer at <=48px cells; flat token and mapping unchanged.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "R33 cut-out is a squat crouching orc, squashed to about one cell tall once the standee width cap is 1.0 cell.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/orc.lua",
+     "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+     "line": 280,
+     "anchor": "name = \"Kra'Tor the Gluttonous\""
+    },
+    {
+     "path": "game/modules/tome/data/general/npcs/orc.lua",
+     "sha256": "843967b1f31cbae57591941b8632b5713060889c6f149106f887e359c836b093",
+     "line": 23,
+     "anchor": "define_as = \"BASE_NPC_ORC\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/kra-tor.png",
+     "sha256": "069a62b27c71a7fdd7ff2f3d63556516de4a5fdfdce92a3b4e13563a27b4be92",
+     "role": "style",
+     "note": "The shipped flat Kra'Tor token: copy its matte painted miniature finish, the olive orc skin, dark armour plates and rust-red axe. Ignore its top-down camera and disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_kra_tor_the_gluttonous.png",
+     "sha256": "6bd60576a59eb10b2e052d6bff0a5d7da89fc4705293aa1edcb8d23808d89894",
+     "role": "identity",
+     "note": "Native Kra'Tor sprite: a huge armoured orc boss holding a massive axe, with heavy pauldrons, a broad torso and a snarling tusked face. Keep the same gear, colours and markings, standing at full height."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/grushnak.png",
+     "sha256": "bad16e4b858b25bb9d70f65fdc88acc8924e857bab408186f46fc9c7804b5c78",
+     "role": "family",
+     "note": "The mapped orc Grushnak. It shares the orc family, olive skin and armour language, so it is the token Kra'Tor must stay distinct from; do not copy its weapon or pose."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "prompt_fields": {
+    "subject": "Kra'Tor the Gluttonous: a massive armoured orc boss with olive-green skin, a broad barrel torso, heavy layered pauldrons, a snarling tusked face and a huge two-handed axe. Keep the native olive-green skin, dark iron armour, rust-red axe blade and the same gear.",
+    "contrast": "Taller than wide: stand at full height with the axe held out to one side and the head high. Do not crouch, hunch or sprawl.",
+    "composition": "Full body, upright standing three-quarter view, axe gripped in both hands or planted at one side, feet apart, head near the top of the frame. Overall height to width about 1.7 to 1.",
+    "palette": "olive-green orc skin, dark iron armour with bronze trim, rust-red axe blade, bone-white tusks."
+   },
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-ua-20261001/source-contracts.json",
+     "sha256": "b6c9fdda1e56d3b6b4bf53aafe00787697121e5831f5df8c1f9960c3f855d814"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-z-20260930/source-contracts.json",
+     "sha256": "0ee69e14bae435695fed2f0346b4e3622faad0626483479b2f22750f6c633596"
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_kra_tor_the_gluttonous.png",
+     "sha256": "6bd60576a59eb10b2e052d6bff0a5d7da89fc4705293aa1edcb8d23808d89894"
+    }
+   ]
+  }
+ ]
+}

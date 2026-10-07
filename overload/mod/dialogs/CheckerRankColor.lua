@@ -26,9 +26,9 @@ function _M:init(key,title,on_apply,kind)
    tex:toScreenFull(x,y,w,h,tw*w/iw,th*h/ih,color[1]/255,color[2]/255,color[3]/255,1)
   end
  end
- local mark,back,band
+ local mark,back
  if self.kind=='relation' then
-  back,band,mark=load('_relation-back'),load('_health-band'),load('_relation-edge-'..key)
+  back,mark=load('_relation-back'),load('_relation-'..key)
  else mark=load('_badge-'..key) end
  local preview=Empty.new{width=440,height=70}
  preview.display=function(_,x,y)
@@ -38,7 +38,6 @@ function _M:init(key,title,on_apply,kind)
   if back then
    for _,p in ipairs{{166,21,28},{254,9,52}} do
     back(x+p[1],y+p[2],p[3],p[3],{15,20,20})
-    band(x+p[1],y+p[2],p[3],p[3],color)
     mark(x+p[1],y+p[2],p[3],p[3],color)
    end
   else

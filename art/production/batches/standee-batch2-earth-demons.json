@@ -1,0 +1,124 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch2-earth-demons",
+ "assets": [
+  {
+   "asset_id": "harkor-zun",
+   "native_name": "Harkor'Zun",
+   "scope": "Standee batch 2 (18 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/xorn.lua",
+     "sha256": "9157ba56ba268a92785c4afa8c26d68d68fa8944837358b19467b4681b49e837",
+     "line": 166,
+     "anchor": "newEntity{ base = \"BASE_NPC_XORN\", define_as = \"FULL_HARKOR_ZUN\","
+    }
+   ],
+   "desc": "A gigantic demon composed of elemental Earth, resembling a twisted Xaren but much, much larger.  It doesn't seem pleased with your presence.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/harkor-zun.png",
+     "sha256": "235b23dfe0a02bb3d81f8b829e72705de379e13faef2ae14a17ee35247e9c42d",
+     "role": "style",
+     "note": "The shipped flat harkor-zun token: copy its matte painted miniature finish, colours, outfit and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_xorn_harkor_zun.png",
+     "sha256": "5d598aeab3301694af5aae14837e662a7c8037dda826f3a69fd05f3f6ea7326d",
+     "role": "identity",
+     "note": "Native harkor-zun sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/xorn.png",
+     "sha256": "382fd279a0d075a946f272ceebeed55a2c53f96d3b7ced9c8a2f359f794504ba",
+     "role": "family",
+     "note": "The shipped xorn token shares this earth-elemental body plan, so it is the token this one must stay clearly distinct from; do not copy its pose or its three-legged shape."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_xorn_harkor_zun.png",
+     "sha256": "5d598aeab3301694af5aae14837e662a7c8037dda826f3a69fd05f3f6ea7326d"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/harkor-zun.png",
+     "sha256": "235b23dfe0a02bb3d81f8b829e72705de379e13faef2ae14a17ee35247e9c42d"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Harkor'Zun: a gigantic demon of elemental Earth, a huge hulking body of brown and grey rock plates and packed stone with four thick arms, short powerful legs, a blunt horned stone head with deep-set glowing eyes, and veins of dull orange molten rock in the cracks. Match the shipped flat token's brown rocky stone body, blunt stone head and multi-armed bulk.",
+    "contrast": "Taller than wide: stand fully upright with all four thick arms held close to the rocky torso, so the mass reads as a heavy column rather than a wide spread. It differs from the other demons by being made of earthy brown-grey stone rather than red flesh or fire. No dust, falling rock, glow or particles.",
+    "composition": "Full body, upright standing front three-quarter view, four stone arms held close and low, feet planted, the blunt stone head at the top of the frame. Overall height about 1.5 to 1.7 times the width; nothing above the head.",
+    "palette": "brown and grey stone plates, packed earth, dull orange molten veins in the cracks, dark hollow eyes."
+   }
+  },
+  {
+   "asset_id": "corrupted-daelach",
+   "native_name": "Corrupted Daelach",
+   "scope": "Standee batch 2 (18 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/valley-moon/npcs.lua",
+     "sha256": "9666a7b631d072504f5a2f11f2405c3e7eb85782509b8f7236529ccb97bbea9e",
+     "line": 25,
+     "anchor": "newEntity{ define_as = \"CORRUPTED_DAELACH\","
+    }
+   ],
+   "desc": "Shadow and flames. The huge beast of fire moves speedily toward you, its huge shadowy wings deployed.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/corrupted-daelach.png",
+     "sha256": "8dcf9abc10be5dcf71dc3dd8fd1ba6576897ef3509e6347e64d64480647c1209",
+     "role": "style",
+     "note": "The shipped flat corrupted-daelach token: copy its matte painted miniature finish, colours, outfit and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_corrupted_daelach.png",
+     "sha256": "002d125d64ce642dc0501f7206d4ff281b7b9eb6cbd14be3a782458f9b794630",
+     "role": "identity",
+     "note": "Native corrupted-daelach sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/daelach.png",
+     "sha256": "c9fedc9a42f365505f582e8acc29d38ab48a021e4390f9de32252dd288f3aa67",
+     "role": "family",
+     "note": "The shipped daelach token shares this dark fire-demon body plan, so it is the token this one must stay clearly distinct from; do not copy its shapeless cloud-of-darkness silhouette or its spread wings."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_corrupted_daelach.png",
+     "sha256": "002d125d64ce642dc0501f7206d4ff281b7b9eb6cbd14be3a782458f9b794630"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/corrupted-daelach.png",
+     "sha256": "8dcf9abc10be5dcf71dc3dd8fd1ba6576897ef3509e6347e64d64480647c1209"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Corrupted Daelach: a huge beast of fire and shadow standing on two powerful legs, its body of cracked dark obsidian wreathed in orange and yellow flame, a horned demonic head with burning eyes, clawed hands and a long tail; two big leathery bat wings are FOLDED TIGHT against the back, rising as narrow high points behind the shoulders rather than spread. Match the shipped flat token's orange fire body and grey bat wings, but fold the wings close.",
+    "contrast": "Taller than wide: the folded wings rise as two narrow points close behind the shoulders, the arms stay near the body and the tail hangs straight down, so the whole figure is a tall narrow column. It differs from daelach (a shapeless cloud of fiery darkness) by the firm two-legged body and the obsidian-and-flame hide. No floating embers, smoke, aura or particles.",
+    "composition": "Full body, upright standing front three-quarter view, wings folded close behind the shoulders, clawed hands low, tail down close, feet planted, the horned head at the top of the body with the folded wing tips just above the shoulders. Overall height about 1.6 to 1.8 times the width.",
+    "palette": "cracked black obsidian hide, deep orange and yellow flame, dark grey-brown leathery folded wings, burning orange eyes."
+   }
+  }
+ ]
+}

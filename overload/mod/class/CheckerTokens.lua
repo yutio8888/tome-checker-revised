@@ -2,6 +2,25 @@
 -- handled by the actor integration; none belongs in the artwork lookup key.
 local M = {}
 
+-- The standee size gate and its height table live in CheckerTokenStyle so there
+-- is a single source of truth. Normal runtime resolution is require; the
+-- dofile/loadfile unit harnesses fall back to the module sitting next to this
+-- file so the gate they exercise is the shipped one.
+local function loadStyle()
+	local ok,mod=pcall(require,'mod.class.CheckerTokenStyle')
+	if ok and type(mod)=='table' then return mod end
+	local source=debug.getinfo(1,'S').source
+	if type(source)=='string' and source:sub(1,1)=='@' then
+		local dir=source:sub(2):match('^(.*[/\\])') or './'
+		local fn=loadfile(dir..'CheckerTokenStyle.lua')
+		if fn then
+			local ok2,mod2=pcall(fn)
+			if ok2 and type(mod2)=='table' then return mod2 end
+		end
+	end
+end
+local Style=loadStyle()
+
 M.catalog = {
 	{id="forest-troll", name="forest troll", image="npc/troll_f.png", type="giant", subtype="troll"},
 	{id="wolf", name="wolf", image="npc/canine_w.png", type="animal", subtype="canine"},
@@ -985,6 +1004,26 @@ M.catalog = {
 	{id="shady-cornac-man", name="Shady cornac man", image="npc/humanoid_human_shady_cornac_man.png", type="humanoid", subtype="human", define_as="ARENA_AGENT", unique=true},
 	{id="tannen", name="Tannen", image="npc/humanoid_human_tannen.png", type="humanoid", subtype="human", define_as="TANNEN", unique=true},
 	{id="ben-cruthdar-the-cursed", name="Ben Cruthdar, the Cursed", image="npc/humanoid_human_ben_cruthdar__the_cursed.png", type="humanoid", subtype="human", define_as="BEN_CRUTHDAR", unique=true},
+	-- TA-2: second town-resident batch. Thirteen new non-unique bodies with no
+	-- define_as (two native-tall nice_tile bodies) plus the wiring-only elven
+	-- archer, whose byte-identical native PNG is already the companion-archer
+	-- token; the resident reuses that token and the companion entry is unchanged.
+	-- The Arena halfling slinger (define_as="SLINGER") and the different-name
+	-- PNG reuses (gem crafter, shalore scribe, YEEK_STORE_*) stay native.
+	{id="human-citizen", name="human citizen", image="npc/humanoid_human_human_citizen.png", type="humanoid", subtype="human"},
+	{id="halfling-citizen", name="halfling citizen", image="npc/humanoid_halfling_halfling_citizen.png", type="humanoid", subtype="halfling"},
+	{id="human-farmer", name="human farmer", image="npc/humanoid_human_human_farmer.png", type="humanoid", subtype="human"},
+	{id="halfling-gardener", name="halfling gardener", image="npc/humanoid_halfling_halfling_gardener.png", type="humanoid", subtype="halfling"},
+	{id="lumberjack", name="lumberjack", image="npc/humanoid_human_lumberjack.png", type="humanoid", subtype="human"},
+	{id="halfling-slinger", name="halfling slinger", image="npc/humanoid_halfling_halfling_slinger.png", type="humanoid", subtype="halfling"},
+	{id="dwarven-earthwarden", name="dwarven earthwarden", image="npc/humanoid_dwarf_dwarven_earthwarden.png", type="humanoid", subtype="dwarf"},
+	{id="yeek-mindslayer", name="yeek mindslayer", image="npc/humanoid_yeek_yeek_mindslayer.png", type="humanoid", subtype="yeek", native_tall=true},
+	{id="yeek-psionic", name="yeek psionic", image="npc/humanoid_yeek_yeek_psionic.png", type="humanoid", subtype="yeek"},
+	{id="thalore-hunter", name="thalore hunter", image="npc/humanoid_thalore_thalore_hunter.png", type="humanoid", subtype="thalore"},
+	{id="thalore-wilder", name="thalore wilder", image="npc/humanoid_thalore_thalore_wilder.png", type="humanoid", subtype="thalore", native_tall=true},
+	{id="elven-sun-mage", name="elven sun-mage", image="npc/humanoid_elf_elven_sun_mage.png", type="humanoid", subtype="elf"},
+	{id="shalore-rune-master", name="shalore rune master", image="npc/humanoid_shalore_shalore_rune_master.png", type="humanoid", subtype="shalore"},
+	{id="elven-archer", name="elven archer", image="npc/humanoid_elf_elven_archer.png", type="humanoid", subtype="elf"},
 }
 
 M.by_id = {}
@@ -1567,6 +1606,180 @@ end
 function M.image(id)
 	assert(M.by_id[id], "unknown monster token: "..tostring(id))
 	return "checker-revised+tokens/"..id..".png"
+end
+
+-- Two independent small-tile trials. Every unlisted cell size and every
+-- unlisted token keeps the flattened token at 64/96px and above 48px cells.
+--
+-- R32 ordinary layers (creature 1.25x inside its own cell) are OFF by default;
+-- the 19 layer PNGs stay shipped so M.layer_trial=true restores them.
+-- R33 boss standees (native-tall creature over the own-cell board piece) have
+-- their own switch and do not depend on M.layer_trial.
+M.layer_trial = false
+M.standee_trial = true
+-- Ordinary R32 small-cell threshold only (R38). The standee keeps its own
+-- minimum tile gate (M.standee_min_cell), so it must not read this.
+M.layer_max_cell = 48
+
+-- Ordinary (R32) ids.
+M.layer_ids = {
+	wolf=true, warg=true, ["great-wolf"]=true, ["orc-warrior"]=true,
+	["orc-archer"]=true, ["orc-assassin"]=true, ["skeleton-warrior"]=true,
+	["skeleton-mage"]=true, ["skeleton-archer"]=true, ["giant-spider"]=true,
+	ungole=true, ["weaver-queen"]=true, ["storm-wyrm"]=true,
+	["human-guard"]=true, ["derth-guard"]=true, ["elven-mage"]=true,
+	necromancer=true, pyromancer=true, ["yeek-mindslayer"]=true,
+}
+
+-- Standee ids: every id with a shipped upright standee layer. Eligibility is
+-- static and decided from the catalogue entry alone (M.standeeRule): the id
+-- must be natively tall (a generated token-standee-heights entry) and taller
+-- than one cell, and it must ship layer art. Rank and the live size_category
+-- are not consulted, so a size-changing buff cannot flip a token mid-fight.
+-- The R43 original four and the R47 batch-1 seventeen ship art (21 total).
+-- kra-tor's axe blade sits above a ~1-cell body, so it is flat and its
+-- layer/aura are archived; it must not be added here.
+M.standee_ids = {
+	ninandra=true, ["ogre-guard"]=true,
+	["snow-giant"]=true, ["ravenous-horror"]=true,
+	-- R47 batch 1 (17 ids): bone giants, golems, snow giants, uniques and
+	-- giants whose masters were accepted by the R47 art review.
+	["heavy-bone-giant"]=true, ["runed-bone-giant"]=true,
+	["eternal-bone-giant"]=true, atamathon=true, ["heavy-sentinel"]=true,
+	["burb-snow-giant-champion"]=true, archlich=true,
+	["snow-giant-chieftain"]=true, ["snow-giant-boulder-thrower"]=true,
+	["snow-giant-thunderer"]=true, ["minotaur-maze"]=true,
+	["champion-of-urh-rok"]=true, ["ogre-warmaster"]=true, celia=true,
+	dremling=true, ["forge-giant"]=true, ["healer-astelrid"]=true,
+	-- R50 batch 2: 18 accepted upright masters; native identity contracts unchanged.
+	["treant"]=true,
+	["wrathroot"]=true,
+	["ogre-mauler"]=true,
+	["ogre-rune-spinner"]=true,
+	["ultimate-shivgoroth"]=true,
+	["ogric-abomination"]=true,
+	["half-finished-bone-giant"]=true,
+	["norgos-guardian"]=true,
+	["norgos-frozen"]=true,
+	["horned-horror"]=true,
+	["harkor-zun"]=true,
+	["dolleg"]=true,
+	["duathedlen"]=true,
+	["thaurhereg"]=true,
+	["uruivellas"]=true,
+	["xhaiak-arachnomancer"]=true,
+	["rotting-titan"]=true,
+	["corrupted-daelach"]=true,
+	-- R51 batch 3: 13 accepted native-tall upright masters.
+	["rantha"]=true,
+	["varsha"]=true,
+	["fire-wyrm"]=true,
+	["ice-wyrm"]=true,
+	["storm-wyrm"]=true,
+	["venom-wyrm"]=true,
+	["greater-multi-hued-wyrm"]=true,
+	["ultimate-faeros"]=true,
+	["fyrk"]=true,
+	["snaproot"]=true,
+	["temporal-defiler"]=true,
+	["arch-zephyr"]=true,
+	["ak-gishil"]=true,
+	-- R52 final optional batch: six accepted native-tall masters.
+	["prox"]=true,
+	["bill"]=true,
+	["shax"]=true,
+	["onilug"]=true,
+	["chronolith-twin"]=true,
+	["chronolith-clone"]=true,
+	-- R53 accepted native-tall sand wyrm.
+	["briagh"]=true,
+}
+-- Standees render only at tiles >= this many pixels; below that (16px, small
+-- custom sizes) the flat token is used.
+M.standee_min_cell = 24
+
+-- Union of every id with a layer file. The build tool and the production asset
+-- tests read this, so a layer can be built and shipped while a trial switch is
+-- off (the R32 files stay reachable for M.layer_trial=false).
+M.layer_file_ids = {}
+for id in pairs(M.layer_ids) do M.layer_file_ids[id] = true end
+for id in pairs(M.standee_ids) do M.layer_file_ids[id] = true end
+
+-- Display-geometry manifest (the alpha bbox of each layer plus that file's
+-- canvas size in px), generated by tools/build_token_layers.py. Standee layers ship on a 256px
+-- canvas (R38, so a standee at a 128px tile is not upscaled); ordinary R32
+-- layers stay at 128px. A missing box means the standee has no known feet
+-- anchor and stays on the flattened path.
+M.layer_geometry_path = '/data-checker-revised/token-layer-geometry.lua'
+M.layer_geometry = {}
+do
+	if fs and fs.exists and loadfile and fs.exists(M.layer_geometry_path) then
+		local chunk = loadfile(M.layer_geometry_path)
+		local ok, geometry = false, nil
+		if chunk then ok, geometry = pcall(chunk) end
+		if ok and type(geometry) == 'table' then M.layer_geometry = geometry end
+	end
+end
+
+-- Layer file lookup. This is flag-independent on purpose: the audit and the
+-- build tool must see every shipped layer, and Game.lua applies the switches.
+function M.layerImage(id)
+	if not M.layer_file_ids[id] then return nil end
+	assert(M.by_id[id], "unknown layered monster token: "..tostring(id))
+	return "checker-revised+tokens-layer/"..id..".png"
+end
+-- POT shader-aura copy of a standee layer (R42). Only standees ship one:
+-- the aura needs transparent headroom above the body that the 256px creature
+-- layer does not have, and the aura quad must stay near native size (R41's
+-- pad on every side drew the flames ~2x too large). The aura quad reads the
+-- same geometry at the POT canvas, so the creature stays aligned.
+function M.layerAuraImage(id)
+	if not (id and M.standee_ids[id]) then return nil end
+	assert(M.by_id[id], "unknown layered monster token: "..tostring(id))
+	return "checker-revised+tokens-layer/aura/"..id..".png"
+end
+function M.layerAuraGeometry(id)
+	local box=M.layer_geometry[id]
+	local aura=type(box)=='table' and box.aura
+	if type(aura)~='table' then return nil end
+	-- R46: the aura texture can be non-square (128x256 for a tall body). Default
+	-- the width/height to the committed square canvas for older geometry.
+	aura.canvas_w=aura.canvas_w or aura.canvas
+	aura.canvas_h=aura.canvas_h or aura.canvas
+	return aura
+end
+function M.layerDisc()
+	if not (M.layer_trial or M.standee_trial) then return nil end
+	return "checker-revised+tokens-layer/_disc.png"
+end
+-- Ordinary R32 path only (independent of the standee switch).
+function M.layeredId(id)
+	return (M.layer_trial and M.layer_ids[id]) and true or false
+end
+function M.layerGeometry(id)
+	local box = M.layer_geometry[id]
+	return type(box) == 'table' and box or nil
+end
+
+-- The standee eligibility rule lives in this ONE function and is decided
+-- statically from the catalogue entry: natively tall (a generated height-table
+-- entry) and taller than one cell. It never reads the actor, so rank and any
+-- live size_category change are irrelevant.
+function M.standeeRule(entry)
+	local height=entry and Style and Style.standeeHeight(entry.id)
+	return height~=nil and height>1.0
+end
+-- Standees only at tiles >= M.standee_min_cell pixels (flat below).
+function M.standeeTileAllowed(cell)
+	return Style and Style.standeeCellAllowed(cell) and true or false
+end
+function M.standeeEligible(actor, entry)
+	-- The actor argument is accepted for call-site compatibility only and is
+	-- never consulted: eligibility is static.
+	if not M.standee_trial then return false end
+	if not (entry and M.standee_ids[entry.id]) then return false end
+	if not M.layerGeometry(entry.id) then return false end
+	return M.standeeRule(entry) and true or false
 end
 
 return M

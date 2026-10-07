@@ -8,7 +8,7 @@
   "prompt": "Use case: precise-object-edit.\nAsset type: transparent PNG tabletop monster token.\nEdit target: reference image 1, the generated giant Venus flytrap miniature.\nRequired correction ONLY: the giant upper trapping lobe currently projects far above the base outline. Recompose the miniature into a compact crouched rosette so EVERY part of the plant sits VISUALLY INSIDE the circular base silhouette with a continuous clear neutral rim visible all around it, including behind the upper jaw. This is a top-down tactical token occupying exactly one square cell. Tilt the head toward the camera/downward and shorten the stem so the open two-lobed mouth is centered within the disc, not standing above it. The circular base must fully enclose the silhouette of all mouth edges, teeth and leaves in the image plane. Show a near-circular disc viewed from high above, not a narrow low-angle ellipse. Keep the same large open single trap, four broad leaf shapes, olive green body, muted brick-red mouth, ivory marginal spines, hand-painted carved-resin material, soft upper-left light and neutral gray-brown shallow base. Preserve the species identity and painterly miniature quality. Do not add another mouth or extra foliage. No faction rim, text, insignia, labels or scenic decoration.\nFraming: square canvas, one complete token, disc diameter about 86% of canvas width, centered, all plant contours within the disc. No clipping.\nTransparency is essential: all pixels outside the clean circular disc must be genuinely fully transparent, zero alpha, with ordinary antialiasing only at the disc edge. No stray low-alpha dust, particles, shadows, background or haze. Output PNG with alpha.",
   "references": [
     {
-      "path": "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/venus-flytrap-v0-overhang.png",
+      "path": "<workspace>/game/addons/tome-checker-revised/art/monsters-v1/masters/venus-flytrap-v0-overhang.png",
       "role": "edit target: retain species and material, lower whole creature into circular outline"
     }
   ],
@@ -81,11 +81,11 @@
     "use_case": "stylized-concept",
     "references": [
       {
-        "path": "/workspace/t-engine4/game/addons/tome-checker-revised/art/monsters-v1/masters/forest-troll-v1.png",
+        "path": "<workspace>/game/addons/tome-checker-revised/art/monsters-v1/masters/forest-troll-v1.png",
         "role": "style only: handmade miniature material, camera, neutral base, light"
       },
       {
-        "path": "/workspace/t-engine4/game/modules/tome/data/gfx/shockbolt/npc/immovable_plants_giant_venus_flytrap.png",
+        "path": "<workspace>/game/modules/tome/data/gfx/shockbolt/npc/immovable_plants_giant_venus_flytrap.png",
         "role": "species identity: giant predatory green plant with a single reddish trap"
       }
     ],

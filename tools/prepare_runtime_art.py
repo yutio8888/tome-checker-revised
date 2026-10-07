@@ -19,7 +19,7 @@ copies=[]
 # Ordered oldest to newest. A later batch that re-exports an existing identity
 # replaces the earlier selection for that id; monsters-v9-refine supersedes the
 # C0b giant-brown-mouse texture without touching the C0b batch on disk.
-for batch in ('monsters-v1', 'monsters-v2', 'monsters-v3', 'monsters-v4', 'monsters-v5', 'monsters-v6', 'monsters-v7-c0-sol', 'monsters-v8-c0b', 'monsters-v9-refine', 'monsters-e1-gel', 'monster-batch-a', 'monster-batch-b', 'monster-batch-c', 'monster-batch-d', 'monster-batch-e', 'monster-batch-f', 'monster-batch-g', 'monster-batch-h', 'monster-batch-i', 'monster-batch-j', 'monster-batch-k', 'monster-batch-l', 'monster-batch-m', 'monster-batch-n', 'monster-batch-o', 'monster-batch-p', 'monster-batch-q', 'monster-batch-r', 'monster-batch-s', 'monster-batch-t', 'monster-batch-u', 'monster-batch-v', 'monster-batch-w', 'monster-batch-x', 'monster-batch-y', 'monster-batch-z', 'monster-batch-aa', 'monster-batch-ab', 'monster-batch-ac', 'monster-batch-ad', 'monster-batch-ae', 'monster-batch-af', 'monster-batch-ag', 'monster-batch-ua', 'monster-batch-ta1', 'monster-batch-ub1', 'monster-batch-ub2'):
+for batch in ('monsters-v1', 'monsters-v2', 'monsters-v3', 'monsters-v4', 'monsters-v5', 'monsters-v6', 'monsters-v7-c0-sol', 'monsters-v8-c0b', 'monsters-v9-refine', 'monsters-e1-gel', 'monster-batch-a', 'monster-batch-b', 'monster-batch-c', 'monster-batch-d', 'monster-batch-e', 'monster-batch-f', 'monster-batch-g', 'monster-batch-h', 'monster-batch-i', 'monster-batch-j', 'monster-batch-k', 'monster-batch-l', 'monster-batch-m', 'monster-batch-n', 'monster-batch-o', 'monster-batch-p', 'monster-batch-q', 'monster-batch-r', 'monster-batch-s', 'monster-batch-t', 'monster-batch-u', 'monster-batch-v', 'monster-batch-w', 'monster-batch-x', 'monster-batch-y', 'monster-batch-z', 'monster-batch-aa', 'monster-batch-ab', 'monster-batch-ac', 'monster-batch-ad', 'monster-batch-ae', 'monster-batch-af', 'monster-batch-ag', 'monster-batch-ua', 'monster-batch-ta1', 'monster-batch-ub1', 'monster-batch-ub2', 'monster-batch-ta2'):
     art = ROOT/'art'/batch
     if batch == 'monsters-v4' and not (art/'export-report.json').exists():
         continue
@@ -79,18 +79,15 @@ def mask(name, rings, pattern=None):
             rows.extend((255,255,255,round(255*coverage)))
     png=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>IIBBBBB',size,size,8,6,0,0,0))+chunk(b'IDAT',zlib.compress(rows))+chunk(b'IEND',b'')
     (dest/(name+'.png')).write_bytes(png)
-mask('_relation-back',[(.402,.498)])
+mask('_relation-back',[(.451,.5)])
 for relation in ('enemy','neutral','friend','player'):
-    mask('_relation-'+relation,[(.416,.49)],relation)
-    # Persistent relation rim stays readable even when almost all HP is lost.
-    mask('_relation-edge-'+relation,[(.474,.495)],relation)
-# This neutral mask is clipped by native vertex geometry at runtime. The
-# smooth health arc is independent of the faction outline's notch/dash shape.
-mask('_health-band',[(.410,.463)])
-mask('_player-inner',[(.388,.403)])
-mask('_shield-track',[(.459,.499)])
-mask('_shield-band',[(.465,.493)])
-mask('_shield-ticks',[(.473,.495)],'ticks')
+    # The mask canvas is the ring's outer edge: token_diameter .92 + ring_lane
+    # .035 = .955 cell. The ring is centred on the .92 disc edge (radius .46
+    # cell = .4817 of the canvas) and is .035 cell thick, so it spans
+    # .46335..0.5 of the canvas. Keep these equal to M.token_diameter and
+    # M.ring_lane in CheckerTokenStyle.lua and to the production test.
+    mask('_relation-'+relation,[(.46335,.5)],relation)
+mask('_player-inner',[(.4354,.4504)])
 
 def polygon_mask(name,polygons):
     def inside(px,py,poly):
@@ -127,5 +124,11 @@ polygon_mask('_badge-god',[crown,bar,[(.12,.05),(.18,.05),(.22,.16),(.16,.16)],[
 (dest/'_rank-ring.png').unlink(missing_ok=True)
 # Keep the obsolete 0.4.0 texture out of the new package.
 (dest/'_relation-ring.png').unlink(missing_ok=True)
+# Tokens no longer draw a health arc or a shield ring; drop those UI masks so
+# a stale copy can never ship.
+for stale in ('_health-band', '_shield-track', '_shield-band', '_shield-ticks',
+              '_relation-edge-enemy', '_relation-edge-neutral', '_relation-edge-friend',
+              '_relation-edge-player'):
+    (dest/(stale+'.png')).unlink(missing_ok=True)
 (ROOT/'data/token-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
-print(f'Prepared {len(selected)} selected 128px AI exports + relation, shield and rank badge UI masks')
+print(f'Prepared {len(selected)} selected 128px AI exports + relation, player-inner and rank badge UI masks')

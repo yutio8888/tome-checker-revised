@@ -54,7 +54,7 @@ for _,a in ipairs(rank_scene.actors) do
 end
 f:close()
 assert(not S.rankBadge(2) and not S.rankBadge(3))
-assert(S.colors.shield[1]==236 and S.colors.friend[2]==210 and S.colors.neutral[3]==245)""")
+assert(S.colors.player[1]==30 and S.colors.friend[2]==210 and S.colors.neutral[3]==245)""")
 shutil.copy2(CAPTURE_HOME/'rank-frame-colors.txt',OUT/'rank-frame-colors.txt')
 shutil.copy2(CAPTURE_HOME/'rank-display-sample.txt',OUT/'rank-display-sample.txt')
 view(64)

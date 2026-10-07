@@ -1,0 +1,12 @@
+Use case: stylized-concept. Deliver ONE full-body transparent PNG illustration of $native_name for Tales of Maj'Eyal. It is used ONLY as the upright standee layer drawn over that creature's existing board token, so it is a SECOND artwork for the same identity, not a replacement token. Request 1024 x 1024 pixels; retain the tool's native resolution and native alpha.
+
+Identity brief: $subject
+Family separation: $contrast
+Composition: $composition
+
+Match the designated style reference's matte painted miniature finish, brushwork, upper-left soft light and value structure. Show the WHOLE creature standing or rearing UPRIGHT as a complete body: head, torso, every visible limb and held item, and a clean bottom contact where the body ends. The composition must be clearly taller than it is wide, about 1 to 1.6, up to 1 to 2. Do not lay the animal or body flat, do not use a steep overhead or top-down camera, and do not spread legs, tail, wings, fins or weapons sideways into a wide low disc. Keep the identity identical to the supplied native sprite and shipped token: same species, same colours and value pattern, same held items, same markings, same number of limbs. The reference camera is a top-down board token; you must convert it to a true upright side/three-quarter standing pose.
+
+There is absolutely NO disc, base, ground plane, floor, shadow plate, frame, border, text, label or checkerboard in this image. The creature body itself ends at its own feet, tail tip or fins. Return an RGBA PNG whose alpha channel is genuinely transparent around the whole body. Do not paint a white, grey, black or checkerboard backdrop for someone to key out later, and do not return a flat opaque RGB image.
+
+Palette/material: $palette
+Add no faction ring, health arc, shield, rank, crown, UI marker, number, text, aura, particle or scene. Provide one figure only; no montage and no alternate variants in one image. Native references establish identity and colour; the style reference establishes finish and lighting only.

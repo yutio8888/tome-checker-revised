@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "batch_id": "dremling-token-repaint-v1",
+  "assets": [
+    {
+      "asset_id": "dremling",
+      "native_name": "dremling",
+      "scope": "maze/deep-bellow etc. random pool (rarity=1, level_range {3,nil}); non-unique native-tall corrupted horror; FLAT TOKEN REPAINT after the user decision of 2026-10-04. The shipped flat token (art/monster-batch-g/masters/dremling-v2.png, produced by the monster-batch-g-2/-2b/-2c redraw chain) is a PALE grey-white creature holding an AXE, which contradicts dremling's own desc ('A giant black-skinned humanoid covered in spikey scabrous deposits. Its face is featureless; its eyesockets, empty and hollow.'). The accepted dremling STANDEE (art/token-layers/dremling/standee/master-v1.png) is black-skinned with pale scabrous spikes, a featureless mask face and no weapon, and the user chose to keep it. This repaint brings the flat token back to the desc and the standee: black skin, pale scabrous spike deposits, featureless face with hollow eye sockets, no axe or other weapon. The old master is archived under art/monster-batch-g/superseded/dremling-v2.png and the old 128px runtime token under art/monster-batch-g/superseded/dremling-v2-runtime-128.png. Flat-token size/canvas/format and the manifest mapping are unchanged; only the pixels are repainted.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 79,
+          "anchor": "newEntity{ base = \"BASE_NPC_CORRUPTED_HORROR\","
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 81,
+          "anchor": "name = \"dremling\""
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 82,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/horror_corrupted_drem.png\", display_h=2, display_y=-1}}},"
+        },
+        {
+          "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+          "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+          "line": 83,
+          "anchor": "desc = _t\"A giant black-skinned humanoid covered in spikey scabrous deposits."
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, light, camera and matte miniature finish; do not copy its creature. Match this disc's own lightness EXACTLY -- do not darken it further."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_drem.png",
+          "sha256": "0b8983be6f0109320997a3d639c24b64ad71648e1da30399a02db3858405a3a0",
+          "role": "identity",
+          "note": "dremling's actual native sprite (filename-swap trap: drem's own file is npc/horror_corrupted_dremling.png). A hunched near-black humanoid with a spiky scabrous ridge crest and hollow empty eye sockets. Keep this silhouette and black value; do NOT copy the waraxe this native art happens to hold -- the desc and the accepted standee have no weapon."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/token-layers/dremling/standee/master-v1.png",
+          "sha256": "3842b31a1ef72e546dbb08db04160eacd3663f4e367646545444828ff8bc29f9",
+          "role": "family",
+          "note": "The ACCEPTED dremling standee for this same identity (upright master). Match its appearance contract: black skin, broad pale ash-bone scabrous spike deposits along skull, shoulders and forearms, a featureless mask face with hollow sockets, empty clawed hands, no weapon. Camera/disc come from the style reference, not from this upright master."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A hulking, broad-shouldered giant humanoid seen from a steep overhead three-quarter angle, its skin deep BLACK charcoal with a cool dark-slate-blue cast, crusted all over with thick PALE ash-bone scabrous deposits and jagged spike ridges along the skull crown, spine, shoulders and forearms. Its face is entirely featureless and mask-like -- no eyes, no nose, no mouth, only two deep empty hollow eye sockets. Its hands are empty hooked claws; it carries NO axe, NO waraxe and no weapon or tool of any kind. Broad pale scabrous plates and a pale bone-grey rim light on the upper-left surfaces keep the dark body readable as one crisp shape at small size.",
+        "contrast": "Fourth horror/corrupted silhouette alongside Horned Horror (horned minotaur), The Mouth (wide red toothed mass) and The Abomination (tall pale spire): dremling keeps its hulking humanoid-with-spiky-ridge-crest-and-blank-mask silhouette. This repaint deliberately REVERSES the superseded pale-stone value chosen by monster-batch-g-2/-2b/-2c: dremling must now be BLACK-skinned per its own in-game desc and match the accepted black-skinned standee. It stays readable not by a pale body but by INTERNAL value contrast -- broad PALE ash-bone scabrous deposits and lit facing planes on a black mass -- plus a cool blue-grey cast, never a warm brown and never a flat featureless silhouette. No weapon.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clean neutral base ring on every side. Keep the whole creature -- every spike, ridge, limb and claw -- as one rounded mass well inside the inner three quarters of the disc radius, leaving a wide bare ring of base plate on every side; no spike tip, claw or cast shadow may reach the outer sixth of the disc radius or cross the disc edge. Render the neutral disc -- including the whole outer-sixth ring band and the area under the black creature -- at EXACTLY the style reference's own brightness and colour. This is a measured correction: earlier attempts at this identity darkened the disc for contrast against a pale body and overshot the base-lightness gate; here the disc must be left unmodified at reference lightness (a hair lighter if anything, never darker). Do NOT apply any darkening bias, warm cast, glow, bounce-light, gradient, vignette or contact shadow to the disc anywhere. DARK-SUBJECT DISCIPLINE: the near-black body needs a broad pale facing plane and a thin bright bone-grey rim light along its upper-left outline so the silhouette reads as a light-edged shape on the dark disc at 48/64/96 px -- not flat black and not tiny glowing outlines. Do not darken the creature to compensate for the dark disc either.",
+        "palette": "Deep near-black charcoal to dark slate-blue skin (clearly black even though it is a real painted surface, not a flat silhouette) with broad PALE ash-bone and ivory-grey scabrous deposits and spikes for internal contrast, hollow eye sockets a shade darker than the surrounding mask, a thin bright bone-grey rim light along the upper-left outline; no bright colour accents anywhere on the body, no glowing eyes, no warpaint. Dry neutral charcoal-brown disc with restrained copper-grey bevel at exactly the style reference's own lightness -- unmodified, no extra darkening bias applied for contrast."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Exact source identity re-verified against game/modules/tome data: name=\"dremling\", type horror / subtype corrupted, unique=false, non-unique native-tall body, nice_tile invis.png + add_mos{image=npc/horror_corrupted_drem.png, display_h=2, display_y=-1}, and desc on the same definition. Filename-swap trap re-confirmed: dremling's real art file is npc/horror_corrupted_drem.png (drem's own file is npc/horror_corrupted_dremling.png); tests/token_mapping.lua locks the negative direction. dremling is already mapped, so this repaint carries the required refinement brief (supersedes the mapped dremling token, names the exhausted monster-batch-g-2c batch, states the design-direction change and pins the earlier receipts/art). Flat token size (128px), RGBA and manifest wiring are unchanged; only the artwork is repainted.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-g-20260929/source-contracts.json",
+          "sha256": "a1d1b1eccf9f271042bc264eb2f592d2edecd13716b8f13e6ca3d1f2d69cac07"
+        }
+      ],
+      "refinement": {
+        "supersedes": "dremling",
+        "previous_batch": "monster-batch-g-2c",
+        "design_change_reason": "The shipped flat token was a PALE grey-white stone creature with a waraxe, produced by the monster-batch-g-2/-2b/-2c redraw chain whose explicit design goal was to move dremling as far as possible OUT of black (the dark-on-dark lesson). The user decision of 2026-10-04 reverses that direction: dremling's own desc says 'A giant black-skinned humanoid covered in spikey scabrous deposits ... featureless ... eyesockets, empty and hollow', the accepted standee is black-skinned with pale scabrous spikes and no weapon, and the user chose to keep the standee. This repaint therefore changes the design direction back to a black-skinned, pale-scabrous, weaponless creature and keeps readability through internal pale scabrous plates and a pale rim light rather than a pale body. It is a repaint of the flat token only; the standee, its layer and the flat-token wiring are unchanged.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-g/superseded/dremling-v2.png",
+            "sha256": "46a88abf6ff3314d204df60e66739abcff130f23e3a27c0f648e45714b6d26bc"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-g/superseded/dremling-v2-runtime-128.png",
+            "sha256": "ed834025fbc4a036013bbfc8c9c7af87b1126248003022416ca9f7b407f7481d"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-g-2c/dremling/receipts/attempt-1.json",
+            "sha256": "45cc6d5701efc24a3d170c9b20d8be8f70206d3d0dc09488b22f92efb7876591"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-g-2c/dremling/imagegen-calls/call-1/call.json",
+            "sha256": "c8595114b6cfd3030829d129571b626d031e15b7565f671531c5f038e8c88714"
+          }
+        ]
+      }
+    }
+  ]
+}

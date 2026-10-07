@@ -88,7 +88,7 @@ for key,color in [('friend','30,195,245'),('neutral','180,180,220'),('enemy','23
     lua('checker_picker.apply_button.fct()')
 lua("local S=require 'mod.class.CheckerTokenStyle';"
     "assert(S.relationColor('friend')[1]==30 and S.relationColor('neutral')[1]==180 and S.relationColor('enemy')[1]==230);"
-    "assert(S.relationColor('player')==S.colors.player and S.colors.shield[1]==236);game:unregisterDialog(checker_options)")
+    "assert(S.relationColor('player')==S.colors.player and S.colors.player[1]==30);game:unregisterDialog(checker_options)")
 checks.append('All three faction settings apply independently to partly wounded live actors; friendly cyan deliberately matches player hue while the player keeps its white inner line.')
 shot('palette-custom-1920')
 shutil.copy2(SETTING,OUT/'custom-setting.cfg.txt')
@@ -109,14 +109,14 @@ lua("local item=checker_options.list[#checker_options.list];assert(item.checker_
     "local S=require 'mod.class.CheckerTokenStyle';assert(next(config.settings.tome.checker_rank_colors)==nil);"
     "assert(S.rankColor('rare')[1]==250 and S.rankColor('boss')[2]==119);"
     "assert(next(config.settings.tome.checker_relation_colors)==nil and S.relationColor('friend')[2]==210);"
-    "assert(not S.rankBadge(2) and not S.rankBadge(3) and S.colors.shield[1]==236);game:unregisterDialog(checker_options)")
+    "assert(not S.rankBadge(2) and not S.rankBadge(3) and S.colors.player[1]==30);game:unregisterDialog(checker_options)")
 assert SETTING.read_bytes()==original
 assert RELATION_SETTING.read_bytes()==original_relations
 checks.append('Restore default colors clears both palettes; warm badges and native faction hues restored, normal/elite unmarked, pearl shield preserved.')
 shot('palette-restored-1920')
 lua("local f=assert(fs.open('/color-health-sample.txt','w'));local S=require 'mod.class.CheckerTokenStyle';"
     "for i,a in ipairs(rank_scene.actors) do local relation=S.relation(a,game.player,game.player:reactionToward(a));"
-    "f:write(('%d rank=%s relation=%s hp=%.0f%% cell=%d,%d\\n'):format(i,tostring(a.rank),relation,S.lifeFraction(a)*100,a.x,a.y)) end;f:close()")
+    "f:write(('%d rank=%s relation=%s hp=%.0f%% cell=%d,%d\\n'):format(i,tostring(a.rank),relation,S.nativeLifeFraction(a)*100,a.x,a.y)) end;f:close()")
 shutil.copy2(CAPTURE_HOME/'color-health-sample.txt',OUT/'color-health-sample.txt')
 last_log=(SESSION/'game.log').read_text(errors='replace')
 assert not re.search(r'Lua Error|stack traceback|CheckerRefined[^\n]*ERROR|\[BoardDebug\][^\n]*FAIL',last_log)

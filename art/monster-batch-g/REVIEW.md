@@ -42,3 +42,12 @@ ImageGen 总调用 **22 / 26**（按 `call-*` 目录计，含被中断而无 `ca
 - Accepted all 11 shipped tokens. Dremling v2 (masked body luminance 90.6 vs 39.8) and shiaak venomblade v2 fix the dark-on-dark failures.
 - Massok base-drift waiver (-10.32): **approved** (strong art, only base drift misses); wiring pending.
 - Needs in-game confirmation: Harno and xhaiak arachnomancer (dark subjects) at 48px; Pale Drake vs The Master (both robed staff figures, separated by hue and head shape) in Dreadfell.
+
+## 2026-10-04 dremling 平面 token 重绘（v3，用户决定）
+
+- 用户决定：dremling 的 `desc`（`game/modules/tome/data/general/npcs/horror-corrupted.lua:83`，"A giant black-skinned humanoid covered in spikey scabrous deposits ... featureless ... eyesockets, empty and hollow"）与已选用的黑色立绘一致；现行平面 token v2 是 pale-stone 且持斧，与 desc 矛盾。保留立绘，只重绘平面 token。
+- 重绘包 `art/production/handoffs/dremling-token-repaint-v1/`（`dremling-token-repaint-v1`，gpt-6.1-sol、`--ephemeral`，**1** 次调用，attempt 1 即过门控；manifest `art/production/batches/dremling-token-repaint-v1.json` 带 refinement 声明，supersedes `monster-batch-g-2c`）。
+- 新母版 `art/monster-batch-g/masters/dremling-v3.png`（sha256 `7bf8e12d…`）；门控 base_drift **-3.64**、最大不透明半径 0.8585、占格 0.8594、无警告。旧母版与旧运行 token 归档于 `art/monster-batch-g/superseded/dremling-v2.png` 与 `.../dremling-v2-runtime-128.png`。
+- 外观：黑皮 + 浅骨色 scabrous 尖刺沉积、无五官面具脸与空洞眼窝、空爪无武器；与已接受立绘 `art/token-layers/dremling/standee/master-v1.png` 一致。
+- 三尺寸（48/64/96 真实尺寸、mid-brown 地板）对照图见 `art/token-layers/review-batch1/dremling-token.png`（native／v2／v3／立绘）。
+- 本目录 `review/` 下 2026-09-29 的家族图与 `luminance.json` 是 v2 的历史记录，未重跑；v3 的对照以 `dremling-token.png` 为准。

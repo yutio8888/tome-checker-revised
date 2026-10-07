@@ -1,0 +1,124 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch2-bone-ice",
+ "assets": [
+  {
+   "asset_id": "ultimate-shivgoroth",
+   "native_name": "ultimate shivgoroth",
+   "scope": "Standee batch 2 (18 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/shivgoroth.lua",
+     "sha256": "9543c07c1c22d99f4ace1868e113bc613bc1d76fe8aa22e490de0953568207f5",
+     "line": 88,
+     "anchor": "newEntity{ base = \"BASE_NPC_SHIVGOROTH\","
+    }
+   ],
+   "desc": "Shivgoroth are mighty ice elementals, torn away from their home world by a powerful magic.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ultimate-shivgoroth.png",
+     "sha256": "174399a5b2eed63bd716db030cf9895f796b0a03cc48b9a45c2a279cd3d879ab",
+     "role": "style",
+     "note": "The shipped flat ultimate-shivgoroth token: copy its matte painted miniature finish, colours, outfit and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_ice_ultimate_shivgoroth.png",
+     "sha256": "723a8e8d4935e909341722c0b0c191f0fa7f219eda4144fcb151f6331f0117e0",
+     "role": "identity",
+     "note": "Native ultimate-shivgoroth sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/shivgoroth.png",
+     "sha256": "256b49c0369897fb68cbe9f171a5fc2c25d673f9d1b6a81c3509f027bf49d1ec",
+     "role": "family",
+     "note": "The shipped lesser shivgoroth token shares this ice-elemental body plan, so it is the token this one must stay clearly distinct from; do not copy its pose or its shape."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/elemental_ice_ultimate_shivgoroth.png",
+     "sha256": "723a8e8d4935e909341722c0b0c191f0fa7f219eda4144fcb151f6331f0117e0"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ultimate-shivgoroth.png",
+     "sha256": "174399a5b2eed63bd716db030cf9895f796b0a03cc48b9a45c2a279cd3d879ab"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "ultimate shivgoroth: a mighty upright ice elemental built as a complete biped, a blocky faceted body of pale blue and white translucent ice with a clear head, a broad chest of layered ice plates and two great ice fists; jagged ice shards form the shoulders and forearms, and a cold cyan glow sits deep in the chest. Match the shipped flat token's pale blue crystalline ice, cyan core glow and heavy build.",
+    "contrast": "Taller than wide: stand fully upright on two clear legs with the arms close and the fists low, so the faceted ice body reads as a person, not a shapeless snowdrift. It is a complete, well-formed elemental and differs from the lesser shivgoroth token by the clear head, the layered chest plates and the heavy ice fists. No falling snow, mist, particles or ground ice.",
+    "composition": "Full body, upright standing front three-quarter view, heavy ice fists low at the sides, feet planted, the crystalline head at the top of the frame. Overall height about 1.6 to 1.8 times the width; nothing above the head.",
+    "palette": "pale ice-blue and white crystalline ice with darker blue facets, cold cyan glow in the chest, white icy highlights."
+   }
+  },
+  {
+   "asset_id": "half-finished-bone-giant",
+   "native_name": "Half-Finished Bone Giant",
+   "scope": "Standee batch 2 (18 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/blighted-ruins/npcs.lua",
+     "sha256": "383d6aa4ca48a2f2b219020522a29eb4c30b9c8e88e18efd88a8f924b56d3a03",
+     "line": 73,
+     "anchor": "newEntity{ base = \"BASE_NPC_BONE_GIANT\", define_as = \"HALF_BONE_GIANT\","
+    }
+   ],
+   "desc": "A towering creature, made from the bones of hundreds of dead bodies. It is covered by an unholy aura.\nThis specimen looks like it was hastily assembled and is not really complete yet.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/half-finished-bone-giant.png",
+     "sha256": "17faccc721ded0674ab8b854ebb1fcf50c246b54b2b002ccb6e4dea2b3fd072d",
+     "role": "style",
+     "note": "The shipped flat half-finished-bone-giant token: copy its matte painted miniature finish, colours, outfit and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_half_finished_bone_giant.png",
+     "sha256": "5311494351da078b36738f942d4f165f543564ddbbcaf830c2dbdf5627aa8c9c",
+     "role": "identity",
+     "note": "Native half-finished-bone-giant sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/bone-giant.png",
+     "sha256": "3eee42a71202ccf33d759498396d02a6ae5661101e7381010ef71f5602e70c56",
+     "role": "family",
+     "note": "The shipped generic bone giant shares this skeletal body plan, so it is the token this one must stay clearly distinct from; do not copy its complete ribcage, its pose or its proportion."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_half_finished_bone_giant.png",
+     "sha256": "5311494351da078b36738f942d4f165f543564ddbbcaf830c2dbdf5627aa8c9c"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/half-finished-bone-giant.png",
+     "sha256": "17faccc721ded0674ab8b854ebb1fcf50c246b54b2b002ccb6e4dea2b3fd072d"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Half-Finished Bone Giant: a towering giant skeleton hastily and unevenly assembled from yellowed bone, clearly incomplete: the ribcage is missing on one whole side so the bare spine shows through, one shoulder has a full heavy arm while the other arm is a short stump of bone, the pelvis is half-built, the skull is set crooked on the neck and one eye socket is unfilled; a faint cold violet unholy tint clings to the bones. Match the shipped flat token's pale aged bone with the violet tint, but stay thick-boned enough to read at 48px.",
+    "contrast": "Taller than wide and clearly asymmetric: the one complete arm hangs close and the missing-rib side shows the spine, so the incompleteness reads without thinning the figure. It differs from the three shipped bone giants: heavy (massive and plated), runed (lean, red runes) and eternal (bulky, hunched, skull cluster). No lifting aura, smoke or particles; the violet is only a faint sheen on the bone.",
+    "composition": "Full body, upright standing front three-quarter view, one heavy arm down at the side, the other a short bone stump, feet planted, the crooked skull at the top of the frame. Overall height about 1.6 to 1.8 times the width; nothing above the skull.",
+    "palette": "yellowed aged bone with darker cracks, a faint cold violet sheen on the bones, dark empty sockets."
+   }
+  }
+ ]
+}

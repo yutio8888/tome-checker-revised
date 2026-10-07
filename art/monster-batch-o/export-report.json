@@ -1110,8 +1110,8 @@
     },
     {
       "id": "onilug",
-      "master": "masters/onilug-v2.png",
-      "sha256": "a4f2756a3693b97b3fb110517afa2439973c6ac0dfe8b8c76443c8165c3aabc6",
+      "master": "masters/onilug-v3.png",
+      "sha256": "c74ff15f3e40f96e0c0e55e0750cafc38d6491c64658cdedc9ee60d5b8c6ee04",
       "exports": [
         {
           "path": "sprites/48/onilug.png",
@@ -1119,18 +1119,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            82,
-            71,
-            1172,
-            1172
+            84,
+            68,
+            1169,
+            1174
           ],
           "export_window": [
-            -13.116279,
-            -18.616279,
-            1280.232558
+            -16.523256,
+            -22.023256,
+            1286.046512
           ],
           "target_occupancy": 0.86,
-          "sha256": "371543a062216f7aad6e2c07b2148d117b066f5c87bce43f0db523bdb75992cc"
+          "sha256": "bbe1eb72ff6e2d1d2741429b5080f91cf327ad1367b25536dc18d7668c4a7164"
         },
         {
           "path": "sprites/64/onilug.png",
@@ -1138,18 +1138,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            82,
-            71,
-            1172,
-            1172
+            84,
+            68,
+            1169,
+            1174
           ],
           "export_window": [
-            -13.116279,
-            -18.616279,
-            1280.232558
+            -16.523256,
+            -22.023256,
+            1286.046512
           ],
           "target_occupancy": 0.86,
-          "sha256": "82a4c7e25d3cd7e84f4f398e9b412d94bbca960c7ece2b133a7497ea6c157ba0"
+          "sha256": "cc6f42daabe6122da9ce09e7cf5ee2d8b31d0e66eb40f3faa21296a59cfe6b9c"
         },
         {
           "path": "sprites/96/onilug.png",
@@ -1157,18 +1157,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            82,
-            71,
-            1172,
-            1172
+            84,
+            68,
+            1169,
+            1174
           ],
           "export_window": [
-            -13.116279,
-            -18.616279,
-            1280.232558
+            -16.523256,
+            -22.023256,
+            1286.046512
           ],
           "target_occupancy": 0.86,
-          "sha256": "94b8fcb4693f16c6deb61fdcc8b81f7510d66aa1894262d52b66df71f5257e15"
+          "sha256": "c69b79bb55005cd916abe3ab4dffb457ed944bdc143761870fe5ba6c8a0aa546"
         },
         {
           "path": "sprites/128/onilug.png",
@@ -1176,18 +1176,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            82,
-            71,
-            1172,
-            1172
+            84,
+            68,
+            1169,
+            1174
           ],
           "export_window": [
-            -13.116279,
-            -18.616279,
-            1280.232558
+            -16.523256,
+            -22.023256,
+            1286.046512
           ],
           "target_occupancy": 0.86,
-          "sha256": "134c4a8bb060b091266a3625406262a32e147709e707d2d057259fc39dc50e6c"
+          "sha256": "9ab0daff54f8950819ab4a3563cfdc641fcd53e4ab8ce00467ada32eb5a1cb2c"
         },
         {
           "path": "sprites/256/onilug.png",
@@ -1195,18 +1195,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            82,
-            71,
-            1172,
-            1172
+            84,
+            68,
+            1169,
+            1174
           ],
           "export_window": [
-            -13.116279,
-            -18.616279,
-            1280.232558
+            -16.523256,
+            -22.023256,
+            1286.046512
           ],
           "target_occupancy": 0.86,
-          "sha256": "d29310c6d0934109b148fd2c14d7e1646d62995920c4228891e54e78851191e8"
+          "sha256": "342a5ffeecb7d9a3dd1193e7cded4f27ce2fcc560055d31f1de3edeaedca671c"
         }
       ],
       "style_gate": {
@@ -1220,9 +1220,9 @@
           74.33,
           76.42
         ],
-        "base_drift": 1.25,
-        "max_sector_intrusion": 1.94,
-        "max_opaque_radius": 0.8599,
+        "base_drift": -0.31,
+        "max_sector_intrusion": 3.79,
+        "max_opaque_radius": 0.8585,
         "blocking": [],
         "warnings": [],
         "grandfathered": false,

@@ -1,4 +1,4 @@
-<!-- Copied verbatim from /workspace/t-engine4/tmp/rotation/R20-scratch/REPORT.md (R20 isolated-fixture probe, 2026-10-01). Pinned as UB-1 render evidence for Archmage Tarelion. -->
+<!-- Copied verbatim from <workspace>/tmp/rotation/R20-scratch/REPORT.md (R20 isolated-fixture probe, 2026-10-01). Pinned as UB-1 render evidence for Archmage Tarelion. -->
 
 commandcode/deepseek/deepseek-v4.1-flash
 

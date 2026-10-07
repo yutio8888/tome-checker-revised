@@ -1,0 +1,63 @@
+{
+ "schema": 1,
+ "batch_id": "standee-upright-nine-c",
+ "assets": [
+  {
+   "asset_id": "bone-giant",
+   "native_name": "bone giant",
+   "scope": "R36 upright standee coverage; second artwork used only for the standee layer at <=48px cells. Flat token, master and manifest mapping unchanged.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "At the new 1.0-cell standee width cap the R33 flat cut-out is width-bound and renders only about one cell tall, reading as the flat token rather than an upright standee.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/bone-giant.lua",
+     "sha256": "b3965bc593ac9814334d734b3ceffd29524521163f4c6e63557b0d368733aad5",
+     "line": 60,
+     "anchor": "name = \"bone giant\", color=colors.WHITE"
+    }
+   ],
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/bone-giant.png",
+     "sha256": "3eee42a71202ccf33d759498396d02a6ae5661101e7381010ef71f5602e70c56",
+     "role": "style",
+     "note": "The shipped flat bone giant token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_bone_giant.png",
+     "sha256": "f617abd61d90a34b9bc275c04cbc21ac7c698e39b4219c5c43c2007db27625c1",
+     "role": "identity",
+     "note": "Native bone giant sprite: keep the same species, gear, colours and markings, converted to a true upright standing/rearing composition."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/snow-giant.png",
+     "sha256": "7c8cd34d093bf3a84a6d6eb6ba23600e1b35a034c6095cce310c4cfd6afff2a7",
+     "role": "family",
+     "note": "The nearest mapped family token. It shares this creature's body plan or palette, so it is the token this one must stay clearly distinct from; do not copy its pose."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-n-20260929/source-contracts.json",
+     "sha256": "dad625ba87d3d81ab2a542faf25e2a55fafb5093319a6d1269d4019f0cde564b"
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_bone_giant.png",
+     "sha256": "f617abd61d90a34b9bc275c04cbc21ac7c698e39b4219c5c43c2007db27625c1"
+    }
+   ],
+   "prompt_fields": {
+    "subject": "bone giant: a colossal animated skeleton, bleached bone ribs and spine, long leg and arm bones, a horned skull and a heavy bone club. Keep the native bleached-bone colour and the skeleton anatomy.",
+    "contrast": "Taller than wide: stand at full height, club held up or resting on the shoulder, spine straight. Do not crouch or hunch.",
+    "composition": "Full body, upright standing three-quarter view, long straight leg bones, ribcage tall, horned skull near the top. Overall height to width about 2 to 1.",
+    "palette": "bleached bone white with grey-brown shadow in the sockets, dark iron club band."
+   }
+  }
+ ]
+}

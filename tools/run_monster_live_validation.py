@@ -10,7 +10,9 @@ from the zone's own npc_list and are always labelled placed in the census.
 import argparse
 import hashlib
 import json
+import math
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -994,6 +996,37 @@ def group_crop(view, ps, name, margin=1):
 def clean_view_placed(bridge):
     """Same for the whole placed lineup, centred on the hero."""
     return _set_vp(bridge.lua(CLEAN_VIEW % ("a._checker_live_placed", "p.x,p.y")))
+
+
+def ta2_reposition(bridge):
+    """Move the hero to the open cell with the most free neighbours nearby, so
+    native summon helpers (findFreeGrid radius 5) have room to place actors."""
+    return bridge.lua(
+        "local Map=require 'engine.Map';local m=game.level.map;local p=game.player;"
+        "local function free(x,y) return x>=1 and y>=1 and x<m.w-1 and y<m.h-1 and not m(x,y,Map.ACTOR) "
+        "and not m:checkEntity(x,y,Map.TERRAIN,'block_move',p) and not m:checkEntity(x,y,Map.TERRAIN,'change_level') end;"
+        "local best,bs;for x=math.max(1,p.x-14),math.min(m.w-2,p.x+14) do for y=math.max(1,p.y-12),math.min(m.h-2,p.y+12) do "
+        "if free(x,y) then local n=0;for dx=-3,3 do for dy=-3,3 do if free(x+dx,y+dy) then n=n+1 end end end "
+        "if not bs or n>bs then best,bs={x,y},n end end end end;"
+        "if best then p:move(best[1],best[2],true) end;mb.refresh();mb.focus(p.x,p.y);return {x=p.x,y=p.y,free=bs}")
+
+
+def ta2_group_shots(bridge, label, prefix, entry, margin=2):
+    """Capture a placed group at 48/64/96 (dialogs cleared, area lit/seen, Stealth dropped)."""
+    entry['shots'] = []
+    entry['view_rows'] = {}
+    for t in (48, 64, 96):
+        bridge.lua(f"mb.setTile({t});mb.focus(game.player.x,game.player.y);return mb.row(game.player)")
+        view = clean_view_placed(bridge)
+        entry['view_rows'][str(t)] = [[r['name'], r['identify'], r['rendered_token'], r['can_see'], r['screen']]
+                                      for r in view['rows']]
+        if not view['rows']:
+            entry.setdefault('empty_view', []).append(t)
+            continue
+        ps = bridge.shot(f'{prefix}-{label}-{t}')
+        cp, box = group_crop(view, ps, f'{prefix}-{label}-{t}', margin)
+        entry['shots'].append({'tile': t, 'file': rel(ps), 'sha256': digest(ps), 'crop': rel(cp)})
+    bridge.lua('mb.setTile(64)')
 
 
 # Batch AB (2026-09-30, HEAD ac1506e3): entrenched horror, orc summoner, greater mummy, shadowblade, orc elite fighter, orc elite berserker,
@@ -2301,6 +2334,519 @@ SCENES_TA1 = [
     ('mark-lineup-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('lineup', 'ta1-all-zh', TA1_LINEUP, TA1_POS)]),
 ]
 
+# Batch TA-2 (2026-10-01, commit 4280b90f): the second town/wilds-resident
+# batch, thirteen new non-unique bodies (two native-tall) plus the wiring-only
+# elven archer that reuses the byte-identical companion-archer token PNG. Live
+# checks: 48/64/96 identity + toggle x2 per id across their real towns, en_US
+# and zh_hans fourteen lineups, the two native-tall bodies drawn once, the
+# nicer_tiles off/on round trip, the Derth slinger positive beside the native
+# Arena SLINGER, the lumberjack's native `defined_as` typo (no runtime
+# define_as), the anomaly farmer/gardener summons that map while `shalore
+# scribe` stays native, the Wayist yeek-mindslayer summon (tall), the elven
+# archer beside the companion archer, the earthwarden/sun-mage aura sustains
+# and the different-name / wrong-body negatives.
+OUT_BTA2 = ADDON / 'evidence/monster-batch-ta2-live-20261001'
+TA2 = ['human citizen', 'halfling citizen', 'human farmer', 'halfling gardener', 'lumberjack',
+       'halfling slinger', 'dwarven earthwarden', 'yeek mindslayer', 'yeek psionic',
+       'thalore hunter', 'thalore wilder', 'elven sun-mage', 'shalore rune master', 'elven archer']
+TA2_TALL = ['yeek mindslayer', 'thalore wilder']
+PLACE_SRC_TA2 = {
+    'human citizen': '/data/zones/town-last-hope/npcs.lua',
+    'halfling citizen': '/data/zones/town-last-hope/npcs.lua',
+    'human farmer': '/data/zones/town-derth/npcs.lua',
+    'halfling gardener': '/data/zones/town-derth/npcs.lua',
+    'halfling slinger': '/data/zones/town-derth/npcs.lua',
+    'lumberjack': '/data/zones/town-lumberjack-village/npcs.lua',
+    'dwarven earthwarden': '/data/zones/town-iron-council/npcs.lua',
+    'yeek mindslayer': '/data/zones/town-irkkk/npcs.lua',
+    'yeek psionic': '/data/zones/town-irkkk/npcs.lua',
+    'thalore hunter': '/data/zones/town-shatur/npcs.lua',
+    'thalore wilder': '/data/zones/town-shatur/npcs.lua',
+    'elven sun-mage': '/data/general/npcs/sunwall-town.lua',
+    'shalore rune master': '/data/zones/town-elvala/npcs.lua',
+    'elven archer': '/data/general/npcs/sunwall-town.lua',
+}
+PLACE_SRC_L.update(PLACE_SRC_TA2)
+EXPECT.update({n: n.replace(' ', '-') for n in TA2})
+TA2_LINEUP = [(n, PLACE_SRC_TA2[n]) for n in TA2]
+# Four rows (5/5/4); the two native-tall bodies still fit at 96px.
+TA2_POS = [(-4, -3), (-2, -3), (0, -3), (2, -3), (4, -3),
+           (-4, 0), (-2, 0), (0, 0), (2, 0), (4, 0),
+           (-4, 3), (-2, 3), (0, 3), (2, 3)]
+# Different-name PNG reuses and same-name wrong bodies stay native.
+TA2_NEG_CASES = [
+    ('different-name-gem-crafter', 'gem crafter', '/data/zones/town-irkkk/npcs.lua', 'YEEK_STORE_GEM', None),
+    ('different-name-2hands', 'two hander weapons crafter', '/data/zones/town-irkkk/npcs.lua', 'YEEK_STORE_2HANDS', None),
+    ('wrong-subtype', 'yeek psionic', '/data/zones/town-irkkk/npcs.lua', None, "a.subtype='human'"),
+    ('wrong-type', 'thalore hunter', '/data/zones/town-shatur/npcs.lua', None, "a.type='animal'"),
+]
+# data/general/encounters/maj-eyal.lua creates a WorldNPC "Novice mage" with
+# the apprentice-mage PNG; a faithful synthetic copy of that body must stay
+# native (different name, reused PNG).
+TA2_NOVICE_LUA = (
+    "local Map=require 'engine.Map';local p=game.player;"
+    "local q=require('mod.class.NPC').new({name='Novice mage',type='humanoid',subtype='human',image='npc/humanoid_human_apprentice_mage.png',display='@',faction='angolwen',max_life=80,life=80});"
+    "q:resolve();q:resolve(nil,true);local x,y=util.findFreeGrid(p.x+2,p.y+1,6,true,{[Map.ACTOR]=true});assert(x,'no free grid');"
+    "q._checker_live_placed=true;q.never_act=true;game.zone:addEntity(game.level,q,'actor',x,y);_G.TA2N=q;mb.refresh();mb.focus(x,y);"
+    "local r=mb.row(q);r.synthetic=true;return r")
+
+# Real Wayist (talents/misc/races.lua:961) talent action called with a fixed
+# target: the created same-name/native-tall yeek mindslayer must wear the token.
+TA2_WAYIST_LUA = (
+    "local Map=require 'engine.Map';local p=game.player;"
+    "local t=p:getTalentFromId('T_WAYIST') or require('engine.interface.ActorTalents').talents_def['T_WAYIST'];"
+    "if not t then return {ok=false,err='no talent',rows={}} end;"
+    "if not p:knowTalent('T_WAYIST') then p:learnTalent('T_WAYIST',true,1) end;"
+    "local before={};for _,a in pairs(game.level.entities) do before[a]=true end;"
+    "local og,oc=p.getTarget,p.canProject;"
+    "p.getTarget=function(self,tg) return p.x,p.y end;"
+    "p.canProject=function(self,tg,x,y) return true,x,y,x,y end;"
+    "local ok,err=pcall(t.action,p,t);"
+    "p.getTarget,p.canProject=og,oc;"
+    "local allnew={};for _,a in pairs(game.level.entities) do if not before[a] and a.x then allnew[#allnew+1]=a.name end end;"
+    "local ffg={util.findFreeGrid(p.x,p.y,5,true,{[Map.ACTOR]=true})};"
+    "local out={};for _,a in pairs(game.level.entities) do if not before[a] and a.x and a.name=='yeek mindslayer' then "
+    "a._checker_live_placed=true;a._checker_live_minion=true;a.never_act=true;pcall(function() game:checkerRefreshActor(a,'display') end);out[#out+1]=a end end;"
+    "mb.refresh();local rows={};for _,a in ipairs(out) do local r=mb.row(a);r.summoner_is_player=(a.summoner==p);"
+    "r.summon_time=a.summon_time or false;r.tall_body=(a.image=='invis.png');rows[#rows+1]=r end;"
+    "return {ok=ok,err=tostring(err),rows=rows,allnew=allnew}")
+
+# Real Anomaly Summon Townsfolk (talents/chronomancy/anomalies.lua:519)
+# doAction called repeatedly until the farmer, gardener and scribe variants have
+# all appeared. Farmer/gardener match the catalog exact-identity path; the
+# different-name shalore scribe (rune-master PNG) and dwarven lumberjack stay native.
+TA2_ANOMALY_LUA = (
+    "local Map=require 'engine.Map';local p=game.player;"
+    "local t=p:getTalentFromId('T_ANOMALY_SUMMON_TOWNSFOLK') or require('engine.interface.ActorTalents').talents_def['T_ANOMALY_SUMMON_TOWNSFOLK'];"
+    "if not t then return {ok=false,err='no talent',rows={}} end;"
+    "if not p:knowTalent('T_ANOMALY_SUMMON_TOWNSFOLK') then p:learnTalent('T_ANOMALY_SUMMON_TOWNSFOLK',true,1) end;"
+    "local before={};for _,a in pairs(game.level.entities) do before[a]=true end;"
+    "local og,oc=p.getTarget,p.canProject;"
+    "p.getTarget=function(self,tg) return p.x,p.y end;"
+    "p.canProject=function(self,tg,x,y) return true,x,y,x,y end;"
+    "local fn=t.doAction or t.action;local made={};local seen={};local calls=0;local removed=0;"
+    "for i=1,40 do calls=i;"
+    "  local ok,err=pcall(fn,p,t,true);"
+    "  if not ok then p.getTarget,p.canProject=og,oc;return {ok=false,err=tostring(err),rows={}} end;"
+    "  local new={};for _,a in pairs(game.level.entities) do if not before[a] and a.x then before[a]=true;new[#new+1]=a end end;"
+    "  for _,a in ipairs(new) do"
+    "    if seen[a.name] then removed=removed+1;pcall(function() game.level.map:remove(a.x,a.y,Map.ACTOR);game.level:removeEntity(a,true) end)"
+    "    else seen[a.name]=true;a._checker_live_placed=true;a._checker_live_group=true;a.never_act=true;pcall(function() game:checkerRefreshActor(a,'display') end);made[#made+1]=a end"
+    "  end;"
+    "  if seen['human farmer'] and seen['halfling gardener'] and seen['shalore scribe'] then break end;"
+    "end;"
+    "p.getTarget,p.canProject=og,oc;mb.refresh();"
+    "local rows={};for _,a in ipairs(made) do local r=mb.row(a);r.anomaly_name=a.name;r.summoned_field=(a.summoner~=nil);rows[#rows+1]=r end;"
+    "return {ok=true,rows=rows,count=#made,kept=#rows,calls=calls,removed=removed}")
+
+
+def _ta2(n, tiles=(48, 64, 96)):
+    sfx = '-' + n.replace(' ', '-')
+    return [('natural_or_place', n, tiles), ('toggle', n, sfx), ('toggle_again', n, sfx)]
+
+
+SCENES_TA2 = [
+    ('derth-L1', 'town-derth', 1, {}, _ta2('human farmer') + _ta2('halfling gardener') +
+     _ta2('halfling slinger') + [('ta2_slinger',)]),
+    ('last-hope-L1', 'town-last-hope', 1, {}, _ta2('human citizen') + _ta2('halfling citizen')),
+    ('lumberjack-L1', 'town-lumberjack-village', 1, {}, _ta2('lumberjack') + [('ta2_lumberjack',)]),
+    ('iron-council-L1', 'town-iron-council', 1, {}, _ta2('dwarven earthwarden') +
+     [('ta2_aura', 'dwarven earthwarden', 'T_BODY_OF_STONE')]),
+    ('irkkk-L1', 'town-irkkk', 1, {}, _ta2('yeek mindslayer') + _ta2('yeek psionic') +
+     [('ta2_wayist',)]),
+    ('shatur-L1', 'town-shatur', 1, {}, _ta2('thalore hunter') + _ta2('thalore wilder')),
+    ('gates-of-morning-L1', 'town-gates-of-morning', 1, {}, _ta2('elven sun-mage') +
+     _ta2('elven archer') + [('ta2_aura', 'elven sun-mage', 'T_CHANT_OF_LIGHT'), ('ta2_archers',)]),
+    ('elvala-L1', 'town-elvala', 1, {}, _ta2('shalore rune master') + [('ta2_anomaly',)]),
+    ('mark-lineup-L1', 'mark-spellblaze', 1, {}, [('midstart',),
+     ('lineup', 'ta2-all', TA2_LINEUP, TA2_POS), ('ta2_meta', TA2_TALL)]),
+    ('mark-nicer-off-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('nicer_off', TA2_LINEUP, TA2_POS)]),
+    ('mark-negative-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('ta2_negative',)]),
+    # Run only with MLV_LOCALE=zh_hans (--only mark-lineup-zh-L1).
+    ('mark-lineup-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',),
+     ('lineup', 'ta2-all-zh', TA2_LINEUP, TA2_POS)]),
+]
+
+# 1.25x layered small-tile trial (R32, 2026-10-01). A bright-floor and a
+# dark-floor scene each place the 20 trial bodies, capture the same frame with
+# the single trial flag off and on at 48/64/96, and diff the frames: 48 must
+# change (creature enlarged over the shared disc) while 64/96 must be
+# pixel-identical (the flattened token). At 48px one body is wounded to 50%
+# life, one carries a shield and one is promoted to boss so the health arc,
+# shield arc and rank badge are visible with the creature drawn above them.
+OUT_LAYER = ADDON / 'evidence/token-layers-trial-20261001'
+# R39/R43 native-tall standee redesign. Eligibility is static: only
+# natively-tall ids with a body-only height > 1.0 cell and shipped art. R43
+# kept ravenous-horror, snow-giant, ogre-guard and ninandra; R47 batch 1 adds
+# 17 more accepted standees (M.standee_ids = 21). kra-tor (axe above a
+# ~1-cell body) and the native 1-cell bosses are flat; standees render only at
+# tiles >= 24px.
+OUT_STANDEE = ADDON / 'evidence/token-standee-briagh-20261006'
+
+# R45 normalised aura gate. The SDM aura flame size scales with the aura quad,
+# but how many of its pixels land in the cell ABOVE the actor also scales with
+# how far the creature's top reaches INTO that upper cell. `ratio /
+# reach_ratio` removes that geometric part so ONE gate works for a native-sized
+# snow-giant and a small ogre-guard body. reach_ratio is: how far the ON art
+# top reaches into the upper cell divided by how far the native alpha top does.
+# The ON feet are at cell centre + standee_feet*disc radius (0.753 cell below
+# the cell top), so ON into-upper = on_reach - feet_depth. The native sprite is
+# drawn display_h=2/display_y=-1, so its base is the cell bottom and native
+# into-upper = native_reach - 1.0.
+_STANDEE_STATIC = None
+
+
+def _standee_static():
+    global _STANDEE_STATIC
+    if _STANDEE_STATIC is not None:
+        return _STANDEE_STATIC
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        'bsh_live', ADDON / 'tools/build_standee_heights.py')
+    bsh = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(bsh)
+    caps = dict(bsh.compute()[0])
+    caps.update(bsh.parse_overrides(
+        (ADDON / 'overload/mod/class/CheckerTokenStyle.lua').read_text()))
+    catalogue = dict(bsh.parse_catalogue((ADDON / 'overload/mod/class/CheckerTokens.lua').read_text()))
+    geom = {}
+    pat = re.compile(r'\["([^"]+)"\]=\{left=(\d+),top=(\d+),right=(\d+),bottom=(\d+),canvas=(\d+)(?:,body_top=(\d+))?')
+    for m in pat.finditer((ADDON / 'data/token-layer-geometry.lua').read_text()):
+        g = {'left': int(m.group(2)), 'top': int(m.group(3)), 'right': int(m.group(4)),
+             'bottom': int(m.group(5)), 'canvas': int(m.group(6))}
+        if m.group(7):
+            g['body_top'] = int(m.group(7))
+        geom[m.group(1)] = g
+    _STANDEE_STATIC = {'caps': caps, 'catalogue': catalogue, 'geom': geom, 'sprites': bsh.SPRITES}
+    sty = (ADDON / 'overload/mod/class/CheckerTokenStyle.lua').read_text()
+    feet = float(re.search(r'M\.standee_feet=([0-9.]+)', sty).group(1))
+    diam = float(re.search(r'M\.token_diameter=([0-9.]+)', sty).group(1))
+    # Crop top is two cells above the actor; the art top is 0.5 cell (cell
+    # centre) + feet*token_diameter/2 above it, minus the art reach above feet.
+    _STANDEE_STATIC['anchor_cells'] = 2.5 + feet * diam / 2.0
+    # Feet sit at cell centre + standee_feet * disc radius below the cell top.
+    _STANDEE_STATIC['feet_depth'] = 0.5 + feet * diam / 2.0
+    return _STANDEE_STATIC
+
+
+def native_alpha_top(alpha, threshold=8, min_pixels=3):
+    """First native sprite row with at least `min_pixels` pixels above
+    `threshold`.
+
+    R46: an isolated alpha>8 pixel (a stray speck, a 1px antenna tip) must not
+    set the native alpha top, exactly like the solid-top body measure. Falls
+    back to the raw minimum when no row reaches the count.
+    """
+    import numpy as np
+    for y in range(alpha.shape[0]):
+        if int((alpha[y] > threshold).sum()) >= min_pixels:
+            return y
+    ys = np.where(alpha > threshold)[0]
+    return int(ys.min()) if len(ys) else 0
+
+
+def standee_reach(pid):
+    """Static art reach in cells for one standee id, or None.
+
+    R45/R46: reach_ratio is how far the ON art top reaches INTO the upper cell
+    divided by how far the native alpha top reaches into it. The ON feet are
+    at cell centre + standee_feet * disc radius (feet_depth), so the ON reach
+    into the upper cell is on_reach - feet_depth. The native sprite is drawn
+    display_h=2/display_y=-1, so the whole 64x128 canvas maps onto 2 cells and
+    the cell top is sprite row 64: the alpha top row `ntop` reaches
+    native_into = (64 - ntop)/64 cells into the upper cell. R45 assumed the
+    alpha bottom was row 127 and used (bottom - top + 1)/64 - 1.0, which is
+    only the same for a sprite that fills the canvas. `ntop` skips isolated
+    pixels (>= 3 in the row) so a 1px speck cannot set the native top.
+
+    Also returns the native sprite alpha top row (for the absolute
+    flame-above-top check).
+    """
+    st = _standee_static()
+    g = st['geom'].get(pid)
+    cap = st['caps'].get(pid)
+    image = st['catalogue'].get(pid)
+    if not (g and cap and image):
+        return None
+    import numpy as np
+    from PIL import Image
+    a = np.asarray(Image.open(st['sprites'] / image).convert('RGBA'))[..., 3]
+    ys = np.where(a > 8)[0]
+    ntop, nbottom = native_alpha_top(a), int(ys.max())
+    native_reach = (nbottom - ntop + 1) / 64.0
+    body_h = g['bottom'] - g.get('body_top', g['top'])
+    bw = g['right'] - g['left']
+    scale = min(cap / body_h, 1.0 / bw)
+    on_reach = (g['bottom'] - g['top']) * scale
+    feet_depth = st['feet_depth']
+    on_into = on_reach - feet_depth
+    native_into = (64 - ntop) / 64.0
+    return {'on_reach': on_reach, 'native_reach': native_reach,
+            'on_into': on_into, 'native_into': native_into,
+            'feet_depth': feet_depth,
+            'ratio': (on_into / native_into) if native_into else 0.0,
+            'native_top_px': ntop, 'native_bottom_px': nbottom,
+            'anchor_cells': st['anchor_cells']}
+
+
+AURA_FLAME_BAND_MIN_PX = 3
+
+
+def aura_score_region(sx, sy, tile, on_quad, native_quad=None):
+    """Fixed half-open screen region shared by ON and NATIVE.
+
+    Above own-cell top; up to the higher quad top (native sprite defaults
+    to x=0,y=-1,w=1,h=2). Include own column +/- half a cell and both
+    quad widths, rounding outwards so lateral spill is never truncated.
+    """
+    native_quad = native_quad or dict(display_x=0, display_y=-1, display_w=1, display_h=2)
+    quads = (on_quad, native_quad)
+    left = min(-0.5, *(q['display_x'] for q in quads))
+    right = max(1.5, *(q['display_x'] + q['display_w'] for q in quads))
+    top = min(q['display_y'] for q in quads)
+    return (math.floor(sx + left * tile), math.floor(sy + top * tile),
+            math.ceil(sx + right * tile), sy)
+
+
+def flame_band_widths(mask):
+    """Longest contiguous changed-pixel run per row, not scattered specks."""
+    widths = []
+    for row in mask:
+        best = run = 0
+        for pixel in row:
+            run = run + 1 if pixel else 0
+            best = max(best, run)
+        widths.append(best)
+    return widths
+
+
+def _diff_top_row(a, b, box, threshold=12):
+    """First row with a contiguous >=3px flame band, or None; no spike fallback."""
+    widths = flame_band_widths(_diff_mask(a, b, box, threshold))
+    return next((y for y, width in enumerate(widths)
+                 if width >= AURA_FLAME_BAND_MIN_PX), None)
+
+
+def _median_defined(values):
+    """Median of the defined (non-None) values, or None when there are none."""
+    kept = [v for v in values if v is not None]
+    return _median(kept) if kept else None
+R39_STANDS = [
+    ('ogre guard', '/data/general/npcs/ogre.lua', None, 'ogre-guard'),
+    ('snow giant', '/data/general/npcs/snow-giant.lua', None, 'snow-giant'),
+    ('Ninandra, the Great Weaver', '/data/general/npcs/spider.lua', None, 'ninandra'),
+    ("Kra'Tor the Gluttonous", '/data/general/npcs/orc.lua', None, 'kra-tor'),
+    ('ravenous horror', '/data/general/npcs/horror_aquatic.lua', None, 'ravenous-horror'),
+    # R47 batch 1: the 17 accepted standee ids, with the verified in-game name,
+    # source and define_as (unique bosses only) from the batch provenance.
+    ('heavy bone giant', '/data/general/npcs/bone-giant.lua', None, 'heavy-bone-giant'),
+    ('runed bone giant', '/data/general/npcs/bone-giant.lua', None, 'runed-bone-giant'),
+    ('eternal bone giant', '/data/general/npcs/bone-giant.lua', None, 'eternal-bone-giant'),
+    ('Atamathon the Giant Golem', '/data/zones/golem-graveyard/npcs.lua', 'ATAMATHON', 'atamathon'),
+    ('Heavy Sentinel', '/data/zones/rak-shor-pride/npcs.lua', 'HEAVY_SENTINEL', 'heavy-sentinel'),
+    ('Burb the snow giant champion', '/data/general/npcs/snow-giant.lua', 'BURB_SNOW_GIANT', 'burb-snow-giant-champion'),
+    ('archlich', '/data/general/npcs/lich.lua', None, 'archlich'),
+    ('snow giant chieftain', '/data/general/npcs/snow-giant.lua', None, 'snow-giant-chieftain'),
+    ('snow giant boulder thrower', '/data/general/npcs/snow-giant.lua', None, 'snow-giant-boulder-thrower'),
+    ('snow giant thunderer', '/data/general/npcs/snow-giant.lua', None, 'snow-giant-thunderer'),
+    ('Minotaur of the Labyrinth', '/data/zones/maze/npcs.lua', 'MINOTAUR_MAZE', 'minotaur-maze'),
+    ("champion of Urh'Rok", '/data/general/npcs/major-demon.lua', None, 'champion-of-urh-rok'),
+    ('ogre warmaster', '/data/general/npcs/ogre.lua', None, 'ogre-warmaster'),
+    ('Celia', '/data/zones/last-hope-graveyard/npcs.lua', 'CELIA', 'celia'),
+    ('dremling', '/data/general/npcs/horror-corrupted.lua', None, 'dremling'),
+    ('forge-giant', '/data/general/npcs/major-demon.lua', None, 'forge-giant'),
+    ('Healer Astelrid', '/data/zones/conclave-vault/npcs.lua', 'HEALER_ASTELRID', 'healer-astelrid'),
+    # R50 batch 2: exact native names, sources and unique definitions.
+    ('treant', '/data/general/npcs/plant.lua', None, 'treant'),
+    ('Wrathroot', '/data/zones/old-forest/npcs.lua', 'WRATHROOT', 'wrathroot'),
+    ('ogre mauler', '/data/general/npcs/ogre.lua', None, 'ogre-mauler'),
+    ('ogre rune-spinner', '/data/general/npcs/ogre.lua', None, 'ogre-rune-spinner'),
+    ('ultimate shivgoroth', '/data/general/npcs/shivgoroth.lua', None, 'ultimate-shivgoroth'),
+    ('ogric abomination', '/data/zones/conclave-vault/npcs.lua', None, 'ogric-abomination'),
+    ('Half-Finished Bone Giant', '/data/zones/blighted-ruins/npcs.lua', 'HALF_BONE_GIANT', 'half-finished-bone-giant'),
+    ('Norgos, the Guardian', '/data/zones/norgos-lair/npcs.lua', 'NORGOS', 'norgos-guardian'),
+    ('Norgos, the Frozen', '/data/zones/norgos-lair/npcs.lua', 'FROZEN_NORGOS', 'norgos-frozen'),
+    ('Horned Horror', '/data/zones/maze/npcs.lua', 'HORNED_HORROR', 'horned-horror'),
+    ("Harkor'Zun", '/data/general/npcs/xorn.lua', 'FULL_HARKOR_ZUN', 'harkor-zun'),
+    ('dolleg', '/data/general/npcs/major-demon.lua', None, 'dolleg'),
+    ('dúathedlen', '/data/general/npcs/major-demon.lua', None, 'duathedlen'),
+    ('thaurhereg', '/data/general/npcs/major-demon.lua', None, 'thaurhereg'),
+    ('uruivellas', '/data/general/npcs/major-demon.lua', None, 'uruivellas'),
+    ('xhaiak arachnomancer', '/data/zones/ardhungol/npcs.lua', None, 'xhaiak-arachnomancer'),
+    ('Rotting Titan', '/data/zones/rak-shor-pride/npcs.lua', 'ROTTING_TITAN', 'rotting-titan'),
+    ('Corrupted Daelach', '/data/zones/valley-moon/npcs.lua', 'CORRUPTED_DAELACH', 'corrupted-daelach'),
+    # R51 batch 3: native definitions verified in G4 and batch provenance.
+    ('Rantha the Worm', '/data/zones/daikara/npcs.lua', 'RANTHA_THE_WORM', 'rantha'),
+    ('Varsha the Writhing', '/data/zones/daikara/npcs.lua', 'VARSHA_THE_WRITHING', 'varsha'),
+    ('fire wyrm', '/data/general/npcs/fire-drake.lua', None, 'fire-wyrm'),
+    ('ice wyrm', '/data/general/npcs/cold-drake.lua', None, 'ice-wyrm'),
+    ('storm wyrm', '/data/general/npcs/storm-drake.lua', None, 'storm-wyrm'),
+    ('venom wyrm', '/data/general/npcs/venom-drake.lua', None, 'venom-wyrm'),
+    ('greater multi-hued wyrm', '/data/general/npcs/multihued-drake.lua', 'GREATER_MULTI_HUED_WYRM', 'greater-multi-hued-wyrm'),
+    ('ultimate faeros', '/data/general/npcs/faeros.lua', None, 'ultimate-faeros'),
+    ('Fyrk, Faeros High Guard', '/data/zones/charred-scar/npcs.lua', 'FYRK', 'fyrk'),
+    ('Snaproot', '/data/zones/old-forest/npcs.lua', 'SNAPROOT', 'snaproot'),
+    ('Temporal Defiler', '/data/zones/town-point-zero/npcs.lua', 'TEMPORAL_DEFILER', 'temporal-defiler'),
+    ('Arch Zephyr', '/data/zones/rak-shor-pride/npcs.lua', 'ARCH_ZEPHYR', 'arch-zephyr'),
+    ("Ak'Gishil", '/data/general/npcs/horror.lua', None, 'ak-gishil'),
+    # R52 final optional batch: exact native identities.
+    ('Prox the Mighty', '/data/zones/trollmire/npcs.lua', 'TROLL_PROX', 'prox'),
+    ('Bill the Stone Troll', '/data/zones/trollmire/npcs.lua', 'TROLL_BILL', 'bill'),
+    ('Shax the Slimy', '/data/zones/trollmire/npcs.lua', 'TROLL_SHAX', 'shax'),
+    ('onilug', '/data/general/npcs/minor-demon.lua', None, 'onilug'),
+    ('Chronolith Twin', '/data/zones/temporal-rift/npcs.lua', 'CHRONOLITH_TWIN', 'chronolith-twin'),
+    ('Chronolith Clone', '/data/zones/temporal-rift/npcs.lua', 'CHRONOLITH_CLONE', 'chronolith-clone'),
+    ('Briagh, Great Sand Wyrm', '/data/zones/briagh-lair/npcs.lua', 'BRIAGH', 'briagh'),
+]
+# The R47 batch-1 additions and the R43 original four, by token id.
+R39_BATCH1_IDS = ("heavy-bone-giant", "runed-bone-giant", "eternal-bone-giant",
+                  "atamathon", "heavy-sentinel", "burb-snow-giant-champion",
+                  "archlich", "snow-giant-chieftain", "snow-giant-boulder-thrower",
+                  "snow-giant-thunderer", "minotaur-maze", "champion-of-urh-rok",
+                  "ogre-warmaster", "celia", "dremling", "forge-giant",
+                  "healer-astelrid")
+R39_BATCH2_IDS = ('treant', 'wrathroot', 'ogre-mauler', 'ogre-rune-spinner', 'ultimate-shivgoroth', 'ogric-abomination', 'half-finished-bone-giant', 'norgos-guardian', 'norgos-frozen', 'horned-horror', 'harkor-zun', 'dolleg', 'duathedlen', 'thaurhereg', 'uruivellas', 'xhaiak-arachnomancer', 'rotting-titan', 'corrupted-daelach')
+R39_BATCH3_IDS = ('rantha', 'varsha', 'fire-wyrm', 'ice-wyrm', 'storm-wyrm', 'venom-wyrm', 'greater-multi-hued-wyrm', 'ultimate-faeros', 'fyrk', 'snaproot', 'temporal-defiler', 'arch-zephyr', 'ak-gishil')
+R39_BATCH4_IDS = ('prox', 'bill', 'shax', 'onilug', 'chronolith-twin', 'chronolith-clone')
+R53_BRIAGH_IDS = ('briagh',)
+R39_ORIGINAL_IDS = ("ravenous-horror", "snow-giant", "ogre-guard", "ninandra")
+# One TALL new id for the animated aura and native-facing mirror checks.
+R39_AURA_ACTOR = ('Rantha the Worm', 40)  # (in-game name, R39_STANDS index)
+# R50: new TALL and SQUARE actors, retaining the three R49 regressions.
+R39_AURA_ACTORS = (
+    ('Briagh, Great Sand Wyrm', 59),
+    ('Bill the Stone Troll', 54),
+    ('Rantha the Worm', 40),
+    ('Arch Zephyr', 51),
+    ('Corrupted Daelach', 39),
+    ('Norgos, the Guardian', 29),
+    ('heavy bone giant', 5),
+    ('snow giant', 1),
+    ('ogre guard', 0),
+    ('Celia', 18),
+    ('forge-giant', 20),
+    ('Healer Astelrid', 21),
+    ('uruivellas', 36),
+    ('ogre rune-spinner', 25),
+)
+# Native 1-cell bosses: no standee, flat token + rank badge.
+R39_FLAT_BOSSES = [
+    ('Phoenix', '/data/general/npcs/bird.lua', 'NPC_PHOENIX', 'phoenix'),
+    ('Vor, Grand Geomancer of the Pride', '/data/zones/vor-pride/npcs.lua', 'VOR', 'vor'),
+    ('Grushnak, Battlemaster of the Pride', '/data/zones/grushnak-pride/npcs.lua', 'GRUSHNAK', 'grushnak'),
+    ('Rungof the Warg Titan', '/data/general/npcs/canine.lua', None, 'rungof'),
+    ('Shardskin', '/data/zones/old-forest/npcs.lua', None, 'shardskin'),
+    ('Subject Z', '/data/zones/halfling-ruins/npcs.lua', None, 'subject-z'),
+]
+R39_ORDINARY = [
+    ('wolf', '/data/general/npcs/canine.lua', None, 'wolf'),
+    ('human guard', '/data/general/npcs/sunwall-town.lua', None, 'human-guard'),
+    ('giant spider', '/data/general/npcs/spider.lua', None, 'giant-spider'),
+]
+STANDEE_GROUPS = {'standee': R39_STANDS, 'flatboss': R39_FLAT_BOSSES, 'ordinary': R39_ORDINARY}
+# (dx, dy, group, index) relative to the hero. kra-tor sits directly below
+# snow-giant at x=0 (occlusion vs NATIVE), ninandra is forced friendly and
+# kra-tor neutral by the scene special, and the native 1-cell bosses are flat.
+STANDEE_CROWD = [
+    (-2, -2, 'standee', 0), (-1, -2, 'standee', 4), (0, -2, 'standee', 1), (1, -2, 'flatboss', 0), (2, -2, 'ordinary', 0),
+    (-2, -1, 'standee', 2), (-1, -1, 'flatboss', 1), (0, -1, 'standee', 3), (1, -1, 'flatboss', 2), (2, -1, 'ordinary', 1),
+    (-2, 0, 'flatboss', 3), (-1, 0, 'flatboss', 4), (1, 0, 'flatboss', 5),
+]
+# Repaint check: ogre-guard + ninandra beside snow-giant and a black spider.
+STANDEE_REPAINT = [
+    (-3, 0, 'standee', 0), (-1, 0, 'standee', 1), (1, 0, 'standee', 2), (3, 0, 'ordinary', 2),
+]
+# Flat-token sanity row at 16px: standees must be off below 24px. R47 adds a
+# batch-1 id (heavy bone giant, index 5) to prove the new art is flat too.
+STANDEE_FLAT = [
+    (-2, 0, 'standee', 0), (-1, 0, 'standee', 1), (0, -1, 'standee', 5), (3, 0, 'standee', 40),
+    (1, 0, 'standee', 2), (2, 0, 'standee', 3),
+    (-1, -1, 'standee', 53), (1, -1, 'standee', 54), (2, -1, 'standee', 55),
+    (-2, 1, 'standee', 56), (-1, 1, 'standee', 57), (1, 1, 'standee', 58),
+    (2, 1, 'standee', 59),
+]
+# R47: several batch-1 standees adjacent for one crowd capture at 48px.
+STANDEE_BATCH1_CROWD = [
+    (-2, -1, 'standee', 5), (-1, -1, 'standee', 6), (0, -1, 'standee', 7),
+    (1, -1, 'standee', 12), (2, -1, 'standee', 15), (-1, 0, 'standee', 11),
+    (1, 0, 'standee', 16),
+]
+# Adjacent new trees/ice/rock/demons, including the width-bound cases.
+STANDEE_BATCH2_CROWD = [
+    (-2, -1, 'standee', 22), (-1, -1, 'standee', 23), (0, -1, 'standee', 26),
+    (1, -1, 'standee', 32), (2, -1, 'standee', 33), (-1, 0, 'standee', 38),
+    (1, 0, 'standee', 39),
+]
+# R51 adjacent dragons: every neighbour cell remains separately locatable.
+STANDEE_BATCH3_CROWD = [
+    (-2,-1,'standee',40),(-1,-1,'standee',41),(0,-1,'standee',42),
+    (1,-1,'standee',43),(2,-1,'standee',44),(-1,0,'standee',45),(1,0,'standee',46),
+]
+# R52 adjacent Trollmire trio, in a single row.
+STANDEE_BATCH4_CROWD = [(-1,-1,'standee',53),(0,-1,'standee',54),(1,-1,'standee',55)]
+STANDEE_BRIAGH_CROWD = STANDEE_BATCH3_CROWD + [(2, 0, 'standee', 59)]
+SCENES_STANDEE = [
+    ('standee-briagh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'briagh')]),
+    ('standee-batch4-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'batch4')]),
+    ('standee-facing-bill-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'facing-bill')]),
+    ('standee-facing-batch4-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'facing-batch4')]),
+    ('standee-rank-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'rank')]),
+    ('standee-crowd-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'crowd')]),
+    ('standee-open-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'open')]),
+    ('standee-repaint-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'repaint')]),
+    ('standee-forge-innate-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'forge-innate')]),
+    ('standee-aura-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'aura')]),
+    # Main includes Forge and reuses its crop paths; final dedicated capture owns them.
+    ('standee-aura-forge-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'aura-forge')]),
+    ('standee-sequential-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'sequential')]),
+    ('standee-facing-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'facing')]),
+    ('standee-facing-new-tall-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'facing-new-tall')]),
+    # R48 item B: the R46 ogre-guard facing scene, restored beside the TALL id.
+    ('standee-facing-ogre-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'facing-ogre')]),
+    ('standee-facing-heavy-bone-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'facing-heavy-bone')]),
+    ('standee-facing-daelach-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'facing-daelach')]),
+    ('standee-top-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'top')]),
+    ('standee-wide-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'wide')]),
+    ('standee-flat-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'flat')]),
+    ('standee-batch3-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'batch3')]),
+    ('standee-batch2-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'batch2')]),
+    ('standee-batch1-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'batch1')]),
+    ('standee-crowd-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('standee_grid', 'crowd-zh')]),
+]
+EXPECT.update({name: tid for name, _, _, tid in R39_STANDS + R39_FLAT_BOSSES if tid})
+LAYER_CASES = [
+    ('wolf', '/data/general/npcs/canine.lua', None, 'wolf'),
+    ('warg', '/data/general/npcs/canine.lua', None, 'warg'),
+    ('great wolf', '/data/general/npcs/canine.lua', None, 'great-wolf'),
+    ('orc warrior', '/data/general/npcs/orc.lua', None, 'orc-warrior'),
+    ('orc archer', '/data/general/npcs/orc.lua', None, 'orc-archer'),
+    ('orc assassin', '/data/general/npcs/orc.lua', None, 'orc-assassin'),
+    ('skeleton warrior', '/data/general/npcs/skeleton.lua', None, 'skeleton-warrior'),
+    ('skeleton mage', '/data/general/npcs/skeleton.lua', None, 'skeleton-mage'),
+    ('skeleton archer', '/data/general/npcs/skeleton.lua', None, 'skeleton-archer'),
+    ('giant spider', '/data/general/npcs/spider.lua', None, 'giant-spider'),
+    ('Ungolë', '/data/zones/ardhungol/npcs.lua', None, 'ungole'),
+    ('Weaver Queen', '/data/zones/unhallowed-morass/npcs.lua', None, 'weaver-queen'),
+    ('Phoenix', '/data/general/npcs/bird.lua', 'NPC_PHOENIX', 'phoenix'),
+    ('storm wyrm', '/data/general/npcs/storm-drake.lua', None, 'storm-wyrm'),
+    ('human guard', '/data/general/npcs/sunwall-town.lua', None, 'human-guard'),
+    ('derth guard', '/data/zones/town-derth/npcs.lua', None, 'derth-guard'),
+    ('elven mage', '/data/general/npcs/elven-caster.lua', None, 'elven-mage'),
+    ('Necromancer', '/data/zones/blighted-ruins/npcs.lua', None, 'necromancer'),
+    ('pyromancer', '/data/zones/town-angolwen/npcs.lua', None, 'pyromancer'),
+    ('yeek mindslayer', '/data/zones/town-irkkk/npcs.lua', None, 'yeek-mindslayer'),
+]
+LAYER_POS = [(x, y) for y in (-2, 0, 2, 4) for x in (-4, -2, 0, 2, 4)]
+EXPECT.update({name: tid for name, _, _, tid in LAYER_CASES})
+SCENES_LAYER = [
+    # Bright floor: one map cell of the bright stone/adapter floor.
+    ('layer-bright-L1', 'dreadfell', 2, {}, [('midstart',), ('layer_grid', 'bright')]),
+    # Dark floor: the darker brown checker floor.
+    ('layer-dark-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('layer_grid', 'dark')]),
+    # Run only with MLV_LOCALE=zh_hans (--only layer-bright-zh-L1).
+    ('layer-bright-zh-L1', 'mark-spellblaze', 1, {}, [('midstart',), ('layer_grid', 'bright-zh')]),
+]
+
 REACH_FALLBACK = True  # batch N: natural actor in a closed vault -> place from the native list, flagged natural_unreachable
 SUSTAIN_SNAP = ("local a=mb.byName(%s);pcall(function() a:updateModdableTile() end);mb.refresh();mb.focus(a.x,a.y);"
                 "local n=0;for _ in pairs(a.shader_auras or {}) do n=n+1 end;"
@@ -2373,19 +2919,26 @@ class Bridge:
         out.unlink(missing_ok=True)
         return data
 
-    def shot(self, name):
-        if CLEAN:
+    def shot(self, name, settle_s=0.5, clear_dialogs=True):
+        if CLEAN and clear_dialogs:
             self.lua("ms.caveClearDialogs();return true")
         src = HOME / (name + '.png')
-        src.unlink(missing_ok=True)
-        time.sleep(.5)
-        run = subprocess.run([sys.executable, str(ADDON / 'tools/fixture_command.py'), 'shot', name],
-                             capture_output=True, text=True, timeout=40)
-        assert run.returncode == 0, run.stdout + run.stderr
-        for _ in range(300):
+        # The isolated screenshot command is occasionally slow under the aura
+        # scene's rapid cadence; retry once instead of losing the whole scene.
+        for attempt in range(2):
+            src.unlink(missing_ok=True)
+            time.sleep(settle_s)
+            run = subprocess.run([sys.executable, str(ADDON / 'tools/fixture_command.py'), 'shot', name],
+                                 capture_output=True, text=True, timeout=40)
+            assert run.returncode == 0, run.stdout + run.stderr
+            for _ in range(300):
+                if src.exists() and src.stat().st_size:
+                    break
+                time.sleep(.1)
             if src.exists() and src.stat().st_size:
                 break
-            time.sleep(.1)
+        if not (src.exists() and src.stat().st_size):
+            raise RuntimeError('screenshot never appeared: ' + name)
         SHOTS.mkdir(parents=True, exist_ok=True)
         dst = SHOTS / src.name
         shutil.copy2(src, dst)
@@ -2425,12 +2978,1223 @@ def capture(bridge, label, actor, tiles, record):
         bridge.lua('mb.setTile(64)')
 
 
+def standee_groups():
+    return STANDEE_GROUPS
+
+
+def standee_crowd_block_size(layout):
+    """Include every offset in the native freeBlock half-open centred bounds."""
+    width = max([5] + [max(-2*dx, 2*dx+1) for dx, _, _, _ in layout])
+    height = max([4] + [max(-2*dy, 2*dy+1) for _, dy, _, _ in layout])
+    return width, height
+
+
+def standee_place_crowd(bridge, layout):
+    """Find a block covering the whole layout, then place on exact free cells.
+
+    Repaint offsets extend to +/-3; the original 5x4 search omitted those ends.
+    placeAt keeps its native free/visible assertion, so adjacency is real.
+    """
+    width, height = standee_crowd_block_size(layout)
+    blk = bridge.lua(f"local p=game.player;return mb.freeBlock(p.x,p.y,{width},{height})")
+    if not blk:
+        return None
+    bx, by = blk
+    bridge.lua(f"game.player:move({bx},{by},true);mb.refresh()")
+    placed = []
+    for dx, dy, group, index in layout:
+        name, source, das, tid = STANDEE_GROUPS[group][index]
+        row = bridge.lua(f"return mb.placeAt({json.dumps(name, ensure_ascii=False)},"
+                         f"{json.dumps(source) if source else 'nil'},{bx + dx},{by + dy},"
+                         f"{json.dumps(das) if das else 'nil'})")
+        placed.append({'name': name, 'group': group, 'id': tid, 'row': row})
+    return {'block': [bx, by], 'placed': placed}
+
+
+def standee_place_one(bridge, group, index, dx=0, dy=-1):
+    name, source, das, tid = STANDEE_GROUPS[group][index]
+    # Snap to the nearest free visible cell (robust across room shapes); the
+    # returned row carries the real coordinates used for the crop region.
+    row = bridge.lua(f"return mb.place({json.dumps(name, ensure_ascii=False)},"
+                     f"{json.dumps(source) if source else 'nil'},{dx},{dy},"
+                     f"{json.dumps(das) if das else 'nil'})")
+    return {'name': name, 'id': tid, 'row': row}
+
+
+def standee_state(bridge):
+    return bridge.lua(
+        "local S=require 'mod.class.CheckerTokenStyle';local o={};for _,a in pairs(game.level.entities) do if a.x and a._checker_live_placed and a._checker_token then "
+        "local s=a._checker_token;local cap=S.standeeHeight(s.id);local drawn=false;"
+        "local box=s.layer_box;if cap and box and box.right-box.left>0 and box.bottom-box.top>0 then "
+        "local bh=box.bottom-(box.body_top or box.top);"
+        "drawn=bh*math.min(cap/bh,S.standee_width/(box.right-box.left)) end;"
+        "o[#o+1]={name=a.name,id=s.id,size_category=a.size_category,layered=s.layered and true or false,"
+        "standee=s.standee and true or false,height_cap=cap or false,drawn_cells=drawn or false,"
+        "has_box=s.layer_box~=nil,canvas=box and box.canvas or false,scale=s.scale,layer_id=s.layer_id or false} end end;return o")
+
+
+def standee_actor_metrics(bridge, name):
+    """Per-id size_category plus the cap and drawn height in cells that the ship
+    path computes at draw time (mirrors Actor:checkerLayerCreature)."""
+    q = json.dumps(name, ensure_ascii=False)
+    return bridge.lua(
+        "local S=require 'mod.class.CheckerTokenStyle';local a=mb.byName(%s);if not a then return {} end;"
+        "local s=a._checker_token;local cap=S.standeeHeight(s and s.id or nil);local drawn=false;"
+        "local box=s and s.layer_box;if cap and box and box.right-box.left>0 and box.bottom-box.top>0 then "
+        "local bh=box.bottom-(box.body_top or box.top);"
+        "drawn=bh*math.min(cap/bh,S.standee_width/(box.right-box.left)) end;"
+        "return {size_category=a.size_category,render_id=(s and s.id) or false,height_cap=cap or false,"
+        "drawn_cells=drawn or false,standee=(s and s.standee) and true or false,has_box=box~=nil}" % q)
+
+
+def standee_region(bridge, tile, up=2, down=1, span=1):
+    rows = bridge.lua(
+        "local o={};for _,a in pairs(game.level.entities) do if a.x and a._checker_live_placed then "
+        "local m=game.level.map;o[#o+1]={math.floor(m.display_x+(a.x-m.mx)*m.tile_w),math.floor(m.display_y+(a.y-m.my)*m.tile_h)} end end;return o")
+    xs = [r[0] for r in rows] or [0]
+    ys = [r[1] for r in rows] or [0]
+    return clamp_box((min(xs) - span * tile, min(ys) - up * tile, max(xs) + (span + 1) * tile, max(ys) + (down + 1) * tile))
+
+
+def standee_remove_idle_particles(bridge, name):
+    """Remove level idle particles without pausing or touching shader auras."""
+    q = json.dumps(name, ensure_ascii=False)
+    return bridge.lua(
+        "local counts={};local total=0;local own=0;"
+        "for uid,a in pairs(game.level.entities) do if a.__particles then local rem={};"
+        "for e in pairs(a.__particles) do rem[#rem+1]=e end;local n=0;"
+        "for _,e in ipairs(rem) do pcall(function() a:removeParticles(e) end);"
+        "if not a.__particles or not a.__particles[e] then n=n+1 end end;"
+        "if n>0 then counts[#counts+1]={uid=uid,name=a.name or false,removed=n};"
+        f"total=total+n;if a.name=={q} then own=own+n end end end end;"
+        "return {total=total,actor_removed=own,entities=counts}")
+
+
+def outside_quad_pixels(mask, quads):
+    """Changed pixels outside the union of raster-covered screen quads.
+
+    Bounds are continuous screen pixels. Floor/ceil includes exactly the
+    pixels intersected by a quad; no padding or noise tolerance is added.
+    """
+    import numpy as np
+    inside = np.zeros(mask.shape, dtype=bool)
+    height, width = mask.shape
+    for left, top, right, bottom in quads:
+        x0, y0 = max(0, math.floor(left)), max(0, math.floor(top))
+        x1, y1 = min(width, math.ceil(right)), min(height, math.ceil(bottom))
+        if x1 > x0 and y1 > y0:
+            inside[y0:y1, x0:x1] = True
+    return int((mask & ~inside).sum())
+
+
+def cleaned_baseline_validity(frames, residual_particles):
+    """Three unpaused RGB crops must be clean and stable at threshold 12."""
+    import numpy as np
+    drift = [int((np.abs(np.asarray(a).astype(int) - np.asarray(b).astype(int))
+                  .sum(axis=2) > 12).sum()) for a, b in zip(frames, frames[1:])]
+    valid = len(frames) == 3 and len(residual_particles) == 3 \
+        and not any(residual_particles) and not any(drift)
+    return {'valid': valid, 'drift_pixels': drift,
+            'residual_particles': residual_particles, 'diff_threshold': 12}
+
+
+def aura_case_validity(on, native):
+    """Lighting invalidity has the same explicit label as facing."""
+    for record in (on, native):
+        baseline = record.get('baseline_validity', {})
+        for key in ('lighting', 'lighting_frames'):
+            if key in baseline and not baseline[key].get('valid'):
+                return 'INVALID (lighting)'
+    return 'VALID' if all(r.get('baseline_validity', {}).get('valid') for r in (on, native)) else 'INVALID'
+
+
+def lighting_validity(brightness, bare=True, reference=None, samples=3):
+    """Pre-registered R52 floor; lighting never changes a detector threshold."""
+    ref = reference or AURA_CONTRACT['LIGHTING_REFERENCE']
+    reference = ref['mean_rgb_brightness']
+    valid = bare and len(brightness) == samples and all(
+        math.isfinite(v) and reference * (1 - ref['tolerance_fraction']) <= v
+        <= reference * (1 + ref['tolerance_fraction'])
+        for v in brightness)
+    return {'valid': valid, 'status': 'VALID' if valid else 'INVALID (lighting)',
+            'brightness': brightness, 'reference': reference,
+            'tolerance_fraction': ref['tolerance_fraction'], 'bare_floor': bare}
+
+
+# Disposable fixture only: native FOV calls can otherwise overwrite manually
+# lit cells between setup and screenshot. Re-apply one registered state after
+# every native FOV refresh, including refreshes caused by aura removal/facing.
+STANDEE_LIGHTING_LUA = r"""
+local p=game.player;local mm=game.level.map
+assert(require('mod.class.CheckerFixture').enabled() and not profile.auth)
+local a=assert(mb.byName(NAME));mm._checker_measure_light={x=a.x,y=a.y}
+config.settings.tome.daynight=false;config.settings.tome.smooth_fov=false;p.lite=3
+-- Native outdoor thunderstorm darkens setShown to .3 and adds a realtime
+-- lightning background. Retire this environment event uniformly in fixture
+-- measurements, preserving its original state in the census.
+mm._checker_removed_light_events=mm._checker_removed_light_events or {}
+if game.zone.thunderstorm_event_levels and game.zone.thunderstorm_event_levels[game.level.level] then
+ local event={name='thunderstorm',shown_before=mm.color_shown,obscure_before=mm.color_obscure,removed_effects={},removed_map_particles=0}
+ game.level.data.background=game.level.data.thunderstorm_event_background
+ game.level.data.thunderstorm_event_background=nil
+ game.zone.thunderstorm_event_levels[game.level.level]=nil
+ local effects={};for _,id in ipairs(game.level.effects or {}) do
+  if id=='EFF_ZONE_AURA_THUNDERSTORM' then event.removed_effects[#event.removed_effects+1]=id else effects[#effects+1]=id end
+ end;game.level.effects=effects
+ for _,e in pairs(game.level.entities) do
+  if e.EFF_ZONE_AURA_THUNDERSTORM and e:hasEffect(e.EFF_ZONE_AURA_THUNDERSTORM) then
+   e:removeEffect(e.EFF_ZONE_AURA_THUNDERSTORM,true)
+  end
+ end
+ local particles={};for _,ps in ipairs(mm.particles or {}) do particles[#particles+1]=ps end
+ for _,ps in ipairs(particles) do mm:removeParticleEmitter(ps);event.removed_map_particles=event.removed_map_particles+1 end
+ mm._checker_removed_light_events[#mm._checker_removed_light_events+1]=event
+end
+local function relight()
+ local m=game.level.map;local c=m._checker_measure_light;if not c then return end
+ local tint=m._checker_measure_tint or 1;m:setShown(tint,tint,tint,1);m:setObscure(.6,.6,.6,.5)
+ for dx=-5,5 do for dy=-5,5 do local x,y=c.x+dx,c.y+dy
+  if x>=0 and y>=0 and x<m.w and y<m.h then
+   m.lites(x,y,true);m.remembers(x,y,true);m:applyLite(x,y,1)
+  end
+ end end
+end
+if not p._checker_original_measure_fov then
+ p._checker_original_measure_fov=p.playerFOV
+ p.playerFOV=function(self,...)
+  self._checker_original_measure_fov(self,...);relight()
+ end
+end
+relight();mm:redisplay();core.display.forceRedraw()
+return true
+"""
+
+
+def standee_lighting_state(bridge, name, set_state=False, profile="LIGHTING_REFERENCE"):
+    q = json.dumps(name, ensure_ascii=False)
+    if set_state:
+        tint = AURA_CONTRACT[profile]['shown'][0]
+        bridge.lua(f'game.level.map._checker_measure_tint={tint};' + STANDEE_LIGHTING_LUA.replace('NAME', q))
+    return bridge.lua(
+        f"local a=assert(mb.byName({q}));local p=game.player;local m=game.level.map;"
+        "local cells={};for dx=-5,5 do for dy=-5,5 do local x,y=a.x+dx,a.y+dy;"
+        "local g=m(x,y,m.TERRAIN);cells[#cells+1]={x=x,y=y,lit=m.lites(x,y) or false,"
+        "remembered=m.remembers(x,y) or false,seen=m.seens(x,y) or false,"
+        "terrain=g and g.name or false,image=g and g.image or false,"
+        "block_sight=g and g.block_sight or false} end end;"
+        "local lights={};for _,e in pairs(game.level.entities) do if e.x and "
+        "((e.lite or 0)>0 or (e.radiance_aura or 0)>0) then lights[#lights+1]={"
+        "name=e.name,x=e.x,y=e.y,lite=e.lite or 0,radiance=e.radiance_aura or 0} end end;"
+        "local fx=a.x-2;local fy=a.y-2;if (fx+fy)%2~=0 then fx=fx-1 end;"
+        "local g=m(fx,fy,m.TERRAIN);local sx=m.display_x+(fx-m.mx)*m.tile_w;"
+        "local sy=m.display_y+(fy-m.my)*m.tile_h;"
+        "local effects={};for id in pairs(p.tmp or {}) do effects[#effects+1]=tostring(id) end;"
+        "return {player_lite=p.lite,sight=p.sight,infravision=p.infravision or false,"
+        "blind=p.blind or false,player_effects=effects,shown=m.color_shown,obscure=m.color_obscure,"
+        "daynight=config.settings.tome.daynight,smooth_fov=config.settings.tome.smooth_fov,"
+        "level_daynight=game.level.data.day_night or false,turn=game.turn,"
+        "time={game.calendar:getTimeOfDay(game.turn)},lighting_entities=lights,cells=cells,"
+        "native_environment={thunderstorm=game.zone.thunderstorm_event_levels and "
+        "game.zone.thunderstorm_event_levels[game.level.level] or false,level_effects=game.level.effects or {},"
+        "background=game.level.data.background and true or false,weather_shader=game.level.data.weather_shader and true or false},"
+        "removed_light_events=m._checker_removed_light_events or {},"
+        "map_origin={m.mx,m.my},floor_world={fx,fy},floor_box={sx,sy,sx+m.tile_w,sy+m.tile_h},"
+        "bare_floor=g and g.name=='burnt ground' and not m(fx,fy,m.ACTOR) "
+        "and not m(fx,fy,m.OBJECT) and not m(fx,fy,m.TRAP) and true or false}")
+
+
+def standee_floor_measure(paths, states, prefix, profile="LIGHTING_REFERENCE", samples=3):
+    from PIL import Image
+    import numpy as np
+    values, crops = [], []
+    for k, (path, state) in enumerate(zip(paths, states), 1):
+        patch = Image.open(path).convert('RGB').crop(state['floor_box'])
+        dest = CROPS / f'{prefix}-floor-{k}.png'
+        dest.parent.mkdir(parents=True, exist_ok=True);patch.save(dest)
+        values.append(float(np.asarray(patch).mean()));crops.append(rel(dest))
+    result = lighting_validity(values, all(st['bare_floor'] for st in states),
+                               AURA_CONTRACT[profile], samples=samples)
+    result.update(crops=crops, states=states)
+    return result
+
+
+def standee_clear_around_logged(bridge, radius):
+    return bridge.lua(
+        f"local p=game.player;local removed={{}};for _,e in pairs(game.level.entities) do "
+        f"if e~=p and e.x and math.abs(e.x-p.x)<={radius} and math.abs(e.y-p.y)<={radius} then "
+        "removed[#removed+1]={name=e.name,x=e.x,y=e.y,lite=e.lite or 0,radiance=e.radiance_aura or 0} end end;"
+        f"local n=mb.clearAround({radius});return {{n=n,entities=removed}}")
+
+
+def aura_height_gate_required(effect, tile):
+    """2026-10-05 approved option 2: essence height is judged only at 64px.
+
+    Independent design review (2026-10-04): at alpha .6 the near-black tip
+    and .24-.34-cell core reach are not resolvable at 32/48px. Band, ratio,
+    stillness, median and k remain unchanged; body_of_fire uses every size.
+    """
+    return effect != 'essence_of_the_dead' or tile == 64
+
+
+# Native aura-producing definitions contain this API in their activation
+# bytecode. Inspect active definitions uniformly; never delete shader tables or
+# deactivate unrelated buffs. Native deactivation owns all lifecycle cleanup.
+STANDEE_ISOLATE_SHADER_AURAS_LUA = r"""
+local function keys(a)
+ local out={};for k in pairs(a.shader_auras or {}) do out[#out+1]=k end
+ table.sort(out);return out
+end
+local function attaches(d)
+ if not d or type(d.activate)~='function' then return false end
+ local ok,code=pcall(string.dump,d.activate)
+ return ok and code:find('addShaderAura',1,true)~=nil
+end
+local rows={}
+for _,a in pairs(game.level.entities) do
+ local row={actor=a.name,uid=a.uid,before=keys(a),removed={},lite_before=a.lite or 0,radiance_before=a.radiance_aura or 0}
+ if #row.before>0 then
+  local effects={};for id in pairs(a.tmp or {}) do effects[#effects+1]=id end
+  local sustains={};for id in pairs(a.sustain_talents or {}) do sustains[#sustains+1]=id end
+  for _,id in ipairs(effects) do
+   local def=a:getEffectFromId(id)
+   if attaches(def) then
+    local before=keys(a);local ok,err=pcall(function() a:removeEffect(id) end)
+    row.removed[#row.removed+1]={kind='effect',id=id,name=def.name,before=before,after=keys(a),ok=ok,error=not ok and tostring(err) or false}
+   end
+  end
+  for _,id in ipairs(sustains) do
+   local def=a:getTalentFromId(id)
+   if a:isTalentActive(id) and attaches(def) then
+    local before=keys(a);local ok,err=pcall(function()
+     a:forceUseTalent(id,{ignore_energy=true,ignore_cd=true,no_equilibrium_fail=true,no_talent_fail=true,silent=true})
+    end)
+    row.removed[#row.removed+1]={kind='sustain',id=id,name=def.name,before=before,after=keys(a),ok=ok,error=not ok and tostring(err) or false}
+   end
+  end
+ end
+ row.after=keys(a);row.lite_after=a.lite or 0;row.radiance_after=a.radiance_aura or 0;rows[#rows+1]=row
+end
+return rows
+"""
+
+
+def standee_isolate_shader_auras(bridge):
+    """Detach pre-existing aura effects/sustains via their native removal API."""
+    return bridge.lua(STANDEE_ISOLATE_SHADER_AURAS_LUA)
+
+
+def standee_idle_particle_count(bridge):
+    return bridge.lua("local n=0;for _,a in pairs(game.level.entities) do "
+                      "for _ in pairs(a.__particles or {}) do n=n+1 end end;return n")
+
+
+def aura_screen_quad(sx, sy, tile, quad):
+    return [sx + quad.get('display_x', 0) * tile,
+            sy + quad.get('display_y', -1) * tile,
+            sx + (quad.get('display_x', 0) + quad.get('display_w', 1)) * tile,
+            sy + (quad.get('display_y', -1) + quad.get('display_h', 2)) * tile]
+
+
+def standee_freeze(bridge):
+    """Freeze idle animation and strip idle particles/shader auras so the only
+    variable between the flag-off and flag-on frame is the token draw path.
+    The phoenix flame A/B keeps its aura because that scene does not freeze."""
+    bridge.lua(
+        "core.display.pauseAnims(true);"
+        "for _,a in pairs(game.level.entities) do if a.__particles then local rem={};"
+        "for e in pairs(a.__particles) do rem[#rem+1]=e end;"
+        "for _,e in ipairs(rem) do pcall(function() a:removeParticles(e) end) end end end;"
+        "local function strip(t) if not t then return end for i=#(t.add_mos or {}),1,-1 do "
+        "local m=t.add_mos[i];if type(m)=='table' and m._isshaderaura then table.remove(t.add_mos,i) end end end;"
+        "for _,a in pairs(game.level.entities) do a.shader=nil;a.shader_args=nil;a.shader_auras=nil;strip(a);strip(a.replace_display) end;"
+        "mb.refresh();return true")
+
+
+def standee_open_scene(bridge, entry, tiles):
+    """Isolate every actor and freeze native scene animation for exact A/B.
+
+    Native API removal owns particle/effect lifecycle. The animation pause also
+    holds terrain shader tick fixed, so a corner overhang cannot confound the
+    whole-crop exactly-zero 16px fallback gate. No pixels are excluded.
+    """
+    # Coordinator-approved open/flat isolation, following standee_freeze:
+    # CheckerTokens/CheckerTokenStyle have no time-based drawing; rings/arcs
+    # are static. Realaura and facing captures must remain unpaused.
+    bridge.lua('core.display.pauseAnims(true);return true')
+    try:
+        entry['scene_isolation'] = {
+            'shader_aura_removals': standee_isolate_shader_auras(bridge),
+            'particle_removals': standee_remove_idle_particles(bridge, 'ogre guard'),
+            'residual_particles': standee_idle_particle_count(bridge),
+            'animations_paused': True,
+        }
+        standee_off_on(bridge, entry, 'open', tiles, 'standee-open',
+                       native=True, up=2, down=1, span=2)
+        standee_per_actor(bridge, entry, 'standee-open',
+                          ['ogre guard', 'Ninandra, the Great Weaver'], tile=32)
+    finally:
+        bridge.lua('core.display.pauseAnims(false);return true')
+
+
+def standee_off_on(bridge, entry, label, tiles, prefix, focus='mb.focus(game.player.x,game.player.y)',
+                   up=2, down=1, span=1, native=False, freeze=False):
+    """Capture flag-off/flag-on at each tile, plus a tokens-off native frame at
+    every tile when `native` is set. Crops are regions only; full screenshots
+    are removed."""
+    from PIL import Image, ImageChops
+    shots = []
+    if freeze:
+        standee_freeze(bridge)
+    for t in tiles:
+        bridge.lua("local T=require 'mod.class.CheckerTokens';T.layer_trial=false;T.standee_trial=false;"
+                   f"mb.setTile({t});game:checkerRefreshVisuals();{focus};return true")
+        p_off = bridge.shot(f'{prefix}-off-{label}-{t}')
+        bridge.lua("local T=require 'mod.class.CheckerTokens';T.layer_trial=false;T.standee_trial=true;"
+                   f"mb.setTile({t});game:checkerRefreshVisuals();{focus};return true")
+        p_on = bridge.shot(f'{prefix}-on-{label}-{t}')
+        state = standee_state(bridge)
+        box = standee_region(bridge, t, up, down, span)
+        CROPS.mkdir(parents=True, exist_ok=True)
+        c_off = CROPS / f'{prefix}-off-{label}-{t}-crop.png'
+        c_on = CROPS / f'{prefix}-on-{label}-{t}-crop.png'
+        a = Image.open(p_off).convert('RGB').crop(box)
+        b = Image.open(p_on).convert('RGB').crop(box)
+        a.save(c_off); b.save(c_on)
+        diff = ImageChops.difference(a, b)
+        changed = diff.getbbox() is not None
+        changed_px = sum(1 for px in diff.getdata() if px != (0, 0, 0))
+        item = {'tile': t, 'region': list(box), 'off': rel(c_off), 'on': rel(c_on),
+                'changed': changed, 'changed_pixels': changed_px, 'state': state}
+        if native:
+            bridge.lua("local T=require 'mod.class.CheckerTokens';T.standee_trial=false;T.layer_trial=false;"
+                       f"mb.tokens(false);mb.setTile({t});{focus};return true")
+            p_nat = bridge.shot(f'{prefix}-native-{label}-{t}')
+            c_nat = CROPS / f'{prefix}-native-{label}-{t}-crop.png'
+            Image.open(p_nat).convert('RGB').crop(box).save(c_nat)
+            item['native'] = rel(c_nat)
+            bridge.lua("local T=require 'mod.class.CheckerTokens';T.standee_trial=true;T.layer_trial=false;"
+                       "mb.tokens(true);mb.refresh();return true")
+            Path(p_nat).unlink(missing_ok=True)
+        shots.append(item)
+        Path(p_off).unlink(missing_ok=True)
+        Path(p_on).unlink(missing_ok=True)
+    if freeze:
+        bridge.lua('core.display.pauseAnims(false);return true')
+    bridge.lua('mb.setTile(64)')
+    entry.setdefault('captures', []).extend(shots)
+    return shots
+
+
+def standee_per_actor(bridge, entry, label, names, tile=48, up=2, down=1, span=1):
+    """Crops centred on one actor's own cell, the SAME window for OFF, ON and
+    tokens-off NATIVE: 3 cells wide (span=1) x 4 cells tall (up=2, down=1).
+
+    R33's version spanned the whole packed crowd (span=2) and had no native
+    frame, so every per-actor ON crop covered the same scene. This re-focuses on
+    the single actor before each shot and re-uses one box for all three."""
+    from PIL import Image
+    bridge.lua('core.display.pauseAnims(true);return true')
+    focus = ('local a=mb.byName(%s);if not a then return {found=false} end;'
+             'mb.focus(a.x,a.y);local m=game.level.map;'
+             'local r=mb.row(a);r.found=true;'
+             'r.screen2={math.floor(m.display_x+(a.x-m.mx)*m.tile_w),'
+             'math.floor(m.display_y+(a.y-m.my)*m.tile_h)};return r')
+    for name in names:
+        q = json.dumps(name, ensure_ascii=False)
+        off = bridge.lua(f"local T=require 'mod.class.CheckerTokens';T.layer_trial=false;T.standee_trial=false;"
+                         f"mb.setTile({tile});game:checkerRefreshVisuals();" + (focus % q))
+        if not off.get('found'):
+            entry.setdefault('per_actor', []).append({'name': name, 'found': False})
+            continue
+        p_off = bridge.shot(f'{label}-{EXPECT.get(name) or name}-off')
+        bridge.lua("local T=require 'mod.class.CheckerTokens';T.standee_trial=true;"
+                   f"mb.setTile({tile});game:checkerRefreshVisuals();" + (focus % q))
+        p_on = bridge.shot(f'{label}-{EXPECT.get(name) or name}-on')
+        # Size/cap/drawn height are read while the standee is installed (ON).
+        metrics = standee_actor_metrics(bridge, name)
+        # tokens-off NATIVE frame, same focused window as OFF/ON.
+        bridge.lua("local T=require 'mod.class.CheckerTokens';T.standee_trial=false;T.layer_trial=false;"
+                   f"mb.tokens(false);mb.setTile({tile});game:checkerRefreshVisuals();" + (focus % q))
+        p_nat = bridge.shot(f'{label}-{EXPECT.get(name) or name}-native')
+        bridge.lua("local T=require 'mod.class.CheckerTokens';T.standee_trial=true;T.layer_trial=false;"
+                   "mb.tokens(true);mb.refresh();return true")
+        sx, sy, tt = off['screen2'][0], off['screen2'][1], tile
+        box = clamp_box((sx - span * tt, sy - up * tt, sx + (span + 1) * tt, sy + (down + 1) * tt))
+        CROPS.mkdir(parents=True, exist_ok=True)
+        tag = EXPECT.get(name) or name
+        c_off = CROPS / f'{label}-{tag}-off-crop.png'
+        c_on = CROPS / f'{label}-{tag}-on-crop.png'
+        c_nat = CROPS / f'{label}-{tag}-native-crop.png'
+        Image.open(p_off).convert('RGB').crop(box).save(c_off)
+        Image.open(p_on).convert('RGB').crop(box).save(c_on)
+        Image.open(p_nat).convert('RGB').crop(box).save(c_nat)
+        entry.setdefault('per_actor', []).append({'name': name, 'id': EXPECT.get(name), 'found': True,
+                                                  'label': label, 'tile': tile,
+                                                  'region': list(box), 'off': rel(c_off), 'on': rel(c_on),
+                                                  'native': rel(c_nat),
+                                                  'size_category': metrics.get('size_category'),
+                                                  'height_cap': metrics.get('height_cap'),
+                                                  'drawn_cells': metrics.get('drawn_cells'),
+                                                  'has_box': metrics.get('has_box')})
+        for p in (p_off, p_on, p_nat):
+            Path(p).unlink(missing_ok=True)
+    # Restore the standee flag for any later step.
+    bridge.lua("local T=require 'mod.class.CheckerTokens';T.layer_trial=false;T.standee_trial=true;"
+               "game:checkerRefreshVisuals();core.display.pauseAnims(false);return true")
+
+
+def diff_pixels(a, b, box, threshold=12):
+    """Count pixels that differ between two frames inside one box.
+
+    The R41 method: the aura count is the DIFFERENCE between the same frame
+    with and without the aura, so the faction ring, the creature's colours,
+    clothes and the floor cannot pollute it. ``threshold`` rejects sub-pixel
+    antialias noise. Contrast with R40's single bright-warm mask, which
+    over-counted red creatures/flames and under-counted a dark aura.
+    """
+    from PIL import Image
+    import numpy as np
+    ia = np.asarray(Image.open(a).convert('RGB').crop(box)).astype(int)
+    ib = np.asarray(Image.open(b).convert('RGB').crop(box)).astype(int)
+    return int((np.abs(ia - ib).sum(axis=2) > threshold).sum())
+
+
+def _diff_mask(a, b, box, threshold=12):
+    """Boolean changed-pixel mask between two frames inside one box.
+
+    R43 uses it to subtract the aura's own pixels before measuring creature
+    stillness and to locate the aura pixel centroid and the creature bbox
+    centre for the native-facing mirror.
+    """
+    from PIL import Image
+    import numpy as np
+    ia = np.asarray(Image.open(a).convert('RGB').crop(box)).astype(int)
+    ib = np.asarray(Image.open(b).convert('RGB').crop(box)).astype(int)
+    return np.abs(ia - ib).sum(axis=2) > threshold
+
+
+def _centroid(mask):
+    """(x, y) centroid of a boolean mask in crop coordinates, or None."""
+    import numpy as np
+    ys, xs = np.where(mask)
+    if not len(xs):
+        return None
+    return float(xs.mean()), float(ys.mean())
+
+
+def _median(values):
+    ordered = sorted(values)
+    return ordered[len(ordered) // 2]
+
+
+def standee_aura_state(bridge, name):
+    q = json.dumps(name, ensure_ascii=False)
+    return bridge.lua(
+        ("local a=mb.byName(%s);local s=a._checker_token;local t=a.replace_display or a;"
+         "local au={};for _,m in ipairs(t.add_mos or {}) do if m._isshaderaura then "
+         "au[#au+1]={image=m.image,display_x=m.display_x,display_y=m.display_y,display_w=m.display_w,"
+         "display_h=m.display_h,sdm=m.sdm_double,mark=m._checker_standee_aura and true or false,"
+         "base=m._checker_standee_base and true or false} end end;"
+         "return {standee=(s and s.standee) and true or false,aura=au}") % q)
+
+
+# The two REAL native shader auras used by the standee aura scene. R41 passed
+# the TALENT id ('T_BODY_OF_FIRE') into a function that tested the label
+# 'body_of_fire', so the else branch ran and every "body_of_fire" capture really
+# applied EFF_ESSENCE_OF_THE_DEAD. The label is the caller's request; `applied`
+# is read back from the actor so a mislabel can never pass.
+AURA_EFFECTS = ('body_of_fire', 'essence_of_the_dead')
+
+# R49 user decision: apply the 0.3-cell floor to EVERY native reference,
+# k = max(0.3, 0.6 * native flame height), with solid flame rows only.
+AURA_CONTRACT = json.loads((ADDON / 'tools/standee_aura_contract.json').read_text())
+AURA_FLAME_ABOVE_TOP_FLOOR_CELLS = AURA_CONTRACT['AURA_FLAME_ABOVE_TOP_FLOOR_CELLS']
+AURA_HEIGHT_FRAMES = AURA_CONTRACT['AURA_HEIGHT_FRAMES']
+
+
+def aura_height_gate(on_rows, native_rows, on_art_top, native_art_top, tile):
+    """Uniform pre-registered height sample; k and solid-top detector unchanged."""
+    if len(on_rows) != AURA_HEIGHT_FRAMES or len(native_rows) != AURA_HEIGHT_FRAMES:
+        raise ValueError(f'aura height requires exactly {AURA_HEIGHT_FRAMES} frames per state')
+    # A missing solid band contributes zero height, never a dropped sample:
+    # both medians must retain all 15 pre-registered frames.
+    on_height = _median([0.0 if row is None else (on_art_top - row) / tile
+                         for row in on_rows])
+    native_height = _median([0.0 if row is None else (native_art_top - row) / tile
+                             for row in native_rows])
+    k = max(AURA_FLAME_ABOVE_TOP_FLOOR_CELLS, 0.6 * native_height)
+    return {'pass': on_height >= k, 'on_cells': on_height,
+            'native_cells': native_height, 'k': k}
+
+
+def aura_non_height_frames(files):
+    """Band and creature-still retain frames 1–3; ratio and height use all 15."""
+    if len(files) != AURA_HEIGHT_FRAMES:
+        raise ValueError(f'aura capture requires {AURA_HEIGHT_FRAMES} frames')
+    return files[:3]
+
+
+
+def aura_ratio_gate(on_counts, native_counts, reach_ratio):
+    """R52 approved: strict, uniform 15-frame whole-region medians."""
+    import math
+    for counts in (on_counts, native_counts):
+        if len(counts) != AURA_HEIGHT_FRAMES or any(
+                c is None or not isinstance(c, (int, float)) or not math.isfinite(c) or c < 0
+                for c in counts):
+            raise ValueError('aura ratio requires exactly 15 valid counts per state')
+    on, native = _median(on_counts), _median(native_counts)
+    raw = on / native if native else 0.0
+    normalised = raw / reach_ratio if reach_ratio else 0.0
+    return {'on_median': on, 'native_median': native, 'ratio': raw,
+            'normalised': normalised,
+            'pass': bool(reach_ratio) and on > 0 and native > 0 and 0.6 <= normalised <= 1.5}
+
+
+def mirror_mask_axis(mask, axis):
+    """Mirror pixel centres about the same continuous body axis as runtime."""
+    import numpy as np
+    out = np.zeros_like(mask)
+    if axis is not None:
+        for x in range(mask.shape[1]):
+            dx = int(round(2 * axis - 1 - x))
+            if 0 <= dx < mask.shape[1]:
+                out[:, dx] |= mask[:, x]
+    return out
+
+
+def aura_mirror_gain(left, right, axis):
+    """Unchanged asymmetric-region gain, after caller excludes tactical boxes."""
+    flipped = mirror_mask_axis(left, axis)
+    asym = left ^ flipped
+    count = int(asym.sum())
+    return ((int((right & flipped & asym).sum()) - int((right & left & asym).sum()))
+            / count) if count else 0.0
+
+
+def mirror_exclusion(shape, boxes, region, axis):
+    """Exclude actual tactical boxes AND their mirrors, uniformly for all actors."""
+    import numpy as np
+    mask = np.zeros(shape, dtype=bool)
+    for box in boxes:
+        l, top, r, bottom = box['box']
+        l, r = max(0, math.floor(l-region[0])), min(shape[1], math.ceil(r-region[0]))
+        top, bottom = max(0, math.floor(top-region[1])), min(shape[0], math.ceil(bottom-region[1]))
+        if r > l and bottom > top:
+            mask[top:bottom, l:r] = True
+    mask |= mirror_mask_axis(mask, axis)
+    return mask, {'boxes': boxes, 'region': list(region), 'axis': axis,
+                  'excluded_pixels': int(mask.sum()), 'includes_mirror_images': True}
+
+
+def static_aura_asymmetry(tid):
+    """Pre-registered alpha>8; body bbox centre mapped by exact aura affine."""
+    import numpy as np
+    from PIL import Image
+    geometry = json.loads((ADDON/'art/token-layers/geometry.json').read_text())[tid]
+    aura = geometry['aura']
+    layer = geometry
+    scale = (aura['right'] - aura['left']) / (layer['right'] - layer['left'])
+    offset = aura['left'] - layer['left'] * scale
+    axis = offset + (layer['left'] + layer['right']) / 2 * scale
+    path = ADDON/'data/gfx/tokens-layer/aura'/f'{tid}.png'
+    mask = np.asarray(Image.open(path))[:, :, 3] > 8
+    occupied = int(mask.sum())
+    asymmetric = int((mask ^ mirror_mask_axis(mask, axis)).sum())
+    return {'id': tid, 'alpha_threshold': 8, 'axis': axis,
+            'occupied_pixels': occupied, 'asymmetric_pixels': asymmetric,
+            'static_asymmetry': asymmetric / occupied if occupied else 0.0}
+
+
+def select_facing_subject(rows):
+    """Pre-register highest new-actor asymmetry; below .30 is ineligible."""
+    eligible = [row for row in rows if row['static_asymmetry'] >= 0.30]
+    if not eligible:
+        raise ValueError('no new facing candidate reaches static asymmetry 0.30')
+    return max(eligible, key=lambda row: (row['static_asymmetry'], row['id']))
+
+
+def facing_run_status(static_asymmetry, checks):
+    """Below .30 is informative regardless of outcome; preserve raw checks."""
+    if static_asymmetry < 0.30:
+        return 'INFORMATIVE'
+    return 'PASS' if all(checks.values()) else 'FAIL'
+
+
+def assert_centred_mirror_region(frame, region):
+    """Region-only flip requires equal horizontal crop margins."""
+    left = region[0] - frame['region'][0]
+    right = frame['region'][2] - region[2]
+    if left != right:
+        raise AssertionError(f'native mirror region has unequal margins: {left} != {right}')
+
+
+def aura_mask_placement(mask, quad):
+    """Half-open mask bbox contained by quad +/-1px, bottom anchored +/-1px."""
+    import numpy as np
+    ys, xs = np.where(mask)
+    if not len(xs) or quad is None:
+        return {'pass': False, 'bbox': None, 'quad': quad, 'bottom_error_px': None}
+    bbox = [int(xs.min()), int(ys.min()), int(xs.max())+1, int(ys.max())+1]
+    left, top, right, bottom = quad
+    contained = bbox[0] >= left-1 and bbox[1] >= top-1 \
+        and bbox[2] <= right+1 and bbox[3] <= bottom+1
+    bottom_error = bbox[3] - bottom
+    return {'pass': bool(contained and abs(bottom_error) <= 1), 'bbox': bbox,
+            'quad': list(quad), 'contained': bool(contained),
+            'bottom_error_px': float(bottom_error)}
+
+
+def standee_apply_aura(bridge, name, effect, on):
+    """Apply one REAL shader aura and read back which effect is active.
+
+    effect is the label: 'body_of_fire' -> T_BODY_OF_FIRE (a talent),
+    'essence_of_the_dead' -> EFF_ESSENCE_OF_THE_DEAD (an effect). Both use the
+    native awesomeaura shader. The returned ``applied`` field is derived from
+    the actor's live talent/effect state, not from the label, so the aura scene
+    can assert the intended aura really is the one on the actor.
+    """
+    if effect not in AURA_EFFECTS:
+        raise ValueError('unknown aura effect: %r' % (effect,))
+    q = json.dumps(name, ensure_ascii=False)
+    want = 1 if on else 0
+    # Shared readback: which of the two auras is actually active right now.
+    readback = (
+        "local EFF=a.EFF_ESSENCE_OF_THE_DEAD or 'EFF_ESSENCE_OF_THE_DEAD';"
+        "local bof=a:isTalentActive('T_BODY_OF_FIRE') and true or false;"
+        "local eod=a:hasEffect(EFF) and true or false;"
+        "local applied=bof and 'body_of_fire' or (eod and 'essence_of_the_dead' or false);"
+        "local t=a.replace_display or a;local au=0;for _,m in ipairs(t.add_mos or {}) do if m._isshaderaura then au=au+1 end end;"
+        "local n=0;for _ in pairs(a.shader_auras or {}) do n=n+1 end;")
+    if effect == 'body_of_fire':
+        body = (
+            f"local a=mb.byName({q});"
+            "if not a:knowTalent('T_BODY_OF_FIRE') then a:learnTalent('T_BODY_OF_FIRE',true,1) end;"
+            "local active=a:isTalentActive('T_BODY_OF_FIRE');"
+            f"if {want}==1 and not active then a:forceUseTalent('T_BODY_OF_FIRE',{{ignore_energy=true,ignore_cd=true,no_equilibrium_fail=true,no_talent_fail=true,silent=true}}) "
+            f"elseif {want}==0 and active then a:forceUseTalent('T_BODY_OF_FIRE',{{ignore_energy=true,ignore_cd=true,no_equilibrium_fail=true,no_talent_fail=true,silent=true}}) end;"
+            "pcall(function() a:updateModdableTile() end);mb.focus(a.x,a.y);"
+            + readback +
+            "return {active=bof,body_of_fire=bof,essence_of_the_dead=eod,applied=applied,shader_auras=n,aura_entries=au}")
+    else:
+        body = (
+            f"local a=mb.byName({q});local EFF=a.EFF_ESSENCE_OF_THE_DEAD or 'EFF_ESSENCE_OF_THE_DEAD';"
+            f"if {want}==1 then a:setEffect(EFF,50,{{}}) elseif a:hasEffect(EFF) then a:removeEffect(EFF) end;"
+            "pcall(function() a:updateModdableTile() end);mb.focus(a.x,a.y);"
+            + readback +
+            "return {active=eod,body_of_fire=bof,essence_of_the_dead=eod,applied=applied,shader_auras=n,aura_entries=au}")
+    return bridge.lua(body)
+
+
+def standee_clear_auras(bridge, name):
+    standee_apply_aura(bridge, name, 'body_of_fire', False)
+    standee_apply_aura(bridge, name, 'essence_of_the_dead', False)
+
+
+def standee_rank_check(bridge, entry):
+    """Exercise aura-chain rank callbacks on a boss and a normal tall actor."""
+    from PIL import Image
+    import numpy as np
+    records = []
+    for name, index in (('Norgos, the Guardian', 29), ('heavy bone giant', 5)):
+        entry.setdefault('placed', []).append(standee_place_one(bridge, 'standee', index))
+        q = json.dumps(name)
+        for tile in (32, 48, 64):
+            for state in ('on', 'native'):
+                enabled = 'true' if state == 'on' else 'false'
+                bridge.lua("local T=require 'mod.class.CheckerTokens';T.layer_trial=false;"
+                           f"T.standee_trial={enabled};mb.tokens({enabled});mb.setTile({tile});"
+                           f"game:checkerRefreshVisuals();local a=mb.byName({q});mb.focus(a.x,a.y);"
+                           "core.display.pauseAnims(false);return true")
+                standee_clear_auras(bridge, name)
+                removed = standee_remove_idle_particles(bridge, name)
+                applied = standee_apply_aura(bridge, name, 'essence_of_the_dead', True)
+                row = bridge.lua(f"local a=mb.byName({q});return mb.row(a)")
+                sx, sy = row['screen'][:2]
+                _set_vp(bridge.lua("local m=game.level.map;return {vp={m.display_x,m.display_y,m.viewport.width,m.viewport.height}}"))
+                box = clamp_box((sx-tile, sy-2*tile, sx+2*tile, sy+2*tile))
+                path = bridge.shot(f'rank-{index}-{state}-{tile}')
+                crop_path = CROPS / f'rank-{EXPECT[name]}-{state}-{tile}-crop.png'
+                CROPS.mkdir(parents=True, exist_ok=True)
+                Image.open(path).convert('RGB').crop(box).save(crop_path)
+                # Native boss front decoration occupies the strip just below
+                # the own cell. Brown terrain and the adjacent player's skin
+                # are excluded by its saturated orange colour.
+                roi = (sx, sy+tile, sx+tile, sy+math.ceil(1.2*tile))
+                a = np.asarray(Image.open(path).convert('RGB').crop(roi)).astype(int)
+                orange = (a[:,:,0] >= 160) & (a[:,:,0] >= 1.6*a[:,:,1]) & (a[:,:,1] >= 1.3*a[:,:,2])
+                records.append({'actor': name, 'id': EXPECT[name], 'rank': row['rank'],
+                                'tile': tile, 'state': state, 'crop': rel(crop_path),
+                                'region': list(box), 'ornament_region': list(roi),
+                                'ornament_pixels': int(orange.sum()), 'applied': applied,
+                                'particles_removed': removed, 'snap': standee_aura_state(bridge,name)})
+                Path(path).unlink(missing_ok=True)
+                standee_clear_auras(bridge, name)
+        bridge.lua('mb.clearAround(12);return true')
+    entry['rank_captures'] = records
+    return records
+
+
+def standee_forge_innate_diagnostic(bridge, entry):
+    """DIAGNOSTIC ONLY: retain native Burning Wake, three ON/NATIVE frames."""
+    from PIL import Image
+    entry['placed'] = standee_place_one(bridge, 'standee', 20)
+    captures = []
+    for state in ('on', 'native'):
+        enabled = 'true' if state == 'on' else 'false'
+        bridge.lua("local T=require 'mod.class.CheckerTokens';T.layer_trial=false;"
+                   f"T.standee_trial={enabled};mb.tokens({enabled});mb.setTile(48);"
+                   "game:checkerRefreshVisuals();local a=mb.byName('forge-giant');"
+                   "mb.focus(a.x,a.y);core.display.pauseAnims(false);return true")
+        removed = standee_remove_idle_particles(bridge, 'forge-giant')
+        active = bridge.lua("local a=mb.byName('forge-giant');return "
+                            "{active=a:isTalentActive('T_BURNING_WAKE') and true or false, "
+                            "burning_wake=(a.shader_auras or {}).burning_wake or false}")
+        row = bridge.lua("return mb.row(mb.byName('forge-giant'))")
+        sx, sy = row['screen'][:2]
+        _set_vp(bridge.lua("local m=game.level.map;return {vp={m.display_x,m.display_y,m.viewport.width,m.viewport.height}}"))
+        box = clamp_box((sx-48, sy-96, sx+96, sy+96))
+        paths = []
+        for frame in range(3):
+            shot = bridge.shot(f'forge-innate-{state}-{frame+1}')
+            path = CROPS / f'forge-innate-{state}-48-frame-{frame+1}-crop.png'
+            Image.open(shot).convert('RGB').crop(box).save(path)
+            paths.append(rel(path));Path(shot).unlink(missing_ok=True);time.sleep(.3)
+        captures.append({'actor': 'forge-giant', 'state': state, 'tile': 48,
+                         'diagnostic_only': True, 'active': active, 'region': list(box),
+                         'row': row, 'snap': standee_aura_state(bridge, 'forge-giant'),
+                         'particles_removed': removed, 'frame_crops': paths})
+    entry['innate_diagnostic'] = captures
+    return captures
+
+
+def standee_realaura(bridge, entry, name, tiles=(32, 48, 64), frames=AURA_HEIGHT_FRAMES, up=2, down=1, span=1, lighting_profile="LIGHTING_REFERENCE"):
+    """Measure each REAL shader aura SEPARATELY on one standee.
+
+    One warm aura (T_BODY_OF_FIRE) and one cool/dark aura
+    (EFF_ESSENCE_OF_THE_DEAD); both are native ``awesomeaura`` shader auras.
+    Animations stay RUNNING: for each tile/state the actor is captured without
+    the aura (the baseline), the effect is applied, and 15 height frames ~0.3s
+    apart are captured. The aura count is the pixel DIFFERENCE against the
+    baseline in the WHOLE region above the actor own-cell top, so floor/creature/faction colours
+    cannot pollute it. The per-frame counts show the aura moving and the
+    recorded actor screen shows the creature stays put. Replaces R40's single
+    warm mask and total-pixel count.
+    """
+    from PIL import Image
+    if frames != AURA_HEIGHT_FRAMES:
+        raise ValueError(f'aura height requires {AURA_HEIGHT_FRAMES} frames')
+    q = json.dumps(name, ensure_ascii=False)
+    bridge.lua('core.display.pauseAnims(false);return true')
+    shots = []
+    for effect in ('body_of_fire', 'essence_of_the_dead'):
+        for t in tiles:
+            bridge.lua("local T=require 'mod.class.CheckerTokens';T.layer_trial=false;T.standee_trial=true;mb.tokens(true);"
+                       f"mb.setTile({t});game:checkerRefreshVisuals();local a=mb.byName({q});mb.focus(a.x,a.y);return true")
+            _set_vp(bridge.lua("local m=game.level.map;return {vp={m.display_x,m.display_y,m.viewport.width,m.viewport.height}}"))
+            row = bridge.lua(f"local a=mb.byName({q});return mb.row(a)")
+            sx, sy = row['screen'][0], row['screen'][1]
+            box = clamp_box((sx - span * t, sy - up * t, sx + (span + 1) * t, sy + (down + 1) * t))
+            upper = clamp_box((sx, sy - t, sx + t, sy))
+            own = clamp_box((sx, sy, sx + t, sy + t))
+            case_images = {}
+            case_records = {}
+            for state in ('on', 'native'):
+                if state == 'on':
+                    setup = "local T=require 'mod.class.CheckerTokens';T.layer_trial=false;T.standee_trial=true;mb.tokens(true);"
+                else:
+                    setup = "local T=require 'mod.class.CheckerTokens';T.layer_trial=false;T.standee_trial=false;mb.tokens(false);"
+                bridge.lua(setup + f"mb.setTile({t});game:checkerRefreshVisuals();"
+                           f"local a=mb.byName({q});mb.focus(a.x,a.y);return true")
+                standee_clear_auras(bridge, name)
+                bridge.lua(f"local a=mb.byName({q});mb.focus(a.x,a.y);return true")
+                off_applied = standee_apply_aura(bridge, name, effect, False)
+                shader_removed = standee_isolate_shader_auras(bridge)
+                entry.setdefault('shader_aura_removals', []).append(
+                    {'actor': name, 'effect': effect, 'tile': t, 'state': state, 'entities': shader_removed})
+                removed = standee_remove_idle_particles(bridge, name)
+                removed.update(actor=name, effect=effect, tile=t, state=state)
+                entry.setdefault('particle_removals', []).append(removed)
+                bases, residual, lighting_states = [], [], []
+                standee_lighting_state(bridge, name, set_state=True, profile=lighting_profile)
+                for k in range(3):
+                    lighting_states.append(standee_lighting_state(bridge, name))
+                    bases.append(bridge.shot(f'standee-aura-{effect}-{state}-{t}-base-{k + 1}'))
+                    residual.append(standee_idle_particle_count(bridge))
+                    time.sleep(0.3)
+                import numpy as np
+                baseline = cleaned_baseline_validity(
+                    [np.asarray(Image.open(path).convert('RGB').crop(box)) for path in bases], residual)
+                lighting = standee_floor_measure(bases, lighting_states,
+                    f"standee-aura-{EXPECT.get(name, name.replace(' ', '-'))}-{effect}-{state}-{t}",
+                    profile=lighting_profile)
+                baseline['lighting'] = {k: value for k, value in lighting.items() if k != 'states'}
+                baseline['valid'] = baseline['valid'] and lighting['valid']
+                base = bases[0]
+                applied = standee_apply_aura(bridge, name, effect, True)
+                snap = standee_aura_state(bridge, name)
+                if state == 'on':
+                    quad = next(a for a in snap['aura'] if a.get('mark'))
+                    score = clamp_box(aura_score_region(sx, sy, t, quad))
+                # The three baselines already clear dialogs. Repeating that Lua
+                # round trip per timed sample prevents the 0.3s cadence.
+                height_files, capture_times, endpoint_states = [], [], []
+                for k in range(frames):
+                    if k in (0, frames - 1):
+                        endpoint_states.append(standee_lighting_state(bridge, name))
+                    started = time.monotonic()
+                    height_files.append(bridge.shot(f'standee-aura-{effect}-{state}-{t}-{k + 1}', settle_s=0, clear_dialogs=False))
+                    capture_times.append(started)
+                    time.sleep(max(0, 0.3 - (time.monotonic() - started)))
+                endpoint_lighting = standee_floor_measure(
+                    [height_files[0], height_files[-1]], endpoint_states,
+                    f"standee-aura-{EXPECT.get(name, name.replace(' ', '-'))}-{effect}-{state}-{t}-endpoints",
+                    profile=lighting_profile, samples=2)
+                endpoint_lighting['frame_indices'] = [1, frames]
+                baseline['lighting_frames'] = {k: value for k, value in endpoint_lighting.items() if k != 'states'}
+                baseline['valid'] = baseline['valid'] and endpoint_lighting['valid']
+                files = aura_non_height_frames(height_files)
+                upper_counts = [diff_pixels(base, p, upper) for p in files]
+                whole_counts = [diff_pixels(base, p, score) for p in files]
+                ratio_counts = [diff_pixels(base, p, score) for p in height_files]
+                total_counts = [diff_pixels(base, p, box) for p in files]
+                own_counts = [diff_pixels(base, p, own) for p in files]
+                self_diffs = [diff_pixels(files[i], files[i + 1], upper) for i in range(len(files) - 1)]
+                # R43 creature-still: the overlay creature is static, so what is
+                # left of the consecutive-frame difference after subtracting the
+                # aura's own pixels is movement/noise. The aura mask is the union
+                # of the per-frame |ON - OFF| pixels over the whole body region
+                # (the own cell plus the upper body cells); creature_move counts
+                # only moving pixels outside it. The pass threshold is justified
+                # by the recorded counts, not by a fraction of the area.
+                body = clamp_box((sx, sy - up * t, sx + t, sy + t))
+                aura_pixels = _diff_mask(base, files[0], body)
+                for p in files[1:]:
+                    aura_pixels = aura_pixels | _diff_mask(base, p, body)
+                creature_move = []
+                for i in range(len(files) - 1):
+                    move = _diff_mask(files[i], files[i + 1], body)
+                    creature_move.append(int((move & ~aura_pixels).sum()))
+                creature_frames = [diff_pixels(files[i], files[i + 1], own) for i in range(len(files) - 1)]
+                # R52 approved: height and ratio use all15; band/still use frames1–3.
+                flame_top_rows = [_diff_top_row(base, p, box) for p in height_files]
+                reach = standee_reach(EXPECT.get(name, name.replace(' ', '-')))
+                art_top = (t * (reach['anchor_cells'] - reach['on_reach']) if state == 'on'
+                           else t * (1 + reach['native_top_px'] / 64.0))
+                band_widths = [max(flame_band_widths(_diff_mask(base, p, box))
+                                   [:max(0, math.ceil(art_top))], default=0)
+                               for p in files]
+                screens = []
+                for _ in range(3):
+                    r = bridge.lua(f"local a=mb.byName({q});return mb.row(a)")
+                    screens.append(r['screen'])
+                CROPS.mkdir(parents=True, exist_ok=True)
+                slug = EXPECT.get(name, name.replace(' ', '-'))
+                c = CROPS / f'standee-aura-{slug}-{effect}-{state}-{t}-crop.png'
+                Image.open(files[0]).convert('RGB').crop(box).save(c)
+                frame_crops = []
+                for frame, path in enumerate(height_files, 1):
+                    frame_crop = CROPS / f'standee-aura-{slug}-{effect}-{state}-{t}-frame-{frame}-crop.png'
+                    Image.open(path).convert('RGB').crop(box).save(frame_crop)
+                    frame_crops.append(rel(frame_crop))
+                baseline_crops = []
+                for frame, path in enumerate(bases, 1):
+                    bc = CROPS / f'standee-aura-{slug}-{effect}-{state}-{t}-base-frame-{frame}-crop.png'
+                    Image.open(path).convert('RGB').crop(box).save(bc)
+                    baseline_crops.append(rel(bc))
+                Image.open(base).convert('RGB').crop(box).save(
+                    CROPS / f'standee-aura-{slug}-{effect}-{state}-{t}-base-crop.png')
+                shots.append({'tile': t, 'effect': effect, 'state': state, 'actor': name,
+                              'region': list(box), 'upper': list(upper), 'body': list(body), 'crop': rel(c),
+                              'frame_crops': frame_crops, 'particles_removed': removed,
+                              'height_frames': AURA_HEIGHT_FRAMES, 'non_height_frame_indices': [1, 2, 3],
+                              'capture_times': capture_times,
+                              'intervals_s': [b-a for a,b in zip(capture_times,capture_times[1:])],
+                              'baseline_crops': baseline_crops, 'baseline_validity': baseline,
+                              'lighting': lighting, 'endpoint_lighting': endpoint_lighting,
+                              'lighting_profile': lighting_profile,
+                              'shader_aura_removals': shader_removed,
+                              'upper_frames': upper_counts, 'whole_region': list(score),
+                              'whole_frames': whole_counts, 'whole_ratio_frames': ratio_counts,
+                              'ratio_frame_indices': list(range(1, 16)), 'total_frames': total_counts,
+                              'own_frames': own_counts, 'self_diff': self_diffs,
+                              'creature_frames': creature_frames, 'creature_move': creature_move,
+                              'flame_top_rows': flame_top_rows, 'flame_band_widths': band_widths,
+                              'flame_band_min_px': AURA_FLAME_BAND_MIN_PX,
+                              'aura_pixels': int(aura_pixels.sum()),
+                              'body_area': (body[2] - body[0]) * (body[3] - body[1]),
+                              'creature_area': (own[2] - own[0]) * (own[3] - own[1]),
+                              'actor_screen': screens, 'applied': applied,
+                              'off_applied': off_applied,
+                              'snap': snap})
+                case_images[state] = (bases, height_files)
+                case_records[state] = shots[-1]
+            on_quad = next(a for a in case_records['on']['snap']['aura'] if a.get('mark'))
+            native_quad = next(a for a in case_records['native']['snap']['aura']
+                               if not a.get('base') and not a.get('mark'))
+            screen_quads = [aura_screen_quad(sx, sy, t, q) for q in (on_quad, native_quad)]
+            # Diagnostic only: actor crop is clipped to the map viewport,
+            # excluding the combat log. Legitimate effect output may spill.
+            local_quads = [[l-box[0], top-box[1], r-box[0], b-box[1]]
+                           for l, top, r, b in screen_quads]
+            for state, (bases, files) in case_images.items():
+                outside = [outside_quad_pixels(_diff_mask(bases[0], path, box), local_quads)
+                           for path in files]
+                case_records[state]['screen_quads'] = screen_quads
+                case_records[state]['outside_quad_pixels'] = outside
+                case_records[state]['outside_quad_region'] = list(box)
+                case_records[state]['validity'] = 'VALID' if case_records[state]['baseline_validity']['valid'] else 'INVALID'
+                for path in bases + files:
+                    Path(path).unlink(missing_ok=True)
+            standee_clear_auras(bridge, name)
+    bridge.lua("local T=require 'mod.class.CheckerTokens';T.standee_trial=true;T.layer_trial=false;"
+               "mb.tokens(true);mb.refresh();return true")
+    bridge.lua('mb.setTile(64)')
+    entry.setdefault('aura_captures', []).extend(shots)
+    return shots
+
+
+def standee_sequential(bridge, entry, name, tile=48, pause=0.6, frames=3):
+    """Two real auras added one after another with no refresh/toggle between.
+
+    Native updateModdableTilePrepare only inserts aura add_mos when the display
+    add_mos is nil; a token keeps its add_mos after the first aura, so a second
+    aura (and removing one of two) used to be dropped. Apply two lasting timed
+    auras A and B, let a turn pass between them, then remove A: every stage must
+    be visible.
+    """
+    from PIL import Image
+    q = json.dumps(name, ensure_ascii=False)
+    bridge.lua("local T=require 'mod.class.CheckerTokens';T.layer_trial=false;T.standee_trial=true;mb.tokens(true);"
+               f"mb.setTile({tile});game:checkerRefreshVisuals();local a=mb.byName({q});mb.focus(a.x,a.y);return true")
+    standee_clear_auras(bridge, name)
+    row = bridge.lua(f"local a=mb.byName({q});return mb.row(a)")
+    sx, sy = row['screen'][0], row['screen'][1]
+    box = clamp_box((sx - tile, sy - 2 * tile, sx + 2 * tile, sy + 2 * tile))
+    shots = []
+
+    def stage(tag):
+        state = bridge.lua(
+            "local a=mb.byName(%s);local t=a.replace_display or a;"
+            "local au={};for _,m in ipairs(t.add_mos or {}) do if m._isshaderaura then au[#au+1]=m.image end end;"
+            "local kinds={};for k in pairs(a.shader_auras or {}) do kinds[#kinds+1]=tostring(k) end;table.sort(kinds);"
+            "return {aura=au,kinds=kinds,entries=#au}" % q)
+        files = []
+        for k in range(frames):
+            files.append(bridge.shot(f'standee-seq-{tag}-{k + 1}'))
+            time.sleep(0.3)
+        counts = [diff_pixels(files[i], files[i + 1], box) for i in range(len(files) - 1)]
+        CROPS.mkdir(parents=True, exist_ok=True)
+        c = CROPS / f'standee-seq-{tag}-crop.png'
+        Image.open(files[0]).convert('RGB').crop(box).save(c)
+        frame_crops = []
+        for frame, path in enumerate(files, 1):
+            frame_crop = CROPS / f'standee-seq-{tag}-frame-{frame}-crop.png'
+            Image.open(path).convert('RGB').crop(box).save(frame_crop)
+            frame_crops.append(rel(frame_crop))
+        for p in files:
+            Path(p).unlink(missing_ok=True)
+        shots.append({'stage': tag, 'region': list(box), 'crop': rel(c), 'state': state,
+                      'frame_crops': frame_crops,
+                      'frame_diff': counts})
+
+    def apply_effect(effect, on):
+        want = 1 if on else 0
+        return bridge.lua(
+            f"local a=mb.byName({q});local E=a[{json.dumps(effect)}] or {json.dumps(effect)};"
+            f"if {want}==1 then a:setEffect(E,60,{{}}) elseif a:hasEffect(E) then a:removeEffect(E) end;"
+            "pcall(function() a:updateModdableTile() end);mb.focus(a.x,a.y);"
+            "local t=a.replace_display or a;local au=0;for _,m in ipairs(t.add_mos or {}) do if m._isshaderaura then au=au+1 end end;"
+            "local n=0;for _ in pairs(a.shader_auras or {}) do n=n+1 end;"
+            "return {active=a:hasEffect(E) and true or false,shader_auras=n,aura_entries=au}")
+
+    apply_effect('EFF_ICE_ARMOUR', False)
+    apply_effect('EFF_ESSENCE_OF_THE_DEAD', False)
+    a1 = apply_effect('EFF_ICE_ARMOUR', True)
+    stage('a')
+    # "Wait a turn": let the engine tick without any checker refresh/toggle.
+    bridge.lua("if game.player then game.player:useEnergy() end;return true")
+    time.sleep(pause)
+    a2 = apply_effect('EFF_ESSENCE_OF_THE_DEAD', True)
+    stage('ab')
+    rem = apply_effect('EFF_ICE_ARMOUR', False)
+    stage('b')
+    entry['sequential'] = {'first': a1, 'second': a2, 'after_remove_a': rem, 'shots': shots}
+    apply_effect('EFF_ICE_ARMOUR', False)
+    apply_effect('EFF_ESSENCE_OF_THE_DEAD', False)
+    bridge.lua('mb.setTile(64)')
+    return entry['sequential']
+
+
+def standee_facing(bridge, entry, name, tile=48):
+    """Native facing draws ONE creature and mirrors the creature.
+
+    Animations stay RUNNING: R41 paused them, which made the "mirror" check a
+    frozen-frame tautology. The aura is left OFF for the pixel pass because the
+    creature layer is static: in fixed facing both directions must be identical,
+    and in native facing the left crop horizontally flipped must match the right
+    crop. The base-redraw/aura state is read in a separate pass with the aura
+    applied, so no aura animation pollutes the mirror comparison.
+    """
+    from PIL import Image
+    q = json.dumps(name, ensure_ascii=False)
+    # R48: two facing scenes (heavy bone giant + ogre guard) share this CROPS
+    # directory, so the kept crops carry the actor slug; otherwise the second
+    # scene overwrites the first and the verifier reads one actor twice.
+    slug = EXPECT.get(name, name.replace(' ', '-'))
+    bridge.lua("local T=require 'mod.class.CheckerTokens';T.layer_trial=false;T.standee_trial=true;mb.tokens(true);"
+               f"mb.setTile({tile});game:checkerRefreshVisuals();local a=mb.byName({q});mb.focus(a.x,a.y);"
+               "core.display.pauseAnims(false);return true")
+    standee_clear_auras(bridge, name)
+    entry['facing_shader_aura_removals'] = standee_isolate_shader_auras(bridge)
+    entry['facing_idle_particles_removed'] = standee_remove_idle_particles(bridge, name)
+    standee_lighting_state(bridge, name, set_state=True)
+    row = bridge.lua(f"local a=mb.byName({q});return mb.row(a)")
+    sx, sy = row['screen'][0], row['screen'][1]
+    box = clamp_box((sx - tile, sy - 2 * tile, sx + 2 * tile, sy + 2 * tile))
+    # The standee itself: one cell wide, the two cells above plus the own cell.
+    # This excludes the player token in the cell below, so the comparison is the
+    # creature's mirror and not another actor's pixels.
+    creature = clamp_box((sx, sy - 2 * tile, sx + tile, sy + tile))
+    own = clamp_box((sx, sy, sx + tile, sy + tile))
+    upper = clamp_box((sx, sy - 2 * tile, sx + tile, sy))
+    state_q = (
+        "local a=mb.byName(%s);local s=a._checker_token;local t=a.replace_display or a;"
+        "local aura={};local base_invis=false;"
+        "for _,m in ipairs(t.add_mos or {}) do if m._isshaderaura then "
+        "if m._checker_standee_base then base_invis=(m.image=='invis.png') end;"
+        "aura[#aura+1]={image=m.image,mark=m._checker_standee_aura and true or false,"
+        "base=m._checker_standee_base and true or false} end end;"
+        "local S=require 'mod.class.CheckerTokenStyle';local mm=game.level.map;local cc=false;"
+        "local box=s and s.layer_box;local cap=s and S.standeeHeight(s.id);"
+        "if box and cap then local cell=mm.tile_w;local dd=cell*S.token_diameter;"
+        "local ql,qt,qs=S.standeeQuad(cell,box,box.canvas or 256,cell/2,cell/2,dd,cap);"
+        "local sc=qs/(box.canvas or 256);"
+        "cc={x=mm.display_x+(a.x-mm.mx)*cell+ql+((box.left+box.right)/2)*sc,"
+        "y=mm.display_y+(a.y-mm.my)*cell+qt+((box.top+box.bottom)/2)*sc} end;"
+        "local aq=false;local ab=s and s.layer_aura;if ab and cap then "
+        "local dx,dy,w,h=S.standeeAuraQuad(ab,ab.canvas_w or ab.canvas or 256,ab.canvas_h or ab.canvas or 256,cap);"
+        "if dx then local cell=mm.tile_w;local sx=mm.display_x+(a.x-mm.mx)*cell;local sy=mm.display_y+(a.y-mm.my)*cell;"
+        "aq={sx+dx*cell,sy+dy*cell,sx+(dx+w)*cell,sy+(dy+h)*cell} end end;"
+        "local cell=mm.tile_w;local sx=mm.display_x+(a.x-mm.mx)*cell;local sy=mm.display_y+(a.y-mm.my)*cell;"
+        "local oc={};local function rect(kind,x,y,w,h) oc[#oc+1]={kind=kind,box={x,y,x+w,y+h}} end;"
+        "local g=S.geometry(sx,sy,cell,(s and s.scale) or 1);if S.rankBadge(a.rank) then "
+        "local w,h=S.badgeSize(g.cell);rect('rank-badge',sx+g.cell-w,sy+1,w,h) end;"
+        "local mode=S.nativeBarMode(mm);local b=S.native_life_bar;"
+        "if mode=='small-side' then local v=mm.actor_player;local friend=v and v:reactionToward(a);"
+        "local x=friend and friend<0 and b.small_side.enemy_sx or b.small_side.sx;local q=b.small_side;"
+        "rect('life-bar',sx+cell*x,sy+cell*q.sy,cell*(q.dx-q.sx),cell*(q.dy-q.sy)) "
+        "elseif mode=='small-bottom' then local q=b.small_bottom;"
+        "rect('life-bar',sx+cell*q.sx,sy+cell*q.sy,cell*(q.dx-q.sx),cell*(q.dy-q.sy)) "
+        "elseif mode=='big-side' then rect('life-bar',sx+b.big.inset,sy+b.big.inset,cell*b.big.side_dw,cell-2*b.big.inset) "
+        "elseif mode=='big-bottom' then rect('life-bar',sx+b.big.inset,sy+cell-cell*b.big.bottom_dh,cell-2*b.big.inset,cell*b.big.bottom_dh) end;"
+        "return {body_flip=(s and s.body_flip) and true or false,standee=(s and s.standee) and true or false,"
+        "overlay_active=(s and s.overlay_active) and true or false,_flipx=a._flipx and true or false,"
+        "creature_bbox_centre=cc,aura_quad=aq,mirror_occluder_boxes=oc,"
+        "base_invis=base_invis,aura=aura}") % q
+
+    def set_direction(mode, flip):
+        bridge.lua(f"config.settings.tome.checker_token_facing={json.dumps(mode)};"
+                   f"local a=mb.byName({q});if a.MOflipX then a:MOflipX({'true' if flip else 'false'}) end;"
+                   "game:checkerRefreshVisuals();mb.focus(a.x,a.y);return true")
+
+    shots = []
+    for mode in ('fixed', 'native'):
+        for direction, flip in (('left', True), ('right', False)):
+            set_direction(mode, flip)
+            state = bridge.lua(state_q)
+            files, light_states = [], []
+            standee_lighting_state(bridge, name, set_state=True)
+            for k in range(3):
+                light_states.append(standee_lighting_state(bridge, name))
+                files.append(bridge.shot(f'standee-facing-{mode}-{direction}-{k + 1}'))
+                time.sleep(0.25)
+            CROPS.mkdir(parents=True, exist_ok=True)
+            c = CROPS / f'standee-facing-{slug}-{mode}-{direction}-crop.png'
+            Image.open(files[1]).convert('RGB').crop(box).save(c)
+            light = standee_floor_measure(files, light_states, f'standee-facing-{slug}-{mode}-{direction}')
+            for p in files:
+                Path(p).unlink(missing_ok=True)
+            shots.append({'mode': mode, 'direction': direction, 'region': list(box),
+                          'creature': list(creature), 'own': list(own), 'upper': list(upper),
+                          'crop': rel(c), 'state': state, 'lighting': light})
+    # R46 aura mirror pass: animations RUN, so the same-direction inter-frame
+    # IoU measures the real scene noise (creature + flame motion) instead of a
+    # paused-fixture 0.0. The aura-difference mask is scored only on the
+    # asymmetric region about the creature's own body axis, and the gain must
+    # beat the same-direction inter-frame noise baseline. R45 paused the
+    # animations, which hid the noise.
+    from PIL import Image
+    # R45: THREE aura frames per direction. The same-direction inter-frame IoU
+    # is the noise baseline, and the mirror gain is scored only on the
+    # asymmetric region of the aura about the creature's own body axis.
+    facing_aura = []
+    for direction, flip in (('left', True), ('right', False)):
+        set_direction('native', flip)
+        standee_clear_auras(bridge, name)
+        standee_lighting_state(bridge, name, set_state=True)
+        off_states, off_paths = [], []
+        for k in range(3):
+            off_states.append(standee_lighting_state(bridge, name))
+            off_paths.append(bridge.shot(f'standee-facing-aura-{slug}-{direction}-off-{k}'))
+            time.sleep(.3)
+        light = standee_floor_measure(off_paths, off_states, f'standee-facing-{slug}-aura-{direction}')
+        p_off = off_paths[0]
+        c_off = CROPS / f'standee-facing-aura-{slug}-{direction}-off-crop.png'
+        Image.open(p_off).convert('RGB').crop(box).save(c_off)
+        for path in off_paths:
+            Path(path).unlink(missing_ok=True)
+        standee_apply_aura(bridge, name, 'body_of_fire', True)
+        ons = []
+        for k in range(3):
+            p_on = bridge.shot(f'standee-facing-aura-{slug}-{direction}-on-{k + 1}')
+            c_on = CROPS / f'standee-facing-aura-{slug}-{direction}-on-{k + 1}-crop.png'
+            Image.open(p_on).convert('RGB').crop(box).save(c_on)
+            Path(p_on).unlink(missing_ok=True)
+            ons.append(rel(c_on))
+            time.sleep(0.3)
+        facing_aura.append({'direction': direction, 'region': list(box), 'own': list(own),
+                            'upper': list(upper), 'off': rel(c_off), 'ons': ons,
+                            'state': bridge.lua(state_q), 'lighting': light})
+    standee_clear_auras(bridge, name)
+    entry['facing_aura'] = facing_aura
+    # Aura state pass: the native base-redraw copy must be invis and the sdm
+    # aura must carry the standee mark. No pixel comparison here.
+    standee_apply_aura(bridge, name, 'body_of_fire', True)
+    aura_state = {}
+    for mode in ('fixed', 'native'):
+        for direction, flip in (('left', True), ('right', False)):
+            set_direction(mode, flip)
+            aura_state['%s-%s' % (mode, direction)] = bridge.lua(state_q)
+    standee_clear_auras(bridge, name)
+    bridge.lua("config.settings.tome.checker_token_facing='fixed';game:checkerRefreshVisuals();mb.setTile(64);return true")
+    entry['facing'] = shots
+    entry['facing_aura_state'] = aura_state
+    return shots
+
+
+def standee_wall_cell(bridge):
+    return bridge.lua(
+        "local p=game.player;local Map=require 'engine.Map';local m=game.level.map;local best,bd;"
+        "for x=p.x-9,p.x+9 do for y=p.y-7,p.y+7 do if mb.freeAt(x,y) and not mb.freeAt(x,y-1) then "
+        "local wall=m:checkEntity(x,y-1,Map.TERRAIN,'block_move',p) and true or false;"
+        "local sight=m:checkEntity(x,y-1,Map.TERRAIN,'block_sight',p) and true or false;"
+        "local t=m(x,y-1,Map.TERRAIN);local door=t and (t.door or t.change_level or t.define_as=='DOOR') and true or false;"
+        "local d=(x-p.x)^2+(y-p.y)^2;if (wall and sight) or door then if not bd or d<bd then best,bd={x=x,y=y,terrain=t and (t.name or t.define_as or tostring(t.image)) or false,image=t and t.image or false,door=door,wall=wall,sight=sight},d end end end end end;return best")
+
+
+def standee_scroll_top(bridge, name):
+    # R40: force the actor's own row to be the first visible map row via the
+    # fixture helper (move to the top free row, then bounded setScroll).
+    return bridge.lua(f"return mb.forceTop({json.dumps(name, ensure_ascii=False)})")
+
+
 def run_scene(scene, bridge):
     label, zone, level, opts, steps = scene
     record = {'label': label, 'zone': zone, 'level': level, 'opts': opts, 'steps': []}
     bridge.lua("assert(config.settings.cheat and config.settings.disable_all_connectivity and not profile.auth);"
                "assert(core.shader.active(4));ms.setup()")
-    names = '{' + ','.join(f'[{json.dumps(n, ensure_ascii=False)}]=true' for n in A + B + C + D + E + F + G + H + NATIVE + NATIVE_D + NATIVE_F + NATIVE_H + I + NATIVE_I + OOZES_SHIPPED + J + NATIVE_J + K + NATIVE_K + ['Grand Corruptor'] + L + NATIVE_L + M + NATIVE_M + N + NATIVE_N + O + NATIVE_O + P + NATIVE_P + Q + NATIVE_Q + R + NATIVE_R + S + NATIVE_S + T + NATIVE_T + BU + NATIVE_BU + BV + NATIVE_BV + BW + NATIVE_BW + BX + NATIVE_BX + BY + NATIVE_BY + BZ + NATIVE_BZ + BA + NATIVE_BA + BB + BC + NATIVE_BC + BD + BE + BF + ['dread', 'swarming horror', 'minotaur', 'ritch flamespitter', 'giant spider'] + ['assassin', 'bandit', 'thief', 'rogue', 'fire drake'] + U + ['ghoul', 'gigantic sandworm tunneler'] + UB2 + [UB2_ABOM[0], UB2_PALADIN[0]]) + '}'
+    names = '{' + ','.join(f'[{json.dumps(n, ensure_ascii=False)}]=true' for n in A + B + C + D + E + F + G + H + NATIVE + NATIVE_D + NATIVE_F + NATIVE_H + I + NATIVE_I + OOZES_SHIPPED + J + NATIVE_J + K + NATIVE_K + ['Grand Corruptor'] + L + NATIVE_L + M + NATIVE_M + N + NATIVE_N + O + NATIVE_O + P + NATIVE_P + Q + NATIVE_Q + R + NATIVE_R + S + NATIVE_S + T + NATIVE_T + BU + NATIVE_BU + BV + NATIVE_BV + BW + NATIVE_BW + BX + NATIVE_BX + BY + NATIVE_BY + BZ + NATIVE_BZ + BA + NATIVE_BA + BB + BC + NATIVE_BC + BD + BE + BF + ['dread', 'swarming horror', 'minotaur', 'ritch flamespitter', 'giant spider'] + ['assassin', 'bandit', 'thief', 'rogue', 'fire drake'] + U + ['ghoul', 'gigantic sandworm tunneler'] + UB2 + [UB2_ABOM[0], UB2_PALADIN[0]] + TA2) + '}'
     record['enter'] = bridge.lua(f"return ms.enter({json.dumps(zone, ensure_ascii=False)},{level},{lua_opts(opts)})")
     record['census_targets'] = bridge.lua(f"return mb.find({names})")
     census = bridge.lua('return ms.actorCensus()')
@@ -2446,7 +4210,7 @@ def run_scene(scene, bridge):
                 continue
             step = ('natural_or_place', nm, step[2])
             kind = step[0]
-        if kind in ('toggle', 'aura', 'sustain', 'fade', 'wound', 'hide', 'stealth', 'urhrok', 'forcesus', 'thoughtform', 'friendly', 'neutral'):
+        if kind in ('toggle', 'aura', 'sustain', 'fade', 'wound', 'hide', 'stealth', 'urhrok', 'forcesus', 'thoughtform', 'friendly', 'neutral', 'ta2_aura'):
             # State checks need the subject inside the hero's current FOV.
             q = json.dumps(step[1], ensure_ascii=False)
             try:
@@ -3610,7 +5374,293 @@ def run_scene(scene, bridge):
                     c = crop(p, (x, y, tt), f'{prefix}-lineup-placed-{label}-{t}-crop', 4)
                     entry['shots'].append({'tile': t, 'file': rel(p), 'sha256': digest(p), 'crop': rel(c)})
                 bridge.lua('mb.setTile(64)')
-            elif kind == 'ta1_meta':
+            elif kind == 'layer_grid':
+                # 1.25x layered small-tile trial: place every trial body, then
+                # capture the identical frame with the single trial flag off
+                # and on at all three sizes. 64/96 must be pixel-identical; 48
+                # must differ. Only region crops are kept (no full screenshots).
+                from PIL import Image, ImageChops
+                prefix = step[1] if len(step) > 1 else 'layer'
+                entry['cleared'] = bridge.lua("return {n=mb.clearAround(12)}")
+                rows = []
+                for (name, src, das, tid), (dx, dy) in zip(LAYER_CASES, LAYER_POS):
+                    s = json.dumps(src) if src else 'nil'
+                    d = json.dumps(das) if das else 'nil'
+                    rows.append(bridge.lua(
+                        f"return mb.place({json.dumps(name, ensure_ascii=False)},{s},{dx},{dy},{d})"))
+                entry['rows'] = rows
+                entry['revealed'] = bridge.lua(
+                    "local out={};for _,a in pairs(game.level.entities) do if a~=game.player and a._checker_live_placed and a:isTalentActive('T_STEALTH') then "
+                    "pcall(function() a:forceUseTalent('T_STEALTH',{ignore_energy=true,ignore_cd=true,no_talent_fail=true,silent=true}) end);out[#out+1]=a.name end end;"
+                    "pcall(function() game.player:resetCanSeeCache() end);mb.refresh();return out")
+                entry['special'] = bridge.lua(
+                    "local w=mb.byName('orc warrior');if w then w.life=math.max(1,math.floor(w.max_life*0.5)) end;"
+                    "local s=mb.byName('skeleton warrior');if s then s.damage_shield=40;s.damage_shield_absorb=10;s.damage_shield_absorb_max=40 end;"
+                    "local b=mb.byName('Ungolë');if b then b.rank=4 end;"
+                    "mb.refresh();return {wounded=w and w.name or false,shield=s and s.name or false,boss=b and b.name or false}")
+                # Drop idle particles so the only difference between the off and
+                # on captures is the token draw path.
+                entry['particles_removed'] = bridge.lua(
+                    "local n=0;for _,a in pairs(game.level.entities) do if a.__particles then local rem={};"
+                    "for e in pairs(a.__particles) do rem[#rem+1]=e end;"
+                    "for _,e in ipairs(rem) do local ok=pcall(function() a:removeParticles(e) end);if ok then n=n+1 end end end end;"
+                    "local function strip(t) if not t then return end for i=#(t.add_mos or {}),1,-1 do local m=t.add_mos[i];if type(m)=='table' and m._isshaderaura then table.remove(t.add_mos,i) end end end;"
+                    "for _,a in pairs(game.level.entities) do a.shader=nil;a.shader_args=nil;a.shader_auras=nil;strip(a);strip(a.replace_display) end;"
+                    "mb.refresh();return n")
+                entry['shots'] = []
+                # Freeze idle animation so a flag toggle is the only variable
+                # between the off/on frames (particles otherwise drift).
+                bridge.lua("core.display.pauseAnims(true);return true")
+                for t in (48, 64, 96):
+                    bridge.lua("local T=require 'mod.class.CheckerTokens';T.layer_trial=false;"
+                               f"mb.setTile({t});game:checkerRefreshVisuals();mb.focus(game.player.x,game.player.y);return true")
+                    p_off = bridge.shot(f'{prefix}-off-{label}-{t}')
+                    bridge.lua("local T=require 'mod.class.CheckerTokens';T.layer_trial=true;"
+                               f"mb.setTile({t});game:checkerRefreshVisuals();mb.focus(game.player.x,game.player.y);return true")
+                    p_on = bridge.shot(f'{prefix}-on-{label}-{t}')
+                    view = bridge.lua("local o={};for _,r in ipairs(mb.find()) do if r.placed then o[#o+1]=r.screen end end;"
+                                      "return {rows=o,vp={math.floor(game.level.map.display_x),math.floor(game.level.map.display_y),game.level.map.viewport.w,game.level.map.viewport.h}}")
+                    xs = [r[0] for r in view['rows']] or [0]
+                    ys = [r[1] for r in view['rows']] or [0]
+                    box = clamp_box((min(xs) - t, min(ys) - t, max(xs) + 2 * t, max(ys) + 2 * t))
+                    CROPS.mkdir(parents=True, exist_ok=True)
+                    a = Image.open(p_off).convert('RGB').crop(box)
+                    b = Image.open(p_on).convert('RGB').crop(box)
+                    c_off = CROPS / f'{prefix}-off-{label}-{t}-crop.png'
+                    c_on = CROPS / f'{prefix}-on-{label}-{t}-crop.png'
+                    a.save(c_off); b.save(c_on)
+                    diff = ImageChops.difference(a, b)
+                    differing = diff.getbbox() is not None
+                    changed = sum(1 for px in diff.getdata() if px != (0, 0, 0))
+                    entry['shots'].append({'tile': t, 'off': rel(c_off), 'on': rel(c_on),
+                                           'region': list(box), 'changed_pixels': changed, 'changed': differing})
+                    # Keep only the crops in the evidence tree.
+                    Path(p_off).unlink(missing_ok=True)
+                    Path(p_on).unlink(missing_ok=True)
+                entry['unchanged_64_96'] = all(not s['changed'] for s in entry['shots'] if s['tile'] in (64, 96))
+                entry['changed_48'] = next(s['changed'] for s in entry['shots'] if s['tile'] == 48)
+                entry['tall'] = [r['name'] for r in entry['rows'] if r['name'] in ('pyromancer', 'yeek mindslayer')]
+                bridge.lua("core.display.pauseAnims(false);return true")
+            elif kind == 'standee_grid':
+                # R50: retain NPC invisibility/stealth and use native player
+                # perception for placed actors (Corrupted Daelach invisible=40).
+                entry['perception'] = bridge.lua(
+                    "game.player.see_invisible=1000;game.player.see_stealth=1000;"
+                    "game.player:resetCanSeeCache();mb.refresh();"
+                    "return {see_invisible=game.player.see_invisible,see_stealth=game.player.see_stealth}")
+                # R39 native-tall standee redesign. Region crops only; no full
+                # frames are kept. Tile sizes 16/32/48/64 plus the native
+                # tokens-off frame.
+                mode = step[1]
+                entry['mode'] = mode
+                # The four shipped standees; kra-tor is placed in the crowd as a
+                # FLAT token (body-only cap 1.0) and is asserted flat, not a
+                # standee. R47 batch-1 ids get their own dedicated scene so the
+                # R43 regression set stays unchanged.
+                stand_names = [n for n, _, _, tid in R39_STANDS if tid in R39_ORIGINAL_IDS]
+                sizes = (16, 32, 48, 64)
+                if mode in ('crowd', 'crowd-zh'):
+                    entry['crowd'] = standee_place_crowd(bridge, STANDEE_CROWD)
+                    if not entry['crowd']:
+                        entry['failed'] = 'no 5x4 free block'
+                    else:
+                        entry['special'] = bridge.lua(
+                            "game.always_target=true;"
+                            "local function setf(n,f) local a=mb.byName(n);if a then a.faction=f end end;"
+                            "setf('Ninandra, the Great Weaver',game.player.faction);"
+                            "setf(\"Kra'Tor the Gluttonous\",'neutral');"
+                            "local g=mb.byName('snow giant');if g then g.life=math.max(1,math.floor(g.max_life*0.5));g.rank=4;"
+                            "g.damage_shield=40;g.damage_shield_absorb=10;g.damage_shield_absorb_max=40 end;"
+                            "mb.refresh();local rows={};for _,n in ipairs({'Ninandra, the Great Weaver',\"Kra'Tor the Gluttonous\",'snow giant','Phoenix','ogre guard'}) do "
+                            "local a=mb.byName(n);if a then local st=a._checker_token;rows[#rows+1]={name=n,token=st and st.id or false,standee=st and st.standee or false,"
+                            "faction=a.faction or false,reaction=game.player:reactionToward(a),rank=a.rank or false} end end;return {rows=rows}")
+                        capture_sizes = (32,) if mode == 'crowd-zh' else sizes
+                        standee_off_on(bridge, entry, mode, capture_sizes, 'standee-' + mode,
+                                       native=True, up=2, down=1, span=1, freeze=True)
+                        if mode == 'crowd':
+                            for tile in (32, 64):
+                                standee_per_actor(bridge, entry, 'standee-crowd-%d' % tile, stand_names, tile=tile)
+                elif mode in ('batch1', 'batch2', 'batch3', 'batch4', 'briagh'):
+                    # R47 batch 1: spawn each of the 17 new ids and capture a
+                    # per-actor OFF/ON/NATIVE 3x4 crop at 32/48/64, then a
+                    # crowd of several new standees adjacent at 48px.
+                    batch_ids = {'batch1': R39_BATCH1_IDS, 'batch2': R39_BATCH2_IDS, 'batch3': R39_BATCH3_IDS, 'batch4': R39_BATCH4_IDS, 'briagh': R53_BRIAGH_IDS}[mode]
+                    batch_crowd = {'batch1': STANDEE_BATCH1_CROWD, 'batch2': STANDEE_BATCH2_CROWD, 'batch3': STANDEE_BATCH3_CROWD, 'batch4': STANDEE_BATCH4_CROWD, 'briagh': STANDEE_BRIAGH_CROWD}[mode]
+                    placed = []
+                    for n, src, das, tid in R39_STANDS:
+                        if tid not in batch_ids:
+                            continue
+                        bridge.lua('mb.clearAround(10);return true')
+                        row = bridge.lua(
+                            'return mb.place(%s,%s,0,-1,%s)' % (
+                                json.dumps(n, ensure_ascii=False),
+                                json.dumps(src) if src else 'nil',
+                                json.dumps(das) if das else 'nil'))
+                        placed.append({'name': n, 'id': tid, 'row': row})
+                        for t in (32, 48, 64):
+                            standee_per_actor(bridge, entry, 'standee-%s-%s-%d' % (mode, tid, t),
+                                              [n], tile=t)
+                    entry['placed'] = placed
+                    bridge.lua('mb.clearAround(12);return true')
+                    entry['crowd'] = standee_place_crowd(bridge, batch_crowd)
+                    if not entry['crowd']:
+                        entry['failed'] = 'no 5x4 free block'
+                    else:
+                        standee_off_on(bridge, entry, mode, (48,), 'standee-' + mode + '-crowd',
+                                       native=True, up=2, down=1, span=2, freeze=True)
+                    entry['done'] = True
+                elif mode == 'open':
+                    entry['placed'] = standee_place_one(bridge, 'standee', 0)
+                    standee_open_scene(bridge, entry, sizes)
+                elif mode == 'repaint':
+                    entry['layout'] = standee_place_crowd(bridge, STANDEE_REPAINT)
+                    if not entry['layout']:
+                        entry['failed'] = 'no free block'
+                    else:
+                        entry['special'] = bridge.lua(
+                            "game.always_target=true;mb.focus(game.player.x,game.player.y);"
+                            "local rows={};for _,n in ipairs({'ogre guard','snow giant','Ninandra, the Great Weaver','giant spider'}) do "
+                            "local a=mb.byName(n);if a then local st=a._checker_token;rows[#rows+1]={name=n,token=st and st.id or false,standee=st and st.standee or false,"
+                            "image=a.replace_display and a.replace_display.image or a.image} end end;return {rows=rows}")
+                        standee_off_on(bridge, entry, 'repaint', (32,), 'standee-repaint',
+                                       native=True, up=2, down=1, span=2, freeze=True)
+                elif mode == 'rank':
+                    standee_rank_check(bridge, entry)
+                elif mode == 'forge-innate':
+                    standee_forge_innate_diagnostic(bridge, entry)
+                elif mode in ('aura', 'aura-forge', 'aura-dim'):
+                    # R48 item C: measure the animated aura on a TALL id and two
+                    # SQUARE ids. heavy bone giant (cap 1.75) exercises the
+                    # 128x256 TALL texture path with body_top == alpha top;
+                    # snow giant (SQUARE) and ogre-guard (SQUARE, body_top 38 !=
+                    # alpha top 18) cover the 256x256 branch and the body-only
+                    # quad. Each actor is placed alone (clearAround between) so
+                    # a neighbour cannot pollute the measured cell.
+                    entry['placed'] = []
+                    # Two REAL native shader auras measured SEPARATELY and
+                    # animated: warm T_BODY_OF_FIRE and dark
+                    # EFF_ESSENCE_OF_THE_DEAD. Also attach a native particle so
+                    # the addParticles positioning is recorded.
+                    actors = ([('Bill the Stone Troll', 54), ('snow giant', 1)] if mode == 'aura-dim' else
+                              [('forge-giant', 20)] if mode == 'aura-forge' else R39_AURA_ACTORS)
+                    entry['informative_only'] = mode == 'aura-dim'
+                    for aname, aidx in actors:
+                        entry['placed'].append(standee_place_one(bridge, 'standee', aidx))
+                        standee_realaura(bridge, entry, aname, tiles=(32, 48, 64), frames=AURA_HEIGHT_FRAMES, up=2, down=1, span=1,
+                                         lighting_profile="DIM_LIGHTING_REFERENCE" if mode == "aura-dim" else "LIGHTING_REFERENCE")
+                        entry.setdefault('clear_around_removals', []).append(standee_clear_around_logged(bridge, 12))
+                    # The loop's final clearAround removed the last actor; put
+                    # the first one back for the particle / aura_after snapshot
+                    # (otherwise mb.byName(name) is nil and the step errors).
+                    entry['placed'].append(standee_place_one(bridge, 'standee', actors[0][1]))
+                    name = actors[0][0]
+                    q = json.dumps(name, ensure_ascii=False)
+                    entry['aura_particles'] = bridge.lua(
+                        ("local a=mb.byName(%s);local P=require 'engine.Particles';"
+                         "local okp,err=pcall(function() a:addParticles(P.new('flame',1,{})) end);"
+                         "pcall(function() a:updateModdableTile() end);mb.focus(a.x,a.y);"
+                         "local pc=0;for _ in pairs(a.__particles or {}) do pc=pc+1 end;"
+                         "return {particle_ok=okp and true or false,particle_err=tostring(err),particles=pc}") % q)
+                    entry['aura_after'] = bridge.lua(
+                        f"local a=mb.byName({q});local t=a.replace_display or a;local au=0;for _,m in ipairs(t.add_mos or {{}}) do if m._isshaderaura then au=au+1 end end;"
+                        "local n=0;for _ in pairs(a.shader_auras or {}) do n=n+1 end;"
+                        "return {standee=(a._checker_token and a._checker_token.standee) and true or false,shader_auras=n,aura_entries=au}")
+                elif mode == 'sequential':
+                    # Two real auras added one after another with no
+                    # refresh/toggle in between, then one removed.
+                    name = 'snow giant'
+                    entry['placed'] = standee_place_one(bridge, 'standee', 1)
+                    standee_sequential(bridge, entry, name, tile=48)
+                elif mode in ('facing', 'facing-ogre', 'facing-new-tall', 'facing-heavy-bone', 'facing-daelach', 'facing-bill', 'facing-batch4'):
+                    # Native facing: one creature, creature and aura mirrored.
+                    # R47 used the TALL new id (heavy bone giant); R48 restores
+                    # the R46 ogre-guard scene beside it. Both score the mirror
+                    # gain on the real aura asymmetric region with animations
+                    # running, so the conditional moment gate has two actors.
+                    if mode == 'facing-batch4':
+                        rows = [static_aura_asymmetry(tid) for tid in R39_BATCH4_IDS]
+                        chosen = select_facing_subject(rows)
+                        entry['facing_subject_selection'] = {'candidates': rows, 'selected': chosen, 'minimum': 0.30}
+                        idx = next(i for i, row in enumerate(R39_STANDS) if row[3] == chosen['id'])
+                        name = R39_STANDS[idx][0]
+                    elif mode == 'facing-bill':
+                        name, idx = 'Bill the Stone Troll', 54
+                    elif mode == 'facing-new-tall':
+                        name, idx = 'Norgos, the Guardian', 29
+                    elif mode == 'facing-ogre':
+                        name, idx = 'ogre guard', 0
+                    elif mode == 'facing-heavy-bone':
+                        name, idx = 'heavy bone giant', 5
+                    elif mode == 'facing-daelach':
+                        name, idx = 'Corrupted Daelach', 39
+                    else:
+                        name, idx = R39_AURA_ACTOR[0], R39_AURA_ACTOR[1]
+                    entry['placed'] = standee_place_one(bridge, 'standee', idx)
+                    standee_facing(bridge, entry, name, tile=48)
+                elif mode == 'top':
+                    entry['placed'] = standee_place_one(bridge, 'standee', 1)
+                    # R41: the top-edge geometry must be measured at the SAME
+                    # 48px tile as the top-48 sheet. R40 measured it at the
+                    # 64px launch tile while the sheet was 48px.
+                    bridge.lua("local T=require 'mod.class.CheckerTokens';T.layer_trial=false;T.standee_trial=true;"
+                               "mb.setTile(48);game:checkerRefreshVisuals();return true")
+                    # R40: move the actor to the top free visible row and use a
+                    # bounded setScroll, so its own row really is the first
+                    # visible map row (R39's m.my=a.y was undone by bounding).
+                    entry['top'] = standee_scroll_top(bridge, 'snow giant')
+                    entry['top_geometry'] = bridge.lua(
+                        "local S=require 'mod.class.CheckerTokenStyle';local a=mb.byName('snow giant');"
+                        "local m=game.level.map;local s=a._checker_token;local cap=S.standeeHeight(s and s.id or nil);"
+                        "local box=s and s.layer_box;local quad=nil;"
+                        "if cap and box then local cell=m.tile_w;local dd=cell*S.token_diameter;"
+                        "local left,top,size=S.standeeQuad(cell,box,box.canvas or 128,cell/2,cell/2,dd,cap);"
+                        "quad={left=left,top=top,size=size,screen_left=m.display_x+left,screen_top=m.display_y+top,frame_bottom=m.display_y+top+size} end;"
+                        "return {viewport_top=m.display_y,viewport_bottom=m.display_y+m.viewport.mheight*m.tile_h,quad=quad,same_row=(m.my==a.y) and true or false,my=m.my,ay=a.y,tile=m.tile_w,map={w=m.w,h=m.h}}")
+                    focus = "mb.forceTop('snow giant')"
+                    standee_off_on(bridge, entry, 'top', (48,), 'standee-top', focus=focus,
+                                   native=True, up=2, down=1, span=2)
+                elif mode == 'wide':
+                    # A wide native-tall id with no shipped standee layer (Corrupted Sand Wyrm,
+                    # derived cap 1.703125) must stay a flat token: only
+                    # M.standee_ids get a standee, so the width path can never
+                    # turn an unknown native-tall actor into a standee.
+                    name = 'Corrupted Sand Wyrm'
+                    q = json.dumps(name, ensure_ascii=False)
+                    entry['placed'] = bridge.lua(
+                        f"return mb.place({q},'/data/zones/sandworm-lair/npcs.lua',2,0,'CORRUPTED_SAND_WYRM')")
+                    entry['wide_state'] = bridge.lua(
+                        f"local a=mb.byName({q});local s=a._checker_token;"
+                        "return {identify=(require 'mod.class.CheckerTokens'.explain(a,nil,false)) or false,"
+                        "rendered_token=(s and s.id) or false,standee=(s and s.standee) and true or false,"
+                        "layered=(s and s.layered) and true or false,has_box=(s and s.layer_box~=nil) and true or false,"
+                        "height=require('mod.class.CheckerTokenStyle').standeeHeight(s and s.id or nil) or false}")
+                    standee_off_on(bridge, entry, 'wide', (48,), 'standee-wide',
+                                   native=True, up=2, down=1, span=2)
+                elif mode == 'flat':
+                    from PIL import Image
+                    entry['layout'] = standee_place_crowd(bridge, STANDEE_FLAT)
+                    if not entry['layout']:
+                        entry['failed'] = 'no free block'
+                    else:
+                        bridge.lua("game.always_target=true;local m=game.level.map;m.view_faction='players';"
+                                   "config.settings.tome.small_frame_side=nil;mb.refresh();return true")
+                        for tile in (16,):
+                            bridge.lua("local T=require 'mod.class.CheckerTokens';T.layer_trial=false;T.standee_trial=true;"
+                                       f"mb.setTile({tile});game:checkerRefreshVisuals();game.always_target=true;"
+                                       "game.level.map.view_faction='players';config.settings.tome.small_frame_side=nil;"
+                                       "mb.focus(game.player.x,game.player.y);return true")
+                            state = standee_state(bridge)
+                            p_flat = bridge.shot('standee-flat-%d' % tile)
+                            flat_box = standee_region(bridge, tile, up=2, down=1, span=3)
+                            CROPS.mkdir(parents=True, exist_ok=True)
+                            c_flat = CROPS / ('standee-flat-%d-crop.png' % tile)
+                            Image.open(p_flat).convert('RGB').crop(flat_box).save(c_flat)
+                            entry.setdefault('captures', []).append({'tile': tile, 'region': list(flat_box),
+                                                                     'crop': rel(c_flat), 'native': False,
+                                                                     'state': state})
+                            Path(p_flat).unlink(missing_ok=True)
+                entry['done'] = True
+            elif kind in ('ta1_meta', 'ta2_meta'):
                 # Tall-body metadata: the installed token replacement must be a
                 # single body (no non-aura add_mos), the actor shader nil and the
                 # identity exact. Machine record only; the draw-once judgement is
@@ -3670,6 +5720,88 @@ def run_scene(scene, bridge):
                 view['crop_box'] = box
                 entry['view'] = view
                 entry['shots'] = [{'file': rel(ps), 'sha256': digest(ps), 'crop': rel(cp)}]
+            elif kind == 'ta2_slinger':
+                # Derth's resident (no define_as) wears the token; the Arena copy
+                # (define_as="SLINGER") fails the exact bind and stays native.
+                bridge.lua("return {n=mb.clearAround(8)}")
+                entry['derth'] = bridge.lua("return mb.place('halfling slinger','/data/zones/town-derth/npcs.lua',-2,1)")
+                entry['arena'] = bridge.lua("return mb.place('halfling slinger','/data/zones/arena-unlock/npcs.lua',2,1,'SLINGER')")
+                ta2_group_shots(bridge, label, 'ta2-slinger', entry)
+            elif kind == 'ta2_lumberjack':
+                # town-lumberjack-village/npcs.lua:70 writes `defined_as` (a typo),
+                # so the runtime actor has no define_as and matches on name+body.
+                entry['row'] = bridge.lua("local a=mb.byName('lumberjack');assert(a,'no lumberjack');return mb.row(a)")
+            elif kind == 'ta2_wayist':
+                entry['cleared'] = bridge.lua("return {n=mb.clearAround(8)}")
+                entry['reposition'] = ta2_reposition(bridge)
+                entry['use'] = bridge.lua(TA2_WAYIST_LUA)
+                ta2_group_shots(bridge, label, 'ta2-wayist', entry)
+            elif kind == 'ta2_anomaly':
+                entry['cleared'] = bridge.lua("return {n=mb.clearAround(8)}")
+                entry['reposition'] = ta2_reposition(bridge)
+                entry['use'] = bridge.lua(TA2_ANOMALY_LUA)
+                ta2_group_shots(bridge, label, 'ta2-anomaly', entry, margin=3)
+            elif kind == 'ta2_archers':
+                # Same native PNG; each keeps its own identity (name/subtype differ).
+                bridge.lua("return {n=mb.clearAround(8)}")
+                entry['archer'] = bridge.lua("return mb.place('elven archer','/data/general/npcs/sunwall-town.lua',-2,1)")
+                entry['companion'] = bridge.lua("return mb.place('Companion Archer','/data/zones/keepsake-meadow/npcs.lua',2,1,'BERETHH_ARCHER')")
+                ta2_group_shots(bridge, label, 'ta2-archers', entry)
+            elif kind == 'ta2_aura':
+                # Sustained aura on a token actor: the token must stay, the actor
+                # shader must stay nil and the native aura (shader aura and/or
+                # particle) must remain around the token.
+                name, tid = step[1], step[2]
+                q = json.dumps(name, ensure_ascii=False)
+                FS = ("local a=mb.byName(%s);pcall(function() a:updateModdableTile() end);mb.refresh();mb.focus(a.x,a.y);local r=mb.row(a);"
+                      "local n=0;for _ in pairs(a.shader_auras or {}) do n=n+1 end;"
+                      "local t=a.replace_display or a;local L={};for _,m in ipairs(t.add_mos or {}) do L[#L+1]=(m._isshaderaura and 'AURA:' or '')..tostring(m.image)..'/'..tostring(m.shader or '') end;"
+                      "local pc=0;for _ in pairs(a.__particles or {}) do pc=pc+1 end;"
+                      "return {row=r,sustained=a:isTalentActive('%s') and true or false,known=a:knowTalent('%s') and true or false,"
+                      "actor_shader=a.shader or false,shader_auras=n,add_mos=L,particles=pc,image=a.image,type=a.type,subtype=a.subtype}") % (q, tid, tid)
+                FT = "{ignore_energy=true,ignore_cd=true,no_equilibrium_fail=true,no_talent_fail=true,silent=true}"
+                entry['before'] = bridge.lua(FS)
+                entry['learn'] = bridge.lua(
+                    f"local a=mb.byName({q});if not a:knowTalent('{tid}') then a:learnTalent('{tid}',true,1) end;"
+                    f"return {{known=a:knowTalent('{tid}') and true or false}}")
+                if not entry['before'].get('sustained'):
+                    entry['activate'] = bridge.lua(
+                        f"local a=mb.byName({q});local was=a:isTalentActive('{tid}') and true or false;"
+                        f"if not was then pcall(function() a:forceUseTalent('{tid}',{FT}) end) end;"
+                        f"return {{was_active=was,now=a:isTalentActive('{tid}') and true or false}}")
+                else:
+                    entry['activate'] = {'was_active': True, 'now': True, 'skipped': 'already sustained at birth'}
+                entry['during'] = bridge.lua(FS)
+                p1 = bridge.shot(f'ta2-aura-during-{tid}-{label}')
+                entry['shots'] = [{'file': rel(p1), 'sha256': digest(p1),
+                                   'crop': rel(crop(p1, entry['during']['row']['screen'], f'ta2-aura-during-{tid}-{label}-crop', 3))}]
+                if not entry['before'].get('sustained'):
+                    entry['deactivate'] = bridge.lua(
+                        f"local a=mb.byName({q});local ok,err=pcall(function() if a:isTalentActive('{tid}') then a:forceUseTalent('{tid}',{FT}) end end);"
+                        f"return {{ok=ok,err=tostring(err),now=a:isTalentActive('{tid}') and true or false}}")
+                    entry['after'] = bridge.lua(FS)
+            elif kind == 'ta2_negative':
+                # Different-name PNG reuses (gem crafter / YEEK_STORE_*), a same-name
+                # wrong type/subtype and a synthetic Novice mage stay native.
+                entry['cases'] = []
+                for key, name, src, das, mut in TA2_NEG_CASES:
+                    bridge.lua("mb.clearAround(8);return true")
+                    dasv = json.dumps(das) if das else 'nil'
+                    row = bridge.lua(
+                        f"local r=mb.place({json.dumps(name, ensure_ascii=False)},{json.dumps(src)},1,1,{dasv});"
+                        f"local a=mb.byName({json.dumps(name, ensure_ascii=False)});" + (mut + ";" if mut else "") +
+                        "pcall(function() game:checkerRefreshActor(a,'display') end);mb.refresh();"
+                        "local x=mb.row(a);x.shader=a.shader or false;return x")
+                    view = _set_vp(bridge.lua(CLEAN_VIEW % ('a._checker_live_placed', GROUP_CENTER)))
+                    ps = bridge.shot(f'ta2-negative-{key}-{label}')
+                    cp, box = group_crop(view, ps, f'ta2-negative-{key}-{label}', 1)
+                    entry['cases'].append({'key': key, 'name': name, 'define_as': das, 'row': row, 'view': view, 'crop': rel(cp)})
+                bridge.lua("mb.clearAround(8);return true")
+                row = bridge.lua(TA2_NOVICE_LUA)
+                view = _set_vp(bridge.lua(CLEAN_VIEW % ('a==_G.TA2N', GROUP_CENTER)))
+                ps = bridge.shot(f'ta2-negative-novice-mage-{label}')
+                cp, box = group_crop(view, ps, f'ta2-negative-novice-mage-{label}', 1)
+                entry['novice'] = {'row': row, 'view': view, 'crop': rel(cp)}
             elif kind == 'ub1_group':
                 # Nine native-tall uniques placed together; two off/on cycles.
                 mode = step[1]
@@ -4726,6 +6858,189 @@ def verify_ta1(result):
             'visual_single_body_review': 'pending: machine identity is not a draw-count proof'}
 
 
+def verify_ta2(result):
+    """Batch TA-2: fourteen town/wilds residents, both locales, tall bodies,
+    the Derth/Arena slinger split, the lumberjack `defined_as` typo, the anomaly
+    and Wayist same-name summons, the two archers, the aura sustains and the
+    different-name / wrong-body negatives."""
+    sc, failures, per = result.get('scenes', {}), [], {}
+
+    def step(label, kind, prefix=None):
+        return [x for x in sc.get(label, {}).get('steps', [])
+                if x['step'][0] == kind and (prefix is None or x['step'][1:2] == [prefix])]
+
+    def exact(r, tid):
+        return (r.get('identify') == r.get('rendered_token') == tid and r.get('can_see')
+                and r.get('explain') == 'exact-identity' and str(r.get('display_image')).endswith('/' + tid + '.png'))
+
+    where = {'human citizen': 'last-hope-L1', 'halfling citizen': 'last-hope-L1',
+             'human farmer': 'derth-L1', 'halfling gardener': 'derth-L1', 'halfling slinger': 'derth-L1',
+             'lumberjack': 'lumberjack-L1', 'dwarven earthwarden': 'iron-council-L1',
+             'yeek mindslayer': 'irkkk-L1', 'yeek psionic': 'irkkk-L1',
+             'thalore hunter': 'shatur-L1', 'thalore wilder': 'shatur-L1',
+             'elven sun-mage': 'gates-of-morning-L1', 'elven archer': 'gates-of-morning-L1',
+             'shalore rune master': 'elvala-L1'}
+    # 1. Per-id 48/64/96 exact identity + two off/on cycles in their real towns.
+    for n in TA2:
+        tid, lab = EXPECT[n], where[n]
+        st = step(lab, 'natural_or_place', n)
+        shots = st[0].get('shots', []) if st else []
+        draw = [x['tile'] for x in shots] == [48, 64, 96] and all(exact(x['row'], tid) for x in shots)
+        t1, t2 = step(lab, 'toggle', n), step(lab, 'toggle_again', n)
+        tg = bool(t1 and t2) and all(
+            t[0].get('off', {}).get('enabled') is False and t[0]['off'].get('still_mapped') == 0
+            and t[0]['off']['row'].get('rendered_token') is False
+            and t[0].get('on', {}).get('row', {}).get('rendered_token') == tid for t in (t1, t2)) \
+            and t2[0].get('on_later', {}).get('rendered_token') == tid
+        per[tid] = {'scene': lab, 'source': st[0].get('resolved') if st else None, 'tiles': [x['tile'] for x in shots],
+                    'native_tall': n in TA2_TALL, 'draw_ok': bool(draw), 'toggle_ok': bool(tg)}
+        if not draw or not tg:
+            failures.append(n)
+    # 2. Tall-body token metadata (one body; the draw-once judgement is a human crop review).
+    tm = step('mark-lineup-L1', 'ta2_meta')
+    tall_meta = {}
+    if tm:
+        for r in tm[0].get('rows', []):
+            if r['name'] in TA2_TALL:
+                tall_meta[r['name']] = {'identify': r['identify'], 'rendered': r['rendered_token'],
+                                        'replacement_display_h': r.get('replacement_display_h'),
+                                        'replacement_display_y': r.get('replacement_display_y'),
+                                        'replacement_add_mos': r.get('replacement_add_mos'),
+                                        'own_image': r.get('own_image'), 'own_add_mos': r.get('own_add_mos'),
+                                        'shader': r.get('shader')}
+    tall_ok = len(tall_meta) == len(TA2_TALL) and all(
+        v['identify'] == v['rendered'] == EXPECT[n] and not v['shader']
+        and v['own_image'] == 'invis.png'
+        and len([m for m in (v['own_add_mos'] or []) if not m.get('aura')]) == 1
+        and next(m for m in v['own_add_mos'] if not m.get('aura'))['display_h'] == 2
+        and next(m for m in v['own_add_mos'] if not m.get('aura'))['display_y'] == -1
+        and not [m for m in (v['replacement_add_mos'] or []) if not m.get('aura')] for n, v in tall_meta.items())
+    if not tall_ok:
+        failures.append('tall metadata')
+    # 3. Fourteen lineups (en_US and zh_hans), 48/64/96.
+    lineups = {}
+    for lab, prefix, locale in (('mark-lineup-L1', 'ta2-all', 'en_US'),
+                                ('mark-lineup-zh-L1', 'ta2-all-zh', 'zh_hans')):
+        st = step(lab, 'lineup', prefix)
+        shots = st[0].get('shots', []) if st else []
+        ok = [x['tile'] for x in shots] == [48, 64, 96] and all(
+            x.get('all_inside_viewport') and {r[0] for r in x.get('seen_rows', [])} >= set(TA2)
+            and all(r[3] and r[1] == r[2] == EXPECT[r[0]] for r in x.get('seen_rows', []) if r[0] in TA2)
+            for x in shots)
+        ok = ok and sc.get(lab, {}).get('launch', {}).get('locale') == locale
+        lineups[lab] = bool(ok)
+        if not ok:
+            failures.append('lineup ' + lab)
+    # 4. nicer_tiles off/on round trip: every identity still maps with nicer tiles off.
+    nof = step('mark-nicer-off-L1', 'nicer_off')
+    nrows = {r[0]: r for r in (nof[0].get('view_rows', []) if nof else [])}
+    nicer = {n: {'identify': nrows[n][1], 'rendered': nrows[n][2], 'can_see': nrows[n][3], 'image': nrows[n][4]}
+             if n in nrows else None for n in TA2}
+    nicer_ok = bool(nof) and nof[0].get('nicer_during') is False and nof[0].get('nicer_restored') is True and all(
+        n in nrows and nrows[n][3] and nrows[n][1] == nrows[n][2] == EXPECT[n] for n in TA2)
+    if not nicer_ok:
+        failures.append('nicer-off')
+    # 5. Derth slinger positive; Arena SLINGER stays native.
+    sl = (step('derth-L1', 'ta2_slinger') or [{}])[0]
+    derth, arena = sl.get('derth', {}), sl.get('arena', {})
+    slinger_ok = exact(derth, 'halfling-slinger') and arena.get('define_as') == 'SLINGER' \
+        and not arena.get('identify') and not arena.get('rendered_token') and not arena.get('display_image')
+    if not slinger_ok:
+        failures.append('slinger')
+    # 6. Lumberjack: no runtime define_as (the source writes `defined_as`).
+    lj = (step('lumberjack-L1', 'ta2_lumberjack') or [{}])[0].get('row', {})
+    lumberjack_ok = exact(lj, 'lumberjack') and not lj.get('define_as')
+    if not lumberjack_ok:
+        failures.append('lumberjack')
+    # 7. Wayist yeek mindslayer summon wears the tall token.
+    wy = (step('irkkk-L1', 'ta2_wayist') or [{}])[0].get('use', {})
+    wrows = wy.get('rows', [])
+    wayist_ok = bool(wy.get('ok')) and bool(wrows) and all(
+        r.get('summoner_is_player') and r.get('tall_body') and exact(r, 'yeek-mindslayer') for r in wrows)
+    if not wayist_ok:
+        failures.append('wayist')
+    # 8. Anomaly townsfolk: farmer/gardener wear the token; scribe and dwarven lumberjack stay native.
+    an = (step('elvala-L1', 'ta2_anomaly') or [{}])[0].get('use', {})
+    arows = {r.get('anomaly_name'): r for r in an.get('rows', [])}
+    anomaly_ok = bool(an.get('ok')) and 'human farmer' in arows and exact(arows['human farmer'], 'human-farmer') \
+        and 'halfling gardener' in arows and exact(arows['halfling gardener'], 'halfling-gardener') \
+        and 'shalore scribe' in arows and not arows['shalore scribe'].get('identify') \
+        and not arows['shalore scribe'].get('rendered_token')
+    if 'dwarven lumberjack' in arows:
+        anomaly_ok = anomaly_ok and not arows['dwarven lumberjack'].get('identify')
+    if not anomaly_ok:
+        failures.append('anomaly')
+    # 9. Elven archer and companion archer side by side; identical token PNG bytes.
+    ar = (step('gates-of-morning-L1', 'ta2_archers') or [{}])[0]
+    archer_ok = exact(ar.get('archer', {}), 'elven-archer') and exact(ar.get('companion', {}), 'companion-archer')
+    try:
+        import zipfile
+        with zipfile.ZipFile(result['runtime_teaa']['path']) as z:
+            ea = z.read('data/gfx/tokens/elven-archer.png')
+            ca = z.read('data/gfx/tokens/companion-archer.png')
+        archer_same_png = ea == ca
+    except Exception as exc:  # recorded, not hidden
+        archer_same_png = False
+        result.setdefault('diagnostics', {})['archer_png_error'] = str(exc)[:200]
+    if not archer_ok or not archer_same_png:
+        failures.append('archers')
+    # 10. Aura sustains: token stays, no actor shader, native aura present.
+    auras = {}
+    for lab, nm, tid, key in (('iron-council-L1', 'dwarven earthwarden', 'T_BODY_OF_STONE', 'body-of-stone'),
+                              ('gates-of-morning-L1', 'elven sun-mage', 'T_CHANT_OF_LIGHT', 'chant-of-light')):
+        a = (step(lab, 'ta2_aura', nm) or [{}])[0]
+        during, before = a.get('during', {}), a.get('before', {})
+        row = during.get('row', {})
+        aura_present = bool(during.get('shader_auras')) or any('AURA:' in m for m in (during.get('add_mos') or [])) \
+            or bool(during.get('particles'))
+        good = during.get('sustained') is True and exact(row, EXPECT[nm]) \
+            and during.get('actor_shader') is False and aura_present
+        auras[key] = {'sustained_before': before.get('sustained'), 'during': {k: during.get(k) for k in
+                      ('sustained', 'actor_shader', 'shader_auras', 'add_mos', 'particles')}, 'ok': bool(good)}
+        if not good:
+            failures.append('aura ' + key)
+    # 11. Negatives: different-name PNG reuses, wrong body and synthetic Novice mage.
+    neg = (step('mark-negative-L1', 'ta2_negative') or [{}])[0]
+    cases = neg.get('cases', [])
+    neg_ok = len(cases) == len(TA2_NEG_CASES) and all(
+        not c['row']['identify'] and not c['row']['rendered_token'] and not c['row']['display_image']
+        and c['view']['rows'] and c['view']['rows'][0]['can_see'] for c in cases)
+    nv = neg.get('novice')
+    neg_ok = neg_ok and bool(nv) and not nv['row']['identify'] and not nv['row']['rendered_token']
+    if not neg_ok:
+        failures.append('negatives')
+    # 12. Clean runs and complete scenes.
+    errors = [(lab, x.get('step'), x.get('error')) for lab, rec in sc.items() for x in rec.get('steps', []) if 'error' in x]
+    lua_errors = {lab: rec.get('lua_errors') for lab, rec in sc.items()}
+    missing = [s[0] for s in SCENES_TA2 if s[0] not in sc]
+    if errors or any(lua_errors.values()):
+        failures.append('Lua/step errors')
+    if missing:
+        failures.append('missing scenes: ' + ','.join(missing))
+    return {'per_id': per, 'tall_meta': tall_meta, 'tall_ok': bool(tall_ok), 'lineups': lineups,
+            'nicer_off': nicer, 'nicer_ok': bool(nicer_ok),
+            'slinger': {'derth': {k: derth.get(k) for k in ('identify', 'rendered_token', 'define_as')},
+                        'arena': {k: arena.get(k) for k in ('identify', 'rendered_token', 'define_as', 'display_image')},
+                        'ok': bool(slinger_ok)},
+            'lumberjack': {'identify': lj.get('identify'), 'rendered_token': lj.get('rendered_token'),
+                           'define_as': lj.get('define_as'), 'ok': bool(lumberjack_ok)},
+            'wayist': {'ok': bool(wayist_ok), 'count': len(wrows),
+                       'rows': [[r.get('identify'), r.get('rendered_token'), r.get('tall_body'),
+                                 r.get('summoner_is_player')] for r in wrows]},
+            'anomaly': {'ok': bool(anomaly_ok), 'calls': an.get('calls'), 'count': an.get('count'),
+                        'rows': [[r.get('anomaly_name'), r.get('identify'), r.get('rendered_token')]
+                                 for r in an.get('rows', [])]},
+            'archers': {'ok': bool(archer_ok), 'same_png': bool(archer_same_png),
+                        'archer': ar.get('archer', {}).get('identify'),
+                        'companion': ar.get('companion', {}).get('identify')},
+            'auras': auras,
+            'negatives': {'cases': [[c['key'], c['name'], c['row'].get('identify'), c['row'].get('rendered_token')] for c in cases],
+                          'novice': {'identify': (nv or {}).get('row', {}).get('identify'),
+                                     'rendered_token': (nv or {}).get('row', {}).get('rendered_token')}},
+            'step_errors': errors, 'lua_errors': lua_errors, 'failures': failures, 'pass': not failures,
+            'visual_single_body_review': 'pending: machine identity is not a draw-count proof'}
+
+
 def verify_ub1(result):
     """Batch UB-1: nine native-tall uniques/bosses, both define sites and aliases,
     the native twin link, Tarelion's shorthand, two toggle cycles and negatives."""
@@ -4964,10 +7279,702 @@ def verify_ub2(result):
             'pass': all(checks.values())}
 
 
+def aura_moment_gate(moment_left, moment_right, count_left, count_right, threshold=2.0):
+    """Conditional aura-moment gate: pure decision, no image data.
+
+    R48 made the whole-mask first-moment sign check conditional. The per-pixel
+    mean horizontal offset is |moment|/count for each direction. When BOTH
+    directions are clearly lopsided (mean >= `threshold` px) the left/right
+    moment signs MUST differ; otherwise the silhouette is not lopsided enough
+    to judge and the gate records 'N/A' and passes. N is that direction's
+    aura-mask pixel count.
+    """
+    mean_left = moment_left / count_left if count_left else 0.0
+    mean_right = moment_right / count_right if count_right else 0.0
+    lopsided = abs(mean_left) >= threshold and abs(mean_right) >= threshold
+    flipped = bool(moment_left) and bool(moment_right) and ((moment_left > 0) != (moment_right > 0))
+    return {
+        'label': 'flip' if lopsided else 'N/A',
+        'passed': flipped if lopsided else True,
+        'mean_left': mean_left,
+        'mean_right': mean_right,
+        'lopsided': lopsided,
+    }
+
+
+def aura_mirror_applicable(n_asym, noise, n_L, lopsided):
+    """Apply the gain-margin gate only at SNR >= 3 or lopsided moments.
+
+    Independent review, user-approved 2026-10-05: a perfect mirror under
+    noise reaches about 0.5 * (1 - 1/SNR). Norgos's SNR 2.34 gives 0.286
+    against the required 0.283, so the margin cannot decide. Three lies
+    between 2.34 and the lowest prior pass, 4.15. Gain thresholds stay intact;
+    low-SNR scenes must instead pass every sign and alignment check below.
+    """
+    if lopsided:
+        return True
+    if n_asym <= 0 or n_L <= 0:
+        return False
+    return noise == 0 or n_asym / (noise * n_L) >= 3.0
+
+
+def aura_mirror_sign_gate(gain, frame_gains, mirrored_iou, plain_iou,
+                          native_own, native_upper, aligned):
+    """Mandatory sign-only checks when the gain margin is not applicable."""
+    return gain > 0 and bool(frame_gains) and all(g > 0 for g in frame_gains) \
+        and mirrored_iou > plain_iou and native_own and native_upper and aligned
+
+
+def _verify_facing_scene(scene, prefix, checks, metrics):
+    # Native facing: one creature, the creature mirrored when native. The
+    # comparison uses ANIMATED frames (anims are not paused) and the standee
+    # region only, so another actor below cannot pollute it. The native left
+    # crop horizontally flipped must match the right crop within a tolerance;
+    # the unflipped crops must differ more, or the pose would be symmetric and
+    # the mirror check meaningless.
+    facing = []
+    for st in scene.get('steps', []):
+        facing = st.get('facing', []) or facing
+    facing_aura = {}
+    for st in scene.get('steps', []):
+        facing_aura = st.get('facing_aura_state', {}) or facing_aura
+    fmap = {(r['mode'], r['direction']): r for r in facing}
+    checks[f'{prefix}-captures'] = set(fmap) == {('fixed', 'left'), ('fixed', 'right'), ('native', 'left'), ('native', 'right')}
+    if checks[f'{prefix}-captures']:
+        from PIL import Image, ImageFilter
+        import numpy as np
+
+        def _crop_pixels(r, region=None, flip=False):
+            # clamp_box returns (x0, y0, x1, y1): the last two entries are the
+            # far corner, NOT a width/height pair. R41/R42-fix5 sliced with them
+            # as w/h and read a much larger box than intended.
+            im = Image.open(OUT / r['crop']).convert('RGB')
+            if flip:
+                im = im.transpose(Image.FLIP_LEFT_RIGHT)
+            a = np.asarray(im).astype(float)
+            if region is not None:
+                x0, y0 = r['region'][0], r['region'][1]
+                rx, ry, rx1, ry1 = region
+                a = a[ry - y0:ry1 - y0, rx - x0:rx1 - x0]
+            return a
+
+        def _blur(a):
+            # A small Gaussian absorbs the sub-pixel offset of the UV mirror
+            # (the standee quad centre is not always on an integer pixel), so
+            # the comparison tests the mirrored pose, not antialias phase.
+            im = Image.fromarray(np.clip(a, 0, 255).astype('uint8'))
+            return np.asarray(im.filter(ImageFilter.GaussianBlur(1.5))).astype(float)
+
+        def _frame_pixels(r, flip=False):
+            return _crop_pixels(r, r['creature'], flip)
+
+        fl = fmap[('fixed', 'left')]
+        fr = fmap[('fixed', 'right')]
+        fixed_diff = int((np.abs(_frame_pixels(fl) - _frame_pixels(fr)).sum(axis=2) > 12).sum())
+        checks[f'{prefix}-fixed-identical'] = fixed_diff == 0
+        metrics[f'{prefix}-fixed-identical-px'] = fixed_diff
+        native_left, native_right = fmap[('native', 'left')], fmap[('native', 'right')]
+
+        def _mirror(region, tag):
+            # R43: the R42 assertion compared the whole two-cell region, so a
+            # mirror of only the feet/disc (own cell) passed even when the upper
+            # body was not mirrored. Run it SEPARATELY on the own cell and on
+            # the upper body cells; both must mirror. The mask is only the
+            # pixels facing actually changed, so static floor/HUD cannot make
+            # the flipped frame mismatch.
+            for frame in (native_left, native_right):
+                assert_centred_mirror_region(frame, frame[tag])
+                if frame[tag] != region:
+                    raise AssertionError('native left/right mirror regions differ')
+            nl = _crop_pixels(native_left, region)
+            nr = _crop_pixels(native_right, region)
+            boxes = [b for row in (native_left, native_right)
+                     for b in row['state']['mirror_occluder_boxes']]
+            excluded, report = mirror_exclusion(nl.shape[:2], boxes, region, nl.shape[1]/2)
+            metrics[f'{prefix}-native-{tag}-exclusion'] = report
+            nl[excluded] = 0
+            nr[excluded] = 0
+            mask = (np.abs(nl - nr).sum(axis=2) > 12) & ~excluded
+            n = int(mask.sum())
+            metrics[f'{prefix}-native-%s-changed-px' % tag] = n
+            if not n:
+                checks[f'{prefix}-native-mirror-%s' % tag] = False
+                return
+            nlb, nrb = _blur(nl), _blur(nr)
+            nlf = _blur(nl[:, ::-1])
+            plain_mad = float(np.abs(nlb - nrb).sum(axis=2)[mask].mean())
+            mirror_mad = float(np.abs(nlf - nrb).sum(axis=2)[mask].mean())
+            metrics[f'{prefix}-native-%s-plain-mad' % tag] = round(plain_mad, 1)
+            metrics[f'{prefix}-native-%s-mirror-mad' % tag] = round(mirror_mad, 1)
+            ratio = mirror_mad / plain_mad if plain_mad else 0.0
+            # How far the observed ratio is from the 0.7 pass threshold: a
+            # negative margin would fail. Reported so the claim is honest.
+            metrics[f'{prefix}-native-%s-mirror-ratio' % tag] = round(ratio, 3)
+            metrics[f'{prefix}-native-%s-mirror-margin' % tag] = round(0.7 - ratio, 3)
+            checks[f'{prefix}-native-mirror-%s' % tag] = mirror_mad <= 0.7 * plain_mad
+
+        _mirror(native_left['own'], 'own')
+        _mirror(native_left['upper'], 'upper')
+        checks[f'{prefix}-native-asymmetric'] = metrics.get(f'{prefix}-native-upper-changed-px', 0) > 0
+
+        # R43/R44 aura under native facing with animations RUNNING (no overlay
+        # pause): the only difference between an aura-ON and an aura-OFF frame
+        # is the shader aura. R44 compares the aura difference MASKS by
+        # IoU: a centroid check cannot tell a mirrored aura from an unmirrored
+        # one when the aura hugs the midline. The left mask flipped horizontally
+        # must overlap the right mask much better than the unflipped left mask.
+        def _mask_full(pa, pb, threshold=12):
+            ia = np.asarray(Image.open(OUT / pa).convert('RGB')).astype(int)
+            ib = np.asarray(Image.open(OUT / pb).convert('RGB')).astype(int)
+            return np.abs(ia - ib).sum(axis=2) > threshold
+
+        def _iou(a, b):
+            if a.shape != b.shape:
+                return 0.0
+            union = int((a | b).sum())
+            return (int((a & b).sum()) / union) if union else 0.0
+
+        fa = {}
+        for st in scene.get('steps', []):
+            for row in st.get('facing_aura', []) or []:
+                fa[row['direction']] = row
+        if set(fa) == {'left', 'right'}:
+            left, right = fa['left'], fa['right']
+            on_left = [_mask_full(left['off'], p) for p in left['ons']]
+            on_right = [_mask_full(right['off'], p) for p in right['ons']]
+            L, R = np.zeros_like(on_left[0]), np.zeros_like(on_right[0])
+            for m in on_left:
+                L |= m
+            for m in on_right:
+                R |= m
+            # R45/R46: flip about the creature's own body axis (the creature
+            # bbox centre x in crop coordinates), NOT the crop midline. R46:
+            # pixel x spans [x, x+1], so a mirror about the continuous axis a
+            # maps pixel index x to 2a - 1 - x (R45 used 2a - x, a half-pixel
+            # shift).
+            cc = native_left['state'].get('creature_bbox_centre')
+            axis = None if not cc else (cc['x'] - left['region'][0])
+
+            raw_L, raw_R = L.copy(), R.copy()
+            boxes = [b for row in (left, right) for b in row['state']['mirror_occluder_boxes']]
+            excluded, exclusion_report = mirror_exclusion(L.shape, boxes, left['region'], axis)
+            metrics[f'{prefix}-aura-mirror-exclusion'] = exclusion_report
+            on_left = [mask & ~excluded for mask in on_left]
+            on_right = [mask & ~excluded for mask in on_right]
+            L &= ~excluded
+            R &= ~excluded
+            _flip_axis = mirror_mask_axis
+
+            flip_L = _flip_axis(L, axis)
+            asym = L ^ flip_L
+            n_asym = int(asym.sum())
+            gain = aura_mirror_gain(L, R, axis)
+            # R48: the three ON frames per direction give three independent
+            # mirror gains (the aggregate above is over their union).
+            frame_gains = []
+            frame_gains_raw = []
+            for i in range(len(on_left)):
+                Li, Ri = on_left[i], on_right[i]
+                frame_gain = aura_mirror_gain(Li, Ri, axis)
+                frame_gains_raw.append(frame_gain)
+                frame_gains.append(round(frame_gain, 3))
+            metrics[f'{prefix}-aura-frame-gains'] = frame_gains
+            # The noise baseline is the SAME-DIRECTION inter-frame IoU: the
+            # fraction of a mask that changes between two frames of the SAME
+            # direction. A mirrored aura must beat that noise.
+            noise_iou = _median(
+                [_iou(on_left[i], on_left[j]) for i in range(len(on_left)) for j in range(i + 1, len(on_left))]
+                + [_iou(on_right[i], on_right[j]) for i in range(len(on_right)) for j in range(i + 1, len(on_right))])
+            noise = 1.0 - noise_iou
+            xs = np.arange(L.shape[1])[None, :]
+            mom_L = float((L * (xs - (axis or 0))).sum())
+            mom_R = float((R * (xs - (axis or 0))).sum())
+            moment_flip = bool(mom_L) and bool(mom_R) and ((mom_L > 0) != (mom_R > 0))
+            metrics[f'{prefix}-aura-asym-px'] = n_asym
+            metrics[f'{prefix}-aura-asym-gain'] = round(gain, 3)
+            metrics[f'{prefix}-aura-noise-iou'] = round(noise_iou, 3)
+            metrics[f'{prefix}-aura-noise'] = round(noise, 3)
+            metrics[f'{prefix}-aura-moment-left'] = round(mom_L, 1)
+            metrics[f'{prefix}-aura-moment-right'] = round(mom_R, 1)
+            metrics[f'{prefix}-aura-moment-flip'] = moment_flip
+            # R48: conditional moment gate. When BOTH directions are clearly
+            # lopsided (per-pixel mean offset |moment|/N >= 2 px) the sign MUST
+            # flip; otherwise the silhouette is not lopsided enough to judge and
+            # the check records N/A (True). N is that direction's aura-mask
+            # pixel count. This restores the R46 moment rule without letting an
+            # almost-symmetric aura (heavy bone giant, means < 1.3 px) fail.
+            n_L, n_R = int(L.sum()), int(R.sum())
+            # Reviewer diagnostics only: asym is L XOR mirror(L), so report
+            # its fraction of the same LEFT three-frame-union aura mask.
+            # Also retain both direction counts and their union explicitly.
+            metrics[f'{prefix}-aura-mask-left-px'] = n_L
+            metrics[f'{prefix}-aura-mask-right-px'] = n_R
+            metrics[f'{prefix}-aura-mask-union-px'] = int((L | R).sum())
+            metrics[f'{prefix}-aura-asym-fraction-left'] = n_asym / n_L if n_L else None
+            metrics[f'{prefix}-aura-asym-occupied-left-px'] = int((asym & L).sum())
+            metrics[f'{prefix}-aura-asym-occupied-left-fraction'] = int((asym & L).sum()) / n_L if n_L else None
+            metrics[f'{prefix}-aura-asym-fraction-union'] = n_asym / int((L | R).sum()) if (L | R).any() else None
+            gate = aura_moment_gate(mom_L, mom_R, n_L, n_R)
+            metrics[f'{prefix}-aura-moment-mean-left'] = round(gate['mean_left'], 3)
+            metrics[f'{prefix}-aura-moment-mean-right'] = round(gate['mean_right'], 3)
+            metrics[f'{prefix}-aura-moment-lopsided'] = gate['lopsided']
+            metrics[f'{prefix}-aura-moment-gate'] = gate['label']
+            checks[f'{prefix}-aura-moment'] = gate['passed']
+            applicable = aura_mirror_applicable(n_asym, noise, n_L, gate['lopsided'])
+            snr = n_asym / (noise * n_L) if noise and n_L else (
+                'infinite' if n_asym > 0 and n_L > 0 else 0.0)
+            metrics[f'{prefix}-aura-mirror-snr'] = round(snr, 6) if isinstance(snr, float) else snr
+            metrics[f'{prefix}-aura-mirror-applicable'] = applicable
+            metrics[f'{prefix}-aura-mirror-gate'] = 'applicable' if applicable else 'N/A'
+            mirrored_iou, plain_iou = _iou(R, flip_L), _iou(R, L)
+            metrics[f'{prefix}-aura-mirror-iou'] = mirrored_iou
+            metrics[f'{prefix}-aura-plain-iou'] = plain_iou
+            # Margin justified from the data: R44's crop-midline IoU gain was
+            # only +0.055 (threshold +0.05), while the asym-restricted gain on
+            # ogre-guard is 0.334 against a 0.0 noise baseline. Require a 0.10
+            # absolute floor AND > noise + 0.05.
+            # Never below the R44-style margin.
+            margin_passed = n_asym > 0 and gain >= 0.10 and gain > noise + 0.05
+            metrics[f'{prefix}-aura-mirror-margin-passed'] = margin_passed
+            checks[f'{prefix}-aura-left-pixels'] = int(on_left[0].sum()) > 0
+            checks[f'{prefix}-aura-right-pixels'] = int(on_right[0].sum()) > 0
+            # Positional sanity only: the aura pixel centroid relative to the
+            # creature bbox centre. With animations running (R46) a single ON
+            # frame is noisy, so use the 3-frame union (the same L/R mask the
+            # mirror gain uses); the tolerances are unchanged. Horizontal stays
+            # tight; direction-to-direction vertical tolerance stays <=2px.
+            # R51 approved: absolute vertical centroid offset is diagnostic;
+            # placement instead uses the Style quad +/-1px and anchored bottom.
+            creature_bbox_centre = None if not cc else (
+                cc['x'] - left['region'][0], cc['y'] - left['region'][1])
+            offsets = {}
+            for direction, mask in (('left', raw_L), ('right', raw_R)):
+                aura_centroid = _centroid(mask)
+                offsets[direction] = None if (aura_centroid is None or creature_bbox_centre is None) else (
+                    aura_centroid[0] - creature_bbox_centre[0], aura_centroid[1] - creature_bbox_centre[1])
+            if creature_bbox_centre is not None and offsets['left'] and offsets['right']:
+                dlx, dly = offsets['left']
+                drx, dry = offsets['right']
+                placement = {}
+                for direction, mask, row in (('left', raw_L, left), ('right', raw_R, right)):
+                    q = row.get('state', {}).get('aura_quad')
+                    local_quad = None if not q else [q[0]-row['region'][0], q[1]-row['region'][1],
+                                                    q[2]-row['region'][0], q[3]-row['region'][1]]
+                    placement[direction] = aura_mask_placement(mask, local_quad)
+                metrics[f'{prefix}-aura-placement'] = placement
+                metrics[f'{prefix}-aura-offsets-raw'] = {'left': [dlx, dly], 'right': [drx, dry]}
+                checks[f'{prefix}-aura-aligned'] = max(abs(dlx), abs(drx)) <= 6 \
+                    and abs(dly - dry) <= 2 and all(p['pass'] for p in placement.values())
+                metrics[f'{prefix}-aura-offset-left'] = [round(dlx, 1), round(dly, 1)]
+                metrics[f'{prefix}-aura-offset-right'] = [round(drx, 1), round(dry, 1)]
+                metrics[f'{prefix}-aura-offset-x-max'] = round(max(abs(dlx), abs(drx)), 1)
+                metrics[f'{prefix}-aura-offset-y-diff'] = round(abs(dly - dry), 1)
+            else:
+                checks[f'{prefix}-aura-aligned'] = False
+            signs = {
+                'aggregate-positive': gain > 0,
+                'every-frame-positive': bool(frame_gains_raw) and all(g > 0 for g in frame_gains_raw),
+                'mirrored-iou-greater': mirrored_iou > plain_iou,
+                'native-mirror-own': checks[f'{prefix}-native-mirror-own'],
+                'native-mirror-upper': checks[f'{prefix}-native-mirror-upper'],
+                'aura-aligned': checks[f'{prefix}-aura-aligned'],
+            }
+            metrics[f'{prefix}-aura-mirror-sign-checks'] = signs
+            checks[f'{prefix}-aura-mirror'] = margin_passed if applicable else aura_mirror_sign_gate(
+                gain, frame_gains_raw, mirrored_iou, plain_iou,
+                signs['native-mirror-own'], signs['native-mirror-upper'], signs['aura-aligned'])
+        else:
+            checks[f'{prefix}-aura-left-pixels'] = False
+            checks[f'{prefix}-aura-right-pixels'] = False
+            checks[f'{prefix}-aura-mirror'] = False
+            checks[f'{prefix}-aura-moment'] = False
+            checks[f'{prefix}-aura-aligned'] = False
+        checks[f'{prefix}-base-redraw-invis'] = bool(facing_aura) and all(
+            v.get('base_invis') for v in facing_aura.values())
+        checks[f'{prefix}-body-flip-native'] = bool(native_left['state'].get('body_flip')) \
+            and not native_right['state'].get('body_flip')
+        checks[f'{prefix}-body-flip-fixed'] = not fl['state'].get('body_flip') \
+            and not fmap[('fixed', 'right')]['state'].get('body_flip')
+
+def verify_standee(result):
+    """Machine check for the R39/R43 native-tall standee batch. The
+    draw-once/occlusion, aura and top-edge judgements are human crop reviews;
+    this proves the 24px tile floor, that the four native-tall standees resolve
+    to a 256px standee at 32/48/64 and stay flat at 16, that kra-tor (body-only
+    cap 1.0) and the native 1-cell bosses stay flat, that the repaints ship, and
+    that friend/neutral standees render."""
+    def capture_set(rec):
+        out = []
+        for st in rec.get('steps', []):
+            out.extend(st.get('captures', []))
+        return out
+
+    def actor_set(rec):
+        out = []
+        for st in rec.get('steps', []):
+            out.extend(st.get('per_actor', []))
+        return out
+
+    checks = {}
+    metrics = {}
+    aura_ratios = {}
+    sizes = (16, 32, 48, 64)
+    stand_ids = set(R39_ORIGINAL_IDS)
+    batch1_ids = set(R39_BATCH1_IDS)
+    flat_ids = {'phoenix', 'vor', 'grushnak', 'rungof', 'shardskin', 'subject-z', 'kra-tor'}
+    scenes = {k:v for k,v in result.get('scenes', {}).items() if k != 'standee-aura-dim-L1'}
+    crowd = scenes.get('standee-crowd-L1', {})
+    caps = {c['tile']: c for c in capture_set(crowd)}
+    checks['crowd-native-frames'] = all('native' in caps.get(t, {}) for t in sizes)
+    checks['crowd-changed-32-48-64'] = all(caps.get(t, {}).get('changed') for t in (32, 48, 64))
+    checks['crowd-16-flat'] = caps.get(16, {}).get('changed_pixels') == 0
+    for t in (32, 48, 64):
+        state = caps.get(t, {}).get('state', [])
+        checks['crowd-%d-all-standee' % t] = bool(state) and all(
+            s['standee'] and s['layered'] and s['has_box'] and s['canvas'] == 256
+            for s in state if s.get('id') in stand_ids) and all(
+            not s['standee'] for s in state if s.get('id') in flat_ids)
+    state16 = caps.get(16, {}).get('state', [])
+    checks['crowd-16-all-flat'] = bool(state16) and all(not s['standee'] for s in state16)
+    special = []
+    for st in crowd.get('steps', []):
+        special.extend(st.get('special', {}).get('rows', []))
+    byname = {r['name']: r for r in special}
+    checks['crowd-friendly-standee'] = bool(byname.get('Ninandra, the Great Weaver')) and \
+        byname['Ninandra, the Great Weaver']['standee'] and byname['Ninandra, the Great Weaver']['reaction'] > 0
+    checks['crowd-neutral-flat'] = bool(byname.get("Kra'Tor the Gluttonous")) and \
+        not byname["Kra'Tor the Gluttonous"]['standee'] and byname["Kra'Tor the Gluttonous"]['reaction'] == 0
+    checks['crowd-flat-boss-token'] = bool(byname.get('Phoenix')) and not byname['Phoenix']['standee']
+    # Per-actor 3x4 centred OFF/ON/NATIVE crops at 32 and 64 for the four ids.
+    per = actor_set(crowd)
+    for t in (32, 64):
+        rows = [p for p in per if p.get('found') and p.get('tile') == t]
+        checks['per-actor-%d-all-ids' % t] = {p['id'] for p in rows} == stand_ids
+        checks['per-actor-%d-crops' % t] = bool(rows) and all(
+            (OUT / p['on']).is_file() and (OUT / p['off']).is_file() and (OUT / p['native']).is_file()
+            and (p['region'][2] - p['region'][0]) == 3 * t
+            and (p['region'][3] - p['region'][1]) == 4 * t
+            for p in rows)
+        checks['per-actor-%d-size' % t] = bool(rows) and all(
+            p.get('height_cap') and p.get('drawn_cells')
+            and 0 < p['drawn_cells'] <= p['height_cap'] + 1e-9 for p in rows)
+    # Single-standee open scene at 16/32/48/64 with a native frame.
+    open_rec = scenes.get('standee-open-L1', {})
+    ocaps = {c['tile']: c for c in capture_set(open_rec)}
+    checks['open-native-frames'] = all('native' in ocaps.get(t, {}) for t in sizes)
+    checks['open-changed-32-48-64'] = all(ocaps.get(t, {}).get('changed') for t in (32, 48, 64))
+    checks['open-16-flat'] = ocaps.get(16, {}).get('changed_pixels') == 0
+    # Repaint scene: ogre-guard + ninandra beside snow-giant and a black spider.
+    rp = scenes.get('standee-repaint-L1', {})
+    rcs = capture_set(rp)
+    checks['repaint-runs'] = bool(rcs) and not rp.get('failed')
+    checks['repaint-32-changed'] = any(c['tile'] == 32 and c['changed'] for c in rcs)
+    checks['repaint-32-native-frame'] = any(c['tile'] == 32 and 'native' in c for c in rcs)
+    checks['repaint-ids'] = set()
+    for st in rp.get('steps', []):
+        checks['repaint-ids'] = {r['token'] for r in st.get('special', {}).get('rows', [])}
+    checks['repaint-ids'] = checks['repaint-ids'] >= {'ogre-guard', 'ninandra', 'snow-giant', 'giant-spider'}
+    # Aura scene: one warm and one dark REAL shader aura measured SEPARATELY by
+    # pixel DIFFERENCE above the own-cell top, with animations running.
+    ranks = [c for st in scenes.get('standee-rank-L1', {}).get('steps', [])
+             for c in st.get('rank_captures', [])]
+    checks['rank-all-captures'] = len(ranks) == 12
+    for rank in (4, 2):
+        for tile in (32, 48, 64):
+            by = {c['state']: c for c in ranks if c['rank'] == rank and c['tile'] == tile}
+            checks['rank-%d-%d-on-hides-native' % (rank, tile)] = bool(by.get('on')) and by['on']['ornament_pixels'] == 0
+            checks['rank-%d-%d-native-ornament' % (rank, tile)] = bool(by.get('native')) and (
+                by['native']['ornament_pixels'] > 0 if rank == 4 else by['native']['ornament_pixels'] == 0)
+
+    aura = scenes.get('standee-aura-L1', {})
+    acaps = []
+    for source in (aura, scenes.get('standee-aura-forge-L1', {})):
+        for st in source.get('steps', []):
+            acaps.extend(st.get('aura_captures', []))
+    # The cold forge-only isolation rerun supersedes its historical six cases;
+    # retain the other 54, whose baseline shader counts were already zero.
+    acaps = list({(c['actor'], c['effect'], c['tile'], c['state']): c
+                  for c in acaps}.values())
+    checks['aura-effects-separate'] = {c['effect'] for c in acaps} == {'body_of_fire', 'essence_of_the_dead'}
+    checks['aura-tall-new-actor'] = {c.get('actor') for c in acaps} == {a[0] for a in R39_AURA_ACTORS}
+    # The label is not enough: every ON capture must have really applied its own
+    # aura. `applied` is read back from the actor's live talent/effect state.
+    checks['aura-applied-effects'] = bool(acaps) and all(
+        c['state'] != 'on' or (c.get('applied') or {}).get('applied') == c['effect']
+        for c in acaps)
+    checks['aura-off-applied-none'] = bool(acaps) and all(
+        not (c.get('off_applied') or {}).get('applied') for c in acaps)
+    # R43 creature-still: the overlay creature is static, so after subtracting
+    # the aura's own pixels from the consecutive-frame difference only aura
+    # fringe pixels (amplitude below the 12 threshold) remain. The cap is a small
+    # absolute pixel count justified by the recorded R43 live values (observed
+    # max 9 px at 48px, on a ~6900 px body region), not by a fraction of the area.
+    CREATURE_STILL_MAX = 16
+    creature_still = {}
+    aura_pixels = {}
+    aura_normalised = {}
+    aura_upper_diagnostic = {}
+    aura_reach = {}
+    aura_flame = {}
+    aura_validity = {}
+    # R49 user decision: whole-region difference ON/NATIVE / reach_ratio.
+    # Upper-cell ratios remain diagnostic; threshold 12 and gate [0.6,1.5]
+    # are unchanged. The common region includes headroom and lateral spill.
+    for actor in [a[0] for a in R39_AURA_ACTORS]:
+        slug = EXPECT.get(actor, actor.replace(' ', '-'))
+        reach = standee_reach(slug)
+        if reach:
+            aura_reach[slug] = {'on_reach': round(reach['on_reach'], 4),
+                                'native_reach': round(reach['native_reach'], 4),
+                                'on_into': round(reach['on_into'], 4),
+                                'native_into': round(reach['native_into'], 4),
+                                'feet_depth': round(reach['feet_depth'], 4),
+                                'reach_ratio': round(reach['ratio'], 4),
+                                'native_top_px': reach['native_top_px'],
+                                'native_bottom_px': reach['native_bottom_px']}
+        for effect in ('body_of_fire', 'essence_of_the_dead'):
+            for t in (32, 48, 64):
+                by = {c['state']: c for c in acaps
+                      if c.get('actor') == actor and c.get('effect') == effect and c.get('tile') == t}
+                on, native = by.get('on'), by.get('native')
+                key = '%s-%s-%d' % (slug, effect, t)
+                checks['aura-%s-captures' % key] = bool(on and native) \
+                    and all(len(r.get('whole_ratio_frames', [])) == 15 for r in (on, native))
+                checks['aura-%s-fixed-region' % key] = bool(on and native) and on['whole_region'] == native['whole_region']
+                if on and native:
+                    valid = all(c.get('baseline_validity', {}).get('valid') for c in (on, native))
+                    aura_validity[key] = {'status': aura_case_validity(on, native),
+                                          'on': on.get('baseline_validity', {}),
+                                          'native': native.get('baseline_validity', {}),
+                                          'outside_diagnostic': {'on': on.get('outside_quad_pixels', []),
+                                                                 'native': native.get('outside_quad_pixels', [])}}
+                    if not valid:
+                        # Invalid measurements have no aura pass/fail verdict.
+                        # Keep raw counts in census for inspection; do not run
+                        # the unchanged detectors on contaminated samples.
+                        continue
+                    ratio_result = aura_ratio_gate(on['whole_ratio_frames'], native['whole_ratio_frames'], reach['ratio'])
+                    on_med = ratio_result['on_median']
+                    nat_med = ratio_result['native_median']
+                    upper_ratio = _median(on['upper_frames']) / _median(native['upper_frames'])
+                    aura_upper_diagnostic[key] = round(upper_ratio / reach['ratio'], 3)
+                    ratio = (on_med / nat_med) if nat_med else 0.0
+                    aura_ratios[key] = round(ratio, 3)
+                    norm = (ratio / reach['ratio']) if (reach and reach['ratio']) else 0.0
+                    aura_normalised[key] = round(norm, 3)
+                    # 0.6-1.5x the geometry-normalised native: below 0.6 rejects
+                    # a disc-shaped own-cell aura, above 1.5 rejects the R41
+                    # 128px-every-side pad (which drew ~2x native flames).
+                    checks['aura-%s-whole-on-vs-native' % key] = \
+                        bool(reach) and on_med > 0 and nat_med > 0 and 0.6 <= norm <= 1.5
+                    # Absolute flame-above-top: the highest row of the ON aura
+                    # difference mask with >=3 contiguous pixels must sit k cells above the standee
+                    # art top, k = max(0.3, 0.6x native flame height above
+                    # the native top measured on the same NATIVE crop).
+                    # R51 approved: height only uses the pre-registered 15-frame median.
+                    if reach:
+                        on_art_top = t * (reach['anchor_cells'] - reach['on_reach'])
+                        nat_art_top = t * (1 + reach['native_top_px'] / 64.0)
+                        height = aura_height_gate(on.get('flame_top_rows') or [],
+                                                  native.get('flame_top_rows') or [],
+                                                  on_art_top, nat_art_top, t)
+                    else:
+                        height = {'pass': False, 'on_cells': None, 'native_cells': None, 'k': None}
+                    if height['on_cells'] is not None and height['native_cells'] is not None:
+                        on_flame, nat_flame, k = height['on_cells'], height['native_cells'], height['k']
+                        widths = on.get('flame_band_widths') or []
+                        band_frames = sum(w >= AURA_FLAME_BAND_MIN_PX for w in widths)
+                        aura_flame[key] = {'on_cells': round(on_flame, 3),
+                                           'native_cells': round(nat_flame, 3),
+                                           'k': round(k, 3), 'height_frames': AURA_HEIGHT_FRAMES,
+                                           'band_min_px': AURA_FLAME_BAND_MIN_PX,
+                                           'band_widths': widths, 'band_frames': band_frames,
+                                           'height_gate_required': aura_height_gate_required(effect, t)}
+                        if aura_height_gate_required(effect, t):
+                            checks['aura-%s-flame-above-top' % key] = height['pass']
+                        checks['aura-%s-solid-flame-band' % key] = len(widths) == 3 and band_frames >= 2
+                    else:
+                        if aura_height_gate_required(effect, t):
+                            checks['aura-%s-flame-above-top' % key] = False
+                        checks['aura-%s-solid-flame-band' % key] = False
+                    checks['aura-%s-applied' % key] = \
+                        (on.get('applied') or {}).get('applied') == effect \
+                        and bool((on.get('applied') or {}).get('active')) \
+                        and not (on.get('off_applied') or {}).get('applied')
+                    checks['aura-%s-aura-moves' % key] = max(on['self_diff'] or [0]) > 0
+                    creature_still[key] = list(on.get('creature_move') or [])
+                    aura_pixels[key] = on.get('aura_pixels')
+                    checks['aura-%s-creature-still' % key] = \
+                        len({tuple(s) for s in on['actor_screen']}) == 1 \
+                        and bool(on.get('creature_move')) \
+                        and on.get('body_area', 0) > 0 \
+                        and max(on['creature_move']) <= CREATURE_STILL_MAX
+                    checks['aura-%s-follows-standee' % key] = bool(on.get('snap', {}).get('aura')) and any(
+                        a.get('mark') and str(a.get('image', '')).find('tokens-layer/aura/') >= 0 for a in on['snap']['aura'])
+                    checks['aura-%s-base-invis' % key] = any(a.get('base') for a in on['snap']['aura'])
+                    checks['aura-%s-native-keeps-aura' % key] = bool(native.get('snap', {}).get('aura'))
+    entry_after = {}
+    for st in aura.get('steps', []):
+        entry_after = st.get('aura_after', {}) or entry_after
+    checks['aura-still-on-standee'] = bool(entry_after) and entry_after.get('standee')
+
+    # Sequential auras: A, wait a turn, B, then remove A, with no refresh between.
+    seq = {}
+    for st in scenes.get('standee-sequential-L1', {}).get('steps', []):
+        seq = st.get('sequential', {}) or seq
+    checks['seq-first-active'] = bool(seq.get('first')) and seq['first'].get('active')
+    checks['seq-second-active'] = bool(seq.get('second')) and seq['second'].get('active')
+    sstages = {s['stage']: s for s in seq.get('shots', [])}
+    # entries counts the display add_mos: one sdm aura + one invis base-redraw
+    # per aura kind.
+    checks['seq-a-one-aura'] = bool(sstages.get('a')) \
+        and sstages['a']['state'].get('kinds') == ['ice_armour'] \
+        and sstages['a']['state'].get('entries') == 2
+    checks['seq-ab-two-auras'] = bool(sstages.get('ab')) \
+        and set(sstages['ab']['state'].get('kinds', [])) == {'ice_armour', 'essence_of_the_dead'} \
+        and sstages['ab']['state'].get('entries') == 3
+    checks['seq-b-after-remove-one'] = bool(sstages.get('b')) \
+        and sstages['b']['state'].get('kinds') == ['essence_of_the_dead'] \
+        and sstages['b']['state'].get('entries') == 2
+
+    facing_runs = {}
+    informative_checks = {}
+    invalid_checks = {}
+    for scene_name, prefix in (
+        ('standee-facing-L1', 'facing'),
+        ('standee-facing-new-tall-L1', 'facing-new-tall'),
+        ('standee-facing-ogre-L1', 'facing-ogre'),
+        ('standee-facing-heavy-bone-L1', 'facing-heavy-bone'),
+        ('standee-facing-daelach-L1', 'facing-daelach'),
+        ('standee-facing-bill-L1', 'facing-bill'),
+        ('standee-facing-batch4-L1', 'facing-batch4'),
+    ):
+        scene = scenes.get(scene_name, {})
+        run_checks = {}
+        _verify_facing_scene(scene, prefix, run_checks, metrics)
+        actor = next((st['placed']['id'] for st in scene.get('steps', [])
+                      if st.get('placed') and st.get('facing')), None)
+        # Missing subjects remain failures; only a measured low-asymmetry
+        # subject can be informative. Never discard raw check results.
+        asymmetry = static_aura_asymmetry(actor)['static_asymmetry'] if actor else None
+        light_records = [r.get('lighting', {}) for st in scene.get('steps', [])
+                         for r in st.get('facing', []) + st.get('facing_aura', [])]
+        lighting_ok = bool(light_records) and all(r.get('valid') for r in light_records)
+        status = (facing_run_status(asymmetry, run_checks) if actor else 'FAIL') if lighting_ok else 'INVALID (lighting)'
+        facing_runs[prefix] = {'actor': actor, 'static_asymmetry': asymmetry,
+                               'status': status, 'raw_checks': run_checks,
+                               'lighting': [{k: value for k, value in record.items() if k != 'states'}
+                                            for record in light_records]}
+        checks.update(run_checks)
+        if status == 'INFORMATIVE':
+            informative_checks.update(run_checks)
+        elif status == 'INVALID (lighting)':
+            invalid_checks.update(run_checks)
+    # Top visible row: the actor's own row really is the first visible map row
+    # (same_row), and the standee's screen top is above the viewport top.
+    top = scenes.get('standee-top-L1', {})
+    tgeo = {}
+    for st in top.get('steps', []):
+        tgeo = st.get('top_geometry', {}) or tgeo
+    checks['top-same-row'] = bool(tgeo.get('same_row'))
+    checks['top-standee-above-viewport'] = bool(tgeo.get('quad')) \
+        and tgeo['quad']['screen_top'] < tgeo['viewport_top']
+    tcs = capture_set(top)
+    checks['top-48'] = any(c['tile'] == 48 and c['changed'] for c in tcs)
+    checks['top-48-native-frame'] = any(c['tile'] == 48 and 'native' in c for c in tcs)
+    checks['top-crop-reaches-viewport'] = bool(tgeo) and any(
+        c['tile'] == 48 and c['region'][1] <= tgeo.get('viewport_top', -1) for c in tcs)
+    # Wide-body path: a wide native-tall id with no standee layer stays flat.
+    wide = scenes.get('standee-wide-L1', {})
+    wstate = {}
+    for st in wide.get('steps', []):
+        wstate = st.get('wide_state', {}) or wstate
+    checks['wide-flat-token'] = bool(wstate) and wstate.get('rendered_token') == 'corrupted-sand-wyrm' \
+        and not wstate.get('standee') and not wstate.get('layered') \
+        and (wstate.get('height') or 0) > 1.0
+    checks['wide-no-layer'] = bool(wstate) and not wstate.get('has_box')
+    checks['wide-native-frame'] = any(c['tile'] == 48 and 'native' in c for c in capture_set(wide))
+    # All accepted standee batches retain the same per-actor/crowd floors.
+    for batch, batch_ids, layout in (
+            ('batch1', set(R39_BATCH1_IDS), STANDEE_BATCH1_CROWD),
+            ('batch2', set(R39_BATCH2_IDS), STANDEE_BATCH2_CROWD),
+            ('batch3', set(R39_BATCH3_IDS), STANDEE_BATCH3_CROWD),
+            ('batch4', set(R39_BATCH4_IDS), STANDEE_BATCH4_CROWD),
+            ('briagh', set(R53_BRIAGH_IDS), STANDEE_BRIAGH_CROWD)):
+        batch_scene = scenes.get('standee-' + batch + '-L1', {})
+        bplaced = []
+        for st in batch_scene.get('steps', []):
+            bplaced.extend(st.get('placed', []))
+        checks[batch + '-all-placed'] = {p['id'] for p in bplaced} == batch_ids
+        checks[batch + '-rows'] = bool(bplaced) and all(p.get('row', {}).get('identify') == p['id'] for p in bplaced)
+        bper = actor_set(batch_scene)
+        planned = {(tid, t) for tid in batch_ids for t in (32, 48, 64)}
+        for t in (32, 48, 64):
+            rows = [p for p in bper if p.get('found') and p.get('tile') == t]
+            checks[batch + '-per-actor-%d-ids' % t] = {p['id'] for p in rows} == batch_ids
+            checks[batch + '-per-actor-%d-crops' % t] = bool(rows) and all(
+                (OUT / p['on']).is_file() and (OUT / p['off']).is_file() and (OUT / p['native']).is_file()
+                and (p['region'][2] - p['region'][0]) == 3 * t
+                and (p['region'][3] - p['region'][1]) == 4 * t
+                for p in rows)
+            checks[batch + '-per-actor-%d-size' % t] = bool(rows) and all(
+                p.get('height_cap') and p.get('drawn_cells')
+                and 1.0 < p['height_cap'] <= 1.75
+                and 0 < p['drawn_cells'] <= p['height_cap'] + 1e-9 for p in rows)
+        checks[batch + '-per-actor-count'] = len({(p['id'], p['tile']) for p in bper if p.get('found')}) == len(planned)
+        bcrowd = capture_set(batch_scene)
+        checks[batch + '-crowd-48-changed'] = any(c['tile'] == 48 and c['changed'] for c in bcrowd)
+        checks[batch + '-crowd-48-native'] = any(c['tile'] == 48 and 'native' in c for c in bcrowd)
+        bcrowdst = []
+        for st in batch_scene.get('steps', []):
+            for c in st.get('captures', []):
+                bcrowdst.extend(c.get('state', []))
+        bcrowd_ids = {R39_STANDS[i][3] for _, _, _, i in layout}
+        checks[batch + '-crowd-all-standee'] = bool(bcrowdst) and all(
+            s['standee'] and s['layered'] and s['has_box'] and s['canvas'] == 256
+            for s in bcrowdst if s.get('id') in bcrowd_ids)
+        checks[batch + '-crowd-ids'] = {c['id'] for c in bcrowdst} == bcrowd_ids
+    # Flat scene at 16px: every standee id must stay flat (below the 24px gate).
+    flat = scenes.get('standee-flat-L1', {})
+    fcs = capture_set(flat)
+    checks['flat-16-runs'] = bool(fcs) and not flat.get('failed')
+    checks['flat-16-crop'] = any(c['tile'] == 16 and (OUT / c['crop']).is_file() for c in fcs)
+    fstate = fcs[0].get('state', []) if fcs else []
+    checks['flat-16-all-flat'] = bool(fstate) and all(not s['standee'] for s in fstate)
+    zh = scenes.get('standee-crowd-zh-L1', {})
+    zhcs = {c['tile']: c for c in capture_set(zh)}
+    checks['crowd-zh-32-changed'] = bool(zhcs.get(32, {}).get('changed'))
+    checks['crowd-zh-32-native-frame'] = 'native' in zhcs.get(32, {})
+    errors = [(lab, x.get('step'), x.get('error')) for lab, rec in scenes.items()
+              for x in rec.get('steps', []) if 'error' in x]
+    lua_errors = {lab: rec.get('lua_errors') for lab, rec in scenes.items()}
+    missing = [s[0] for s in SCENES_STANDEE if s[0] not in scenes]
+    checks['no-errors'] = not missing and not errors and not any(lua_errors.values())
+    counted_checks = {k: v for k, v in checks.items()
+                      if k not in informative_checks and k not in invalid_checks}
+    return {'facing_runs': facing_runs, 'informative_checks': informative_checks,
+            'invalid_checks': invalid_checks,
+            'counted_checks': counted_checks,
+            'check_totals': {'counted': len(counted_checks), 'passed': sum(counted_checks.values()),
+                             'failed': sum(not v for v in counted_checks.values()),
+                             'informative': len(informative_checks), 'invalid': len(invalid_checks), 'raw': len(checks),
+                             'raw_passed': sum(checks.values())},
+            'aura_validity': aura_validity,
+            'scene_validity': 'INVALID' if any(x['status'] != 'VALID' for x in aura_validity.values()) or any(x['status'] == 'INVALID (lighting)' for x in facing_runs.values()) else 'VALID',
+            'checks': checks, 'metrics': metrics, 'step_errors': errors, 'lua_errors': lua_errors,
+            'aura_ratios': aura_ratios, 'aura_normalised': aura_normalised,
+            'aura_upper_diagnostic': aura_upper_diagnostic,
+            'aura_reach': aura_reach, 'aura_flame': aura_flame,
+            'creature_still': creature_still, 'aura_pixels': aura_pixels,
+            'missing_scenes': missing, 'pass': all(counted_checks.values()) and
+            all(v['status'] == 'VALID' for v in aura_validity.values()) and
+            all(v['status'] != 'INVALID (lighting)' for v in facing_runs.values())}
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--only', nargs='*')
-    parser.add_argument('--batch', choices=('ab', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'aa', 'ab', 'ac', 'ad', 'ae', 'af', 'ag', 'ua', 'ta1', 'ub1', 'ub2', 'legacy', 'summons', 'summons-zh'), default='legacy')
+    parser.add_argument('--batch', choices=('ab', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'aa', 'ab', 'ac', 'ad', 'ae', 'af', 'ag', 'ua', 'ta1', 'ta2', 'ub1', 'ub2', 'layer', 'standee', 'legacy', 'summons', 'summons-zh'), default='legacy')
     args = parser.parse_args()
     global OUT, SHOTS, CROPS, CLEAN
     scenes = SCENES
@@ -5099,6 +8106,28 @@ def main():
         CLEAN = True
         OUT, scenes = OUT_BUB2, SCENES_UB2
         SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 'ta2':
+        if not os.environ.get('MLV_TEAA'):
+            parser.error('--batch ta2 requires MLV_TEAA: never test loose product code')
+        CLEAN = True
+        OUT, scenes = OUT_BTA2, SCENES_TA2
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 'layer':
+        if not os.environ.get('MLV_TEAA'):
+            parser.error('--batch layer requires MLV_TEAA: never test loose product code')
+        CLEAN = True
+        OUT, scenes = OUT_LAYER, SCENES_LAYER
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
+    if args.batch == 'standee':
+        if not os.environ.get('MLV_TEAA'):
+            parser.error('--batch standee requires MLV_TEAA: never test loose product code')
+        CLEAN = True
+        OUT, scenes = OUT_STANDEE, SCENES_STANDEE
+        if args.only and 'standee-aura-dim-L1' in args.only:
+            assert args.only == ['standee-aura-dim-L1'], 'Run the INFORMATIVE scene separately'
+            OUT = OUT_STANDEE / 'informative-dim'
+            scenes = [("standee-aura-dim-L1", "mark-spellblaze", 1, {}, [("midstart",), ("standee_grid", "aura-dim")])]
+        SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
     if args.batch == 'summons-zh':
         OUT, scenes = OUT_U, SCENES_ZH
         SHOTS, CROPS = OUT / 'screenshots', OUT / 'crops'
@@ -5118,12 +8147,15 @@ def main():
     if args.batch == 'ub2':
         result['expected_ub2'] = [{'name': n, 'source': src, 'define_as': das, 'id': tid}
                                   for n, src, das, tid in UB2_CASES + [UB2_ABOM, UB2_PALADIN]]
+    if args.batch == 'ta2':
+        result['expected_ta2'] = [{'name': n, 'source': PLACE_SRC_TA2[n], 'define_as': None, 'id': EXPECT[n]}
+                                  for n in TA2]
     if os.environ.get('MLV_TEAA'):
         result['runtime_teaa'] = {'path': os.environ['MLV_TEAA'], 'sha256': digest(os.environ['MLV_TEAA'])}
     result['scene_sha256'] = {'tests/live_monster_batch.lua': digest(ADDON / 'tests/live_monster_batch.lua'),
                               'tests/live_map_survey.lua': digest(ADDON / 'tests/live_map_survey.lua'),
                               'overload/mod/class/CheckerTokens.lua': digest(ADDON / 'overload/mod/class/CheckerTokens.lua')}
-    if args.batch in ('af', 'ag', 'ua', 'ta1', 'ub1', 'ub2'):
+    if args.batch in ('af', 'ag', 'ua', 'ta1', 'ub1', 'ub2', 'ta2', 'layer', 'standee'):
         import zipfile
         with zipfile.ZipFile(os.environ['MLV_TEAA']) as package:
             result['tested_runtime_sha256'] = {
@@ -5152,12 +8184,16 @@ def main():
             wait_ready(bridge, log_start)
             record = run_scene(scene, bridge)
             record['launch'] = {k: plan[k] for k in ('shaders', 'tiles', 'resolution', 'terrain', 'addons', 'fixture', 'tokens')}
-            if args.batch in ('af', 'ag', 'ua', 'ta1', 'ub1', 'ub2'):
+            if args.batch in ('af', 'ag', 'ua', 'ta1', 'ub1', 'ub2', 'ta2', 'layer', 'standee'):
                 record['launch']['locale'] = plan['locale']
                 record['launch']['teaa'] = plan['teaa']
             record['processes'] = {'game': meta['game'], 'xvfb': meta['xvfb'], 'display': meta['display']}
             text = LOG.read_bytes()[log_start:].decode('utf-8', 'replace')
             record['lua_errors'] = text.count('Lua Error')
+            # R48: the engine prints the SDM readback (source texture px :: sdm
+            # texture px) in src/core_lua.c gl_texture_alter_sdm. Record it so
+            # the aura texture size is a runtime fact, not a file guess.
+            record['sdm_texture_lines'] = sorted(set(re.findall(r'==SDM \d+x\d+ :: \d+x\d+', text)))
             result['scenes'][label] = record
             census_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n')
             print('DONE', label, flush=True)
@@ -5178,6 +8214,10 @@ def main():
         result['batch_ta1_verdict'] = verify_ta1(result)
         census_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n')
         print('VERDICT', json.dumps(result['batch_ta1_verdict'], ensure_ascii=False), flush=True)
+    if args.batch == 'ta2':
+        result['batch_ta2_verdict'] = verify_ta2(result)
+        census_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n')
+        print('VERDICT', json.dumps(result['batch_ta2_verdict'], ensure_ascii=False), flush=True)
     if args.batch == 'ub1':
         result['batch_ub1_verdict'] = verify_ub1(result)
         census_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n')
@@ -5209,6 +8249,17 @@ def main():
         result['batch_aa_verdict'] = verify_aa(result)
         census_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n')
         print('VERDICT', json.dumps(result['batch_aa_verdict'], ensure_ascii=False), flush=True)
+    if args.batch == 'standee' and OUT == OUT_STANDEE / 'informative-dim':
+        result['informative_only'] = True
+        result['lighting_reference'] = AURA_CONTRACT['DIM_LIGHTING_REFERENCE']
+        census_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n')
+    elif args.batch == 'standee':
+        result['batch_standee_verdict'] = verify_standee(result)
+        census_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n')
+        print('VERDICT', json.dumps({k: result['batch_standee_verdict'][k]
+                                     for k in ('pass', 'check_totals', 'scene_validity',
+                                               'missing_scenes', 'step_errors', 'lua_errors')},
+                                    ensure_ascii=False), flush=True)
 
 
 if __name__ == '__main__':

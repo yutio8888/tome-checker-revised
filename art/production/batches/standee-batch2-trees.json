@@ -1,0 +1,124 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch2-trees",
+ "assets": [
+  {
+   "asset_id": "treant",
+   "native_name": "treant",
+   "scope": "Standee batch 2 (18 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/plant.lua",
+     "sha256": "5f6a594f8dd91919aabb24b89c84b047d234cd92863b449349f03c9576b6658a",
+     "line": 57,
+     "anchor": "newEntity{ base = \"BASE_NPC_PLANT\","
+    }
+   ],
+   "desc": "A very strong near-sentient tree, which has become hostile to other living things.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/treant.png",
+     "sha256": "be5747898e7a3aaa23b81264ee340fbb5601f60823360e20cf2d036c449e30b6",
+     "role": "style",
+     "note": "The shipped flat treant token: copy its matte painted miniature finish, colours, outfit and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/immovable_plants_treant.png",
+     "sha256": "ee5df984ebeee3c4fe05fdee6333f367218ce4a313d5d3a6abcb88f48db04086",
+     "role": "identity",
+     "note": "Native treant sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/wrathroot.png",
+     "sha256": "2e4b91f445c408cc6c05be1945b141fbe55210debe2367cb8790ed5a8ba60c48",
+     "role": "family",
+     "note": "The shipped wrathroot flat token is the sibling tree this one must stay clearly distinct from: do not copy its pale grey drooping willow silhouette, its bent grey trunk or its colour."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/immovable_plants_treant.png",
+     "sha256": "ee5df984ebeee3c4fe05fdee6333f367218ce4a313d5d3a6abcb88f48db04086"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/treant.png",
+     "sha256": "be5747898e7a3aaa23b81264ee340fbb5601f60823360e20cf2d036c449e30b6"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "treant: an ancient walking tree, a thick gnarled brown bark trunk with a knotty wooden face and two deep dark knothole eyes, a compact dense crown of dark green leaves held tight on top, two thick bark-covered branch arms ending in twiggy claws held close to the trunk, and a splay of heavy brown root-feet at the base. Match the shipped flat token's brown bark, dark green foliage and root-footed stance.",
+    "contrast": "Taller than wide and narrow: the trunk rises straight, the leafy crown is pinched in above the shoulders, the branch arms hang close and the root-feet stay under the trunk, so the body silhouette stays about 1 to 1.6 tall to wide and never reaches the width cap. It differs from wrathroot by the straight brown trunk, the compact dark-green crown and the clear wooden face; wrathroot is a bent grey willow with drooping pale fronds. No disc, ground, moss patch or scattered leaves.",
+    "composition": "Full body, upright standing three-quarter view, roots planted and slightly splayed at the bottom, branch arms down at the sides, the leafy crown at the top of the frame. Overall height about 1.6 to 1.8 times the width; nothing above the crown.",
+    "palette": "warm brown bark with darker crevices, dark forest-green leaves, mossy olive highlights on the trunk, dark hollow eyes."
+   }
+  },
+  {
+   "asset_id": "wrathroot",
+   "native_name": "Wrathroot",
+   "scope": "Standee batch 2 (18 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/old-forest/npcs.lua",
+     "sha256": "6d7918b8d3808f8fc74739a990d3b0b6dbc4906668439672f2f783a86baf0121",
+     "line": 93,
+     "anchor": "newEntity{ define_as = \"WRATHROOT\","
+    }
+   ],
+   "desc": "The ancient grey willow tree, ruler of the Old Forest. He despises trespassers in his territory.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/wrathroot.png",
+     "sha256": "2e4b91f445c408cc6c05be1945b141fbe55210debe2367cb8790ed5a8ba60c48",
+     "role": "style",
+     "note": "The shipped flat wrathroot token: copy its matte painted miniature finish, colours, outfit and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_treant_wrathroot.png",
+     "sha256": "29dcdaf4b95aad222d3be2645fa6777e6f38f1f33817fc02f8c17f2ae4732c1d",
+     "role": "identity",
+     "note": "Native wrathroot sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/treant.png",
+     "sha256": "be5747898e7a3aaa23b81264ee340fbb5601f60823360e20cf2d036c449e30b6",
+     "role": "family",
+     "note": "The shipped treant flat token is the sibling tree this one must stay clearly distinct from: do not copy its straight brown trunk, its compact dark-green crown or its colour."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_treant_wrathroot.png",
+     "sha256": "29dcdaf4b95aad222d3be2645fa6777e6f38f1f33817fc02f8c17f2ae4732c1d"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/wrathroot.png",
+     "sha256": "2e4b91f445c408cc6c05be1945b141fbe55210debe2367cb8790ed5a8ba60c48"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Wrathroot: the ancient grey willow, ruler of the Old Forest, with a bent and twisted pale grey old trunk leaning forward, a sad knotty wooden face with dark hollow eyes, and a heavy curtain of long drooping pale grey-green willow fronds hanging down around the shoulders almost to the root-feet; thick gnarled grey root-feet at the base. Match the shipped flat token's pale grey-green drooping foliage, grey weathered trunk and gnarled roots.",
+    "contrast": "Taller than wide and narrow: the willow fronds hang down close to the trunk rather than spreading sideways, and the bent trunk still rises tall, so the body silhouette stays about 1 to 1.6 tall to wide and never reaches the width cap. It differs from treant by the pale grey weathered wood, the drooping pale grey-green curtain of fronds and the bent forward trunk; treant is straight, brown and holds a compact dark-green crown.",
+    "composition": "Full body, upright standing three-quarter view, the old trunk bent but tall, drooping willow fronds falling close to the body from the crown, roots planted at the bottom, the top of the drooping crown at the top of the frame. Overall height about 1.7 to 1.9 times the width; nothing above the crown.",
+    "palette": "pale grey weathered wood, pale grey-green drooping willow leaves, muted olive shadows, dark hollow eyes."
+   }
+  }
+ ]
+}

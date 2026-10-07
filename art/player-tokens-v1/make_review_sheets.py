@@ -6,7 +6,7 @@ a one-off review aid, kept in art/ per instructions, not tools/.
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
-ROOT = Path('/workspace/t-engine4/game/addons/tome-checker-revised')
+ROOT = Path('<workspace>/game/addons/tome-checker-revised')
 TOKENS = ROOT / 'data/gfx/tokens'
 OUT = ROOT / 'art/player-tokens-v1/exports'
 OUT.mkdir(parents=True, exist_ok=True)

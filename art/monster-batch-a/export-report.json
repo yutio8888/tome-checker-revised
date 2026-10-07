@@ -132,128 +132,126 @@
     },
     {
       "id": "snaproot",
-      "master": "masters/snaproot-v2.png",
-      "sha256": "b4ead81254c4dbaf2ef07a5aa0917b375522ea56d4608976ae38a21218accfe5",
+      "master": "masters/snaproot-v4.png",
+      "sha256": "f101b2a2547f04e02d3136f5641469592a70a1e8d49be46790c7ea6407177390",
       "exports": [
+        {
+          "path": "sprites/48/snaproot.png",
+          "size": 48,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            80,
+            72,
+            1172,
+            1182
+          ],
+          "export_window": [
+            -19.348837,
+            -18.348837,
+            1290.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "85150031b901e6571ebc57ac2803b8cc3dd1b24d9a64c221460e533fc607fbe9"
+        },
+        {
+          "path": "sprites/64/snaproot.png",
+          "size": 64,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            80,
+            72,
+            1172,
+            1182
+          ],
+          "export_window": [
+            -19.348837,
+            -18.348837,
+            1290.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "a861d8fdfb6268f36e635e9c05854285b387082af6d0a9264e05591e0f45680e"
+        },
+        {
+          "path": "sprites/96/snaproot.png",
+          "size": 96,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            80,
+            72,
+            1172,
+            1182
+          ],
+          "export_window": [
+            -19.348837,
+            -18.348837,
+            1290.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "9a8a5e9fe416db07c030f7d761ee8478d75947dd1db75b604a21aaa1c44db73b"
+        },
         {
           "path": "sprites/128/snaproot.png",
           "size": 128,
-          "sha256": "0ec85d13c6f399ddf57058a1cdbd6ca24b035d6f95fa8070b3f5bb656484d04b"
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            80,
+            72,
+            1172,
+            1182
+          ],
+          "export_window": [
+            -19.348837,
+            -18.348837,
+            1290.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "2b839084514ff6bce611492387a60b7741490c136af65db943868023741a21d8"
+        },
+        {
+          "path": "sprites/256/snaproot.png",
+          "size": 256,
+          "master_width": 1254,
+          "master_height": 1254,
+          "visible_bbox": [
+            80,
+            72,
+            1172,
+            1182
+          ],
+          "export_window": [
+            -19.348837,
+            -18.348837,
+            1290.697674
+          ],
+          "target_occupancy": 0.86,
+          "sha256": "c89e65f29124dd1b8c9dea4e765317eb0a11cc9a7335c620f8e3c970d4791ea6"
         }
       ],
       "style_gate": {
-        "asset_id": "snaproot",
-        "token": {
-          "path": "art/monster-batch-a/sprites/128/snaproot.png",
-          "sha256": "0ec85d13c6f399ddf57058a1cdbd6ca24b035d6f95fa8070b3f5bb656484d04b",
-          "sector_medians": [
-            63.94,
-            63.97,
-            65.18,
-            63.88,
-            45.54,
-            67.72,
-            81.12,
-            74.83
-          ],
-          "sector_offsets": [
-            -8.15,
-            -7.19,
-            0.52,
-            0.91,
-            -19.67,
-            0.67,
-            6.79,
-            -1.59
-          ],
-          "base_drift": -0.54,
-          "max_sector_intrusion": 7.33,
-          "max_opaque_radius": 0.8576,
-          "corner_alpha": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "ring_samples": [
-            261,
-            302,
-            298,
-            266,
-            268,
-            303,
-            298,
-            274
-          ]
-        },
-        "master": {
-          "path": "art/monster-batch-a/masters/snaproot-v2.png",
-          "sha256": "b4ead81254c4dbaf2ef07a5aa0917b375522ea56d4608976ae38a21218accfe5",
-          "format": "PNG",
-          "mode": "RGBA",
-          "native_alpha_channel": true,
-          "alpha_min": 0,
-          "alpha_max": 255,
-          "size": [
-            1254,
-            1254
-          ]
-        },
-        "findings": [
-          {
-            "check": "master_native_alpha",
-            "level": "blocking",
-            "ok": true,
-            "detail": "\u6bcd\u7248 mode=RGBA alpha=0..255",
-            "mode": "RGBA",
-            "alpha_min": 0,
-            "alpha_max": 255
-          },
-          {
-            "check": "disc_overflow",
-            "level": "blocking",
-            "ok": true,
-            "detail": "\u6700\u5927\u4e0d\u900f\u660e\u534a\u5f84 0.858\uff08\u4e0a\u9650 0.867\uff09",
-            "value": 0.8576,
-            "limit": 0.867
-          },
-          {
-            "check": "base_drift",
-            "level": "blocking",
-            "ok": true,
-            "detail": "\u5e95\u76d8\u504f\u79fb\u4e2d\u4f4d -0.54\uff08\u5bb9\u5dee \u00b18\uff09",
-            "value": -0.54,
-            "limit": 8.0
-          },
-          {
-            "check": "subject_intrusion",
-            "level": "warning",
-            "ok": true,
-            "detail": "\u5355\u6247\u533a\u76f8\u5bf9\u672c\u6b3e\u4e2d\u4f4d\u6700\u5927\u4e0a\u504f +7.33\uff08\u5bb9\u5dee +20\uff09",
-            "value": 7.33,
-            "limit": 20.0
-          },
-          {
-            "check": "corner_alpha",
-            "level": "blocking",
-            "ok": true,
-            "detail": "\u56db\u89d2 alpha [0, 0, 0, 0]",
-            "value": [
-              0,
-              0,
-              0,
-              0
-            ]
-          }
+        "baseline": [
+          72.09,
+          71.16,
+          64.66,
+          62.97,
+          65.21,
+          67.05,
+          74.33,
+          76.42
         ],
+        "base_drift": -5.82,
+        "max_sector_intrusion": 6.49,
+        "max_opaque_radius": 0.8585,
         "blocking": [],
         "warnings": [],
         "grandfathered": false,
         "waived": false,
-        "notes": [],
-        "passed": true
-      },
-      "provenance_call": "art/production/handoffs/monster-batch-a-1/snaproot/imagegen-calls/call-2/call.json"
+        "passed": true,
+        "advisory_downgrade": false
+      }
     },
     {
       "id": "minotaur-maze",

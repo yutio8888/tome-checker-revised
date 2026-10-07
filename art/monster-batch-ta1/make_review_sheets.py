@@ -171,7 +171,7 @@ def luminance(scratch):
 
 
 if __name__ == '__main__':
-    with tempfile.TemporaryDirectory(prefix='batch-ta1-review-', dir='/workspace/t-engine4/tmp/rotation/R19-scratch') as scratch:
+    with tempfile.TemporaryDirectory(prefix='batch-ta1-review-', dir='<workspace>/tmp/rotation/R19-scratch') as scratch:
         for group, rows in GROUPS.items():
             sheet(group, rows, scratch)
         floor_sheet(scratch)

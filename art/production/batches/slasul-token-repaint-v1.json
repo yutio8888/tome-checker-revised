@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "batch_id": "slasul-token-repaint-v1",
+  "assets": [
+    {
+      "asset_id": "slasul",
+      "native_name": "Slasul",
+      "scope": "temple-of-creation (zones/temple-of-creation/npcs.lua:26, humanoid/naga, unique, define_as SLASUL, rank 4, no base, explicit nice_tile tall body 64x128); placed by the static last-level map maps/zones/temple-of-creation-last.lua:26; single definition FLAT TOKEN REPAINT after the survey decision of 2026-10-04: the shipped flat token (art/monster-batch-t/masters/slasul-v1.png) shows a gold breastplate over the torso, contradicting the same definition's desc ('His torso is bare apart from an exquisite pearl set directly in his chest, and in his muscular arms he holds ready a heavy mace and shield.'). The repaint keeps the naga pose, helm, shield, mace, tail and disc and restores the bare chest with the pearl. Old master under art/monster-batch-t/superseded/slasul-v1.png and old runtime under .../slasul-v1-runtime-128.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/temple-of-creation/npcs.lua",
+          "sha256": "665e69eb25a1fd1e43f79b69dbc79b87af9a7880a56e7b0c9d5b92db611f376c",
+          "line": 26,
+          "anchor": "define_as = \"SLASUL\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/temple-of-creation/npcs.lua",
+          "sha256": "665e69eb25a1fd1e43f79b69dbc79b87af9a7880a56e7b0c9d5b92db611f376c",
+          "line": 29,
+          "anchor": "name = \"Slasul\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/temple-of-creation/npcs.lua",
+          "sha256": "665e69eb25a1fd1e43f79b69dbc79b87af9a7880a56e7b0c9d5b92db611f376c",
+          "line": 32,
+          "anchor": "resolvers.nice_tile{image=\"invis.png\", add_mos = {{image=\"npc/humanoid_naga_slasul.png\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/temple-of-creation/npcs.lua",
+          "sha256": "665e69eb25a1fd1e43f79b69dbc79b87af9a7880a56e7b0c9d5b92db611f376c",
+          "line": 93,
+          "anchor": "resolvers.sustains_at_birth()"
+        },
+        {
+          "path": "game/modules/tome/data/maps/zones/temple-of-creation-last.lua",
+          "sha256": "9b0c8c381b0027db0db2898930a842302a170f887ff0e7bc61846609cd0df0e0",
+          "line": 26,
+          "anchor": "defineTile('@', \"WATER_FLOOR\", nil, \"SLASUL\")"
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, light, camera and matte miniature finish; do not copy its creature. Match this disc's own lightness EXACTLY -- do not darken it further."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_naga_slasul.png",
+          "sha256": "e227e646fae67eddc26824306d43ccd63ee156aa18accadb9a9be4b02e62947a",
+          "role": "identity",
+          "note": "Native shape (64x128 tall body): a BARE-CHESTED male naga with a pearl set in his chest and a crested helm, holding a round shield and a heavy mace over a serpent tail. Keep the bare torso and the pearl; do NOT copy the gold breastplate of the superseded flat token."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-t/superseded/slasul-v1.png",
+          "sha256": "0b4a714fc4dcb69012c98809ef33d7860dd5ac9f771a4442c635ddccbfbccae8",
+          "role": "family",
+          "note": "The SUPERSEDED slasul flat token for this same identity: pose family, naga-with-mace-and-shield composition, disc and camera are correct and must be kept, but its gold breastplate covering the torso is the exact defect -- the desc requires a bare torso with the pearl visible. Remove only the chest armour; keep everything else."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A towering regal male naga seen from a steep overhead three-quarter angle: a muscular BARE torso -- chest and abdomen entirely uncovered, with NO breastplate, NO cuirass, NO scale-mail and NO chest armour of any kind -- carrying an exquisite large WHITE PEARL set directly in the centre of his bare chest. A bronze-gold crested helm with a tall fin-shaped crest frames his stern masculine tanned face; a gold collar and gold armbands sit on the bare shoulders and arms. A round bronze-rimmed shield with a pearl boss is held forward on the left arm and a heavy flanged mace is raised on the right. Below the waist a thick SEA-GREEN serpent tail with a pale cream belly is coiled in a broad round spiral base beneath him, gold-edged scales. Regal, bare-chested, coiled and complete.",
+        "contrast": "Nagas: SLASUL is the GOLD-CRESTED bare-chested naga king with a large pearl set directly in his BARE chest, a round shield forward and a mace raised, on a sea-green spiral tail base (silhouette: fin-crested helm above a round shield and a raised mace over a round coiled base; hue: sea green and bronze-gold with a white pearl; value: mid-light). This repaint reverses the superseded v1, which wrongly clad his torso in a gold breastplate; the desc says his 'torso is bare apart from an exquisite pearl set directly in his chest'. The shipped myrmidon has a blue tail and a trident, the tidewarden is brown with a shield, the nereid is yellow-tailed, zoisla red-tailed, nashva teal-tailed, the tidecaller grey robed: none of those is a bare-chested gold-helmed pearl-bearing naga king.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour or black fur anywhere.",
+        "palette": "Warm tanned BARE skin on the torso and arms in a mid-light value with broad pale highlight planes, sea-green serpent tail with pale jade highlights and a cream belly, bronze-gold fin-crested helm, collar and armbands, white pearl, pale steel mace head; NO gold or bronze breastplate and NO chest armour anywhere on the torso. Nothing darker than dark green except the eyes and seams; the disc stays neutral charcoal with no green or gold cast. Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Identity re-verified against game/modules/tome data: name=\"Slasul\", define_as=SLASUL, type=humanoid/subtype=naga, unique=true, rank 4, no base, nice_tile{image=\"invis.png\", add_mos={image=\"npc/humanoid_naga_slasul.png\", display_h=2, display_y=-1}}, with the desc on the same definition. The shipped flat token is already mapped, so this repaint carries the required refinement brief: it supersedes the mapped slasul token, names the spent monster-batch-t-3 pack, states the design-direction correction (gold breastplate -> bare torso with the pearl, per the desc) and pins the earlier receipt and superseded art. Flat token size (128px), RGBA and manifest wiring are unchanged; only the artwork is repainted.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-t-20260930/source-contracts.json",
+          "sha256": "683dc4abbd177436803d6c58e8a73813c814b99615ff7fc26a3a5b9753fc5e54"
+        }
+      ],
+      "refinement": {
+        "supersedes": "slasul",
+        "previous_batch": "monster-batch-t-3",
+        "design_change_reason": "The shipped flat token was generated with a gold breastplate covering the whole torso, which directly contradicts slasul's own desc: 'His torso is bare apart from an exquisite pearl set directly in his chest, and in his muscular arms he holds ready a heavy mace and shield.' The survey of 2026-10-04 flagged the breastplate as a desc conflict. This repaint keeps the naga pose family, crested helm, round shield, heavy mace, spiral sea-green tail, disc and camera, and changes only the torso to bare tanned skin with the pearl clearly set in the centre of the chest. It is a flat-token repaint only; wiring and the manifest id are unchanged.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-t/superseded/slasul-v1.png",
+            "sha256": "0b4a714fc4dcb69012c98809ef33d7860dd5ac9f771a4442c635ddccbfbccae8"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-t/superseded/slasul-v1-runtime-128.png",
+            "sha256": "9de5fa6da4e23027f729fad1d6c50d0013b3f53a0fe185daee98b75fbfc16700"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-t-3/slasul/receipts/attempt-1.json",
+            "sha256": "d59d86204336a3e01b655f7189a9c207afc8799342aeea5037561ba2af15a7a5"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-t-3/slasul/imagegen-calls/call-1/call.json",
+            "sha256": "89a0bf0125e51908da79785f63b89e63af192d5394171fa97ff463949c91920f"
+          }
+        ]
+      }
+    }
+  ]
+}

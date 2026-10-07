@@ -6,7 +6,7 @@
 
 ## Batch A 离线状态（2026-09-29）
 
-本表以下数量是本次美术之前的调查快照。Batch A 已在源码／离线层接入 Wrathroot、Snaproot、Minotaur、Sandworm Queen、Corrupted Sand Wyrm、Rantha、Varsha、Norgos Frozen、electric eel、ancient dragon turtle 共十款；Shax、Horned Horror、Norgos Guardian 的两次生图仍未通过门控，继续原生。已有 giant eel／dragon turtle 保持原图；Trollmire FLOODED 加载器明确排除 squid／ink squid。heart-gloom 非净化和净化版六种固定前缀已对已收录 rodent／canine 精确基础身份复用棋子，无新图。全部新接入尚待独立实机验证。详见 `art/monster-batch-a/REVIEW.md`、`evidence/monster-batch-a-20260929/source-contracts.json` 与 `/workspace/t-engine4/tmp/codex-monA/REPORT.md`。
+本表以下数量是本次美术之前的调查快照。Batch A 已在源码／离线层接入 Wrathroot、Snaproot、Minotaur、Sandworm Queen、Corrupted Sand Wyrm、Rantha、Varsha、Norgos Frozen、electric eel、ancient dragon turtle 共十款；Shax、Horned Horror、Norgos Guardian 的两次生图仍未通过门控，继续原生。已有 giant eel／dragon turtle 保持原图；Trollmire FLOODED 加载器明确排除 squid／ink squid。heart-gloom 非净化和净化版六种固定前缀已对已收录 rodent／canine 精确基础身份复用棋子，无新图。全部新接入尚待独立实机验证。详见 `art/monster-batch-a/REVIEW.md`、`evidence/monster-batch-a-20260929/source-contracts.json` 与 `<workspace>/tmp/codex-monA/REPORT.md`。
 
 数据来源：`overload/mod/class/CheckerTokens.lua`（43 个已收录身份，按 `name`+`type`+`subtype`+`define_as` 精确匹配）、`data/token-manifest.json`、`docs/expansion-plan-20260928/PLAN.md`、`evidence/map-survey-20260928/`（12 个区域的实机普查，`unmapped-identities.csv`）、以及本轮对 16 个未被实机普查覆盖的区域（`slazish-fen`、`thieves-tunnels`、`tempest-peak`、`halfling-ruins`、`reknor`、`reknor-escape`、`ardhungol`、`lake-nur`、`ruined-dungeon`、`blighted-ruins`、`crypt-kryl-feijan`、`golem-graveyard`、`ritch-tunnels`、`deep-bellow`、`last-hope-graveyard`、`mark-spellblaze`）的 `zone.lua`／`npcs.lua`／`data/general/npcs/*.lua` 源码直读。`ancient-elven-ruins`、`town-derth`、`wilderness` 不在本次棋盘覆盖目标区域清单内，已排除。
 

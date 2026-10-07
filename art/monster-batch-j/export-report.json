@@ -618,8 +618,8 @@
     },
     {
       "id": "lady-nashva",
-      "master": "masters/lady-nashva-v2.png",
-      "sha256": "732cf0d4f30e4d94387090826435e76107da0b35fccab7ef8fa381a4c0521287",
+      "master": "masters/lady-nashva-v3.png",
+      "sha256": "818099ddcc32ea4e446f11236d51f986b74cd907295a3431379cb78cd53dc8b1",
       "exports": [
         {
           "path": "sprites/48/lady-nashva.png",
@@ -627,18 +627,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            89,
-            75,
-            1163,
-            1171
+            85,
+            74,
+            1168,
+            1173
           ],
           "export_window": [
-            -11.209302,
-            -14.209302,
-            1274.418605
+            -12.453488,
+            -15.453488,
+            1277.906977
           ],
           "target_occupancy": 0.86,
-          "sha256": "bb54f518de430c26e05a1ddbf2f5fc254d76a56142115c320cd2e697022f1348"
+          "sha256": "39c68e577251d1ae8fd27c5e5e2ab96434838953dc40d5e26d52ffdb61ab2bc4"
         },
         {
           "path": "sprites/64/lady-nashva.png",
@@ -646,18 +646,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            89,
-            75,
-            1163,
-            1171
+            85,
+            74,
+            1168,
+            1173
           ],
           "export_window": [
-            -11.209302,
-            -14.209302,
-            1274.418605
+            -12.453488,
+            -15.453488,
+            1277.906977
           ],
           "target_occupancy": 0.86,
-          "sha256": "9d530dd76246e4aca5effe6da41d28df255f0f05b90d34a67b06c1f9b96b797a"
+          "sha256": "398fe783adadefdfd4ef5ca4d1d97ad3032547b4f45af346bd64fcdd4fde811e"
         },
         {
           "path": "sprites/96/lady-nashva.png",
@@ -665,18 +665,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            89,
-            75,
-            1163,
-            1171
+            85,
+            74,
+            1168,
+            1173
           ],
           "export_window": [
-            -11.209302,
-            -14.209302,
-            1274.418605
+            -12.453488,
+            -15.453488,
+            1277.906977
           ],
           "target_occupancy": 0.86,
-          "sha256": "0e13ebfcfc98be3e3787691630a4d6bd001d9f58b0d8e435ad3bf1da078b742d"
+          "sha256": "a637ef46044c428a0e9d0b5e1942edb2cd2dd84ba21667bd2bb691ce98314d94"
         },
         {
           "path": "sprites/128/lady-nashva.png",
@@ -684,18 +684,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            89,
-            75,
-            1163,
-            1171
+            85,
+            74,
+            1168,
+            1173
           ],
           "export_window": [
-            -11.209302,
-            -14.209302,
-            1274.418605
+            -12.453488,
+            -15.453488,
+            1277.906977
           ],
           "target_occupancy": 0.86,
-          "sha256": "d64158ffd4cd1c4a0904ac508481eb6448b1abf17bf2706dfc99256376a967b1"
+          "sha256": "f55f69b693b407a6f851a0d7e21f431c3b89b3a29e6068b9464940e9588c9ac2"
         },
         {
           "path": "sprites/256/lady-nashva.png",
@@ -703,18 +703,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            89,
-            75,
-            1163,
-            1171
+            85,
+            74,
+            1168,
+            1173
           ],
           "export_window": [
-            -11.209302,
-            -14.209302,
-            1274.418605
+            -12.453488,
+            -15.453488,
+            1277.906977
           ],
           "target_occupancy": 0.86,
-          "sha256": "397e8db4a60612dae586975a1a6f1aa4caf4fcd8ae760b841af586d4bedd0434"
+          "sha256": "4f0c3d9bc285bd4556f45501facb4962438bc76691be21e55aaa132519617814"
         }
       ],
       "style_gate": {
@@ -728,9 +728,9 @@
           74.33,
           76.42
         ],
-        "base_drift": 1.0,
-        "max_sector_intrusion": 1.32,
-        "max_opaque_radius": 0.8585,
+        "base_drift": -1.2,
+        "max_sector_intrusion": 3.44,
+        "max_opaque_radius": 0.8576,
         "blocking": [],
         "warnings": [],
         "grandfathered": false,

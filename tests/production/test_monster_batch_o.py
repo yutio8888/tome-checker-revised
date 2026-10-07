@@ -19,7 +19,7 @@ SHIPPED = {
     'white-ooze': 'white-ooze-v1', 'gigantic-corrosive-tunneler': 'gigantic-corrosive-tunneler-v1',
     'gigantic-gravity-worm': 'gigantic-gravity-worm-v1', 'slimy-ooze': 'slimy-ooze-v1', 'poison-ooze': 'poison-ooze-v1',
     'carrion-worm-mass': 'carrion-worm-mass-v1', 'brittle-clear-ooze': 'brittle-clear-ooze-v1',
-    'cute-little-bunny': 'cute-little-bunny-v2', 'dredgling': 'dredgling-v1', 'onilug': 'onilug-v2',
+    'cute-little-bunny': 'cute-little-bunny-v2', 'dredgling': 'dredgling-v1', 'onilug': 'onilug-v3',
     'wretchling': 'wretchling-v1', 'brecklorn': 'brecklorn-v1',
 }
 NAMES = {
@@ -45,7 +45,8 @@ TYPES = {
 DEFINE_AS = {'carrion-worm-mass': 'CARRION_WORM_MASS'}
 UNIQUE = ()
 TALL = ('gigantic-corrosive-tunneler', 'gigantic-gravity-worm', 'onilug')
-SUPERSEDED = {'onilug': 'onilug-v1'}
+SUPERSEDED = {'onilug': 'onilug-v2'}
+# onilug v3 (2026-10-04): gaunt over-long-limbed repaint per its desc.
 FLOOR = 45.0
 
 

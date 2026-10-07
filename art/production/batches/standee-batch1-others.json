@@ -1,0 +1,130 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch1-others",
+ "assets": [
+  {
+   "asset_id": "dremling",
+   "native_name": "dremling",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/horror-corrupted.lua",
+     "sha256": "ca0ef6bf11db645523f2ad3e884171226b2b181407e804ca981d4c2ea26d7dae",
+     "line": 81,
+     "anchor": "name = \"dremling\""
+    }
+   ],
+   "desc": "A giant black-skinned humanoid covered in spikey scabrous deposits. Its face is featureless; its eyesockets, empty and hollow.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/dremling.png",
+     "sha256": "ed834025fbc4a036013bbfc8c9c7af87b1126248003022416ca9f7b407f7481d",
+     "role": "style",
+     "note": "The shipped flat dremling token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_drem.png",
+     "sha256": "0b8983be6f0109320997a3d639c24b64ad71648e1da30399a02db3858405a3a0",
+     "role": "identity",
+     "note": "Native dremling sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/drem.png",
+     "sha256": "a9801d4b807a5c8230dcfe2127335ff08b3b8289c2a60253e25c99726d7620a0",
+     "role": "family",
+     "note": "The shipped drem token shares this black corrupted-humanoid body plan, so it is the token this one must stay clearly distinct from; do not copy its pose."
+    }
+   ],
+   "contrast_dimensions": [
+    "value",
+    "silhouette"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/horror_corrupted_drem.png",
+     "sha256": "0b8983be6f0109320997a3d639c24b64ad71648e1da30399a02db3858405a3a0"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/dremling.png",
+     "sha256": "ed834025fbc4a036013bbfc8c9c7af87b1126248003022416ca9f7b407f7481d"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "dremling: a giant black-skinned humanoid covered in jagged scabrous grey deposits and spikes, a faceless head with two empty hollow eyesockets, heavy clawed hands and hunched shoulders. Match the shipped token's coal-black skin and pale grey scab plating.",
+    "contrast": "Taller than wide: stand at full height with a heavy forward hunch, long arms held close to the body and claws turned inward. Because the skin is near-black, give the head, shoulders and claw edges a clear pale grey scab rim and a soft cool rim light so it still reads at 48px.",
+    "composition": "Full body, upright standing front three-quarter view, arms hanging with claws forward, feet planted, the featureless head at the top of the frame. Overall height to width about 1.8 to 1.",
+    "palette": "near-black charcoal skin, pale grey scabrous plates and spikes, cold blue-grey rim light, dark hollow eyesockets."
+   }
+  },
+  {
+   "asset_id": "healer-astelrid",
+   "native_name": "Healer Astelrid",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/conclave-vault/npcs.lua",
+     "sha256": "6bfd6d91a4b29284ce05359670593f80e461b4a7cf3a0a02a9e2897531b8307f",
+     "line": 141,
+     "anchor": "name = \"Healer Astelrid\""
+    },
+    {
+     "path": "game/modules/tome/data/zones/conclave-vault/npcs.lua",
+     "sha256": "6bfd6d91a4b29284ce05359670593f80e461b4a7cf3a0a02a9e2897531b8307f",
+     "line": 140,
+     "anchor": "define_as = \"HEALER_ASTELRID\""
+    }
+   ],
+   "desc": "An enormous ogre, clad in a tattered set of robes with an officer's badge. She clutches a healer's staff, wrapped in casting plaster and scalpels for use as a massive spiked club.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/healer-astelrid.png",
+     "sha256": "924d99908d3275bdb377f7447f01876ceff545f9896c3b9a4914b637fef9c73d",
+     "role": "style",
+     "note": "The shipped flat healer-astelrid token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ogre_healer_astelrid.png",
+     "sha256": "99a577aea21ff091286cec4e527c26c9e05c54edb518469f705eb79cc8b8c724",
+     "role": "identity",
+     "note": "Native healer-astelrid sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ogre-guard.png",
+     "sha256": "7ad41b65d9e1bb90aaf4a6ae104a3d7d3b2decb47332452d34b9d1fdb9c5a189",
+     "role": "family",
+     "note": "The shipped ogre-guard token shares this ogre body plan, so it is the token this one must stay clearly distinct from; do not copy its pose or its hammer."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ogre_healer_astelrid.png",
+     "sha256": "99a577aea21ff091286cec4e527c26c9e05c54edb518469f705eb79cc8b8c724"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/healer-astelrid.png",
+     "sha256": "924d99908d3275bdb377f7447f01876ceff545f9896c3b9a4914b637fef9c73d"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Healer Astelrid: an enormous ogre woman in a tattered purple and grey robe with a tarnished officer's badge, her big hands clutching a long healer's staff wrapped in white casting plaster and ringed with scalpels, held like a spiked club. Match the shipped token's violet robe, dark hair and wrapped staff.",
+    "contrast": "Taller than wide: stand at full height with the wrapped staff held vertical or angled close to the body, not swung wide. The staff may rise above the head.",
+    "composition": "Full body, upright standing front three-quarter view, both hands on the wrapped staff, robe falling to the feet, the staff top allowed above the head. Overall height to width about 1.8 to 1.",
+    "palette": "violet and grey tattered robe, grey-blue ogre skin, white plaster-wrapped staff with steel scalpels, dark hair."
+   }
+  }
+ ]
+}

@@ -18,7 +18,7 @@ spec.loader.exec_module(style)
 SHIPPED = {
     'caravan-merchant': 'caravan-merchant-v1', 'caravan-guard': 'caravan-guard-v1', 'caravan-porter': 'caravan-porter-v1',
     'lost-merchant': 'lost-merchant-v1', 'war-dog': 'war-dog-v1', 'yeek-wayist': 'yeek-wayist-v1', 'nimisil': 'nimisil-v1',
-    'slasul': 'slasul-v1', 'draebor': 'draebor-v1', 'weirdling-beast': 'weirdling-beast-v1',
+    'slasul': 'slasul-v2', 'draebor': 'draebor-v1', 'weirdling-beast': 'weirdling-beast-v1',
     'fortress-shadow': 'fortress-shadow-v2', 'pumpkin': 'pumpkin-v1',
 }
 NAMES = {
@@ -52,7 +52,8 @@ UNIQUE = ('yeek-wayist', 'nimisil', 'slasul', 'draebor', 'weirdling-beast', 'pum
 # Slasul: UNIQUE explicit nice_tile tall body (64x128), no native_tall flag (as Walrog).
 NATIVE_TALL_SPRITE = ('slasul',)
 URH_ROK = ('weirdling-beast',)
-SUPERSEDED = (('fortress-shadow', 'fortress-shadow-v1'),)
+SUPERSEDED = (('fortress-shadow', 'fortress-shadow-v1'), ('slasul', 'slasul-v1'))
+# Slasul v2 (2026-10-04): bare-chested repaint with the chest pearl, per desc.
 FLOOR = 45.0
 
 

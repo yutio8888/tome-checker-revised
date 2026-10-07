@@ -864,8 +864,8 @@
     },
     {
       "id": "slasul",
-      "master": "masters/slasul-v1.png",
-      "sha256": "0b4a714fc4dcb69012c98809ef33d7860dd5ac9f771a4442c635ddccbfbccae8",
+      "master": "masters/slasul-v2.png",
+      "sha256": "497a28a34f07cb92e349a8b41e673d5d15221fb3f7951365d92253e94663b37b",
       "exports": [
         {
           "path": "sprites/48/slasul.png",
@@ -873,18 +873,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            85,
-            75,
+            86,
+            76,
             1169,
-            1169
+            1171
           ],
           "export_window": [
-            -9.046512,
-            -14.046512,
-            1272.093023
+            -9.127907,
+            -13.127907,
+            1273.255814
           ],
           "target_occupancy": 0.86,
-          "sha256": "7015002fb8ba72f30c2a96684c398c1f2c130a094cd9e49a4c2203c4fd89c644"
+          "sha256": "51631e317697117c411aef488bdd499bb1f1f6511e5c71543ef837f5cf5bcfc9"
         },
         {
           "path": "sprites/64/slasul.png",
@@ -892,18 +892,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            85,
-            75,
+            86,
+            76,
             1169,
-            1169
+            1171
           ],
           "export_window": [
-            -9.046512,
-            -14.046512,
-            1272.093023
+            -9.127907,
+            -13.127907,
+            1273.255814
           ],
           "target_occupancy": 0.86,
-          "sha256": "369a710383852fca4a3ed0d314f8bcd1c3c2212f3f64ae2721509d1e37deb9c6"
+          "sha256": "623a7683449657225aedaea6c4aad7d2d2d0a19162378095f61ffbceece2da01"
         },
         {
           "path": "sprites/96/slasul.png",
@@ -911,18 +911,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            85,
-            75,
+            86,
+            76,
             1169,
-            1169
+            1171
           ],
           "export_window": [
-            -9.046512,
-            -14.046512,
-            1272.093023
+            -9.127907,
+            -13.127907,
+            1273.255814
           ],
           "target_occupancy": 0.86,
-          "sha256": "0c77e80d6166ddfb0cbf637cc75ab7effd4e38332e17b8a57f81597f3eb75570"
+          "sha256": "dde75b42bd7a85506d26dd7270fc089abc0dd5079662cf35315dd436b9a2f23a"
         },
         {
           "path": "sprites/128/slasul.png",
@@ -930,18 +930,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            85,
-            75,
+            86,
+            76,
             1169,
-            1169
+            1171
           ],
           "export_window": [
-            -9.046512,
-            -14.046512,
-            1272.093023
+            -9.127907,
+            -13.127907,
+            1273.255814
           ],
           "target_occupancy": 0.86,
-          "sha256": "9de5fa6da4e23027f729fad1d6c50d0013b3f53a0fe185daee98b75fbfc16700"
+          "sha256": "353c174d94717ca375dc78951037f692e35c2ac7cf2aa9262f9bd416dfa515b4"
         },
         {
           "path": "sprites/256/slasul.png",
@@ -949,18 +949,18 @@
           "master_width": 1254,
           "master_height": 1254,
           "visible_bbox": [
-            85,
-            75,
+            86,
+            76,
             1169,
-            1169
+            1171
           ],
           "export_window": [
-            -9.046512,
-            -14.046512,
-            1272.093023
+            -9.127907,
+            -13.127907,
+            1273.255814
           ],
           "target_occupancy": 0.86,
-          "sha256": "b84d4da60bd56282726dda41bccda591b56dd0dc89eb37ab7bcded80d28d0cab"
+          "sha256": "0736f189f10e56feb887eea8bc46acb49861be3c354a717c12f7a02eaccc1ded"
         }
       ],
       "style_gate": {
@@ -974,9 +974,9 @@
           74.33,
           76.42
         ],
-        "base_drift": -5.39,
-        "max_sector_intrusion": 4.35,
-        "max_opaque_radius": 0.8599,
+        "base_drift": -0.43,
+        "max_sector_intrusion": 4.97,
+        "max_opaque_radius": 0.8585,
         "blocking": [],
         "warnings": [],
         "grandfathered": false,

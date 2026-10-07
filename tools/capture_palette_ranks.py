@@ -46,7 +46,7 @@ lua("assert(core.shader.active(4));"
     "monster_scene=assert(loadfile('/data-checker-fixture/monster-live_scene.lua'))();"
     "monster_scene.setup('dense');monster_scene.healthSample();game.always_target=true")
 lua("""local S=require 'mod.class.CheckerTokenStyle'
-assert(S.colors.friend[2]==210 and S.colors.neutral[3]==245 and S.colors.shield[1]==236)
+assert(S.colors.friend[2]==210 and S.colors.neutral[3]==245 and S.colors.player[1]==30)
 local fractions={['forest troll']=1,wolf=.5,fox=.5,['stone troll']=.25,['Prox the Mighty']=.75}
 for _,a in ipairs(monster_scene.actors) do
  local ratio=fractions[a.name]

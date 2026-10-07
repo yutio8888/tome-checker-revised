@@ -1,0 +1,92 @@
+{
+  "method": "128px export; alpha>=180 pixels with d<=0.55 of centre; L=0.299R+0.587G+0.114B",
+  "floor_minimum_for_body": 45.0,
+  "body_minimum": 65.0,
+  "assets": {
+    "human-citizen": 79.99,
+    "halfling-citizen": 71.3,
+    "human-farmer": 71.99,
+    "halfling-gardener": 71.96,
+    "lumberjack": 83.69,
+    "halfling-slinger": 67.19,
+    "dwarven-earthwarden": 76.75,
+    "yeek-mindslayer": 91.96,
+    "yeek-psionic": 99.46,
+    "thalore-hunter": 90.07,
+    "thalore-wilder": 67.53,
+    "elven-sun-mage": 98.07,
+    "shalore-rune-master": 72.66,
+    "elven-archer": 75.56
+  },
+  "floors": {
+    "town road A": 152.9,
+    "town fields A": 113.14,
+    "grass": 108.97,
+    "sand": 110.23,
+    "snow ground": 175.0,
+    "gothic stone A": 145.44,
+    "korpul stone A": 131.66,
+    "cave rock": 130.64,
+    "burnt ground": 72.7,
+    "gloomy (Heart of the Gloom)": 96.92
+  },
+  "zone_floors": {
+    "human-citizen": {
+      "town road A": 152.9,
+      "town fields A": 113.14
+    },
+    "halfling-citizen": {
+      "town road A": 152.9,
+      "town fields A": 113.14
+    },
+    "human-farmer": {
+      "town fields A": 113.14,
+      "grass": 108.97
+    },
+    "halfling-gardener": {
+      "town fields A": 113.14,
+      "grass": 108.97
+    },
+    "lumberjack": {
+      "grass": 108.97,
+      "gothic stone A": 145.44
+    },
+    "halfling-slinger": {
+      "town fields A": 113.14,
+      "grass": 108.97
+    },
+    "dwarven-earthwarden": {
+      "gothic stone A": 145.44,
+      "korpul stone A": 131.66
+    },
+    "yeek-mindslayer": {
+      "grass": 108.97,
+      "cave rock": 130.64
+    },
+    "yeek-psionic": {
+      "grass": 108.97,
+      "cave rock": 130.64
+    },
+    "thalore-hunter": {
+      "grass": 108.97,
+      "snow ground": 175.0
+    },
+    "thalore-wilder": {
+      "grass": 108.97,
+      "snow ground": 175.0
+    },
+    "elven-sun-mage": {
+      "grass": 108.97,
+      "sand": 110.23
+    },
+    "shalore-rune-master": {
+      "town road A": 152.9,
+      "grass": 108.97
+    },
+    "elven-archer": {
+      "grass": 108.97,
+      "sand": 110.23
+    }
+  },
+  "note": "floor-readability-48.png draws a yellow frame around the floors of each creature's own zones (ZONE_FLOORS)"
+}

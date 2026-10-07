@@ -1,0 +1,83 @@
+{
+  "AURA_FLAME_ABOVE_TOP_FLOOR_CELLS": 0.3,
+  "AURA_TIP_BUDGET_CELLS": 0.2,
+  "AURA_HEIGHT_FRAMES": 15,
+  "LIGHTING_REFERENCE": {
+    "mean_rgb_brightness": 69.92643229166667,
+    "tolerance_fraction": 0.1,
+    "method": "arithmetic mean of all RGB channels, 0..255",
+    "rgb_mean": [
+      101.474609375,
+      63.7880859375,
+      44.5166015625
+    ],
+    "source": "evidence/token-standee-batch4-20261006/crops/standee-aura-bill-essence_of_the_dead-on-32-base-frame-1-crop.png",
+    "source_sha256": "55e991765d24c2b4d23aa0b7529d46b7aa25db05233c9c0c77de959470536a6a",
+    "source_crop_box": [
+      32,
+      0,
+      64,
+      32
+    ],
+    "floor_parity": 0,
+    "fixture_reference_offset": [
+      -2,
+      -2
+    ],
+    "odd_parity_x_adjustment": -1,
+    "shown": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "obscure": [
+      0.6,
+      0.6,
+      0.6,
+      0.5
+    ],
+    "seen": 1,
+    "player_lite": 3,
+    "region_radius": 5,
+    "daynight": false,
+    "smooth_fov": false
+  },
+  "DIM_LIGHTING_REFERENCE": {
+    "mean_rgb_brightness": 21.126302083333332,
+    "tolerance_fraction": 0.1,
+    "method": "arithmetic mean of all RGB channels, 0..255",
+    "source": "evidence/token-standee-briagh-20261006/diagnosis-r52-comparison/r53-dim-floor-reference.png",
+    "source_sha256": "21e7cac8d720cd563578022393f52a6843c41fc28cf772ac3312ddfce93aa51c",
+    "source_crop_box": [
+      32,
+      0,
+      64,
+      32
+    ],
+    "floor_parity": 0,
+    "fixture_reference_offset": [
+      -2,
+      -2
+    ],
+    "odd_parity_x_adjustment": -1,
+    "shown": [
+      0.3,
+      0.3,
+      0.3,
+      1
+    ],
+    "obscure": [
+      0.6,
+      0.6,
+      0.6,
+      0.5
+    ],
+    "seen": 1,
+    "player_lite": 3,
+    "region_radius": 5,
+    "daynight": false,
+    "smooth_fov": false,
+    "informative_only": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "elven-archer",
+  "native_name": "elven archer",
+  "type": "humanoid",
+  "subtype": "elf",
+  "sources": [
+    {
+      "path": "game/modules/tome/data/general/npcs/sunwall-town.lua",
+      "sha256": "474ff89312e91d1898ce23fef62df48e3718fc7a94453ff08b7bd0282fa7e051",
+      "line": 65,
+      "anchor": "name = \"elven archer\""
+    },
+    {
+      "path": "game/modules/tome/data/zones/keepsake-meadow/npcs.lua",
+      "sha256": "1bf6c8d15b4f7a6c83121da8c2e23d76d34cdcffb1475cd633bc0ea27cd3e53d",
+      "line": 296,
+      "anchor": "define_as = \"BERETHH_ARCHER\""
+    }
+  ],
+  "native_image": "npc/humanoid_elf_elven_archer.png",
+  "native_image_sha256": "7157c7270ab7ce0de0fefcaf2c74e5db02e26b02ba88a28e1528cccf542f3760",
+  "reuse": {
+    "batch": "monster-batch-s",
+    "id": "companion-archer",
+    "master": "monster-batch-s/masters/companion-archer-v1.png",
+    "master_sha256": "007d300ecb6ff3956cfd5a9e9b7bb81b53ccd2494a20243c22f941c49122bdca",
+    "runtime_sha256": "504827acc3421c92990f7dda49a405217b7c75e1f297890eaf2e80a69ffc78fe"
+  },
+  "note": "wiring-only: the resident elven archer and the shipped Companion Archer draw the byte-identical native PNG npc/humanoid_elf_elven_archer.png, so the resident reuses the companion-archer runtime token; no new ImageGen art. The companion-archer entry, token and manifest row are unchanged."
+}

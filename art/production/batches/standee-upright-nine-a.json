@@ -1,0 +1,258 @@
+{
+ "schema": 1,
+ "batch_id": "standee-upright-nine-a",
+ "assets": [
+  {
+   "asset_id": "gorbat",
+   "native_name": "Gorbat, Supreme Wyrmic of the Pride",
+   "scope": "R36 upright standee coverage; second artwork used only for the standee layer at <=48px cells. Flat token, master and manifest mapping unchanged.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "At the new 1.0-cell standee width cap the R33 flat cut-out is width-bound and renders only about one cell tall, reading as the flat token rather than an upright standee.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/gorbat-pride/npcs.lua",
+     "sha256": "5cdb350a6980797a3af55b4969ff0f8179ca3f1cc2dfa546c8ab8275569ff009",
+     "line": 35,
+     "anchor": "name = \"Gorbat, Supreme Wyrmic of the Pride\""
+    },
+    {
+     "path": "game/modules/tome/data/general/npcs/orc-gorbat.lua",
+     "sha256": "48efd67c5b6eb948a3fa7938a70649c3c65b3741f4a0ccb32c4112d512c0a32d",
+     "line": 23,
+     "anchor": "define_as = \"BASE_NPC_ORC_GORBAT\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/gorbat.png",
+     "sha256": "c8fe86ac3dfcde4d05e7a967903de8441e380f784dc5e287e22a3e2635339f1c",
+     "role": "style",
+     "note": "The shipped flat Gorbat, Supreme Wyrmic of the Pride token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_gorbat__supreme_wyrmic_of_the_pride.png",
+     "sha256": "4f88d71a29b6ee32180197ac2c5d8f2d1cf83cea6e80ab113c38f5c1f15961d1",
+     "role": "identity",
+     "note": "Native Gorbat, Supreme Wyrmic of the Pride sprite: keep the same species, gear, colours and markings, converted to a true upright standing/rearing composition."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/grushnak.png",
+     "sha256": "bad16e4b858b25bb9d70f65fdc88acc8924e857bab408186f46fc9c7804b5c78",
+     "role": "family",
+     "note": "The nearest mapped family token. It shares this creature's body plan or palette, so it is the token this one must stay clearly distinct from; do not copy its pose."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-ua-20261001/source-contracts.json",
+     "sha256": "b6c9fdda1e56d3b6b4bf53aafe00787697121e5831f5df8c1f9960c3f855d814"
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_gorbat__supreme_wyrmic_of_the_pride.png",
+     "sha256": "4f88d71a29b6ee32180197ac2c5d8f2d1cf83cea6e80ab113c38f5c1f15961d1"
+    }
+   ],
+   "prompt_fields": {
+    "subject": "Gorbat, Supreme Wyrmic of the Pride: a huge green-skinned orc wyrmic, bare muscular torso crossed with draconic scales, large leathery wings folded from the shoulders, a snarling tusked face and a jagged blade. Keep the native olive-green skin, the dark wing membranes and the same held weapon.",
+    "contrast": "Taller than wide: stand at full height with the wings raised high behind the shoulders and the blade held down at one side. Do not spread the wings sideways below shoulder height into a low disc.",
+    "composition": "Full body, upright standing three-quarter view, wings swept up behind the head, feet planted, head near the top of the frame. Overall height to width about 1.7 to 1.",
+    "palette": "olive-green orc skin, dark green-brown wing membrane, dull steel blade, bone-white tusks."
+   }
+  },
+  {
+   "asset_id": "grushnak",
+   "native_name": "Grushnak, Battlemaster of the Pride",
+   "scope": "R36 upright standee coverage; second artwork used only for the standee layer at <=48px cells. Flat token, master and manifest mapping unchanged.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "At the new 1.0-cell standee width cap the R33 flat cut-out is width-bound and renders only about one cell tall, reading as the flat token rather than an upright standee.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/grushnak-pride/npcs.lua",
+     "sha256": "8799da1ba86651e729a0c42e8b381cd8a258450900a47802b7e1edd2195d3ad1",
+     "line": 31,
+     "anchor": "name = \"Grushnak, Battlemaster of the Pride\""
+    },
+    {
+     "path": "game/modules/tome/data/general/npcs/orc-grushnak.lua",
+     "sha256": "52182336a086762c9504e9b3fed685d57acf201bbf5a787b0ec84010258d9a9a",
+     "line": 23,
+     "anchor": "define_as = \"BASE_NPC_ORC_GRUSHNAK\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/grushnak.png",
+     "sha256": "bad16e4b858b25bb9d70f65fdc88acc8924e857bab408186f46fc9c7804b5c78",
+     "role": "style",
+     "note": "The shipped flat Grushnak, Battlemaster of the Pride token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_grushnak__battlemaster_of_the_pride.png",
+     "sha256": "c68da1c01d4374cc0be19230d59f01c8b4cc8646f086da25da33dc8a8ea908f0",
+     "role": "identity",
+     "note": "Native Grushnak, Battlemaster of the Pride sprite: keep the same species, gear, colours and markings, converted to a true upright standing/rearing composition."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/gorbat.png",
+     "sha256": "c8fe86ac3dfcde4d05e7a967903de8441e380f784dc5e287e22a3e2635339f1c",
+     "role": "family",
+     "note": "The nearest mapped family token. It shares this creature's body plan or palette, so it is the token this one must stay clearly distinct from; do not copy its pose."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-ua-20261001/source-contracts.json",
+     "sha256": "b6c9fdda1e56d3b6b4bf53aafe00787697121e5831f5df8c1f9960c3f855d814"
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_grushnak__battlemaster_of_the_pride.png",
+     "sha256": "c68da1c01d4374cc0be19230d59f01c8b4cc8646f086da25da33dc8a8ea908f0"
+    }
+   ],
+   "prompt_fields": {
+    "subject": "Grushnak, Battlemaster of the Pride: an armoured green orc warleader in heavy plate with spiked pauldrons, a wide metal belt and a massive two-handed battle-axe. Keep the native olive-green skin, the dark iron plate and the same axe.",
+    "contrast": "Taller than wide: stand at full height, axe head up beside the shoulder or planted point-down, shoulders broad but not hunched. Do not crouch or lower the torso.",
+    "composition": "Full body, upright standing three-quarter view, both hands on the axe, feet apart, head near the top of the frame. Overall height to width about 1.7 to 1.",
+    "palette": "olive-green orc skin, dark iron plate with bronze rivets, steel axe head, bone-white tusks."
+   }
+  },
+  {
+   "asset_id": "vor",
+   "native_name": "Vor, Grand Geomancer of the Pride",
+   "scope": "R36 upright standee coverage; second artwork used only for the standee layer at <=48px cells. Flat token, master and manifest mapping unchanged.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "At the new 1.0-cell standee width cap the R33 flat cut-out is width-bound and renders only about one cell tall, reading as the flat token rather than an upright standee.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/vor-pride/npcs.lua",
+     "sha256": "56bbf54ee15ba9811c60194c5de208dec126310085f98e650da312d2c632b213",
+     "line": 30,
+     "anchor": "name = \"Vor, Grand Geomancer of the Pride\""
+    },
+    {
+     "path": "game/modules/tome/data/general/npcs/orc-vor.lua",
+     "sha256": "7ef30e07dd59c5784f06b8faa7e038ca27e4e2754671c3949f416b54450bd458",
+     "line": 23,
+     "anchor": "define_as = \"BASE_NPC_ORC_VOR\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/vor.png",
+     "sha256": "b2913d0a3ffe2605de2601ca23a72aa6d8ea5e1311d76fec49ad328ab4941a2d",
+     "role": "style",
+     "note": "The shipped flat Vor, Grand Geomancer of the Pride token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_vor__grand_geomancer_of_the_pride.png",
+     "sha256": "d04c5d85013d23f0b289dea03a460009ac7ebd18011c008f082d1280c1fb3f30",
+     "role": "identity",
+     "note": "Native Vor, Grand Geomancer of the Pride sprite: keep the same species, gear, colours and markings, converted to a true upright standing/rearing composition."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/grushnak.png",
+     "sha256": "bad16e4b858b25bb9d70f65fdc88acc8924e857bab408186f46fc9c7804b5c78",
+     "role": "family",
+     "note": "The nearest mapped family token. It shares this creature's body plan or palette, so it is the token this one must stay clearly distinct from; do not copy its pose."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-ua-20261001/source-contracts.json",
+     "sha256": "b6c9fdda1e56d3b6b4bf53aafe00787697121e5831f5df8c1f9960c3f855d814"
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_orc_vor__grand_geomancer_of_the_pride.png",
+     "sha256": "d04c5d85013d23f0b289dea03a460009ac7ebd18011c008f082d1280c1fb3f30"
+    }
+   ],
+   "prompt_fields": {
+    "subject": "Vor, Grand Geomancer of the Pride: a tall green-skinned orc geomancer in a long layered robe of red, purple and gold, with a wooden staff and a cluster of floating stone shards. Keep the native robe colours, staff and floating shards.",
+    "contrast": "Taller than wide: stand upright with the robe falling straight to the ground, staff vertical at one side and shards orbiting above the shoulder. Do not widen the robe or spread the shards sideways below the waist.",
+    "composition": "Full body, upright standing front three-quarter view, staff vertical, robe floor-length, shards floating by the head. Overall height to width about 1.8 to 1.",
+    "palette": "olive-green orc skin, deep red and violet robe with gold trim, pale wood staff, grey stone shards."
+   }
+  },
+  {
+   "asset_id": "phoenix",
+   "native_name": "Phoenix",
+   "scope": "R36 upright standee coverage; second artwork used only for the standee layer at <=48px cells. Flat token, master and manifest mapping unchanged.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "At the new 1.0-cell standee width cap the R33 flat cut-out is width-bound and renders only about one cell tall, reading as the flat token rather than an upright standee.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/bird.lua",
+     "sha256": "df514b6263a32309d9f757a6272ebb8ebb7302fed14f251a6df0cdb5f479ab56",
+     "line": 47,
+     "anchor": "name = \"Phoenix\""
+    },
+    {
+     "path": "game/modules/tome/data/general/npcs/bird.lua",
+     "sha256": "df514b6263a32309d9f757a6272ebb8ebb7302fed14f251a6df0cdb5f479ab56",
+     "line": 25,
+     "anchor": "define_as = \"BASE_NPC_BIRD\""
+    }
+   ],
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/phoenix.png",
+     "sha256": "66a500327dcfa5e33aa711dd3b42c9aa86294558bbb4aa6966c87629fdb46e1d",
+     "role": "style",
+     "note": "The shipped flat Phoenix token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/animal_bird_phoenix.png",
+     "sha256": "2619f129a40769d1198d32e26c9b57186e329cdfcd1ff62fe3f07ce365285345",
+     "role": "identity",
+     "note": "Native Phoenix sprite: keep the same species, gear, colours and markings, converted to a true upright standing/rearing composition."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/storm-wyrm.png",
+     "sha256": "0b5b007ae68b894dd4f47a1c8a6bfe6356a5c47815000caed05d6b16c6d7b796",
+     "role": "family",
+     "note": "The nearest mapped family token. It shares this creature's body plan or palette, so it is the token this one must stay clearly distinct from; do not copy its pose."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/addons/tome-checker-revised/evidence/monster-batch-ua-20261001/source-contracts.json",
+     "sha256": "b6c9fdda1e56d3b6b4bf53aafe00787697121e5831f5df8c1f9960c3f855d814"
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/animal_bird_phoenix.png",
+     "sha256": "2619f129a40769d1198d32e26c9b57186e329cdfcd1ff62fe3f07ce365285345"
+    }
+   ],
+   "prompt_fields": {
+    "subject": "Phoenix: a fiery bird with a long sweeping tail, a crested head and wings of orange, gold and crimson flame. Keep the native flame colours and the same wing and tail shape.",
+    "contrast": "Taller than wide: rear the body near vertical with the wings raised high above the head and the long tail streaming down. Do not spread the wings sideways at body height.",
+    "composition": "Full body, upright rear/flight pose seen from a front three-quarter angle, head and crest at the top, wings raised, long tail below. Overall height to width about 1.8 to 1.",
+    "palette": "crimson, orange and gold flame, pale yellow core, dark beak and talons."
+   }
+  }
+ ]
+}

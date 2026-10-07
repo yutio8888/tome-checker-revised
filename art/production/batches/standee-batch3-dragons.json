@@ -1,0 +1,124 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch3-dragons",
+ "assets": [
+  {
+   "asset_id": "rantha",
+   "native_name": "Rantha the Worm",
+   "scope": "Standee batch 3 pilot (2 dragons). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched. User-approved composition: dragons are drawn REARING on the hind legs with the chest lifted, the wings folded tight against the body and the tail curled close; the on-screen body height may land around 1.35-1.65 cells because of the 1.0-cell width cap, which is accepted.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body rearing standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/daikara/npcs.lua",
+     "sha256": "c4d6d6b6387719554eb81b4eccb6abe0722bd435860d06d56dafcc778e8019ca",
+     "line": 34,
+     "anchor": "newEntity{ define_as = \"RANTHA_THE_WORM\","
+    }
+   ],
+   "desc": "Claws and teeth. Ice and death. Dragons are not all extinct it seems...",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/rantha.png",
+     "sha256": "fbe545dd28909b1fbcfa98e80728e26c8c17ab57656d1e342e2443259244ba44",
+     "role": "style",
+     "note": "The shipped flat Rantha the Worm token: copy its matte painted miniature finish, colours, value structure and identity. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_ice_rantha_the_worm.png",
+     "sha256": "d7ace374cec37fb7d0a977e8003cc459b54820386912a17e4e7aed46ba2c4f7a",
+     "role": "identity",
+     "note": "Native Rantha the Worm sprite: identity cue only. Keep the same species, colour pattern, horn and wing shapes and markings, converted to a true upright REARING composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/fire-wyrm.png",
+     "sha256": "a7a4c15e6abae44d4735dfffad4f1b90ef5690d5edb04e5636ca707a952eb0bd",
+     "role": "family",
+     "note": "The fire wyrm in this pilot is the sibling dragon this one must stay clearly distinct from: it is a warm red-orange drake with a long slender neck and swept-back horns and no dorsal sail, not a cold steel-blue ice dragon with two very long horns and an icy spine sail."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_ice_rantha_the_worm.png",
+     "sha256": "d7ace374cec37fb7d0a977e8003cc459b54820386912a17e4e7aed46ba2c4f7a"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/rantha.png",
+     "sha256": "fbe545dd28909b1fbcfa98e80728e26c8c17ab57656d1e342e2443259244ba44"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Rantha the Worm: a huge ancient frost dragon (ice drake) REARING upright on its hind legs, the chest lifted high and the short forelimbs tucked in against the chest; heavy steel-blue armoured scales over pale cream ribbed belly and throat plates; a skull crowned by TWO very LONG backward-swept horns plus smaller brow horns, and a jagged pale icy DORSAL SAIL / frill of frozen spikes running down the spine; wings folded tight and flat against the flanks, and a thick tail curled close behind the hind feet. Match the shipped flat token's steel-blue ice-dragon scales, pale cream belly plates and spiky long-horned head.",
+    "contrast": "Height clearly dominates width: the body stays about 1 to 1.5 wide to tall, the folded wings hug the body and the tail curls in behind the legs, so neither widens the silhouette. It differs from the fire wyrm by the two very long horns, the icy dorsal sail along the spine, the shorter stockier neck and the cold steel-blue palette; the fire wyrm has a much longer slender neck, swept-back horns and no dorsal sail. No frost mist, snow, ice shards, breath weapon or particles.",
+    "composition": "Full body, upright REARING three-quarter view standing on the hind legs, chest lifted, wings folded flat against the body, tail curled close around the feet, the two long horns at the very top of the frame. Overall height about 1.5 to 1.8 times the width; the horns and dorsal sail are part of the body, nothing else above the head.",
+    "palette": "steel-blue and slate ice-dragon scales with darker blue shadow, pale cream ribbed belly and throat plates, dull bone-white horns and claws, a paler icy blue-grey sail down the spine."
+   }
+  },
+  {
+   "asset_id": "fire-wyrm",
+   "native_name": "fire wyrm",
+   "scope": "Standee batch 3 pilot (2 dragons). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched. User-approved composition: dragons are drawn REARING on the hind legs with the chest lifted, the wings folded tight against the body and the tail curled close; the on-screen body height may land around 1.35-1.65 cells because of the 1.0-cell width cap, which is accepted.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body rearing standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/fire-drake.lua",
+     "sha256": "a19506d0583df6a00a07bb79a78a49eb3e0776b463a53ea9c5c17fdc4c70e203",
+     "line": 84,
+     "anchor": "newEntity{ base = \"BASE_NPC_FIRE_DRAKE\","
+    }
+   ],
+   "desc": "An old and powerful fire drake, armed with deadly breath and nasty claws.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/fire-wyrm.png",
+     "sha256": "a7a4c15e6abae44d4735dfffad4f1b90ef5690d5edb04e5636ca707a952eb0bd",
+     "role": "style",
+     "note": "The shipped flat fire wyrm token: copy its matte painted miniature finish, colours, value structure and identity. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_fire_fire_wyrm.png",
+     "sha256": "7a70264fcb6d39fe85b56fc5e68cbe0dc0d2d24ae99dc314c922ba3e874a6691",
+     "role": "identity",
+     "note": "Native fire wyrm sprite: identity cue only. Keep the same species, colour pattern, horn and wing shapes and markings, converted to a true upright REARING composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/rantha.png",
+     "sha256": "fbe545dd28909b1fbcfa98e80728e26c8c17ab57656d1e342e2443259244ba44",
+     "role": "family",
+     "note": "Rantha the Worm in this pilot is the sibling dragon this one must stay clearly distinct from: it is a cold steel-blue ice dragon with two very long horns and a jagged icy dorsal sail, not a warm red-orange drake with a long slender neck, swept-back horns and a heavy chest."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/dragon_fire_fire_wyrm.png",
+     "sha256": "7a70264fcb6d39fe85b56fc5e68cbe0dc0d2d24ae99dc314c922ba3e874a6691"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/fire-wyrm.png",
+     "sha256": "a7a4c15e6abae44d4735dfffad4f1b90ef5690d5edb04e5636ca707a952eb0bd"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "fire wyrm: a huge old fire drake REARING upright on its hind legs, the chest lifted high and the forelimbs tucked in against the chest; deep brick-red and burnt-orange scales with a HEAVY plated chest and a cream-gold ribbed underbelly; a LONG slender neck arched upward into a head with SWEPT-BACK horns and a heavy jaw; wings folded tight and flat against the flanks, and a thick tail curled closed around the hind feet. Match the shipped flat token's red-and-orange drake scales and cream-gold belly.",
+    "contrast": "Height clearly dominates width: the long arched neck rises tall, the folded wings hug the flanks and the tail curls in behind the legs, so neither the wings nor the tail widens the silhouette; the body stays about 1 to 1.5 wide to tall. It differs from Rantha by the much longer slender neck, the swept-back horns, the heavy plated chest and the warm red-orange palette with no icy dorsal sail. No flames, fire breath, embers, molten glow or particles.",
+    "composition": "Full body, upright REARING three-quarter view standing on the hind legs, chest lifted, the long neck arched upward with the horned head at the top of the frame, wings folded flat against the body, tail curled close around the feet. Overall height about 1.5 to 1.8 times the width; the horns are part of the body, nothing else above the head.",
+    "palette": "deep brick-red and burnt-orange drake scales with darker crimson shadow, cream-gold ribbed belly and throat, dull horn-coloured swept-back horns and claws, dark maroon wing membranes."
+   }
+  }
+ ]
+}

@@ -66,7 +66,7 @@ class:bindHook('GameOptions:tabs',function(self,data)
   for _,key in ipairs(Style.relation_color_order) do
    local relation=key
    list[#list+1]={name=relations[relation],checker_relation=relation,
-    zone=Textzone.new{width=dialog.c_desc.w,height=dialog.c_desc.h,text=_t'Change the faction outline and health arc together. The player keeps a cyan ring with a white inner line. Friendly units have a solid outline, neutral units a dashed outline, and hostile units four notches. Shields remain pearl white.'},
+    zone=Textzone.new{width=dialog.c_desc.w,height=dialog.c_desc.h,text=_t'Change the faction ring color. The player keeps a cyan ring with a white inner line. Friendly units have a solid ring, neutral units a dashed ring, and hostile units four notches.'},
     status=function()
      local c=Style.relationColor(relation)
      return ('RGB %d, %d, %d'):tformat(c[1],c[2],c[3])
@@ -76,7 +76,7 @@ class:bindHook('GameOptions:tabs',function(self,data)
     end}
   end
   list[#list+1]={name=_t'Restore default colors',checker_reset=true,
-   zone=Textzone.new{width=dialog.c_desc.w,height=dialog.c_desc.h,text=_t'Restore warm rank badges and the default green friendly, blue neutral and red hostile rings. The player keeps its cyan ring and white inner line. Shields remain pearl white.'},
+   zone=Textzone.new{width=dialog.c_desc.w,height=dialog.c_desc.h,text=_t'Restore warm rank badges and the default green friendly, blue neutral and red hostile rings. The player keeps its cyan ring and white inner line.'},
    status=function() return _t'Reset all' end,
    fct=function()
     Style.resetColors()

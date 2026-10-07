@@ -1,0 +1,260 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch1-constructs",
+ "assets": [
+  {
+   "asset_id": "atamathon",
+   "native_name": "Atamathon the Giant Golem",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/golem-graveyard/npcs.lua",
+     "sha256": "405703c8b9695c982b4ac6982fdada94001f5b2feb7f46e42c406b64b02bc80f",
+     "line": 27,
+     "anchor": "name = \"Atamathon the Giant Golem\""
+    },
+    {
+     "path": "game/modules/tome/data/zones/golem-graveyard/npcs.lua",
+     "sha256": "405703c8b9695c982b4ac6982fdada94001f5b2feb7f46e42c406b64b02bc80f",
+     "line": 24,
+     "anchor": "define_as = \"ATAMATHON\""
+    }
+   ],
+   "desc": "This giant golem was constructed by the Halflings during the Pyre Wars to fight the orcs, but was felled by Garkul the Devourer. Someone foolish has tried to reconstruct it, but has lost control of it, and now it rampages in search of its original creators, who are long dead. Its body is made of marble, its joints of solid voratun, and its eyes of purest ruby. At over 40 feet tall, it towers above you, and its crimson orbs seem to glow with rage.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/atamathon.png",
+     "sha256": "6614c844e9cfe4023206fe54a2a2f0a9b817c71d9906f655d36574c578379747",
+     "role": "style",
+     "note": "The shipped flat atamathon token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/construct_golem_athamathon_the_giant_golem.png",
+     "sha256": "bc2939c0b00b7f72eec987c095dc54d833a5ee9e70a965701944b089250375a4",
+     "role": "identity",
+     "note": "Native atamathon sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/golem.png",
+     "sha256": "03fe9c82bb8024ae0b94a4763361f2a9a2adeab1af561ce505b235a910294dbf",
+     "role": "family",
+     "note": "The shipped golem token shares this construct body plan, so it is the token this one must stay clearly distinct from; do not copy its stance."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/construct_golem_athamathon_the_giant_golem.png",
+     "sha256": "bc2939c0b00b7f72eec987c095dc54d833a5ee9e70a965701944b089250375a4"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/atamathon.png",
+     "sha256": "6614c844e9cfe4023206fe54a2a2f0a9b817c71d9906f655d36574c578379747"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Atamathon the Giant Golem: a colossal ancient construct golem, its body built of white marble plates over solid dark voratun metal joints and frame, a blank armoured head with two glowing crimson ruby eyes, heavy articulated arms and legs. Match the shipped token's marble-white and dark metal and the native sprite's riveted plates and red eyes.",
+    "contrast": "Taller than wide: stand at full height with the heavy arms hanging close and a symmetrical stance; no weapon. Keep the marble body and the dark voratun joints as clearly separate values.",
+    "composition": "Full body, upright standing front three-quarter view, heavy symmetrical stance, head near the top of the frame. Overall height to width about 1.7 to 1.",
+    "palette": "white marble with grey veining, dark voratun iron joints and bands, crimson glowing eyes."
+   }
+  },
+  {
+   "asset_id": "heavy-sentinel",
+   "native_name": "Heavy Sentinel",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+     "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+     "line": 260,
+     "anchor": "name = \"Heavy Sentinel\""
+    },
+    {
+     "path": "game/modules/tome/data/zones/rak-shor-pride/npcs.lua",
+     "sha256": "2b985758ec055a64643ca08ca1946295fca89d3a4c27770d02a7a11005784f7f",
+     "line": 258,
+     "anchor": "define_as = \"HEAVY_SENTINEL\""
+    }
+   ],
+   "desc": "A towering creature, made from the bones of countless bodies. An aura of flame billows from within its chest.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/heavy-sentinel.png",
+     "sha256": "1bbd1e0314645d6bb3b9dd8959568e310eabcb943c992d00b1d74aa3b5058d7d",
+     "role": "style",
+     "note": "The shipped flat heavy-sentinel token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_heavy_sentinel.png",
+     "sha256": "3f71fd1e56d927a546bb72d4821b68e1aee4321b4cbe3269b4c937d1bc0818a0",
+     "role": "identity",
+     "note": "Native heavy-sentinel sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/bone-giant.png",
+     "sha256": "3eee42a71202ccf33d759498396d02a6ae5661101e7381010ef71f5602e70c56",
+     "role": "family",
+     "note": "The shipped generic bone giant token shares this skeleton body plan, so it is the token this one must stay clearly distinct from; do not copy its pose or proportion."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_giant_heavy_sentinel.png",
+     "sha256": "3f71fd1e56d927a546bb72d4821b68e1aee4321b4cbe3269b4c937d1bc0818a0"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/heavy-sentinel.png",
+     "sha256": "1bbd1e0314645d6bb3b9dd8959568e310eabcb943c992d00b1d74aa3b5058d7d"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Heavy Sentinel: a towering giant skeleton of countless fused bodies holding a roaring orange flame inside its open ribcage, with heavy shoulder bones and a broad hornless skull with hollow sockets. Match the shipped token's bone-white ribs and the bright orange chest fire of the native sprite.",
+    "contrast": "Taller than wide: stand at full height with the arms close to the body and the shoulders squared. The chest flame is the single warm accent, and it stays inside the ribcage, below the skull; no other fire, smoke, spark or aura.",
+    "composition": "Full body, upright standing front three-quarter view, ribcage open around the chest fire, feet planted, skull at the top of the frame. Overall height to width about 1.6 to 1.",
+    "palette": "aged bone-white and umber bone, bright orange and yellow chest fire, dark hollows."
+   }
+  },
+  {
+   "asset_id": "archlich",
+   "native_name": "archlich",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/lich.lua",
+     "sha256": "39fa573c3793bc42f429288be32b0f108ace67543482134afe9b21ae6bc1dbfc",
+     "line": 144,
+     "anchor": "name = \"archlich\""
+    }
+   ],
+   "desc": "Blacker than the deepest night, this cold cruel form of darkness approaches. Long ago it laid aside its mortality, but it has not forgotten its power; rather, its malice and hate have bent this undead entity on the destruction of all things living.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/archlich.png",
+     "sha256": "69893cd551fde1ee510ea0c1d03ad3ead99ef7fd1d46930f6c106f80963b7b00",
+     "role": "style",
+     "note": "The shipped flat archlich token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_lich_archlich.png",
+     "sha256": "38870ad08a37dbe31f3b97474efff9aba30870c645785eb0cf50a5edff1b69e3",
+     "role": "identity",
+     "note": "Native archlich sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/lich.png",
+     "sha256": "e5967c0b85a89c68ddee125959d88287dae703650ca9e62f7d57251f5d4d943e",
+     "role": "family",
+     "note": "The shipped lich token shares this undead spellcaster body plan, so it is the token this one must stay clearly distinct from; do not copy its pose or robe."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/undead_lich_archlich.png",
+     "sha256": "38870ad08a37dbe31f3b97474efff9aba30870c645785eb0cf50a5edff1b69e3"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/archlich.png",
+     "sha256": "69893cd551fde1ee510ea0c1d03ad3ead99ef7fd1d46930f6c106f80963b7b00"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "archlich: a tall undead spellcaster with a gaunt skeletal face beneath a spiked iron crown, wearing a sweeping tattered robe of deep midnight blue and slate grey with a wide frayed collar and long sleeves, bony hands holding a dark staff. Match the shipped token's slate-blue robe, bone face and iron crown.",
+    "contrast": "Taller than wide: stand at full height with the robe falling straight and the staff held vertical close to the body; the spiked iron crown is the topmost part of the body. Do not spread the robe into a wide skirt.",
+    "composition": "Full body, upright standing front three-quarter view, staff vertical at one side, robe floor-length, the crown at the top of the frame. Overall height to width about 1.8 to 1.",
+    "palette": "deep midnight blue and slate robe with silver trim, bone-white face and hands, dark iron crown."
+   }
+  },
+  {
+   "asset_id": "celia",
+   "native_name": "Celia",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/last-hope-graveyard/npcs.lua",
+     "sha256": "4454448fe6fd55ed480a9d990d6089632adb2e542cbc32a10e2eadabd59ffd2b",
+     "line": 29,
+     "anchor": "name = \"Celia\""
+    },
+    {
+     "path": "game/modules/tome/data/zones/last-hope-graveyard/npcs.lua",
+     "sha256": "4454448fe6fd55ed480a9d990d6089632adb2e542cbc32a10e2eadabd59ffd2b",
+     "line": 28,
+     "anchor": "define_as = \"CELIA\""
+    }
+   ],
+   "desc": "A tall woman stands before you in a stained robe. Her sallow skin is marked by pox and open sores, but her eyes are bright and keen. The bulge around her abdomen would indicate that she is several months pregnant.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/celia.png",
+     "sha256": "dd4251549cc36a8b0c0ece25ebcdc71e482643f8134e8a276887b765a7faff88",
+     "role": "style",
+     "note": "The shipped flat celia token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_celia.png",
+     "sha256": "fd5d1b328eb919e38c139921e538b24b1f71c188b8d8621f6285d23d46719976",
+     "role": "identity",
+     "note": "Native celia sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/necromancer.png",
+     "sha256": "6807e8a467ab87d4a6b3d87206296c94dc93db38683ae531c4ee7499721ef736",
+     "role": "family",
+     "note": "The shipped necromancer token shares this robed human caster body plan, so it is the token this one must stay clearly distinct from; do not copy its pose."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_celia.png",
+     "sha256": "fd5d1b328eb919e38c139921e538b24b1f71c188b8d8621f6285d23d46719976"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/celia.png",
+     "sha256": "dd4251549cc36a8b0c0ece25ebcdc71e482643f8134e8a276887b765a7faff88"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Celia: a tall woman in a stained grey-white robe with sallow pox-marked skin, dark laced hair and bright pale eyes, holding a tall wooden staff, visibly pregnant with one hand resting low on her belly. Match the shipped token's pale robe, dark hair and staff.",
+    "contrast": "Taller than wide: stand upright with the robe falling straight and the staff vertical beside her, rising above her head. Do not widen the robe or the pose.",
+    "composition": "Full body, upright standing front three-quarter view, staff vertical in one hand, the other hand resting on the belly, the staff top allowed above the head. Overall height to width about 2 to 1.",
+    "palette": "grey-white stained robe, sallow skin, dark brown hair, pale brown wooden staff, faint purple-tinged shadow."
+   }
+  }
+ ]
+}

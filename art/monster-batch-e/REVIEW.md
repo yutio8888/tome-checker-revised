@@ -191,3 +191,12 @@ as the one and only final step (83 assets now; `version` unchanged at 0.6.24).
 
 - Shipped without waiver: Lady Zoisla, Brotoq, The Mouth, The Abomination, Celia.
 - Base-drift waiver request (all seven fail only base_drift, darker base): **approved** for Urkis (-12.21), Golbug (-15.18), Ungolë (-9.47), Half-Finished Bone Giant (-12.83), Kryl-Feijan (-10.97), Atamathon (-10.60), Ritch Great Hive Mother (-10.34), bound to the exact master and 128px SHA256 in the request file. All read as their specific boss at 48/96px on a mid-green test ground. Ungolë (black spider) and Kryl-Feijan (dark shade) are dark subjects on a dark base and must be checked in-game at 48px; revoke their waivers if they vanish against real floor tiles. Wiring (trusted `monster-batch-e.json`, check_token_style batch list, catalog, tests) is a follow-up.
+
+## 2026-10-04 Lady Zoisla 平面 token 重绘（v3，用户决定）
+
+- 用户决定：Lady Zoisla 的 `desc`（`game/modules/tome/data/zones/slazish-fen/npcs.lua:121`）写明 "Her dark tail is coiled tight"，但现行 v2 平面 token 的蛇尾是亮红金色。保留纳迦姿态、双武器、紧蜷尾与圆盘，只把尾巴改成深色。
+- 重绘包 `art/production/handoffs/lady-zoisla-token-repaint-v1/`（`lady-zoisla-token-repaint-v1`，gpt-6.1-sol、`--ephemeral`，attempt 1 即过门控；manifest `art/production/batches/lady-zoisla-token-repaint-v1.json` 带 refinement 声明，supersedes 原 `monster-batch-e-1b`）。
+- 新母版 `art/monster-batch-e/masters/lady-zoisla-v3.png`（sha256 `ac65327d…`）；128px 门控 base_drift **-5.78**、最大不透明半径 0.8576、占格 0.8594、无警告。旧母版与旧运行 token 归档于 `art/monster-batch-e/superseded/lady-zoisla-v2.png` 与 `.../lady-zoisla-v2-runtime-128.png`；更早的未选用 v1 仍在 `masters/`。
+- 外观：蛇尾为近黑午夜蓝绿、只有冷灰蓝高光与略浅的灰蓝腹面，紧蜷显矮；上身蜜色皮肤、深紫黑发、三叉戟与木杖照旧。
+- 三尺寸（48/64/96 真实尺寸、mid-brown 地板）对照图见 `art/token-layers/review-tokens/lady-zoisla.png`（native／v2／v3＋desc 原文）。
+- 注意：`tools/build_monster_art.py --batch monster-batch-e` 会因同批 kryl-feijan 的既有 base_drift 豁免条件在当前 `check_token_style.py` 下复算失败而中止；本轮只对 lady-zoisla 复算导出与 `export-report.json` 条目（同一导出器与同一门控函数），不动其它资产。

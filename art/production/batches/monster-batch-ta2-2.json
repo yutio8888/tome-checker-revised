@@ -1,0 +1,330 @@
+{
+  "schema": 1,
+  "batch_id": "monster-batch-ta2-2",
+  "assets": [
+    {
+      "asset_id": "halfling-gardener",
+      "native_name": "halfling gardener",
+      "scope": "TA-2 town/wilds resident; game/modules/tome/data/zones/town-derth/npcs.lua:93",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/town-derth/npcs.lua",
+          "sha256": "f67f0488dad78fc614dbc5eafaf2139641825a2a937824468b5096767842d704",
+          "line": 93,
+          "anchor": "name = \"halfling gardener\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-derth/npcs.lua",
+          "sha256": "f67f0488dad78fc614dbc5eafaf2139641825a2a937824468b5096767842d704",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_DERTH_TOWN\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/arena-unlock/npcs.lua",
+          "sha256": "7f0f5aaf462fe7e84e9a5a3674f0cf2397af827fa630d4311ae0771f4f1f47de",
+          "line": 71,
+          "anchor": "define_as = \"SLINGER\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/chronomancy/anomalies.lua",
+          "sha256": "cc36f9e9f4aaec5230730e339ec389d2185f125afad3bd5fc061d2a0631aca25",
+          "line": 586,
+          "anchor": "m.name = _t\"human farmer\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/chronomancy/anomalies.lua",
+          "sha256": "cc36f9e9f4aaec5230730e339ec389d2185f125afad3bd5fc061d2a0631aca25",
+          "line": 593,
+          "anchor": "m.name = _t\"halfling gardener\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/chronomancy/anomalies.lua",
+          "sha256": "cc36f9e9f4aaec5230730e339ec389d2185f125afad3bd5fc061d2a0631aca25",
+          "line": 600,
+          "anchor": "m.name = _t\"shalore scribe\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/misc/races.lua",
+          "sha256": "958b207fd24723fa3b1613c62048b19012df2e24e9b82152eb1ef2485a88aed1",
+          "line": 990,
+          "anchor": "name = _t\"yeek mindslayer\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-lumberjack-village/npcs.lua",
+          "sha256": "9d22e739f7eaf9ef6ff64ac34b3c44fe7a3fdf89aca3ad414a13af75ddf5bf8a",
+          "line": 70,
+          "anchor": "defined_as = \"LUMBERJACK\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_halfling_halfling_gardener.png",
+          "sha256": "642d7c2fb610f0e06caa21e386b09ce4539d4bc7c1721d0f1bea89d6cdee0a9d",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]. Paint this clothing, held items and silhouette."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ta2/refs/citizens.png",
+          "sha256": "e6a8fb576cf72fc0ba167f8f0be39795871cc049a6c32e6ad076f6fb57278164",
+          "role": "family",
+          "note": "Shipped siblings row order: caravan-merchant, caravan-porter, lost-merchant, cutpurse, thief, bandit. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A short round HALFLING gardener with dark hair: a brown leather vest over a cream long-sleeved shirt, olive-green shorts, bare furry feet and a brown belt pouch; he holds small steel PRUNING SHEARS raised in one hand and a small hand RAKE/hoe in the other, leaning slightly forward in a busy tending pose. Brown and cream cloth, green shorts, small bright steel glint; broad pale upper-left planes on the shirt. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Short halfling proportions with TWO small hand tools and a forward tending lean, versus human-farmer's tall upright pitchfork, halfling-citizen's empty arms-down shawl and the shipped caravan-porter. Tool pair and posture, not colour. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "default image name from class/NPC.lua:33 (npc/humanoid_halfling_halfling_gardener.png); flat 64x64 body. No shader, moddable_tile, anim, add_displays or textures anywhere in leaf/base; no auto_classes body writes. Static source contract only; see evidence/monster-batch-ta2-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ta2-20261001/source-contracts.json",
+          "sha256": "30291e790faad136743370bc037edc42327fad6513c7deefaf86086c87fbea22"
+        }
+      ]
+    },
+    {
+      "asset_id": "lumberjack",
+      "native_name": "lumberjack",
+      "scope": "TA-2 town/wilds resident; game/modules/tome/data/zones/town-lumberjack-village/npcs.lua:72",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/town-lumberjack-village/npcs.lua",
+          "sha256": "9d22e739f7eaf9ef6ff64ac34b3c44fe7a3fdf89aca3ad414a13af75ddf5bf8a",
+          "line": 72,
+          "anchor": "name = \"lumberjack\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-lumberjack-village/npcs.lua",
+          "sha256": "9d22e739f7eaf9ef6ff64ac34b3c44fe7a3fdf89aca3ad414a13af75ddf5bf8a",
+          "line": 70,
+          "anchor": "defined_as = \"LUMBERJACK\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/arena-unlock/npcs.lua",
+          "sha256": "7f0f5aaf462fe7e84e9a5a3674f0cf2397af827fa630d4311ae0771f4f1f47de",
+          "line": 71,
+          "anchor": "define_as = \"SLINGER\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/chronomancy/anomalies.lua",
+          "sha256": "cc36f9e9f4aaec5230730e339ec389d2185f125afad3bd5fc061d2a0631aca25",
+          "line": 586,
+          "anchor": "m.name = _t\"human farmer\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/chronomancy/anomalies.lua",
+          "sha256": "cc36f9e9f4aaec5230730e339ec389d2185f125afad3bd5fc061d2a0631aca25",
+          "line": 593,
+          "anchor": "m.name = _t\"halfling gardener\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/chronomancy/anomalies.lua",
+          "sha256": "cc36f9e9f4aaec5230730e339ec389d2185f125afad3bd5fc061d2a0631aca25",
+          "line": 600,
+          "anchor": "m.name = _t\"shalore scribe\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/misc/races.lua",
+          "sha256": "958b207fd24723fa3b1613c62048b19012df2e24e9b82152eb1ef2485a88aed1",
+          "line": 990,
+          "anchor": "name = _t\"yeek mindslayer\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-lumberjack-village/npcs.lua",
+          "sha256": "9d22e739f7eaf9ef6ff64ac34b3c44fe7a3fdf89aca3ad414a13af75ddf5bf8a",
+          "line": 70,
+          "anchor": "defined_as = \"LUMBERJACK\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_human_lumberjack.png",
+          "sha256": "181bd647a138eb7a4496f251596b5ad19a3b4c6ea1ad4eb4d7b3f044755b9003",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]. Paint this clothing, held items and silhouette."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ta2/refs/citizens.png",
+          "sha256": "e6a8fb576cf72fc0ba167f8f0be39795871cc049a6c32e6ad076f6fb57278164",
+          "role": "family",
+          "note": "Shipped siblings row order: caravan-merchant, caravan-porter, lost-merchant, cutpurse, thief, bandit. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A lean weathered human lumberjack with long dark-brown hair, BARE SHOULDERS and sleeveless arms: a cream/off-white sleeveless linen tunic-apron cinched with a dark belt, green trousers and brown boots; one hand hangs a FELLING AXE with a wooden handle LOW at his side, the steel blade near hip height. Pale linen, olive-green trousers, dark axe head; broad pale upper-left linen planes. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "Sleeveless pale apron with bare arms and a single lowered felling axe, versus human-farmer's tunic and vertical pitchfork and the shipped bandit's twin axes in an aggressive crouch and cutpurse. Pose and single axe, not colour. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "default image name from class/NPC.lua:33 (npc/humanoid_human_lumberjack.png); flat 64x64 body. No shader, moddable_tile, anim, add_displays or textures anywhere in leaf/base; no auto_classes body writes. Static source contract only; see evidence/monster-batch-ta2-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ta2-20261001/source-contracts.json",
+          "sha256": "30291e790faad136743370bc037edc42327fad6513c7deefaf86086c87fbea22"
+        }
+      ]
+    },
+    {
+      "asset_id": "halfling-slinger",
+      "native_name": "halfling slinger",
+      "scope": "TA-2 town/wilds resident; game/modules/tome/data/zones/town-derth/npcs.lua:71",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/town-derth/npcs.lua",
+          "sha256": "f67f0488dad78fc614dbc5eafaf2139641825a2a937824468b5096767842d704",
+          "line": 71,
+          "anchor": "name = \"halfling slinger\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-derth/npcs.lua",
+          "sha256": "f67f0488dad78fc614dbc5eafaf2139641825a2a937824468b5096767842d704",
+          "line": 25,
+          "anchor": "define_as = \"BASE_NPC_DERTH_TOWN\""
+        },
+        {
+          "path": "game/modules/tome/class/NPC.lua",
+          "sha256": "bdc619d1ed2ee9f457e10b461789b0aae4ab8385b14c9a78ad4246af9f0644f9",
+          "line": 32,
+          "anchor": "-- Grab default image name"
+        },
+        {
+          "path": "game/modules/tome/resolvers.lua",
+          "sha256": "250b5bdfc365cde762fbce6cfcecded14a0d37b2e10bfb7db06d2ef32ea87431",
+          "line": 1375,
+          "anchor": "function resolvers.calc.nice_tile"
+        },
+        {
+          "path": "game/modules/tome/data/zones/arena-unlock/npcs.lua",
+          "sha256": "7f0f5aaf462fe7e84e9a5a3674f0cf2397af827fa630d4311ae0771f4f1f47de",
+          "line": 71,
+          "anchor": "define_as = \"SLINGER\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/chronomancy/anomalies.lua",
+          "sha256": "cc36f9e9f4aaec5230730e339ec389d2185f125afad3bd5fc061d2a0631aca25",
+          "line": 586,
+          "anchor": "m.name = _t\"human farmer\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/chronomancy/anomalies.lua",
+          "sha256": "cc36f9e9f4aaec5230730e339ec389d2185f125afad3bd5fc061d2a0631aca25",
+          "line": 593,
+          "anchor": "m.name = _t\"halfling gardener\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/chronomancy/anomalies.lua",
+          "sha256": "cc36f9e9f4aaec5230730e339ec389d2185f125afad3bd5fc061d2a0631aca25",
+          "line": 600,
+          "anchor": "m.name = _t\"shalore scribe\""
+        },
+        {
+          "path": "game/modules/tome/data/talents/misc/races.lua",
+          "sha256": "958b207fd24723fa3b1613c62048b19012df2e24e9b82152eb1ef2485a88aed1",
+          "line": 990,
+          "anchor": "name = _t\"yeek mindslayer\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/town-lumberjack-village/npcs.lua",
+          "sha256": "9d22e739f7eaf9ef6ff64ac34b3c44fe7a3fdf89aca3ad414a13af75ddf5bf8a",
+          "line": 70,
+          "anchor": "defined_as = \"LUMBERJACK\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved neutral disc/camera/light only; do not copy its creature."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_halfling_halfling_slinger.png",
+          "sha256": "4e91b0bd10746b924f975a10511793b401b98f54c3de81adb4d3d08976ff3367",
+          "role": "identity",
+          "note": "Inspected exact native body [64, 64]. Paint this clothing, held items and silhouette."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-ta2/refs/citizens.png",
+          "sha256": "e6a8fb576cf72fc0ba167f8f0be39795871cc049a6c32e6ad076f6fb57278164",
+          "role": "family",
+          "note": "Shipped siblings row order: caravan-merchant, caravan-porter, lost-merchant, cutpurse, thief, bandit. Match tabletop language and stay structurally distinct; do not copy their anatomy."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "A short round HALFLING caught MID-SWING: both arms are RAISED and a red-brown leather SLING whips in a wide arc overhead with a pale grey stone shot at its end; the other fist is up. Green tunic, blue knee-shorts, a tan leather chest bandolier, brown wrist wraps and bare furry feet, wide-footed action stance. Greens and blue with a tan strap and a bright stone; broad pale upper-left arm planes. Every surface of the figure is painted as SOLID OPAQUE material (no see-through, faded or translucent parts, no alpha gradients inside the figure).",
+        "contrast": "The only dynamic overhead two-arm sling arc in the family, versus the static halfling-citizen, the tending halfling-gardener and the shipped rogue/thief. Outer contour and action pose, not colour. No faction rings, health, shield, rank marks, selection, text or numbers.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at reference lightness, a hair lighter, never darker (the style reference's own brightness). No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. The ENTIRE creature, every limb, tail, wing, drip, staff and effect included, fits inside a circle of about three quarters of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side, yet the creature is large and bold inside that circle. Draw the creature COMPACT and chunky: limbs, weapons, tools, cloth and effects are pulled in so the whole silhouette forms one rounded mass inside the inner three quarters of the disc; no tip, blade, hat brim, tentacle end, antenna or tail reaches the outer sixth ring band or crosses the disc rim. Value discipline (measured lesson from earlier tokens, including a rejected dark war dog and drem master): the creature's large masses are MID-LIGHT to LIGHT in value, clearly LIGHTER than the charcoal disc, with broad pale highlight planes on every upper-left surface and a thin bright LIGHT RIM along the outline, so the silhouette reads as a bright shape on the dark disc at very small size. Nothing near-black except tiny eye slits and thin seams; no black cloth, black leather, black armour, black chitin or black fur anywhere. CALIBRATION FROM EARLIER TOKENS (first generations failed the disc-geometry and base-lightness gates because arms, weapons, tails and effects crossed the rim or the body shaded the plate): draw the whole creature clearly SMALLER than feels natural, everything inside a circle of about 0.55 of the disc radius, centred, with a wide bare ring of plate on every side; hold every weapon, limb, tail, wing and effect tight against the body; render the WHOLE disc, its outer ring band and the plate under and around the creature, at exactly the style reference lightness or a hair lighter, evenly all round, with no cast shadow, contact shadow or darkening beside the creature.",
+        "palette": "Mid-light body masses and broad pale upper-left highlights, thin bright rim.  Dry neutral charcoal disc with restrained copper-grey bevel, kept a visibly lighter value than the creature's darkest parts so the two never merge. Keep the whole disc at reference lightness; no cast shadow or colour spill."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "default image name from class/NPC.lua:33 (npc/humanoid_halfling_halfling_slinger.png); flat 64x64 body. No shader, moddable_tile, anim, add_displays or textures anywhere in leaf/base; no auto_classes body writes. Static source contract only; see evidence/monster-batch-ta2-20261001/source-contracts.json",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-ta2-20261001/source-contracts.json",
+          "sha256": "30291e790faad136743370bc037edc42327fad6513c7deefaf86086c87fbea22"
+        }
+      ]
+    }
+  ]
+}

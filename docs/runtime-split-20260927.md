@@ -51,7 +51,7 @@ scene = dofile('/data-checker-fixture/monster-live_scene.lua')
 
 ## 打包、安装与冷启动
 
-下列命令从 `/workspace/t-engine4` 执行。停止现有离线 fixture 后再启动；本次拆分子代理未执行任何真实启动、停止或当前 session 安装操作。
+下列命令从 `<workspace>` 执行。停止现有离线 fixture 后再启动；本次拆分子代理未执行任何真实启动、停止或当前 session 安装操作。
 
 ```bash
 # 正式 .teaa：只打包运行源码与资源，排除整个 fixture、tests、tools、art、.git 和旧 audit。

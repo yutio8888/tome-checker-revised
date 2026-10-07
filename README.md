@@ -9,13 +9,13 @@
 ## 插件介绍
 
 本插件为 ToME 提供桌面战棋风格的视觉呈现：
-- **怪物棋子**：将已核准的怪物替换为圆形桌面棋子。外环整合阵营与生命指示（友方绿色实线、中立蓝色虚线、敌方红色带四道缺口轮廓，玩家为青色圆环与白色内线；生命从正上方 12 点方向逆时针填充），外层带有独立的珍珠白护盾弧线；右上角显示清晰的等级徽记（稀有、独特、首领、精英首领、神祇；普通与精英怪物不加标记）。
+- **怪物棋子**：将已核准的怪物替换为圆形桌面棋子。外环显示阵营（友方绿色实线、中立蓝色虚线、敌方红色带四道缺口轮廓，玩家为青色圆环与白色内线），生命与护盾沿用游戏原生的战术血条与护盾粒子；**59 款高大生物以竖立立绘显示**（24 px 及以上地格站在底座上，16 px 自动回退为平面棋子，原生光环效果贴合立绘轮廓）；右上角显示清晰的等级徽记（稀有、独特、首领、精英首领、神祇；普通与精英怪物不加标记）。
 - **棋盘地形**：在不改变游戏规则、视野与阻挡判定的前提下，将支持的地城、城镇与位面转换为高辨识度的棋盘地貌。
 - **独立控制**：怪物棋子、棋盘地形与界面风格（HUD）完全独立，可自由搭配。
 
-## 覆盖范围 (v0.6.32)
+## 覆盖范围 (v0.6.33)
 
-- **怪物棋子**：共收录 **462 款** 经过身份校验的怪物棋子（含首领、常驻怪群、召唤物与同体形复用规则）。未覆盖的生物与玩家炼金傀儡保留原版图像。
+- **怪物棋子**：共收录 **476 款** 经过身份校验的怪物棋子（含首领、常驻怪群、召唤物与同体形复用规则）。未覆盖的生物与玩家炼金傀儡保留原版图像。
 - **城镇覆盖（11 座城镇）**：德斯、伐木工人的小村庄、最后的希望、埃尔瓦拉、伊格、安格利文、钢铁议会、夏特尔、零点圣域、晨曦之门、伊尔克（包含支持的城镇道路、农田与棕榈树）。
 - **地城与区域覆盖**：巨魔沼泽（含洪水版）、古老树林（含水晶版）、斯拉伊什沼泽、罗兰精灵营地（双布局）、恐惧王座、诺尔格斯巢穴（双布局）、岱卡拉（双布局）、迷宫（双布局）、黑暗之心（双皮肤）、沙虫巢穴（双布局）、里奇通道、深渊咆哮、最后的希望墓地、闪光洞穴、不起眼的洞穴、未知通道、风暴之巅、半身人废墟、瑞库纳·失落的矮人王国、从瑞库纳逃亡、纳尔湖（地表与水下/干燥石质格）、废弃地城、荒芜废墟、黑暗地宫、傀儡墓地、阿尔德胡格、魔法大爆炸之痕、混沌之沼、次元浮岛、时空裂隙（第一至第四层）、穆格尔巢穴、南方海滩、宁静的草地、剧毒火山、古老的孔克雷夫地下实验室、泰尔玛废墟、精灵废墟、沃尔军械库、布莱亚的巢穴、通往隐秘山谷的山洞、淹没的洞穴、造物者神庙、灼烧之痕、恶魔空间、夏·图尔堡垒、拉克·肖部落、卡·普尔废墟（双布局已支持格）、阴影地宫、泰恩之塔、伊塞尔森·月之谷、鲜血之环、艾露安、加伯特部落、巅峰、格鲁希纳克部落、史莱姆通道、淤泥巢穴、沃尔部落、教程（第一层）、梦境（第一层），以及时空避难所与梦境空间天赋位面。支持拉杆、拉杆门、阅读蜡烛、传送门与岩浆地面。
 
@@ -52,7 +52,7 @@
 **Board Creatures & Terrain** (`tome-checker-revised`) transforms Tales of Maj'Eyal 1.7.6 into a tabletop board game aesthetic.
 
 ### Overview & Features
-- **Creature Tokens**: 462 verified creature identities rendered as tabletop tokens with tactical rings (solid green friendly, dashed blue neutral, notched red hostile; player cyan ring with white inner line), radial counterclockwise health arc (filling from 12 o'clock), separate pearl-white shield arc, and distinct rank badges (Rare, Unique, Boss, Elite Boss, God; Normal and Elite remain unmarked).
+- **Creature Tokens**: 476 verified creature identities rendered as tabletop tokens with faction rings (solid green friendly, dashed blue neutral, notched red hostile; player cyan ring with white inner line), the native tactical life bar and shield particles, 59 tall creatures shown as upright standees (at 24 px tiles and above; flat token fallback at 16 px; native shader auras follow the standee), and distinct rank badges (Rare, Unique, Boss, Elite Boss, God; Normal and Elite remain unmarked).
 - **Board Terrain**: Replaces grids across 11 towns, dozens of dungeons, and talent planes with clear tabletop tiles while fully preserving vanilla movement, line of sight, passability, and hazard rules. Supports Native, Blockout, and Refined terrain modes.
 - **Independent Controls**: Creature tokens, board terrain, and the separate optional Board HUD (`tome-board-hud`) operate independently. Configure via **Game Options → Token colors**.
 

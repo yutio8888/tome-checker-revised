@@ -1,0 +1,248 @@
+{
+ "schema": 1,
+ "batch_id": "standee-batch1-demons",
+ "assets": [
+  {
+   "asset_id": "champion-of-urh-rok",
+   "native_name": "champion of Urh'Rok",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+     "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+     "line": 204,
+     "anchor": "name = \"champion of Urh'Rok\""
+    }
+   ],
+   "desc": "One of Urh'Rok's own champions. A thousand nightmares made flesh and screaming steel tower before you in the form of a massive, armored humanoid.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/champion-of-urh-rok.png",
+     "sha256": "ead35e878f81fbb276d4d124dde9d939ad4e3f881f4121309841db434dcb42bf",
+     "role": "style",
+     "note": "The shipped flat champion-of-urh-rok token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_champion_of_urh_rok.png",
+     "sha256": "8f9cb88285037acbc7e99ab1d701e44280fdcc01b1fcc2c29a879b5de063b407",
+     "role": "identity",
+     "note": "Native champion-of-urh-rok sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/faeros.png",
+     "sha256": "c421856859ac103f79a9e09d931e91ca893832beea3228bad57c1a1da9f843b0",
+     "role": "family",
+     "note": "The shipped faeros token shares this fire-demon palette and body plan, so it is the token this one must stay clearly distinct from; do not copy its pose or its flame shape."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_champion_of_urh_rok.png",
+     "sha256": "8f9cb88285037acbc7e99ab1d701e44280fdcc01b1fcc2c29a879b5de063b407"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/champion-of-urh-rok.png",
+     "sha256": "ead35e878f81fbb276d4d124dde9d939ad4e3f881f4121309841db434dcb42bf"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "champion of Urh'Rok: a massive demonic humanoid in blackened plate armour with a horned helm, spiked heavy pauldrons, a dark crimson underlayer and eyes burning red, gripping a huge two-handed sword. Match the shipped token's black-red armour and the native sprite's horns and red glow.",
+    "contrast": "Taller than wide: stand at full height with the sword raised or held vertical close to the body, shoulders broad but with the horns the only part above the head. Do not add an aura, flames or particles.",
+    "composition": "Full body, upright standing front three-quarter view, both hands on the sword hilt, feet planted, the horned helm at the top of the frame. Overall height to width about 1.7 to 1.",
+    "palette": "blackened steel plate with dark red trim and bronze rivets, dark crimson flesh, burning red eyes, bone-white horn tips."
+   }
+  },
+  {
+   "asset_id": "forge-giant",
+   "native_name": "forge-giant",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/major-demon.lua",
+     "sha256": "82aff203ad9237b18c94f26e9e1cdea6199501673c0987a3edb87490a463925a",
+     "line": 249,
+     "anchor": "name = \"forge-giant\""
+    }
+   ],
+   "desc": "A burning giant wielding a forge hammer of the underworld in each hand -- weapons imbued by Urh'Rok himself with the power to crush and shape felsteel. Enter their range at your peril.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/forge-giant.png",
+     "sha256": "28f5cb82297b0e66000db49e039603bc005fd8e267ddf3566a2107f1226bf54c",
+     "role": "style",
+     "note": "The shipped flat forge-giant token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_forge_giant.png",
+     "sha256": "e29fb33367dc678632b10a46ad189a5cf3014b19f72700df77f041b064b1e1a4",
+     "role": "identity",
+     "note": "Native forge-giant sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/faeros.png",
+     "sha256": "c421856859ac103f79a9e09d931e91ca893832beea3228bad57c1a1da9f843b0",
+     "role": "family",
+     "note": "The shipped faeros token shares this fire-demon palette and body plan, so it is the token this one must stay clearly distinct from; do not copy its pose or its flame shape."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "hue"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/demon_major_forge_giant.png",
+     "sha256": "e29fb33367dc678632b10a46ad189a5cf3014b19f72700df77f041b064b1e1a4"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/forge-giant.png",
+     "sha256": "28f5cb82297b0e66000db49e039603bc005fd8e267ddf3566a2107f1226bf54c"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "forge-giant: a massive living forge demon of cracked black iron and white-hot molten metal, its head a horned iron mask wreathed in a mane of orange flame, gripping a heavy underworld forge hammer in each hand. Match the shipped token's black-iron and orange fire and the native sprite's two hammers.",
+    "contrast": "Taller than wide: stand at full height with both hammers held low at hip level and the arms not fully spread. The fire mane rises above the head but must not widen the figure; no lightning, no scattered particles, no ground fire.",
+    "composition": "Full body, upright standing front three-quarter view, a hammer in each hand angled down and close, feet planted, iron mask head at the top of the body with the flame mane allowed above it. Overall height to width about 1.6 to 1.",
+    "palette": "blackened iron plates with glowing orange cracks, molten yellow-white hot metal, deep orange flame, no background."
+   }
+  },
+  {
+   "asset_id": "minotaur-maze",
+   "native_name": "Minotaur of the Labyrinth",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/zones/maze/npcs.lua",
+     "sha256": "f07231a5244764f2896978554836c032d56a19d06a56dc7c8528181e5a813c71",
+     "line": 104,
+     "anchor": "name = \"Minotaur of the Labyrinth\""
+    },
+    {
+     "path": "game/modules/tome/data/zones/maze/npcs.lua",
+     "sha256": "f07231a5244764f2896978554836c032d56a19d06a56dc7c8528181e5a813c71",
+     "line": 101,
+     "anchor": "define_as = \"MINOTAUR_MAZE\""
+    }
+   ],
+   "desc": "A fearsome bull-headed monster, he swings a mighty axe as he curses all who defy him.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/minotaur-maze.png",
+     "sha256": "4bc862c807accae2bea681a99521f27a6beef2c6c9ac6156b58df9a8e675e705",
+     "role": "style",
+     "note": "The shipped flat minotaur-maze token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_minotaur_minotaur_of_the_labyrinth.png",
+     "sha256": "40d1bfcaa5adb70595e36ca1b60621f7716e6158ec51095aeab768c62dabe74f",
+     "role": "identity",
+     "note": "Native minotaur-maze sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/minotaur.png",
+     "sha256": "b4b1afef267529f83ac658a759a2e64f0ebcb5e5af8640ffc59f485826365e1d",
+     "role": "family",
+     "note": "The shipped minotaur token shares this bull-headed body plan, so it is the token this one must stay clearly distinct from; do not copy its pose."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_minotaur_minotaur_of_the_labyrinth.png",
+     "sha256": "40d1bfcaa5adb70595e36ca1b60621f7716e6158ec51095aeab768c62dabe74f"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/minotaur-maze.png",
+     "sha256": "4bc862c807accae2bea681a99521f27a6beef2c6c9ac6156b58df9a8e675e705"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "Minotaur of the Labyrinth: a huge brown-furred bull-headed monster with a heavy curved pair of horns, a broad snout, hooved legs and a tail, gripping a massive single-bladed axe. Match the shipped token's brown hide, paler muzzle and steel axe.",
+    "contrast": "Taller than wide: stand at full height with the axe held close to the body, and let both horns be the topmost part of the body. Do not lower the head or spread the arms.",
+    "composition": "Full body, upright standing three-quarter view, axe gripped in both hands, feet planted, horn tips at the top of the frame. Overall height to width about 1.6 to 1.",
+    "palette": "warm brown hide, darker mane and muzzle shading, dark grey-brown horns and hooves, steel axe head on a wooden haft."
+   }
+  },
+  {
+   "asset_id": "ogre-warmaster",
+   "native_name": "ogre warmaster",
+   "scope": "Standee batch 1 (17 ids). Second artwork used only for the upright standee layer at <=48px cells. Identity evidence: the shipped native sprite and the shipped flat token, both pinned below; the game was not launched for this round. Flat 128px token, its master and the manifest mapping are untouched.",
+   "kind": "standee",
+   "gate": "ready",
+   "gate_reason": "The shipped flat 128px cut-out is a near-square top-down token; at the 1.0-cell standee width cap it is width-bound and renders about one cell tall, reading as the flat token rather than an upright standee. A full-body upright standee is required for the standee layer only; the flat token, its master and the manifest mapping are unchanged.",
+   "max_attempts": 2,
+   "sources": [
+    {
+     "path": "game/modules/tome/data/general/npcs/ogre.lua",
+     "sha256": "3c525a2059b5ed02edb66ffd0609d8cadd23afc24333f8ec43b6560fd916bd85",
+     "line": 63,
+     "anchor": "name = \"ogre warmaster\""
+    }
+   ],
+   "desc": "A master of combat, she is impatient to test her newfound skills.",
+   "references": [
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ogre-warmaster.png",
+     "sha256": "0119abd63f5d7f20b9df0cee123c45340ac48893eab9e21965e77f342b1509d6",
+     "role": "style",
+     "note": "The shipped flat ogre-warmaster token: copy its matte painted miniature finish, colours and value structure. Ignore its top-down camera and its physical disc entirely - the standee has no disc."
+    },
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ogre_ogre_warmaster.png",
+     "sha256": "2ad685d054f0069816476b614be7212243b3fddd4aa54d87063ec0cd6f2fea06",
+     "role": "identity",
+     "note": "Native ogre-warmaster sprite: identity cue only. Keep the same species, gear, colours and markings, converted to a true upright standing composition; it is not a pose or proportion specification."
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ogre-guard.png",
+     "sha256": "7ad41b65d9e1bb90aaf4a6ae104a3d7d3b2decb47332452d34b9d1fdb9c5a189",
+     "role": "family",
+     "note": "The shipped ogre-guard token shares this ogre body plan, so it is the token this one must stay clearly distinct from; do not copy its pose or its hammer."
+    }
+   ],
+   "contrast_dimensions": [
+    "silhouette",
+    "value"
+   ],
+   "render_evidence": [
+    {
+     "path": "game/modules/tome/data/gfx/shockbolt/npc/giant_ogre_ogre_warmaster.png",
+     "sha256": "2ad685d054f0069816476b614be7212243b3fddd4aa54d87063ec0cd6f2fea06"
+    },
+    {
+     "path": "game/addons/tome-checker-revised/data/gfx/tokens/ogre-warmaster.png",
+     "sha256": "0119abd63f5d7f20b9df0cee123c45340ac48893eab9e21965e77f342b1509d6"
+    }
+   ],
+   "render_evidence_note": "No fixture run. Identity-render evidence is the pinned native sprite PNG and the shipped flat token PNG; the desc line in the pinned native NPC source is the appearance authority.",
+   "prompt_fields": {
+    "subject": "ogre warmaster: a tall female ogre warrior in gleaming pale steel plate with gold trim, a tall pointed helmet, a heavy plated skirt and a sword in each hand, a powerful build with a tusked jaw. Match the shipped token's white-gold armour and the native sprite's pointed helm.",
+    "contrast": "Taller than wide: stand at full height with both swords held close and angled down beside the legs, and the tall pointed helm as the topmost part of the body. The pointed helm is taller and narrower than the roundish ogre head.",
+    "composition": "Full body, upright standing front three-quarter view, one sword in each hand, feet apart, the pointed helm at the top of the frame. Overall height to width about 1.8 to 1.",
+    "palette": "pale steel plate with gold trim, crimson cloth accents, dark hair, bone-white tusks."
+   }
+  }
+ ]
+}

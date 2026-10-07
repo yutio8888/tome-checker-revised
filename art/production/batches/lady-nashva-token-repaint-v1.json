@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "batch_id": "lady-nashva-token-repaint-v1",
+  "assets": [
+    {
+      "asset_id": "lady-nashva",
+      "native_name": "Lady Nashva the Streambender",
+      "scope": "murgol-lair guaranteed guardian in the INVASION layout (humanoid/naga unique, nice_tile native-tall) FLAT TOKEN REPAINT after the audit decision of 2026-10-04: the shipped flat token (art/monster-batch-j/masters/lady-nashva-v2.png) has a medium blue-teal tail (lower-tail median luminance ~68.4), contradicting the same definition's desc ('Her dark tail is coiled tight, making her look short'). The accepted dark Lady Zoisla v3 tail measures ~47.5 and the native Nashva ~48.9. The repaint keeps the naga pose family, trident, cyan water accents and tight coil and darkens only the tail to a deep blue-green kept distinctly BLUER than Lady Zoisla's near-black tail. Old master under art/monster-batch-j/superseded/lady-nashva-v2.png and old runtime under .../lady-nashva-v2-runtime-128.png.",
+      "sources": [
+        {
+          "path": "game/modules/tome/data/zones/murgol-lair/npcs.lua",
+          "sha256": "8e929697d368c99713805c7e25ceaa28675078db8e10c905a0f7435faa8ed2b5",
+          "line": 160,
+          "anchor": "define_as = \"NASHVA\""
+        },
+        {
+          "path": "game/modules/tome/data/zones/murgol-lair/npcs.lua",
+          "sha256": "8e929697d368c99713805c7e25ceaa28675078db8e10c905a0f7435faa8ed2b5",
+          "line": 163,
+          "anchor": "image=\"npc/humanoid_naga_lady_nashva_the_streambender.png\""
+        }
+      ],
+      "references": [
+        {
+          "path": "game/addons/tome-checker-revised/art/monsters-v2/masters/prox-v2.png",
+          "sha256": "5da67701d41bd69058af72efc8dfec30775f06f31607503e71cab4c8caff4beb",
+          "role": "style",
+          "note": "Approved disc, light, camera and matte miniature finish; do not copy its creature. Match this disc's own lightness EXACTLY -- do not darken it further."
+        },
+        {
+          "path": "game/modules/tome/data/gfx/shockbolt/npc/humanoid_naga_lady_nashva_the_streambender.png",
+          "sha256": "7af4eec778a73513b00217584b63ccf3d826fe11edf9ba85f4b4f0e47b86d3e9",
+          "role": "identity",
+          "note": "Native shape (64x128 tall): a pale-skinned naga woman with long dark hair and a circlet, a jewelled blue bodice, a DARK tail coiled tight, a tall glowing teal trident and glowing blue water swirling around her. Keep the dark tight-coiled tail, the trident and the water accents; the shipped superseded flat token's light blue-teal tail is the exact defect."
+        },
+        {
+          "path": "game/addons/tome-checker-revised/art/monster-batch-j/superseded/lady-nashva-v2.png",
+          "sha256": "732cf0d4f30e4d94387090826435e76107da0b35fccab7ef8fa381a4c0521287",
+          "role": "family",
+          "note": "The SUPERSEDED lady nashva flat token for this same identity: pose family, humanoid torso, hair, circlet, trident, cyan water accents, tight coil, disc and camera are correct and must be kept, but its medium blue-teal tail is the exact defect -- the desc says 'Her dark tail is coiled tight'. Change only the tail to a deep blue-green as dark as Lady Zoisla's accepted v3 tail but distinctly BLUER, and keep the water swirls from lightening the tail silhouette; keep everything else."
+        }
+      ],
+      "contrast_dimensions": [
+        "silhouette",
+        "value",
+        "hue"
+      ],
+      "prompt_fields": {
+        "subject": "Lady Nashva the Streambender seen from a steep overhead three-quarter angle: a pale-skinned naga woman with long dark hair and a circlet whose humanoid torso rises from a long serpent tail. Her tail is DARK -- a deep ocean blue-green, clearly BLUER than teal-black, with cold blue highlight planes and a slightly lighter blue-green underside -- and it is coiled TIGHT and compact directly beneath her so she looks short. She holds a tall glowing cyan trident in one hand. Cyan water swirls and a water orb accent her, but the water stays as thin bright accents and must NOT lighten the tail silhouette or wash over it. Dark confident eyes, a jewelled blue bodice. No red, no warm gold, no orange. Dark, blue and complete.",
+        "contrast": "Nagas: this is the DARK-BLUE-TAILED naga priestess with a cyan trident and cyan water accents. Twin-naga separation is against Lady Zoisla, whose accepted v3 tail is near-black midnight blue-green with a grey-blue underside (lower-tail median ~47.5): Nashva's tail must be the same dark value but distinctly BLUER -- a saturated deep ocean blue-green, not Zoisla's near-black grey. The shipped myrmidon has a blue tail and trident, the tidewarden brown with a shield, the nereid yellow, slasul sea-green with a pearl, the tidecaller grey robed. This repaint reverses the superseded v2, whose tail was a light/mid blue-teal; the desc says 'Her dark tail is coiled tight, making her look short'.",
+        "composition": "One compact complete creature on a single circular tabletop disc, steep overhead three-quarter camera; visible clear neutral base ring on every side. Keep all anatomy and equipment well inside the inner four-fifths of disc radius. Base brightness must visually match reference neutral disc, with no illumination spill or ground effects. Disc plate discipline: measured results show generations of this style reference tend to render the disc DARKER than the reference, never lighter. So do not darken the disc at all: render the neutral disc -- including the whole outer-sixth ring band and the area under the creature -- at the style reference's own brightness, if anything a hair lighter, and never darker. No warm cast, glow, bounce-light, gradient or vignette anywhere on the disc. Do not darken the creature to compensate either. Add no warm cast, glow, bounce-light, gradient or vignette to the disc anywhere, including directly under or behind dark-bodied creatures. Calibration from the previous generation of this exact token: it drew the weapon and limbs (and effect rings) reaching past the edge of the disc onto the transparent canvas, so the token could not be exported. This time draw the creature markedly smaller and tighter: the ENTIRE figure, including the tip of every weapon, every raised hand and every swirl, fits inside a circle of about two thirds of the disc radius around the disc centre, leaving a wide bare charcoal ring of base plate on every side. Shorten weapons and hold them close to the body, nothing extends toward the disc rim.",
+        "palette": "Deep dark ocean blue-green serpent scales over the whole tail (a saturated blue-green, clearly bluer than Lady Zoisla's near-black grey-green), with only subtle cold blue highlight planes and a slightly lighter blue-green underside; pale skin on the humanoid torso, dark hair, silver-blue circlet, jewelled blue bodice, bright cyan trident glow and thin cyan water swirls. The water accents must stay thin and bright and must not lighten or wash out the dark tail mass. No red, warm gold or orange anywhere. Dry neutral charcoal disc with restrained copper-grey bevel, kept lighter than the tail so the two never merge."
+      },
+      "kind": "creature",
+      "max_attempts": 2,
+      "gate": "ready",
+      "gate_reason": "Identity re-verified against game/modules/tome data: name=\"Lady Nashva the Streambender\", define_as=\"NASHVA\", humanoid/naga unique guardian in the murgol-lair INVASION layout, nice_tile{image=\"invis.png\", add_mos={{image=\"npc/humanoid_naga_lady_nashva_the_streambender.png\", display_h=2, display_y=-1}}}, with the desc on the same definition. The shipped flat token is already mapped, so this repaint carries the required refinement brief: it supersedes the mapped lady nashva token, names the spent monster-batch-j-4 pack, states the design-direction correction (mid blue-teal tail -> dark blue-green tail, per the desc) and pins the earlier receipt and superseded art. Flat token size (128px), RGBA and manifest wiring are unchanged; only the artwork is repainted.",
+      "render_evidence": [
+        {
+          "path": "game/addons/tome-checker-revised/evidence/monster-batch-j-20260929/source-contracts.json",
+          "sha256": "f3b0d7b9e65b2c18c6416b37aae96e1dee28c95e6f4f57ed619039699ef6e83b"
+        }
+      ],
+      "refinement": {
+        "supersedes": "lady-nashva",
+        "previous_batch": "monster-batch-j-4",
+        "design_change_reason": "The shipped flat token has a medium blue-teal tail, which contradicts lady nashva's own desc: 'Her dark tail is coiled tight, making her look short, but her calm and confident stare assure you that she will not be easily overcome.' The audit of 2026-10-04 measured the token's lower-tail median luminance at 68.4, against native Nashva 48.9 and the accepted dark Lady Zoisla v3 47.5. This repaint keeps the naga pose family, trident, cyan water accents, tight coil, disc and camera, and darkens only the tail to a deep blue-green that stays distinctly bluer than Lady Zoisla's near-black tail. It is a flat-token repaint only; wiring and the manifest id are unchanged.",
+        "evidence": [
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-j/superseded/lady-nashva-v2.png",
+            "sha256": "732cf0d4f30e4d94387090826435e76107da0b35fccab7ef8fa381a4c0521287"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/monster-batch-j/superseded/lady-nashva-v2-runtime-128.png",
+            "sha256": "d64158ffd4cd1c4a0904ac508481eb6448b1abf17bf2706dfc99256376a967b1"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-j-4/lady-nashva/receipts/attempt-1.json",
+            "sha256": "2390657da3c3fb3f9f585b9a125e38f9e69fdf5ed0adfcfb951fb8f4adefd48d"
+          },
+          {
+            "path": "game/addons/tome-checker-revised/art/production/handoffs/monster-batch-j-4/lady-nashva/imagegen-calls/call-1/call.json",
+            "sha256": "4427240f2d5b1f8e4fbb6750c0bcc782083951e7d7f0381652dbabc5ea7a03e2"
+          }
+        ]
+      }
+    }
+  ]
+}

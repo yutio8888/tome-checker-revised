@@ -75,7 +75,7 @@ function M.dump(phase)
  f:write('name\tuid\tx\ty\timage\ttoken\tlife\tmax_life\tfaction\trank\tcan_multiply\tdisplay_uid\toverlay_uid\tshield\tshield_max\n')
  local rules={table.concat({game.turn,game.player.x,game.player.y,game.player.life,game.player.energy.value},'\t')}
  for _,a in ipairs(M.actors) do
-  local s=a._checker_token;local shield,maxshield=Style.shieldData(a)
+  local s=a._checker_token;local shield,maxshield=a.damage_shield_absorb or 0,a.damage_shield_absorb_max or 0
   local values={a.name,a.uid,a.x,a.y,a.image,s and s.id or 'native',a.life,a.max_life,a.faction,a.rank,a.can_multiply,s and s.display.uid,s and s.overlay and s.overlay.uid,shield,maxshield}
   local row={};for i=1,15 do row[i]=clean(values[i]) end;f:write(table.concat(row,'\t')..'\n')
   local r={};for _,key in ipairs({'uid','x','y','name','image','life','max_life','faction','rank','can_multiply'}) do r[#r+1]=clean(a[key]) end
@@ -127,7 +127,7 @@ function M.states()
  worm.life=worm.max_life*.55;worm:setEffect(worm.EFF_DAMAGE_SHIELD,5,{power=40},true)
  local D=require 'engine.DamageType';local life=worm.life
  D:get(D.PHYSICAL).projector(game.player,worm.x,worm.y,D.PHYSICAL,10)
- local shield,total=Style.shieldData(worm)
+ local shield,total=worm.damage_shield_absorb or 0,worm.damage_shield_absorb_max or 0
  assert(shield>0 and shield<40 and total==40 and worm.life==life)
  M.phase='states';M.refresh();M.dump(M.phase)
  say('State setup: friendly white rat ('..white.faction..'); neutral grey rat; enemy worm; native reactions asserted; native shield damaged 40->'..shield..'; life unchanged; shader='..tostring(core.shader.active(4)))
